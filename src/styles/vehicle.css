@@ -394,3 +394,41 @@
 .issue-group-title {
   font-size: 1rem;
 }
+
+/* ---------- Sade görünüm: eşleşme etiketi ve teknik ayrıntılar ---------- */
+
+.issue-scope {
+  display: inline-block;
+  margin: 0.25rem 0 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.issue-scope-engine {
+  color: var(--accent);
+}
+
+.issue-scope-conditional {
+  color: var(--warn);
+  font-weight: 500;
+}
+
+.issue-tech {
+  margin-top: 1rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  font-size: 0.875rem;
+}
+
+.issue-tech > summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.issue-tech[open] > summary {
+  margin-bottom: 0.5rem;
+}

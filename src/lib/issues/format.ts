@@ -94,7 +94,7 @@ export const ASPECT_LABELS: Record<Claim['aspects'][number], string> = {
   remedy: 'çözüm',
 };
 
-const BASIS = { production: 'üretim', 'model-year': 'model yılı', sales: 'satış' } as const;
+const BASIS = { production: 'üretim', 'model-year': 'model yılı', sales: 'ilk tescil / satış' } as const;
 
 /** "Focus Mk2 (2004–2010) · 2.0 TDCi 110 PS · 2004–2006 üretim" gibi okunur kapsam metni. */
 export function describeSelector(s: Applicability, label: (id: string) => string): string {
@@ -102,12 +102,17 @@ export function describeSelector(s: Applicability, label: (id: string) => string
   // Daha özgül düzey varsa üst düzeyi tekrar etme.
   if (s.revisionIds.length) parts.push(s.revisionIds.map(label).join(', '));
   else if (s.generationIds.length) parts.push(s.generationIds.map(label).join(', '));
-  else if (s.modelIds.length) parts.push(`${s.modelIds.map(label).join(', ')} (tüm nesiller)`);
+  else if (s.modelIds.length) {
+    const narrowed = s.engineIds.length + s.engineCodes.length + s.engineFamilies.length + s.fuels.length + s.aspirations.length > 0 || s.years;
+    parts.push(narrowed ? s.modelIds.map(label).join(', ') : `${s.modelIds.map(label).join(', ')} (tüm nesiller)`);
+  }
 
   const engines = [
-    ...s.engineIds.map(label),
-    ...s.engineCodes.map((c) => `${c} kodlu motorlar`),
-    ...s.engineFamilies.map((f) => `${f} motorlar`),
+    ...new Set([
+      ...s.engineIds.map(label),
+      ...s.engineCodes.map((c) => `${c} kodlu motorlar`),
+      ...s.engineFamilies.map((f) => `${f} motorlar`),
+    ]),
   ];
   if (engines.length) parts.push(engines.join(', '));
   if (s.fuels.length) parts.push(s.fuels.map((f) => FUEL_LABELS[f]).join(', '));
@@ -116,7 +121,7 @@ export function describeSelector(s: Applicability, label: (id: string) => string
     parts.push(`${s.aspirations.map((a) => tr[a]).join(' / ')} motorlar`);
   }
   if (s.transmissions.length) parts.push(`${s.transmissions.map((t) => [t.name, t.gears ? `${t.gears} ileri` : null, t.type].filter(Boolean).join(' ')).join(' / ')} şanzıman`);
-  if (s.years) parts.push(`${s.years.from}–${s.years.to} (${BASIS[s.years.basis]})`);
+  if (s.years) parts.push(`${s.years.from === s.years.to ? s.years.from : `${s.years.from}–${s.years.to}`} (${BASIS[s.years.basis]})`);
   if (s.marketIds.length) parts.push(`${s.marketIds.map(label).join(', ')} pazarı`);
   if (s.note) parts.push(s.note);
   return parts.join(' · ');

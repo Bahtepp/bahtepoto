@@ -22,6 +22,30 @@ src/data/issues-demo/            # ÖRNEK veri (yalnızca /ornek/kronik-sorunlar
 | `src/lib/issues/format.ts` | Türkçe etiketler, kapsam metni |
 | `tests/issues-*.test.ts` | Eşleştirici ve kanıt kuralı testleri (`npm test`) |
 
+## Yayın politikası (kullanıcıya gösterim)
+
+Araç sayfasında kayıtlar üç grupta gösterilir (`groupForDisplay`, `src/lib/issues/match.ts`):
+
+| Grup | Ne girer |
+|---|---|
+| **Bilinen / sık bildirilen sorunlar** | `chronic` ve `known-defect` türünde, durumu `verified` veya `supported` olan kayıtlar |
+| **Olası sorunlar** | Durumu `researching` (ör. tekil bildirim) veya `disputed` olan kayıtlar; "yaygın" diye sunulmaz |
+| **Resmi geri çağırmalar** | `recall` ve `service-campaign`; VIN ile resmi kontrol uyarısıyla |
+
+Kullanılabilecek kaynaklar: ADAC gibi güvenilirlik araştırmaları, güvenilir otomotiv yayınları, teknik
+servis kaynakları ve **birbirinden bağımsız** en az iki kullanıcı bildirimi. Her kayıt için resmi belge
+veya iki teknik yayın aranmaz; ancak:
+
+- Kaynaksız kayıt girilmez.
+- Tekil şikâyet "araştırılıyor" (olası sorun) kalır.
+- Metinde arıza yüzdesi verilmez; sıklık kanıtı yoksa "yaygın / sık görülen" denmez (build kontrol eder).
+- Eşleşme kesinliği (motora özgü / kasa geneli / koşullu) her kayıtta gösterilir; model düzeyindeki
+  istatistik motor özelinde kesin sorun gibi sunulmaz.
+- Teknik doğrulama ayrıntıları (kanıt düzeyi, kaynakların neyi desteklediği, denetim notları) kayıt
+  içindeki "Teknik doğrulama ayrıntıları" alanındadır.
+
+`verified` ile `supported` arasındaki fark grubu değiştirmez; kayıtta yalnızca durum etiketi olarak ("Doğrulandı" / "Kaynakla destekleniyor") görünür.
+
 ## Kayıt şeması
 
 | Alan | Açıklama |
@@ -121,8 +145,9 @@ Build sırasında denetlenen kurallar:
 
 1. `verified`: varlık iddiası üretici bülteni / resmi geri çağırmayla **ya da** en az iki farklı
    yayıncıdan teknik yayın / araştırma / uzman servis kaynağıyla desteklenmeli.
-2. `verified` / `supported`: en az bir kullanıcı-dışı kaynak gerekir. Yalnızca kullanıcı
-   raporlarına dayanan kayıt `researching` olmalıdır.
+2. `supported`: en az bir kullanıcı-dışı kaynak **ya da** birbirinden bağımsız (farklı yayıncı /
+   `basedOn`) en az iki kullanıcı bildirimi. Tek bildirime dayanan kayıt `researching` olmalıdır.
+   `verified` her durumda kullanıcı-dışı kaynak ister.
 3. Çürütücü (`contradicts`) kaynak varsa durum `disputed` veya `researching` olmalıdır;
    çelişki arayüzde gösterilir.
 4. `recall` türü resmi geri çağırma kaynağı ister. **Geri çağırma tek başına görülme sıklığı
@@ -137,6 +162,7 @@ Build sırasında denetlenen kurallar:
 10. Canlı veride `verified` / `supported` kayıtların en az bir varlık kaynağının içeriği okunmuş (`review.status: "content-checked"`) olmalı.
 11. Aynı habere dayanan kaynaklar (`basedOn`) `verified` için iki bağımsız kaynak yerine geçmez.
 12. `recall` / `service-campaign` türü `recall` bilgisi ister; seçicinin üretim yılları kampanya tarihlerini aşamaz.
+13. Metinlerde arıza yüzdesi verilemez; sıklık kanıtı `unknown` / `isolated-reports` ise başlık ve özette "yaygın", "sık görülen" gibi ifadeler kullanılamaz.
 
 ## Örnek kayıt (yapı gösterimi — gerçek bir sorun değildir)
 

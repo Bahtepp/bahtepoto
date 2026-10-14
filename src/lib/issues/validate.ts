@@ -109,10 +109,34 @@ export function validateIssues(issues: Issue[], sources: IssueSource[], catalog:
         err(w, '"verified" için üretici bülteni / resmi geri çağırma ya da en az iki bağımsız uzman/teknik kaynak gerekli');
       }
     }
+    // Kullanıcı bildirimleri: tekil bildirim "researching" (olası) kalır. "supported" için ya kullanıcı-dışı
+    // bir kaynak ya da birbirinden BAĞIMSIZ (farklı yayıncı / basedOn) en az iki kullanıcı bildirimi gerekir.
+    // "verified" her durumda kullanıcı-dışı kaynak ister.
     if (issue.status === 'verified' || issue.status === 'supported') {
-      if (!existenceKinds.some((k) => k !== 'user-report')) {
-        err(w, 'yalnızca kullanıcı raporlarına dayanan kayıt "researching" durumunda olmalı');
+      const nonUser = existenceKinds.some((k) => k !== 'user-report');
+      const independentUserReports = new Set(
+        existence
+          .filter((c) => kindOf(c.sourceId) === 'user-report')
+          .map((c) => {
+            const src = sourceById.get(c.sourceId);
+            return src?.basedOn ?? src?.publisher ?? c.sourceId;
+          }),
+      ).size;
+      if (issue.status === 'verified' && !nonUser) {
+        err(w, 'yalnızca kullanıcı raporlarına dayanan kayıt "verified" olamaz');
+      } else if (!nonUser && independentUserReports < 2) {
+        err(w, 'tek (veya aynı kaynaktan) kullanıcı bildirimine dayanan kayıt "researching" durumunda olmalı');
       }
+    }
+
+    // Metin kuralları: kanıtsız sıklık ifadesi ve yüzde yok.
+    const texts = [issue.title, issue.summary, ...issue.symptoms, ...issue.symptomDetails, issue.prevalence.note ?? ''];
+    if (texts.some((t) => /\d\s*%|%\s*\d|yüzde\s*\d/i.test(t))) {
+      err(w, 'metinlerde arıza sıklığı yüzdesi verilemez (sıklık yalnızca kanıt düzeyiyle anlatılır)');
+    }
+    const weakEvidence = issue.prevalence.evidence === 'unknown' || issue.prevalence.evidence === 'isolated-reports';
+    if (weakEvidence && [issue.title, issue.summary].some((t) => /(^|[^\p{L}])(yaygın|sık görülen|sık bildirilen|çok sık|kronikleşmiş)(?![\p{L}])/iu.test(t))) {
+      err(w, 'görülme sıklığı kanıtı olmadan başlık/özette "yaygın" veya "sık görülen" gibi ifadeler kullanılamaz');
     }
 
     // Canlı veride kaynak içeriğinin gerçekten okunmuş olması

@@ -1,10 +1,13 @@
 ---
 /**
- * Tek bir kronik sorun kaydı. İlk bakışta: başlık, kısa açıklama, başlıca belirtiler,
- * etkilediği araçlar, kaynak ve doğrulama durumu. Genişletilince: ayrıntılı belirtiler,
- * satın alırken kontrol edilecekler, çözüm ve kaynaklar.
+ * Tek bir sorun kaydı — sade görünüm.
+ * İlk bakışta: başlık, eşleşme türü (motora özgü / kasa geneli / koşullu), kısa açıklama,
+ * belirtiler, etkilediği araçlar ve kaynağın türü.
+ * Açılınca: satın alırken kontrol edilecekler, çözüm, kaynak bağlantıları.
+ * Teknik doğrulama ayrıntıları (kanıt düzeyi, kaynakların neyi desteklediği, denetim notları)
+ * ayrı bir açılır alandadır.
  */
-import type { MatchResult } from '@/lib/issues/match';
+import type { MatchResult, MatchScope } from '@/lib/issues/match';
 import type { Issue, IssueSource } from '@/lib/issues/schema';
 import {
   ASPECT_LABELS,
@@ -22,18 +25,45 @@ import {
 interface Props {
   issue: Issue;
   match: MatchResult;
+  scope: MatchScope;
   sourceById: Map<string, IssueSource>;
   label: (id: string) => string;
   /** Sayfada benzersiz bağlantı kimliği için önek. */
   anchorPrefix: string;
-  /** Kayıt başlığının başlık seviyesi (bölüm yapısına göre). */
-  level?: 4 | 5;
 }
 
-const { issue, match, sourceById, label, anchorPrefix, level = 5 } = Astro.props;
-const Title = `h${level}` as 'h4' | 'h5';
-const Sub = `h${level + 1}` as 'h5' | 'h6';
+const { issue, match, scope, sourceById, label, anchorPrefix } = Astro.props;
+
+const SCOPE_TEXT: Record<MatchScope, string> = {
+  engine: 'Bu motora özgü',
+  general: 'Kasa / model geneli',
+  conditional: 'Koşullu eşleşme',
+};
+
 const isRecall = issue.kind === 'recall' || issue.kind === 'service-campaign';
+// Kapsam notu "Etkilediği" satırında zaten görünür; koşul satırında tekrarlanmaz.
+const selectorNotes = new Set([...issue.appliesTo, ...issue.excludes].map((s) => s.note).filter(Boolean));
+const reasons = match.reasons.filter((x) => !selectorNotes.has(x));
+const headSymptoms = issue.symptoms.slice(0, 3);
+const allSymptoms = [...issue.symptoms, ...issue.symptomDetails];
+const sourceIds = [...new Set(issue.claims.map((c) => c.sourceId))];
+const srcs = sourceIds.map((id) => sourceById.get(id)).filter((s): s is IssueSource => Boolean(s));
+const hasContradiction = issue.claims.some((c) => c.stance === 'contradicts');
+
+// "Kaynak: Güvenilirlik araştırması (ADAC, 11 rapor)" gibi sade özet.
+const byKind = new Map<string, Set<string>>();
+for (const s of srcs) {
+  const k = SOURCE_KIND_LABELS[s.kind];
+  if (!byKind.has(k)) byKind.set(k, new Set());
+  byKind.get(k)!.add(s.publisher ?? s.title);
+}
+const sourceSummary = [...byKind.entries()]
+  .map(([k, pubs]) => {
+    const n = srcs.filter((s) => SOURCE_KIND_LABELS[s.kind] === k).length;
+    return `${k} (${[...pubs].slice(0, 2).join(', ')}${pubs.size > 2 ? '…' : ''}${n > 1 ? `, ${n} kayıt` : ''})`;
+  })
+  .join(' · ');
+
 const fmtDate = (d?: string) => (d ? new Date(d).toLocaleDateString('tr-TR') : undefined);
 const r = issue.recall;
 const recallLine = r
@@ -41,76 +71,112 @@ const recallLine = r
       r.campaignCode && `Kampanya: ${r.campaignCode}`,
       r.references.length ? `Resmi kayıt: ${r.references.join(', ')}` : undefined,
       r.productionFrom && r.productionTo ? `Üretim: ${fmtDate(r.productionFrom)}–${fmtDate(r.productionTo)}` : undefined,
-      r.vinRangePublished ? 'VIN aralığı yayımlandı' : 'VIN aralığı yayımlanmadı',
     ]
       .filter(Boolean)
       .join(' · ')
   : undefined;
-const headSymptoms = issue.symptoms.slice(0, 3);
-const extraSymptoms = [...issue.symptoms.slice(3), ...issue.symptomDetails];
-const sourceCount = new Set(issue.claims.map((c) => c.sourceId)).size;
-const hasContradiction = issue.claims.some((c) => c.stance === 'contradicts');
-const sourceLink = (id: string) => sourceById.get(id);
+const statusText = isRecall && issue.status === 'verified' ? 'Resmi kayıt' : ISSUE_STATUS_LABELS[issue.status];
+const statusTitle = isRecall && issue.status === 'verified'
+  ? 'Resmi geri çağırma kaydının içeriği kaynaktan okundu. Aracınızın kapsamda olup olmadığı şasi numarasıyla kesinleşir.'
+  : ISSUE_STATUS_DESCRIPTIONS[issue.status];
 ---
 
 <li class="issue" id={`${anchorPrefix}-${issue.slug}`}>
   <details>
     <summary>
       {issue.demo && <p class="issue-demo">Örnek veri — doğrulanmış bilgi değildir</p>}
-      <Title class="issue-title">{issue.title}</Title>
+      <h4 class="issue-title">{issue.title}</h4>
+      <p class={`issue-scope issue-scope-${scope}`}>
+        {SCOPE_TEXT[scope]}{scope === 'conditional' && reasons.length > 0 && `: ${reasons.join('; ')}`}
+      </p>
       <p class="issue-summary">{issue.summary}</p>
       <p class="issue-line"><span class="issue-key">Belirtiler:</span> {headSymptoms.join(' · ')}</p>
       <p class="issue-line"><span class="issue-key">{isRecall ? 'Kapsam:' : 'Etkilediği:'}</span> {describeScope(issue.appliesTo, label)}</p>
       {recallLine && <p class="issue-line">{recallLine}</p>}
-      {
-        match.reasons.length > 0 && (
-          <p class="issue-line issue-condition">
-            <span class="issue-key">Koşul:</span> {match.reasons.join('; ')}
-          </p>
-        )
-      }
       <p class="issue-meta">
-        {
-          isRecall && issue.status === 'verified' ? (
-            <span class="issue-status issue-status-verified" title="Resmi geri çağırma kaydının içeriği kaynaktan doğrulandı. Aracınızın kapsamda olup olmadığı VIN sorgusuyla kesinleşir.">
-              Resmi kayıt
-            </span>
-          ) : (
-            <span class={`issue-status issue-status-${issue.status}`} title={ISSUE_STATUS_DESCRIPTIONS[issue.status]}>
-              {ISSUE_STATUS_LABELS[issue.status]}
-            </span>
-          )
-        }
-        <span>{ISSUE_KIND_LABELS[issue.kind]}</span>
-        <span>{CATEGORY_LABELS[issue.category]}</span>
-        <span>{sourceCount} kaynak</span>
-        {hasContradiction && <span class="issue-warn">Çelişen kaynak var</span>}
+        <span class={`issue-status issue-status-${issue.status}`} title={statusTitle}>{statusText}</span>
+        <span>Kaynak: {sourceSummary}</span>
+        {hasContradiction && <span class="issue-warn">Kaynaklar çelişiyor</span>}
         <span class="issue-more" aria-hidden="true">Ayrıntılar</span>
       </p>
     </summary>
 
     <div class="issue-body">
       {
-        extraSymptoms.length > 0 && (
+        allSymptoms.length > headSymptoms.length && (
           <section>
-            <Sub>Ayrıntılı belirtiler</Sub>
-            <ul>
-              {issue.symptoms.concat(issue.symptomDetails).map((s) => (
-                <li>{s}</li>
-              ))}
-            </ul>
+            <h5>Belirtiler</h5>
+            <ul>{allSymptoms.map((s) => <li>{s}</li>)}</ul>
+          </section>
+        )
+      }
+
+      {
+        issue.checks.length > 0 && (
+          <section>
+            <h5>Satın alırken kontrol edin</h5>
+            <ul>{issue.checks.map((c) => <li>{c}</li>)}</ul>
+          </section>
+        )
+      }
+
+      {
+        issue.remedies.length > 0 && (
+          <section>
+            <h5>Çözüm ve bakım</h5>
+            <ul>{issue.remedies.map((x) => <li>{x.text}</li>)}</ul>
+          </section>
+        )
+      }
+
+      {
+        isRecall && (
+          <section>
+            <h5>Aracım kapsamda mı?</h5>
+            <p>
+              {r?.vinRangePublished
+                ? 'Kampanyanın şasi numarası aralığı yayımlanmış; yine de aracınızın kapsamını ve onarımın yapılıp yapılmadığını resmi sorguyla doğrulayın.'
+                : 'Şasi numarası (VIN) aralığı yayımlanmadı. Aracınızın kapsamda olup olmadığını ve onarımın yapılıp yapılmadığını şasi numaranızla Ford yetkili servisine veya resmi geri çağırma sorgusuna danışarak öğrenin.'}
+              {r && r.otherModels.length > 0 && ` Aynı kampanya şu modelleri de kapsıyor: ${r.otherModels.join(', ')}.`}
+            </p>
           </section>
         )
       }
 
       <section>
-        <Sub>Ciddiyet ve görülme sıklığı</Sub>
+        <h5>Kaynaklar</h5>
+        <ul class="issue-sources">
+          {
+            srcs.map((s) => (
+              <li>
+                {s.url ? (
+                  <a href={s.url} rel="noopener" target="_blank">
+                    {s.title}
+                  </a>
+                ) : (
+                  s.title
+                )}
+                <span class="issue-ref"> — {SOURCE_KIND_LABELS[s.kind]}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <details class="issue-tech">
+        <summary>Teknik doğrulama ayrıntıları</summary>
         <dl class="issue-facts">
           <div>
+            <dt>Kayıt türü</dt>
+            <dd>{ISSUE_KIND_LABELS[issue.kind]} · {CATEGORY_LABELS[issue.category]}</dd>
+          </div>
+          <div>
+            <dt>Doğrulama durumu</dt>
+            <dd>{ISSUE_STATUS_LABELS[issue.status]} — {ISSUE_STATUS_DESCRIPTIONS[issue.status]}</dd>
+          </div>
+          <div>
             <dt>Ciddiyet</dt>
-            <dd>
-              {issue.severity ? `${SEVERITY_LABELS[issue.severity.level]} — ${issue.severity.rationale}` : 'Kaynakla belirlenmedi'}
-            </dd>
+            <dd>{issue.severity ? `${SEVERITY_LABELS[issue.severity.level]} — ${issue.severity.rationale}` : 'Kaynakla belirlenmedi'}</dd>
           </div>
           <div>
             <dt>Görülme sıklığı kanıtı</dt>
@@ -119,60 +185,35 @@ const sourceLink = (id: string) => sourceById.get(id);
               {issue.prevalence.note && ` — ${issue.prevalence.note}`}
             </dd>
           </div>
+          {
+            r && (
+              <div>
+                <dt>Kampanya</dt>
+                <dd>
+                  {[
+                    r.reportingCountries.length ? `Bildiren ülke: ${r.reportingCountries.join(', ')}` : null,
+                    r.vinRangePublished ? 'VIN aralığı yayımlandı' : 'VIN aralığı yayımlanmadı',
+                    r.relatedIssueIds.length ? 'İlişkili kampanyalar ayrı kayıt olarak listelenir; aynı sorunun tekrarı sayılmaz' : null,
+                  ]
+                    .filter(Boolean)
+                    .join(' · ')}
+                </dd>
+              </div>
+            )
+          }
         </dl>
-      </section>
-
-      {
-        issue.checks.length > 0 && (
-          <section>
-            <Sub>Satın alırken kontrol edin</Sub>
-            <ul>
-              {issue.checks.map((c) => (
-                <li>{c}</li>
-              ))}
-            </ul>
-          </section>
-        )
-      }
-
-      {
-        issue.remedies.length > 0 && (
-          <section>
-            <Sub>Çözüm ve bakım</Sub>
-            <ul>
-              {issue.remedies.map((r) => (
-                <li>
-                  {r.text}{' '}
-                  <span class="issue-ref">
-                    (Kaynak: {r.sourceIds.map((id) => sourceLink(id)?.title ?? id).join(', ')})
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )
-      }
-
-      <section>
-        <Sub>Kaynaklar</Sub>
         <ul class="issue-sources">
           {
             issue.claims.map((c) => {
-              const s = sourceLink(c.sourceId);
+              const s = sourceById.get(c.sourceId);
               return (
                 <li class={c.stance === 'contradicts' ? 'contradicts' : undefined}>
-                  {s?.url ? (
-                    <a href={s.url} rel="noopener" target="_blank">
-                      {s.title}
-                    </a>
-                  ) : (
-                    <span>{s?.title ?? c.sourceId}</span>
-                  )}
+                  {s?.title ?? c.sourceId}
                   <span class="issue-ref">
                     {' '}
-                    — {s ? SOURCE_KIND_LABELS[s.kind] : 'bilinmeyen tür'}
-                    {s?.reference && `, ${s.reference}`}; {c.aspects.map((a) => ASPECT_LABELS[a]).join(', ')} konusunda{' '}
-                    <strong>{STANCE_LABELS[c.stance]}</strong>
+                    — {c.aspects.map((a) => ASPECT_LABELS[a]).join(', ')} konusunda <strong>{STANCE_LABELS[c.stance]}</strong>
+                    {s?.reference && ` · ${s.reference}`}
+                    {s?.review && ` · içerik ${s.review.status === 'content-checked' ? 'okundu' : s.review.status === 'inaccessible' ? 'erişilemedi' : 'kontrol edilmedi'} (${fmtDate(s.review.checkedAt)})`}
                     {c.note && `. ${c.note}`}
                   </span>
                 </li>
@@ -180,26 +221,9 @@ const sourceLink = (id: string) => sourceById.get(id);
             })
           }
         </ul>
-      </section>
-
-      {
-        r && (r.otherModels.length > 0 || r.relatedIssueIds.length > 0 || r.reportingCountries.length > 0) && (
-          <section>
-            <Sub>Kampanya bilgisi</Sub>
-            <ul>
-              {r.reportingCountries.length > 0 && <li>Bildiren ülke: {r.reportingCountries.join(', ')}</li>}
-              {r.otherModels.length > 0 && <li>Aynı kampanyadaki diğer modeller: {r.otherModels.join(', ')}</li>}
-              {r.relatedIssueIds.length > 0 && (
-                <li>Bu kampanya başka kampanyalarla ilişkili (benzer parça veya önceki onarımın düzeltilmesi); her biri ayrı resmi kayıttır, aynı sorunun tekrarı olarak sayılmamalıdır.</li>
-              )}
-              <li>Kapsam kontrolü: şasi numarasıyla Ford yetkili servisine veya resmi geri çağırma sorgusuna başvurun.</li>
-            </ul>
-          </section>
-        )
-      }
-
-      {issue.notes && <p class="issue-note">{issue.notes}</p>}
-      <p class="issue-ref">Son güncelleme: {new Date(issue.updatedAt).toLocaleDateString('tr-TR')}</p>
+        {issue.notes && <p class="issue-note">{issue.notes}</p>}
+        <p class="issue-ref">Son güncelleme: {fmtDate(issue.updatedAt)}</p>
+      </details>
     </div>
   </details>
 </li>

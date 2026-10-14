@@ -54,7 +54,7 @@ const YES: Dim = { v: 'yes' };
 const NO: Dim = { v: 'no' };
 const maybe = (reason: string): Dim => ({ v: 'maybe', reason });
 
-const BASIS_TR = { production: 'üretim', 'model-year': 'model yılı', sales: 'satış' } as const;
+const BASIS_TR = { production: 'üretim', 'model-year': 'model yılı', sales: 'ilk tescil / satış' } as const;
 
 // Motor/şanzıman kodları için dilden bağımsız küçük harf: Türkçe yerelinde "I" → "ı" olur
 // ve "IXDA" ile "ixda" eşleşmez.
@@ -177,7 +177,9 @@ const startOf = (ym: YearMonth) => monthIndex(ym.year, ym.month ?? 1);
 const endOf = (ym: YearMonth | null, ctx: VehicleContext) =>
   ym ? monthIndex(ym.year, ym.month ?? 12) : monthIndex(ctx.currentYear ?? new Date().getFullYear(), 12);
 const fmtRange = (r: YearRange) =>
-  `${r.fromMonth ? `${String(r.fromMonth).padStart(2, '0')}.` : ''}${r.from}–${r.toMonth ? `${String(r.toMonth).padStart(2, '0')}.` : ''}${r.to}`;
+  r.from === r.to && !r.fromMonth && !r.toMonth
+    ? String(r.from)
+    : `${r.fromMonth ? `${String(r.fromMonth).padStart(2, '0')}.` : ''}${r.from}–${r.toMonth ? `${String(r.toMonth).padStart(2, '0')}.` : ''}${r.to}`;
 
 /** Aracın, yıl karşılaştırmasında kullanılacak en özgül dönemi. */
 function vehiclePeriods(ctx: VehicleContext): Period[] {
@@ -297,21 +299,50 @@ export function groupIssues<T extends Issue>(issues: T[], ctx: VehicleContext): 
 }
 
 /**
- * Kayıtları önce TÜRE göre ayırır; üç kategori arayüzde hiçbir zaman karışmaz:
- * - chronic:  kronik / tekrarlayan sorunlar
- * - defects:  bilinen kusurlar (tekrarlama kanıtı olmayan)
- * - recalls:  resmi geri çağırmalar ve servis kampanyaları (VIN ile resmi kontrol gerekir)
+ * Kullanıcıya gösterilen üç grup (yayın politikası):
+ * - known:    Bilinen / sık bildirilen sorunlar — kaynakla desteklenen kronik sorunlar ve bilinen kusurlar
+ * - possible: Olası sorunlar — araştırılan (örn. tekil bildirim) veya kaynakları çelişen kayıtlar;
+ *             "yaygın" diye sunulmaz
+ * - recalls:  Resmi geri çağırmalar ve servis kampanyaları (VIN ile resmi kontrol gerekir)
+ *
+ * Gruplar kanıt türüne göre ayrılır; eşleşmenin kesinliği (motora özgü / kasa geneli / koşullu)
+ * her kayıtta `scope` olarak ayrıca taşınır. Eşleştirme kuralları değişmez.
  */
-export interface IssuesByKind<T extends Issue = Issue> {
-  chronic: GroupedIssues<T>;
-  defects: GroupedIssues<T>;
-  recalls: GroupedIssues<T>;
+export type DisplayGroup = 'known' | 'possible' | 'recalls';
+export type MatchScope = 'engine' | 'general' | 'conditional';
+
+export interface DisplayItem<T extends Issue = Issue> {
+  issue: T;
+  match: MatchResult;
+  scope: MatchScope;
 }
 
-export function groupIssuesByKind<T extends Issue>(issues: T[], ctx: VehicleContext): IssuesByKind<T> {
-  return {
-    chronic: groupIssues(issues.filter((i) => i.kind === 'chronic'), ctx),
-    defects: groupIssues(issues.filter((i) => i.kind === 'known-defect'), ctx),
-    recalls: groupIssues(issues.filter((i) => i.kind === 'recall' || i.kind === 'service-campaign'), ctx),
-  };
+export type DisplayGroups<T extends Issue = Issue> = Record<DisplayGroup, DisplayItem<T>[]>;
+
+export function displayGroupOf(issue: Pick<Issue, 'kind' | 'status'>): DisplayGroup {
+  if (issue.kind === 'recall' || issue.kind === 'service-campaign') return 'recalls';
+  if (issue.status === 'researching' || issue.status === 'disputed') return 'possible';
+  return 'known';
+}
+
+const SCOPE_ORDER: Record<MatchScope, number> = { engine: 0, general: 1, conditional: 2 };
+
+export function groupForDisplay<T extends Issue>(issues: T[], ctx: VehicleContext): DisplayGroups<T> {
+  const out: DisplayGroups<T> = { known: [], possible: [], recalls: [] };
+  for (const issue of issues) {
+    const match = matchIssue(issue, ctx);
+    if (match.verdict === 'no') continue;
+    const scope: MatchScope = match.verdict === 'conditional' ? 'conditional' : match.engineSpecific ? 'engine' : 'general';
+    out[displayGroupOf(issue)].push({ issue, match, scope });
+  }
+  const sev = (i: Issue) => (i.severity ? SEVERITY_ORDER[i.severity.level] : 9);
+  for (const list of Object.values(out)) {
+    list.sort(
+      (a, b) =>
+        SCOPE_ORDER[a.scope] - SCOPE_ORDER[b.scope] ||
+        sev(a.issue) - sev(b.issue) ||
+        a.issue.title.localeCompare(b.issue.title, 'tr'),
+    );
+  }
+  return out;
 }

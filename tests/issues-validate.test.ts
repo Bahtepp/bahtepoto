@@ -13,8 +13,9 @@ const review = { status: 'content-checked', checkedAt: '2026-10-15' };
 const sources = z.array(issueSourceSchema).parse([
   { id: 'test-src', kind: 'technical-publication', title: 'T', publisher: 'A', accessedAt: '2026-10-15', review },
   { id: 'tech-b', kind: 'expert-service', title: 'T', publisher: 'B', accessedAt: '2026-10-15', review },
-  { id: 'forum-1', kind: 'user-report', title: 'F1', accessedAt: '2026-10-15', review },
-  { id: 'forum-2', kind: 'user-report', title: 'F2', accessedAt: '2026-10-15', review },
+  { id: 'forum-1', kind: 'user-report', title: 'F1', publisher: 'Forum A', accessedAt: '2026-10-15', review },
+  { id: 'forum-1b', kind: 'user-report', title: 'F1b', publisher: 'Forum A', accessedAt: '2026-10-15', review },
+  { id: 'forum-2', kind: 'user-report', title: 'F2', publisher: 'Forum B', accessedAt: '2026-10-15', review },
   { id: 'recall', kind: 'official-recall', title: 'R', accessedAt: '2026-10-15', review },
   { id: 'tsb', kind: 'manufacturer-bulletin', title: 'TSB', accessedAt: '2026-10-15', review },
   // Aynı habere dayanan iki yayın (bağımsız değil)
@@ -48,11 +49,41 @@ describe('veri kümeleri', () => {
 });
 
 describe('kanıt kuralları', () => {
-  test('yalnızca kullanıcı raporu → "supported" olamaz', () => {
+  test('tek kullanıcı bildirimi → "supported" olamaz (olası sorun kalır)', () => {
     expectError(
       { status: 'supported', claims: [{ sourceId: 'forum-1', aspects: ['existence'], stance: 'supports' }] },
-      /kullanıcı raporlarına dayanan/,
+      /tek \(veya aynı kaynaktan\) kullanıcı bildirimine/,
     );
+  });
+
+  test('aynı forumdaki iki bildirim bağımsız sayılmaz', () => {
+    expectError(
+      {
+        status: 'supported',
+        claims: [
+          { sourceId: 'forum-1', aspects: ['existence'], stance: 'supports' },
+          { sourceId: 'forum-1b', aspects: ['existence'], stance: 'supports' },
+        ],
+      },
+      /tek \(veya aynı kaynaktan\) kullanıcı bildirimine/,
+    );
+  });
+
+  test('iki bağımsız kullanıcı bildirimi → "supported" kabul edilir, "verified" edilmez', () => {
+    const claims = [
+      { sourceId: 'forum-1', aspects: ['existence'], stance: 'supports' },
+      { sourceId: 'forum-2', aspects: ['existence'], stance: 'supports' },
+    ];
+    assert.deepEqual(errorsFor({ status: 'supported', claims }), []);
+    expectError({ status: 'verified', claims }, /"verified" olamaz/);
+  });
+
+  test('metinde arıza yüzdesi verilemez', () => {
+    expectError({ summary: 'Araçların %30 kadarında görülen test sorunu açıklaması.' }, /yüzdesi verilemez/);
+  });
+
+  test('sıklık kanıtı yoksa "yaygın" denemez', () => {
+    expectError({ title: 'Yaygın test sorunu' }, /"yaygın"/);
   });
 
   test('yalnızca kullanıcı raporu → "researching" kabul edilir', () => {

@@ -38,6 +38,8 @@ bahtepoto.com/
 ├── .github/workflows/             # (deploy.yml henüz yok; bkz. "Bilinen eksikler")
 ├── docs/VERI-EKLEME.md            # Katalog verisi ekleme rehberi
 ├── docs/KRONIK-SORUNLAR.md        # Kronik sorun şeması, eşleştirme ve kanıt kuralları
+├── docs/FOCUS-DATA-AUDIT.md       # Ford Focus veri denetimi raporu (+ focus-data-audit.json)
+├── docs/VERI-TOPLAMA-PLANI.md     # Kaynaklar, lisanslar, otomatik içe aktarma ve ölçek planı
 ├── public/                        # Olduğu gibi kopyalanan statik dosyalar (favicon vb.)
 ├── src/
 │   ├── config/site.ts             # Site adı, URL, dil gibi tek kaynaklı ayarlar

@@ -19,7 +19,7 @@ import {
   vehiclePath,
 } from '@/lib/catalog/format';
 import { getIssueData } from '@/lib/issues';
-import { groupIssuesByKind, type GroupedIssues } from '@/lib/issues/match';
+import { groupForDisplay } from '@/lib/issues/match';
 import type { IssueSource } from '@/lib/issues/schema';
 import '@/styles/vehicle.css';
 import { getLabeler, getVehicleSelections, revisionsForVariant, toVehicleContext, type VehicleSelection } from '@/lib/vehicle';
@@ -50,7 +50,7 @@ const catalog = await getCatalog();
 const label = await getLabeler();
 const ctx = await toVehicleContext(sel);
 const live = await getIssueData('live');
-const groups = groupIssuesByKind(live.issues, ctx);
+const groups = groupForDisplay(live.issues, ctx);
 
 const genLabel = generationLabel(generation);
 const revPeriod = revision?.periods[0];
@@ -59,8 +59,7 @@ const engineTitle = variant.trimName && !engine.name.includes(variant.trimName) 
 const title = `${brand.name} ${genLabel}`;
 const subtitle = [engineTitle, revText].filter(Boolean).join(' — ');
 
-const flatten = (g: GroupedIssues) => [...g.engine, ...g.general, ...g.conditional, ...g.researching];
-const shownIssues = [...flatten(groups.chronic), ...flatten(groups.defects), ...flatten(groups.recalls)];
+const shownIssues = [...groups.known, ...groups.possible, ...groups.recalls];
 const issueSources = [...new Set(shownIssues.flatMap(({ issue }) => issue.claims.map((c) => c.sourceId)))]
   .map((id) => live.sourceById.get(id))
   .filter((s): s is IssueSource => Boolean(s));
@@ -80,7 +79,7 @@ const siblings = generation.variants
 const SECTIONS = [
   { id: 'kimlik', title: 'Araç kimliği' },
   { id: 'motor', title: 'Motor özellikleri' },
-  { id: 'kronik-sorunlar', title: 'Kronik sorunlar ve geri çağırmalar' },
+  { id: 'kronik-sorunlar', title: 'Bilinen sorunlar ve geri çağırmalar' },
   { id: 'kaynaklar', title: 'Kaynaklar' },
   // { id: 'yakit-tuketimi', title: 'Yakıt tüketimi' },
   // { id: 'ikinci-el-kontrol', title: 'İkinci el kontrol rehberi' },
@@ -196,8 +195,6 @@ const description = `${title} ${subtitle}: motor özellikleri, kronik sorunlar v
       groups={groups}
       sourceById={live.sourceById}
       label={label}
-      engineName={engine.name}
-      generationName={genLabel}
       engineMappingUncertain={!revisionMappingVerified}
     />
 

@@ -248,17 +248,30 @@ describe('canlı veri', () => {
   });
 });
 
-describe('türe göre ayrım', () => {
-  test('kronik sorun, bilinen kusur ve geri çağırma ayrı gruplarda döner', async () => {
-    const { groupIssuesByKind } = await import('../src/lib/issues/match.ts');
+describe('ekran grupları (yayın politikası)', () => {
+  test('bilinen, olası ve geri çağırma ayrı gruplarda; araştırılan kayıt "bilinen" sayılmaz', async () => {
+    const { groupForDisplay } = await import('../src/lib/issues/match.ts');
     const base = { appliesTo: [{ modelIds: ['ford-focus'] }] };
     const chronic = makeIssue({ ...base, id: 'k1', slug: 'k1', kind: 'chronic' });
     const defect = makeIssue({ ...base, id: 'k2', slug: 'k2', kind: 'known-defect' });
     const recall = makeIssue({ ...base, id: 'k3', slug: 'k3', kind: 'recall', recall: { vinRangePublished: false } });
-    const g = groupIssuesByKind([chronic, defect, recall], ctx('mk2', 'makyajli', 'duratec-14-80'));
-    const all = (x: typeof g.chronic) => [...x.engine, ...x.general, ...x.conditional, ...x.researching].map((i) => i.issue.id);
-    assert.deepEqual(all(g.chronic), ['k1']);
-    assert.deepEqual(all(g.defects), ['k2']);
-    assert.deepEqual(all(g.recalls), ['k3']);
+    const single = makeIssue({ ...base, id: 'k4', slug: 'k4', kind: 'chronic', status: 'researching' });
+    const disputed = makeIssue({ ...base, id: 'k5', slug: 'k5', kind: 'known-defect', status: 'disputed' });
+    const g = groupForDisplay([chronic, defect, recall, single, disputed], ctx('mk2', 'makyajli', 'duratec-14-80'));
+    const ids = (x: { issue: { id: string } }[]) => x.map((i) => i.issue.id).sort();
+    assert.deepEqual(ids(g.known), ['k1', 'k2']);
+    assert.deepEqual(ids(g.possible), ['k4', 'k5']);
+    assert.deepEqual(ids(g.recalls), ['k3']);
+  });
+
+  test('eşleşme kesinliği kayıtta korunur: motora özgü, kasa geneli, koşullu', async () => {
+    const { groupForDisplay } = await import('../src/lib/issues/match.ts');
+    const engine = makeIssue({ id: 'e1', slug: 'e1', appliesTo: [{ engineIds: ['ford-duratorq-20-110-ixda'] }] });
+    const general = makeIssue({ id: 'e2', slug: 'e2', appliesTo: [{ generationIds: ['ford-focus-mk2'], modelIds: ['ford-focus'] }] });
+    const cond = makeIssue({ id: 'e3', slug: 'e3', appliesTo: [{ modelIds: ['ford-focus'], transmissions: [{ name: 'PowerShift' }] }] });
+    const g = groupForDisplay([cond, general, engine], ctx('mk2', 'makyajli', 'duratorq-20-136-g6da'));
+    assert.deepEqual(g.known.map((x) => [x.issue.id, x.scope]), [['e2', 'general'], ['e3', 'conditional']]);
+    const g2 = groupForDisplay([cond, general, engine], ctx('mk2', 'makyajli', 'duratorq-20-110-ixda'));
+    assert.deepEqual(g2.known.map((x) => [x.issue.id, x.scope]), [['e1', 'engine'], ['e2', 'general']]);
   });
 });
