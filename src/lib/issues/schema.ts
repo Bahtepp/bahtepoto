@@ -49,6 +49,23 @@ export const issueSourceSchema = z.object({
   marketId: idSchema.optional(),
   language: z.string().optional(),
   notes: z.string().optional(),
+  /**
+   * Aynı haberin / açıklamanın yeniden yayımlanması gibi birbirinden BAĞIMSIZ OLMAYAN kaynaklar
+   * aynı değeri taşır (örn. "bbc-inside-out-2018"). Bağımsız kaynak sayımında bu gruplar tek sayılır.
+   */
+  basedOn: z.string().optional(),
+  /**
+   * Kaynağın İÇERİĞİNİN kontrol edilip edilmediği. Bağlantının bulunması tek başına
+   * içeriğin doğrulandığı anlamına gelmez.
+   */
+  review: z
+    .object({
+      status: z.enum(['content-checked', 'inaccessible', 'not-checked']),
+      checkedAt: isoDateSchema,
+      /** Nasıl kontrol edildi (örn. "Safety Gate resmi API", "PDF metni"). */
+      method: z.string().optional(),
+    })
+    .optional(),
   /** Örnek (kurgusal) kaynak. Canlı veride daima false. */
   demo: z.boolean().default(false),
 });
@@ -57,11 +74,14 @@ export const yearRangeSchema = z
   .object({
     from: z.number().int().min(1885).max(2100),
     to: z.number().int().min(1885).max(2100),
+    /** Biliniyorsa başlangıç / bitiş ayı (örn. geri çağırmanın üretim tarihleri). */
+    fromMonth: z.number().int().min(1).max(12).optional(),
+    toMonth: z.number().int().min(1).max(12).optional(),
     basis: periodBasisSchema,
     /** Yılların hangi pazara göre olduğu (yoksa seçicinin pazarı / araç pazarı). */
     marketId: idSchema.optional(),
   })
-  .refine((r) => r.to >= r.from, 'Yıl aralığında "to" >= "from" olmalı');
+  .refine((r) => r.to * 12 + (r.toMonth ?? 12) >= r.from * 12 + (r.fromMonth ?? 1), 'Yıl aralığında bitiş başlangıçtan önce olamaz');
 
 export const transmissionMatchSchema = z
   .object({
@@ -88,6 +108,8 @@ export const applicabilitySchema = z
     engineCodes: z.array(z.string()).default([]),
     engineFamilies: z.array(z.string()).default([]),
     fuels: z.array(fuelTypeSchema).default([]),
+    /** Aşırı besleme (örn. yalnızca turbolu motorlar). Motorun bu bilgisi yoksa eşleşme koşullu olur. */
+    aspirations: z.array(z.enum(['natural', 'turbo', 'supercharged', 'twin-turbo'])).default([]),
     transmissions: z.array(transmissionMatchSchema).default([]),
     years: yearRangeSchema.optional(),
     marketIds: z.array(idSchema).default([]),
@@ -183,6 +205,28 @@ export const issueSchema = z.object({
     .array(z.object({ text: z.string(), sourceIds: z.array(idSchema).min(1) }))
     .default([]),
   appliesTo: z.array(applicabilitySchema).min(1),
+  /**
+   * Geri çağırma / servis kampanyası bilgisi. Şasi numarası (VIN) aralığı yayımlanmamışsa
+   * kampanyanın belirli bir aracı kapsayıp kapsamadığı ancak resmi VIN sorgusuyla kesinleşir.
+   */
+  recall: z
+    .object({
+      /** Üretici kampanya kodu (örn. Ford "21S36"). */
+      campaignCode: z.string().optional(),
+      /** Resmi kayıt numarası(ları) (örn. Safety Gate "A12/01682/21"). */
+      references: z.array(z.string()).default([]),
+      productionFrom: isoDateSchema.optional(),
+      productionTo: isoDateSchema.optional(),
+      /** VIN aralığı resmi kaynakta yayımlandı mı? */
+      vinRangePublished: z.boolean(),
+      /** Kaydı bildiren ülke(ler). */
+      reportingCountries: z.array(z.string()).default([]),
+      /** Aynı kampanyanın kapsadığı diğer modeller (bilgi amaçlı). */
+      otherModels: z.array(z.string()).default([]),
+      /** İlişkili kampanyalar (örn. önceki kampanyanın hatalı onarımı). Aynı sorun değildir. */
+      relatedIssueIds: z.array(idSchema).default([]),
+    })
+    .optional(),
   /** Bu seçicilerden biriyle eşleşen araçlar kapsam dışıdır. */
   excludes: z.array(applicabilitySchema).default([]),
   severity: z

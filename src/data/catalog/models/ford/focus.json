@@ -192,11 +192,11 @@
           "name": "Makyajsız",
           "kind": "pre-facelift",
           "order": 0,
-          "periods": [{ "marketId": "eu", "basis": "production", "start": { "year": 2018 }, "end": { "year": 2022 }, "approximate": true }],
+          "periods": [{ "marketId": "eu", "basis": "production", "start": { "year": 2018 }, "end": { "year": 2022, "month": 6 }, "approximate": true }],
           "status": "sourced",
           "sourceIds": ["wp-en-ford-focus-mk4"],
           "updatedAt": "2026-10-15",
-          "notes": "Bitiş yılı, Haziran 2022'deki makyajdan türetildi."
+          "notes": "Bitiş, kaynakta Haziran 2022 olarak verilen makyaj tarihinden türetildi (yaklaşık)."
         },
         {
           "id": "ford-focus-mk4-facelift",
@@ -204,7 +204,7 @@
           "name": "Makyajlı",
           "kind": "facelift",
           "order": 1,
-          "periods": [{ "marketId": "eu", "basis": "production", "start": { "year": 2022 }, "end": { "year": 2025, "month": 11 }, "approximate": true }],
+          "periods": [{ "marketId": "eu", "basis": "production", "start": { "year": 2022, "month": 6 }, "end": { "year": 2025, "month": 11 }, "approximate": true }],
           "status": "sourced",
           "sourceIds": ["wp-en-ford-focus-mk4"],
           "updatedAt": "2026-10-15",

@@ -9,14 +9,21 @@ import { issueSourceSchema } from '../src/lib/issues/schema.ts';
 import { loadCatalog, loadIssues, makeIssue } from './helpers.ts';
 
 const catalog = loadCatalog();
+const review = { status: 'content-checked', checkedAt: '2026-10-15' };
 const sources = z.array(issueSourceSchema).parse([
-  { id: 'test-src', kind: 'technical-publication', title: 'T', publisher: 'A', accessedAt: '2026-10-15' },
-  { id: 'tech-b', kind: 'expert-service', title: 'T', publisher: 'B', accessedAt: '2026-10-15' },
-  { id: 'forum-1', kind: 'user-report', title: 'F1', accessedAt: '2026-10-15' },
-  { id: 'forum-2', kind: 'user-report', title: 'F2', accessedAt: '2026-10-15' },
-  { id: 'recall', kind: 'official-recall', title: 'R', accessedAt: '2026-10-15' },
-  { id: 'tsb', kind: 'manufacturer-bulletin', title: 'TSB', accessedAt: '2026-10-15' },
+  { id: 'test-src', kind: 'technical-publication', title: 'T', publisher: 'A', accessedAt: '2026-10-15', review },
+  { id: 'tech-b', kind: 'expert-service', title: 'T', publisher: 'B', accessedAt: '2026-10-15', review },
+  { id: 'forum-1', kind: 'user-report', title: 'F1', accessedAt: '2026-10-15', review },
+  { id: 'forum-2', kind: 'user-report', title: 'F2', accessedAt: '2026-10-15', review },
+  { id: 'recall', kind: 'official-recall', title: 'R', accessedAt: '2026-10-15', review },
+  { id: 'tsb', kind: 'manufacturer-bulletin', title: 'TSB', accessedAt: '2026-10-15', review },
+  // Aynı habere dayanan iki yayın (bağımsız değil)
+  { id: 'press-a', kind: 'technical-publication', title: 'PA', publisher: 'Yayıncı A', basedOn: 'ayni-haber', accessedAt: '2026-10-15', review },
+  { id: 'press-b', kind: 'technical-publication', title: 'PB', publisher: 'Yayıncı B', basedOn: 'ayni-haber', accessedAt: '2026-10-15', review },
+  // İçeriği okunmamış kaynak
+  { id: 'unread', kind: 'technical-publication', title: 'U', publisher: 'C', accessedAt: '2026-10-15' },
 ]);
+const recallInfo = { vinRangePublished: false, productionFrom: '2020-01-01', productionTo: '2020-12-31' };
 const base = { appliesTo: [{ modelIds: ['ford-focus'] }] };
 const errorsFor = (partial: Record<string, unknown>) => validateIssues([makeIssue({ ...base, ...partial })], sources, catalog, 'live');
 const expectError = (partial: Record<string, unknown>, pattern: RegExp) => {
@@ -95,7 +102,41 @@ describe('kanıt kuralları', () => {
   });
 
   test('"recall" türü resmi geri çağırma kaynağı ister', () => {
-    expectError({ kind: 'recall' }, /resmi geri çağırma kaynağı/);
+    expectError({ kind: 'recall', recall: recallInfo }, /resmi geri çağırma kaynağı/);
+  });
+
+  test('"recall" türü kampanya bilgisi (üretim tarihleri, VIN kapsamı) ister', () => {
+    expectError({ kind: 'recall', claims: [{ sourceId: 'recall', aspects: ['existence'], stance: 'supports' }] }, /"recall" bilgisi/);
+  });
+
+  test('geri çağırma kapsamı, kampanyanın üretim tarihlerinin dışına genişletilemez', () => {
+    expectError(
+      {
+        kind: 'recall',
+        status: 'verified',
+        recall: recallInfo,
+        appliesTo: [{ modelIds: ['ford-focus'], years: { from: 2019, to: 2021, basis: 'production' } }],
+        claims: [{ sourceId: 'recall', aspects: ['existence'], stance: 'supports' }],
+      },
+      /kampanyanın üretim tarihlerini aşıyor/,
+    );
+  });
+
+  test('aynı habere dayanan iki yayın "verified" için iki bağımsız kaynak sayılmaz', () => {
+    expectError(
+      {
+        status: 'verified',
+        claims: [
+          { sourceId: 'press-a', aspects: ['existence'], stance: 'supports' },
+          { sourceId: 'press-b', aspects: ['existence'], stance: 'supports' },
+        ],
+      },
+      /"verified" için/,
+    );
+  });
+
+  test('içeriği kontrol edilmemiş kaynak tek başına "supported" durumu veremez', () => {
+    expectError({ status: 'supported', claims: [{ sourceId: 'unread', aspects: ['existence'], stance: 'supports' }] }, /içeriği kontrol edilmiş/);
   });
 
   test('"chronic" iddiası tekrar kanıtı ister', () => {

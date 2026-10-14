@@ -10,7 +10,12 @@
     "reference": "A12/01682/21 (Ford 21S36)",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Almanya. Üretim: 13.08.2020–19.01.2021; tip DEH (e13*2007/46*1911*08–*11)."
+    "notes": "Bildiren ülke: Almanya. Üretim: 13.08.2020–19.01.2021; tip DEH (e13*2007/46*1911*08–*11).",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-a12-00616-21",
@@ -23,7 +28,12 @@
     "reference": "A12/00616/21 (Ford 21S01)",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Almanya. Üretim: 25.06.2020–30.11.2020; tip DEH; hafif hibrit (mHEV) araçlar."
+    "notes": "Bildiren ülke: Almanya. Üretim: 25.06.2020–30.11.2020; tip DEH; hafif hibrit (mHEV) araçlar.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-a12-01794-23",
@@ -36,7 +46,12 @@
     "reference": "A12/01794/23 (Ford 23S34)",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Almanya. Üretim: 24.05.2023–26.05.2023; tip DEH; 48 V hibrit aküye sahip araçlar."
+    "notes": "Bildiren ülke: Almanya. Üretim: 24.05.2023–26.05.2023; tip DEH; 48 V hibrit aküye sahip araçlar.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-a12-01739-23",
@@ -49,7 +64,12 @@
     "reference": "A12/01739/23 (Ford 23S31)",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Almanya. Üretim: 24.03.2023–07.06.2023; tip DEH."
+    "notes": "Bildiren ülke: Almanya. Üretim: 24.03.2023–07.06.2023; tip DEH.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-a12-00940-23",
@@ -62,7 +82,12 @@
     "reference": "A12/00940/23 (Ford 22S40)",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Fransa. Üretim: 16.09.2021–18.10.2021; tip onayı e13*2007/46*1911*13."
+    "notes": "Bildiren ülke: Fransa. Üretim: 16.09.2021–18.10.2021; tip onayı e13*2007/46*1911*13.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-a12-01712-22",
@@ -75,7 +100,12 @@
     "reference": "A12/01712/22 (Ford 22S49)",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Almanya. Üretim: 09.06.2022–06.07.2022; tip DEH."
+    "notes": "Bildiren ülke: Almanya. Üretim: 09.06.2022–06.07.2022; tip DEH.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-a12-00942-23",
@@ -88,7 +118,12 @@
     "reference": "A12/00942/23 (Ford 22S21)",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Fransa. Üretim: 02.08.2019–21.03.2022 (dört model için ortak aralık); Focus tip onayı e13*2007/46*1911*05–*12. Uyarı motor türünü belirtmiyor."
+    "notes": "Bildiren ülke: Fransa. Üretim: 02.08.2019–21.03.2022 (dört model için ortak aralık); Focus tip onayı e13*2007/46*1911*05–*12. Uyarı motor türünü belirtmiyor.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-a12-00002-20",
@@ -101,7 +136,12 @@
     "reference": "A12/00002/20 (Ford 19S50)",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Birleşik Krallık. Üretim: 21.03.2018–07.03.2019; tip onayı e13*2007/46*1911*04."
+    "notes": "Bildiren ülke: Birleşik Krallık. Üretim: 21.03.2018–07.03.2019; tip onayı e13*2007/46*1911*04.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-info-00058-21",
@@ -114,7 +154,12 @@
     "reference": "INFO/00058/21 (Ford 20S74)",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Almanya. Üretim: 07.05.2018–05.07.2019; tip DEH. 19S50 geri çağırmasındaki hatalı onarımla ilgilidir."
+    "notes": "Bildiren ülke: Almanya. Üretim: 07.05.2018–05.07.2019; tip DEH. 19S50 geri çağırmasındaki hatalı onarımla ilgilidir.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-a12-00897-20",
@@ -127,7 +172,12 @@
     "reference": "A12/00897/20 (Ford 20S28)",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Birleşik Krallık. Üretim: 31.07.2019–04.03.2020; tip onayı e13*2007/46*1911*05."
+    "notes": "Bildiren ülke: Birleşik Krallık. Üretim: 31.07.2019–04.03.2020; tip onayı e13*2007/46*1911*05.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-a12-00382-20",
@@ -140,7 +190,12 @@
     "reference": "A12/00382/20 (Ford 20S05)",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Birleşik Krallık. Focus üretimi: 14.01.2020–28.01.2020; tip onayı e13*2007/46*1911*06."
+    "notes": "Bildiren ülke: Birleşik Krallık. Focus üretimi: 14.01.2020–28.01.2020; tip onayı e13*2007/46*1911*06.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-a12-00053-20",
@@ -153,7 +208,12 @@
     "reference": "A12/00053/20 (Ford 19S42)",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Birleşik Krallık. Üretim: 14.10.2019–16.11.2019; tip onayı e13*2007/46*1911*."
+    "notes": "Bildiren ülke: Birleşik Krallık. Üretim: 14.10.2019–16.11.2019; tip onayı e13*2007/46*1911*.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-a12-0580-19",
@@ -166,7 +226,12 @@
     "reference": "A12/0580/19 (Ford 19S08)",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Birleşik Krallık. Belirli araçlar; üretim: 22.09.2018–10.11.2018; tip onayı e13*2007/46*1911*02."
+    "notes": "Bildiren ülke: Birleşik Krallık. Belirli araçlar; üretim: 22.09.2018–10.11.2018; tip onayı e13*2007/46*1911*02.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-a12-0104-19",
@@ -179,7 +244,12 @@
     "reference": "A12/0104/19 (Ford 18U33)",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Birleşik Krallık. Belirli araçlar; üretim: 19.10.2018–08.12.2018; tip onayı e13*2007/46*1911*03."
+    "notes": "Bildiren ülke: Birleşik Krallık. Belirli araçlar; üretim: 19.10.2018–08.12.2018; tip onayı e13*2007/46*1911*03.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-a12-1530-18",
@@ -192,7 +262,12 @@
     "reference": "A12/1530/18",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Birleşik Krallık. Belirli araçlar; üretim: 16.04.2018–02.08.2018."
+    "notes": "Bildiren ülke: Birleşik Krallık. Belirli araçlar; üretim: 16.04.2018–02.08.2018.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-a12-1602-19",
@@ -205,7 +280,12 @@
     "reference": "A12/1602/19 (Ford 19S30)",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Birleşik Krallık. Üretim: 07.05.2019–30.09.2019; Focus tip onayı e13*2007/46*1911*04."
+    "notes": "Bildiren ülke: Birleşik Krallık. Üretim: 07.05.2019–30.09.2019; Focus tip onayı e13*2007/46*1911*04.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-info-00130-21",
@@ -218,7 +298,12 @@
     "reference": "INFO/00130/21 (Ford 21C12)",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Almanya. Üretim: 15.07.2019–12.02.2021 (altı model için ortak aralık); Focus tip DEH."
+    "notes": "Bildiren ülke: Almanya. Üretim: 15.07.2019–12.02.2021 (altı model için ortak aralık); Focus tip DEH.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-sr-00114-26",
@@ -231,7 +316,12 @@
     "reference": "SR/00114/26 (Ford 25SC2)",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Almanya. Üretim: 20.09.2025–24.10.2025; Focus tip onayı e13*2007/46*1911*22 (DEH)."
+    "notes": "Bildiren ülke: Almanya. Üretim: 20.09.2025–24.10.2025; Focus tip onayı e13*2007/46*1911*22 (DEH).",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-sr-02468-26",
@@ -244,7 +334,12 @@
     "reference": "SR/02468/26 (Ford 24E06)",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Fransa. Uyarıda Focus için üretim aralığı 10.12.2014–22.07.2019 olarak etiketli; ayrıca model adı verilmemiş bir 23.07.2019–03.06.2024 aralığı var ve hangi modele ait olduğu belirtilmemiş. Risk türü: çevre."
+    "notes": "Bildiren ülke: Fransa. Uyarıda Focus için üretim aralığı 10.12.2014–22.07.2019 olarak etiketli; ayrıca model adı verilmemiş bir 23.07.2019–03.06.2024 aralığı var ve hangi modele ait olduğu belirtilmemiş. Risk türü: çevre.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-a12-00141-24",
@@ -257,7 +352,12 @@
     "reference": "A12/00141/24 (Ford 17S45)",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Almanya. Üretim: 18.07.2014–19.10.2015; tipler arasında DYB (Focus Mk3) var; 2.0 L Duratorq dizel motorlu araçlar."
+    "notes": "Bildiren ülke: Almanya. Üretim: 18.07.2014–19.10.2015; tipler arasında DYB (Focus Mk3) var; 2.0 L Duratorq dizel motorlu araçlar.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-a12-1883-19",
@@ -270,7 +370,12 @@
     "reference": "A12/1883/19",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Almanya. Üretim: 2009–2013; tipler arasında DYB (Focus Mk3) var. Uyarı motor veya şanzıman belirtmiyor."
+    "notes": "Bildiren ülke: Almanya. Üretim: 2009–2013; tipler arasında DYB (Focus Mk3) var. Uyarı motor veya şanzıman belirtmiyor.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-a12-0963-18",
@@ -283,7 +388,12 @@
     "reference": "A12/0963/18",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Almanya. Üretim: 2014–2018; tipler arasında DYB (Focus Mk3) var. Uyarı motor veya şanzıman belirtmiyor."
+    "notes": "Bildiren ülke: Almanya. Üretim: 2014–2018; tipler arasında DYB (Focus Mk3) var. Uyarı motor veya şanzıman belirtmiyor.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "safety-gate-a12-0028-19",
@@ -296,7 +406,12 @@
     "reference": "A12/0028/19 (Ford 18S39)",
     "marketId": "eu",
     "language": "en",
-    "notes": "Bildiren ülke: Birleşik Krallık. Belirli araçlar; üretim: 30.06.2016–30.05.2018. Uyarı motor veya şanzıman belirtmiyor."
+    "notes": "Bildiren ülke: Birleşik Krallık. Belirli araçlar; üretim: 30.06.2016–30.05.2018. Uyarı motor veya şanzıman belirtmiyor.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Safety Gate resmi API (public/api/notification), İngilizce sürüm"
+    }
   },
   {
     "id": "adac-pannenstatistik-2008",
@@ -306,7 +421,13 @@
     "publisher": "ADAC e.V.",
     "accessedAt": "2026-10-15",
     "language": "de",
-    "notes": "Almanya'daki ADAC yol yardım (Straßenwacht) kayıtlarına göre bin araç başına arıza sayısı; yıllar ilk tescil (Erstzulassung) yılıdır (bu sayı 2002–2007 tescilli araçları değerlendirir). Focus satırı: \"Zündspulen defekt (bis 2003); Kühlmittelpumpen defekt (bis 2004); Turboschläuche abgerutscht, Turbolader defekt (2003 bis 2005)\"."
+    "notes": "Almanya'daki ADAC yol yardım kayıtları; model ve ilk tescil yılı düzeyinde, motor düzeyinde değil. Liste başlığı: \"Die Modelle und ihre häufigsten Defekte\" (modelin en sık arızaları; ortalamayla karşılaştırma değildir). Rapor 2003–2008 ilk tescil yıllarını kapsar.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "ADAC PDF metni (pdftotext); Ford Focus satırı ve liste başlığı okundu"
+    },
+    "basedOn": "adac-pannenstatistik"
   },
   {
     "id": "adac-pannenstatistik-2009",
@@ -316,7 +437,13 @@
     "publisher": "ADAC e.V.",
     "accessedAt": "2026-10-15",
     "language": "de",
-    "notes": "Almanya'daki ADAC yol yardım (Straßenwacht) kayıtlarına göre bin araç başına arıza sayısı; yıllar ilk tescil (Erstzulassung) yılıdır (bu sayı 2003–2008 tescilli araçları değerlendirir). Focus satırı: \"Generator defekt (extrem häufig bis 2006); Zündspule defekt (bis 2007, besonders häufig bis 2004); Kühlmittelpumpe defekt (besonders bis 2004); Turboschlauch abgerutscht (besonders 2005/2006); Turbolader defekt (bis 2007); Ladedruckregelung defekt (ab 2006)\"."
+    "notes": "Almanya'daki ADAC yol yardım kayıtları; model ve ilk tescil yılı düzeyinde, motor düzeyinde değil. Liste başlığı: \"Die einzelnen Fahrzeugmodelle und ihre häufigsten Defekte\" (modelin en sık arızaları; ortalamayla karşılaştırma değildir).",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "ADAC PDF metni (pdftotext); Ford Focus satırı ve liste başlığı okundu"
+    },
+    "basedOn": "adac-pannenstatistik"
   },
   {
     "id": "adac-pannenstatistik-2010",
@@ -326,7 +453,13 @@
     "publisher": "ADAC e.V.",
     "accessedAt": "2026-10-15",
     "language": "de",
-    "notes": "Almanya'daki ADAC yol yardım (Straßenwacht) kayıtlarına göre bin araç başına arıza sayısı; yıllar ilk tescil (Erstzulassung) yılıdır (bu sayı 2004–2009 tescilli araçları değerlendirir). Focus satırı: \"Batterie entladen, defekt (sehr häufig, alle Baujahre); Generator defekt (extrem häufig bis 2006); Turboschlauch abgerutscht (bis 2005/06); Turbolader defekt (besonders bis 2006); Ladedruckregelung defekt (2009/10); Zündspule defekt (bis 2007); Lenkunterstützung ausgefallen (bis 2007); Partikelfilter verstopft (Diesel bis 2008)\"."
+    "notes": "Almanya'daki ADAC yol yardım kayıtları; model ve ilk tescil yılı düzeyinde, motor düzeyinde değil. Liste başlığı: \"Die einzelnen Fahrzeugmodelle und ihre häufigsten Defekte\" (modelin en sık arızaları; ortalamayla karşılaştırma değildir).",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "ADAC PDF metni (pdftotext); Ford Focus satırı ve liste başlığı okundu"
+    },
+    "basedOn": "adac-pannenstatistik"
   },
   {
     "id": "adac-pannenstatistik-2011",
@@ -336,7 +469,13 @@
     "publisher": "ADAC e.V.",
     "accessedAt": "2026-10-15",
     "language": "de",
-    "notes": "Almanya'daki ADAC yol yardım (Straßenwacht) kayıtlarına göre bin araç başına arıza sayısı; yıllar ilk tescil (Erstzulassung) yılıdır (bu sayı 2005–2010 tescilli araçları değerlendirir). Focus satırı: \"Entladene Batterie (2006 bis 2011); Generator defekt (2006 bis 2010); Dieselpartikelfilter verstopft (2006 bis 2008); Ladedruckregelung fehlerhaft (2009 bis 2010); Turboladerschäden (Diesel 2006 bis 2010); Servolenkung ausgefallen (bis 2008); Anlasser defekt (2006 bis 2010)\"."
+    "notes": "Almanya'daki ADAC yol yardım kayıtları; model ve ilk tescil yılı düzeyinde, motor düzeyinde değil. Liste başlığı: \"Die einzelnen Fahrzeugmodelle und ihre häufigsten Defekte\" (modelin en sık arızaları; ortalamayla karşılaştırma değildir).",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "ADAC PDF metni (pdftotext); Ford Focus satırı ve liste başlığı okundu"
+    },
+    "basedOn": "adac-pannenstatistik"
   },
   {
     "id": "adac-pannenstatistik-2013",
@@ -346,7 +485,13 @@
     "publisher": "ADAC e.V.",
     "accessedAt": "2026-10-15",
     "language": "de",
-    "notes": "Almanya'daki ADAC yol yardım (Straßenwacht) kayıtlarına göre bin araç başına arıza sayısı; yıllar ilk tescil (Erstzulassung) yılıdır (bu sayı 2007–2012 tescilli araçları değerlendirir). Focus satırı: \"Entladene Batterie (2006 bis 2012); Generator defekt (2007 bis 2011); Dieselpartikelfilter verstopft (bis 2011); Ladedruckregelung fehlerhaft (2009 bis 2011); Turboladerschäden (Diesel 2007 bis 2011); Servolenkung ausgefallen (bis 2009); Anlasser defekt (2007 bis 2012)\"."
+    "notes": "Almanya'daki ADAC yol yardım kayıtları; model ve ilk tescil yılı düzeyinde, motor düzeyinde değil. Liste başlığı: \"Die einzelnen Fahrzeugmodelle und ihre häufigsten Defekte\" (modelin en sık arızaları; ortalamayla karşılaştırma değildir).",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "ADAC PDF metni (pdftotext); Ford Focus satırı ve liste başlığı okundu"
+    },
+    "basedOn": "adac-pannenstatistik"
   },
   {
     "id": "adac-pannenstatistik-2014",
@@ -356,7 +501,13 @@
     "publisher": "ADAC e.V.",
     "accessedAt": "2026-10-15",
     "language": "de",
-    "notes": "Almanya'daki ADAC yol yardım (Straßenwacht) kayıtlarına göre bin araç başına arıza sayısı; yıllar ilk tescil (Erstzulassung) yılıdır. Focus satırı: \"Entladene Batterie (bis 2012); Generator defekt (bis 2009); Dieselpartikelfilter verstopft (2006 bis 2008); Ladedruckregelung fehlerhaft (2010); Turboladerschäden (Diesel 2006)\"."
+    "notes": "Almanya'daki ADAC yol yardım kayıtları; model ve ilk tescil yılı düzeyinde, motor düzeyinde değil. Liste başlığı: \"Häufigste Mängel nach Fahrzeugmodell\" (modelin en sık arızaları; ortalamayla karşılaştırma değildir).",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "ADAC PDF metni (pdftotext); Ford Focus satırı ve liste başlığı okundu"
+    },
+    "basedOn": "adac-pannenstatistik"
   },
   {
     "id": "adac-pannenstatistik-2015",
@@ -366,7 +517,13 @@
     "publisher": "ADAC e.V.",
     "accessedAt": "2026-10-15",
     "language": "de",
-    "notes": "Almanya'daki ADAC yol yardım (Straßenwacht) kayıtlarına göre bin araç başına arıza sayısı; yıllar ilk tescil (Erstzulassung) yılıdır. Focus satırı: \"Entladene Batterie (2009 bis 2011); Generator defekt (2005 bis 2008); Dieselpartikelfilter verstopft (2006 bis 2008); Ladedruckregelung fehlerhaft (2010)\"."
+    "notes": "Almanya'daki ADAC yol yardım kayıtları; model ve ilk tescil yılı düzeyinde, motor düzeyinde değil. Liste başlığı: \"Häufigste Mängel nach Fahrzeugmodell\" (modelin en sık arızaları; ortalamayla karşılaştırma değildir).",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "ADAC PDF metni (pdftotext); Ford Focus satırı ve liste başlığı okundu"
+    },
+    "basedOn": "adac-pannenstatistik"
   },
   {
     "id": "adac-pannenstatistik-2016",
@@ -376,7 +533,13 @@
     "publisher": "ADAC e.V.",
     "accessedAt": "2026-10-15",
     "language": "de",
-    "notes": "Almanya'daki ADAC yol yardım (Straßenwacht) kayıtlarına göre bin araç başına arıza sayısı; yıllar ilk tescil (Erstzulassung) yılıdır. Focus satırı: \"Entladene Batterie (bis 2011); Generator defekt (bis 2010); Dieselpartikelfilter verstopft (2006 bis 2008); Ladedruckregelung fehlerhaft (2010)\"."
+    "notes": "Almanya'daki ADAC yol yardım kayıtları; model ve ilk tescil yılı düzeyinde, motor düzeyinde değil. Liste başlığı: \"Häufigste Mängel nach Fahrzeugmodell\" (modelin en sık arızaları; ortalamayla karşılaştırma değildir).",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "ADAC PDF metni (pdftotext); Ford Focus satırı ve liste başlığı okundu"
+    },
+    "basedOn": "adac-pannenstatistik"
   },
   {
     "id": "adac-pannenstatistik-2017",
@@ -386,7 +549,13 @@
     "publisher": "ADAC e.V.",
     "accessedAt": "2026-10-15",
     "language": "de",
-    "notes": "Almanya'daki ADAC yol yardım (Straßenwacht) kayıtlarına göre bin araç başına arıza sayısı; yıllar ilk tescil (Erstzulassung) yılıdır. Focus satırı: \"Entladene Batterie (2007 bis 2011); Dieselpartikelfilter verstopft (2007 bis 2009); Ladedruckregelung fehlerhaft (2009 und 2011); Anlasser (2012 bis 2014); Generator defekt (2007 bis 2011)\"."
+    "notes": "Almanya'daki ADAC yol yardım kayıtları; model ve ilk tescil yılı düzeyinde, motor düzeyinde değil. Liste başlığı: \"Häufigste Mängel nach Fahrzeugmodell\" (modelin en sık arızaları; ortalamayla karşılaştırma değildir).",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "ADAC PDF metni (pdftotext); Ford Focus satırı ve liste başlığı okundu"
+    },
+    "basedOn": "adac-pannenstatistik"
   },
   {
     "id": "adac-pannenstatistik-2018",
@@ -396,7 +565,13 @@
     "publisher": "ADAC e.V.",
     "accessedAt": "2026-10-15",
     "language": "de",
-    "notes": "Almanya'daki ADAC yol yardım (Straßenwacht) kayıtlarına göre bin araç başına arıza sayısı; yıllar ilk tescil (Erstzulassung) yılıdır. Focus satırı: \"Batterie (2008 bis 2014); Generator (2008 bis 2011); Partikelfilter (2008 bis 2009); Anlasser (2012 bis 2013)\"."
+    "notes": "Almanya'daki ADAC yol yardım kayıtları; model ve ilk tescil yılı düzeyinde, motor düzeyinde değil. Liste başlığı: \"Häufigste Mängel nach Fahrzeugmodell\" (modelin en sık arızaları; ortalamayla karşılaştırma değildir).",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "ADAC PDF metni (pdftotext); Ford Focus satırı ve liste başlığı okundu"
+    },
+    "basedOn": "adac-pannenstatistik"
   },
   {
     "id": "adac-pannenstatistik-2019",
@@ -406,7 +581,13 @@
     "publisher": "ADAC e.V.",
     "accessedAt": "2026-10-15",
     "language": "de",
-    "notes": "Almanya'daki ADAC yol yardım (Straßenwacht) kayıtlarına göre bin araç başına arıza sayısı; yıllar ilk tescil (Erstzulassung) yılıdır. Focus satırı: \"Anlasser (2013); Batterie (2009-2014); Generator (2009-2011)\"."
+    "notes": "Almanya'daki ADAC yol yardım kayıtları; model ve ilk tescil yılı düzeyinde, motor düzeyinde değil. Liste başlığı: \"Überdurchschnittlich häufig auftretende Mängel\" (ortalamanın üstünde sık görülen arızalar).",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "ADAC PDF metni (pdftotext); Ford Focus satırı ve liste başlığı okundu"
+    },
+    "basedOn": "adac-pannenstatistik"
   },
   {
     "id": "adac-pannenstatistik-2020",
@@ -416,7 +597,13 @@
     "publisher": "ADAC e.V.",
     "accessedAt": "2026-10-15",
     "language": "de",
-    "notes": "Almanya'daki ADAC yol yardım (Straßenwacht) kayıtlarına göre bin araç başına arıza sayısı; yıllar ilk tescil (Erstzulassung) yılıdır. Focus satırı: \"Anlasser (2012-2013); Batterie (2010-2014); Generator (2010-2011)\"."
+    "notes": "Almanya'daki ADAC yol yardım kayıtları; model ve ilk tescil yılı düzeyinde, motor düzeyinde değil. Liste başlığı: \"Überdurchschnittlich häufig auftretende Mängel\" (ortalamanın üstünde sık görülen arızalar).",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "ADAC PDF metni (pdftotext); Ford Focus satırı ve liste başlığı okundu"
+    },
+    "basedOn": "adac-pannenstatistik"
   },
   {
     "id": "adac-pannenstatistik-2021",
@@ -426,7 +613,13 @@
     "publisher": "ADAC e.V.",
     "accessedAt": "2026-10-15",
     "language": "de",
-    "notes": "Almanya'daki ADAC yol yardım (Straßenwacht) kayıtlarına göre bin araç başına arıza sayısı; yıllar ilk tescil (Erstzulassung) yılıdır. Focus satırı: \"Batterie (2011-2014)\"."
+    "notes": "Almanya'daki ADAC yol yardım kayıtları; model ve ilk tescil yılı düzeyinde, motor düzeyinde değil. Liste başlığı: \"Überdurchschnittlich häufig auftretende Mängel\" (ortalamanın üstünde sık görülen arızalar).",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "ADAC PDF metni (pdftotext); Ford Focus satırı ve liste başlığı okundu"
+    },
+    "basedOn": "adac-pannenstatistik"
   },
   {
     "id": "adac-pannenstatistik-2022",
@@ -436,7 +629,13 @@
     "publisher": "ADAC e.V.",
     "accessedAt": "2026-10-15",
     "language": "de",
-    "notes": "Almanya'daki ADAC yol yardım (Straßenwacht) kayıtlarına göre bin araç başına arıza sayısı; yıllar ilk tescil (Erstzulassung) yılıdır. Focus satırı: \"Anlasser (2013); Starterbatterie (2012-2014)\"."
+    "notes": "Almanya'daki ADAC yol yardım kayıtları; model ve ilk tescil yılı düzeyinde, motor düzeyinde değil. Liste başlığı: \"Überdurchschnittlich häufig auftretende Mängel\" (ortalamanın üstünde sık görülen arızalar).",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "ADAC PDF metni (pdftotext); Ford Focus satırı ve liste başlığı okundu"
+    },
+    "basedOn": "adac-pannenstatistik"
   },
   {
     "id": "adac-pannenstatistik-2023",
@@ -446,7 +645,13 @@
     "publisher": "ADAC e.V.",
     "accessedAt": "2026-10-15",
     "language": "de",
-    "notes": "Almanya'daki ADAC yol yardım (Straßenwacht) kayıtlarına göre bin araç başına arıza sayısı; yıllar ilk tescil (Erstzulassung) yılıdır. Focus satırı: \"Anlasser (2013, 2016); Starterbatterie (2013-2015, 2018-2019)\"."
+    "notes": "Almanya'daki ADAC yol yardım kayıtları; model ve ilk tescil yılı düzeyinde, motor düzeyinde değil. Liste başlığı: \"Überdurchschnittlich häufig auftretende Mängel\" (ortalamanın üstünde sık görülen arızalar).",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "ADAC PDF metni (pdftotext); Ford Focus satırı ve liste başlığı okundu"
+    },
+    "basedOn": "adac-pannenstatistik"
   },
   {
     "id": "adac-pannenstatistik-2024",
@@ -456,7 +661,13 @@
     "publisher": "ADAC e.V.",
     "accessedAt": "2026-10-15",
     "language": "de",
-    "notes": "Almanya'daki ADAC yol yardım (Straßenwacht) kayıtlarına göre bin araç başına arıza sayısı; yıllar ilk tescil (Erstzulassung) yılıdır. Focus satırı: \"Anlasser (2013, 2015-2016); Starterbatterie (2013-2016, 2018-2019)\"."
+    "notes": "Almanya'daki ADAC yol yardım kayıtları; model ve ilk tescil yılı düzeyinde, motor düzeyinde değil. Liste başlığı: \"Überdurchschnittlich häufig auftretende Mängel\" (ortalamanın üstünde sık görülen arızalar).",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "ADAC PDF metni (pdftotext); Ford Focus satırı ve liste başlığı okundu"
+    },
+    "basedOn": "adac-pannenstatistik"
   },
   {
     "id": "adac-pannenstatistik-2025",
@@ -466,7 +677,13 @@
     "publisher": "ADAC e.V.",
     "accessedAt": "2026-10-15",
     "language": "de",
-    "notes": "Almanya'daki ADAC yol yardım (Straßenwacht) kayıtlarına göre bin araç başına arıza sayısı; yıllar ilk tescil (Erstzulassung) yılıdır. Focus satırı: \"Anlasser (2015-2016); Starterbatterie (2015-2022); Zahnriemen (2016)\"."
+    "notes": "Almanya'daki ADAC yol yardım kayıtları; model ve ilk tescil yılı düzeyinde, motor düzeyinde değil. Liste başlığı: \"Überdurchschnittlich häufig auftretende Mängel\" (ortalamanın üstünde sık görülen arızalar).",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "ADAC PDF metni (pdftotext); Ford Focus satırı ve liste başlığı okundu"
+    },
+    "basedOn": "adac-pannenstatistik"
   },
   {
     "id": "autocar-2018-ford-ecoboost",
@@ -478,7 +695,13 @@
     "accessedAt": "2026-10-15",
     "marketId": "gb",
     "language": "en",
-    "notes": "Ford'un açıklamasına dayanarak: Ekim 2011–Ekim 2013 arasında üretilen 1.0 EcoBoost motorlarda soğutma hortumu yüksek sıcaklıkta arızalanabilir; Mart 2015'te Field Service Action (FSA) başlatıldı; DVSA bunu güvenlik sorunu olarak sınıflandırmadı. Ayrı bir 1.6 EcoBoost geri çağırmasından da söz eder."
+    "notes": "Ford'un açıklamasına dayanarak: Ekim 2011–Ekim 2013 arasında üretilen 1.0 EcoBoost motorlarda soğutma hortumu yüksek sıcaklıkta arızalanabilir; Mart 2015'te Field Service Action (FSA) başlatıldı; DVSA bunu güvenlik sorunu olarak sınıflandırmadı. Ayrı bir 1.6 EcoBoost geri çağırmasından da söz eder.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Sayfa metni tarayıcıyla okundu (otomatik indirme 402/403 ile engellendi)"
+    },
+    "basedOn": "bbc-inside-out-2018-ve-ford-aciklamasi"
   },
   {
     "id": "am-online-2018-ford-ecoboost",
@@ -490,7 +713,13 @@
     "accessedAt": "2026-10-15",
     "marketId": "gb",
     "language": "en",
-    "notes": "BBC Inside Out araştırmasını aktarır: 1.0 EcoBoost motorlarda aşırı ısınma; Ford'un 1.0 litre aşırı ısınmayla ilişkilendirilen onarımların tamamını karşılayacağı açıklaması."
+    "notes": "BBC Inside Out araştırmasını ve Ford açıklamasını aktarır; Autocar haberiyle aynı kaynağa dayandığı için bağımsız kaynak sayılmaz. Üretim tarihi vermez.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Sayfa metni tarayıcıyla okundu (otomatik indirme 402/403 ile engellendi)"
+    },
+    "basedOn": "bbc-inside-out-2018-ve-ford-aciklamasi"
   },
   {
     "id": "whatcar-2009-focus-fan-recall",
@@ -502,6 +731,11 @@
     "accessedAt": "2026-10-15",
     "marketId": "gb",
     "language": "en",
-    "notes": "Birleşik Krallık'ta 20.02.2004–31.05.2006 arasında üretilen 1.8 ve 2.0 TDCi motorlu Focus'lar için güvenlik geri çağırması (en fazla 30.000 araç). Resmi DVSA kaydına otomatik erişim engellendiği için kayıt numarası doğrulanamadı."
+    "notes": "Birleşik Krallık'ta 20.02.2004–31.05.2006 arasında üretilen 1.8 ve 2.0 TDCi motorlu Focus'lar için güvenlik geri çağırması (en fazla 30.000 araç). Resmi DVSA kaydına otomatik erişim engellendiği için kayıt numarası doğrulanamadı.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-15",
+      "method": "Sayfa metni tarayıcıyla okundu (otomatik indirme 402/403 ile engellendi)"
+    }
   }
 ]

@@ -37,6 +37,7 @@ export function validateIssues(issues: Issue[], sources: IssueSource[], catalog:
     if (s.marketId && !marketIds.has(s.marketId)) err(`issue-sources/${s.id}`, `bilinmeyen pazar "${s.marketId}"`);
   }
 
+  const allIssueIds = new Set(issues.map((i) => i.id));
   const ids = new Set<string>();
   const checkSelector = (where: string, s: Applicability) => {
     for (const id of s.modelIds) {
@@ -95,10 +96,14 @@ export function validateIssues(issues: Issue[], sources: IssueSource[], catalog:
 
     if (issue.status === 'verified') {
       const official = existenceKinds.some((k) => STRONG_OFFICIAL.includes(k));
+      // Aynı habere/açıklamaya dayanan kaynaklar (basedOn) ve aynı yayıncı tek sayılır.
       const expertPublishers = new Set(
         existence
           .filter((c) => INDEPENDENT_EXPERT.includes(kindOf(c.sourceId)!))
-          .map((c) => sourceById.get(c.sourceId)?.publisher ?? c.sourceId),
+          .map((c) => {
+            const src = sourceById.get(c.sourceId);
+            return src?.basedOn ?? src?.publisher ?? c.sourceId;
+          }),
       );
       if (!official && expertPublishers.size < 2) {
         err(w, '"verified" için üretici bülteni / resmi geri çağırma ya da en az iki bağımsız uzman/teknik kaynak gerekli');
@@ -110,9 +115,35 @@ export function validateIssues(issues: Issue[], sources: IssueSource[], catalog:
       }
     }
 
+    // Canlı veride kaynak içeriğinin gerçekten okunmuş olması
+    if (dataset === 'live' && (issue.status === 'verified' || issue.status === 'supported')) {
+      const checked = existence.some((c) => sourceById.get(c.sourceId)?.review?.status === 'content-checked');
+      if (!checked) err(w, `"${issue.status}" için varlık iddiasını destekleyen en az bir kaynağın içeriği kontrol edilmiş olmalı (review.status: "content-checked")`);
+    }
+
     // Geri çağırma kaydı yalnızca resmi kayıtla
     if (issue.kind === 'recall' && !existenceKinds.includes('official-recall')) {
       err(w, '"recall" türü resmi geri çağırma kaynağı gerektirir');
+    }
+    if ((issue.kind === 'recall' || issue.kind === 'service-campaign') && !issue.recall) {
+      err(w, `"${issue.kind}" türü "recall" bilgisi (kampanya, üretim tarihleri, VIN kapsamı) gerektirir`);
+    }
+    if (issue.recall) {
+      const r = issue.recall;
+      if (r.productionFrom && r.productionTo && r.productionTo < r.productionFrom) err(w, 'recall.productionTo, productionFrom tarihinden önce');
+      for (const rid of r.relatedIssueIds) {
+        if (rid === issue.id) err(w, 'kayıt kendisiyle ilişkilendirilemez');
+        else if (!allIssueIds.has(rid)) err(w, `ilişkili kayıt "${rid}" bulunamadı`);
+      }
+      // Seçicideki yıl aralığı, kampanyanın üretim tarihlerini aşamaz (kapsamı genişletmeme kuralı).
+      const fromY = r.productionFrom ? Number(r.productionFrom.slice(0, 4)) : undefined;
+      const toY = r.productionTo ? Number(r.productionTo.slice(0, 4)) : undefined;
+      issue.appliesTo.forEach((s, i) => {
+        if (!s.years || s.years.basis !== 'production') return;
+        if ((fromY !== undefined && s.years.from < fromY) || (toY !== undefined && s.years.to > toY)) {
+          err(w, `appliesTo[${i}].years (${s.years.from}–${s.years.to}) kampanyanın üretim tarihlerini aşıyor`);
+        }
+      });
     }
     if (issue.kind === 'service-campaign' && !existenceKinds.includes('manufacturer-bulletin')) {
       err(w, '"service-campaign" türü üretici bülteni gerektirir');

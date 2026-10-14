@@ -111,6 +111,10 @@ export function describeSelector(s: Applicability, label: (id: string) => string
   ];
   if (engines.length) parts.push(engines.join(', '));
   if (s.fuels.length) parts.push(s.fuels.map((f) => FUEL_LABELS[f]).join(', '));
+  if (s.aspirations.length) {
+    const tr = { natural: 'atmosferik', turbo: 'turbolu', supercharged: 'kompresörlü', 'twin-turbo': 'çift turbolu' } as const;
+    parts.push(`${s.aspirations.map((a) => tr[a]).join(' / ')} motorlar`);
+  }
   if (s.transmissions.length) parts.push(`${s.transmissions.map((t) => [t.name, t.gears ? `${t.gears} ileri` : null, t.type].filter(Boolean).join(' ')).join(' / ')} şanzıman`);
   if (s.years) parts.push(`${s.years.from}–${s.years.to} (${BASIS[s.years.basis]})`);
   if (s.marketIds.length) parts.push(`${s.marketIds.map(label).join(', ')} pazarı`);

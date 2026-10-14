@@ -8,7 +8,7 @@ import SiteLayout from '@/layouts/SiteLayout.astro';
 import IssuesSection from '@/components/vehicle/IssuesSection.astro';
 import { generationLabel } from '@/lib/catalog/format';
 import { getIssueData } from '@/lib/issues';
-import { groupIssues } from '@/lib/issues/match';
+import { groupIssuesByKind } from '@/lib/issues/match';
 import { getLabeler, getVehicleSelections, toVehicleContext } from '@/lib/vehicle';
 import '@/styles/vehicle.css';
 
@@ -28,7 +28,7 @@ const scenarios = await Promise.all(
   SCENARIOS.map(async ([gen, rev, variant, note]) => {
     const sel = all.find((s) => s.model.id === 'ford-focus' && s.generation.slug === gen && s.revision?.slug === rev && s.variant.slug === variant);
     if (!sel) throw new Error(`Örnek senaryo bulunamadı: ${gen}/${rev}/${variant}`);
-    return { sel, note, groups: groupIssues(demo.issues, await toVehicleContext(sel)) };
+    return { sel, note, groups: groupIssuesByKind(demo.issues, await toVehicleContext(sel)) };
   }),
 );
 ---

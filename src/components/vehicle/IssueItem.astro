@@ -26,9 +26,26 @@ interface Props {
   label: (id: string) => string;
   /** Sayfada benzersiz bağlantı kimliği için önek. */
   anchorPrefix: string;
+  /** Kayıt başlığının başlık seviyesi (bölüm yapısına göre). */
+  level?: 4 | 5;
 }
 
-const { issue, match, sourceById, label, anchorPrefix } = Astro.props;
+const { issue, match, sourceById, label, anchorPrefix, level = 5 } = Astro.props;
+const Title = `h${level}` as 'h4' | 'h5';
+const Sub = `h${level + 1}` as 'h5' | 'h6';
+const isRecall = issue.kind === 'recall' || issue.kind === 'service-campaign';
+const fmtDate = (d?: string) => (d ? new Date(d).toLocaleDateString('tr-TR') : undefined);
+const r = issue.recall;
+const recallLine = r
+  ? [
+      r.campaignCode && `Kampanya: ${r.campaignCode}`,
+      r.references.length ? `Resmi kayıt: ${r.references.join(', ')}` : undefined,
+      r.productionFrom && r.productionTo ? `Üretim: ${fmtDate(r.productionFrom)}–${fmtDate(r.productionTo)}` : undefined,
+      r.vinRangePublished ? 'VIN aralığı yayımlandı' : 'VIN aralığı yayımlanmadı',
+    ]
+      .filter(Boolean)
+      .join(' · ')
+  : undefined;
 const headSymptoms = issue.symptoms.slice(0, 3);
 const extraSymptoms = [...issue.symptoms.slice(3), ...issue.symptomDetails];
 const sourceCount = new Set(issue.claims.map((c) => c.sourceId)).size;
@@ -40,10 +57,11 @@ const sourceLink = (id: string) => sourceById.get(id);
   <details>
     <summary>
       {issue.demo && <p class="issue-demo">Örnek veri — doğrulanmış bilgi değildir</p>}
-      <h3 class="issue-title">{issue.title}</h3>
+      <Title class="issue-title">{issue.title}</Title>
       <p class="issue-summary">{issue.summary}</p>
       <p class="issue-line"><span class="issue-key">Belirtiler:</span> {headSymptoms.join(' · ')}</p>
-      <p class="issue-line"><span class="issue-key">Etkilediği:</span> {describeScope(issue.appliesTo, label)}</p>
+      <p class="issue-line"><span class="issue-key">{isRecall ? 'Kapsam:' : 'Etkilediği:'}</span> {describeScope(issue.appliesTo, label)}</p>
+      {recallLine && <p class="issue-line">{recallLine}</p>}
       {
         match.reasons.length > 0 && (
           <p class="issue-line issue-condition">
@@ -52,9 +70,17 @@ const sourceLink = (id: string) => sourceById.get(id);
         )
       }
       <p class="issue-meta">
-        <span class={`issue-status issue-status-${issue.status}`} title={ISSUE_STATUS_DESCRIPTIONS[issue.status]}>
-          {ISSUE_STATUS_LABELS[issue.status]}
-        </span>
+        {
+          isRecall && issue.status === 'verified' ? (
+            <span class="issue-status issue-status-verified" title="Resmi geri çağırma kaydının içeriği kaynaktan doğrulandı. Aracınızın kapsamda olup olmadığı VIN sorgusuyla kesinleşir.">
+              Resmi kayıt
+            </span>
+          ) : (
+            <span class={`issue-status issue-status-${issue.status}`} title={ISSUE_STATUS_DESCRIPTIONS[issue.status]}>
+              {ISSUE_STATUS_LABELS[issue.status]}
+            </span>
+          )
+        }
         <span>{ISSUE_KIND_LABELS[issue.kind]}</span>
         <span>{CATEGORY_LABELS[issue.category]}</span>
         <span>{sourceCount} kaynak</span>
@@ -67,7 +93,7 @@ const sourceLink = (id: string) => sourceById.get(id);
       {
         extraSymptoms.length > 0 && (
           <section>
-            <h4>Ayrıntılı belirtiler</h4>
+            <Sub>Ayrıntılı belirtiler</Sub>
             <ul>
               {issue.symptoms.concat(issue.symptomDetails).map((s) => (
                 <li>{s}</li>
@@ -78,7 +104,7 @@ const sourceLink = (id: string) => sourceById.get(id);
       }
 
       <section>
-        <h4>Ciddiyet ve görülme sıklığı</h4>
+        <Sub>Ciddiyet ve görülme sıklığı</Sub>
         <dl class="issue-facts">
           <div>
             <dt>Ciddiyet</dt>
@@ -99,7 +125,7 @@ const sourceLink = (id: string) => sourceById.get(id);
       {
         issue.checks.length > 0 && (
           <section>
-            <h4>Satın alırken kontrol edin</h4>
+            <Sub>Satın alırken kontrol edin</Sub>
             <ul>
               {issue.checks.map((c) => (
                 <li>{c}</li>
@@ -112,7 +138,7 @@ const sourceLink = (id: string) => sourceById.get(id);
       {
         issue.remedies.length > 0 && (
           <section>
-            <h4>Çözüm ve bakım</h4>
+            <Sub>Çözüm ve bakım</Sub>
             <ul>
               {issue.remedies.map((r) => (
                 <li>
@@ -128,7 +154,7 @@ const sourceLink = (id: string) => sourceById.get(id);
       }
 
       <section>
-        <h4>Kaynaklar</h4>
+        <Sub>Kaynaklar</Sub>
         <ul class="issue-sources">
           {
             issue.claims.map((c) => {
@@ -155,6 +181,22 @@ const sourceLink = (id: string) => sourceById.get(id);
           }
         </ul>
       </section>
+
+      {
+        r && (r.otherModels.length > 0 || r.relatedIssueIds.length > 0 || r.reportingCountries.length > 0) && (
+          <section>
+            <Sub>Kampanya bilgisi</Sub>
+            <ul>
+              {r.reportingCountries.length > 0 && <li>Bildiren ülke: {r.reportingCountries.join(', ')}</li>}
+              {r.otherModels.length > 0 && <li>Aynı kampanyadaki diğer modeller: {r.otherModels.join(', ')}</li>}
+              {r.relatedIssueIds.length > 0 && (
+                <li>Bu kampanya başka kampanyalarla ilişkili (benzer parça veya önceki onarımın düzeltilmesi); her biri ayrı resmi kayıttır, aynı sorunun tekrarı olarak sayılmamalıdır.</li>
+              )}
+              <li>Kapsam kontrolü: şasi numarasıyla Ford yetkili servisine veya resmi geri çağırma sorgusuna başvurun.</li>
+            </ul>
+          </section>
+        )
+      }
 
       {issue.notes && <p class="issue-note">{issue.notes}</p>}
       <p class="issue-ref">Son güncelleme: {new Date(issue.updatedAt).toLocaleDateString('tr-TR')}</p>

@@ -26,7 +26,9 @@
         ],
         "years": {
           "from": 2020,
+          "fromMonth": 8,
           "to": 2021,
+          "toMonth": 1,
           "basis": "production",
           "marketId": "eu"
         },
@@ -62,7 +64,24 @@
     ],
     "status": "verified",
     "updatedAt": "2026-10-15",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "campaignCode": "21S36",
+      "references": [
+        "A12/01682/21"
+      ],
+      "productionFrom": "2020-08-13",
+      "productionTo": "2021-01-19",
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Almanya"
+      ],
+      "otherModels": [],
+      "relatedIssueIds": [
+        "ford-focus-mk4-mhev-aku-kutup-somunu-21s01",
+        "ford-focus-mk4-48v-aku-kablosu-23s34"
+      ]
+    }
   },
   {
     "id": "ford-focus-mk4-mhev-aku-kutup-somunu-21s01",
@@ -91,7 +110,9 @@
         ],
         "years": {
           "from": 2020,
+          "fromMonth": 6,
           "to": 2020,
+          "toMonth": 11,
           "basis": "production",
           "marketId": "eu"
         },
@@ -126,7 +147,24 @@
     ],
     "status": "verified",
     "updatedAt": "2026-10-15",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "campaignCode": "21S01",
+      "references": [
+        "A12/00616/21"
+      ],
+      "productionFrom": "2020-06-25",
+      "productionTo": "2020-11-30",
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Almanya"
+      ],
+      "otherModels": [],
+      "relatedIssueIds": [
+        "ford-focus-mk4-48v-sase-kablosu-21s36",
+        "ford-focus-mk4-48v-aku-kablosu-23s34"
+      ]
+    }
   },
   {
     "id": "ford-focus-mk4-48v-aku-kablosu-23s34",
@@ -155,7 +193,9 @@
         ],
         "years": {
           "from": 2023,
+          "fromMonth": 5,
           "to": 2023,
+          "toMonth": 5,
           "basis": "production",
           "marketId": "eu"
         },
@@ -190,7 +230,24 @@
     ],
     "status": "verified",
     "updatedAt": "2026-10-15",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "campaignCode": "23S34",
+      "references": [
+        "A12/01794/23"
+      ],
+      "productionFrom": "2023-05-24",
+      "productionTo": "2023-05-26",
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Almanya"
+      ],
+      "otherModels": [],
+      "relatedIssueIds": [
+        "ford-focus-mk4-48v-sase-kablosu-21s36",
+        "ford-focus-mk4-mhev-aku-kutup-somunu-21s01"
+      ]
+    }
   },
   {
     "id": "ford-focus-mk4-arka-kemer-tokasi-23s31",
@@ -218,7 +275,9 @@
         ],
         "years": {
           "from": 2023,
+          "fromMonth": 3,
           "to": 2023,
+          "toMonth": 6,
           "basis": "production",
           "marketId": "eu"
         },
@@ -250,7 +309,21 @@
     ],
     "status": "verified",
     "updatedAt": "2026-10-15",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "campaignCode": "23S31",
+      "references": [
+        "A12/01739/23"
+      ],
+      "productionFrom": "2023-03-24",
+      "productionTo": "2023-06-07",
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Almanya"
+      ],
+      "otherModels": [],
+      "relatedIssueIds": []
+    }
   },
   {
     "id": "ford-focus-mk4-panoramik-tavan-trimi-22s40",
@@ -278,7 +351,9 @@
         ],
         "years": {
           "from": 2021,
+          "fromMonth": 9,
           "to": 2021,
+          "toMonth": 10,
           "basis": "production",
           "marketId": "eu"
         },
@@ -310,7 +385,21 @@
     ],
     "status": "verified",
     "updatedAt": "2026-10-15",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "campaignCode": "22S40",
+      "references": [
+        "A12/00940/23"
+      ],
+      "productionFrom": "2021-09-16",
+      "productionTo": "2021-10-18",
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Fransa"
+      ],
+      "otherModels": [],
+      "relatedIssueIds": []
+    }
   },
   {
     "id": "ford-focus-mk4-aks-civata-deligi-22s49",
@@ -338,7 +427,9 @@
         ],
         "years": {
           "from": 2022,
+          "fromMonth": 6,
           "to": 2022,
+          "toMonth": 7,
           "basis": "production",
           "marketId": "eu"
         },
@@ -370,7 +461,21 @@
     ],
     "status": "verified",
     "updatedAt": "2026-10-15",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "campaignCode": "22S49",
+      "references": [
+        "A12/01712/22"
+      ],
+      "productionFrom": "2022-06-09",
+      "productionTo": "2022-07-06",
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Almanya"
+      ],
+      "otherModels": [],
+      "relatedIssueIds": []
+    }
   },
   {
     "id": "ford-focus-mk4-motor-yag-kacagi-22s21",
@@ -399,7 +504,9 @@
         ],
         "years": {
           "from": 2019,
+          "fromMonth": 8,
           "to": 2022,
+          "toMonth": 3,
           "basis": "production",
           "marketId": "eu"
         },
@@ -431,7 +538,25 @@
     ],
     "status": "verified",
     "updatedAt": "2026-10-15",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "campaignCode": "22S21",
+      "references": [
+        "A12/00942/23"
+      ],
+      "productionFrom": "2019-08-02",
+      "productionTo": "2022-03-21",
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Fransa"
+      ],
+      "otherModels": [
+        "Fiesta",
+        "Kuga",
+        "Puma"
+      ],
+      "relatedIssueIds": []
+    }
   },
   {
     "id": "ford-focus-mk4-motor-kablo-demeti-19s50",
@@ -460,7 +585,9 @@
         ],
         "years": {
           "from": 2018,
+          "fromMonth": 3,
           "to": 2019,
+          "toMonth": 3,
           "basis": "production",
           "marketId": "eu"
         },
@@ -492,7 +619,24 @@
     ],
     "status": "verified",
     "updatedAt": "2026-10-15",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "campaignCode": "19S50",
+      "references": [
+        "A12/00002/20"
+      ],
+      "productionFrom": "2018-03-21",
+      "productionTo": "2019-03-07",
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Birleşik Krallık"
+      ],
+      "otherModels": [],
+      "relatedIssueIds": [
+        "ford-focus-mk4-19s50-onarim-kablo-demeti-20s74",
+        "ford-focus-mk4-motor-kablo-demeti-20s28"
+      ]
+    }
   },
   {
     "id": "ford-focus-mk4-19s50-onarim-kablo-demeti-20s74",
@@ -521,7 +665,9 @@
         ],
         "years": {
           "from": 2018,
+          "fromMonth": 5,
           "to": 2019,
+          "toMonth": 7,
           "basis": "production",
           "marketId": "eu"
         },
@@ -553,7 +699,23 @@
     ],
     "status": "verified",
     "updatedAt": "2026-10-15",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "campaignCode": "20S74",
+      "references": [
+        "INFO/00058/21"
+      ],
+      "productionFrom": "2018-05-07",
+      "productionTo": "2019-07-05",
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Almanya"
+      ],
+      "otherModels": [],
+      "relatedIssueIds": [
+        "ford-focus-mk4-motor-kablo-demeti-19s50"
+      ]
+    }
   },
   {
     "id": "ford-focus-mk4-motor-kablo-demeti-20s28",
@@ -581,7 +743,9 @@
         ],
         "years": {
           "from": 2019,
+          "fromMonth": 7,
           "to": 2020,
+          "toMonth": 3,
           "basis": "production",
           "marketId": "eu"
         },
@@ -613,7 +777,23 @@
     ],
     "status": "verified",
     "updatedAt": "2026-10-15",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "campaignCode": "20S28",
+      "references": [
+        "A12/00897/20"
+      ],
+      "productionFrom": "2019-07-31",
+      "productionTo": "2020-03-04",
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Birleşik Krallık"
+      ],
+      "otherModels": [],
+      "relatedIssueIds": [
+        "ford-focus-mk4-motor-kablo-demeti-19s50"
+      ]
+    }
   },
   {
     "id": "ford-focus-mk4-fren-servosu-20s05",
@@ -641,7 +821,9 @@
         ],
         "years": {
           "from": 2020,
+          "fromMonth": 1,
           "to": 2020,
+          "toMonth": 1,
           "basis": "production",
           "marketId": "eu"
         },
@@ -673,7 +855,24 @@
     ],
     "status": "verified",
     "updatedAt": "2026-10-15",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "campaignCode": "20S05",
+      "references": [
+        "A12/00382/20"
+      ],
+      "productionFrom": "2020-01-14",
+      "productionTo": "2020-01-28",
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Birleşik Krallık"
+      ],
+      "otherModels": [
+        "Transit Connect",
+        "EcoSport"
+      ],
+      "relatedIssueIds": []
+    }
   },
   {
     "id": "ford-focus-mk4-guc-dagitim-kutusu-19s42",
@@ -701,7 +900,9 @@
         ],
         "years": {
           "from": 2019,
+          "fromMonth": 10,
           "to": 2019,
+          "toMonth": 11,
           "basis": "production",
           "marketId": "eu"
         },
@@ -733,7 +934,21 @@
     ],
     "status": "verified",
     "updatedAt": "2026-10-15",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "campaignCode": "19S42",
+      "references": [
+        "A12/00053/20"
+      ],
+      "productionFrom": "2019-10-14",
+      "productionTo": "2019-11-16",
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Birleşik Krallık"
+      ],
+      "otherModels": [],
+      "relatedIssueIds": []
+    }
   },
   {
     "id": "ford-focus-mk4-on-suspansiyon-civatalari-19s08",
@@ -761,7 +976,9 @@
         ],
         "years": {
           "from": 2018,
+          "fromMonth": 9,
           "to": 2018,
+          "toMonth": 11,
           "basis": "production",
           "marketId": "eu"
         },
@@ -793,7 +1010,21 @@
     ],
     "status": "verified",
     "updatedAt": "2026-10-15",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "campaignCode": "19S08",
+      "references": [
+        "A12/0580/19"
+      ],
+      "productionFrom": "2018-09-22",
+      "productionTo": "2018-11-10",
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Birleşik Krallık"
+      ],
+      "otherModels": [],
+      "relatedIssueIds": []
+    }
   },
   {
     "id": "ford-focus-mk4-fren-pedali-civatasi-18u33",
@@ -821,7 +1052,9 @@
         ],
         "years": {
           "from": 2018,
+          "fromMonth": 10,
           "to": 2018,
+          "toMonth": 12,
           "basis": "production",
           "marketId": "eu"
         },
@@ -853,7 +1086,21 @@
     ],
     "status": "verified",
     "updatedAt": "2026-10-15",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "campaignCode": "18U33",
+      "references": [
+        "A12/0104/19"
+      ],
+      "productionFrom": "2018-10-19",
+      "productionTo": "2018-12-08",
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Birleşik Krallık"
+      ],
+      "otherModels": [],
+      "relatedIssueIds": []
+    }
   },
   {
     "id": "ford-focus-mk4-arka-kapi-cocuk-kilidi",
@@ -876,16 +1123,15 @@
         "modelIds": [
           "ford-focus"
         ],
-        "generationIds": [
-          "ford-focus-mk4"
-        ],
         "years": {
           "from": 2018,
+          "fromMonth": 4,
           "to": 2018,
+          "toMonth": 8,
           "basis": "production",
           "marketId": "eu"
         },
-        "note": "Belirli araçlar; üretim: 16.04.2018–02.08.2018"
+        "note": "Uyarıda tip onayı numarası yok; 16.04.2018–02.08.2018 üretiminin hangi nesle (Mk3 son üretim / Mk4 ilk üretim) ait olduğu kaynaktan belirlenemedi"
       }
     ],
     "severity": {
@@ -913,7 +1159,21 @@
     ],
     "status": "verified",
     "updatedAt": "2026-10-15",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "references": [
+        "A12/1530/18"
+      ],
+      "productionFrom": "2018-04-16",
+      "productionTo": "2018-08-02",
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Birleşik Krallık"
+      ],
+      "otherModels": [],
+      "relatedIssueIds": []
+    },
+    "notes": "DENETİM DÜZELTMESİ: Önceki kayıt doğrudan Focus Mk4'e bağlanmıştı; uyarı nesil veya tip onayı bilgisi içermediği için nesil kısıtı kaldırıldı ve eşleşme yalnızca koşullu gösterilir."
   },
   {
     "id": "ford-focus-mk4-emniyet-kemeri-civatalari-19s30",
@@ -941,7 +1201,9 @@
         ],
         "years": {
           "from": 2019,
+          "fromMonth": 5,
           "to": 2019,
+          "toMonth": 9,
           "basis": "production",
           "marketId": "eu"
         },
@@ -973,7 +1235,23 @@
     ],
     "status": "verified",
     "updatedAt": "2026-10-15",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "campaignCode": "19S30",
+      "references": [
+        "A12/1602/19"
+      ],
+      "productionFrom": "2019-05-07",
+      "productionTo": "2019-09-30",
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Birleşik Krallık"
+      ],
+      "otherModels": [
+        "C-Max"
+      ],
+      "relatedIssueIds": []
+    }
   },
   {
     "id": "ford-focus-mk4-ecall-tcu-yazilimi-21c12",
@@ -1001,7 +1279,9 @@
         ],
         "years": {
           "from": 2019,
+          "fromMonth": 7,
           "to": 2021,
+          "toMonth": 2,
           "basis": "production",
           "marketId": "eu"
         },
@@ -1033,7 +1313,27 @@
     ],
     "status": "verified",
     "updatedAt": "2026-10-15",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "campaignCode": "21C12",
+      "references": [
+        "INFO/00130/21"
+      ],
+      "productionFrom": "2019-07-15",
+      "productionTo": "2021-02-12",
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Almanya"
+      ],
+      "otherModels": [
+        "Explorer",
+        "Puma",
+        "S-Max",
+        "Galaxy",
+        "Kuga"
+      ],
+      "relatedIssueIds": []
+    }
   },
   {
     "id": "ford-focus-mk4-yakit-rayi-sizintisi-25sc2",
@@ -1062,7 +1362,9 @@
         ],
         "years": {
           "from": 2025,
+          "fromMonth": 9,
           "to": 2025,
+          "toMonth": 10,
           "basis": "production",
           "marketId": "eu"
         },
@@ -1094,7 +1396,23 @@
     ],
     "status": "verified",
     "updatedAt": "2026-10-15",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "campaignCode": "25SC2",
+      "references": [
+        "SR/00114/26"
+      ],
+      "productionFrom": "2025-09-20",
+      "productionTo": "2025-10-24",
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Almanya"
+      ],
+      "otherModels": [
+        "Transit Courier"
+      ],
+      "relatedIssueIds": []
+    }
   },
   {
     "id": "ford-focus-ecoblue-dpf-catlagi-24e06",
@@ -1103,7 +1421,7 @@
     "kind": "recall",
     "category": "emissions",
     "title": "EcoBlue dizellerde dizel partikül filtresi çatlak olabilir (24E06)",
-    "summary": "1.5 ve 2.0 EcoBlue dizel motorlu araçlarda partikül filtresi (DPF) çatlak olabilir; is emisyonu sınırı aşabileceği için araç periyodik muayeneden geçemeyebilir.",
+    "summary": "Uyarıya göre 1.5 ve 2.0 EcoBlue dizel motorlu araçlarda partikül filtresi (DPF) çatlak olabilir; is emisyonu sınırı aşabileceği için araç muayeneden geçemeyebilir. Focus için verilen tip onayları Focus Mk3'e aittir.",
     "symptoms": [
       "Egzozdan is",
       "Muayenede emisyon değerinin aşılması"
@@ -1118,16 +1436,21 @@
         "modelIds": [
           "ford-focus"
         ],
-        "engineFamilies": [
-          "EcoBlue"
+        "generationIds": [
+          "ford-focus-mk3"
+        ],
+        "fuels": [
+          "diesel"
         ],
         "years": {
           "from": 2014,
+          "fromMonth": 12,
           "to": 2019,
+          "toMonth": 7,
           "basis": "production",
           "marketId": "eu"
         },
-        "note": "Focus için etiketli üretim aralığı: 10.12.2014–22.07.2019"
+        "note": "Yalnızca 1.5 / 2.0 EcoBlue dizeller; katalogdaki Mk3 motor kayıtlarında EcoBlue ailesi bulunmadığı için motor düzeyinde eşleştirme yapılamadı"
       }
     ],
     "severity": {
@@ -1151,12 +1474,34 @@
           "severity"
         ],
         "stance": "supports",
-        "note": "Uyarıdaki model adı verilmemiş 23.07.2019–03.06.2024 aralığı Focus'a atfedilmedi."
+        "note": "Focus için etiketli üretim aralığı 10.12.2014–22.07.2019. Uyarıdaki Focus tip onayları e13*2007/46*1138 (Focus Mk3, tip DYB); Focus Mk4 tip onayı (…*1911) listede yok. Model adı verilmemiş 23.07.2019–03.06.2024 aralığı Focus'a atfedilmedi."
       }
     ],
     "status": "verified",
     "updatedAt": "2026-10-15",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "campaignCode": "24E06",
+      "references": [
+        "SR/02468/26"
+      ],
+      "productionFrom": "2014-12-10",
+      "productionTo": "2019-07-22",
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Fransa"
+      ],
+      "otherModels": [
+        "C-Max",
+        "Transit Connect",
+        "Galaxy",
+        "S-Max",
+        "Mondeo",
+        "Kuga"
+      ],
+      "relatedIssueIds": []
+    },
+    "notes": "DENETİM DÜZELTMESİ: Önceki kayıt motor ailesi \"EcoBlue\" ile yalnızca Focus Mk4 motorlarına bağlanmıştı; tip onayı kanıtına göre kapsam Focus Mk3 dizellere taşındı. Katalogda Mk3 için EcoBlue motor kaydı olmadığından eşleşme koşullu gösterilir."
   },
   {
     "id": "ford-focus-mk3-20-tdci-asiri-isinma-17s45",
@@ -1189,7 +1534,9 @@
         ],
         "years": {
           "from": 2014,
+          "fromMonth": 7,
           "to": 2015,
+          "toMonth": 10,
           "basis": "production",
           "marketId": "eu"
         },
@@ -1221,7 +1568,27 @@
     ],
     "status": "verified",
     "updatedAt": "2026-10-15",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "campaignCode": "17S45",
+      "references": [
+        "A12/00141/24"
+      ],
+      "productionFrom": "2014-07-18",
+      "productionTo": "2015-10-19",
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Almanya"
+      ],
+      "otherModels": [
+        "C-Max",
+        "Galaxy",
+        "Kuga",
+        "Mondeo",
+        "S-Max"
+      ],
+      "relatedIssueIds": []
+    }
   },
   {
     "id": "ford-focus-mk3-debriyaj-baski-plakasi",
@@ -1305,7 +1672,29 @@
     "status": "verified",
     "updatedAt": "2026-10-15",
     "notes": "Mk3 bağlantısı, uyarılardaki DYB tip kodundan kuruldu. Focus Mk3 Avrupa üretimi Aralık 2010'da başladığı için 2009–2010 yılları Focus'u fiilen kapsamaz.",
-    "demo": false
+    "demo": false,
+    "recall": {
+      "campaignCode": "18S39",
+      "references": [
+        "A12/1883/19",
+        "A12/0963/18",
+        "A12/0028/19"
+      ],
+      "vinRangePublished": false,
+      "reportingCountries": [
+        "Almanya",
+        "Birleşik Krallık"
+      ],
+      "otherModels": [
+        "C-Max",
+        "Kuga",
+        "Mondeo",
+        "Galaxy",
+        "S-Max",
+        "Transit Connect"
+      ],
+      "relatedIssueIds": []
+    }
   },
   {
     "id": "ford-focus-tdci-fan-modulu-yangin",
@@ -1339,7 +1728,6 @@
           "ford-duratorq-18-100-240nm",
           "ford-duratorq-18-115-250nm",
           "ford-duratorq-18-115-kkda",
-          "ford-duratorq-20-110-ixda",
           "ford-duratorq-20-136-g6da"
         ],
         "years": {
@@ -1380,7 +1768,7 @@
     ],
     "status": "supported",
     "updatedAt": "2026-10-15",
-    "notes": "Kaynakta bir güvenlik geri çağırması olarak anlatılıyor; ancak resmi DVSA kaydı otomatik erişime kapalı olduğu için doğrulanamadı. Bu yüzden \"recall\" değil \"known-defect\" olarak girildi.",
+    "notes": "Kaynakta bir güvenlik geri çağırması olarak anlatılıyor; resmi DVSA kaydına otomatik erişilemediği (bot koruması) için \"recall\" değil \"known-defect\" olarak tutuluyor. DENETİM DÜZELTMESİ: 2.0 TDCi 110 PS (IXDA) motoru 2008 makyajıyla geldiği için 2004–2006 kapsamından çıkarıldı. Kaynak 30.000'e kadar aracın etkilendiğini söylüyor; bu, arızanın sıklığını göstermez.",
     "demo": false
   },
   {
@@ -1425,9 +1813,12 @@
           "from": 2011,
           "to": 2013,
           "basis": "production",
-          "marketId": "eu"
+          "marketId": "gb"
         },
-        "note": "Üretim: Ekim 2011–Ekim 2013"
+        "note": "Üretim: Ekim 2011–Ekim 2013; kaynak Birleşik Krallık rakamlarını veriyor, diğer pazarlardaki kapsam belirtilmemiş",
+        "marketIds": [
+          "gb"
+        ]
       }
     ],
     "severity": {
@@ -1464,12 +1855,12 @@
           "remedy"
         ],
         "stance": "supports",
-        "note": "Soğutma hortumu değişimi ve 1.0 EcoBoost aşırı ısınma vakalarını aktarıyor."
+        "note": "Aşırı ısınma vakalarını ve hortum değişimini aktarıyor; Autocar ile aynı BBC araştırmasına ve Ford açıklamasına dayandığı için bağımsız ikinci kaynak sayılmaz."
       }
     ],
     "status": "supported",
     "updatedAt": "2026-10-15",
-    "notes": "Ford'un FSA belgesi veya bülteni kamuya açık olarak bulunamadı. Kaynaklar FSA'yı model bazında değil motor bazında anlatıyor; Focus'ta Ekim 2011–Ekim 2013 üretiminde sunulan 1.0 EcoBoost seçenekleriyle sınırlandı.",
+    "notes": "Ford'un FSA belgesi kamuya açık bulunamadı. DENETİM DÜZELTMESİ: Kapsam, kaynağın dayandığı Birleşik Krallık pazarıyla sınırlandı (diğer pazarlarda koşullu görünür). İki basın kaynağı aynı habere dayandığı için bağımsız değildir.",
     "demo": false
   },
   {
@@ -1479,7 +1870,7 @@
     "kind": "chronic",
     "category": "electrical",
     "title": "Alternatör (şarj dinamosu) arızaları",
-    "summary": "ADAC'ın 2009–2020 arası on bir yıllık arıza istatistiğinde alternatör arızası, 2003–2011 arasında tescil edilen Focus'larda ortalamanın üstünde sık görülen kusurlar arasında yer alıyor.",
+    "summary": "ADAC'ın 2009–2020 arıza istatistiklerinde alternatör (Generator) arızası, Almanya'da 2004–2011 arasında ilk tescil edilen Focus'lar için listeleniyor (2019–2020 raporlarında ortalamanın üstünde).",
     "symptoms": [
       "Akü/şarj uyarı lambası",
       "Akünün sürekli boşalması",
@@ -1496,17 +1887,17 @@
           "ford-focus"
         ],
         "years": {
-          "from": 2003,
+          "from": 2004,
           "to": 2011,
           "basis": "sales",
-          "marketId": "eu"
+          "marketId": "de"
         },
         "note": "Almanya ilk tescil yılları (ADAC)"
       }
     ],
     "prevalence": {
       "evidence": "survey-supported",
-      "note": "ADAC Pannenstatistik bu arızayı Focus için \"ortalamanın üstünde sık görülen kusurlar\" arasında listeliyor (2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020 raporları). Yıllar ilk tescil yılıdır.",
+      "note": "ADAC Pannenstatistik 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020 raporlarında Focus için listeleniyor. 2009–2018: modelin en sık arızaları; 2019–2020: ortalamanın üstünde. Yıllar Almanya ilk tescil yıllarıdır.",
       "sourceIds": [
         "adac-pannenstatistik-2009",
         "adac-pannenstatistik-2010",
@@ -1624,7 +2015,7 @@
     ],
     "status": "supported",
     "updatedAt": "2026-10-15",
-    "notes": "Tek yayıncıya (ADAC) dayandığı için \"verified\" değil. Ciddiyet kaynakta değerlendirilmediği için girilmedi.",
+    "notes": "ADAC verisi Almanya'daki yol yardım kayıtlarına dayanır ve model + ilk tescil yılı düzeyindedir; belirli bir motorun arıza oranı değildir. 2008–2018 raporları bu kalemleri \"modelin en sık arızaları\", 2019 ve sonrası raporlar \"ortalamanın üstünde sık görülen arızalar\" olarak sunar. Tek yayıncıya (ADAC) dayandığı için \"verified\" değildir; ciddiyet kaynakta değerlendirilmediği için girilmedi. DENETİM DÜZELTMESİ: Alt sınır 2003'ten 2004'e çekildi (en erken kayıt: 2009 raporu \"2006'ya kadar\", rapor 2004 tescilinden başlar); \"ortalamanın üstünde\" ifadesi yalnızca 2019–2020 raporlarına özgü olarak düzeltildi.",
     "demo": false
   },
   {
@@ -1634,7 +2025,7 @@
     "kind": "chronic",
     "category": "electrical",
     "title": "Marş aküsü kaynaklı arızalar",
-    "summary": "Marş aküsü ADAC'a göre bütün araçlarda en sık arıza nedeni; Focus için 2010–2025 raporlarının hepsinde, 2004–2022 arasındaki çeşitli tescil yıllarında ortalamanın üstünde sık görülen kusurlar arasında listeleniyor.",
+    "summary": "Marş aküsü ADAC'a göre bütün markalarda en sık arıza nedenidir. Focus için 2010–2025 raporlarının hepsinde, Almanya'da 2005–2022 arasındaki çeşitli ilk tescil yıllarında listeleniyor (2019 ve sonrası raporlarda ortalamanın üstünde).",
     "symptoms": [
       "Motorun zor çalışması veya hiç çalışmaması",
       "Akünün boşalması"
@@ -1649,17 +2040,17 @@
           "ford-focus"
         ],
         "years": {
-          "from": 2004,
+          "from": 2005,
           "to": 2022,
           "basis": "sales",
-          "marketId": "eu"
+          "marketId": "de"
         },
         "note": "Almanya ilk tescil yılları (ADAC); her raporda listelenen yıllar farklı"
       }
     ],
     "prevalence": {
       "evidence": "survey-supported",
-      "note": "ADAC Pannenstatistik bu arızayı Focus için \"ortalamanın üstünde sık görülen kusurlar\" arasında listeliyor (2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 raporları). Yıllar ilk tescil yılıdır.",
+      "note": "ADAC Pannenstatistik 2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 raporlarında Focus için listeleniyor. 2010–2018: modelin en sık arızaları; 2019–2025: ortalamanın üstünde. Yıllar Almanya ilk tescil yıllarıdır.",
       "sourceIds": [
         "adac-pannenstatistik-2010",
         "adac-pannenstatistik-2011",
@@ -1817,7 +2208,7 @@
     ],
     "status": "supported",
     "updatedAt": "2026-10-15",
-    "notes": "Tek yayıncıya (ADAC) dayandığı için \"verified\" değil. Ciddiyet kaynakta değerlendirilmediği için girilmedi. Akü arızaları bütün markalarda en yaygın arıza nedenidir; kayıt yalnızca ADAC'ın Focus için ortalamanın üstünde bulduğu yılları yansıtır.",
+    "notes": "ADAC verisi Almanya'daki yol yardım kayıtlarına dayanır ve model + ilk tescil yılı düzeyindedir; belirli bir motorun arıza oranı değildir. 2008–2018 raporları bu kalemleri \"modelin en sık arızaları\", 2019 ve sonrası raporlar \"ortalamanın üstünde sık görülen arızalar\" olarak sunar. Tek yayıncıya (ADAC) dayandığı için \"verified\" değildir; ciddiyet kaynakta değerlendirilmediği için girilmedi. DENETİM DÜZELTMESİ: Alt sınır 2004'ten 2005'e çekildi (en erken açık kayıt: 2010 raporu \"tüm yıllar\", rapor 2005–2010 tescillerini kapsar; 2014 raporundaki \"2012'ye kadar\" ifadesinin başlangıç yılı rapordan net okunamadı).",
     "demo": false
   },
   {
@@ -1827,7 +2218,7 @@
     "kind": "chronic",
     "category": "electrical",
     "title": "Marş motoru arızaları",
-    "summary": "ADAC'ın arıza istatistiğinde marş motoru (Anlasser) arızası, 2006–2016 arasındaki çeşitli tescil yıllarında Focus için ortalamanın üstünde sık görülen kusurlar arasında yer alıyor.",
+    "summary": "ADAC arıza istatistiklerinde marş motoru (Anlasser) arızası, Focus için 2004 ve 2006–2016 arasındaki çeşitli ilk tescil yıllarında listeleniyor (2019 ve sonrası raporlarda ortalamanın üstünde).",
     "symptoms": [
       "Kontak çevrildiğinde marşın basmaması",
       "Marş sırasında tıklama sesi"
@@ -1840,20 +2231,33 @@
           "ford-focus"
         ],
         "years": {
+          "from": 2004,
+          "to": 2004,
+          "basis": "sales",
+          "marketId": "de"
+        },
+        "note": "Almanya ilk tescil yılı (ADAC 2014 raporu)"
+      },
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "years": {
           "from": 2006,
           "to": 2016,
           "basis": "sales",
-          "marketId": "eu"
+          "marketId": "de"
         },
         "note": "Almanya ilk tescil yılları (ADAC); her raporda listelenen yıllar farklı"
       }
     ],
     "prevalence": {
       "evidence": "survey-supported",
-      "note": "ADAC Pannenstatistik bu arızayı Focus için \"ortalamanın üstünde sık görülen kusurlar\" arasında listeliyor (2011, 2013, 2017, 2018, 2019, 2020, 2022, 2023, 2024, 2025 raporları). Yıllar ilk tescil yılıdır.",
+      "note": "ADAC Pannenstatistik 2011, 2013, 2014, 2017, 2018, 2019, 2020, 2022, 2023, 2024, 2025 raporlarında Focus için listeleniyor. 2011–2018: modelin en sık arızaları; 2019–2025: ortalamanın üstünde. Yıllar Almanya ilk tescil yıllarıdır.",
       "sourceIds": [
         "adac-pannenstatistik-2011",
         "adac-pannenstatistik-2013",
+        "adac-pannenstatistik-2014",
         "adac-pannenstatistik-2017",
         "adac-pannenstatistik-2018",
         "adac-pannenstatistik-2019",
@@ -1876,6 +2280,15 @@
       },
       {
         "sourceId": "adac-pannenstatistik-2013",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2014",
         "aspects": [
           "existence",
           "scope",
@@ -1958,7 +2371,7 @@
     ],
     "status": "supported",
     "updatedAt": "2026-10-15",
-    "notes": "Tek yayıncıya (ADAC) dayandığı için \"verified\" değil. Ciddiyet kaynakta değerlendirilmediği için girilmedi.",
+    "notes": "ADAC verisi Almanya'daki yol yardım kayıtlarına dayanır ve model + ilk tescil yılı düzeyindedir; belirli bir motorun arıza oranı değildir. 2008–2018 raporları bu kalemleri \"modelin en sık arızaları\", 2019 ve sonrası raporlar \"ortalamanın üstünde sık görülen arızalar\" olarak sunar. Tek yayıncıya (ADAC) dayandığı için \"verified\" değildir; ciddiyet kaynakta değerlendirilmediği için girilmedi. DENETİM DÜZELTMESİ: Atlanmış 2014 raporu (2004 tescili) eklendi; 2005 tescili hiçbir raporda geçmediği için ayrı aralık olarak girildi.",
     "demo": false
   },
   {
@@ -1968,7 +2381,7 @@
     "kind": "chronic",
     "category": "emissions",
     "title": "Dizel partikül filtresi (DPF) tıkanması",
-    "summary": "ADAC'ın 2010–2018 raporlarında tıkanmış dizel partikül filtresi, 2004–2011 arasında tescil edilen dizel Focus'larda ortalamanın üstünde sık görülen kusurlar arasında yer alıyor.",
+    "summary": "ADAC'ın 2009–2018 raporlarında tıkanmış dizel partikül filtresi, Almanya'da 2004–2011 arasında ilk tescil edilen dizel Focus'lar için modelin en sık arızaları arasında listeleniyor.",
     "symptoms": [
       "DPF / motor arıza lambası",
       "Güç kaybı (acil durum modu)"
@@ -1990,15 +2403,16 @@
           "from": 2004,
           "to": 2011,
           "basis": "sales",
-          "marketId": "eu"
+          "marketId": "de"
         },
         "note": "Almanya ilk tescil yılları (ADAC); partikül filtreli dizel araçlar"
       }
     ],
     "prevalence": {
       "evidence": "survey-supported",
-      "note": "ADAC Pannenstatistik bu arızayı Focus için \"ortalamanın üstünde sık görülen kusurlar\" arasında listeliyor (2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018 raporları). Yıllar ilk tescil yılıdır.",
+      "note": "ADAC Pannenstatistik 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018 raporlarında Focus için listeleniyor. Bu raporların hepsinde \"modelin en sık arızaları\" listesinde; ortalamanın üstünde ifadesi kullanılmıyor. Yıllar Almanya ilk tescil yıllarıdır.",
       "sourceIds": [
+        "adac-pannenstatistik-2009",
         "adac-pannenstatistik-2010",
         "adac-pannenstatistik-2011",
         "adac-pannenstatistik-2013",
@@ -2010,6 +2424,15 @@
       ]
     },
     "claims": [
+      {
+        "sourceId": "adac-pannenstatistik-2009",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
       {
         "sourceId": "adac-pannenstatistik-2010",
         "aspects": [
@@ -2085,7 +2508,7 @@
     ],
     "status": "supported",
     "updatedAt": "2026-10-15",
-    "notes": "Tek yayıncıya (ADAC) dayandığı için \"verified\" değil. Ciddiyet kaynakta değerlendirilmediği için girilmedi.",
+    "notes": "ADAC verisi Almanya'daki yol yardım kayıtlarına dayanır ve model + ilk tescil yılı düzeyindedir; belirli bir motorun arıza oranı değildir. 2008–2018 raporları bu kalemleri \"modelin en sık arızaları\", 2019 ve sonrası raporlar \"ortalamanın üstünde sık görülen arızalar\" olarak sunar. Tek yayıncıya (ADAC) dayandığı için \"verified\" değildir; ciddiyet kaynakta değerlendirilmediği için girilmedi. DENETİM DÜZELTMESİ: Atlanmış 2009 raporu eklendi (2004 alt sınırının dayanağı); \"ortalamanın üstünde\" ifadesi kaldırıldı.",
     "demo": false
   },
   {
@@ -2094,8 +2517,8 @@
     "brandId": "ford",
     "kind": "chronic",
     "category": "engine",
-    "title": "Turbo, turbo hortumu ve takviye basıncı kontrolü arızaları",
-    "summary": "ADAC'ın 2008–2017 raporlarında turbo hasarı, yerinden çıkan turbo hortumu ve hatalı takviye basıncı (Ladedruck) kontrolü, 2003–2011 tescilli Focus'larda ortalamanın üstünde sık görülen kusurlar arasında.",
+    "title": "Turbo, turbo hortumu ve takviye basıncı kontrolü arızaları (turbolu motorlar)",
+    "summary": "ADAC'ın 2008–2017 raporlarında turbo hasarı, yerinden çıkan turbo hortumu ve hatalı takviye basıncı kontrolü, Almanya'da 2003–2011 ilk tescilli Focus'lar için modelin en sık arızaları arasında listeleniyor. Turbo hasarı bazı raporlarda dizel olarak belirtilmiş; diğer kalemlerde yakıt türü yok.",
     "symptoms": [
       "Ani güç kaybı (acil durum modu)",
       "Motor arıza lambası",
@@ -2115,17 +2538,32 @@
           "diesel"
         ],
         "years": {
+          "from": 2006,
+          "to": 2011,
+          "basis": "sales",
+          "marketId": "de"
+        },
+        "note": "Turbo hasarı: 2011, 2013 ve 2014 raporlarında açıkça dizel"
+      },
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "aspirations": [
+          "turbo"
+        ],
+        "years": {
           "from": 2003,
           "to": 2011,
           "basis": "sales",
-          "marketId": "eu"
+          "marketId": "de"
         },
-        "note": "Almanya ilk tescil yılları (ADAC)"
+        "note": "Turbo hortumu, turbo hasarı ve takviye basıncı kontrolü: yakıt türü belirtilmemiş; yalnızca turbolu motorlar"
       }
     ],
     "prevalence": {
       "evidence": "survey-supported",
-      "note": "ADAC Pannenstatistik bu arızayı Focus için \"ortalamanın üstünde sık görülen kusurlar\" arasında listeliyor (2008, 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017 raporları). Yıllar ilk tescil yılıdır.",
+      "note": "ADAC Pannenstatistik 2008, 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017 raporlarında Focus için listeleniyor. Bu raporların hepsinde \"modelin en sık arızaları\" listesinde. Yıllar Almanya ilk tescil yıllarıdır.",
       "sourceIds": [
         "adac-pannenstatistik-2008",
         "adac-pannenstatistik-2009",
@@ -2223,7 +2661,7 @@
     ],
     "status": "supported",
     "updatedAt": "2026-10-15",
-    "notes": "Tek yayıncıya (ADAC) dayandığı için \"verified\" değil. Ciddiyet kaynakta değerlendirilmediği için girilmedi. Turbo hasarı 2011, 2013 ve 2014 raporlarında açıkça dizel için verilmiş; takviye basıncı ve turbo hortumu kalemlerinde yakıt türü belirtilmemiş. Kapsam dizel motorlarla sınırlandı.",
+    "notes": "ADAC verisi Almanya'daki yol yardım kayıtlarına dayanır ve model + ilk tescil yılı düzeyindedir; belirli bir motorun arıza oranı değildir. 2008–2018 raporları bu kalemleri \"modelin en sık arızaları\", 2019 ve sonrası raporlar \"ortalamanın üstünde sık görülen arızalar\" olarak sunar. Tek yayıncıya (ADAC) dayandığı için \"verified\" değildir; ciddiyet kaynakta değerlendirilmediği için girilmedi. DENETİM DÜZELTMESİ: Önceki kayıt bütün kalemleri dizelle sınırlıyordu; kaynak 2008–2010 raporlarında ve takviye basıncı kalemlerinde yakıt türü belirtmediği için bu kalemler \"turbolu motorlar\" olarak eşleştirildi (atmosferik motorlara uygulanmaz).",
     "demo": false
   },
   {
@@ -2233,7 +2671,7 @@
     "kind": "chronic",
     "category": "engine",
     "title": "Ateşleme bobini arızaları (benzinli)",
-    "summary": "ADAC'ın 2008–2010 raporlarında ateşleme bobini arızası, 2002–2007 tescilli Focus'larda (özellikle 2004'e kadar) ortalamanın üstünde sık görülen kusurlar arasında yer alıyor.",
+    "summary": "ADAC'ın 2008–2013 raporlarında ateşleme bobini arızası, Almanya'da 2003–2007 ilk tescilli Focus'lar için (2009 raporuna göre özellikle 2004'e kadar) modelin en sık arızaları arasında listeleniyor.",
     "symptoms": [
       "Tekleme",
       "Motor arıza lambası",
@@ -2247,159 +2685,49 @@
           "ford-focus"
         ],
         "fuels": [
-          "petrol"
+          "petrol",
+          "lpg",
+          "flex-fuel"
         ],
         "years": {
-          "from": 2002,
+          "from": 2003,
           "to": 2007,
           "basis": "sales",
-          "marketId": "eu"
+          "marketId": "de"
         },
-        "note": "Almanya ilk tescil yılları (ADAC)"
+        "note": "Almanya ilk tescil yılları (ADAC); ateşleme bobini yalnızca buji ateşlemeli (benzinli) motorlarda bulunur"
       }
     ],
     "prevalence": {
       "evidence": "survey-supported",
-      "note": "ADAC Pannenstatistik bu arızayı Focus için \"ortalamanın üstünde sık görülen kusurlar\" arasında listeliyor (2008, 2009, 2010 raporları). Yıllar ilk tescil yılıdır.",
+      "note": "ADAC Pannenstatistik 2008, 2009, 2010, 2011, 2013 raporlarında Focus için listeleniyor. Bu raporların hepsinde \"modelin en sık arızaları\" listesinde. Yıllar Almanya ilk tescil yıllarıdır.",
       "sourceIds": [
         "adac-pannenstatistik-2008",
         "adac-pannenstatistik-2009",
-        "adac-pannenstatistik-2010"
-      ]
-    },
-    "claims": [
-      {
-        "sourceId": "adac-pannenstatistik-2008",
-        "aspects": [
-          "existence",
-          "scope",
-          "prevalence"
-        ],
-        "stance": "supports"
-      },
-      {
-        "sourceId": "adac-pannenstatistik-2009",
-        "aspects": [
-          "existence",
-          "scope",
-          "prevalence"
-        ],
-        "stance": "supports"
-      },
-      {
-        "sourceId": "adac-pannenstatistik-2010",
-        "aspects": [
-          "existence",
-          "scope",
-          "prevalence"
-        ],
-        "stance": "supports"
-      }
-    ],
-    "status": "supported",
-    "updatedAt": "2026-10-15",
-    "notes": "Tek yayıncıya (ADAC) dayandığı için \"verified\" değil. Ciddiyet kaynakta değerlendirilmediği için girilmedi. Ateşleme bobini yalnızca benzinli motorlarda bulunduğu için kapsam benzinli motorlarla sınırlandı.",
-    "demo": false
-  },
-  {
-    "id": "ford-focus-devirdaim-pompasi-arizasi",
-    "slug": "devirdaim-pompasi-arizasi",
-    "brandId": "ford",
-    "kind": "chronic",
-    "category": "cooling",
-    "title": "Devirdaim (soğutma suyu) pompası arızaları",
-    "summary": "ADAC'ın 2008 ve 2009 raporlarında devirdaim pompası arızası, 2004'e kadar tescil edilen Focus'larda ortalamanın üstünde sık görülen kusurlar arasında yer alıyor.",
-    "symptoms": [
-      "Soğutma suyu kaybı",
-      "Hararet"
-    ],
-    "checks": [],
-    "remedies": [],
-    "appliesTo": [
-      {
-        "modelIds": [
-          "ford-focus"
-        ],
-        "years": {
-          "from": 2002,
-          "to": 2004,
-          "basis": "sales",
-          "marketId": "eu"
-        },
-        "note": "Almanya ilk tescil yılları (ADAC)"
-      }
-    ],
-    "prevalence": {
-      "evidence": "survey-supported",
-      "note": "ADAC Pannenstatistik bu arızayı Focus için \"ortalamanın üstünde sık görülen kusurlar\" arasında listeliyor (2008, 2009 raporları). Yıllar ilk tescil yılıdır.",
-      "sourceIds": [
-        "adac-pannenstatistik-2008",
-        "adac-pannenstatistik-2009"
-      ]
-    },
-    "claims": [
-      {
-        "sourceId": "adac-pannenstatistik-2008",
-        "aspects": [
-          "existence",
-          "scope",
-          "prevalence"
-        ],
-        "stance": "supports"
-      },
-      {
-        "sourceId": "adac-pannenstatistik-2009",
-        "aspects": [
-          "existence",
-          "scope",
-          "prevalence"
-        ],
-        "stance": "supports"
-      }
-    ],
-    "status": "supported",
-    "updatedAt": "2026-10-15",
-    "notes": "Tek yayıncıya (ADAC) dayandığı için \"verified\" değil. Ciddiyet kaynakta değerlendirilmediği için girilmedi.",
-    "demo": false
-  },
-  {
-    "id": "ford-focus-direksiyon-yardimi-kaybi",
-    "slug": "direksiyon-yardimi-kaybi",
-    "brandId": "ford",
-    "kind": "chronic",
-    "category": "steering",
-    "title": "Hidrolik direksiyon yardımının devre dışı kalması",
-    "summary": "ADAC'ın 2010, 2011 ve 2013 raporlarında direksiyon yardımının devre dışı kalması, 2004–2009 tescilli Focus'larda ortalamanın üstünde sık görülen kusurlar arasında yer alıyor.",
-    "symptoms": [
-      "Direksiyonun aniden ağırlaşması",
-      "Direksiyon uyarı lambası"
-    ],
-    "checks": [],
-    "remedies": [],
-    "appliesTo": [
-      {
-        "modelIds": [
-          "ford-focus"
-        ],
-        "years": {
-          "from": 2004,
-          "to": 2009,
-          "basis": "sales",
-          "marketId": "eu"
-        },
-        "note": "Almanya ilk tescil yılları (ADAC)"
-      }
-    ],
-    "prevalence": {
-      "evidence": "survey-supported",
-      "note": "ADAC Pannenstatistik bu arızayı Focus için \"ortalamanın üstünde sık görülen kusurlar\" arasında listeliyor (2010, 2011, 2013 raporları). Yıllar ilk tescil yılıdır.",
-      "sourceIds": [
         "adac-pannenstatistik-2010",
         "adac-pannenstatistik-2011",
         "adac-pannenstatistik-2013"
       ]
     },
     "claims": [
+      {
+        "sourceId": "adac-pannenstatistik-2008",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2009",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
       {
         "sourceId": "adac-pannenstatistik-2010",
         "aspects": [
@@ -2430,7 +2758,149 @@
     ],
     "status": "supported",
     "updatedAt": "2026-10-15",
-    "notes": "Tek yayıncıya (ADAC) dayandığı için \"verified\" değil. Ciddiyet kaynakta değerlendirilmediği için girilmedi.",
+    "notes": "ADAC verisi Almanya'daki yol yardım kayıtlarına dayanır ve model + ilk tescil yılı düzeyindedir; belirli bir motorun arıza oranı değildir. 2008–2018 raporları bu kalemleri \"modelin en sık arızaları\", 2019 ve sonrası raporlar \"ortalamanın üstünde sık görülen arızalar\" olarak sunar. Tek yayıncıya (ADAC) dayandığı için \"verified\" değildir; ciddiyet kaynakta değerlendirilmediği için girilmedi. DENETİM DÜZELTMESİ: Alt sınır 2002'den 2003'e çekildi (2008 raporu 2003 tescilinden başlar); atlanmış 2011 ve 2013 raporları eklendi.",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-devirdaim-pompasi-arizasi",
+    "slug": "devirdaim-pompasi-arizasi",
+    "brandId": "ford",
+    "kind": "chronic",
+    "category": "cooling",
+    "title": "Devirdaim (soğutma suyu) pompası arızaları",
+    "summary": "ADAC'ın 2008 raporunda devirdaim pompası arızası 2003–2004 ilk tescilli Focus'lar için, 2009 raporunda \"özellikle 2004'e kadar\" olarak modelin en sık arızaları arasında listeleniyor.",
+    "symptoms": [
+      "Soğutma suyu kaybı",
+      "Hararet"
+    ],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "years": {
+          "from": 2003,
+          "to": 2004,
+          "basis": "sales",
+          "marketId": "de"
+        },
+        "note": "Almanya ilk tescil yılları (ADAC); 2009 raporu sonraki yılları dışlamıyor"
+      }
+    ],
+    "prevalence": {
+      "evidence": "survey-supported",
+      "note": "ADAC Pannenstatistik 2008, 2009 raporlarında Focus için listeleniyor. İki raporda \"modelin en sık arızaları\" listesinde. Yıllar Almanya ilk tescil yıllarıdır.",
+      "sourceIds": [
+        "adac-pannenstatistik-2008",
+        "adac-pannenstatistik-2009"
+      ]
+    },
+    "claims": [
+      {
+        "sourceId": "adac-pannenstatistik-2008",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2009",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-15",
+    "notes": "ADAC verisi Almanya'daki yol yardım kayıtlarına dayanır ve model + ilk tescil yılı düzeyindedir; belirli bir motorun arıza oranı değildir. 2008–2018 raporları bu kalemleri \"modelin en sık arızaları\", 2019 ve sonrası raporlar \"ortalamanın üstünde sık görülen arızalar\" olarak sunar. Tek yayıncıya (ADAC) dayandığı için \"verified\" değildir; ciddiyet kaynakta değerlendirilmediği için girilmedi. DENETİM DÜZELTMESİ: Alt sınır 2002'den 2003'e çekildi (2008 raporu 2003 tescilinden başlar).",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-direksiyon-yardimi-kaybi",
+    "slug": "direksiyon-yardimi-kaybi",
+    "brandId": "ford",
+    "kind": "chronic",
+    "category": "steering",
+    "title": "Direksiyon yardımının (servo) devre dışı kalması",
+    "summary": "ADAC'ın 2009–2013 raporlarında direksiyon yardımının devre dışı kalması, Almanya'da 2005–2009 ilk tescilli Focus'lar için modelin en sık arızaları arasında listeleniyor; 2009 raporu bunu elektrikli direksiyon desteği olarak adlandırıyor.",
+    "symptoms": [
+      "Direksiyonun aniden ağırlaşması",
+      "Direksiyon uyarı lambası"
+    ],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "years": {
+          "from": 2005,
+          "to": 2009,
+          "basis": "sales",
+          "marketId": "de"
+        },
+        "note": "Almanya ilk tescil yılları (ADAC)"
+      }
+    ],
+    "prevalence": {
+      "evidence": "survey-supported",
+      "note": "ADAC Pannenstatistik 2009, 2010, 2011, 2013 raporlarında Focus için listeleniyor. Bu raporların hepsinde \"modelin en sık arızaları\" listesinde. Yıllar Almanya ilk tescil yıllarıdır.",
+      "sourceIds": [
+        "adac-pannenstatistik-2009",
+        "adac-pannenstatistik-2010",
+        "adac-pannenstatistik-2011",
+        "adac-pannenstatistik-2013"
+      ]
+    },
+    "claims": [
+      {
+        "sourceId": "adac-pannenstatistik-2009",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2010",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2011",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2013",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-15",
+    "notes": "ADAC verisi Almanya'daki yol yardım kayıtlarına dayanır ve model + ilk tescil yılı düzeyindedir; belirli bir motorun arıza oranı değildir. 2008–2018 raporları bu kalemleri \"modelin en sık arızaları\", 2019 ve sonrası raporlar \"ortalamanın üstünde sık görülen arızalar\" olarak sunar. Tek yayıncıya (ADAC) dayandığı için \"verified\" değildir; ciddiyet kaynakta değerlendirilmediği için girilmedi. DENETİM DÜZELTMESİ: Başlıktaki \"hidrolik\" ifadesi kaynakta yok, kaldırıldı; atlanmış 2009 raporu eklendi; alt sınır 2004'ten 2005'e çekildi (2010 raporu 2005 tescilinden başlar).",
     "demo": false
   },
   {
@@ -2440,7 +2910,7 @@
     "kind": "known-defect",
     "category": "engine",
     "title": "Triger kayışı kaynaklı arızalar (2016 tescil)",
-    "summary": "ADAC Pannenstatistik 2025, triger kayışı (Zahnriemen) kaynaklı arızaları 2016'da tescil edilen Focus'lar için ortalamanın üstünde sık görülen kusurlar arasında listeliyor. Rapor motor türünü belirtmiyor.",
+    "summary": "ADAC Pannenstatistik 2025, triger kayışı (Zahnriemen) kaynaklı arızaları Almanya'da 2016'da ilk tescil edilen Focus'lar için ortalamanın üstünde sık görülen arızalar arasında listeliyor. Rapor motor türünü belirtmiyor.",
     "symptoms": [
       "Motorun çalışırken durması ve tekrar çalışmaması"
     ],
@@ -2457,7 +2927,7 @@
           "from": 2016,
           "to": 2016,
           "basis": "sales",
-          "marketId": "eu"
+          "marketId": "de"
         },
         "note": "Almanya ilk tescil yılı (ADAC); motor türü belirtilmemiş"
       }
@@ -2482,7 +2952,7 @@
     ],
     "status": "supported",
     "updatedAt": "2026-10-15",
-    "notes": "Tek yayıncıya (ADAC) dayandığı için \"verified\" değil. Ciddiyet kaynakta değerlendirilmediği için girilmedi. Yalnızca bir raporda ve bir tescil yılında listelendi.",
+    "notes": "ADAC verisi Almanya'daki yol yardım kayıtlarına dayanır ve model + ilk tescil yılı düzeyindedir; belirli bir motorun arıza oranı değildir. 2008–2018 raporları bu kalemleri \"modelin en sık arızaları\", 2019 ve sonrası raporlar \"ortalamanın üstünde sık görülen arızalar\" olarak sunar. Tek yayıncıya (ADAC) dayandığı için \"verified\" değildir; ciddiyet kaynakta değerlendirilmediği için girilmedi. Yalnızca bir raporda ve bir tescil yılında listelendi; tekrar kanıtı zayıf olduğu için \"known-defect\" olarak tutuluyor. Triger kayışı olmayan (zincirli) motorlara uygulanmayabilir; motor düzeyinde kapsam kaynakta yok.",
     "demo": false
   }
 ]

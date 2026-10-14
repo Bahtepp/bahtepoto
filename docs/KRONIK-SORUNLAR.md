@@ -63,8 +63,9 @@ Bir seçicideki dolu alanların **hepsi** sağlanmalı (VE). Birden fazla seçic
 | `engineCodes` | `["G8DA"]` | Kataloğa bağımlı değil; büyük/küçük harf duyarsız |
 | `engineFamilies` | `["Duratorq TDCi"]` | Motor ailesi |
 | `fuels` | `["diesel"]` | Yakıt türü |
+| `aspirations` | `["turbo"]` | Aşırı besleme; motorun bilgisi yoksa eşleşme koşullu |
 | `transmissions` | `[{ "name": "PowerShift" }]` | Tür / ad / vites sayısı |
-| `years` | `{ "from": 2009, "to": 2010, "basis": "production", "marketId": "eu" }` | Üretim / model yılı / satış |
+| `years` | `{ "from": 2020, "fromMonth": 6, "to": 2020, "toMonth": 11, "basis": "production", "marketId": "eu" }` | Üretim / model yılı / satış; ay isteğe bağlı |
 | `marketIds` | `["gb"]` | Pazar (alt pazar hiyerarşisi desteklenir) |
 
 `engineIds` / `engineCodes` / `engineFamilies` kendi aralarında VEYA'dır.
@@ -89,6 +90,21 @@ zaman "uygulanır" üretmez.
 
 Araç sayfasında gruplar: **motora özgü**, **kasa ve model geneli**, **koşullu eşleşmeler**,
 **araştırılan veya tartışmalı kayıtlar**.
+
+## Geri çağırma bilgisi (`recall`)
+
+`recall` ve `service-campaign` türü kayıtlarda zorunludur: `campaignCode` (örn. Ford 21S36),
+`references` (resmi kayıt no), `productionFrom` / `productionTo`, `vinRangePublished`,
+`reportingCountries`, `otherModels`, `relatedIssueIds` (ilişkili ama ayrı kampanyalar). Seçicideki
+üretim yılları kampanya tarihlerini aşamaz. VIN aralığı yayımlanmamışsa arayüz kampanyayı hiçbir araçta
+kesin göstermez ve şasi numarasıyla resmi kontrol ister.
+
+## Kaynak içerik kontrolü
+
+Her kaynakta `review` (`content-checked` / `inaccessible` / `not-checked`, tarih, yöntem) tutulur:
+bağlantının bulunması içeriğin doğrulandığı anlamına gelmez. Aynı haberin farklı yayınları `basedOn`
+ile işaretlenir ve bağımsız kaynak sayımında tek sayılır. Denetim örneği:
+[FOCUS-DATA-AUDIT.md](FOCUS-DATA-AUDIT.md).
 
 ## Kaynak türleri ve kanıt kuralları
 
@@ -118,6 +134,9 @@ Build sırasında denetlenen kurallar:
 7. Ciddiyet, sıklık ve çözüm kaynakları `claims` listesinde de yer almalıdır.
 8. Katalog referansları (model, nesil, dönem, motor, pazar) var olmalı ve birbiriyle tutarlı olmalı.
 9. Canlı veride `demo: true` kayıt / kaynak bulunamaz; örnek veride her kayıt `demo: true` olmalı.
+10. Canlı veride `verified` / `supported` kayıtların en az bir varlık kaynağının içeriği okunmuş (`review.status: "content-checked"`) olmalı.
+11. Aynı habere dayanan kaynaklar (`basedOn`) `verified` için iki bağımsız kaynak yerine geçmez.
+12. `recall` / `service-campaign` türü `recall` bilgisi ister; seçicinin üretim yılları kampanya tarihlerini aşamaz.
 
 ## Örnek kayıt (yapı gösterimi — gerçek bir sorun değildir)
 

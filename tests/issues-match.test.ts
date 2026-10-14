@@ -247,3 +247,18 @@ describe('canlı veri', () => {
     assert.ok(live.sources.every((s) => !s.demo));
   });
 });
+
+describe('türe göre ayrım', () => {
+  test('kronik sorun, bilinen kusur ve geri çağırma ayrı gruplarda döner', async () => {
+    const { groupIssuesByKind } = await import('../src/lib/issues/match.ts');
+    const base = { appliesTo: [{ modelIds: ['ford-focus'] }] };
+    const chronic = makeIssue({ ...base, id: 'k1', slug: 'k1', kind: 'chronic' });
+    const defect = makeIssue({ ...base, id: 'k2', slug: 'k2', kind: 'known-defect' });
+    const recall = makeIssue({ ...base, id: 'k3', slug: 'k3', kind: 'recall', recall: { vinRangePublished: false } });
+    const g = groupIssuesByKind([chronic, defect, recall], ctx('mk2', 'makyajli', 'duratec-14-80'));
+    const all = (x: typeof g.chronic) => [...x.engine, ...x.general, ...x.conditional, ...x.researching].map((i) => i.issue.id);
+    assert.deepEqual(all(g.chronic), ['k1']);
+    assert.deepEqual(all(g.defects), ['k2']);
+    assert.deepEqual(all(g.recalls), ['k3']);
+  });
+});

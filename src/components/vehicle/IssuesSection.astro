@@ -1,18 +1,19 @@
 ---
 /**
- * Bir araç için kronik sorunlar bölümü. Eşleştirici sonuçlarını dört gruba ayırır:
- * motora özgü, kasa/model geneli, koşullu ve araştırılan/tartışmalı.
- * Doğrulanmış kayıt yoksa "sorun yok" DEMEZ; verinin henüz bulunmadığını söyler.
+ * Bir araç için sorun kayıtları. Üç kategori AYRI bölümlerde gösterilir ve birbirine karışmaz:
+ *   1. Kronik sorunlar / tekrarlayan problemler
+ *   2. Bilinen kusurlar
+ *   3. Resmi geri çağırmalar ve servis kampanyaları
+ * Kayıt yoksa "sorun yok" DEMEZ; verinin henüz bulunmadığını söyler.
  */
-import IssueItem from './IssueItem.astro';
-import type { GroupedIssues } from '@/lib/issues/match';
+import IssueGroups from './IssueGroups.astro';
+import type { GroupedIssues, IssuesByKind } from '@/lib/issues/match';
 import type { IssueSource } from '@/lib/issues/schema';
 
 interface Props {
-  groups: GroupedIssues;
+  groups: IssuesByKind;
   sourceById: Map<string, IssueSource>;
   label: (id: string) => string;
-  /** Seçili motorun adı ve kasa adı (grup başlıkları için). */
   engineName: string;
   generationName: string;
   /** Motor-makyaj dönemi eşleşmesi doğrulanmadıysa uyarı gösterilir. */
@@ -22,99 +23,72 @@ interface Props {
 
 const { groups, sourceById, label, engineName, generationName, engineMappingUncertain = false, headingId = 'kronik-sorunlar' } =
   Astro.props;
-const confirmedCount = groups.engine.length + groups.general.length;
-const anyShown = confirmedCount + groups.conditional.length > 0;
+
+const count = (g: GroupedIssues) => g.engine.length + g.general.length + g.conditional.length + g.researching.length;
+const confirmed = (g: GroupedIssues) => g.engine.length + g.general.length;
+const common = { sourceById, label, engineName, generationName };
 ---
 
 <section class="issues-section" aria-labelledby={headingId}>
-  <h2 id={headingId}>Kronik sorunlar</h2>
+  <h2 id={headingId}>Kronik sorunlar, bilinen kusurlar ve geri çağırmalar</h2>
 
   {
     engineMappingUncertain && (
       <p class="callout-warn">
-        Bu motorun seçilen makyaj döneminde sunulduğu henüz doğrulanmadı. Bu yüzden motora özgü sorunlar kesin olarak
-        eşleştirilmez ve "Koşullu eşleşmeler" altında gösterilir. Kasa ve model genelindeki sorunlar etkilenmez.
+        Bu motorun seçilen makyaj döneminde sunulduğu henüz doğrulanmadı. Bu yüzden motora özgü kayıtlar kesin olarak
+        eşleştirilmez ve "Koşullu eşleşmeler" altında gösterilir. Kasa ve model genelindeki kayıtlar etkilenmez.
       </p>
     )
   }
 
-  {
-    !anyShown && (
-      <div class="issues-empty">
-        <p class="issues-empty-title">Henüz doğrulanmış kronik sorun verisi bulunmuyor.</p>
-        <p>
-          Bu, aracın kronik sorunu olmadığı anlamına gelmez. Kayıtlar kaynaklarla doğrulandıkça bu bölüme eklenecek.
-        </p>
-      </div>
-    )
-  }
+  <section class="issue-kind" aria-labelledby={`${headingId}-kronik`}>
+    <h3 id={`${headingId}-kronik`} class="issue-kind-title">Kronik sorunlar ve tekrarlayan problemler</h3>
+    <p class="issue-kind-help">
+      Tekrarladığına dair kaynak bulunan sorunlar. Görülme sıklığı kanıtı her kayıtta ayrıca belirtilir; model düzeyindeki
+      istatistikler belirli bir motorun arıza oranı değildir.
+    </p>
+    {
+      confirmed(groups.chronic) === 0 && (
+        <div class="issues-empty">
+          <p class="issues-empty-title">Henüz doğrulanmış kronik sorun verisi bulunmuyor.</p>
+          <p>Bu, aracın kronik sorunu olmadığı anlamına gelmez.{count(groups.chronic) > 0 && ' Aşağıdaki kayıtlar yalnızca koşullu veya araştırılıyor durumunda.'}</p>
+        </div>
+      )
+    }
+    <IssueGroups groups={groups.chronic} anchorPrefix={`${headingId}-k`} {...common} />
+  </section>
 
-  {
-    groups.engine.length > 0 && (
-      <div class="issue-group">
-        <h3 class="issue-group-title">
-          {engineName} motoruna özgü <span class="count">{groups.engine.length}</span>
-        </h3>
-        <ul class="issue-list">
-          {groups.engine.map(({ issue, match }) => (
-            <IssueItem issue={issue} match={match} sourceById={sourceById} label={label} anchorPrefix={headingId} />
-          ))}
-        </ul>
-      </div>
-    )
-  }
+  <section class="issue-kind" aria-labelledby={`${headingId}-kusur`}>
+    <h3 id={`${headingId}-kusur`} class="issue-kind-title">Bilinen kusurlar</h3>
+    <p class="issue-kind-help">Kaynakla belgelenmiş, ancak tekrarlama kanıtı kronik sorun düzeyine ulaşmamış kayıtlar.</p>
+    {
+      count(groups.defects) === 0 && (
+        <div class="issues-empty">
+          <p>Bu araç için eşleşen bilinen kusur kaydı henüz bulunmuyor.</p>
+        </div>
+      )
+    }
+    <IssueGroups groups={groups.defects} anchorPrefix={`${headingId}-b`} {...common} />
+  </section>
 
-  {
-    groups.general.length > 0 && (
-      <div class="issue-group">
-        <h3 class="issue-group-title">
-          {generationName} kasası ve model geneli <span class="count">{groups.general.length}</span>
-        </h3>
-        <p class="issue-group-help">Motor seçiminden bağımsız olarak bu aracı etkileyen kayıtlar.</p>
-        <ul class="issue-list">
-          {groups.general.map(({ issue, match }) => (
-            <IssueItem issue={issue} match={match} sourceById={sourceById} label={label} anchorPrefix={headingId} />
-          ))}
-        </ul>
-      </div>
-    )
-  }
-
-  {
-    groups.conditional.length > 0 && (
-      <div class="issue-group">
-        <h3 class="issue-group-title">
-          Koşullu eşleşmeler <span class="count">{groups.conditional.length}</span>
-        </h3>
-        <p class="issue-group-help">
-          Bu kayıtlar yalnızca belirli koşullarda (şanzıman, üretim yılı, pazar veya doğrulanmamış motor-dönem eşleşmesi)
-          geçerlidir. Seçiminiz bu koşulları kesinleştirmeye yetmiyor; her kaydın koşulu ayrıca yazılıdır.
-        </p>
-        <ul class="issue-list">
-          {groups.conditional.map(({ issue, match }) => (
-            <IssueItem issue={issue} match={match} sourceById={sourceById} label={label} anchorPrefix={headingId} />
-          ))}
-        </ul>
-      </div>
-    )
-  }
-
-  {
-    groups.researching.length > 0 && (
-      <div class="issue-group issue-group-muted">
-        <h3 class="issue-group-title">
-          Araştırılan veya tartışmalı kayıtlar <span class="count">{groups.researching.length}</span>
-        </h3>
-        <p class="issue-group-help">
-          Bu iddialar kesinleşmiş kronik sorun değildir: ya yalnızca kullanıcı raporlarına dayanıyor ya da kaynaklar
-          birbiriyle çelişiyor.
-        </p>
-        <ul class="issue-list">
-          {groups.researching.map(({ issue, match }) => (
-            <IssueItem issue={issue} match={match} sourceById={sourceById} label={label} anchorPrefix={headingId} />
-          ))}
-        </ul>
-      </div>
-    )
-  }
+  <section class="issue-kind" aria-labelledby={`${headingId}-geri-cagirma`}>
+    <h3 id={`${headingId}-geri-cagirma`} class="issue-kind-title">Resmi geri çağırmalar ve servis kampanyaları</h3>
+    <p class="callout-info">
+      Geri çağırma, belirli bir üretim aralığındaki <strong>bazı</strong> araçları kapsar; tek başına yaygın bir kronik
+      arıza anlamına gelmez. Yayımlanmış şasi numarası (VIN) aralığı olmadığı için bir kampanyanın sizin aracınızı kapsayıp
+      kapsamadığı ve onarımın yapılıp yapılmadığı ancak <strong>şasi numarasıyla resmi sorgu</strong> sonucunda kesinleşir:
+      Ford yetkili servisine ya da aracın tescil edildiği ülkenin resmi geri çağırma sorgulama hizmetine başvurun.
+    </p>
+    {
+      count(groups.recalls) === 0 && (
+        <div class="issues-empty">
+          <p>
+            Bu araç seçimiyle eşleşen geri çağırma kaydı veritabanımızda yok. Bu, aracınız için geri çağırma olmadığı
+            anlamına gelmez.
+          </p>
+        </div>
+      )
+    }
+    <IssueGroups groups={groups.recalls} anchorPrefix={`${headingId}-g`} flat {...common} />
+  </section>
 </section>

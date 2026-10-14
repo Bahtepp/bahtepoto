@@ -31,7 +31,7 @@ export interface VehicleContext {
   /** Seçilen makyaj dönemi. Nesilde makyaj dönemi varsa ama seçilmediyse undefined. */
   revisionId?: string;
   /** Seçilen motor. Seçilmediyse motora özgü sorunlar "conditional" olur. */
-  engine?: Pick<Engine, 'id' | 'codes' | 'family' | 'fuel'>;
+  engine?: Pick<Engine, 'id' | 'codes' | 'family' | 'fuel' | 'aspiration'>;
   variant?: Pick<Variant, 'revisionIds' | 'revisionMapping' | 'transmissions' | 'marketIds' | 'periods'>;
   /** Pazar hiyerarşisi (parentId) için. */
   markets: Pick<Market, 'id' | 'parentId'>[];
@@ -73,7 +73,9 @@ function ancestors(marketId: string, markets: VehicleContext['markets']): string
 }
 
 export const isEngineSpecific = (s: Applicability) =>
-  s.engineIds.length + s.engineCodes.length + s.engineFamilies.length + s.fuels.length > 0;
+  s.engineIds.length + s.engineCodes.length + s.engineFamilies.length + s.fuels.length + s.aspirations.length > 0;
+
+const ASPIRATION_TR = { natural: 'atmosferik', turbo: 'turbolu', supercharged: 'kompresörlü', 'twin-turbo': 'çift turbolu' } as const;
 
 // --- Boyut değerlendiricileri ----------------------------------------------
 
@@ -88,7 +90,7 @@ function matchRevision(s: Applicability, ctx: VehicleContext, label: (id: string
 
 function matchEngine(s: Applicability, ctx: VehicleContext, label: (id: string) => string): Dim {
   const hasIdentity = s.engineIds.length + s.engineCodes.length + s.engineFamilies.length > 0;
-  if (!hasIdentity && s.fuels.length === 0) return YES;
+  if (!hasIdentity && s.fuels.length === 0 && s.aspirations.length === 0) return YES;
 
   const e = ctx.engine;
   if (!e) {
@@ -97,6 +99,7 @@ function matchEngine(s: Applicability, ctx: VehicleContext, label: (id: string) 
       ...s.engineCodes.map((c) => `${c} kodlu motorlar`),
       ...s.engineFamilies.map((f) => `${f} ailesi`),
     ];
+    if (s.aspirations.length) parts.push(`${s.aspirations.map((a) => ASPIRATION_TR[a]).join(' / ')} motorlar`);
     return maybe(`Yalnızca belirli motorlar${parts.length ? `: ${parts.join(', ')}` : ''}`);
   }
 
@@ -110,6 +113,12 @@ function matchEngine(s: Applicability, ctx: VehicleContext, label: (id: string) 
     if (!ok) return NO;
   }
   if (s.fuels.length > 0 && !s.fuels.includes(e.fuel)) return NO;
+  if (s.aspirations.length > 0) {
+    if (e.aspiration === undefined) {
+      return maybe(`Yalnızca ${s.aspirations.map((a) => ASPIRATION_TR[a]).join(' / ')} motorlar; bu motorun aşırı besleme bilgisi doğrulanmadı`);
+    }
+    if (!s.aspirations.includes(e.aspiration)) return NO;
+  }
 
   // Motor doğru, ama motorun seçili makyaj döneminde sunulduğu doğrulanmadıysa kesin eşleşme üretme.
   if (ctx.revisionId && ctx.variant && !ctx.variant.revisionIds.includes(ctx.revisionId)) {
@@ -162,7 +171,13 @@ function matchMarket(s: Applicability, ctx: VehicleContext, label: (id: string) 
   return NO;
 }
 
-const yearOf = (ym: YearMonth | null, ctx: VehicleContext) => (ym ? ym.year : ctx.currentYear ?? new Date().getFullYear());
+/** Ay cinsinden mutlak zaman (yıl*12 + ay). Ay bilinmiyorsa başlangıçta Ocak, bitişte Aralık alınır. */
+const monthIndex = (year: number, month: number) => year * 12 + (month - 1);
+const startOf = (ym: YearMonth) => monthIndex(ym.year, ym.month ?? 1);
+const endOf = (ym: YearMonth | null, ctx: VehicleContext) =>
+  ym ? monthIndex(ym.year, ym.month ?? 12) : monthIndex(ctx.currentYear ?? new Date().getFullYear(), 12);
+const fmtRange = (r: YearRange) =>
+  `${r.fromMonth ? `${String(r.fromMonth).padStart(2, '0')}.` : ''}${r.from}–${r.toMonth ? `${String(r.toMonth).padStart(2, '0')}.` : ''}${r.to}`;
 
 /** Aracın, yıl karşılaştırmasında kullanılacak en özgül dönemi. */
 function vehiclePeriods(ctx: VehicleContext): Period[] {
@@ -181,15 +196,17 @@ function matchYears(s: Applicability, ctx: VehicleContext, label: (id: string) =
   const pool = sameBasis.length ? sameBasis : periods;
   const p =
     pool.find((x) => !market || x.marketId === market || ancestors(x.marketId, ctx.markets).includes(market)) ?? pool[0];
-  const rangeText = `${r.from}–${r.to} (${BASIS_TR[r.basis]}${market ? `, ${label(market)}` : ''})`;
+  const rangeText = `${fmtRange(r)} (${BASIS_TR[r.basis]}${market ? `, ${label(market)}` : ''})`;
   if (!p) return maybe(`Yalnızca ${rangeText} araçlar`);
 
-  // Yaklaşık dönemlerde ve farklı ölçüm temellerinde (üretim / model yılı) 1 yıl tolerans.
-  const tol = p.approximate || p.basis !== r.basis ? 1 : 0;
-  const start = yearOf(p.start, ctx);
-  const end = yearOf(p.end, ctx);
-  if (end + tol < r.from || start - tol > r.to) return NO;
-  if (start - tol >= r.from && end + tol <= r.to && p.basis === r.basis) return YES;
+  // Tolerans (ay): farklı ölçüm temeli (üretim ↔ model yılı ↔ satış) 12 ay, yaklaşık dönem 6 ay.
+  const tol = p.basis !== r.basis ? 12 : p.approximate ? 6 : 0;
+  const start = startOf(p.start);
+  const end = endOf(p.end, ctx);
+  const from = monthIndex(r.from, r.fromMonth ?? 1);
+  const to = monthIndex(r.to, r.toMonth ?? 12);
+  if (end + tol < from || start - tol > to) return NO;
+  if (start - tol >= from && end + tol <= to && p.basis === r.basis) return YES;
   return maybe(`Yalnızca ${rangeText} araçlar`);
 }
 
@@ -277,4 +294,24 @@ export function groupIssues<T extends Issue>(issues: T[], ctx: VehicleContext): 
     a.issue.title.localeCompare(b.issue.title, 'tr');
   for (const list of Object.values(out)) list.sort(bySeverity);
   return out;
+}
+
+/**
+ * Kayıtları önce TÜRE göre ayırır; üç kategori arayüzde hiçbir zaman karışmaz:
+ * - chronic:  kronik / tekrarlayan sorunlar
+ * - defects:  bilinen kusurlar (tekrarlama kanıtı olmayan)
+ * - recalls:  resmi geri çağırmalar ve servis kampanyaları (VIN ile resmi kontrol gerekir)
+ */
+export interface IssuesByKind<T extends Issue = Issue> {
+  chronic: GroupedIssues<T>;
+  defects: GroupedIssues<T>;
+  recalls: GroupedIssues<T>;
+}
+
+export function groupIssuesByKind<T extends Issue>(issues: T[], ctx: VehicleContext): IssuesByKind<T> {
+  return {
+    chronic: groupIssues(issues.filter((i) => i.kind === 'chronic'), ctx),
+    defects: groupIssues(issues.filter((i) => i.kind === 'known-defect'), ctx),
+    recalls: groupIssues(issues.filter((i) => i.kind === 'recall' || i.kind === 'service-campaign'), ctx),
+  };
 }

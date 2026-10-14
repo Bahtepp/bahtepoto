@@ -363,3 +363,34 @@
     margin-left: 0;
   }
 }
+
+/* ---------- Sorun kategorileri (kronik / bilinen kusur / geri çağırma) ---------- */
+
+.issue-kind {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 2px solid var(--border-strong);
+}
+
+.issue-kind-title {
+  font-size: 1.125rem;
+}
+
+.issue-kind-help {
+  margin: 0.25rem 0 0.75rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.callout-info {
+  margin: 0.5rem 0 0.75rem;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: var(--radius-sm);
+  font-size: 0.9375rem;
+}
+
+.issue-group-title {
+  font-size: 1rem;
+}
