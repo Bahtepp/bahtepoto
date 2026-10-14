@@ -1,0 +1,34 @@
+# Build çıktısı
+dist/
+
+# Astro'nun ürettiği tip ve önbellek dosyaları
+.astro/
+
+# Bağımlılıklar
+node_modules/
+
+# Loglar
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Ortam değişkenleri (gizli bilgiler asla depoya girmez)
+.env
+.env.*
+!.env.example
+
+# İşletim sistemi dosyaları
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editör dosyaları (paylaşılan öneriler hariç)
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Test / kapsam raporları
+coverage/
+playwright-report/
+test-results/

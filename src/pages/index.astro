@@ -1,0 +1,44 @@
+---
+/**
+ * Ana sayfa: otomobil kataloğu prototipi (Ford Focus).
+ */
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import CatalogExplorer from '@/components/catalog/CatalogExplorer.astro';
+import { getBrandSummaries } from '@/lib/catalog';
+
+const brands = await getBrandSummaries();
+---
+
+<SiteLayout title="Otomobil kataloğu">
+  <div class="intro">
+    <h1>Otomobil kataloğu</h1>
+    <p>Marka, model, nesil, makyaj dönemi ve motor seçin; seçtiğiniz motorun ayrıntılarına ve kronik sorunlarına ulaşın.</p>
+  </div>
+
+  <CatalogExplorer brands={brands} />
+</SiteLayout>
+
+<style>
+  .intro {
+    padding: 1.5rem 0 1rem;
+  }
+
+  .intro h1 {
+    font-size: 1.625rem;
+    letter-spacing: -0.015em;
+  }
+
+  .intro p {
+    margin: 0.25rem 0 0;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 1099px) {
+    .intro {
+      padding: 1rem 0 0.75rem;
+    }
+    .intro h1 {
+      font-size: 1.375rem;
+    }
+  }
+</style>

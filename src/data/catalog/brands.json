@@ -1,0 +1,9 @@
+[
+  { "id": "ford", "slug": "ford", "name": "Ford", "countryCode": "US", "generationNaming": "mark-number", "status": "unverified", "updatedAt": "2026-10-15", "notes": "Prototip kapsamı: yalnızca Focus nesilleri veri içeriyor." },
+  { "id": "renault", "slug": "renault", "name": "Renault", "countryCode": "FR", "status": "pending", "updatedAt": "2026-10-15" },
+  { "id": "volkswagen", "slug": "volkswagen", "name": "Volkswagen", "countryCode": "DE", "status": "pending", "updatedAt": "2026-10-15" },
+  { "id": "bmw", "slug": "bmw", "name": "BMW", "countryCode": "DE", "generationNaming": "chassis-code", "status": "pending", "updatedAt": "2026-10-15" },
+  { "id": "mercedes-benz", "slug": "mercedes-benz", "name": "Mercedes-Benz", "countryCode": "DE", "generationNaming": "chassis-code", "status": "pending", "updatedAt": "2026-10-15" },
+  { "id": "toyota", "slug": "toyota", "name": "Toyota", "countryCode": "JP", "status": "pending", "updatedAt": "2026-10-15" },
+  { "id": "peugeot", "slug": "peugeot", "name": "Peugeot", "countryCode": "FR", "status": "pending", "updatedAt": "2026-10-15" }
+]

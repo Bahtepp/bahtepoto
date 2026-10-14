@@ -1,0 +1,11 @@
+{
+  "id": "ford-puma",
+  "brandId": "ford",
+  "slug": "puma",
+  "name": "Puma",
+  "order": 60,
+  "status": "pending",
+  "updatedAt": "2026-10-15",
+  "notes": "Nesil, yıl ve motor verisi henüz girilmedi.",
+  "generations": []
+}

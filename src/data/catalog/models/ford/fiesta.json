@@ -1,0 +1,11 @@
+{
+  "id": "ford-fiesta",
+  "brandId": "ford",
+  "slug": "fiesta",
+  "name": "Fiesta",
+  "order": 10,
+  "status": "pending",
+  "updatedAt": "2026-10-15",
+  "notes": "Nesil, yıl ve motor verisi henüz girilmedi.",
+  "generations": []
+}

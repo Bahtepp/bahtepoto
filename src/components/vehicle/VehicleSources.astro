@@ -1,0 +1,110 @@
+---
+/**
+ * Kaynaklar ve veri doğrulama durumu: katalog kayıtlarının (nesil, dönem, motor, varyant)
+ * durumları ile katalog kaynakları ve bu araca eşleşen kronik sorun kaynakları.
+ */
+import type { Engine, Generation, Revision, Source, Variant, VerificationStatus } from '@/lib/catalog/schema';
+import type { IssueSource } from '@/lib/issues/schema';
+import { STATUS_DESCRIPTIONS, STATUS_LABELS } from '@/lib/catalog/format';
+import { SOURCE_KIND_LABELS } from '@/lib/issues/format';
+
+interface Props {
+  generation: Generation;
+  revision?: Revision;
+  variant: Variant;
+  engine: Engine;
+  catalogSources: Map<string, Source>;
+  issueSources: IssueSource[];
+}
+
+const { generation, revision, variant, engine, catalogSources, issueSources } = Astro.props;
+
+const rows: { label: string; status: VerificationStatus; notes?: string }[] = [
+  { label: 'Nesil ve yıllar', status: generation.status, notes: generation.notes },
+  ...(revision ? [{ label: 'Makyaj dönemi', status: revision.status, notes: revision.notes }] : []),
+  { label: 'Motor özellikleri', status: engine.status, notes: engine.notes },
+  { label: 'Motorun bu nesilde sunulması', status: variant.status, notes: variant.notes },
+];
+
+const catalogSourceIds = [
+  ...new Set([...generation.sourceIds, ...(revision?.sourceIds ?? []), ...variant.sourceIds, ...engine.sourceIds]),
+];
+const cs = catalogSourceIds.map((id) => catalogSources.get(id)).filter((s): s is Source => Boolean(s));
+const mappingVerified = !revision || variant.revisionIds.includes(revision.id);
+---
+
+<section class="vehicle-section" aria-labelledby="kaynaklar">
+  <h2 id="kaynaklar">Kaynaklar ve veri doğrulama durumu</h2>
+
+  <ul class="status-list">
+    {
+      rows.map((r) => (
+        <li>
+          <span class="status-label">{r.label}</span>
+          <span class={`badge status-${r.status}`} title={STATUS_DESCRIPTIONS[r.status]}>
+            {STATUS_LABELS[r.status]}
+          </span>
+        </li>
+      ))
+    }
+    {
+      revision && (
+        <li>
+          <span class="status-label">Motorun bu makyaj döneminde sunulması</span>
+          <span class={`badge ${mappingVerified ? 'status-sourced' : 'status-unverified'}`}>
+            {mappingVerified ? 'Kaynaklı' : 'Doğrulanmadı'}
+          </span>
+        </li>
+      )
+    }
+  </ul>
+
+  <h3>Katalog kaynakları</h3>
+  {
+    cs.length ? (
+      <ul class="source-list">
+        {cs.map((s) => (
+          <li>
+            {s.url ? (
+              <a href={s.url} rel="noopener" target="_blank">
+                {s.title}
+              </a>
+            ) : (
+              s.title
+            )}
+            <span class="issue-ref">
+              {' '}
+              — {s.publisher ?? ''}
+              {s.tier === 'secondary' ? ', ikincil kaynak' : s.tier === 'primary' ? ', birincil kaynak' : ', topluluk kaynağı'}, erişim{' '}
+              {new Date(s.accessedAt).toLocaleDateString('tr-TR')}
+            </span>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p class="pending">Kaynak gösterilmedi</p>
+    )
+  }
+
+  {
+    issueSources.length > 0 && (
+      <>
+        <h3>Kronik sorun kaynakları</h3>
+        <ul class="source-list">
+          {issueSources.map((s) => (
+            <li>
+              {s.url ? (
+                <a href={s.url} rel="noopener" target="_blank">
+                  {s.title}
+                </a>
+              ) : (
+                s.title
+              )}
+              <span class="issue-ref"> — {SOURCE_KIND_LABELS[s.kind]}{s.publisher && `, ${s.publisher}`}</span>
+            </li>
+          ))}
+        </ul>
+      </>
+    )
+  }
+</section>

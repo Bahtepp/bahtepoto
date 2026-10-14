@@ -1,0 +1,96 @@
+---
+/**
+ * Katalog gezgini: Marka → Model/Nesil → Makyaj dönemi + Motorlar.
+ *
+ * Marka listesi sunucuda üretilir (JS kapalıyken de görünür). Model ve motor
+ * verileri seçim yapıldıkça /data/... JSON parçalarından yüklenir ve
+ * `src/scripts/catalog-explorer.ts` tarafından çizilir.
+ * Masaüstünde üç sütun, dar ekranlarda adım adım panel olarak çalışır.
+ */
+import type { BrandSummary } from '@/lib/catalog/payload';
+import { PENDING_TEXT } from '@/lib/catalog/format';
+import '@/styles/catalog.css';
+
+interface Props {
+  brands: BrandSummary[];
+}
+
+const { brands } = Astro.props;
+---
+
+<div class="explorer" data-step="brand" id="catalog">
+  <script type="application/json" id="catalog-brands" set:html={JSON.stringify(brands)} />
+
+  <nav class="explorer-steps" aria-label="Seçim adımları">
+    <ol>
+      <li><button type="button" data-goto="brand" aria-current="step">1. Marka</button></li>
+      <li><button type="button" data-goto="model">2. Model ve nesil</button></li>
+      <li><button type="button" data-goto="detail">3. Dönem ve motor</button></li>
+    </ol>
+  </nav>
+
+  <section class="panel panel-brand" aria-labelledby="panel-brand-title" data-panel="brand">
+    <header class="panel-head">
+      <h2 id="panel-brand-title" tabindex="-1">Markalar</h2>
+    </header>
+    <div class="panel-tools">
+      <label class="search">
+        <span class="visually-hidden">Marka ara</span>
+        <input type="search" id="brand-search" placeholder="Marka ara" autocomplete="off" spellcheck="false" />
+      </label>
+    </div>
+    <ul class="list" id="brand-list" data-roving>
+      {
+        brands.map((b) => (
+          <li>
+            <a class="list-item" href={`?marka=${b.slug}`} data-brand={b.slug}>
+              <span class="list-item-title">{b.name}</span>
+              <span class="list-item-meta">{b.modelCount > 0 ? `${b.modelCount} model` : PENDING_TEXT}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="panel panel-model" aria-labelledby="panel-model-title" data-panel="model">
+    <header class="panel-head">
+      <button type="button" class="back" data-goto="brand">
+        <span aria-hidden="true">←</span> Markalar
+      </button>
+      <h2 id="panel-model-title" tabindex="-1">Modeller</h2>
+    </header>
+    <div class="panel-tools">
+      <label class="search">
+        <span class="visually-hidden">Model veya nesil ara</span>
+        <input type="search" id="model-search" placeholder="Model, nesil, kasa kodu veya yıl" autocomplete="off" spellcheck="false" disabled />
+      </label>
+    </div>
+    <div id="model-list" class="panel-body">
+      <p class="empty">Modelleri görmek için bir marka seçin.</p>
+    </div>
+  </section>
+
+  <section class="panel panel-detail" aria-labelledby="panel-detail-title" data-panel="detail">
+    <header class="panel-head">
+      <button type="button" class="back" data-goto="model">
+        <span aria-hidden="true">←</span> Modeller
+      </button>
+      <h2 id="panel-detail-title" tabindex="-1" class="visually-hidden">Araç ayrıntısı</h2>
+    </header>
+    <div id="detail" class="panel-body">
+      <div class="empty-hero">
+        <p class="empty-title">Aracını adım adım bul</p>
+        <p class="empty">Marka → model → nesil → makyaj dönemi → motor sırasıyla seçim yapın.</p>
+      </div>
+    </div>
+  </section>
+
+  <p class="visually-hidden" aria-live="polite" id="catalog-status"></p>
+  <noscript><p class="noscript">Model ve motor listeleri için JavaScript gereklidir.</p></noscript>
+</div>
+
+<script>
+  import { initCatalogExplorer } from '@/scripts/catalog-explorer';
+  initCatalogExplorer(document.getElementById('catalog')!);
+</script>

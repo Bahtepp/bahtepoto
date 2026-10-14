@@ -1,0 +1,7 @@
+[
+  { "id": "eu", "name": "Avrupa", "kind": "region" },
+  { "id": "gb", "name": "Birleşik Krallık", "kind": "country", "isoCode": "GB", "parentId": "eu" },
+  { "id": "tr", "name": "Türkiye", "kind": "country", "isoCode": "TR" },
+  { "id": "na", "name": "Kuzey Amerika", "kind": "region" },
+  { "id": "cn", "name": "Çin", "kind": "country", "isoCode": "CN" }
+]

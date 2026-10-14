@@ -1,0 +1,120 @@
+---
+/**
+ * Bir araç için kronik sorunlar bölümü. Eşleştirici sonuçlarını dört gruba ayırır:
+ * motora özgü, kasa/model geneli, koşullu ve araştırılan/tartışmalı.
+ * Doğrulanmış kayıt yoksa "sorun yok" DEMEZ; verinin henüz bulunmadığını söyler.
+ */
+import IssueItem from './IssueItem.astro';
+import type { GroupedIssues } from '@/lib/issues/match';
+import type { IssueSource } from '@/lib/issues/schema';
+
+interface Props {
+  groups: GroupedIssues;
+  sourceById: Map<string, IssueSource>;
+  label: (id: string) => string;
+  /** Seçili motorun adı ve kasa adı (grup başlıkları için). */
+  engineName: string;
+  generationName: string;
+  /** Motor-makyaj dönemi eşleşmesi doğrulanmadıysa uyarı gösterilir. */
+  engineMappingUncertain?: boolean;
+  headingId?: string;
+}
+
+const { groups, sourceById, label, engineName, generationName, engineMappingUncertain = false, headingId = 'kronik-sorunlar' } =
+  Astro.props;
+const confirmedCount = groups.engine.length + groups.general.length;
+const anyShown = confirmedCount + groups.conditional.length > 0;
+---
+
+<section class="issues-section" aria-labelledby={headingId}>
+  <h2 id={headingId}>Kronik sorunlar</h2>
+
+  {
+    engineMappingUncertain && (
+      <p class="callout-warn">
+        Bu motorun seçilen makyaj döneminde sunulduğu henüz doğrulanmadı. Bu yüzden motora özgü sorunlar kesin olarak
+        eşleştirilmez ve "Koşullu eşleşmeler" altında gösterilir. Kasa ve model genelindeki sorunlar etkilenmez.
+      </p>
+    )
+  }
+
+  {
+    !anyShown && (
+      <div class="issues-empty">
+        <p class="issues-empty-title">Henüz doğrulanmış kronik sorun verisi bulunmuyor.</p>
+        <p>
+          Bu, aracın kronik sorunu olmadığı anlamına gelmez. Kayıtlar kaynaklarla doğrulandıkça bu bölüme eklenecek.
+        </p>
+      </div>
+    )
+  }
+
+  {
+    groups.engine.length > 0 && (
+      <div class="issue-group">
+        <h3 class="issue-group-title">
+          {engineName} motoruna özgü <span class="count">{groups.engine.length}</span>
+        </h3>
+        <ul class="issue-list">
+          {groups.engine.map(({ issue, match }) => (
+            <IssueItem issue={issue} match={match} sourceById={sourceById} label={label} anchorPrefix={headingId} />
+          ))}
+        </ul>
+      </div>
+    )
+  }
+
+  {
+    groups.general.length > 0 && (
+      <div class="issue-group">
+        <h3 class="issue-group-title">
+          {generationName} kasası ve model geneli <span class="count">{groups.general.length}</span>
+        </h3>
+        <p class="issue-group-help">Motor seçiminden bağımsız olarak bu aracı etkileyen kayıtlar.</p>
+        <ul class="issue-list">
+          {groups.general.map(({ issue, match }) => (
+            <IssueItem issue={issue} match={match} sourceById={sourceById} label={label} anchorPrefix={headingId} />
+          ))}
+        </ul>
+      </div>
+    )
+  }
+
+  {
+    groups.conditional.length > 0 && (
+      <div class="issue-group">
+        <h3 class="issue-group-title">
+          Koşullu eşleşmeler <span class="count">{groups.conditional.length}</span>
+        </h3>
+        <p class="issue-group-help">
+          Bu kayıtlar yalnızca belirli koşullarda (şanzıman, üretim yılı, pazar veya doğrulanmamış motor-dönem eşleşmesi)
+          geçerlidir. Seçiminiz bu koşulları kesinleştirmeye yetmiyor; her kaydın koşulu ayrıca yazılıdır.
+        </p>
+        <ul class="issue-list">
+          {groups.conditional.map(({ issue, match }) => (
+            <IssueItem issue={issue} match={match} sourceById={sourceById} label={label} anchorPrefix={headingId} />
+          ))}
+        </ul>
+      </div>
+    )
+  }
+
+  {
+    groups.researching.length > 0 && (
+      <div class="issue-group issue-group-muted">
+        <h3 class="issue-group-title">
+          Araştırılan veya tartışmalı kayıtlar <span class="count">{groups.researching.length}</span>
+        </h3>
+        <p class="issue-group-help">
+          Bu iddialar kesinleşmiş kronik sorun değildir: ya yalnızca kullanıcı raporlarına dayanıyor ya da kaynaklar
+          birbiriyle çelişiyor.
+        </p>
+        <ul class="issue-list">
+          {groups.researching.map(({ issue, match }) => (
+            <IssueItem issue={issue} match={match} sourceById={sourceById} label={label} anchorPrefix={headingId} />
+          ))}
+        </ul>
+      </div>
+    )
+  }
+</section>

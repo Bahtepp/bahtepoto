@@ -1,0 +1,41 @@
+[
+  {
+    "id": "wp-en-ford-focus-mk1",
+    "title": "Ford Focus (first generation)",
+    "url": "https://en.wikipedia.org/wiki/Ford_Focus_(first_generation)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Giriş paragrafı Avrupa üretimini 1998–2004, bilgi kutusu 1998–2005 olarak veriyor."
+  },
+  {
+    "id": "wp-en-ford-focus-mk2-eu",
+    "title": "Ford Focus (second generation, Europe)",
+    "url": "https://en.wikipedia.org/wiki/Ford_Focus_(second_generation,_Europe)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en"
+  },
+  {
+    "id": "wp-en-ford-focus-mk3",
+    "title": "Ford Focus (third generation)",
+    "url": "https://en.wikipedia.org/wiki/Ford_Focus_(third_generation)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "1.5 EcoBoost ve 2.0 TDCi güç değerleri sayfa içinde çelişkili."
+  },
+  {
+    "id": "wp-en-ford-focus-mk4",
+    "title": "Ford Focus (fourth generation)",
+    "url": "https://en.wikipedia.org/wiki/Ford_Focus_(fourth_generation)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "EcoBoost Hybrid için metin Haziran 2022, tablo 2020–2025 veriyor."
+  }
+]

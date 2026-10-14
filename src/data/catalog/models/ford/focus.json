@@ -1,0 +1,230 @@
+{
+  "id": "ford-focus",
+  "brandId": "ford",
+  "slug": "focus",
+  "name": "Focus",
+  "order": 20,
+  "status": "sourced",
+  "sourceIds": ["wp-en-ford-focus-mk1", "wp-en-ford-focus-mk2-eu", "wp-en-ford-focus-mk3", "wp-en-ford-focus-mk4"],
+  "updatedAt": "2026-10-15",
+  "notes": "Avrupa pazarı verileri. Motor listeleri örnek niteliğindedir, eksiksiz değildir. Türkiye pazarına özgü dönem ve motor verisi henüz girilmedi.",
+  "generations": [
+    {
+      "id": "ford-focus-mk1",
+      "slug": "mk1",
+      "name": "Focus Mk1",
+      "code": "C170",
+      "order": 0,
+      "labelPeriod": { "marketId": "eu", "basis": "production", "start": { "year": 1998 }, "end": { "year": 2004 } },
+      "status": "conflicting",
+      "sourceIds": ["wp-en-ford-focus-mk1"],
+      "updatedAt": "2026-10-15",
+      "notes": "Kaynağın giriş metni Avrupa üretimini 1998–2004, bilgi kutusu 1998–2005 olarak veriyor. Etikette 1998–2004 kullanıldı.",
+      "revisions": [
+        {
+          "id": "ford-focus-mk1-pre-facelift",
+          "slug": "makyajsiz",
+          "name": "Makyajsız",
+          "kind": "pre-facelift",
+          "order": 0,
+          "periods": [{ "marketId": "eu", "basis": "production", "start": { "year": 1998 }, "end": { "year": 2001 }, "approximate": true }],
+          "status": "sourced",
+          "sourceIds": ["wp-en-ford-focus-mk1"],
+          "updatedAt": "2026-10-15",
+          "notes": "Bitiş yılı, kaynakta 2001 sonu olarak verilen makyaj tarihinden türetildi."
+        },
+        {
+          "id": "ford-focus-mk1-facelift",
+          "slug": "makyajli",
+          "name": "Makyajlı",
+          "kind": "facelift",
+          "order": 1,
+          "periods": [{ "marketId": "eu", "basis": "production", "start": { "year": 2001 }, "end": { "year": 2004 }, "approximate": true }],
+          "status": "sourced",
+          "sourceIds": ["wp-en-ford-focus-mk1"],
+          "updatedAt": "2026-10-15",
+          "notes": "Makyaj (Mk1.5) kaynağa göre 2001 sonunda geldi."
+        }
+      ],
+      "variants": [
+        { "id": "ford-focus-mk1-zetec-se-14-75", "slug": "zetec-se-14-75", "engineId": "ford-zetec-se-14-75", "revisionMapping": "unknown", "transmissions": [{ "type": "manual", "gears": 5, "name": "IB5" }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk1"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk1-zetec-se-16-74kw", "slug": "zetec-se-16-74kw", "engineId": "ford-zetec-se-16-74kw", "revisionMapping": "unknown", "transmissions": [{ "type": "manual", "gears": 5 }, { "type": "automatic", "gears": 4, "name": "4F27E" }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk1"], "updatedAt": "2026-10-15", "notes": "Kaynak 5 ileri manuel için hem IB5 hem MTX-75 listeliyor." },
+        { "id": "ford-focus-mk1-zetec-18-84kw", "slug": "zetec-18-84kw", "engineId": "ford-zetec-18-84kw", "revisionMapping": "unknown", "transmissions": [{ "type": "manual", "gears": 5, "name": "IB5" }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk1"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk1-zetec-20-130", "slug": "zetec-20-130", "engineId": "ford-zetec-20-130", "revisionMapping": "unknown", "transmissions": [{ "type": "manual", "gears": 5, "name": "MTX-75" }, { "type": "automatic", "gears": 4, "name": "4F27E" }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk1"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk1-endura-tddi-18-75", "slug": "endura-tddi-18-75", "engineId": "ford-endura-tddi-18-75", "revisionMapping": "unknown", "transmissions": [{ "type": "manual", "gears": 5, "name": "MTX-75" }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk1"], "updatedAt": "2026-10-15", "notes": "Kaynağa göre TDDi 2002'de TDCi ile değiştirildi; makyaj dönemleriyle eşleşmesi doğrulanmadı." },
+        { "id": "ford-focus-mk1-endura-tddi-18-90", "slug": "endura-tddi-18-90", "engineId": "ford-endura-tddi-18-90", "revisionMapping": "unknown", "transmissions": [{ "type": "manual", "gears": 5, "name": "MTX-75" }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk1"], "updatedAt": "2026-10-15", "notes": "Kaynağa göre TDDi 2002'de TDCi ile değiştirildi; makyaj dönemleriyle eşleşmesi doğrulanmadı." },
+        { "id": "ford-focus-mk1-duratorq-18-100-240nm", "slug": "duratorq-18-100-240nm", "engineId": "ford-duratorq-18-100-240nm", "revisionIds": ["ford-focus-mk1-facelift"], "revisionMapping": "confirmed", "transmissions": [{ "type": "manual", "gears": 5, "name": "MTX-75" }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk1"], "updatedAt": "2026-10-15", "notes": "2002'de TDDi'nin yerini aldı; makyaj 2001 sonunda olduğundan yalnızca makyajlı döneme aittir." },
+        { "id": "ford-focus-mk1-duratorq-18-115-250nm", "slug": "duratorq-18-115-250nm", "engineId": "ford-duratorq-18-115-250nm", "revisionIds": ["ford-focus-mk1-facelift"], "revisionMapping": "confirmed", "transmissions": [{ "type": "manual", "gears": 5, "name": "MTX-75" }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk1"], "updatedAt": "2026-10-15", "notes": "2002'de TDDi'nin yerini aldı; makyaj 2001 sonunda olduğundan yalnızca makyajlı döneme aittir." },
+        { "id": "ford-focus-mk1-st170", "slug": "st170", "engineId": "ford-duratec-st170-20-170", "trimName": "ST170", "revisionIds": ["ford-focus-mk1-facelift"], "revisionMapping": "confirmed", "transmissions": [{ "type": "manual", "gears": 6 }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk1"], "updatedAt": "2026-10-15", "notes": "2002'de tanıtıldı. Kaynak 6 ileri şanzımanı bir yerde Getrag 285, başka yerde Durashift olarak adlandırıyor." },
+        { "id": "ford-focus-mk1-rs", "slug": "rs", "engineId": "ford-duratec-rs-20-215", "trimName": "RS", "revisionIds": ["ford-focus-mk1-facelift"], "revisionMapping": "confirmed", "transmissions": [{ "type": "manual", "gears": 5, "name": "MTX-75" }], "drivetrain": "fwd", "marketIds": ["eu"], "periods": [{ "marketId": "eu", "basis": "production", "start": { "year": 2002, "month": 10 }, "end": { "year": 2003, "month": 11 } }], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk1"], "updatedAt": "2026-10-15" }
+      ]
+    },
+    {
+      "id": "ford-focus-mk2",
+      "slug": "mk2",
+      "name": "Focus Mk2",
+      "code": "C307",
+      "order": 1,
+      "labelPeriod": { "marketId": "eu", "basis": "production", "start": { "year": 2004, "month": 8 }, "end": { "year": 2010 } },
+      "periods": [{ "marketId": "eu", "basis": "model-year", "start": { "year": 2005 }, "end": { "year": 2010 } }],
+      "status": "sourced",
+      "sourceIds": ["wp-en-ford-focus-mk2-eu"],
+      "updatedAt": "2026-10-15",
+      "notes": "Avrupa nesli. Çin ve Arjantin gibi pazarlarda üretim daha uzun sürdü; bu pazarlar henüz girilmedi.",
+      "revisions": [
+        {
+          "id": "ford-focus-mk2-pre-facelift",
+          "slug": "makyajsiz",
+          "name": "Makyajsız",
+          "kind": "pre-facelift",
+          "order": 0,
+          "periods": [{ "marketId": "eu", "basis": "production", "start": { "year": 2004, "month": 8 }, "end": { "year": 2008 }, "approximate": true }],
+          "status": "sourced",
+          "sourceIds": ["wp-en-ford-focus-mk2-eu"],
+          "updatedAt": "2026-10-15",
+          "notes": "Makyajlı kasa Eylül 2007'de (Frankfurt) tanıtıldı, Birleşik Krallık'ta Şubat 2008'de satışa çıktı; bitiş yılı buna göre yaklaşık verildi."
+        },
+        {
+          "id": "ford-focus-mk2-facelift",
+          "slug": "makyajli",
+          "name": "Makyajlı",
+          "kind": "facelift",
+          "order": 1,
+          "periods": [{ "marketId": "eu", "basis": "production", "start": { "year": 2008 }, "end": { "year": 2010 }, "approximate": true }],
+          "status": "sourced",
+          "sourceIds": ["wp-en-ford-focus-mk2-eu"],
+          "updatedAt": "2026-10-15",
+          "notes": "Birleşik Krallık satış başlangıcı: Şubat 2008."
+        }
+      ],
+      "variants": [
+        { "id": "ford-focus-mk2-duratec-14-80", "slug": "duratec-14-80", "engineId": "ford-duratec-14-80", "revisionMapping": "unknown", "transmissions": [{ "type": "manual", "gears": 5, "name": "iB5" }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk2-eu"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk2-duratec-16-100", "slug": "duratec-16-100", "engineId": "ford-duratec-16-100", "revisionMapping": "unknown", "transmissions": [{ "type": "manual", "gears": 5, "name": "iB5" }, { "type": "automatic", "gears": 4 }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk2-eu"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk2-duratec-tivct-16-115", "slug": "duratec-tivct-16-115", "engineId": "ford-duratec-tivct-16-115", "revisionMapping": "unknown", "transmissions": [{ "type": "manual", "gears": 5 }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk2-eu"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk2-duratec-he-18-125", "slug": "duratec-he-18-125", "engineId": "ford-duratec-he-18-125", "revisionMapping": "unknown", "transmissions": [{ "type": "manual", "gears": 5, "name": "MTX-75" }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk2-eu"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk2-duratec-he-20-145", "slug": "duratec-he-20-145", "engineId": "ford-duratec-he-20-145", "revisionMapping": "unknown", "transmissions": [{ "type": "manual", "gears": 5, "name": "MTX-75" }, { "type": "automatic", "gears": 4 }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk2-eu"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk2-st", "slug": "st", "engineId": "ford-duratec-st-25-225", "trimName": "ST", "revisionIds": ["ford-focus-mk2-pre-facelift"], "revisionMapping": "partial", "transmissions": [{ "type": "manual", "gears": 6 }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk2-eu"], "updatedAt": "2026-10-15", "notes": "2005'te tanıtıldı. Makyajlı dönemde sunulup sunulmadığı bu kaynakla doğrulanmadı." },
+        { "id": "ford-focus-mk2-rs", "slug": "rs", "engineId": "ford-duratec-rs-25-305", "trimName": "RS", "revisionIds": ["ford-focus-mk2-facelift"], "revisionMapping": "confirmed", "transmissions": [{ "type": "manual", "gears": 6 }], "drivetrain": "fwd", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk2-eu"], "updatedAt": "2026-10-15", "notes": "Ocak 2009'da piyasaya çıktı." },
+        { "id": "ford-focus-mk2-rs500", "slug": "rs500", "engineId": "ford-duratec-rs500-25-350", "trimName": "RS500", "revisionIds": ["ford-focus-mk2-facelift"], "revisionMapping": "confirmed", "transmissions": [{ "type": "manual", "gears": 6 }], "drivetrain": "fwd", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk2-eu"], "updatedAt": "2026-10-15", "notes": "Nisan 2010'da 500 adetle sınırlı olarak çıktı." },
+        { "id": "ford-focus-mk2-duratorq-16-90-hhda", "slug": "duratorq-16-90-hhda", "engineId": "ford-duratorq-16-90-hhda", "revisionMapping": "unknown", "transmissions": [{ "type": "manual", "gears": 5, "name": "MTX-75" }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk2-eu"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk2-duratorq-16-109-g8da", "slug": "duratorq-16-109-g8da", "engineId": "ford-duratorq-16-109-g8da", "revisionMapping": "unknown", "transmissions": [{ "type": "manual", "gears": 5, "name": "MTX-75" }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk2-eu"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk2-duratorq-18-115-kkda", "slug": "duratorq-18-115-kkda", "engineId": "ford-duratorq-18-115-kkda", "revisionMapping": "unknown", "transmissions": [{ "type": "manual", "gears": 5, "name": "MTX-75" }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk2-eu"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk2-duratorq-20-110-ixda", "slug": "duratorq-20-110-ixda", "engineId": "ford-duratorq-20-110-ixda", "revisionIds": ["ford-focus-mk2-facelift"], "revisionMapping": "confirmed", "transmissions": [{ "type": "manual", "gears": 6 }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk2-eu"], "updatedAt": "2026-10-15", "notes": "Kaynağa göre 2008 makyajıyla eklendi." },
+        { "id": "ford-focus-mk2-duratorq-20-136-g6da", "slug": "duratorq-20-136-g6da", "engineId": "ford-duratorq-20-136-g6da", "revisionIds": ["ford-focus-mk2-facelift"], "revisionMapping": "partial", "transmissions": [{ "type": "manual", "gears": 6 }, { "type": "dual-clutch", "gears": 6, "name": "PowerShift", "revisionIds": ["ford-focus-mk2-facelift"] }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk2-eu"], "updatedAt": "2026-10-15", "notes": "PowerShift kaynağa göre makyajla eklendi. Kaynağın teknik tablosundaki 6 ileri otomatiğin PowerShift olup olmadığı belirsiz. Makyajsız dönemde sunulup sunulmadığı bu kaynakla doğrulanmadı." }
+      ]
+    },
+    {
+      "id": "ford-focus-mk3",
+      "slug": "mk3",
+      "name": "Focus Mk3",
+      "code": "C346",
+      "order": 2,
+      "labelPeriod": { "marketId": "eu", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2018 } },
+      "periods": [{ "marketId": "na", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2019 } }],
+      "status": "sourced",
+      "sourceIds": ["wp-en-ford-focus-mk3"],
+      "updatedAt": "2026-10-15",
+      "notes": "Üretim Aralık 2010'da başladı. Etiket Avrupa model yıllarını gösterir.",
+      "revisions": [
+        {
+          "id": "ford-focus-mk3-pre-facelift",
+          "slug": "makyajsiz",
+          "name": "Makyajsız",
+          "kind": "pre-facelift",
+          "order": 0,
+          "periods": [{ "marketId": "eu", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2014 } }],
+          "status": "sourced",
+          "sourceIds": ["wp-en-ford-focus-mk3"],
+          "updatedAt": "2026-10-15"
+        },
+        {
+          "id": "ford-focus-mk3-facelift",
+          "slug": "makyajli",
+          "name": "Makyajlı",
+          "kind": "facelift",
+          "order": 1,
+          "periods": [{ "marketId": "eu", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2018 } }],
+          "status": "sourced",
+          "sourceIds": ["wp-en-ford-focus-mk3"],
+          "updatedAt": "2026-10-15",
+          "notes": "Makyaj (Mk3.5) 2014 Cenevre Otomobil Fuarı'nda tanıtıldı; değişiklikler 2015 model yılı ile geldi."
+        }
+      ],
+      "variants": [
+        { "id": "ford-focus-mk3-ecoboost-10-100hp", "slug": "ecoboost-10-100hp", "engineId": "ford-ecoboost-10-100hp-c346", "revisionIds": ["ford-focus-mk3-pre-facelift", "ford-focus-mk3-facelift"], "revisionMapping": "confirmed", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk3"], "updatedAt": "2026-10-15", "notes": "Kaynağa göre 2012'den itibaren sunuldu." },
+        { "id": "ford-focus-mk3-ecoboost-10-125hp", "slug": "ecoboost-10-125hp", "engineId": "ford-ecoboost-10-125hp-c346", "revisionIds": ["ford-focus-mk3-pre-facelift", "ford-focus-mk3-facelift"], "revisionMapping": "confirmed", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk3"], "updatedAt": "2026-10-15", "notes": "Kaynağa göre 2012'den itibaren sunuldu." },
+        { "id": "ford-focus-mk3-ecoboost-10-138hp", "slug": "ecoboost-10-138hp", "engineId": "ford-ecoboost-10-138hp-c346", "revisionIds": ["ford-focus-mk3-facelift"], "revisionMapping": "partial", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk3"], "updatedAt": "2026-10-15", "notes": "Kaynakta yalnızca makyajlı dönem tablosunda geçiyor." },
+        { "id": "ford-focus-mk3-duratec-tivct-16-85hp", "slug": "duratec-tivct-16-85hp", "engineId": "ford-duratec-tivct-16-85hp", "revisionIds": ["ford-focus-mk3-pre-facelift", "ford-focus-mk3-facelift"], "revisionMapping": "confirmed", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk3"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk3-duratec-tivct-16-105hp", "slug": "duratec-tivct-16-105hp", "engineId": "ford-duratec-tivct-16-105hp", "revisionIds": ["ford-focus-mk3-pre-facelift", "ford-focus-mk3-facelift"], "revisionMapping": "confirmed", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk3"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk3-duratec-tivct-16-125hp", "slug": "duratec-tivct-16-125hp", "engineId": "ford-duratec-tivct-16-125hp", "revisionIds": ["ford-focus-mk3-pre-facelift", "ford-focus-mk3-facelift"], "revisionMapping": "confirmed", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk3"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk3-duratec-tivct-16-lpg", "slug": "duratec-tivct-16-lpg", "engineId": "ford-duratec-tivct-16-lpg-86kw", "revisionIds": ["ford-focus-mk3-facelift"], "revisionMapping": "partial", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk3"], "updatedAt": "2026-10-15", "notes": "Kaynakta yalnızca makyajlı dönem tablosunda geçiyor; 2018'de üretimden kalktığı belirtiliyor." },
+        { "id": "ford-focus-mk3-ecoboost-16-150hp", "slug": "ecoboost-16-150hp", "engineId": "ford-ecoboost-16-150hp", "revisionIds": ["ford-focus-mk3-pre-facelift"], "revisionMapping": "confirmed", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk3"], "updatedAt": "2026-10-15", "notes": "2015'te 1.5 EcoBoost ile değiştirildi." },
+        { "id": "ford-focus-mk3-ecoboost-16-182hp", "slug": "ecoboost-16-182hp", "engineId": "ford-ecoboost-16-182hp", "revisionIds": ["ford-focus-mk3-pre-facelift"], "revisionMapping": "confirmed", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk3"], "updatedAt": "2026-10-15", "notes": "2015'te 1.5 EcoBoost ile değiştirildi." },
+        { "id": "ford-focus-mk3-ecoboost-15-150hp", "slug": "ecoboost-15-150hp", "engineId": "ford-ecoboost-15-150hp-c346", "revisionIds": ["ford-focus-mk3-facelift"], "revisionMapping": "confirmed", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk3"], "updatedAt": "2026-10-15", "notes": "1.6 EcoBoost'un yerini aldı." },
+        { "id": "ford-focus-mk3-ecoboost-15-high", "slug": "ecoboost-15-high", "engineId": "ford-ecoboost-15-high-c346", "revisionIds": ["ford-focus-mk3-facelift"], "revisionMapping": "confirmed", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk3"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk3-st", "slug": "st", "engineId": "ford-ecoboost-st-20-c346", "trimName": "ST", "revisionIds": ["ford-focus-mk3-facelift"], "revisionMapping": "partial", "transmissions": [{ "type": "manual", "gears": 6 }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk3"], "updatedAt": "2026-10-15", "notes": "Kaynakta yalnızca makyajlı dönem tablosunda listeleniyor; makyajsız dönemde sunulup sunulmadığı bu kaynakla doğrulanmadı." },
+        { "id": "ford-focus-mk3-st-diesel", "slug": "st-diesel", "engineId": "ford-duratorq-st-20-185ps-c346", "trimName": "ST", "revisionIds": ["ford-focus-mk3-facelift"], "revisionMapping": "confirmed", "transmissions": [{ "type": "dual-clutch", "name": "PowerShift" }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk3"], "updatedAt": "2026-10-15", "notes": "2015 model yılında Avrupa için eklendi. Kaynak yalnızca PowerShift seçeneğini anıyor; şanzıman listesi eksik olabilir." },
+        { "id": "ford-focus-mk3-rs", "slug": "rs", "engineId": "ford-ecoboost-rs-23-c346", "trimName": "RS", "revisionIds": ["ford-focus-mk3-facelift"], "revisionMapping": "confirmed", "drivetrain": "awd", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk3"], "updatedAt": "2026-10-15", "notes": "2015 Cenevre'de tanıtıldı, 2016'da satışa çıktı; son model yılı 2018." },
+        { "id": "ford-focus-mk3-duratorq-16-95hp", "slug": "duratorq-16-95hp", "engineId": "ford-duratorq-16-95hp-c346", "revisionIds": ["ford-focus-mk3-pre-facelift", "ford-focus-mk3-facelift"], "revisionMapping": "confirmed", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk3"], "updatedAt": "2026-10-15", "notes": "2016'da 1.5 TDCi ile değiştirildi." },
+        { "id": "ford-focus-mk3-duratorq-16-115hp", "slug": "duratorq-16-115hp", "engineId": "ford-duratorq-16-115hp-c346", "revisionIds": ["ford-focus-mk3-pre-facelift", "ford-focus-mk3-facelift"], "revisionMapping": "confirmed", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk3"], "updatedAt": "2026-10-15", "notes": "2016'da 1.5 TDCi ile değiştirildi." },
+        { "id": "ford-focus-mk3-duratorq-15-95hp", "slug": "duratorq-15-95hp", "engineId": "ford-duratorq-15-95hp-c346", "revisionIds": ["ford-focus-mk3-facelift"], "revisionMapping": "confirmed", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk3"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk3-duratorq-15-120hp", "slug": "duratorq-15-120hp", "engineId": "ford-duratorq-15-120hp-c346", "revisionIds": ["ford-focus-mk3-facelift"], "revisionMapping": "confirmed", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk3"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk3-duratorq-20", "slug": "duratorq-20", "engineId": "ford-duratorq-20-c346", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "PowerShift" }], "marketIds": ["eu"], "status": "conflicting", "sourceIds": ["wp-en-ford-focus-mk3"], "updatedAt": "2026-10-15", "notes": "Güç seviyeleri kaynakta çelişkili olduğu için hangi seviyenin hangi döneme ait olduğu belirlenemedi. Kaynak PowerShift seçeneğini belirtiyor." },
+        { "id": "ford-focus-mk3-electric", "slug": "electric", "engineId": "ford-focus-electric-23kwh", "revisionMapping": "unknown", "transmissions": [{ "type": "single-speed" }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk3"], "updatedAt": "2026-10-15", "notes": "Avrupa üretimi Nisan 2017'de sona erdi. 2017–2018'de sunulan 33,5 kWh batarya henüz pazar bazında doğrulanmadı." }
+      ]
+    },
+    {
+      "id": "ford-focus-mk4",
+      "slug": "mk4",
+      "name": "Focus Mk4",
+      "code": "C519",
+      "order": 3,
+      "labelPeriod": { "marketId": "eu", "basis": "production", "start": { "year": 2018 }, "end": { "year": 2025, "month": 11 } },
+      "periods": [{ "marketId": "cn", "basis": "production", "start": { "year": 2018 }, "end": { "year": 2024 } }],
+      "status": "sourced",
+      "sourceIds": ["wp-en-ford-focus-mk4"],
+      "updatedAt": "2026-10-15",
+      "notes": "Avrupa üretimi Saarlouis (Almanya) fabrikasında Kasım 2025'te sona erdi.",
+      "revisions": [
+        {
+          "id": "ford-focus-mk4-pre-facelift",
+          "slug": "makyajsiz",
+          "name": "Makyajsız",
+          "kind": "pre-facelift",
+          "order": 0,
+          "periods": [{ "marketId": "eu", "basis": "production", "start": { "year": 2018 }, "end": { "year": 2022 }, "approximate": true }],
+          "status": "sourced",
+          "sourceIds": ["wp-en-ford-focus-mk4"],
+          "updatedAt": "2026-10-15",
+          "notes": "Bitiş yılı, Haziran 2022'deki makyajdan türetildi."
+        },
+        {
+          "id": "ford-focus-mk4-facelift",
+          "slug": "makyajli",
+          "name": "Makyajlı",
+          "kind": "facelift",
+          "order": 1,
+          "periods": [{ "marketId": "eu", "basis": "production", "start": { "year": 2022 }, "end": { "year": 2025, "month": 11 }, "approximate": true }],
+          "status": "sourced",
+          "sourceIds": ["wp-en-ford-focus-mk4"],
+          "updatedAt": "2026-10-15",
+          "notes": "Makyajlı model kaynağa göre Avrupa'da Haziran 2022'de sunuldu."
+        }
+      ],
+      "variants": [
+        { "id": "ford-focus-mk4-ecoboost-10-85ps", "slug": "ecoboost-10-85ps", "engineId": "ford-ecoboost-10-85ps-c519", "revisionIds": ["ford-focus-mk4-pre-facelift", "ford-focus-mk4-facelift"], "revisionMapping": "confirmed", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk4"], "updatedAt": "2026-10-15", "notes": "Kaynak 2018–2025 yıllarını veriyor." },
+        { "id": "ford-focus-mk4-ecoboost-10-100ps", "slug": "ecoboost-10-100ps", "engineId": "ford-ecoboost-10-100ps-c519", "revisionMapping": "unknown", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk4"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk4-ecoboost-10-125ps", "slug": "ecoboost-10-125ps", "engineId": "ford-ecoboost-10-125ps-c519", "revisionMapping": "unknown", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk4"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk4-ecoboost-15-150ps", "slug": "ecoboost-15-150ps", "engineId": "ford-ecoboost-15-150ps-c519", "revisionMapping": "unknown", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk4"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk4-ecoboost-15-182ps", "slug": "ecoboost-15-182ps", "engineId": "ford-ecoboost-15-182ps-c519", "revisionMapping": "unknown", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk4"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk4-ecoboost-hybrid-10-125ps", "slug": "ecoboost-hybrid-10-125ps", "engineId": "ford-ecoboost-hybrid-10-125ps", "revisionMapping": "unknown", "marketIds": ["eu"], "status": "conflicting", "sourceIds": ["wp-en-ford-focus-mk4"], "updatedAt": "2026-10-15", "notes": "Kaynağın metni EcoBoost Hybrid'in Haziran 2022'de geldiğini, tablosu ise 2020–2025 yıllarını veriyor; dönem eşleşmesi bu yüzden belirsiz." },
+        { "id": "ford-focus-mk4-ecoboost-hybrid-10-155ps", "slug": "ecoboost-hybrid-10-155ps", "engineId": "ford-ecoboost-hybrid-10-155ps", "revisionMapping": "unknown", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk4"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk4-ecoblue-15-95ps", "slug": "ecoblue-15-95ps", "engineId": "ford-ecoblue-15-95ps", "revisionIds": ["ford-focus-mk4-pre-facelift", "ford-focus-mk4-facelift"], "revisionMapping": "confirmed", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk4"], "updatedAt": "2026-10-15", "notes": "Kaynak 2018–2025 yıllarını veriyor." },
+        { "id": "ford-focus-mk4-ecoblue-15-120ps", "slug": "ecoblue-15-120ps", "engineId": "ford-ecoblue-15-120ps", "revisionMapping": "unknown", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk4"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk4-ecoblue-20-150ps", "slug": "ecoblue-20-150ps", "engineId": "ford-ecoblue-20-150ps", "revisionMapping": "unknown", "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk4"], "updatedAt": "2026-10-15" },
+        { "id": "ford-focus-mk4-st", "slug": "st", "engineId": "ford-ecoboost-st-23-280ps-c519", "trimName": "ST", "revisionIds": ["ford-focus-mk4-pre-facelift", "ford-focus-mk4-facelift"], "revisionMapping": "confirmed", "transmissions": [{ "type": "manual", "gears": 6 }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk4"], "updatedAt": "2026-10-15", "notes": "2019 ortasında satışa çıktı; kaynak 2019–2025 yıllarını veriyor. Kaynakta sonradan sunulacağı belirtilen otomatik şanzıman henüz eklenmedi." },
+        { "id": "ford-focus-mk4-st-diesel", "slug": "st-diesel", "engineId": "ford-ecoblue-st-20-190ps", "trimName": "ST", "revisionIds": ["ford-focus-mk4-pre-facelift", "ford-focus-mk4-facelift"], "revisionMapping": "confirmed", "transmissions": [{ "type": "manual", "gears": 6 }], "marketIds": ["eu"], "status": "sourced", "sourceIds": ["wp-en-ford-focus-mk4"], "updatedAt": "2026-10-15", "notes": "Kaynak 2019–2025 yıllarını veriyor." }
+      ]
+    }
+  ]
+}

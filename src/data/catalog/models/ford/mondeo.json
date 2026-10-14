@@ -1,0 +1,11 @@
+{
+  "id": "ford-mondeo",
+  "brandId": "ford",
+  "slug": "mondeo",
+  "name": "Mondeo",
+  "order": 30,
+  "status": "pending",
+  "updatedAt": "2026-10-15",
+  "notes": "Nesil, yıl ve motor verisi henüz girilmedi.",
+  "generations": []
+}

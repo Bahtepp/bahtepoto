@@ -1,0 +1,11 @@
+{
+  "id": "ford-c-max",
+  "brandId": "ford",
+  "slug": "c-max",
+  "name": "C-Max",
+  "order": 40,
+  "status": "pending",
+  "updatedAt": "2026-10-15",
+  "notes": "Nesil, yıl ve motor verisi henüz girilmedi.",
+  "generations": []
+}

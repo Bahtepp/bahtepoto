@@ -1,0 +1,7 @@
+[
+  { "id": "demo-src-teknik", "kind": "technical-publication", "title": "Kurgusal örnek teknik yayın", "publisher": "Örnek Yayıncı A", "accessedAt": "2026-10-15", "demo": true, "notes": "Gerçek bir kaynak değildir; arayüz testi içindir." },
+  { "id": "demo-src-servis", "kind": "expert-service", "title": "Kurgusal örnek servis gözlemi", "publisher": "Örnek Servis B", "accessedAt": "2026-10-15", "demo": true, "notes": "Gerçek bir kaynak değildir; arayüz testi içindir." },
+  { "id": "demo-src-anket", "kind": "reliability-survey", "title": "Kurgusal örnek güvenilirlik anketi", "publisher": "Örnek Araştırma C", "accessedAt": "2026-10-15", "demo": true, "notes": "Gerçek bir kaynak değildir; arayüz testi içindir." },
+  { "id": "demo-src-forum-1", "kind": "user-report", "title": "Kurgusal örnek forum başlığı 1", "publisher": "Örnek Forum", "accessedAt": "2026-10-15", "demo": true },
+  { "id": "demo-src-forum-2", "kind": "user-report", "title": "Kurgusal örnek forum başlığı 2", "publisher": "Örnek Forum", "accessedAt": "2026-10-15", "demo": true }
+]

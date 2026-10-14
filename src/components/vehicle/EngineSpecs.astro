@@ -1,0 +1,77 @@
+---
+/**
+ * Motor özellikleri — yalnızca katalogdaki kaynaklı veriden. Eksik alan "Veri doğrulanıyor".
+ */
+import type { Engine, Market, Revision, Variant } from '@/lib/catalog/schema';
+import {
+  FUEL_LABELS,
+  PENDING_TEXT,
+  STATUS_DESCRIPTIONS,
+  STATUS_LABELS,
+  formatDisplacement,
+  formatPower,
+  formatTransmission,
+  formatYearRange,
+} from '@/lib/catalog/format';
+
+interface Props {
+  engine: Engine;
+  variant: Variant;
+  revisions: Revision[];
+  markets: Map<string, Market>;
+}
+
+const { engine, variant, revisions, markets } = Astro.props;
+const revName = (id: string) => revisions.find((r) => r.id === id)?.name.toLocaleLowerCase('tr-TR') ?? id;
+const drivetrain = variant.drivetrain ? { fwd: 'Önden çekiş', rwd: 'Arkadan itiş', awd: 'Dört çeker' }[variant.drivetrain] : undefined;
+const status = engine.status === 'conflicting' || variant.status === 'conflicting' ? 'conflicting' : engine.status;
+
+const rows: [string, string | string[] | undefined | null][] = [
+  ['Yakıt', FUEL_LABELS[engine.fuel]],
+  ['Güç', formatPower(engine.power)],
+  ['Tork', engine.torqueNm ? `${engine.torqueNm} Nm` : null],
+  ['Hacim', formatDisplacement(engine) ?? (engine.fuel === 'electric' ? '—' : null)],
+  ['Silindir', engine.cylinders ? String(engine.cylinders) : null],
+  ['Aşırı besleme', engine.aspiration ? { natural: 'Atmosferik', turbo: 'Turbo', supercharged: 'Kompresör', 'twin-turbo': 'Çift turbo' }[engine.aspiration] : null],
+  ['Motor kodu', engine.codes.length ? engine.codes.join(', ') : null],
+  ['Motor ailesi', engine.family],
+  ['Şanzıman', variant.transmissions.length ? variant.transmissions.map((t) => `${formatTransmission(t)}${t.revisionIds.length ? ` — yalnızca ${t.revisionIds.map(revName).join(', ')}` : ''}`) : null],
+  ['Çekiş', drivetrain],
+  ['Batarya', engine.batteryKwh ? `${engine.batteryKwh.toLocaleString('tr-TR')} kWh` : undefined],
+  ['Pazar', variant.marketIds.map((id) => markets.get(id)?.name ?? id).join(', ')],
+  ['Sunulduğu dönem', variant.periods.length ? variant.periods.map((p) => `${formatYearRange(p, true)} (${markets.get(p.marketId)?.name ?? p.marketId})`).join('; ') : null],
+];
+// `undefined`: alan bu motor için anlamsız (gösterilmez). `null`: veri yok (Veri doğrulanıyor).
+const visible = rows.filter(([, v]) => v !== undefined);
+---
+
+<section class="vehicle-section" aria-labelledby="motor">
+  <h2 id="motor">Motor özellikleri</h2>
+  <p class="section-meta">
+    <span class={`badge status-${status}`} title={STATUS_DESCRIPTIONS[status]}>{STATUS_LABELS[status]}</span>
+    {variant.trimName && <span class="badge badge-trim">{variant.trimName}</span>}
+  </p>
+  <dl class="spec-grid">
+    {
+      visible.map(([k, v]) => (
+        <div>
+          <dt>{k}</dt>
+          <dd>
+            {v === null ? (
+              <span class="pending">{PENDING_TEXT}</span>
+            ) : Array.isArray(v) ? (
+              <ul class="plain">
+                {v.map((x) => (
+                  <li>{x}</li>
+                ))}
+              </ul>
+            ) : (
+              v
+            )}
+          </dd>
+        </div>
+      ))
+    }
+  </dl>
+  {[engine.notes, variant.notes].filter(Boolean).map((n) => <p class="note">{n}</p>)}
+</section>

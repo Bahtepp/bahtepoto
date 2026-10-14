@@ -1,0 +1,2488 @@
+[
+  {
+    "id": "ford-focus-mk4-48v-sase-kablosu-21s36",
+    "slug": "mk4-48v-sase-kablosu-21s36",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "electrical",
+    "title": "48 V akü şase kablosu tam sabitlenmemiş olabilir (21S36)",
+    "summary": "Hafif hibrit Focus Mk4'lerde 48 V akünün şase kablosu tam sabitlenmemiş olabilir; bu, elektrik arızasına ve kablonun aşırı ısınmasına, uç durumda araç yangınına yol açabilir.",
+    "symptoms": [
+      "Elektrik arızaları",
+      "Şase kablosunda aşırı ısınma"
+    ],
+    "symptomDetails": [],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk4"
+        ],
+        "years": {
+          "from": 2020,
+          "to": 2021,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "fuels": [
+          "mild-hybrid"
+        ],
+        "note": "Üretim: 13.08.2020–19.01.2021"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Safety Gate risk türü: yangın. Uç durumda araç yangını.",
+      "sourceIds": [
+        "safety-gate-a12-01682-21"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-a12-01682-21",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports",
+        "note": "\"48-V battery\" ifadesi nedeniyle kapsam hafif hibrit (mHEV) araçlarla sınırlandı."
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mk4-mhev-aku-kutup-somunu-21s01",
+    "slug": "mk4-mhev-aku-kutup-somunu-21s01",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "electrical",
+    "title": "mHEV akü kutup başı somunu doğru sıkılmamış olabilir (21S01)",
+    "summary": "Hafif hibrit (mHEV) akü kutup başını sabitleyen somun doğru sıkılmamış olabilir; elektrik bağlantısı bozulabilir, mHEV işlevi kaybolabilir ve sürüş sırasında yerel aşırı ısınma ile yangın riski doğabilir.",
+    "symptoms": [
+      "mHEV işlevinin kaybı",
+      "Yerel aşırı ısınma, çevre parçalarda erime"
+    ],
+    "symptomDetails": [],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk4"
+        ],
+        "years": {
+          "from": 2020,
+          "to": 2020,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "fuels": [
+          "mild-hybrid"
+        ],
+        "note": "Üretim: 25.06.2020–30.11.2020"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Safety Gate risk türü: yangın.",
+      "sourceIds": [
+        "safety-gate-a12-00616-21"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-a12-00616-21",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mk4-48v-aku-kablosu-23s34",
+    "slug": "mk4-48v-aku-kablosu-23s34",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "electrical",
+    "title": "48 V hibrit akü kablosu yerinden çıkabilir (23S34)",
+    "summary": "48 V hibrit aküsü olan, çok dar bir tarih aralığında üretilmiş Focus Mk4’lerde akü kablosu hatalı sabitleme nedeniyle çıkabilir; aşırı ısınma ve ark oluşumu yangın riskini artırır.",
+    "symptoms": [
+      "Aşırı ısınma",
+      "Elektrik arkı"
+    ],
+    "symptomDetails": [],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk4"
+        ],
+        "years": {
+          "from": 2023,
+          "to": 2023,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "fuels": [
+          "mild-hybrid"
+        ],
+        "note": "Üretim: 24.05.2023–26.05.2023"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Safety Gate risk türü: yangın.",
+      "sourceIds": [
+        "safety-gate-a12-01794-23"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-a12-01794-23",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mk4-arka-kemer-tokasi-23s31",
+    "slug": "mk4-arka-kemer-tokasi-23s31",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "interior",
+    "title": "Arka emniyet kemeri tokaları kusurlu olabilir (23S31)",
+    "summary": "Kusurlu arka emniyet kemeri tokaları tutma etkisini azaltabilir ve kaza anında açılabilir; yaralanma riski artar.",
+    "symptoms": [
+      "Arka emniyet kemeri tokası düzgün kilitlenmeyebilir"
+    ],
+    "symptomDetails": [],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk4"
+        ],
+        "years": {
+          "from": 2023,
+          "to": 2023,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "note": "Üretim: 24.03.2023–07.06.2023"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Safety Gate risk türü: yaralanma.",
+      "sourceIds": [
+        "safety-gate-a12-01739-23"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-a12-01739-23",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mk4-panoramik-tavan-trimi-22s40",
+    "slug": "mk4-panoramik-tavan-trimi-22s40",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "body",
+    "title": "Panoramik tavan trim paneli sürüşte yerinden çıkabilir (22S40)",
+    "summary": "Panoramik cam tavan trim paneli yanlış takılmış olabilir ve araç hareket halindeyken yerinden çıkabilir; kaza ve yaralanma riski oluşur.",
+    "symptoms": [
+      "Tavan trim panelinde gevşeklik"
+    ],
+    "symptomDetails": [],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk4"
+        ],
+        "years": {
+          "from": 2021,
+          "to": 2021,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "note": "Üretim: 16.09.2021–18.10.2021; panoramik tavanlı araçlar"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Safety Gate risk türü: yaralanma.",
+      "sourceIds": [
+        "safety-gate-a12-00940-23"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-a12-00940-23",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mk4-aks-civata-deligi-22s49",
+    "slug": "mk4-aks-civata-deligi-22s49",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "suspension",
+    "title": "Aks cıvata deliği zayıf olabilir, alt rotil ayrılabilir (22S49)",
+    "summary": "Aks (porya) cıvata deliğinin duvarı bir tarafta zayıf olabilir; alt rotil yerinden çıkarak araç kontrolünün kaybına ve kaza riskine yol açabilir.",
+    "symptoms": [
+      "Ön süspansiyonda boşluk veya ses"
+    ],
+    "symptomDetails": [],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk4"
+        ],
+        "years": {
+          "from": 2022,
+          "to": 2022,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "note": "Üretim: 09.06.2022–06.07.2022"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Safety Gate risk türü: yaralanma (araç kontrolünün kaybı).",
+      "sourceIds": [
+        "safety-gate-a12-01712-22"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-a12-01712-22",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mk4-motor-yag-kacagi-22s21",
+    "slug": "mk4-motor-yag-kacagi-22s21",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "engine",
+    "title": "Motordan yağ kaçağı (22S21)",
+    "summary": "Motorun üzerine veya altına yağ sızabilir; diğer yol kullanıcıları için kayma riski ve/veya motor bölmesinde yangın riski doğar. Uyarı motor türünü belirtmiyor.",
+    "symptoms": [
+      "Motorda veya altında yağ izi",
+      "Yanık yağ kokusu"
+    ],
+    "symptomDetails": [],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk4"
+        ],
+        "years": {
+          "from": 2019,
+          "to": 2022,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "note": "Üretim: 02.08.2019–21.03.2022 (Fiesta, Focus, Kuga, Puma için ortak aralık); motor türü kaynakta belirtilmemiş"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Safety Gate risk türleri: yangın ve yaralanma.",
+      "sourceIds": [
+        "safety-gate-a12-00942-23"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-a12-00942-23",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mk4-motor-kablo-demeti-19s50",
+    "slug": "mk4-motor-kablo-demeti-19s50",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "electrical",
+    "title": "Motor kablo demeti şanzıman saplamasına sürtünerek hasar görebilir (19S50)",
+    "summary": "Motor kablo demeti şanzıman gövdesindeki bir saplamaya temas ederek hasar görebilir; motor gücü düşebilir veya motor stop edebilir, kaza riski artar.",
+    "symptoms": [
+      "Motor gücünde düşüş",
+      "Motorun stop etmesi"
+    ],
+    "symptomDetails": [],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk4"
+        ],
+        "years": {
+          "from": 2018,
+          "to": 2019,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "note": "Üretim: 21.03.2018–07.03.2019"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Safety Gate risk türü: yaralanma (sürüşte motorun stop etmesi).",
+      "sourceIds": [
+        "safety-gate-a12-00002-20"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-a12-00002-20",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mk4-19s50-onarim-kablo-demeti-20s74",
+    "slug": "mk4-19s50-onarim-kablo-demeti-20s74",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "electrical",
+    "title": "19S50 onarımı hatalı yapılmışsa kablo demeti hasar görebilir (20S74)",
+    "summary": "19S50 geri çağırması sırasında hatalı onarım yapılan araçlarda motor kablo demeti şanzıman saplamalarına temas ederek hasar görebilir; güç kaybı veya motorun stop etmesi kaza riskini artırır.",
+    "symptoms": [
+      "Motor gücünde düşüş",
+      "Motorun stop etmesi"
+    ],
+    "symptomDetails": [],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk4"
+        ],
+        "years": {
+          "from": 2018,
+          "to": 2019,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "note": "Üretim: 07.05.2018–05.07.2019; 19S50 onarımı yapılmış araçlar"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Safety Gate risk türü: yaralanma.",
+      "sourceIds": [
+        "safety-gate-info-00058-21"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-info-00058-21",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mk4-motor-kablo-demeti-20s28",
+    "slug": "mk4-motor-kablo-demeti-20s28",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "electrical",
+    "title": "Motor kablo demeti şanzıman cıvatasına temas ederek hasar görebilir (20S28)",
+    "summary": "Motor kablo demeti şanzıman gövdesindeki bir cıvataya temas ederek hasar görebilir; motor stop edebilir ve kaza riski artar.",
+    "symptoms": [
+      "Motorun stop etmesi"
+    ],
+    "symptomDetails": [],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk4"
+        ],
+        "years": {
+          "from": 2019,
+          "to": 2020,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "note": "Üretim: 31.07.2019–04.03.2020"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Safety Gate risk türü: yaralanma.",
+      "sourceIds": [
+        "safety-gate-a12-00897-20"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-a12-00897-20",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mk4-fren-servosu-20s05",
+    "slug": "mk4-fren-servosu-20s05",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "brakes",
+    "title": "Fren servosu diyafram plakası çatlayabilir (20S05)",
+    "summary": "Üretim hatası nedeniyle fren servosu diyafram plakası çatlayabilir ve iç membran yırtılabilir; fren performansında ani kayıp kaza riskini artırır.",
+    "symptoms": [
+      "Fren pedalının sertleşmesi veya fren gücünde ani azalma"
+    ],
+    "symptomDetails": [],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk4"
+        ],
+        "years": {
+          "from": 2020,
+          "to": 2020,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "note": "Focus üretimi: 14.01.2020–28.01.2020"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Safety Gate risk türü: yaralanma (fren performansında ani kayıp).",
+      "sourceIds": [
+        "safety-gate-a12-00382-20"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-a12-00382-20",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mk4-guc-dagitim-kutusu-19s42",
+    "slug": "mk4-guc-dagitim-kutusu-19s42",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "electrical",
+    "title": "Güç dağıtım kutusu pimleri kusurlu olabilir (19S42)",
+    "summary": "Güç dağıtım kutusunun (PDB) pimleri hatalı üretilmiş olabilir ve kesintili ya da zayıf bağlantıya neden olabilir.",
+    "symptoms": [
+      "Kesintili elektrik arızaları"
+    ],
+    "symptomDetails": [],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk4"
+        ],
+        "years": {
+          "from": 2019,
+          "to": 2019,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "note": "Üretim: 14.10.2019–16.11.2019"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Safety Gate risk türü: yaralanma.",
+      "sourceIds": [
+        "safety-gate-a12-00053-20"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-a12-00053-20",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mk4-on-suspansiyon-civatalari-19s08",
+    "slug": "mk4-on-suspansiyon-civatalari-19s08",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "suspension",
+    "title": "Ön süspansiyon bağlantı cıvataları doğru torkla sıkılmamış olabilir (19S08)",
+    "summary": "Belirli araçlarda ön süspansiyonu gövdeye bağlayan cıvatalar doğru torkla sıkılmamış olabilir.",
+    "symptoms": [
+      "Ön süspansiyonda ses veya boşluk"
+    ],
+    "symptomDetails": [],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk4"
+        ],
+        "years": {
+          "from": 2018,
+          "to": 2018,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "note": "Belirli araçlar; üretim: 22.09.2018–10.11.2018"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Safety Gate risk türü: yaralanma.",
+      "sourceIds": [
+        "safety-gate-a12-0580-19"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-a12-0580-19",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mk4-fren-pedali-civatasi-18u33",
+    "slug": "mk4-fren-pedali-civatasi-18u33",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "brakes",
+    "title": "Fren pedalı mafsal cıvatası yetersiz olabilir ve kırılabilir (18U33)",
+    "summary": "Belirli araçlarda fren pedalı mafsal cıvatası yeterli olmayabilir ve kırılabilir.",
+    "symptoms": [
+      "Fren pedalında boşluk veya alışılmadık his"
+    ],
+    "symptomDetails": [],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk4"
+        ],
+        "years": {
+          "from": 2018,
+          "to": 2018,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "note": "Belirli araçlar; üretim: 19.10.2018–08.12.2018"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Safety Gate risk türü: yaralanma.",
+      "sourceIds": [
+        "safety-gate-a12-0104-19"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-a12-0104-19",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mk4-arka-kapi-cocuk-kilidi",
+    "slug": "mk4-arka-kapi-cocuk-kilidi",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "body",
+    "title": "Arka kapı çocuk kilidi çalışmayabilir",
+    "summary": "Arka kapı kilidindeki yay yanlış monte edilmiş olabilir; manuel çocuk kilidi düzgün çalışmayabilir.",
+    "symptoms": [
+      "Çocuk kilidi açıkken arka kapının içeriden açılabilmesi"
+    ],
+    "symptomDetails": [],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk4"
+        ],
+        "years": {
+          "from": 2018,
+          "to": 2018,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "note": "Belirli araçlar; üretim: 16.04.2018–02.08.2018"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Safety Gate risk türü: yaralanma.",
+      "sourceIds": [
+        "safety-gate-a12-1530-18"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-a12-1530-18",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mk4-emniyet-kemeri-civatalari-19s30",
+    "slug": "mk4-emniyet-kemeri-civatalari-19s30",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "interior",
+    "title": "Emniyet kemeri bağlantı cıvataları doğru torkla sıkılmamış olabilir (19S30)",
+    "summary": "Emniyet kemerlerinin bağlantı cıvataları doğru torkla sıkılmamış olabilir.",
+    "symptoms": [
+      "Emniyet kemeri bağlantısında gevşeklik"
+    ],
+    "symptomDetails": [],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk4"
+        ],
+        "years": {
+          "from": 2019,
+          "to": 2019,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "note": "Üretim: 07.05.2019–30.09.2019"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Safety Gate risk türü: yaralanma.",
+      "sourceIds": [
+        "safety-gate-a12-1602-19"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-a12-1602-19",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mk4-ecall-tcu-yazilimi-21c12",
+    "slug": "mk4-ecall-tcu-yazilimi-21c12",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "electrical",
+    "title": "Telematik ünite yazılımı eCall acil çağrısını etkileyebilir (21C12)",
+    "summary": "Telematik kontrol ünitesi (TCU) yazılımındaki bir sorun eCall sisteminin işlevini etkileyebilir; gerektiğinde acil servislere ulaşılamayabilir.",
+    "symptoms": [
+      "eCall sistem uyarısı"
+    ],
+    "symptomDetails": [],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk4"
+        ],
+        "years": {
+          "from": 2019,
+          "to": 2021,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "note": "Üretim: 15.07.2019–12.02.2021 (altı model için ortak aralık)"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Safety Gate risk türü: yaralanma (kaza sonrası acil çağrının yapılamaması).",
+      "sourceIds": [
+        "safety-gate-info-00130-21"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-info-00130-21",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mk4-yakit-rayi-sizintisi-25sc2",
+    "slug": "mk4-yakit-rayi-sizintisi-25sc2",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "fuel-system",
+    "title": "Yakıt rayından sızıntı (25SC2)",
+    "summary": "Yakıt rayından sızıntı nedeniyle yakıt dışarı çıkabilir; yangın riski artar.",
+    "symptoms": [
+      "Yakıt kokusu",
+      "Motor bölmesinde yakıt izi"
+    ],
+    "symptomDetails": [],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk4"
+        ],
+        "years": {
+          "from": 2025,
+          "to": 2025,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "note": "Üretim: 20.09.2025–24.10.2025"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Safety Gate risk türü: yangın.",
+      "sourceIds": [
+        "safety-gate-sr-00114-26"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-sr-00114-26",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-ecoblue-dpf-catlagi-24e06",
+    "slug": "ecoblue-dpf-catlagi-24e06",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "emissions",
+    "title": "EcoBlue dizellerde dizel partikül filtresi çatlak olabilir (24E06)",
+    "summary": "1.5 ve 2.0 EcoBlue dizel motorlu araçlarda partikül filtresi (DPF) çatlak olabilir; is emisyonu sınırı aşabileceği için araç periyodik muayeneden geçemeyebilir.",
+    "symptoms": [
+      "Egzozdan is",
+      "Muayenede emisyon değerinin aşılması"
+    ],
+    "symptomDetails": [],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "engineFamilies": [
+          "EcoBlue"
+        ],
+        "years": {
+          "from": 2014,
+          "to": 2019,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "note": "Focus için etiketli üretim aralığı: 10.12.2014–22.07.2019"
+      }
+    ],
+    "severity": {
+      "level": "low",
+      "rationale": "Safety Gate risk türü yalnızca çevre; uyarıda güvenlik riski belirtilmemiş, sonuç muayene/emisyonla ilgili.",
+      "sourceIds": [
+        "safety-gate-sr-02468-26"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-sr-02468-26",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports",
+        "note": "Uyarıdaki model adı verilmemiş 23.07.2019–03.06.2024 aralığı Focus'a atfedilmedi."
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mk3-20-tdci-asiri-isinma-17s45",
+    "slug": "mk3-20-tdci-asiri-isinma-17s45",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "engine",
+    "title": "2.0 Duratorq dizel: motor kontrol ünitesi aşırı ısınmayı algılamayabilir (17S45)",
+    "summary": "2.0 L Duratorq dizel motorlu araçlarda motor kontrol ünitesi aşırı ısınmayı doğru algılamayabilir; motor aşırı ısınıp yağ kaçırabilir, yola damlayan yağ diğer yol kullanıcıları için risk oluşturur.",
+    "symptoms": [
+      "Motor aşırı ısınması",
+      "Motor yağı kaçağı"
+    ],
+    "symptomDetails": [],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk3"
+        ],
+        "engineIds": [
+          "ford-duratorq-20-c346",
+          "ford-duratorq-st-20-185ps-c346"
+        ],
+        "years": {
+          "from": 2014,
+          "to": 2015,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "note": "Üretim: 18.07.2014–19.10.2015"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Safety Gate risk türü: yaralanma (yola yağ dökülmesi).",
+      "sourceIds": [
+        "safety-gate-a12-00141-24"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-a12-00141-24",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mk3-debriyaj-baski-plakasi",
+    "slug": "mk3-debriyaj-baski-plakasi",
+    "brandId": "ford",
+    "kind": "recall",
+    "category": "clutch",
+    "title": "Debriyaj baskı plakası kırılabilir (üç ayrı geri çağırma)",
+    "summary": "Focus Mk3'ü de (tip DYB) kapsayan üç Safety Gate uyarısına göre belirli araçlarda debriyaj baskı plakası, bir uyarıya göre sürüş sırasında, kırılabilir. Uyarılar motor veya şanzıman türünü belirtmiyor.",
+    "symptoms": [
+      "Debriyajda alışılmadık ses veya his",
+      "Sürüş sırasında güç aktarımının kesilmesi"
+    ],
+    "checks": [
+      "Aracın şasi numarasıyla (VIN) Ford yetkili servisine bu geri çağırmanın kapsamda olup olmadığını ve yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk3"
+        ],
+        "years": {
+          "from": 2009,
+          "to": 2018,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "note": "Uyarılar 2009–2013, 2014–2018 ve 30.06.2016–30.05.2018 üretimini kapsıyor; motor/şanzıman belirtilmemiş, yalnızca belirli araçlar"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Safety Gate risk türleri: yaralanma; A12/1883/19 için ayrıca yangın.",
+      "sourceIds": [
+        "safety-gate-a12-1883-19",
+        "safety-gate-a12-0963-18",
+        "safety-gate-a12-0028-19"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Geri çağırma kaydı, sorunun ne kadar sık görüldüğünü göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "safety-gate-a12-1883-19",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports",
+        "note": "Üretim 2009–2013; plaka sürüş sırasında kırılabilir."
+      },
+      {
+        "sourceId": "safety-gate-a12-0963-18",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports",
+        "note": "Üretim 2014–2018."
+      },
+      {
+        "sourceId": "safety-gate-a12-0028-19",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity"
+        ],
+        "stance": "supports",
+        "note": "Ford 18S39; belirli araçlar, üretim 30.06.2016–30.05.2018."
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-15",
+    "notes": "Mk3 bağlantısı, uyarılardaki DYB tip kodundan kuruldu. Focus Mk3 Avrupa üretimi Aralık 2010'da başladığı için 2009–2010 yılları Focus'u fiilen kapsamaz.",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-tdci-fan-modulu-yangin",
+    "slug": "tdci-fan-modulu-yangin",
+    "brandId": "ford",
+    "kind": "known-defect",
+    "category": "cooling",
+    "title": "1.8 / 2.0 TDCi: soğutma fanı kontrol modülü korozyonu ve yangın riski",
+    "summary": "What Car?'ın aktardığına göre Birleşik Krallık'ta 20.02.2004–31.05.2006 üretimi 1.8 ve 2.0 TDCi Focus'lar, yol tuzunun fan kontrol modülünde korozyon ve aşırı ısınmaya yol açabilmesi nedeniyle geri çağrıldı.",
+    "symptoms": [
+      "Fan kontrol modülünde korozyon",
+      "Nadir durumlarda modül ve çevresindeki kablolarda tutuşma"
+    ],
+    "checks": [
+      "Ford yetkili servisine şasi numarasıyla bu işlemin (ek kablo demeti ve su kalkanı) yapılıp yapılmadığını sorun."
+    ],
+    "remedies": [
+      {
+        "text": "Kontak kapalıyken fan kontrol modülünün enerjisini kesen ek kablo demeti ve modülü suya/korozyona karşı koruyan yeni bir su kalkanı takılır.",
+        "sourceIds": [
+          "whatcar-2009-focus-fan-recall"
+        ]
+      }
+    ],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "engineIds": [
+          "ford-duratorq-18-100-240nm",
+          "ford-duratorq-18-115-250nm",
+          "ford-duratorq-18-115-kkda",
+          "ford-duratorq-20-110-ixda",
+          "ford-duratorq-20-136-g6da"
+        ],
+        "years": {
+          "from": 2004,
+          "to": 2006,
+          "basis": "production",
+          "marketId": "gb"
+        },
+        "marketIds": [
+          "gb"
+        ],
+        "note": "Birleşik Krallık; üretim 20.02.2004–31.05.2006"
+      }
+    ],
+    "severity": {
+      "level": "safety",
+      "rationale": "Kaynak, nadir durumlarda aşırı ısınmanın modülü ve çevresindeki kabloları tutuşturabileceğini aktarıyor.",
+      "sourceIds": [
+        "whatcar-2009-focus-fan-recall"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "whatcar-2009-focus-fan-recall",
+        "aspects": [
+          "existence",
+          "scope",
+          "symptoms",
+          "severity",
+          "remedy"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-15",
+    "notes": "Kaynakta bir güvenlik geri çağırması olarak anlatılıyor; ancak resmi DVSA kaydı otomatik erişime kapalı olduğu için doğrulanamadı. Bu yüzden \"recall\" değil \"known-defect\" olarak girildi.",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mk3-10-ecoboost-sogutma-hortumu",
+    "slug": "mk3-10-ecoboost-sogutma-hortumu",
+    "brandId": "ford",
+    "kind": "known-defect",
+    "category": "cooling",
+    "title": "1.0 EcoBoost: soğutma hortumu yüksek sıcaklıkta arızalanabilir",
+    "summary": "Ford'un açıklamasına göre Ekim 2011–Ekim 2013 arasında üretilen 1.0 EcoBoost motorların soğutma hortumu yüksek sıcaklıkta arızalanabilir; Ford Mart 2015'te bir Field Service Action başlattı. DVSA bunu güvenlik sorunu saymadı.",
+    "symptoms": [
+      "Soğutma suyu kaybı",
+      "Motor aşırı ısınma uyarısı",
+      "Motorun güç kısıtlamalı moda geçmesi"
+    ],
+    "checks": [
+      "Ford yetkili servisine şasi numarasıyla soğutma hortumu FSA işleminin yapılıp yapılmadığını sorun.",
+      "Soğutma suyu seviyesini ve geçmişte aşırı ısınma kaydı olup olmadığını kontrol ettirin."
+    ],
+    "remedies": [
+      {
+        "text": "Field Service Action kapsamında soğutma hortumu yenilenir.",
+        "sourceIds": [
+          "autocar-2018-ford-ecoboost",
+          "am-online-2018-ford-ecoboost"
+        ]
+      }
+    ],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "generationIds": [
+          "ford-focus-mk3"
+        ],
+        "engineIds": [
+          "ford-ecoboost-10-100hp-c346",
+          "ford-ecoboost-10-125hp-c346"
+        ],
+        "years": {
+          "from": 2011,
+          "to": 2013,
+          "basis": "production",
+          "marketId": "eu"
+        },
+        "note": "Üretim: Ekim 2011–Ekim 2013"
+      }
+    ],
+    "severity": {
+      "level": "high",
+      "rationale": "Hortum arızası motorun aşırı ısınmasına yol açabilir; AM-online'ın aktardığı bir motor uzmanına göre soğutma suyunu kaybeden motor aşırı ısınıp arızalanabilir. DVSA güvenlik sorunu olarak sınıflandırmadı.",
+      "sourceIds": [
+        "autocar-2018-ford-ecoboost",
+        "am-online-2018-ford-ecoboost"
+      ]
+    },
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Ford'un Birleşik Krallık'ta 44.682 aracın etkilendiğini açıkladığı aktarılıyor; bu, arızanın ne sıklıkta ortaya çıktığını göstermez.",
+      "sourceIds": []
+    },
+    "claims": [
+      {
+        "sourceId": "autocar-2018-ford-ecoboost",
+        "aspects": [
+          "existence",
+          "scope",
+          "severity",
+          "remedy"
+        ],
+        "stance": "supports",
+        "note": "Üretim aralığı, FSA tarihi ve DVSA sınıflandırması Ford'un açıklamasından aktarılıyor; Focus, motorun kullanıldığı modeller arasında anılıyor."
+      },
+      {
+        "sourceId": "am-online-2018-ford-ecoboost",
+        "aspects": [
+          "existence",
+          "symptoms",
+          "severity",
+          "remedy"
+        ],
+        "stance": "supports",
+        "note": "Soğutma hortumu değişimi ve 1.0 EcoBoost aşırı ısınma vakalarını aktarıyor."
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-15",
+    "notes": "Ford'un FSA belgesi veya bülteni kamuya açık olarak bulunamadı. Kaynaklar FSA'yı model bazında değil motor bazında anlatıyor; Focus'ta Ekim 2011–Ekim 2013 üretiminde sunulan 1.0 EcoBoost seçenekleriyle sınırlandı.",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-alternator-arizasi",
+    "slug": "alternator-arizasi",
+    "brandId": "ford",
+    "kind": "chronic",
+    "category": "electrical",
+    "title": "Alternatör (şarj dinamosu) arızaları",
+    "summary": "ADAC'ın 2009–2020 arası on bir yıllık arıza istatistiğinde alternatör arızası, 2003–2011 arasında tescil edilen Focus'larda ortalamanın üstünde sık görülen kusurlar arasında yer alıyor.",
+    "symptoms": [
+      "Akü/şarj uyarı lambası",
+      "Akünün sürekli boşalması",
+      "Elektrikli donanımda güç düşüşü"
+    ],
+    "checks": [
+      "Motor çalışırken şarj gerilimini ölçtürün.",
+      "Şarj uyarı lambasının motor çalıştıktan sonra söndüğünü kontrol edin."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "years": {
+          "from": 2003,
+          "to": 2011,
+          "basis": "sales",
+          "marketId": "eu"
+        },
+        "note": "Almanya ilk tescil yılları (ADAC)"
+      }
+    ],
+    "prevalence": {
+      "evidence": "survey-supported",
+      "note": "ADAC Pannenstatistik bu arızayı Focus için \"ortalamanın üstünde sık görülen kusurlar\" arasında listeliyor (2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020 raporları). Yıllar ilk tescil yılıdır.",
+      "sourceIds": [
+        "adac-pannenstatistik-2009",
+        "adac-pannenstatistik-2010",
+        "adac-pannenstatistik-2011",
+        "adac-pannenstatistik-2013",
+        "adac-pannenstatistik-2014",
+        "adac-pannenstatistik-2015",
+        "adac-pannenstatistik-2016",
+        "adac-pannenstatistik-2017",
+        "adac-pannenstatistik-2018",
+        "adac-pannenstatistik-2019",
+        "adac-pannenstatistik-2020"
+      ]
+    },
+    "claims": [
+      {
+        "sourceId": "adac-pannenstatistik-2009",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2010",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2011",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2013",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2014",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2015",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2016",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2017",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2018",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2019",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2020",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-15",
+    "notes": "Tek yayıncıya (ADAC) dayandığı için \"verified\" değil. Ciddiyet kaynakta değerlendirilmediği için girilmedi.",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mars-aku-arizalari",
+    "slug": "mars-aku-arizalari",
+    "brandId": "ford",
+    "kind": "chronic",
+    "category": "electrical",
+    "title": "Marş aküsü kaynaklı arızalar",
+    "summary": "Marş aküsü ADAC'a göre bütün araçlarda en sık arıza nedeni; Focus için 2010–2025 raporlarının hepsinde, 2004–2022 arasındaki çeşitli tescil yıllarında ortalamanın üstünde sık görülen kusurlar arasında listeleniyor.",
+    "symptoms": [
+      "Motorun zor çalışması veya hiç çalışmaması",
+      "Akünün boşalması"
+    ],
+    "checks": [
+      "Akünün yaşını ve test sonucunu (sağlık durumu) kontrol ettirin."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "years": {
+          "from": 2004,
+          "to": 2022,
+          "basis": "sales",
+          "marketId": "eu"
+        },
+        "note": "Almanya ilk tescil yılları (ADAC); her raporda listelenen yıllar farklı"
+      }
+    ],
+    "prevalence": {
+      "evidence": "survey-supported",
+      "note": "ADAC Pannenstatistik bu arızayı Focus için \"ortalamanın üstünde sık görülen kusurlar\" arasında listeliyor (2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 raporları). Yıllar ilk tescil yılıdır.",
+      "sourceIds": [
+        "adac-pannenstatistik-2010",
+        "adac-pannenstatistik-2011",
+        "adac-pannenstatistik-2013",
+        "adac-pannenstatistik-2014",
+        "adac-pannenstatistik-2015",
+        "adac-pannenstatistik-2016",
+        "adac-pannenstatistik-2017",
+        "adac-pannenstatistik-2018",
+        "adac-pannenstatistik-2019",
+        "adac-pannenstatistik-2020",
+        "adac-pannenstatistik-2021",
+        "adac-pannenstatistik-2022",
+        "adac-pannenstatistik-2023",
+        "adac-pannenstatistik-2024",
+        "adac-pannenstatistik-2025"
+      ]
+    },
+    "claims": [
+      {
+        "sourceId": "adac-pannenstatistik-2010",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2011",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2013",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2014",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2015",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2016",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2017",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2018",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2019",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2020",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2021",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2022",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2023",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2024",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2025",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-15",
+    "notes": "Tek yayıncıya (ADAC) dayandığı için \"verified\" değil. Ciddiyet kaynakta değerlendirilmediği için girilmedi. Akü arızaları bütün markalarda en yaygın arıza nedenidir; kayıt yalnızca ADAC'ın Focus için ortalamanın üstünde bulduğu yılları yansıtır.",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-mars-motoru-arizasi",
+    "slug": "mars-motoru-arizasi",
+    "brandId": "ford",
+    "kind": "chronic",
+    "category": "electrical",
+    "title": "Marş motoru arızaları",
+    "summary": "ADAC'ın arıza istatistiğinde marş motoru (Anlasser) arızası, 2006–2016 arasındaki çeşitli tescil yıllarında Focus için ortalamanın üstünde sık görülen kusurlar arasında yer alıyor.",
+    "symptoms": [
+      "Kontak çevrildiğinde marşın basmaması",
+      "Marş sırasında tıklama sesi"
+    ],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "years": {
+          "from": 2006,
+          "to": 2016,
+          "basis": "sales",
+          "marketId": "eu"
+        },
+        "note": "Almanya ilk tescil yılları (ADAC); her raporda listelenen yıllar farklı"
+      }
+    ],
+    "prevalence": {
+      "evidence": "survey-supported",
+      "note": "ADAC Pannenstatistik bu arızayı Focus için \"ortalamanın üstünde sık görülen kusurlar\" arasında listeliyor (2011, 2013, 2017, 2018, 2019, 2020, 2022, 2023, 2024, 2025 raporları). Yıllar ilk tescil yılıdır.",
+      "sourceIds": [
+        "adac-pannenstatistik-2011",
+        "adac-pannenstatistik-2013",
+        "adac-pannenstatistik-2017",
+        "adac-pannenstatistik-2018",
+        "adac-pannenstatistik-2019",
+        "adac-pannenstatistik-2020",
+        "adac-pannenstatistik-2022",
+        "adac-pannenstatistik-2023",
+        "adac-pannenstatistik-2024",
+        "adac-pannenstatistik-2025"
+      ]
+    },
+    "claims": [
+      {
+        "sourceId": "adac-pannenstatistik-2011",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2013",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2017",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2018",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2019",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2020",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2022",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2023",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2024",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2025",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-15",
+    "notes": "Tek yayıncıya (ADAC) dayandığı için \"verified\" değil. Ciddiyet kaynakta değerlendirilmediği için girilmedi.",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-dizel-partikul-filtresi-tikanmasi",
+    "slug": "dizel-partikul-filtresi-tikanmasi",
+    "brandId": "ford",
+    "kind": "chronic",
+    "category": "emissions",
+    "title": "Dizel partikül filtresi (DPF) tıkanması",
+    "summary": "ADAC'ın 2010–2018 raporlarında tıkanmış dizel partikül filtresi, 2004–2011 arasında tescil edilen dizel Focus'larda ortalamanın üstünde sık görülen kusurlar arasında yer alıyor.",
+    "symptoms": [
+      "DPF / motor arıza lambası",
+      "Güç kaybı (acil durum modu)"
+    ],
+    "checks": [
+      "Arıza hafızasında DPF kayıtlarını ve fark basınç değerini kontrol ettirin.",
+      "Aracın ağırlıklı olarak kısa mesafede kullanılıp kullanılmadığını sorun."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "fuels": [
+          "diesel"
+        ],
+        "years": {
+          "from": 2004,
+          "to": 2011,
+          "basis": "sales",
+          "marketId": "eu"
+        },
+        "note": "Almanya ilk tescil yılları (ADAC); partikül filtreli dizel araçlar"
+      }
+    ],
+    "prevalence": {
+      "evidence": "survey-supported",
+      "note": "ADAC Pannenstatistik bu arızayı Focus için \"ortalamanın üstünde sık görülen kusurlar\" arasında listeliyor (2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018 raporları). Yıllar ilk tescil yılıdır.",
+      "sourceIds": [
+        "adac-pannenstatistik-2010",
+        "adac-pannenstatistik-2011",
+        "adac-pannenstatistik-2013",
+        "adac-pannenstatistik-2014",
+        "adac-pannenstatistik-2015",
+        "adac-pannenstatistik-2016",
+        "adac-pannenstatistik-2017",
+        "adac-pannenstatistik-2018"
+      ]
+    },
+    "claims": [
+      {
+        "sourceId": "adac-pannenstatistik-2010",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2011",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2013",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2014",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2015",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2016",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2017",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2018",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-15",
+    "notes": "Tek yayıncıya (ADAC) dayandığı için \"verified\" değil. Ciddiyet kaynakta değerlendirilmediği için girilmedi.",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-dizel-turbo-ve-takviye-basinci",
+    "slug": "dizel-turbo-ve-takviye-basinci",
+    "brandId": "ford",
+    "kind": "chronic",
+    "category": "engine",
+    "title": "Turbo, turbo hortumu ve takviye basıncı kontrolü arızaları",
+    "summary": "ADAC'ın 2008–2017 raporlarında turbo hasarı, yerinden çıkan turbo hortumu ve hatalı takviye basıncı (Ladedruck) kontrolü, 2003–2011 tescilli Focus'larda ortalamanın üstünde sık görülen kusurlar arasında.",
+    "symptoms": [
+      "Ani güç kaybı (acil durum modu)",
+      "Motor arıza lambası",
+      "Turbodan ıslık veya üfleme sesi"
+    ],
+    "checks": [
+      "Turbo hortumlarını ve kelepçeleri kontrol ettirin.",
+      "Arıza hafızasında takviye basıncı kayıtlarına baktırın."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "fuels": [
+          "diesel"
+        ],
+        "years": {
+          "from": 2003,
+          "to": 2011,
+          "basis": "sales",
+          "marketId": "eu"
+        },
+        "note": "Almanya ilk tescil yılları (ADAC)"
+      }
+    ],
+    "prevalence": {
+      "evidence": "survey-supported",
+      "note": "ADAC Pannenstatistik bu arızayı Focus için \"ortalamanın üstünde sık görülen kusurlar\" arasında listeliyor (2008, 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017 raporları). Yıllar ilk tescil yılıdır.",
+      "sourceIds": [
+        "adac-pannenstatistik-2008",
+        "adac-pannenstatistik-2009",
+        "adac-pannenstatistik-2010",
+        "adac-pannenstatistik-2011",
+        "adac-pannenstatistik-2013",
+        "adac-pannenstatistik-2014",
+        "adac-pannenstatistik-2015",
+        "adac-pannenstatistik-2016",
+        "adac-pannenstatistik-2017"
+      ]
+    },
+    "claims": [
+      {
+        "sourceId": "adac-pannenstatistik-2008",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2009",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2010",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2011",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2013",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2014",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2015",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2016",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2017",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-15",
+    "notes": "Tek yayıncıya (ADAC) dayandığı için \"verified\" değil. Ciddiyet kaynakta değerlendirilmediği için girilmedi. Turbo hasarı 2011, 2013 ve 2014 raporlarında açıkça dizel için verilmiş; takviye basıncı ve turbo hortumu kalemlerinde yakıt türü belirtilmemiş. Kapsam dizel motorlarla sınırlandı.",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-atesleme-bobini-arizasi",
+    "slug": "atesleme-bobini-arizasi",
+    "brandId": "ford",
+    "kind": "chronic",
+    "category": "engine",
+    "title": "Ateşleme bobini arızaları (benzinli)",
+    "summary": "ADAC'ın 2008–2010 raporlarında ateşleme bobini arızası, 2002–2007 tescilli Focus'larda (özellikle 2004'e kadar) ortalamanın üstünde sık görülen kusurlar arasında yer alıyor.",
+    "symptoms": [
+      "Tekleme",
+      "Motor arıza lambası",
+      "Rölantide titreme"
+    ],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "fuels": [
+          "petrol"
+        ],
+        "years": {
+          "from": 2002,
+          "to": 2007,
+          "basis": "sales",
+          "marketId": "eu"
+        },
+        "note": "Almanya ilk tescil yılları (ADAC)"
+      }
+    ],
+    "prevalence": {
+      "evidence": "survey-supported",
+      "note": "ADAC Pannenstatistik bu arızayı Focus için \"ortalamanın üstünde sık görülen kusurlar\" arasında listeliyor (2008, 2009, 2010 raporları). Yıllar ilk tescil yılıdır.",
+      "sourceIds": [
+        "adac-pannenstatistik-2008",
+        "adac-pannenstatistik-2009",
+        "adac-pannenstatistik-2010"
+      ]
+    },
+    "claims": [
+      {
+        "sourceId": "adac-pannenstatistik-2008",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2009",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2010",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-15",
+    "notes": "Tek yayıncıya (ADAC) dayandığı için \"verified\" değil. Ciddiyet kaynakta değerlendirilmediği için girilmedi. Ateşleme bobini yalnızca benzinli motorlarda bulunduğu için kapsam benzinli motorlarla sınırlandı.",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-devirdaim-pompasi-arizasi",
+    "slug": "devirdaim-pompasi-arizasi",
+    "brandId": "ford",
+    "kind": "chronic",
+    "category": "cooling",
+    "title": "Devirdaim (soğutma suyu) pompası arızaları",
+    "summary": "ADAC'ın 2008 ve 2009 raporlarında devirdaim pompası arızası, 2004'e kadar tescil edilen Focus'larda ortalamanın üstünde sık görülen kusurlar arasında yer alıyor.",
+    "symptoms": [
+      "Soğutma suyu kaybı",
+      "Hararet"
+    ],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "years": {
+          "from": 2002,
+          "to": 2004,
+          "basis": "sales",
+          "marketId": "eu"
+        },
+        "note": "Almanya ilk tescil yılları (ADAC)"
+      }
+    ],
+    "prevalence": {
+      "evidence": "survey-supported",
+      "note": "ADAC Pannenstatistik bu arızayı Focus için \"ortalamanın üstünde sık görülen kusurlar\" arasında listeliyor (2008, 2009 raporları). Yıllar ilk tescil yılıdır.",
+      "sourceIds": [
+        "adac-pannenstatistik-2008",
+        "adac-pannenstatistik-2009"
+      ]
+    },
+    "claims": [
+      {
+        "sourceId": "adac-pannenstatistik-2008",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2009",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-15",
+    "notes": "Tek yayıncıya (ADAC) dayandığı için \"verified\" değil. Ciddiyet kaynakta değerlendirilmediği için girilmedi.",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-direksiyon-yardimi-kaybi",
+    "slug": "direksiyon-yardimi-kaybi",
+    "brandId": "ford",
+    "kind": "chronic",
+    "category": "steering",
+    "title": "Hidrolik direksiyon yardımının devre dışı kalması",
+    "summary": "ADAC'ın 2010, 2011 ve 2013 raporlarında direksiyon yardımının devre dışı kalması, 2004–2009 tescilli Focus'larda ortalamanın üstünde sık görülen kusurlar arasında yer alıyor.",
+    "symptoms": [
+      "Direksiyonun aniden ağırlaşması",
+      "Direksiyon uyarı lambası"
+    ],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "years": {
+          "from": 2004,
+          "to": 2009,
+          "basis": "sales",
+          "marketId": "eu"
+        },
+        "note": "Almanya ilk tescil yılları (ADAC)"
+      }
+    ],
+    "prevalence": {
+      "evidence": "survey-supported",
+      "note": "ADAC Pannenstatistik bu arızayı Focus için \"ortalamanın üstünde sık görülen kusurlar\" arasında listeliyor (2010, 2011, 2013 raporları). Yıllar ilk tescil yılıdır.",
+      "sourceIds": [
+        "adac-pannenstatistik-2010",
+        "adac-pannenstatistik-2011",
+        "adac-pannenstatistik-2013"
+      ]
+    },
+    "claims": [
+      {
+        "sourceId": "adac-pannenstatistik-2010",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2011",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "adac-pannenstatistik-2013",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-15",
+    "notes": "Tek yayıncıya (ADAC) dayandığı için \"verified\" değil. Ciddiyet kaynakta değerlendirilmediği için girilmedi.",
+    "demo": false
+  },
+  {
+    "id": "ford-focus-triger-kayisi-2016",
+    "slug": "triger-kayisi-2016",
+    "brandId": "ford",
+    "kind": "known-defect",
+    "category": "engine",
+    "title": "Triger kayışı kaynaklı arızalar (2016 tescil)",
+    "summary": "ADAC Pannenstatistik 2025, triger kayışı (Zahnriemen) kaynaklı arızaları 2016'da tescil edilen Focus'lar için ortalamanın üstünde sık görülen kusurlar arasında listeliyor. Rapor motor türünü belirtmiyor.",
+    "symptoms": [
+      "Motorun çalışırken durması ve tekrar çalışmaması"
+    ],
+    "checks": [
+      "Triger kayışının üretici aralığında değiştirilip değiştirilmediğini servis kayıtlarından kontrol edin."
+    ],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "ford-focus"
+        ],
+        "years": {
+          "from": 2016,
+          "to": 2016,
+          "basis": "sales",
+          "marketId": "eu"
+        },
+        "note": "Almanya ilk tescil yılı (ADAC); motor türü belirtilmemiş"
+      }
+    ],
+    "prevalence": {
+      "evidence": "survey-supported",
+      "note": "ADAC Pannenstatistik bu arızayı Focus için \"ortalamanın üstünde sık görülen kusurlar\" arasında listeliyor (2025 raporları). Yıllar ilk tescil yılıdır.",
+      "sourceIds": [
+        "adac-pannenstatistik-2025"
+      ]
+    },
+    "claims": [
+      {
+        "sourceId": "adac-pannenstatistik-2025",
+        "aspects": [
+          "existence",
+          "scope",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-15",
+    "notes": "Tek yayıncıya (ADAC) dayandığı için \"verified\" değil. Ciddiyet kaynakta değerlendirilmediği için girilmedi. Yalnızca bir raporda ve bir tescil yılında listelendi.",
+    "demo": false
+  }
+]

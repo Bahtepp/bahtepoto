@@ -1,0 +1,90 @@
+---
+/**
+ * ÖRNEK VERİ SAYFASI — kronik sorun arayüzünü ve eşleştiriciyi göstermek için.
+ * Yalnızca `demoIssues` koleksiyonunu kullanır; canlı araç sayfalarına bağlanmaz,
+ * arama motorlarına kapalıdır (noindex). Kayıtların tamamı kurgusaldır.
+ */
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import IssuesSection from '@/components/vehicle/IssuesSection.astro';
+import { generationLabel } from '@/lib/catalog/format';
+import { getIssueData } from '@/lib/issues';
+import { groupIssues } from '@/lib/issues/match';
+import { getLabeler, getVehicleSelections, toVehicleContext } from '@/lib/vehicle';
+import '@/styles/vehicle.css';
+
+const demo = await getIssueData('demo');
+const label = await getLabeler();
+const all = await getVehicleSelections();
+
+/** Gösterilecek senaryolar: [nesil, dönem, varyant, açıklama] */
+const SCENARIOS: [string, string, string, string][] = [
+  ['mk2', 'makyajli', 'duratorq-20-110-ixda', 'Motora özgü kayıt kesin eşleşir; kasa, dönem ve model geneli kayıtlar da listelenir.'],
+  ['mk2', 'makyajli', 'duratorq-16-109-g8da', 'Motorun makyaj dönemi eşleşmesi doğrulanmadığı için motora özgü kayıt yalnızca koşullu görünür.'],
+  ['mk2', 'makyajsiz', 'duratorq-20-136-g6da', 'PowerShift yalnızca makyajlı dönemde olduğu için şanzıman kaydı görünmez; erken yıl kaydı koşulludur.'],
+  ['mk3', 'makyajsiz', 'ecoboost-16-150hp', 'Başka nesil: Mk2 kayıtlarının hiçbiri görünmez; yalnızca model geneli kayıt kalır.'],
+];
+
+const scenarios = await Promise.all(
+  SCENARIOS.map(async ([gen, rev, variant, note]) => {
+    const sel = all.find((s) => s.model.id === 'ford-focus' && s.generation.slug === gen && s.revision?.slug === rev && s.variant.slug === variant);
+    if (!sel) throw new Error(`Örnek senaryo bulunamadı: ${gen}/${rev}/${variant}`);
+    return { sel, note, groups: groupIssues(demo.issues, await toVehicleContext(sel)) };
+  }),
+);
+---
+
+<SiteLayout title="Örnek veri — kronik sorun arayüzü" noindex>
+  <article class="vehicle">
+    <p class="demo-banner" role="note">
+      <strong>Örnek veri — doğrulanmış bilgi değildir.</strong>
+      Bu sayfadaki bütün kronik sorun kayıtları ve kaynakları kurgusaldır; yalnızca arayüzü ve eşleştirme kurallarını
+      göstermek içindir. Gerçek araç sayfalarında bu kayıtlar kullanılmaz.
+    </p>
+
+    <h1>Kronik sorun arayüzü: örnek senaryolar</h1>
+
+    {
+      scenarios.map(({ sel, note, groups }, i) => (
+        <section class="demo-scenario" aria-labelledby={`senaryo-${i + 1}`}>
+          <h2 id={`senaryo-${i + 1}`} class="demo-scenario-title">
+            Senaryo {i + 1}: {sel.brand.name} {generationLabel(sel.generation)} · {sel.revision?.name} · {sel.engine.name}
+          </h2>
+          <p class="issue-group-help">{note}</p>
+          <IssuesSection
+            groups={groups}
+            sourceById={demo.sourceById}
+            label={label}
+            engineName={sel.engine.name}
+            generationName={generationLabel(sel.generation)}
+            engineMappingUncertain={!sel.revisionMappingVerified}
+            headingId={`senaryo-${i + 1}-sorunlar`}
+          />
+        </section>
+      ))
+    }
+  </article>
+</SiteLayout>
+
+<style>
+  .demo-banner {
+    margin: 0 0 1.5rem;
+    padding: 1rem 1.25rem;
+    border: 2px solid var(--danger);
+    border-radius: var(--radius);
+    background: var(--danger-soft);
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .demo-scenario {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--border-strong);
+  }
+
+  .demo-scenario-title {
+    font-size: 1.125rem;
+  }
+</style>

@@ -1,0 +1,163 @@
+---
+/**
+ * Tek bir kronik sorun kaydı. İlk bakışta: başlık, kısa açıklama, başlıca belirtiler,
+ * etkilediği araçlar, kaynak ve doğrulama durumu. Genişletilince: ayrıntılı belirtiler,
+ * satın alırken kontrol edilecekler, çözüm ve kaynaklar.
+ */
+import type { MatchResult } from '@/lib/issues/match';
+import type { Issue, IssueSource } from '@/lib/issues/schema';
+import {
+  ASPECT_LABELS,
+  CATEGORY_LABELS,
+  ISSUE_KIND_LABELS,
+  ISSUE_STATUS_DESCRIPTIONS,
+  ISSUE_STATUS_LABELS,
+  PREVALENCE_LABELS,
+  SEVERITY_LABELS,
+  SOURCE_KIND_LABELS,
+  STANCE_LABELS,
+  describeScope,
+} from '@/lib/issues/format';
+
+interface Props {
+  issue: Issue;
+  match: MatchResult;
+  sourceById: Map<string, IssueSource>;
+  label: (id: string) => string;
+  /** Sayfada benzersiz bağlantı kimliği için önek. */
+  anchorPrefix: string;
+}
+
+const { issue, match, sourceById, label, anchorPrefix } = Astro.props;
+const headSymptoms = issue.symptoms.slice(0, 3);
+const extraSymptoms = [...issue.symptoms.slice(3), ...issue.symptomDetails];
+const sourceCount = new Set(issue.claims.map((c) => c.sourceId)).size;
+const hasContradiction = issue.claims.some((c) => c.stance === 'contradicts');
+const sourceLink = (id: string) => sourceById.get(id);
+---
+
+<li class="issue" id={`${anchorPrefix}-${issue.slug}`}>
+  <details>
+    <summary>
+      {issue.demo && <p class="issue-demo">Örnek veri — doğrulanmış bilgi değildir</p>}
+      <h3 class="issue-title">{issue.title}</h3>
+      <p class="issue-summary">{issue.summary}</p>
+      <p class="issue-line"><span class="issue-key">Belirtiler:</span> {headSymptoms.join(' · ')}</p>
+      <p class="issue-line"><span class="issue-key">Etkilediği:</span> {describeScope(issue.appliesTo, label)}</p>
+      {
+        match.reasons.length > 0 && (
+          <p class="issue-line issue-condition">
+            <span class="issue-key">Koşul:</span> {match.reasons.join('; ')}
+          </p>
+        )
+      }
+      <p class="issue-meta">
+        <span class={`issue-status issue-status-${issue.status}`} title={ISSUE_STATUS_DESCRIPTIONS[issue.status]}>
+          {ISSUE_STATUS_LABELS[issue.status]}
+        </span>
+        <span>{ISSUE_KIND_LABELS[issue.kind]}</span>
+        <span>{CATEGORY_LABELS[issue.category]}</span>
+        <span>{sourceCount} kaynak</span>
+        {hasContradiction && <span class="issue-warn">Çelişen kaynak var</span>}
+        <span class="issue-more" aria-hidden="true">Ayrıntılar</span>
+      </p>
+    </summary>
+
+    <div class="issue-body">
+      {
+        extraSymptoms.length > 0 && (
+          <section>
+            <h4>Ayrıntılı belirtiler</h4>
+            <ul>
+              {issue.symptoms.concat(issue.symptomDetails).map((s) => (
+                <li>{s}</li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+
+      <section>
+        <h4>Ciddiyet ve görülme sıklığı</h4>
+        <dl class="issue-facts">
+          <div>
+            <dt>Ciddiyet</dt>
+            <dd>
+              {issue.severity ? `${SEVERITY_LABELS[issue.severity.level]} — ${issue.severity.rationale}` : 'Kaynakla belirlenmedi'}
+            </dd>
+          </div>
+          <div>
+            <dt>Görülme sıklığı kanıtı</dt>
+            <dd>
+              {PREVALENCE_LABELS[issue.prevalence.evidence]}
+              {issue.prevalence.note && ` — ${issue.prevalence.note}`}
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      {
+        issue.checks.length > 0 && (
+          <section>
+            <h4>Satın alırken kontrol edin</h4>
+            <ul>
+              {issue.checks.map((c) => (
+                <li>{c}</li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+
+      {
+        issue.remedies.length > 0 && (
+          <section>
+            <h4>Çözüm ve bakım</h4>
+            <ul>
+              {issue.remedies.map((r) => (
+                <li>
+                  {r.text}{' '}
+                  <span class="issue-ref">
+                    (Kaynak: {r.sourceIds.map((id) => sourceLink(id)?.title ?? id).join(', ')})
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+
+      <section>
+        <h4>Kaynaklar</h4>
+        <ul class="issue-sources">
+          {
+            issue.claims.map((c) => {
+              const s = sourceLink(c.sourceId);
+              return (
+                <li class={c.stance === 'contradicts' ? 'contradicts' : undefined}>
+                  {s?.url ? (
+                    <a href={s.url} rel="noopener" target="_blank">
+                      {s.title}
+                    </a>
+                  ) : (
+                    <span>{s?.title ?? c.sourceId}</span>
+                  )}
+                  <span class="issue-ref">
+                    {' '}
+                    — {s ? SOURCE_KIND_LABELS[s.kind] : 'bilinmeyen tür'}
+                    {s?.reference && `, ${s.reference}`}; {c.aspects.map((a) => ASPECT_LABELS[a]).join(', ')} konusunda{' '}
+                    <strong>{STANCE_LABELS[c.stance]}</strong>
+                    {c.note && `. ${c.note}`}
+                  </span>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </section>
+
+      {issue.notes && <p class="issue-note">{issue.notes}</p>}
+      <p class="issue-ref">Son güncelleme: {new Date(issue.updatedAt).toLocaleDateString('tr-TR')}</p>
+    </div>
+  </details>
+</li>

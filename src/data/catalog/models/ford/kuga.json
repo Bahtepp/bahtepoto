@@ -1,0 +1,11 @@
+{
+  "id": "ford-kuga",
+  "brandId": "ford",
+  "slug": "kuga",
+  "name": "Kuga",
+  "order": 50,
+  "status": "pending",
+  "updatedAt": "2026-10-15",
+  "notes": "Nesil, yıl ve motor verisi henüz girilmedi.",
+  "generations": []
+}
