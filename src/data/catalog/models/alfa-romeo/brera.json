@@ -1,0 +1,30 @@
+{
+  "id": "alfa-romeo-brera",
+  "brandId": "alfa-romeo",
+  "slug": "brera",
+  "name": "Brera",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "alfa-romeo-brera-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Brera (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "alfa-romeo-brera-nesil-belirlenmedi-22", "slug": "22", "engineId": "alfa-romeo-22", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Jts", "Jts Selespeed", "Jts Sky Window"], "bodyTypes": [], "sourceRefs": ["TSB 3-169", "TSB 3-170", "TSB 3-204"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "alfa-romeo-brera-nesil-belirlenmedi-24-jtd", "slug": "24-jtd", "engineId": "alfa-romeo-24-jtd", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Sky Window"], "bodyTypes": [], "sourceRefs": ["TSB 3-171", "TSB 3-172"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "alfa-romeo-brera-nesil-belirlenmedi-32", "slug": "32", "engineId": "alfa-romeo-32", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Q-TRONIC", "Sky Window"], "bodyTypes": [], "sourceRefs": ["TSB 3-173", "TSB 3-174", "TSB 3-205"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

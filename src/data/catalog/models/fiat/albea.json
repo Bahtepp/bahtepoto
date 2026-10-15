@@ -1,0 +1,33 @@
+{
+  "id": "fiat-albea",
+  "brandId": "fiat",
+  "slug": "albea",
+  "name": "Albea",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "fiat-albea-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Albea (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "fiat-albea-nesil-belirlenmedi-14-fire", "slug": "14-fire", "engineId": "fiat-14-fire", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010], "trims": ["Active", "Dynamic", "Sole Premio"], "bodyTypes": [], "sourceRefs": ["TSB 100-432", "TSB 100-433", "TSB 100-480"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "fiat-albea-nesil-belirlenmedi-12-lpg", "slug": "12-lpg", "engineId": "fiat-12-lpg", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009], "trims": ["Active"], "bodyTypes": [], "sourceRefs": ["TSB 100-435"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "fiat-albea-nesil-belirlenmedi-14", "slug": "14", "engineId": "fiat-14", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Sole Active", "Sole Dynamic"], "bodyTypes": [], "sourceRefs": ["TSB 100-453", "TSB 100-454"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "fiat-albea-nesil-belirlenmedi-13-multijet", "slug": "13-multijet", "engineId": "fiat-13-multijet", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Sole Active", "Sole Dynamic", "Sole Premio"], "bodyTypes": [], "sourceRefs": ["TSB 100-455", "TSB 100-456", "TSB 100-481"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "fiat-albea-nesil-belirlenmedi-14-fire-77", "slug": "14-fire-77", "engineId": "fiat-14-fire-77", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012], "trims": ["Sole Active Plus", "Sole Dynamic Plus", "Sole Premio Plus"], "bodyTypes": [], "sourceRefs": ["TSB 100-561", "TSB 100-563", "TSB 100-565"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "fiat-albea-nesil-belirlenmedi-13-multijet-70", "slug": "13-multijet-70", "engineId": "fiat-13-multijet-70", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012], "trims": ["Sole Active Plus", "Sole Dynamic Plus", "Sole Premio Plus"], "bodyTypes": [], "sourceRefs": ["TSB 100-562", "TSB 100-564", "TSB 100-566"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

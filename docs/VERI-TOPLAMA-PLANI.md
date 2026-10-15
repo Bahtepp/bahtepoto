@@ -1,7 +1,63 @@
 # Veri toplama ve katalog genişletme planı
 
-**Durum:** Faz 1 ve Faz 2 uygulandı (15.10.2026). İçe aktarma iskeleti `scripts/import/` altında; Golf Mk5–Mk8 adayları ve fark raporu `data/staging/wikidata/` altında, **kataloğa aktarılmadı** (onay bekliyor).
-**Hedef:** Ford Focus dışındaki araçları, düşük maliyetle ve tahmin üretmeden kataloğa eklemek.
+**Durum (15.10.2026):** Türkiye toplu kataloğu TSB Kasko Değer Listesi'nden otomatik üretiliyor (aşağıda
+"Türkiye toplu kataloğu"). Faz 1–2 iskeleti `scripts/import/` altında; Wikidata Golf adayları `data/staging/wikidata/`
+altında ve kataloğa aktarılmadı.
+**Hedef:** Türkiye'deki otomobilleri düşük maliyetle ve tahmin üretmeden kataloğa eklemek.
+
+## Türkiye toplu kataloğu (TSB Kasko Değer Listesi)
+
+Tek komut: **`npm run catalog:update`** (indir → ayrıştır → normalize et → tekrarları birleştir → nesil ve motorlarla
+eşleştir → kataloğa yaz → rapor). Yazmadan denemek için `npm run catalog:tsb`; önbellekten çalıştırmak için
+`-- --offline`.
+
+- **Kaynak:** [TSB Kasko Değer Listesi](https://www.tsb.org.tr/tr/kasko-deger-listesi). Sayfanın kendi "Dosyayı
+  İndir" ve arşiv düğmelerinin kullandığı herkese açık Excel dosyaları indirilir: güncel liste + arşivden Ocak 2022
+  (arşiv son 4 yılı tutuyor; iki dosya birlikte 2008–2026 model yıllarını kapsıyor). Ham dosyalar `.cache/import/tsb/`
+  altında (git dışı).
+- **Ne alınır:** marka, tip adı, TSB marka-tip kodu ve tipin listede değeri olan **model yılları**. Fiyatlar
+  kullanılmaz ve kataloğa yazılmaz. Tip adından yalnızca açıkça yazanlar çıkarılır: model, nesil ipucu (III, MK7),
+  hacim, güç (PS/kW/HP), yakıt (TDCi, TSI, 1.6i, HIBRIT …), şanzıman (OV, DSG, EDC, CVT …), gövde (4K, 5K, SW …) ve
+  donanım. Yakıtı yazmayan tiplerde yakıt boş kalır.
+- **Gruplama:** marka → model → nesil → motor. Aynı motorun farklı model yılı, donanım ve gövdedeki satırları tek
+  varyantta birleşir; model yılları, donanımlar, gövde tipleri ve TSB kodları varyantın `marketAvailability`
+  kaydında (`marketId: "tr"`, `status: "listed"`) saklanır. "FORD /USA" gibi ABD tipi kayıtlar `imported`.
+- **Nesil eşleştirme (tahminsiz):** tip adında nesil ipucu varsa o nesil; katalogda modelin nesilleri varsa ve
+  model yılları yalnızca bir neslin içinde kalıyor ve komşu neslin sınırına 1 yıldan uzaksa o nesil; aksi hâlde
+  "(nesil belirlenmedi)" grubu. Bu grup açıkça etiketlenir ve kayıtların aktarılmasını engellemez.
+- **Kapsam:** otomobil ve binek türevleri. Kamyon, çekici, otobüs, minibüs, panelvan, karavan, motosiklet, traktör
+  ve iş makineleri alınmaz (`scripts/import/tsb/rules.ts`).
+- **Çıktılar:** `data/staging/tsb/RAPOR.md` (sayılar), `data/staging/tsb/belirsiz.json` (aktarılamayan satırlar ve
+  nedenleri). Katalog yalnızca şemalar ve `validate.ts` geçerse yazılır.
+- **Yeniden çalıştırma güvenli:** önce bir önceki TSB aktarımının ürettikleri (tek kaynağı TSB olan motor, nesil,
+  varyant ve boş kalan modeller) temizlenir, sonra yeniden kurulur. Elle girilmiş kayıtlara yalnızca Türkiye durumu
+  eklenir; diğer alanları değişmez.
+- **Lisans notu:** TSB sayfası "Tüm hakları saklıdır" der; liste herkese açık indirme olarak sunuluyor. Yalnızca
+  olgusal araç tanımları ve model yılları kullanılıyor, değerler kullanılmıyor. Yayından önce TSB'nin bu kullanımı
+  onaylaması önerilir.
+
+### Pazar görünümü
+
+Katalog Türkiye görünümüyle açılır (`?pazar=eu` Avrupa, `?pazar=world` tüm dünya). Türkiye görünümünde yalnızca
+Türkiye'de satışı doğrulanan (`sold`) veya TSB listesinde yer alan (`listed`) motorlar ana listededir; ithal olanlar
+(`imported`) ayrı grupta. Avrupa'da bulunması Türkiye'de satıldığını kanıtlamaz; Türkiye bilgisi olmayan motor gizlenir
+ama "sunulmadı" sayılmaz. Kurallar `src/lib/catalog/market.ts` içinde.
+
+### Başka kaynak veya marka eklemek
+
+1. Kaynak tablo biçimindeyse (Excel/CSV): `scripts/import/tsb/` örneğindeki gibi bir ayrıştırıcı (`parse.ts`)
+   yazın ve satırları `{ marka, tip adı, kod, model yılları }` biçimine getirin. `lib/xlsx.ts` bağımlılıksız Excel
+   okur.
+2. Tip adı kuralları `normalize.ts` içinde; yeni yakıt/şanzıman/gövde kısaltmaları buradaki listelere eklenir.
+3. Marka eşlemeleri ve kapsam dışı kurallar `rules.ts` içinde.
+4. Nesil bilgisi olan kaynaklar (üretici arşivi, Wikipedia) önce katalogdaki nesilleri doldurmalı: TSB satırları
+   o nesillere kendiliğinden eşlenir ve "nesil belirlenmedi" grubu küçülür.
+5. Satış durumu kaynağı (distribütör fiyat listesi, broşür) bulunan motorlarda `marketAvailability` durumu `sold`
+   yapılabilir.
+
+**Bilinen sınırlar:** TSB nesil ve makyaj bilgisi vermediği için TSB'den gelen varyantların çoğu (≈%98)
+"nesil belirlenmedi" grubunda. Wikidata'da tarihli nesil kaydı çok az (≈170, çoğu VW/Toyota/Opel), bu yüzden toplu
+nesil kaynağı olarak kullanılmadı. Bazı model adları kısaltmalı veya bitişik yazıldığı için `belirsiz.json`'a düşer.
 
 Seçim yapısı değişmiyor: **Marka → Model → Nesil/Kasa (yıl aralığı) → Makyaj dönemi (yıl aralığı) → Motor**.
 Yıl ve motor eşleşmeleri pazar bazında tutulur (örn. "Avrupa, üretim").

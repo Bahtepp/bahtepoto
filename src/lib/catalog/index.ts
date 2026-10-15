@@ -7,6 +7,7 @@ import { getCollection } from 'astro:content';
 import type { BrandPayload, BrandSummary, ModelPayload, ModelSummary } from './payload';
 import type { Brand, Engine, Market, Model, Source } from './schema';
 import { validateCatalog, type CatalogData } from './validate';
+import { marketCounts } from './market';
 
 interface Catalog extends CatalogData {
   brandById: Map<string, Brand>;
@@ -56,7 +57,7 @@ export function getCatalog(): Promise<Catalog> {
   return cache;
 }
 
-function summarizeModel(model: Model): ModelSummary {
+function summarizeModel(model: Model, markets: Market[]): ModelSummary {
   return {
     id: model.id,
     slug: model.slug,
@@ -76,6 +77,7 @@ function summarizeModel(model: Model): ModelSummary {
         status: g.status,
         notes: g.notes,
         variantCount: g.variants.length,
+        marketCounts: marketCounts(g.variants, markets),
         revisions: [...g.revisions]
           .sort((a, b) => a.order - b.order)
           .map(({ id, slug, name, kind, order, periods, status, notes }) => ({ id, slug, name, kind, order, periods, status, notes })),
@@ -101,7 +103,7 @@ export async function getBrandPayload(brandId: string): Promise<BrandPayload> {
   if (!brand) throw new Error(`Bilinmeyen marka: ${brandId}`);
   return {
     brand,
-    models: catalog.models.filter((m) => m.brandId === brandId).map(summarizeModel),
+    models: catalog.models.filter((m) => m.brandId === brandId).map((m) => summarizeModel(m, catalog.markets)),
     markets: catalog.markets,
   };
 }

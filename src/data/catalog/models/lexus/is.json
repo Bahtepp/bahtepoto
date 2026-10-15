@@ -1,0 +1,29 @@
+{
+  "id": "lexus-is",
+  "brandId": "lexus",
+  "slug": "is",
+  "name": "IS",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "lexus-is-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "IS (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2020 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "lexus-is-nesil-belirlenmedi-200t", "slug": "200t", "engineId": "lexus-200t", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018], "trims": ["Comfort", "Exclusive", "Executive", "Executive Plus", "F Sport", "Luxury"], "bodyTypes": [], "sourceRefs": ["TSB 571-1002", "TSB 571-1003", "TSB 571-1004", "TSB 571-1005", "TSB 571-1006", "TSB 571-1030"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "lexus-is-nesil-belirlenmedi-300h", "slug": "300h", "engineId": "lexus-300h", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "e-CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2017, 2018, 2019, 2020], "trims": ["Comfort", "Exclusive", "Executive", "F-SPORT"], "bodyTypes": [], "sourceRefs": ["TSB 571-1043", "TSB 571-1044", "TSB 571-1045", "TSB 571-1094"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "kia-sorento",
+  "brandId": "kia",
+  "slug": "sorento",
+  "name": "Sorento",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "kia-sorento-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Sorento (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2026 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "kia-sorento-nesil-belirlenmedi-25", "slug": "25", "engineId": "kia-25", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008], "trims": ["Dsl", "Dsl EX Dvd", "EX Dsl"], "bodyTypes": [], "sourceRefs": ["TSB 800-118", "TSB 800-126", "TSB 800-73"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "kia-sorento-nesil-belirlenmedi-22", "slug": "22", "engineId": "kia-22", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012], "trims": ["Dsl EX", "Dsl EX (7 KISILIK)", "XM1", "XM1 (7 KOLTUK)", "XM2", "XM2 (7 KOLTUK)"], "bodyTypes": [], "sourceRefs": ["TSB 800-184", "TSB 800-191", "TSB 800-198", "TSB 800-199", "TSB 800-200", "TSB 800-201"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "kia-sorento-nesil-belirlenmedi-20-dizel-185", "slug": "20-dizel-185", "engineId": "kia-20-dizel-185", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016, 2017, 2018, 2019], "trims": ["Exclusive", "GT Line", "Prestige"], "bodyTypes": [], "sourceRefs": ["TSB 800-1062", "TSB 800-1080", "TSB 800-1132"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "kia-sorento-nesil-belirlenmedi-33", "slug": "33", "engineId": "kia-33", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008], "trims": ["LX"], "bodyTypes": [], "sourceRefs": ["TSB 800-1178"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "kia-sorento-nesil-belirlenmedi-16-t-gdi-hybrid-230", "slug": "16-t-gdi-hybrid-230", "engineId": "kia-16-t-gdi-hybrid-230", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022], "trims": ["Prestige"], "bodyTypes": [], "sourceRefs": ["TSB 800-1186"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "kia-sorento-nesil-belirlenmedi-16-hybrid-230", "slug": "16-hybrid-230", "engineId": "kia-16-hybrid-230", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2023], "trims": ["Prestige", "Prestige Smart", "Prestige Smart 7K"], "bodyTypes": [], "sourceRefs": ["TSB 800-1223", "TSB 800-1230", "TSB 800-1249"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "kia-sorento-nesil-belirlenmedi-24-gdi", "slug": "24-gdi", "engineId": "kia-24-gdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 800-1229"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "kia-sorento-nesil-belirlenmedi-16-hybrid-215", "slug": "16-hybrid-215", "engineId": "kia-16-hybrid-215", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["PRES.SMART 7K", "Prestige Smart"], "bodyTypes": [], "sourceRefs": ["TSB 800-1275", "TSB 800-1276"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "kia-sorento-nesil-belirlenmedi-22-crdi-201", "slug": "22-crdi-201", "engineId": "kia-22-crdi-201", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DCT" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 800-1285"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

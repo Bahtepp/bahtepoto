@@ -1,0 +1,3 @@
+[
+  { "id": "haima-20", "brandId": "haima", "slug": "20", "name": "2.0", "displacementL": 2, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"7 2.0\"); yakıt türü tip adında yazmıyor." }
+]

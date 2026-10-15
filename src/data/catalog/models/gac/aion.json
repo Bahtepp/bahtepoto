@@ -1,0 +1,43 @@
+{
+  "id": "gac-aion",
+  "brandId": "gac",
+  "slug": "aion",
+  "name": "Aion",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "gac-aion-nesil-5",
+      "slug": "nesil-5",
+      "name": "Aion V",
+      "order": 905,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2021 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Nesil adı TSB tip adlarındaki \"V\" ifadesinden alındı; yıllar bu tiplerin TSB listesinde yer aldığı model yılları (Türkiye). Üretim yılları ve makyaj dönemleri doğrulanmadı.",
+      "revisions": [],
+      "variants": [
+        { "id": "gac-aion-nesil-5-elektrikli", "slug": "elektrikli", "engineId": "gac-elektrikli", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021], "trims": ["70 SUV"], "bodyTypes": [], "sourceRefs": ["TSB 594-1001"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    },
+    {
+      "id": "gac-aion-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Aion (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2021 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "gac-aion-nesil-belirlenmedi-elektrikli", "slug": "elektrikli", "engineId": "gac-elektrikli", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021], "trims": ["S 580", "S 580 Max Premium"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 594-1002", "TSB 594-1003"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

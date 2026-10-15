@@ -1,0 +1,6 @@
+[
+  { "id": "buick-36", "brandId": "buick", "slug": "36", "name": "3.6", "displacementL": 3.6, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"ENCLAVE 3.6 4x4\"); yakıt türü tip adında yazmıyor." },
+  { "id": "buick-38-diesel", "brandId": "buick", "slug": "38-diesel", "name": "3.8 DIESEL", "fuel": "diesel", "displacementL": 3.8, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"LACROSSE 3.8 DIESEL CX\")." },
+  { "id": "buick-38", "brandId": "buick", "slug": "38", "name": "3.8", "displacementL": 3.8, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"BUICK LACROSSE CX 3.8\"); yakıt türü tip adında yazmıyor." },
+  { "id": "buick-13", "brandId": "buick", "slug": "13", "name": "1.3", "displacementL": 1.3, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"ENCORE GX 1.3\"); yakıt türü tip adında yazmıyor." }
+]

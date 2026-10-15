@@ -1,0 +1,32 @@
+{
+  "id": "alfa-romeo-147",
+  "brandId": "alfa-romeo",
+  "slug": "147",
+  "name": "147",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "alfa-romeo-147-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "147 (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "alfa-romeo-147-nesil-belirlenmedi-16", "slug": "16", "engineId": "alfa-romeo-16", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010], "trims": ["Distinctive", "Progression"], "bodyTypes": ["3 kapı", "5 kapı"], "sourceRefs": ["TSB 3-143", "TSB 3-144", "TSB 3-145", "TSB 3-146"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "alfa-romeo-147-nesil-belirlenmedi-20", "slug": "20", "engineId": "alfa-romeo-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Distinctive", "Selespeed Blackline", "Selespeed Distinctive"], "bodyTypes": ["3 kapı", "5 kapı"], "sourceRefs": ["TSB 3-147", "TSB 3-148", "TSB 3-149", "TSB 3-150", "TSB 3-180"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "alfa-romeo-147-nesil-belirlenmedi-16-105", "slug": "16-105", "engineId": "alfa-romeo-16-105", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Blackline", "Colleizone", "Distinctive", "Progression"], "bodyTypes": ["3 kapı", "5 kapı"], "sourceRefs": ["TSB 3-176", "TSB 3-177", "TSB 3-181", "TSB 3-202", "TSB 3-203"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "alfa-romeo-147-nesil-belirlenmedi-16-120", "slug": "16-120", "engineId": "alfa-romeo-16-120", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["5 Colleizone", "Blackline"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 3-178", "TSB 3-179"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "alfa-romeo-147-nesil-belirlenmedi-19-jtd", "slug": "19-jtd", "engineId": "alfa-romeo-19-jtd", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Q2"], "bodyTypes": [], "sourceRefs": ["TSB 3-186"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

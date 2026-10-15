@@ -37,5 +37,15 @@
     "accessedAt": "2026-10-15",
     "language": "en",
     "notes": "EcoBoost Hybrid için metin Haziran 2022, tablo 2020–2025 veriyor."
+  },
+  {
+    "id": "tsb-kasko-deger-listesi",
+    "title": "TSB Kasko Değer Listesi (2022-01, 2026-10)",
+    "url": "https://www.tsb.org.tr/tr/kasko-deger-listesi",
+    "publisher": "Türkiye Sigorta, Reasürans ve Emeklilik Şirketleri Birliği (TSB)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "tr",
+    "notes": "Türkiye Sigorta Birliği'nin yayımladığı kasko değer listesi. Yalnızca araç tanımları (marka, tip adı, tip kodu) ve tipin listede yer aldığı MODEL YILLARI kullanıldı; fiyat değerleri kullanılmadı. Liste, Türkiye pazarında bulunan araçları gösterir; tek başına resmi distribütör satışını kanıtlamaz."
   }
 ]

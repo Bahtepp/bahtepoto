@@ -1,0 +1,30 @@
+{
+  "id": "renault-latitude",
+  "brandId": "renault",
+  "slug": "latitude",
+  "name": "Latitude",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "renault-latitude-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Latitude (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2016 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "renault-latitude-nesil-belirlenmedi-15-dci-110", "slug": "15-dci-110", "engineId": "renault-15-dci-110", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "EDC" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015, 2016], "trims": ["Executive", "Expression", "Privilege"], "bodyTypes": [], "sourceRefs": ["TSB 123-2007", "TSB 123-2008", "TSB 123-2009", "TSB 123-2068", "TSB 123-2069", "TSB 123-2070", "TSB 123-750", "TSB 123-751", "TSB 123-752"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "renault-latitude-nesil-belirlenmedi-20-dci-175", "slug": "20-dci-175", "engineId": "renault-20-dci-175", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015, 2016], "trims": ["Executive", "Privilege"], "bodyTypes": [], "sourceRefs": ["TSB 123-2010", "TSB 123-2011", "TSB 123-753", "TSB 123-754"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "renault-latitude-nesil-belirlenmedi-30-dizel", "slug": "30-dizel", "engineId": "renault-30-dizel", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 123-2201"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

@@ -145,7 +145,8 @@ export const engineSchema = z.object({
   family: z.string().optional(),
   /** Üretici motor kodları (örn. "G8DA"). Yalnızca kaynakta geçiyorsa doldurulur. */
   codes: z.array(z.string()).default([]),
-  fuel: fuelTypeSchema,
+  /** Kaynak yakıt türünü açıkça vermiyorsa girilmez (arayüz "Veri doğrulanıyor" gösterir). */
+  fuel: fuelTypeSchema.optional(),
   /** Nominal hacim (litre, örn. 1.6). */
   displacementL: z.number().positive().optional(),
   /** Kesin hacim (cm³), kaynakta varsa. */
@@ -178,6 +179,33 @@ export const transmissionSchema = z.object({
  */
 export const revisionMappingSchema = z.enum(['confirmed', 'partial', 'unknown']);
 
+/**
+ * Bir varyantın belirli bir pazardaki durumu. Bilgi yoksa kayıt girilmez; eksik bilgi
+ * hiçbir zaman "sunulmadı" anlamına gelmez.
+ * - sold:        Pazarda resmi satışı kaynakla doğrulandı (distribütör fiyat listesi, broşür).
+ * - listed:      Pazarın resmi araç değer listesinde yer alıyor (örn. TSB Kasko Değer Listesi);
+ *                pazarda bulunduğunu gösterir, satış kanalını (resmi / ithal) belirtmez.
+ * - imported:    Pazarda görülebilir ama resmi distribütör dışı (ör. ABD tipi ithal araç).
+ * - unverified:  Pazardaki durumu henüz doğrulanmadı.
+ * - not-offered: Pazarda sunulmadığı kaynakla doğrulandı.
+ */
+export const marketAvailabilityStatusSchema = z.enum(['sold', 'listed', 'imported', 'unverified', 'not-offered']);
+
+export const marketAvailabilitySchema = z.object({
+  marketId: idSchema,
+  status: marketAvailabilityStatusSchema,
+  /** Kaynağın verdiği model yılları (üretim yılı DEĞİL). */
+  modelYears: z.array(z.number().int().min(1885).max(2100)).default([]),
+  /** Kaynakta bu varyantla geçen donanım paketleri (motor değildir). */
+  trims: z.array(z.string()).default([]),
+  /** Kaynakta geçen gövde tipleri. */
+  bodyTypes: z.array(z.string()).default([]),
+  /** Kaynaktaki kayıt kimlikleri (örn. TSB marka-tip kodu). */
+  sourceRefs: z.array(z.string()).default([]),
+  sourceIds: z.array(idSchema).default([]),
+  notes: z.string().optional(),
+});
+
 /** VehicleVariant: bir neslin belirli bir motorla, belirli dönem ve pazarlarda sunulması. */
 export const variantSchema = z.object({
   id: idSchema,
@@ -192,6 +220,8 @@ export const variantSchema = z.object({
   marketIds: z.array(idSchema).min(1),
   /** Bu motorun bu nesilde sunulduğu dönem (biliniyorsa). */
   periods: z.array(periodSchema).default([]),
+  /** Pazar bazlı satış / listelenme durumu (bkz. marketAvailabilitySchema). */
+  marketAvailability: z.array(marketAvailabilitySchema).default([]),
   ...recordMeta,
 });
 
@@ -252,3 +282,5 @@ export type Variant = z.infer<typeof variantSchema>;
 export type Revision = z.infer<typeof revisionSchema>;
 export type Generation = z.infer<typeof generationSchema>;
 export type Model = z.infer<typeof modelSchema>;
+export type MarketAvailability = z.infer<typeof marketAvailabilitySchema>;
+export type MarketAvailabilityStatus = z.infer<typeof marketAvailabilityStatusSchema>;

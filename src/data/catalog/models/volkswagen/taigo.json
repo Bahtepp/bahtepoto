@@ -1,0 +1,32 @@
+{
+  "id": "volkswagen-taigo",
+  "brandId": "volkswagen",
+  "slug": "taigo",
+  "name": "Taigo",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "volkswagen-taigo-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Taigo (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2026 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "volkswagen-taigo-nesil-belirlenmedi-10-tsi-95", "slug": "10-tsi-95", "engineId": "volkswagen-10-tsi-95", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2023, 2024, 2025, 2026], "trims": ["Life"], "bodyTypes": [], "sourceRefs": ["TSB 153-1553"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "volkswagen-taigo-nesil-belirlenmedi-10-tsi-110", "slug": "10-tsi-110", "engineId": "volkswagen-10-tsi-110", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2023, 2024], "trims": ["Life", "R-LINE", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 153-1554", "TSB 153-1555", "TSB 153-1556"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "volkswagen-taigo-nesil-belirlenmedi-15-tsi-150", "slug": "15-tsi-150", "engineId": "volkswagen-15-tsi-150", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2023, 2024, 2025, 2026], "trims": ["R-LINE", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 153-1557", "TSB 153-1558"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "volkswagen-taigo-nesil-belirlenmedi-10-tsi-115", "slug": "10-tsi-115", "engineId": "volkswagen-10-tsi-115", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024], "trims": ["Life", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 153-1623", "TSB 153-1624"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "volkswagen-taigo-nesil-belirlenmedi-10-tsi-116", "slug": "10-tsi-116", "engineId": "volkswagen-10-tsi-116", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["Life", "R-LINE", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 153-1638", "TSB 153-1639", "TSB 153-1640"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

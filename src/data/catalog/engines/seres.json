@@ -1,0 +1,3 @@
+[
+  { "id": "seres-elektrikli", "brandId": "seres", "slug": "elektrikli", "name": "ELEKTRIKLI", "fuel": "electric", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"SERES 3 ELEKTRIKLI\")." }
+]

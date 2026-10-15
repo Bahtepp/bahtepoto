@@ -1,0 +1,31 @@
+{
+  "id": "alfa-romeo-giulia",
+  "brandId": "alfa-romeo",
+  "slug": "giulia",
+  "name": "Giulia",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "alfa-romeo-giulia-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Giulia (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2023 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "alfa-romeo-giulia-nesil-belirlenmedi-20-200", "slug": "20-200", "engineId": "alfa-romeo-20-200", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018, 2020, 2021, 2022], "trims": ["Sprint Rwd", "Super Rwd"], "bodyTypes": [], "sourceRefs": ["TSB 3-1021", "TSB 3-1026"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "alfa-romeo-giulia-nesil-belirlenmedi-20-280", "slug": "20-280", "engineId": "alfa-romeo-20-280", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023], "trims": ["Estrema", "Lusso", "Mca Competizione", "Mca Veloce", "Veloce"], "bodyTypes": [], "sourceRefs": ["TSB 3-1022", "TSB 3-1034", "TSB 3-1040", "TSB 3-1042", "TSB 3-1043"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "alfa-romeo-giulia-nesil-belirlenmedi-29-510", "slug": "29-510", "engineId": "alfa-romeo-29-510", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018], "trims": ["QV Rwd"], "bodyTypes": [], "sourceRefs": ["TSB 3-1023"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "alfa-romeo-giulia-nesil-belirlenmedi-29-520", "slug": "29-520", "engineId": "alfa-romeo-29-520", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023], "trims": ["QV Rwd"], "bodyTypes": [], "sourceRefs": ["TSB 3-1047"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

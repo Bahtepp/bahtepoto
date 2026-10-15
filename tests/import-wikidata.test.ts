@@ -205,8 +205,12 @@ describe('depodaki Golf adayları (data/staging/wikidata)', () => {
     assert.ok(existsSync(join(DEFAULT_DIRS.stagingDir, 'wikidata', 'FARK-RAPORU.md')));
   });
 
-  test('Golf kataloğa aktarılmadı (insan onayı bekliyor)', () => {
-    assert.equal(existsSync(join(DEFAULT_DIRS.catalogDir, 'models', 'volkswagen', 'golf.json')), false);
-    assert.equal(loadRawCatalog(DEFAULT_DIRS.catalogDir).sources.some((s) => String(s.id).startsWith('wikidata-')), false);
+  test('Wikidata Golf adayları kataloğa aktarılmadı (insan onayı bekliyor)', () => {
+    const raw = loadRawCatalog(DEFAULT_DIRS.catalogDir);
+    assert.equal(raw.sources.some((s) => String(s.id).startsWith('wikidata-')), false);
+    // Golf modeli TSB içe aktarmasından gelebilir; Wikidata nesil adayları ise katalogda olmamalı.
+    const golf = raw.models.get('models/volkswagen/golf.json');
+    const genIds = ((golf?.generations as { id: string }[] | undefined) ?? []).map((g) => g.id);
+    for (const slug of ['mk5', 'mk6', 'mk7', 'mk8']) assert.ok(!genIds.includes(`volkswagen-golf-${slug}`), slug);
   });
 });

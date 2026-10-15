@@ -1,0 +1,29 @@
+{
+  "id": "subaru-legacy",
+  "brandId": "subaru",
+  "slug": "legacy",
+  "name": "Legacy",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "subaru-legacy-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Legacy (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2014 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "subaru-legacy-nesil-belirlenmedi-30", "slug": "30", "engineId": "subaru-30", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010], "trims": ["5AT Elegance", "5AT ZS", "R"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 137-117", "TSB 137-122", "TSB 137-73"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "subaru-legacy-nesil-belirlenmedi-20", "slug": "20", "engineId": "subaru-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }, { "type": "cvt", "name": "CVT" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014], "trims": ["4AT Comfort", "4AT Elegance", "4AT FS", "Business", "Comfort", "D-S Style", "Elegance", "Limited", "S.WAGON 4AT", "TD Comfort", "TD Elegance", "TD Premium"], "bodyTypes": ["4 kapı sedan", "Station wagon"], "sourceRefs": ["TSB 137-112", "TSB 137-113", "TSB 137-114", "TSB 137-119", "TSB 137-120", "TSB 137-121", "TSB 137-141", "TSB 137-142", "TSB 137-151", "TSB 137-160", "TSB 137-161", "TSB 137-163", "TSB 137-164", "TSB 137-165", "TSB 137-166", "TSB 137-75", "TSB 137-76", "TSB 137-77"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

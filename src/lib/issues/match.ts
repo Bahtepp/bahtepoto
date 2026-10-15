@@ -112,7 +112,10 @@ function matchEngine(s: Applicability, ctx: VehicleContext, label: (id: string) 
     // Motor kodu bilinmeyen motorlar, kod bazlı seçicilerle EŞLEŞTİRİLMEZ (yanlış pozitif önlemi).
     if (!ok) return NO;
   }
-  if (s.fuels.length > 0 && !s.fuels.includes(e.fuel)) return NO;
+  if (s.fuels.length > 0) {
+    if (e.fuel === undefined) return maybe(`Yalnızca belirli yakıt türleri; bu motorun yakıt türü doğrulanmadı`);
+    if (!s.fuels.includes(e.fuel)) return NO;
+  }
   if (s.aspirations.length > 0) {
     if (e.aspiration === undefined) {
       return maybe(`Yalnızca ${s.aspirations.map((a) => ASPIRATION_TR[a]).join(' / ')} motorlar; bu motorun aşırı besleme bilgisi doğrulanmadı`);

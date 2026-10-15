@@ -1,0 +1,4 @@
+[
+  { "id": "togg-160kw", "brandId": "togg", "slug": "160kw", "name": "160 kW", "power": { "kw": 160 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"T10X V1 RWD STANDART MENZIL 160KW\"); yakıt türü tip adında yazmıyor." },
+  { "id": "togg-320kw", "brandId": "togg", "slug": "320kw", "name": "320 kW", "power": { "kw": 320 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"T10X V2 AWD UZUN MENZIL 320KW\"); yakıt türü tip adında yazmıyor." }
+]

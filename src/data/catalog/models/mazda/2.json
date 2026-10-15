@@ -1,0 +1,29 @@
+{
+  "id": "mazda-2",
+  "brandId": "mazda",
+  "slug": "2",
+  "name": "2",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "mazda-2-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "2 (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2022 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "mazda-2-nesil-belirlenmedi-13", "slug": "13", "engineId": "mazda-13", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["GO", "High", "Mid", "Play"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 89-395", "TSB 89-396", "TSB 89-414", "TSB 89-415"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "mazda-2-nesil-belirlenmedi-15", "slug": "15", "engineId": "mazda-15", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2020, 2021, 2022], "trims": ["FUN+", "Fun", "GO", "GO Sport", "High", "Play", "SKY-G Power", "SKY-G Power Sense", "SKY-G Reflex"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 89-1001", "TSB 89-1003", "TSB 89-1078", "TSB 89-1079", "TSB 89-1080", "TSB 89-397", "TSB 89-416", "TSB 89-423", "TSB 89-424", "TSB 89-425", "TSB 89-426"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

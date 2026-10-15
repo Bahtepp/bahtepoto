@@ -1,0 +1,36 @@
+{
+  "id": "ford-galaxy",
+  "brandId": "ford",
+  "slug": "galaxy",
+  "name": "Galaxy",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "ford-galaxy-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Galaxy (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2021 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "ford-galaxy-nesil-belirlenmedi-20-tdci", "slug": "20-tdci", "engineId": "ford-20-tdci", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["Ghia"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 53-844"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "ford-galaxy-nesil-belirlenmedi-20-tdci-140", "slug": "20-tdci-140", "engineId": "ford-20-tdci-140", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "PowerShift" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014], "trims": ["Ghia"], "bodyTypes": [], "sourceRefs": ["TSB 53-949"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "ford-galaxy-nesil-belirlenmedi-20-tdci-163", "slug": "20-tdci-163", "engineId": "ford-20-tdci-163", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "PowerShift" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 53-2018"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "ford-galaxy-nesil-belirlenmedi-15-ecoboost-160", "slug": "15-ecoboost-160", "engineId": "ford-15-ecoboost-160", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019], "trims": ["Style"], "bodyTypes": [], "sourceRefs": ["TSB 53-2163"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "ford-galaxy-nesil-belirlenmedi-20-tdci-180", "slug": "20-tdci-180", "engineId": "ford-20-tdci-180", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "PowerShift" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019], "trims": ["Titanium"], "bodyTypes": [], "sourceRefs": ["TSB 53-2164"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "ford-galaxy-nesil-belirlenmedi-15-ecoboost-165", "slug": "15-ecoboost-165", "engineId": "ford-15-ecoboost-165", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020], "trims": ["Style E 6.2"], "bodyTypes": [], "sourceRefs": ["TSB 53-2287"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "ford-galaxy-nesil-belirlenmedi-ecoblue-st-20-190ps", "slug": "ecoblue-st-20-190ps", "engineId": "ford-ecoblue-st-20-190ps", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021], "trims": ["Titanium E 6.2", "Vignale E 6.2"], "bodyTypes": [], "sourceRefs": ["TSB 53-2288", "TSB 53-2309"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "ford-galaxy-nesil-belirlenmedi-20", "slug": "20", "engineId": "ford-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 53-2310"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "ford-galaxy-nesil-belirlenmedi-22-dizel", "slug": "22-dizel", "engineId": "ford-22-dizel", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 53-2340"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

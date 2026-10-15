@@ -1,0 +1,31 @@
+{
+  "id": "lexus-nx",
+  "brandId": "lexus",
+  "slug": "nx",
+  "name": "NX",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "lexus-nx-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "NX (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2026 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "lexus-nx-nesil-belirlenmedi-200t", "slug": "200t", "engineId": "lexus-200t", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017], "trims": ["Business", "Business 4x2", "Comfort 4x2", "Comfort Plus 4x2", "Exclusive", "Executive", "F Sport", "Luxury"], "bodyTypes": [], "sourceRefs": ["TSB 571-1001", "TSB 571-1013", "TSB 571-1014", "TSB 571-1015", "TSB 571-1016", "TSB 571-1017", "TSB 571-1018", "TSB 571-1034"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "lexus-nx-nesil-belirlenmedi-300h", "slug": "300h", "engineId": "lexus-300h", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "e-CVT" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018, 2019, 2020, 2021], "trims": ["Business", "Business Plus", "Comfort", "Comfort Plus", "Exclusive", "Executive", "F Sport", "Luxury"], "bodyTypes": [], "sourceRefs": ["TSB 571-1053", "TSB 571-1054", "TSB 571-1055", "TSB 571-1056", "TSB 571-1057", "TSB 571-1058", "TSB 571-1092", "TSB 571-1093"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "lexus-nx-nesil-belirlenmedi-300", "slug": "300", "engineId": "lexus-300", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018, 2019], "trims": ["Business", "Comfort", "Exclusive", "Executive", "F-SPORT"], "bodyTypes": [], "sourceRefs": ["TSB 571-1071", "TSB 571-1072", "TSB 571-1073", "TSB 571-1074", "TSB 571-1075"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "lexus-nx-nesil-belirlenmedi-350h", "slug": "350h", "engineId": "lexus-350h", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "e-CVT" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2023, 2024, 2025, 2026], "trims": ["Business", "Business Plus", "Exclusive", "Executive", "F Sport"], "bodyTypes": [], "sourceRefs": ["TSB 571-1101", "TSB 571-1102", "TSB 571-1103", "TSB 571-1104", "TSB 571-1105"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

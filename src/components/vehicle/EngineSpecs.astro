@@ -13,6 +13,7 @@ import {
   formatTransmission,
   formatYearRange,
 } from '@/lib/catalog/format';
+import { AVAILABILITY_LABELS, availabilityFor, formatModelYears } from '@/lib/catalog/market';
 
 interface Props {
   engine: Engine;
@@ -26,8 +27,17 @@ const revName = (id: string) => revisions.find((r) => r.id === id)?.name.toLocal
 const drivetrain = variant.drivetrain ? { fwd: 'Önden çekiş', rwd: 'Arkadan itiş', awd: 'Dört çeker' }[variant.drivetrain] : undefined;
 const status = engine.status === 'conflicting' || variant.status === 'conflicting' ? 'conflicting' : engine.status;
 
+const tr = availabilityFor(variant, 'tr');
+const trText = tr
+  ? [
+      [AVAILABILITY_LABELS[tr.status], tr.modelYears.length ? `model yılı ${formatModelYears(tr.modelYears)}` : null].filter(Boolean).join(' · '),
+      ...(tr.trims.length ? [`Donanım: ${tr.trims.join(', ')}`] : []),
+      ...(tr.bodyTypes.length ? [`Gövde: ${tr.bodyTypes.join(', ')}`] : []),
+    ]
+  : ['Türkiye satışı doğrulanmadı'];
+
 const rows: [string, string | string[] | undefined | null][] = [
-  ['Yakıt', FUEL_LABELS[engine.fuel]],
+  ['Yakıt', engine.fuel ? FUEL_LABELS[engine.fuel] : null],
   ['Güç', formatPower(engine.power)],
   ['Tork', engine.torqueNm ? `${engine.torqueNm} Nm` : null],
   ['Hacim', formatDisplacement(engine) ?? (engine.fuel === 'electric' ? '—' : null)],
@@ -38,6 +48,7 @@ const rows: [string, string | string[] | undefined | null][] = [
   ['Şanzıman', variant.transmissions.length ? variant.transmissions.map((t) => `${formatTransmission(t)}${t.revisionIds.length ? ` — yalnızca ${t.revisionIds.map(revName).join(', ')}` : ''}`) : null],
   ['Çekiş', drivetrain],
   ['Batarya', engine.batteryKwh ? `${engine.batteryKwh.toLocaleString('tr-TR')} kWh` : undefined],
+  ['Türkiye', trText],
   ['Pazar', variant.marketIds.map((id) => markets.get(id)?.name ?? id).join(', ')],
   ['Sunulduğu dönem', variant.periods.length ? variant.periods.map((p) => `${formatYearRange(p, true)} (${markets.get(p.marketId)?.name ?? p.marketId})`).join('; ') : null],
 ];

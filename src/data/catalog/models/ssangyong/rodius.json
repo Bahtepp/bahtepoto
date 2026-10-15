@@ -1,0 +1,29 @@
+{
+  "id": "ssangyong-rodius",
+  "brandId": "ssangyong",
+  "slug": "rodius",
+  "name": "Rodius",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "ssangyong-rodius-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Rodius (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2017 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "ssangyong-rodius-nesil-belirlenmedi-27-xdi", "slug": "27-xdi", "engineId": "ssangyong-27-xdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["SV270", "SV270 5/AT"], "bodyTypes": [], "sourceRefs": ["TSB 128-59", "TSB 128-61", "TSB 128-63", "TSB 128-65"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "ssangyong-rodius-nesil-belirlenmedi-20", "slug": "20", "engineId": "ssangyong-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015, 2016, 2017], "trims": ["D 4X2 Full", "e-XDI", "e-XDI 4x2", "e-XDI 4x2 Limited", "e-XDI 4x2 Platinum", "e-XDI Limited", "e-XDI Platinum"], "bodyTypes": [], "sourceRefs": ["TSB 128-1014", "TSB 128-1015", "TSB 128-1016", "TSB 128-1017", "TSB 128-1020", "TSB 128-1024", "TSB 128-1042", "TSB 128-1066"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

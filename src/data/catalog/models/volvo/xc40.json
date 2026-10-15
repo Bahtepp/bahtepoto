@@ -1,0 +1,30 @@
+{
+  "id": "volvo-xc40",
+  "brandId": "volvo",
+  "slug": "xc40",
+  "name": "XC40",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "volvo-xc40-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "XC40 (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2023 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "volvo-xc40-nesil-belirlenmedi-20", "slug": "20", "engineId": "volvo-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018, 2019, 2020, 2021], "trims": ["B4 Inscription", "B4 Momentum", "B4 R-DESIGN", "D3 Fwd Inscription", "D3 Fwd Momentum", "D3 Fwd R-DESIGN", "D4 Inscription", "D4 Momentum", "D4 Momentum Intro Base", "D4 R-DESIGN", "D4 R-DESIGN Intro Base Geartroni", "T4 Inscription", "T4 Momentum", "T4 R-DESIGN"], "bodyTypes": [], "sourceRefs": ["TSB 154-1183", "TSB 154-1184", "TSB 154-1185", "TSB 154-1186", "TSB 154-1188", "TSB 154-1189", "TSB 154-1190", "TSB 154-1191", "TSB 154-1192", "TSB 154-1194", "TSB 154-1195", "TSB 154-1227", "TSB 154-1228", "TSB 154-1229"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "volvo-xc40-nesil-belirlenmedi-15", "slug": "15", "engineId": "volvo-15", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }, { "type": "dual-clutch", "name": "DCT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2019, 2020, 2021, 2022, 2023], "trims": ["Recharge T5 Plus Bright 180+82", "Recharge T5 Plus Dark 180+82", "T3 Fwd Inscription", "T3 Fwd Momentum", "T3 Fwd R-DESIGN"], "bodyTypes": [], "sourceRefs": ["TSB 154-1187", "TSB 154-1193", "TSB 154-1204", "TSB 154-1205", "TSB 154-1206", "TSB 154-1263", "TSB 154-1264"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "volvo-xc40-nesil-belirlenmedi-170kw", "slug": "170kw", "engineId": "volvo-170kw", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2023], "trims": ["Recharge P6 Single Motor Ultimate"], "bodyTypes": [], "sourceRefs": ["TSB 154-1265"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

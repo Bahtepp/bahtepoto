@@ -1,0 +1,28 @@
+{
+  "id": "mitsubishi-attrage",
+  "brandId": "mitsubishi",
+  "slug": "attrage",
+  "name": "Attrage",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "mitsubishi-attrage-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Attrage (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2016 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "mitsubishi-attrage-nesil-belirlenmedi-12", "slug": "12", "engineId": "mitsubishi-12", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016], "trims": ["Intense", "Intense Plus"], "bodyTypes": [], "sourceRefs": ["TSB 94-1021", "TSB 94-1022", "TSB 94-1025", "TSB 94-1026"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

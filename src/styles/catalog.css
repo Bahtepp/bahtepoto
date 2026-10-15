@@ -8,7 +8,7 @@
   --col-model: 21rem;
   display: grid;
   grid-template-columns: var(--col-brand) var(--col-model) minmax(0, 1fr);
-  grid-template-areas: 'brand model detail';
+  grid-template-areas: 'market market market' 'brand model detail';
   gap: 1rem;
   align-items: start;
 }
@@ -560,7 +560,7 @@
 @media (max-width: 1099px) {
   .explorer {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: 'steps' 'panel';
+    grid-template-areas: 'market' 'steps' 'panel';
     gap: 0.75rem;
   }
 
@@ -663,4 +663,58 @@
 
 .engine-link:hover {
   background: var(--accent-soft);
+}
+
+/* ---------- Pazar seçimi (Türkiye varsayılan) ---------- */
+
+.market-switch {
+  grid-area: market;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.market-switch legend {
+  float: left;
+  font-size: 0.875rem;
+  font-weight: 650;
+  color: var(--text-muted);
+  padding: 0;
+  margin-right: 0.25rem;
+}
+
+.market-switch .market-help {
+  flex-basis: 100%;
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.market-hidden {
+  margin-top: 1rem;
+}
+
+.linklike {
+  border: 0;
+  background: none;
+  padding: 0;
+  color: var(--accent);
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+}
+
+.specs .spec-wide {
+  grid-column: 1 / -1;
+}
+
+.specs .spec-sub {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-top: 0.125rem;
 }

@@ -1,0 +1,31 @@
+{
+  "id": "honda-jazz",
+  "brandId": "honda",
+  "slug": "jazz",
+  "name": "Jazz",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "honda-jazz-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Jazz (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2026 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "honda-jazz-nesil-belirlenmedi-14", "slug": "14", "engineId": "honda-14", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013], "trims": ["ES Elite", "ES Fun", "ES Fun i-SHIFT", "EX Fun", "EX Fun i-SHIFT", "FUN+", "JOY+", "LS Joy", "LS Joy i-SHIFT", "LS Sport"], "bodyTypes": [], "sourceRefs": ["TSB 61-125", "TSB 61-126", "TSB 61-129", "TSB 61-130", "TSB 61-158", "TSB 61-159", "TSB 61-160", "TSB 61-161", "TSB 61-168", "TSB 61-169", "TSB 61-176", "TSB 61-177", "TSB 61-178", "TSB 61-179"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "honda-jazz-nesil-belirlenmedi-13", "slug": "13", "engineId": "honda-13", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018, 2019], "trims": ["Dream", "Elegance", "Premium"], "bodyTypes": [], "sourceRefs": ["TSB 61-1050", "TSB 61-1051", "TSB 61-1052", "TSB 61-1053", "TSB 61-1080"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "honda-jazz-nesil-belirlenmedi-15", "slug": "15", "engineId": "honda-15", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018, 2019], "trims": ["Dynamic"], "bodyTypes": [], "sourceRefs": ["TSB 61-1077"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "honda-jazz-nesil-belirlenmedi-15-hybrid", "slug": "15-hybrid", "engineId": "honda-15-hybrid", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023, 2024, 2025, 2026], "trims": ["e:HEV Advance", "e:HEV Crosstar", "e:HEV Elegance", "i-MMD Crosstar Executive", "i-MMD Executive"], "bodyTypes": [], "sourceRefs": ["TSB 61-1216", "TSB 61-1217", "TSB 61-1234", "TSB 61-1239", "TSB 61-1240"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

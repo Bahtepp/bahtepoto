@@ -1,0 +1,33 @@
+{
+  "id": "kia-stonic",
+  "brandId": "kia",
+  "slug": "stonic",
+  "name": "Stonic",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "kia-stonic-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Stonic (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2026 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "kia-stonic-nesil-belirlenmedi-14-100", "slug": "14-100", "engineId": "kia-14-100", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2019, 2020, 2021, 2022, 2023, 2024], "trims": ["Cool", "Elegance", "Elegance Design Paket", "Elegance Konfor", "Prestige"], "bodyTypes": [], "sourceRefs": ["TSB 800-1125", "TSB 800-1126", "TSB 800-1127", "TSB 800-1154", "TSB 800-1182"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "kia-stonic-nesil-belirlenmedi-10-120", "slug": "10-120", "engineId": "kia-10-120", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DCT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2019, 2020], "trims": ["Elegance", "Elegance Design Paket", "Elegance Designpack", "Elegance Konfor"], "bodyTypes": [], "sourceRefs": ["TSB 800-1128", "TSB 800-1129", "TSB 800-1155", "TSB 800-1156"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "kia-stonic-nesil-belirlenmedi-84", "slug": "84", "engineId": "kia-84", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021, 2022, 2023], "trims": ["Cool 1.25"], "bodyTypes": [], "sourceRefs": ["TSB 800-1152"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "kia-stonic-nesil-belirlenmedi-10-100", "slug": "10-100", "engineId": "kia-10-100", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DCT" }, { "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021, 2022, 2023, 2024, 2025, 2026], "trims": ["Cool", "Cool FL", "Cool Plus", "Elegance", "Elegance Design Pack", "Elegance FL", "Elegance Konfor", "Elegance Plus", "Prestige", "Prestige FL", "Prestige Plus"], "bodyTypes": [], "sourceRefs": ["TSB 800-1168", "TSB 800-1169", "TSB 800-1176", "TSB 800-1190", "TSB 800-1193", "TSB 800-1263", "TSB 800-1265", "TSB 800-1266", "TSB 800-1290", "TSB 800-1291", "TSB 800-1304", "TSB 800-1313", "TSB 800-1314"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "kia-stonic-nesil-belirlenmedi-12-84", "slug": "12-84", "engineId": "kia-12-84", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2023], "trims": ["Cool"], "bodyTypes": [], "sourceRefs": ["TSB 800-1199"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "kia-stonic-nesil-belirlenmedi-10-tgdi-100", "slug": "10-tgdi-100", "engineId": "kia-10-tgdi-100", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023, 2024], "trims": ["Elegance"], "bodyTypes": [], "sourceRefs": ["TSB 800-1247"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

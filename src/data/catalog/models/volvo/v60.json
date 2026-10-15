@@ -1,0 +1,32 @@
+{
+  "id": "volvo-v60",
+  "brandId": "volvo",
+  "slug": "v60",
+  "name": "V60",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "volvo-v60-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "V60 (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2024 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "volvo-v60-nesil-belirlenmedi-24", "slug": "24", "engineId": "volvo-24", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013], "trims": ["D5", "D5 Advance", "D5 Premium", "D5 R-DESIGN"], "bodyTypes": [], "sourceRefs": ["TSB 154-424", "TSB 154-528", "TSB 154-529", "TSB 154-530", "TSB 154-531"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "volvo-v60-nesil-belirlenmedi-29", "slug": "29", "engineId": "volvo-29", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011], "trims": ["T6"], "bodyTypes": [], "sourceRefs": ["TSB 154-428"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "volvo-v60-nesil-belirlenmedi-20", "slug": "20", "engineId": "volvo-20", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "PowerShift" }, { "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024], "trims": ["Cross Contry D4", "Cross Country B4", "Cross Country B5", "Cross Country B5 Momentum Geartro", "Cross Country B5 Plus Bright 250G", "Cross Country B5 Ultimate Bright", "Cross Country D4 Advance", "Cross Country D4 Momentum Geartro", "D3", "D3 Advance", "D3 Premium", "D3 R-DESIGN", "D3 Volvo Ocean Race", "D4 Advance", "D4 Premium", "D4 R-DESIGN", "D4 R-DESIGN Plus", "D4 Volvo Ocean Race", "T R-DESIGN", "T5", "T5 Advance", "T5 Premium", "T5 R-DESIGN", "T6 Advance", "T6 R-DESIGN", "T6 R-DESIGN Plus"], "bodyTypes": [], "sourceRefs": ["TSB 154-1002", "TSB 154-1016", "TSB 154-1017", "TSB 154-1018", "TSB 154-1066", "TSB 154-1067", "TSB 154-1068", "TSB 154-1069", "TSB 154-1124", "TSB 154-1125", "TSB 154-1130", "TSB 154-1131", "TSB 154-1151", "TSB 154-1152", "TSB 154-1215", "TSB 154-1224", "TSB 154-1236", "TSB 154-1237", "TSB 154-1243", "TSB 154-1291", "TSB 154-1292", "TSB 154-429", "TSB 154-430", "TSB 154-514", "TSB 154-515", "TSB 154-516", "TSB 154-517", "TSB 154-524", "TSB 154-525", "TSB 154-526", "TSB 154-527"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "volvo-v60-nesil-belirlenmedi-16", "slug": "16", "engineId": "volvo-16", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "PowerShift" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015], "trims": ["D2 Advance", "D2 Premium", "D2 Pwershift", "D2 R-DESIGN", "Drive", "Drive Advance", "Drive Premium", "Drive R-DESIGN", "T4 Advance", "T4 Ocean Race", "T4 Powersshift", "T4 Premium", "T4 R-DESIGN"], "bodyTypes": [], "sourceRefs": ["TSB 154-1001", "TSB 154-1008", "TSB 154-1009", "TSB 154-1010", "TSB 154-1011", "TSB 154-1089", "TSB 154-1090", "TSB 154-1091", "TSB 154-1092", "TSB 154-439", "TSB 154-440", "TSB 154-512", "TSB 154-513", "TSB 154-521", "TSB 154-522", "TSB 154-523"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "volvo-v60-nesil-belirlenmedi-15", "slug": "15", "engineId": "volvo-15", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017], "trims": ["T3 Advance", "T3 Premium", "T3 R-DESIGN", "T3 R-DESIGN Plus"], "bodyTypes": [], "sourceRefs": ["TSB 154-1121", "TSB 154-1122", "TSB 154-1123", "TSB 154-1150"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

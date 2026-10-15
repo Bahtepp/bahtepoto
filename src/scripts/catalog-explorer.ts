@@ -5,6 +5,8 @@
  *   nesil seçilince (veya model açılınca, ön yükleme olarak) /data/models/<marka>/<model>.json.
  * - Seçim durumu URL'de tutulur (?marka=ford&model=focus&nesil=mk2&donem=makyajli);
  *   bağlantı paylaşılabilir, geri/ileri tuşları çalışır.
+ * - Pazar seçimi (Türkiye varsayılan / Avrupa / Tüm dünya) URL'de `pazar` ile tutulur; Türkiye
+ *   seçiliyken yalnızca Türkiye kaydı olan motorlar listelenir (bkz. lib/catalog/market.ts).
  * - Motorlar yalnızca veride eşleştirildikleri makyaj dönemi altında listelenir.
  *   Eşleşmesi bilinmeyen motorlar ayrı, açıkça etiketlenmiş bir grupta gösterilir.
  */
@@ -31,6 +33,16 @@ import {
   vehiclePath,
   normalizeSearch,
 } from '@/lib/catalog/format';
+import {
+  AVAILABILITY_LABELS,
+  DEFAULT_MARKET_VIEW,
+  MARKET_VIEWS,
+  availabilityFor,
+  formatModelYears,
+  isPerformance,
+  marketGroup,
+  type MarketView,
+} from '@/lib/catalog/market';
 
 type Step = 'brand' | 'model' | 'detail';
 
@@ -123,6 +135,9 @@ export function initCatalogExplorer(root: HTMLElement) {
   const narrow = window.matchMedia('(max-width: 1099px)');
 
   let sel: Selection = {};
+  let market: MarketView = DEFAULT_MARKET_VIEW;
+  const marketSwitch = root.querySelector<HTMLFieldSetElement>('#market-switch');
+  const isView = (v: string | null): v is MarketView => MARKET_VIEWS.some((m) => m.id === v);
   let step: Step = 'brand';
   const expanded = new Set<string>();
   const fuelFilter = new Set<FuelType>();
@@ -152,6 +167,7 @@ export function initCatalogExplorer(root: HTMLElement) {
     if (sel.model) q.set('model', sel.model);
     if (sel.gen) q.set('nesil', sel.gen);
     if (sel.rev) q.set('donem', sel.rev);
+    if (market !== DEFAULT_MARKET_VIEW) q.set('pazar', market);
     const url = `${location.pathname}${q.size ? `?${q}` : ''}`;
     if (url === `${location.pathname}${location.search}`) return;
     history[push ? 'pushState' : 'replaceState'](null, '', url);
@@ -306,6 +322,7 @@ export function initCatalogExplorer(root: HTMLElement) {
                   [
                     g.code,
                     `${marketName(g.labelPeriod.marketId)}, ${BASIS_LABELS[g.labelPeriod.basis]} yılları`,
+                    market === 'world' ? null : `${MARKET_VIEWS.find((m) => m.id === market)!.label}: ${g.marketCounts?.[market] ?? 0} motor`,
                     g.revisions.length > 0 ? `${g.revisions.length} makyaj dönemi` : null,
                   ]
                     .filter(Boolean)
@@ -375,7 +392,7 @@ export function initCatalogExplorer(root: HTMLElement) {
           'div',
           { class: 'badges' },
           v.trimName ? h('span', { class: 'badge badge-trim' }, v.trimName) : null,
-          h('span', { class: `badge fuel fuel-${engine.fuel}` }, FUEL_LABELS[engine.fuel]),
+          engine.fuel ? h('span', { class: `badge fuel fuel-${engine.fuel}` }, FUEL_LABELS[engine.fuel]) : null,
           statusBadge(status, true),
         ),
       ),
@@ -390,7 +407,9 @@ export function initCatalogExplorer(root: HTMLElement) {
         engine.family ? specRow('Motor ailesi', engine.family) : null,
         engine.batteryKwh ? specRow('Batarya', `${engine.batteryKwh.toLocaleString('tr-TR')} kWh`) : null,
         v.drivetrain ? specRow('Çekiş', { fwd: 'Önden çekiş', rwd: 'Arkadan itiş', awd: 'Dört çeker' }[v.drivetrain]) : null,
+        specRow('Yakıt', engine.fuel ? FUEL_LABELS[engine.fuel] : null),
         specRow('Pazar', v.marketIds.map(marketName).join(', ')),
+        trRow(v),
         v.periods.length ? specRow('Dönem', v.periods.map((p) => periodText(p, marketName)).join('; ')) : null,
       ),
       otherRevisionsPossible
@@ -402,11 +421,31 @@ export function initCatalogExplorer(root: HTMLElement) {
     );
   };
 
+  /** Türkiye pazar durumu: kaynak, model yılları, donanım ve gövde tipleri. */
+  const trRow = (v: Variant) => {
+    const a = availabilityFor(v, 'tr');
+    if (!a) return specRow('Türkiye', 'Türkiye satışı doğrulanmadı');
+    const parts = [AVAILABILITY_LABELS[a.status]];
+    if (a.modelYears.length) parts.push(`model yılı ${formatModelYears(a.modelYears)}`);
+    return h(
+      'div',
+      { class: 'spec spec-wide' },
+      h('dt', {}, 'Türkiye'),
+      h(
+        'dd',
+        {},
+        parts.join(' · '),
+        a.trims.length ? h('span', { class: 'spec-sub' }, `Donanım: ${a.trims.slice(0, 10).join(', ')}${a.trims.length > 10 ? ' …' : ''}`) : null,
+        a.bodyTypes.length ? h('span', { class: 'spec-sub' }, `Gövde: ${a.bodyTypes.join(', ')}`) : null,
+      ),
+    );
+  };
+
   const filterVariants = (variants: Variant[]) => {
     const q = normalizeSearch(engineQuery);
     return variants.filter((v) => {
       const e = modelData!.engines[v.engineId]!;
-      if (fuelFilter.size > 0 && !fuelFilter.has(e.fuel)) return false;
+      if (fuelFilter.size > 0 && (!e.fuel || !fuelFilter.has(e.fuel))) return false;
       if (!q) return true;
       return normalizeSearch(`${e.name} ${e.family ?? ''} ${e.codes.join(' ')} ${v.trimName ?? ''}`).includes(q);
     });
@@ -418,7 +457,7 @@ export function initCatalogExplorer(root: HTMLElement) {
       const ea = modelData!.engines[a.engineId]!;
       const eb = modelData!.engines[b.engineId]!;
       return (
-        fuelOrder.indexOf(ea.fuel) - fuelOrder.indexOf(eb.fuel) ||
+        fuelOrder.indexOf(ea.fuel ?? '') - fuelOrder.indexOf(eb.fuel ?? '') ||
         (ea.displacementL ?? 99) - (eb.displacementL ?? 99) ||
         ea.name.localeCompare(eb.name, 'tr', { numeric: true })
       );
@@ -426,17 +465,24 @@ export function initCatalogExplorer(root: HTMLElement) {
   };
 
   const renderEngines = (gen: GenerationSummary, rev: RevisionSummary | undefined, container: HTMLElement) => {
-    const all = modelData!.variantsByGeneration[gen.id] ?? [];
-    if (all.length === 0) {
+    const everything = modelData!.variantsByGeneration[gen.id] ?? [];
+    if (everything.length === 0) {
       container.replaceChildren(h('div', { class: 'empty-block' }, pending(), h('p', { class: 'empty' }, 'Bu nesil için motor verisi henüz girilmedi.')));
       return;
     }
 
+    // Pazar filtresi: Türkiye'de ana liste yalnızca Türkiye kaydı olanlar; ithaller ve diğer pazarlar ayrı.
+    const markets = Object.values(modelData!.markets).concat(brandData?.markets ?? []);
+    const inMarket = everything.filter((v) => marketGroup(v, market, markets) === 'primary');
+    const imported = everything.filter((v) => marketGroup(v, market, markets) === 'imported');
+    const hiddenCount = everything.length - inMarket.length - imported.length;
+    const performance = inMarket.filter(isPerformance);
+    const all = inMarket.filter((v) => !isPerformance(v));
     const primary = rev ? all.filter((v) => v.revisionIds.includes(rev.id)) : all;
     const unmapped = rev ? all.filter((v) => !v.revisionIds.includes(rev.id) && v.revisionMapping !== 'confirmed') : [];
 
     // Yakıt filtresi yalnızca bu seçimde gerçekten bulunan yakıt türlerini sunar.
-    const fuels = [...new Set([...primary, ...unmapped].map((v) => modelData!.engines[v.engineId]!.fuel))].sort(
+    const fuels = [...new Set([...primary, ...unmapped, ...performance].map((v) => modelData!.engines[v.engineId]!.fuel).filter((f): f is FuelType => !!f))].sort(
       (a, b) => Object.keys(FUEL_LABELS).indexOf(a) - Object.keys(FUEL_LABELS).indexOf(b),
     );
     for (const f of [...fuelFilter]) if (!fuels.includes(f)) fuelFilter.delete(f);
@@ -507,7 +553,15 @@ export function initCatalogExplorer(root: HTMLElement) {
       children.push(h('ul', { class: 'engine-list' }, ...shownPrimary.map((v) => engineCard(v, modelData!.engines[v.engineId]!, gen, rev?.id, rev))));
     } else {
       children.push(
-        h('p', { class: 'empty' }, primary.length ? 'Filtreye uyan motor yok.' : 'Bu döneme doğrulanmış olarak eşleştirilmiş motor henüz yok.'),
+        h(
+          'p',
+          { class: 'empty' },
+          primary.length
+            ? 'Filtreye uyan motor yok.'
+            : all.length === 0 && market !== 'world'
+              ? `Bu nesil için ${market === 'tr' ? 'Türkiye' : 'Avrupa'} kaydı olan motor henüz yok.`
+              : 'Bu döneme doğrulanmış olarak eşleştirilmiş motor henüz yok.',
+        ),
       );
     }
 
@@ -530,6 +584,36 @@ export function initCatalogExplorer(root: HTMLElement) {
           shownUnmapped.length
             ? h('ul', { class: 'engine-list' }, ...shownUnmapped.map((v) => engineCard(v, modelData!.engines[v.engineId]!, gen, undefined, rev)))
             : h('p', { class: 'empty' }, 'Filtreye uyan motor yok.'),
+        ),
+      );
+    }
+
+    const extraGroup = (title: string, help: string, list: Variant[], open: boolean) => {
+      const shown = sortVariants(filterVariants(list));
+      return h(
+        'details',
+        { class: 'unmapped', open },
+        h('summary', {}, h('span', {}, title), h('span', { class: 'count' }, `${shown.length} / ${list.length}`)),
+        h('p', { class: 'unmapped-help' }, help),
+        shown.length
+          ? h('ul', { class: 'engine-list' }, ...shown.map((v) => engineCard(v, modelData!.engines[v.engineId]!, gen, rev && v.revisionIds.includes(rev.id) ? rev.id : undefined, rev)))
+          : h('p', { class: 'empty' }, 'Filtreye uyan motor yok.'),
+      );
+    };
+    if (performance.length) {
+      children.push(extraGroup('Özel performans modelleri', 'Az sayıda üretilen performans versiyonları (ST, RS, GTI …). Makyaj dönemi eşleşmesi her kartta ayrıca belirtilir.', performance, true));
+    }
+    if (imported.length) {
+      children.push(extraGroup('İthal olarak görülebilenler', "Türkiye'de görülebilen ama resmi distribütör listesinde olmayan (ör. ABD tipi) araçlar.", imported, false));
+    }
+    if (hiddenCount > 0 && market !== 'world') {
+      const where = market === 'tr' ? "Türkiye'de" : "Avrupa'da";
+      children.push(
+        h(
+          'p',
+          { class: 'callout market-hidden' },
+          `${market === 'tr' ? 'Türkiye' : 'Avrupa'} kaydı bulunmayan ${hiddenCount} motor bu listede gösterilmiyor. Bu, o motorun ${where} satılmadığı anlamına gelmez; yalnızca kaynakla doğrulanmadı. `,
+          h('button', { type: 'button', class: 'linklike', onclick: () => setMarket('world') }, 'Tüm dünya kataloğunu göster'),
         ),
       );
     }
@@ -672,6 +756,25 @@ export function initCatalogExplorer(root: HTMLElement) {
   };
 
   // --- Eylemler ------------------------------------------------------------
+  function syncMarketSwitch() {
+    marketSwitch?.querySelectorAll<HTMLInputElement>('input[name="pazar"]').forEach((i) => (i.checked = i.value === market));
+  }
+
+  /** Pazar değişince seçim (marka/model/nesil/dönem) korunur; yalnızca listeler yeniden çizilir. */
+  function setMarket(next: MarketView) {
+    if (next === market) return;
+    market = next;
+    syncMarketSwitch();
+    writeUrl(false);
+    renderModels();
+    void renderDetail();
+    announce(`Pazar: ${MARKET_VIEWS.find((m) => m.id === next)!.label}`);
+  }
+  marketSwitch?.addEventListener('change', (e) => {
+    const v = (e.target as HTMLInputElement).value;
+    if (isView(v)) setMarket(v);
+  });
+
   const resetEngineFilters = () => {
     fuelFilter.clear();
     engineQuery = '';
@@ -768,6 +871,9 @@ export function initCatalogExplorer(root: HTMLElement) {
   // --- Başlangıç / geri-ileri ----------------------------------------------
   const restore = async () => {
     const fromUrl = readUrl();
+    const p = new URLSearchParams(location.search).get('pazar');
+    market = isView(p) ? p : DEFAULT_MARKET_VIEW;
+    syncMarketSwitch();
     if (!fromUrl.brand || !brands.some((b) => b.slug === fromUrl.brand)) {
       sel = {};
       brandData = undefined;

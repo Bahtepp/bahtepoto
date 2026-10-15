@@ -18,6 +18,7 @@ import type {
   Source,
   Variant,
 } from './schema';
+import type { MarketView } from './market';
 
 export type BrandSummary = Pick<Brand, 'id' | 'slug' | 'name' | 'status' | 'generationNaming'> & {
   modelCount: number;
@@ -31,6 +32,8 @@ export type GenerationSummary = Pick<
 > & {
   revisions: RevisionSummary[];
   variantCount: number;
+  /** Pazar görünümüne göre listelenen motor sayısı (bkz. market.ts). */
+  marketCounts: Record<MarketView, number>;
 };
 
 export type ModelSummary = Pick<Model, 'id' | 'slug' | 'name' | 'status' | 'notes'> & {

@@ -1,0 +1,30 @@
+{
+  "id": "mercedes-benz-viano",
+  "brandId": "mercedes-benz",
+  "slug": "viano",
+  "name": "Viano",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "mercedes-benz-viano-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Viano (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2014 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "mercedes-benz-viano-nesil-belirlenmedi-22-cdi", "slug": "22-cdi", "engineId": "mercedes-benz-22-cdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014], "trims": ["Ambiente Activitiy Kisa", "Ambiente Activity Orta", "Ambiente Activity Uzun", "Ambiente Kisa", "Ambiente Kisa 5+1 VN134", "Ambiente Orta", "Ambiente Orta 5+1 Orta VN334", "Ambiente Uzun", "Trend Activity Kisa", "Trend Activity Orta", "Trend Activity Uzun", "Trend Kisa", "Trend Orta", "Trend Uzun", "VN134 Ambiente Kisa 5+1", "VN331 Trend Orta (5+1)", "VN332 Trend Orta 5+1", "VN333 Trend Orta (5+1)", "VN335 Ambiente Orta (5+1)", "VN337 Ambiente Orta (5+1)", "VN532 Trend Uzun 5+1", "VN533 Trend Uzun (5+1)", "VN535 Ambiente Uzun (5+1)", "VN537 Ambiente Orta (5+1)"], "bodyTypes": [], "sourceRefs": ["TSB 90-1051", "TSB 90-1052", "TSB 90-1108", "TSB 90-1168", "TSB 90-1169", "TSB 90-461", "TSB 90-462", "TSB 90-805", "TSB 90-806", "TSB 90-807", "TSB 90-808", "TSB 90-816", "TSB 90-817", "TSB 90-818", "TSB 90-819", "TSB 90-820", "TSB 90-821", "TSB 90-932", "TSB 90-944", "TSB 90-945", "TSB 90-946", "TSB 90-947", "TSB 90-948", "TSB 90-949"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "mercedes-benz-viano-nesil-belirlenmedi-20-cdi", "slug": "20-cdi", "engineId": "mercedes-benz-20-cdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2010, 2011], "trims": ["Trend 5+1 Kisa (V120)", "Trend 5+1 Orta (V320)", "Trend 5+1 Uzun (V520)"], "bodyTypes": [], "sourceRefs": ["TSB 90-855", "TSB 90-856", "TSB 90-857"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "mercedes-benz-viano-nesil-belirlenmedi-30-cdi", "slug": "30-cdi", "engineId": "mercedes-benz-30-cdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009], "trims": ["5+1"], "bodyTypes": [], "sourceRefs": ["TSB 90-1575"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

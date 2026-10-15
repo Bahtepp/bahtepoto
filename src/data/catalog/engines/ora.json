@@ -1,0 +1,3 @@
+[
+  { "id": "ora-elektrikli-105", "brandId": "ora", "slug": "elektrikli-105", "name": "ELEKTRIKLI 105 PS", "fuel": "electric", "power": { "ps": 105 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"ORA GOOD CAT ATHENA (105KW) ELEKTRIKLI\")." }
+]

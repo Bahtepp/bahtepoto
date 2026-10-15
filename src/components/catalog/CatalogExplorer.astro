@@ -9,6 +9,7 @@
  */
 import type { BrandSummary } from '@/lib/catalog/payload';
 import { PENDING_TEXT } from '@/lib/catalog/format';
+import { DEFAULT_MARKET_VIEW, MARKET_VIEWS } from '@/lib/catalog/market';
 import '@/styles/catalog.css';
 
 interface Props {
@@ -20,6 +21,19 @@ const { brands } = Astro.props;
 
 <div class="explorer" data-step="brand" id="catalog">
   <script type="application/json" id="catalog-brands" set:html={JSON.stringify(brands)} />
+
+  <fieldset class="market-switch chips" id="market-switch">
+    <legend>Pazar</legend>
+    {
+      MARKET_VIEWS.map((m) => (
+        <label class="chip">
+          <input type="radio" name="pazar" value={m.id} checked={m.id === DEFAULT_MARKET_VIEW} />
+          <span>{m.label}</span>
+        </label>
+      ))
+    }
+    <p class="market-help">Türkiye seçiliyken yalnızca Türkiye'de satışı doğrulanan veya Türkiye kasko değer listesinde yer alan motorlar listelenir.</p>
+  </fieldset>
 
   <nav class="explorer-steps" aria-label="Seçim adımları">
     <ol>

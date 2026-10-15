@@ -1,0 +1,35 @@
+{
+  "id": "audi-a1",
+  "brandId": "audi",
+  "slug": "a1",
+  "name": "A1",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "audi-a1-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "A1 (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2018 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "audi-a1-nesil-belirlenmedi-14-tfsi-122", "slug": "14-tfsi-122", "engineId": "audi-14-tfsi-122", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "S tronic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015], "trims": ["Sportback S Tronic"], "bodyTypes": [], "sourceRefs": ["TSB 9-1023", "TSB 9-510", "TSB 9-511"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "audi-a1-nesil-belirlenmedi-16-tdi-105", "slug": "16-tdi-105", "engineId": "audi-16-tdi-105", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 9-512"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "audi-a1-nesil-belirlenmedi-12-tfsi-86", "slug": "12-tfsi-86", "engineId": "audi-12-tfsi-86", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012], "trims": ["Sportback"], "bodyTypes": [], "sourceRefs": ["TSB 9-1022", "TSB 9-521"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "audi-a1-nesil-belirlenmedi-14-tfsi-185", "slug": "14-tfsi-185", "engineId": "audi-14-tfsi-185", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015], "trims": ["S Tronic", "Sportback Ambition S Tronic", "Sportback S Tronic"], "bodyTypes": [], "sourceRefs": ["TSB 9-1024", "TSB 9-1057", "TSB 9-522"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "audi-a1-nesil-belirlenmedi-16-tdi-90", "slug": "16-tdi-90", "engineId": "audi-16-tdi-90", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015], "trims": ["Sportback S Tronic"], "bodyTypes": [], "sourceRefs": ["TSB 9-1025"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "audi-a1-nesil-belirlenmedi-10-tfsi-95", "slug": "10-tfsi-95", "engineId": "audi-10-tfsi-95", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017], "trims": ["Sportback Basic S Tronic PI", "Sportback Dynamic S Tronic", "Sportback Sport S Tronic", "Sportback Sport S Tronic PI"], "bodyTypes": [], "sourceRefs": ["TSB 9-1174", "TSB 9-1175", "TSB 9-1289", "TSB 9-1290"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "audi-a1-nesil-belirlenmedi-14-tfsi-125", "slug": "14-tfsi-125", "engineId": "audi-14-tfsi-125", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017], "trims": ["Sportback Basic S Tronic PI", "Sportback Dynamic S Tronic", "Sportback Sport S Tronic PI"], "bodyTypes": [], "sourceRefs": ["TSB 9-1176", "TSB 9-1177", "TSB 9-1315"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "audi-a1-nesil-belirlenmedi-16-tdi-116", "slug": "16-tdi-116", "engineId": "audi-16-tdi-116", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016, 2017, 2018], "trims": ["Sportback Basic S Tronic PI", "Sportback Dynamic S Tronic", "Sportback Sport S Tronic PI"], "bodyTypes": [], "sourceRefs": ["TSB 9-1178", "TSB 9-1179", "TSB 9-1316"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

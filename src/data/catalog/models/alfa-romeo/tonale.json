@@ -1,0 +1,31 @@
+{
+  "id": "alfa-romeo-tonale",
+  "brandId": "alfa-romeo",
+  "slug": "tonale",
+  "name": "Tonale",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "alfa-romeo-tonale-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Tonale (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2026 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "alfa-romeo-tonale-nesil-belirlenmedi-15-hybrid-160", "slug": "15-hybrid-160", "engineId": "alfa-romeo-15-hybrid-160", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DCT" }, { "type": "dual-clutch", "name": "TCT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2023, 2024], "trims": ["Edizione Speciale", "TI", "Veloce"], "bodyTypes": [], "sourceRefs": ["TSB 3-1033", "TSB 3-1038", "TSB 3-1039"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "alfa-romeo-tonale-nesil-belirlenmedi-16-diesel-130", "slug": "16-diesel-130", "engineId": "alfa-romeo-16-diesel-130", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DCT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2023, 2024, 2025, 2026], "trims": ["Speciale", "Sprint", "TI"], "bodyTypes": [], "sourceRefs": ["TSB 3-1036", "TSB 3-1037", "TSB 3-1049"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "alfa-romeo-tonale-nesil-belirlenmedi-13-plug-in-hybrid-280", "slug": "13-plug-in-hybrid-280", "engineId": "alfa-romeo-13-plug-in-hybrid-280", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023], "trims": ["Veloce Eawd"], "bodyTypes": [], "sourceRefs": ["TSB 3-1046"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "alfa-romeo-tonale-nesil-belirlenmedi-15-hybrid", "slug": "15-hybrid", "engineId": "alfa-romeo-15-hybrid", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "TCT" }, { "type": "dual-clutch", "name": "DCT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["Speciale Vgt 160", "Speciale Vgt 175"], "bodyTypes": [], "sourceRefs": ["TSB 3-1050", "TSB 3-1058"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

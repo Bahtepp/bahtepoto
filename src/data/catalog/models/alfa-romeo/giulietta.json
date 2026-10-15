@@ -1,0 +1,36 @@
+{
+  "id": "alfa-romeo-giulietta",
+  "brandId": "alfa-romeo",
+  "slug": "giulietta",
+  "name": "Giulietta",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "alfa-romeo-giulietta-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Giulietta (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2020 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "alfa-romeo-giulietta-nesil-belirlenmedi-14-tb-120", "slug": "14-tb-120", "engineId": "alfa-romeo-14-tb-120", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015], "trims": ["Distinctive", "Progression Plus"], "bodyTypes": [], "sourceRefs": ["TSB 3-217", "TSB 3-218"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "alfa-romeo-giulietta-nesil-belirlenmedi-14-tb-multiair-170", "slug": "14-tb-multiair-170", "engineId": "alfa-romeo-14-tb-multiair-170", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "TCT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2016, 2017, 2018], "trims": ["Distinctive", "Super"], "bodyTypes": [], "sourceRefs": ["TSB 3-1003", "TSB 3-1016", "TSB 3-219"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "alfa-romeo-giulietta-nesil-belirlenmedi-16-jtd-105", "slug": "16-jtd-105", "engineId": "alfa-romeo-16-jtd-105", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015], "trims": ["Distinctive", "Progression Plus"], "bodyTypes": [], "sourceRefs": ["TSB 3-220", "TSB 3-221"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "alfa-romeo-giulietta-nesil-belirlenmedi-tb-235", "slug": "tb-235", "engineId": "alfa-romeo-tb-235", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013], "trims": ["1.750 Quagrifoglio Verde"], "bodyTypes": [], "sourceRefs": ["TSB 3-222"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "alfa-romeo-giulietta-nesil-belirlenmedi-14-tb", "slug": "14-tb", "engineId": "alfa-romeo-14-tb", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "TCT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015], "trims": ["M.AIR 170 Distinctive", "M.AIR 170 PROG.PLU"], "bodyTypes": [], "sourceRefs": ["TSB 3-1001", "TSB 3-1002"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "alfa-romeo-giulietta-nesil-belirlenmedi-18-tbi-240", "slug": "18-tbi-240", "engineId": "alfa-romeo-18-tbi-240", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "TCT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016], "trims": ["QV", "Veloce"], "bodyTypes": [], "sourceRefs": ["TSB 3-1007", "TSB 3-1017"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "alfa-romeo-giulietta-nesil-belirlenmedi-16-jtd-120", "slug": "16-jtd-120", "engineId": "alfa-romeo-16-jtd-120", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "TCT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018, 2020], "trims": ["Progression", "Sprint", "Super", "TI"], "bodyTypes": [], "sourceRefs": ["TSB 3-1013", "TSB 3-1020", "TSB 3-1029", "TSB 3-1030"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "alfa-romeo-giulietta-nesil-belirlenmedi-16-jtdm-120", "slug": "16-jtdm-120", "engineId": "alfa-romeo-16-jtdm-120", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "TCT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019], "trims": ["Progression", "Super"], "bodyTypes": [], "sourceRefs": ["TSB 3-1014", "TSB 3-1015"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "alfa-romeo-giulietta-nesil-belirlenmedi-16-jtd", "slug": "16-jtd", "engineId": "alfa-romeo-16-jtd", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "TCT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 3-1031"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

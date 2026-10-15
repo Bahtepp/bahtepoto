@@ -1,0 +1,33 @@
+{
+  "id": "mazda-3",
+  "brandId": "mazda",
+  "slug": "3",
+  "name": "3",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "mazda-3-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "3 (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2019 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "mazda-3-nesil-belirlenmedi-16", "slug": "16", "engineId": "mazda-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2012, 2013], "trims": ["Base", "Comfort", "Dynamic", "Mirai", "Sport"], "bodyTypes": ["4 kapı sedan", "5 kapı"], "sourceRefs": ["TSB 89-1004", "TSB 89-1013", "TSB 89-380", "TSB 89-381", "TSB 89-382", "TSB 89-383", "TSB 89-384", "TSB 89-385", "TSB 89-386", "TSB 89-387", "TSB 89-398", "TSB 89-399", "TSB 89-400", "TSB 89-401", "TSB 89-402", "TSB 89-403", "TSB 89-404", "TSB 89-405", "TSB 89-406", "TSB 89-407"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "mazda-3-nesil-belirlenmedi-16-105", "slug": "16-105", "engineId": "mazda-16-105", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2010, 2011, 2012, 2013], "trims": ["Impressive"], "bodyTypes": ["4 kapı sedan", "5 kapı"], "sourceRefs": ["TSB 89-428", "TSB 89-429", "TSB 89-430", "TSB 89-431", "TSB 89-432", "TSB 89-433", "TSB 89-434", "TSB 89-435"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "mazda-3-nesil-belirlenmedi-23", "slug": "23", "engineId": "mazda-23", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012], "trims": ["Mps"], "bodyTypes": [], "sourceRefs": ["TSB 89-436"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "mazda-3-nesil-belirlenmedi-16-dizel", "slug": "16-dizel", "engineId": "mazda-16-dizel", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013], "trims": ["Comfort", "Impressive"], "bodyTypes": ["4 kapı sedan", "5 kapı"], "sourceRefs": ["TSB 89-1005", "TSB 89-441", "TSB 89-442", "TSB 89-443"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "mazda-3-nesil-belirlenmedi-15-120", "slug": "15-120", "engineId": "mazda-15-120", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016, 2017, 2018, 2019], "trims": ["SKY-G Motion", "SKY-G Power", "SKY-G Power Sense", "SKY-G Reflex", "SKY-G Soul"], "bodyTypes": ["4 kapı sedan", "5 kapı"], "sourceRefs": ["TSB 89-1018", "TSB 89-1019", "TSB 89-1020", "TSB 89-1021", "TSB 89-1022", "TSB 89-1023", "TSB 89-1024", "TSB 89-1025", "TSB 89-1026", "TSB 89-1027", "TSB 89-1028", "TSB 89-1029", "TSB 89-1030"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "mazda-3-nesil-belirlenmedi-15", "slug": "15", "engineId": "mazda-15", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019], "trims": ["SKY-D Motion", "SKY-D Power", "SKY-D Power Sense", "SKY-D Reflex"], "bodyTypes": ["4 kapı sedan", "5 kapı"], "sourceRefs": ["TSB 89-1042", "TSB 89-1043", "TSB 89-1044", "TSB 89-1045", "TSB 89-1046", "TSB 89-1047", "TSB 89-1048", "TSB 89-1049", "TSB 89-1050", "TSB 89-1051", "TSB 89-1054", "TSB 89-1055"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

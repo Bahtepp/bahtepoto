@@ -1,0 +1,30 @@
+{
+  "id": "mazda-6",
+  "brandId": "mazda",
+  "slug": "6",
+  "name": "6",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "mazda-6-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "6 (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2022 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "mazda-6-nesil-belirlenmedi-20", "slug": "20", "engineId": "mazda-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022], "trims": ["Base", "Comfort", "DYNAMIC+", "Dynamic", "Exclusive", "Mid", "SKY-G Power", "SKY-G Power Sense", "Sport", "Sport SKY-G"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 89-1017", "TSB 89-1037", "TSB 89-1069", "TSB 89-371", "TSB 89-372", "TSB 89-373", "TSB 89-374", "TSB 89-408", "TSB 89-409", "TSB 89-410", "TSB 89-417", "TSB 89-418", "TSB 89-419", "TSB 89-420", "TSB 89-421", "TSB 89-422"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "mazda-6-nesil-belirlenmedi-20-155", "slug": "20-155", "engineId": "mazda-20-155", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013], "trims": ["Sport"], "bodyTypes": [], "sourceRefs": ["TSB 89-444"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "mazda-6-nesil-belirlenmedi-22", "slug": "22", "engineId": "mazda-22", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016], "trims": ["SKY-D Power Sense"], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 89-1052", "TSB 89-1053"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

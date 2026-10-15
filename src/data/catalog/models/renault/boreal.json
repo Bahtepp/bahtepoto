@@ -1,0 +1,28 @@
+{
+  "id": "renault-boreal",
+  "brandId": "renault",
+  "slug": "boreal",
+  "name": "Boreal",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "renault-boreal-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Boreal (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2026 }, "end": { "year": 2026 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "renault-boreal-nesil-belirlenmedi-tce", "slug": "tce", "engineId": "renault-tce", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "EDC" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2026 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2026], "trims": ["Evolution Turbo 145", "Iconic Turbo 145", "Techno Turbo 145"], "bodyTypes": [], "sourceRefs": ["TSB 122-1269", "TSB 122-1271", "TSB 122-1272"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "land-rover-discovery",
+  "brandId": "land-rover",
+  "slug": "discovery",
+  "name": "Discovery",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "land-rover-discovery-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Discovery (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2026 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "land-rover-discovery-nesil-belirlenmedi-27-tdv6", "slug": "27-tdv6", "engineId": "land-rover-27-tdv6", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["3 Hse", "3 S", "3 SE", "3 XS", "4 Hse", "4 XS"], "bodyTypes": [], "sourceRefs": ["TSB 420-53", "TSB 420-54", "TSB 420-58", "TSB 420-63", "TSB 420-69", "TSB 420-70"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "land-rover-discovery-nesil-belirlenmedi-44", "slug": "44", "engineId": "land-rover-44", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["3 Hse"], "bodyTypes": [], "sourceRefs": ["TSB 420-55"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "land-rover-discovery-nesil-belirlenmedi-30-tdv6", "slug": "30-tdv6", "engineId": "land-rover-30-tdv6", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012], "trims": ["4 Hse", "4 SE"], "bodyTypes": [], "sourceRefs": ["TSB 420-68", "TSB 420-71"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "land-rover-discovery-nesil-belirlenmedi-30-sdv6", "slug": "30-sdv6", "engineId": "land-rover-30-sdv6", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015, 2016, 2017], "trims": ["4 Hse", "4 SE", "Hse Luxury", "Xxv Limited Edition"], "bodyTypes": [], "sourceRefs": ["TSB 420-1008", "TSB 420-1036", "TSB 420-74", "TSB 420-75"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "land-rover-discovery-nesil-belirlenmedi-20-td4-180", "slug": "20-td4-180", "engineId": "land-rover-20-td4-180", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018], "trims": ["Hse", "S", "SE", "SE Plus"], "bodyTypes": [], "sourceRefs": ["TSB 420-1017", "TSB 420-1018", "TSB 420-1019", "TSB 420-1023"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "land-rover-discovery-nesil-belirlenmedi-20-sd4-240", "slug": "20-sd4-240", "engineId": "land-rover-20-sd4-240", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018, 2019, 2020], "trims": ["Hse", "Hse Luxury"], "bodyTypes": [], "sourceRefs": ["TSB 420-1020", "TSB 420-1021"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "land-rover-discovery-nesil-belirlenmedi-20", "slug": "20", "engineId": "land-rover-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021, 2022, 2023, 2024], "trims": ["D240 SE", "P300 Dynamic Hse", "P300 Dynamic SE", "P300 Hse", "P300 R-DYNAMIC Hse", "P300 R-DYNAMIC SE", "P300 SE"], "bodyTypes": [], "sourceRefs": ["TSB 420-1025", "TSB 420-1058", "TSB 420-1059", "TSB 420-1060", "TSB 420-1061", "TSB 420-1076", "TSB 420-1077"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "land-rover-discovery-nesil-belirlenmedi-30", "slug": "30", "engineId": "land-rover-30", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["MHEV350 Dynamic Hse", "MHEV350 Dynamic SE", "MHEV350 Tempest"], "bodyTypes": [], "sourceRefs": ["TSB 420-1082", "TSB 420-1083", "TSB 420-1099"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

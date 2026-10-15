@@ -1,0 +1,3 @@
+[
+  { "id": "caterham-340r", "brandId": "caterham", "slug": "340r", "name": "340R", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"SEVEN 340R\"); yakıt türü tip adında yazmıyor." }
+]

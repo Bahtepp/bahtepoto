@@ -1,0 +1,3 @@
+[
+  { "id": "rox-15-phev-110kw", "brandId": "rox", "slug": "15-phev-110kw", "name": "1.5 PHEV 110 kW", "fuel": "plug-in-hybrid", "displacementL": 1.5, "power": { "kw": 110 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"POLARSTONE 1.5 PHEV 110KW\")." }
+]

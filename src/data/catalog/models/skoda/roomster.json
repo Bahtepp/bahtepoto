@@ -1,0 +1,35 @@
+{
+  "id": "skoda-roomster",
+  "brandId": "skoda",
+  "slug": "roomster",
+  "name": "Roomster",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "skoda-roomster-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Roomster (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2014 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "skoda-roomster-nesil-belirlenmedi-12", "slug": "12", "engineId": "skoda-12", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["Style"], "bodyTypes": [], "sourceRefs": ["TSB 133-312", "TSB 133-328"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "skoda-roomster-nesil-belirlenmedi-14", "slug": "14", "engineId": "skoda-14", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Classic PD", "Comfort", "Comfort PD", "Scout", "Sport", "Sport PD", "Style", "Style PD"], "bodyTypes": [], "sourceRefs": ["TSB 133-313", "TSB 133-315", "TSB 133-316", "TSB 133-318", "TSB 133-319", "TSB 133-321", "TSB 133-322", "TSB 133-325", "TSB 133-389"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "skoda-roomster-nesil-belirlenmedi-16", "slug": "16", "engineId": "skoda-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Classic", "Comfort", "Comfort AG", "Sport", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 133-314", "TSB 133-317", "TSB 133-320", "TSB 133-323", "TSB 133-324", "TSB 133-326", "TSB 133-388"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "skoda-roomster-nesil-belirlenmedi-14-tdi-70", "slug": "14-tdi-70", "engineId": "skoda-14-tdi-70", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 133-327"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "skoda-roomster-nesil-belirlenmedi-14-tdi-80", "slug": "14-tdi-80", "engineId": "skoda-14-tdi-80", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Comfort", "Scout", "Sport", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 133-329", "TSB 133-330", "TSB 133-331", "TSB 133-364"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "skoda-roomster-nesil-belirlenmedi-16-105", "slug": "16-105", "engineId": "skoda-16-105", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Scout"], "bodyTypes": [], "sourceRefs": ["TSB 133-362", "TSB 133-363"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "skoda-roomster-nesil-belirlenmedi-16-tdi-90", "slug": "16-tdi-90", "engineId": "skoda-16-tdi-90", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014], "trims": ["Active CR", "Style CR"], "bodyTypes": [], "sourceRefs": ["TSB 133-1030", "TSB 133-425"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "skoda-roomster-nesil-belirlenmedi-12-70", "slug": "12-70", "engineId": "skoda-12-70", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013], "trims": ["Active"], "bodyTypes": [], "sourceRefs": ["TSB 133-1009"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

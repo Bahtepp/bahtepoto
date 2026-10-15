@@ -1,0 +1,29 @@
+{
+  "id": "nissan-almera",
+  "brandId": "nissan",
+  "slug": "almera",
+  "name": "Almera",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "nissan-almera-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Almera (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2021 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "nissan-almera-nesil-belirlenmedi-15", "slug": "15", "engineId": "nissan-15", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009], "trims": ["Mood", "Tekna", "Visia", "Visia Plus"], "bodyTypes": ["3 kapı", "4 kapı sedan", "5 kapı"], "sourceRefs": ["TSB 107-216", "TSB 107-217", "TSB 107-218", "TSB 107-219", "TSB 107-238", "TSB 107-246", "TSB 107-247", "TSB 107-248", "TSB 107-249"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "nissan-almera-nesil-belirlenmedi-22-dizel", "slug": "22-dizel", "engineId": "nissan-22-dizel", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 107-1220"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

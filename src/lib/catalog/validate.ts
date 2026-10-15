@@ -123,6 +123,14 @@ export function validateCatalog(data: CatalogData): string[] {
           }
         }
         for (const mid of v.marketIds) if (!marketIds.has(mid)) err(vw, `bilinmeyen pazar "${mid}"`);
+        const availMarkets = new Set<string>();
+        for (const a of v.marketAvailability) {
+          if (!marketIds.has(a.marketId)) err(vw, `pazar durumu: bilinmeyen pazar "${a.marketId}"`);
+          if (availMarkets.has(a.marketId)) err(vw, `pazar durumu: "${a.marketId}" birden fazla kez tanımlı`);
+          availMarkets.add(a.marketId);
+          for (const sid of a.sourceIds) if (!sourcesById.has(sid)) err(vw, `pazar durumu: bilinmeyen kaynak "${sid}"`);
+          if (a.status !== 'unverified' && a.sourceIds.length === 0) err(vw, `pazar durumu "${a.status}" kaynak gerektirir`);
+        }
         v.periods.forEach((p, i) => checkPeriod(`${vw} periods[${i}]`, p));
       }
     }

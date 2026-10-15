@@ -1,0 +1,8 @@
+[
+  { "id": "subaru-20", "brandId": "subaru", "slug": "20", "name": "2.0", "displacementL": 2, "status": "conflicting", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adlarında yakıt türü çelişiyor (petrol, diesel); yakıt boş bırakıldı." },
+  { "id": "subaru-25", "brandId": "subaru", "slug": "25", "name": "2.5", "displacementL": 2.5, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"FORESTER 2.5 XT AWD UL\"); yakıt türü tip adında yazmıyor." },
+  { "id": "subaru-30", "brandId": "subaru", "slug": "30", "name": "3.0", "displacementL": 3, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"LEGACY 3.0 R AWD OV\"); yakıt türü tip adında yazmıyor." },
+  { "id": "subaru-15", "brandId": "subaru", "slug": "15", "name": "1.5", "displacementL": 1.5, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"IMPREZA 1.5 AWD 5MT 1X\"); yakıt türü tip adında yazmıyor." },
+  { "id": "subaru-36", "brandId": "subaru", "slug": "36", "name": "3.6", "displacementL": 3.6, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"TRIBECA 3.6R AWD 5AT\"); yakıt türü tip adında yazmıyor." },
+  { "id": "subaru-16", "brandId": "subaru", "slug": "16", "name": "1.6", "fuel": "petrol", "displacementL": 1.6, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"XV 1.6 AWD 5MT COMFORT\")." }
+]

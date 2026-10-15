@@ -19,9 +19,14 @@ const issue = (id: string) => {
 const v = (id: string, gen: string, rev: string | undefined, variant: string): Verdict =>
   matchIssue(issue(id), focusContext(catalog, gen, rev, variant)).verdict;
 
-/** Detay sayfası üretilen bütün (nesil, dönem, varyant) seçimleri. */
+/**
+ * Detay sayfası üretilen (nesil, dönem, varyant) seçimleri — elle denetlenmiş Focus verisi.
+ * Yalnızca TSB'den gelen varyantlar (Türkiye listesi; makyaj dönemi ve çoğunlukla yakıt türü
+ * bilinmez) burada hariçtir; onların eşleşme kuralları tests/tsb-import.test.ts'te sınanır.
+ */
+const tsbOnly = (v: { sourceIds: string[] }) => v.sourceIds.length > 0 && v.sourceIds.every((s) => s === 'tsb-kasko-deger-listesi');
 const selections = focus.generations.flatMap((g) =>
-  g.variants.flatMap((variant) => {
+  g.variants.filter((variant) => !tsbOnly(variant)).flatMap((variant) => {
     const revs =
       g.revisions.length === 0
         ? [undefined]

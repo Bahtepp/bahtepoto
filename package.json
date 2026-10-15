@@ -17,7 +17,9 @@
     "import:run": "node scripts/import/run.ts",
     "import:check": "node scripts/import/check.ts",
     "import:diff": "node scripts/import/diff.ts",
-    "import:promote": "node scripts/import/promote.ts"
+    "import:promote": "node scripts/import/promote.ts",
+    "catalog:tsb": "node scripts/import/tsb/run.ts",
+    "catalog:update": "node scripts/import/tsb/run.ts --write"
   },
   "dependencies": {
     "astro": "^7.3.8"

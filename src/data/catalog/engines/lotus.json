@@ -1,0 +1,6 @@
+[
+  { "id": "lotus-410", "brandId": "lotus", "slug": "410", "name": "410", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"EVORA SPORT 410\"); yakıt türü tip adında yazmıyor." },
+  { "id": "lotus-250", "brandId": "lotus", "slug": "250", "name": "250", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"ELISE CUP 250\"); yakıt türü tip adında yazmıyor." },
+  { "id": "lotus-kwh-905", "brandId": "lotus", "slug": "kwh-905", "name": "KWH 905 PS", "fuel": "electric", "power": { "ps": 905 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"ELETRE R 112 KWH (905) DUAL MOTOR AWD\")." },
+  { "id": "lotus-20", "brandId": "lotus", "slug": "20", "name": "2.0", "displacementL": 2, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"EMIRA I4 2.0 DCT\"); yakıt türü tip adında yazmıyor." }
+]

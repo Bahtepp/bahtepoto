@@ -1,0 +1,31 @@
+{
+  "id": "opel-insignia-grand",
+  "brandId": "opel",
+  "slug": "insignia-grand",
+  "name": "Insignia Grand",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "opel-insignia-grand-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Insignia Grand (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2020 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "opel-insignia-grand-nesil-belirlenmedi-15-165", "slug": "15-165", "engineId": "opel-15-165", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018], "trims": ["Sport AT6 Design", "Sport AT6 Elite", "Sport AT6 Enjoy", "Sport AT6 Excellence", "Sport MT6 Enjoy"], "bodyTypes": [], "sourceRefs": ["TSB 111-1294", "TSB 111-1295", "TSB 111-1298", "TSB 111-1300", "TSB 111-1304"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "opel-insignia-grand-nesil-belirlenmedi-16-dizel-136", "slug": "16-dizel-136", "engineId": "opel-16-dizel-136", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018, 2019, 2020], "trims": ["Sport AT6 Design", "Sport AT6 Elite", "Sport AT6 Enjoy", "Sport MT6 Enjoy"], "bodyTypes": [], "sourceRefs": ["TSB 111-1296", "TSB 111-1297", "TSB 111-1299", "TSB 111-1305"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "opel-insignia-grand-nesil-belirlenmedi-16", "slug": "16", "engineId": "opel-16", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018, 2019, 2020], "trims": ["Sport D 136 AT6 Excellence", "Sport D 136 MT6 Excellence"], "bodyTypes": [], "sourceRefs": ["TSB 111-1301", "TSB 111-1302"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "opel-insignia-grand-nesil-belirlenmedi-20-260", "slug": "20-260", "engineId": "opel-20-260", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018], "trims": ["Sport AT8 Elite", "Sport AT8 Gsi"], "bodyTypes": [], "sourceRefs": ["TSB 111-1306", "TSB 111-1348"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

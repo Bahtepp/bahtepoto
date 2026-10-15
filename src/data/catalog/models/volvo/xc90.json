@@ -1,0 +1,35 @@
+{
+  "id": "volvo-xc90",
+  "brandId": "volvo",
+  "slug": "xc90",
+  "name": "XC90",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "volvo-xc90-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "XC90 (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2026 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "volvo-xc90-nesil-belirlenmedi-24-200", "slug": "24-200", "engineId": "volvo-24-200", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013], "trims": ["D5"], "bodyTypes": [], "sourceRefs": ["TSB 154-558"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "volvo-xc90-nesil-belirlenmedi-24", "slug": "24", "engineId": "volvo-24", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013], "trims": ["D5 R-DESIGN"], "bodyTypes": [], "sourceRefs": ["TSB 154-559"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "volvo-xc90-nesil-belirlenmedi-20", "slug": "20", "engineId": "volvo-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025], "trims": ["B5 7 Koltuk Momentum", "B5 7 Koltuk R-DESIGN", "B5 7KOLTUK Inscriptiongeartronic", "D5 7 Koltuk Inscription Geartron", "D5 7 Koltuk Momentum", "D5 7 Koltuk R-DESIGN", "Recharge T8 Plus Dark 310+145 G.", "Recharge T8AWDPLUSBRIGHT 310+145 G.", "T6 7 K Inscription", "T6 7 K R-DESIGN", "T6 7 Koltuk Momentum", "T8 Twin Engine Excellence"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 154-1095", "TSB 154-1096", "TSB 154-1097", "TSB 154-1158", "TSB 154-1201", "TSB 154-1202", "TSB 154-1203", "TSB 154-1208", "TSB 154-1211", "TSB 154-1212", "TSB 154-1284", "TSB 154-1285"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "volvo-xc90-nesil-belirlenmedi-hybrid", "slug": "hybrid", "engineId": "volvo-hybrid", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015], "trims": ["T8 7 Koltuk Inscription Geart", "T8 7 Koltuk Momentum Geartron", "T8 7 Koltuk R-DESIGN Geartron"], "bodyTypes": [], "sourceRefs": ["TSB 154-1098", "TSB 154-1099", "TSB 154-1100"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "volvo-xc90-nesil-belirlenmedi-32", "slug": "32", "engineId": "volvo-32", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 154-1137"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "volvo-xc90-nesil-belirlenmedi-20-235", "slug": "20-235", "engineId": "volvo-20-235", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2022, 2023, 2024], "trims": ["B5 Plus Bright", "B5 Plus Dark", "B5 Ultimate Dark", "B5 Ultimatebright", "D5"], "bodyTypes": [], "sourceRefs": ["TSB 154-1247", "TSB 154-1276", "TSB 154-1277", "TSB 154-1278", "TSB 154-1279"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "volvo-xc90-nesil-belirlenmedi-20-300", "slug": "20-300", "engineId": "volvo-20-300", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2023, 2024], "trims": ["B6 Plus Bright", "B6 Plus Dark", "B6 Ultimate Dark", "B6 Ultimatebright"], "bodyTypes": [], "sourceRefs": ["TSB 154-1280", "TSB 154-1281", "TSB 154-1282", "TSB 154-1283"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "volvo-xc90-nesil-belirlenmedi-20-250", "slug": "20-250", "engineId": "volvo-20-250", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["B5 Plus B.EDITION Gear FL", "B5 Plus Bright", "B5 Plus Bright Gear FL", "B5 Plus Dark Gear FL", "B5 Ultra B.EDITION Gear FL", "B5 Ultra Bright", "B5 Ultra Bright Gear FL", "B5 Ultra Dark Gear FL"], "bodyTypes": [], "sourceRefs": ["TSB 154-1313", "TSB 154-1318", "TSB 154-1325", "TSB 154-1326", "TSB 154-1335", "TSB 154-1336", "TSB 154-1346", "TSB 154-1347"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

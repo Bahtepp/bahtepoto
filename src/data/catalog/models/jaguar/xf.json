@@ -1,0 +1,35 @@
+{
+  "id": "jaguar-xf",
+  "brandId": "jaguar",
+  "slug": "xf",
+  "name": "XF",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "jaguar-xf-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "XF (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2024 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "jaguar-xf-nesil-belirlenmedi-27", "slug": "27", "engineId": "jaguar-27", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["D Luxury", "D Premium Luxury"], "bodyTypes": [], "sourceRefs": ["TSB 220-69", "TSB 220-70"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "jaguar-xf-nesil-belirlenmedi-30", "slug": "30", "engineId": "jaguar-30", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2015, 2016, 2017], "trims": ["Luxury", "Premium Luxury", "R-SPORT", "R-SPORT Plus"], "bodyTypes": ["Pick-up"], "sourceRefs": ["TSB 220-1047", "TSB 220-1048", "TSB 220-1057", "TSB 220-1058", "TSB 220-71", "TSB 220-72"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "jaguar-xf-nesil-belirlenmedi-30-diesel", "slug": "30-diesel", "engineId": "jaguar-30-diesel", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013, 2014], "trims": ["Luxury", "Premium Luxury", "S Portfolio", "S Premium Luxury"], "bodyTypes": [], "sourceRefs": ["TSB 220-79", "TSB 220-80", "TSB 220-81", "TSB 220-82"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "jaguar-xf-nesil-belirlenmedi-22-diesel", "slug": "22-diesel", "engineId": "jaguar-22-diesel", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014], "trims": ["Luxury", "Portfolio", "Premium Luxury"], "bodyTypes": [], "sourceRefs": ["TSB 220-89", "TSB 220-90", "TSB 220-91", "TSB 220-92"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "jaguar-xf-nesil-belirlenmedi-20", "slug": "20", "engineId": "jaguar-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024], "trims": ["Luxury", "Portfolio", "Portfolio Plus", "Portfolio Plus d", "Premium Luxury", "Premium Luxury Si4", "Prestige", "Prestige Plus", "Prestige Plus d", "Pure", "Pure Plus", "Pure Plus d", "Pure d", "R-DYNAMIC Hse D204", "R-DYNAMIC SE D204", "R-SPORT", "R-SPORT Plus", "R-SPORT Plus Si4", "R-SPORT Plus d", "R-SPORT Si4", "Si4 Business"], "bodyTypes": [], "sourceRefs": ["TSB 220-1007", "TSB 220-1008", "TSB 220-1009", "TSB 220-1010", "TSB 220-1031", "TSB 220-1032", "TSB 220-1033", "TSB 220-1034", "TSB 220-1043", "TSB 220-1044", "TSB 220-1045", "TSB 220-1046", "TSB 220-1053", "TSB 220-1054", "TSB 220-1055", "TSB 220-1056", "TSB 220-1072", "TSB 220-1073", "TSB 220-1074", "TSB 220-1075", "TSB 220-1076", "TSB 220-1123", "TSB 220-1126"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "jaguar-xf-nesil-belirlenmedi-22-diesel-200", "slug": "22-diesel-200", "engineId": "jaguar-22-diesel-200", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014], "trims": ["Luxury", "Portfolio"], "bodyTypes": [], "sourceRefs": ["TSB 220-1018", "TSB 220-1019", "TSB 220-1021"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "jaguar-xf-nesil-belirlenmedi-22-200", "slug": "22-200", "engineId": "jaguar-22-200", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014], "trims": ["D Premium Luxury"], "bodyTypes": [], "sourceRefs": ["TSB 220-1020"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "jaguar-xf-nesil-belirlenmedi-20-240", "slug": "20-240", "engineId": "jaguar-20-240", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018], "trims": ["Portfolio Plus", "Prestige Plus", "R-SPORT Plus"], "bodyTypes": [], "sourceRefs": ["TSB 220-1087", "TSB 220-1088", "TSB 220-1089"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

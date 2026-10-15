@@ -1,0 +1,32 @@
+{
+  "id": "hyundai-i20-troy",
+  "brandId": "hyundai",
+  "slug": "i20-troy",
+  "name": "I20 Troy",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "hyundai-i20-troy-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "I20 Troy (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2012 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "hyundai-i20-troy-nesil-belirlenmedi-12", "slug": "12", "engineId": "hyundai-12", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012], "trims": ["Mode (Y)", "Start (Y)", "Team"], "bodyTypes": [], "sourceRefs": ["TSB 177-1003", "TSB 177-345", "TSB 177-346"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "hyundai-i20-troy-nesil-belirlenmedi-14", "slug": "14", "engineId": "hyundai-14", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012], "trims": ["Cvvt Mode (Y)", "Cvvt Prime (Y)", "Cvvt Prime Plus (Y)", "Cvvt Team"], "bodyTypes": [], "sourceRefs": ["TSB 177-1005", "TSB 177-1006", "TSB 177-347", "TSB 177-348", "TSB 177-349", "TSB 177-350", "TSB 177-415", "TSB 177-416"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "hyundai-i20-troy-nesil-belirlenmedi-14-crdi", "slug": "14-crdi", "engineId": "hyundai-14-crdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012], "trims": ["Isg (Y)", "Isg Plus (Y)", "Mode (Y)", "Prime (Y)", "Prime Plus (Y)", "Start (Y)"], "bodyTypes": [], "sourceRefs": ["TSB 177-351", "TSB 177-352", "TSB 177-353", "TSB 177-413", "TSB 177-414", "TSB 177-417"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "hyundai-i20-troy-nesil-belirlenmedi-16", "slug": "16", "engineId": "hyundai-16", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011], "trims": ["World Cup Edition (Y)"], "bodyTypes": [], "sourceRefs": ["TSB 177-354"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "hyundai-i20-troy-nesil-belirlenmedi-14-crdi-75", "slug": "14-crdi-75", "engineId": "hyundai-14-crdi-75", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012], "trims": ["Team"], "bodyTypes": [], "sourceRefs": ["TSB 177-1004"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

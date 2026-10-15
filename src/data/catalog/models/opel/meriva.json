@@ -1,0 +1,35 @@
+{
+  "id": "opel-meriva",
+  "brandId": "opel",
+  "slug": "meriva",
+  "name": "Meriva",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "opel-meriva-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Meriva (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2016 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "opel-meriva-nesil-belirlenmedi-16", "slug": "16", "engineId": "opel-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automated-manual", "name": "Easytronic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2014, 2015, 2016], "trims": ["Dth 136 Active", "Dth 136 Cosmo", "Essentia", "Njoy", "Opc", "T.PORT EASYT.ENJOY Spor", "Twinport 105 Enjoy Spor", "Twinport Essentia"], "bodyTypes": [], "sourceRefs": ["TSB 111-1130", "TSB 111-1131", "TSB 111-424", "TSB 111-425", "TSB 111-496", "TSB 111-566", "TSB 111-584", "TSB 111-665", "TSB 111-666", "TSB 111-667"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "opel-meriva-nesil-belirlenmedi-13-cdti", "slug": "13-cdti", "engineId": "opel-13-cdti", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Enjoy", "Essentia"], "bodyTypes": [], "sourceRefs": ["TSB 111-538", "TSB 111-539"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "opel-meriva-nesil-belirlenmedi-13-cdti-75", "slug": "13-cdti-75", "engineId": "opel-13-cdti-75", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2010, 2011, 2012], "trims": ["Enjoy Spor", "Essentia"], "bodyTypes": [], "sourceRefs": ["TSB 111-668", "TSB 111-669"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "opel-meriva-nesil-belirlenmedi-14-100", "slug": "14-100", "engineId": "opel-14-100", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013], "trims": ["Active", "Enjoy"], "bodyTypes": [], "sourceRefs": ["TSB 111-1070", "TSB 111-721"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "opel-meriva-nesil-belirlenmedi-14-120", "slug": "14-120", "engineId": "opel-14-120", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015], "trims": ["Active", "Cosmo", "Enjoy"], "bodyTypes": [], "sourceRefs": ["TSB 111-1047", "TSB 111-1048", "TSB 111-1071", "TSB 111-1073", "TSB 111-1146", "TSB 111-722", "TSB 111-726"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "opel-meriva-nesil-belirlenmedi-14-140", "slug": "14-140", "engineId": "opel-14-140", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013], "trims": ["Active", "Cosmo", "Enjoy"], "bodyTypes": [], "sourceRefs": ["TSB 111-1072", "TSB 111-723", "TSB 111-727"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "opel-meriva-nesil-belirlenmedi-13-95", "slug": "13-95", "engineId": "opel-13-95", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013], "trims": ["Dte Cosmo", "Dte Enjoy"], "bodyTypes": [], "sourceRefs": ["TSB 111-724", "TSB 111-728"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "opel-meriva-nesil-belirlenmedi-17-100", "slug": "17-100", "engineId": "opel-17-100", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012], "trims": ["DT Enjoy", "Dti Cosmo"], "bodyTypes": [], "sourceRefs": ["TSB 111-725", "TSB 111-729"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

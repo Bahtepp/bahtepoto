@@ -1,0 +1,30 @@
+{
+  "id": "audi-rs3",
+  "brandId": "audi",
+  "slug": "rs3",
+  "name": "RS3",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "audi-rs3-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "RS3 (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2026 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "audi-rs3-nesil-belirlenmedi-25-tfsi", "slug": "25-tfsi", "engineId": "audi-25-tfsi", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "S tronic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018, 2019, 2020], "trims": ["400 PI", "Sportback", "Sportback 400 PI"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 9-1181", "TSB 9-1372", "TSB 9-1379"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "audi-rs3-nesil-belirlenmedi-25-tfsi-400", "slug": "25-tfsi-400", "engineId": "audi-25-tfsi-400", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2025, 2026], "trims": ["S Tronic FL", "Sportback S Tronic"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 9-1578", "TSB 9-1642"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "audi-rs3-nesil-belirlenmedi-25-fsi-400", "slug": "25-fsi-400", "engineId": "audi-25-fsi-400", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["Sportback Stronicfl"], "bodyTypes": [], "sourceRefs": ["TSB 9-1641"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

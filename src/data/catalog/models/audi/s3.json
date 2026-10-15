@@ -1,0 +1,32 @@
+{
+  "id": "audi-s3",
+  "brandId": "audi",
+  "slug": "s3",
+  "name": "S3",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "audi-s3-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "S3 (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2026 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "audi-s3-nesil-belirlenmedi-20-tfsi", "slug": "20-tfsi", "engineId": "audi-20-tfsi", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2022, 2023, 2024, 2025, 2026], "trims": ["310 S Tronic", "333 S Tronic PI", "Sportback", "Sportback 310 S Tronic", "Sportback 333 S Tronic PI"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 9-1562", "TSB 9-1563", "TSB 9-1620", "TSB 9-1650", "TSB 9-407", "TSB 9-461"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "audi-s3-nesil-belirlenmedi-20-tfsi-280", "slug": "20-tfsi-280", "engineId": "audi-20-tfsi-280", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "S tronic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2015, 2016], "trims": ["S Tronic", "Sportback S Tronic"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 9-1071", "TSB 9-1072", "TSB 9-1103"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "audi-s3-nesil-belirlenmedi-20-tfsi-285", "slug": "20-tfsi-285", "engineId": "audi-20-tfsi-285", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015], "trims": ["S Tronic", "Sportback S Tronic"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 9-1146", "TSB 9-1147", "TSB 9-1148"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "audi-s3-nesil-belirlenmedi-20-tfsi-300", "slug": "20-tfsi-300", "engineId": "audi-20-tfsi-300", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "S tronic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2019, 2020], "trims": ["PI", "Sportback PI", "Sportback S Tronic"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 9-1210", "TSB 9-1211", "TSB 9-1371", "TSB 9-1380"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "audi-s3-nesil-belirlenmedi-20-tfsi-310", "slug": "20-tfsi-310", "engineId": "audi-20-tfsi-310", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "S tronic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018], "trims": ["S Tronic PI", "Sportback PI"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 9-1337", "TSB 9-1338"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

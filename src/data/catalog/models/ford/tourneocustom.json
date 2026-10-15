@@ -1,0 +1,33 @@
+{
+  "id": "ford-tourneocustom",
+  "brandId": "ford",
+  "slug": "tourneocustom",
+  "name": "Tourneocustom",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "ford-tourneocustom-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Tourneocustom (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2026 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "ford-tourneocustom-nesil-belirlenmedi-62-185", "slug": "62-185", "engineId": "ford-62-185", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021, 2022], "trims": ["320L Upgrade E T.PLUS"], "bodyTypes": [], "sourceRefs": ["TSB 53-1690"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "ford-tourneocustom-nesil-belirlenmedi-eb-hibrit-126", "slug": "eb-hibrit-126", "engineId": "ford-eb-hibrit-126", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020], "trims": ["320S Titaniumplus"], "bodyTypes": [], "sourceRefs": ["TSB 53-1745"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "ford-tourneocustom-nesil-belirlenmedi-320l", "slug": "320l", "engineId": "ford-320l", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2023], "trims": ["UP.HIBRI150 Bagajli T.PLUS"], "bodyTypes": [], "sourceRefs": ["TSB 53-1866"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "ford-tourneocustom-nesil-belirlenmedi-eb", "slug": "eb", "engineId": "ford-eb", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023, 2024, 2025, 2026], "trims": ["320L Upg 170 Titanium", "320S Upg 136 Deluxe", "320S Upg 170 Titanium", "320S Upg 170 Titanium PL"], "bodyTypes": [], "sourceRefs": ["TSB 53-1932", "TSB 53-1933", "TSB 53-1934", "TSB 53-1935", "TSB 53-2980"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "ford-tourneocustom-nesil-belirlenmedi-340l", "slug": "340l", "engineId": "ford-340l", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024], "trims": ["232 Titaniumplus"], "bodyTypes": [], "sourceRefs": ["TSB 53-2908"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "ford-tourneocustom-nesil-belirlenmedi-eb-170", "slug": "eb-170", "engineId": "ford-eb-170", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["320L Titanium Plus"], "bodyTypes": [], "sourceRefs": ["TSB 53-2932"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}

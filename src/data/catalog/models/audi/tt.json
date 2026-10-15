@@ -1,0 +1,34 @@
+{
+  "id": "audi-tt",
+  "brandId": "audi",
+  "slug": "tt",
+  "name": "TT",
+  "order": 0,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-15",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "audi-tt-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "TT (nesil belirlenmedi)",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2017 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-15",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "audi-tt-nesil-belirlenmedi-20-tfsi", "slug": "20-tfsi", "engineId": "audi-20-tfsi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016], "trims": ["Roadstar", "Roadstar S Tronic", "S Tronic"], "bodyTypes": ["Coupé"], "sourceRefs": ["TSB 9-379", "TSB 9-380", "TSB 9-473", "TSB 9-474", "TSB 9-639"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "audi-tt-nesil-belirlenmedi-32", "slug": "32", "engineId": "audi-32", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["S Tronic"], "bodyTypes": [], "sourceRefs": ["TSB 9-381", "TSB 9-382"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "audi-tt-nesil-belirlenmedi-18-tfsi-160", "slug": "18-tfsi-160", "engineId": "audi-18-tfsi-160", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "S tronic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2010, 2011, 2012, 2013], "trims": ["Roadstar", "Roadstar S Tronic"], "bodyTypes": ["Coupé"], "sourceRefs": ["TSB 9-1005", "TSB 9-1006", "TSB 9-470", "TSB 9-492"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "audi-tt-nesil-belirlenmedi-20-tdi-170", "slug": "20-tdi-170", "engineId": "audi-20-tdi-170", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2010, 2011, 2012, 2013], "trims": ["Roadstar S Tronic", "S Tronic"], "bodyTypes": ["Coupé"], "sourceRefs": ["TSB 9-1007", "TSB 9-1010", "TSB 9-471"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "audi-tt-nesil-belirlenmedi-20-tdi", "slug": "20-tdi", "engineId": "audi-20-tdi", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2010, 2011, 2012], "trims": ["Roadstar"], "bodyTypes": [], "sourceRefs": ["TSB 9-472"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "audi-tt-nesil-belirlenmedi-20-tfsi-211", "slug": "20-tfsi-211", "engineId": "audi-20-tfsi-211", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013], "trims": ["Roadstar S Tronic", "Roastar S Tronic"], "bodyTypes": [], "sourceRefs": ["TSB 9-1008", "TSB 9-1009"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "audi-tt-nesil-belirlenmedi-20-tfsi-230", "slug": "20-tfsi-230", "engineId": "audi-20-tfsi-230", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017], "trims": ["S Tronic"], "bodyTypes": ["Coupé"], "sourceRefs": ["TSB 9-1263"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    }
+  ]
+}
