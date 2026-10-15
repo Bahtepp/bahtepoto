@@ -70,3 +70,21 @@ export const EXCLUDED_MODEL_PREFIXES = [
   'CANTER', 'TRANSPORTER', 'T.PORTER', 'TPORTER', 'TRAFICPANELVAN', 'TRAFICMULTIX', 'UNIMOG', 'ECONIC', 'E-TRANSIT', 'H350',
   'MIDLUM', 'MAGNUM', 'PREMIUM', 'KERAX', 'BOXER', 'E-JOURNEY', 'EXPRESS', 'KANGOOEXPRESSFRIGOMAXI',
 ];
+
+/**
+ * Ana modelden ayrı satılmış bir alt modeli ya da nesil dönemi ana modelden farklı bir kasayı gösteren
+ * sözcükler (örn. "COROLLA VERSO", "GOLF PLUS", "ASTRA HB CLASSIC", "YARIS CROSS", "PASSAT PRO").
+ * Bu satırlar model yılına bakılarak bir nesle eşlenmez; yalnızca tip adındaki nesil ipucu (III, MK7)
+ * ile eşlenebilir. `first`: yalnızca model adından hemen sonra geldiğinde (donanım adının parçası
+ * olabildikleri için: "MIDLINE PLUS"); `anywhere`: tip adının herhangi bir yerinde.
+ */
+export const SUBMODEL_WORDS = {
+  first: new Set(['PLUS', 'PRO']),
+  anywhere: new Set(['VERSO', 'CLASSIC', 'CROSS', 'SYMBOL', 'CC', 'E-TECH', 'ETECH', 'TWINTOP', 'CAMPUS']),
+  /**
+   * Yalnızca belirli modelde alt model gösteren sözcükler (TSB model adı → sözcükler).
+   * POLO SEDAN: uzun dingil mesafeli Polo sedan (Vento) 2010'dan beri Avrupa dışı pazarlar için ayrı
+   * üretilen bir hattır (Wikipedia "Volkswagen Polo Mk5"); dönemi hatchback nesillerinden farklıdır.
+   */
+  byModel: { POLO: ['SEDAN'] } as Record<string, string[]>,
+};

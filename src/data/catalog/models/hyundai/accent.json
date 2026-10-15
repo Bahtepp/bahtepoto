@@ -5,16 +5,34 @@
   "name": "Accent",
   "order": 0,
   "status": "sourced",
-  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "sourceIds": ["wp-en-hyundai-accent", "tsb-kasko-deger-listesi"],
   "updatedAt": "2026-10-15",
-  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir. Nesiller ve yıl aralıkları elle, her neslin kendi kaynağıyla eklendi; TSB satırı bir nesle yalnızca model yılları tek bir neslin içinde ve komşu neslin sınırından uzaksa (ya da tip adında nesil ipucu varsa) bağlanır.",
   "generations": [
+    {
+      "id": "hyundai-accent-rb",
+      "slug": "rb",
+      "name": "Accent Blue (RB)",
+      "code": "RB",
+      "order": 0,
+      "labelPeriod": { "marketId": "eu", "basis": "production", "start": { "year": 2010 }, "end": { "year": 2019 }, "approximate": false },
+      "periods": [],
+      "status": "sourced",
+      "sourceIds": ["wp-en-hyundai-accent"],
+      "updatedAt": "2026-10-15",
+      "notes": "Dördüncü nesil; bilgi kutusundaki diğer adlar arasında \"Accent Blue (Turkey)\" yazıyor. Üretim 2010–2019. Bilgi kutusundaki üretim satırı ülke belirtmiyor; Avrupa pazarına bağlandı. Önceki nesillerin (LC \"Admire\", MC \"Era\") Türkiye yılları kaynakta açık olmadığından henüz girilmedi; bu nedenle TSB'deki 2008 \"Admire\" tipleri nesilsiz kalır.",
+      "revisions": [],
+      "variants": [
+        { "id": "hyundai-accent-rb-14", "slug": "14", "engineId": "hyundai-14", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }, { "type": "cvt", "name": "CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018], "trims": ["Blue Cvvt Biz", "Blue Cvvt Mode", "Blue Cvvt Mode Plus", "Blue Cvvt Prime", "Blue D-CVVT Biz", "Blue D-CVVT Mode", "Blue D-CVVT Mode Plus", "Blue D-CVVT Prime"], "bodyTypes": [], "sourceRefs": ["TSB 177-1012", "TSB 177-1013", "TSB 177-1044", "TSB 177-1045", "TSB 177-1069", "TSB 177-1070", "TSB 177-1071", "TSB 177-1072", "TSB 177-1073", "TSB 177-1074", "TSB 177-1084", "TSB 177-1085", "TSB 177-384", "TSB 177-385", "TSB 177-386", "TSB 177-387"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+        { "id": "hyundai-accent-rb-16-crdi", "slug": "16-crdi", "engineId": "hyundai-16-crdi", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }, { "type": "dual-clutch", "name": "DCT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018], "trims": ["Blue Biz", "Blue Mode", "Blue Mode Plus", "Blue Prime"], "bodyTypes": [], "sourceRefs": ["TSB 177-1014", "TSB 177-1015", "TSB 177-1040", "TSB 177-1041", "TSB 177-1118", "TSB 177-1119", "TSB 177-1120", "TSB 177-1121", "TSB 177-402", "TSB 177-403", "TSB 177-404", "TSB 177-405"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+      ]
+    },
     {
       "id": "hyundai-accent-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
       "name": "Accent (nesil belirlenmedi)",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2018 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
       "updatedAt": "2026-10-15",
@@ -23,9 +41,7 @@
       "variants": [
         { "id": "hyundai-accent-nesil-belirlenmedi-13", "slug": "13", "engineId": "hyundai-13", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008], "trims": ["Admire (Y)"], "bodyTypes": [], "sourceRefs": ["TSB 177-131", "TSB 177-132"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
         { "id": "hyundai-accent-nesil-belirlenmedi-16", "slug": "16", "engineId": "hyundai-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008], "trims": ["Admire (Y)"], "bodyTypes": [], "sourceRefs": ["TSB 177-133", "TSB 177-134"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "hyundai-accent-nesil-belirlenmedi-15-crdi", "slug": "15-crdi", "engineId": "hyundai-15-crdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008], "trims": ["Admire (Y)"], "bodyTypes": [], "sourceRefs": ["TSB 177-135"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "hyundai-accent-nesil-belirlenmedi-14", "slug": "14", "engineId": "hyundai-14", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }, { "type": "cvt", "name": "CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018], "trims": ["Blue Cvvt Biz", "Blue Cvvt Mode", "Blue Cvvt Mode Plus", "Blue Cvvt Prime", "Blue D-CVVT Biz", "Blue D-CVVT Mode", "Blue D-CVVT Mode Plus", "Blue D-CVVT Prime"], "bodyTypes": [], "sourceRefs": ["TSB 177-1012", "TSB 177-1013", "TSB 177-1044", "TSB 177-1045", "TSB 177-1069", "TSB 177-1070", "TSB 177-1071", "TSB 177-1072", "TSB 177-1073", "TSB 177-1074", "TSB 177-1084", "TSB 177-1085", "TSB 177-384", "TSB 177-385", "TSB 177-386", "TSB 177-387"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "hyundai-accent-nesil-belirlenmedi-16-crdi", "slug": "16-crdi", "engineId": "hyundai-16-crdi", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }, { "type": "dual-clutch", "name": "DCT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018], "trims": ["Blue Biz", "Blue Mode", "Blue Mode Plus", "Blue Prime"], "bodyTypes": [], "sourceRefs": ["TSB 177-1014", "TSB 177-1015", "TSB 177-1040", "TSB 177-1041", "TSB 177-1118", "TSB 177-1119", "TSB 177-1120", "TSB 177-1121", "TSB 177-402", "TSB 177-403", "TSB 177-404", "TSB 177-405"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "hyundai-accent-nesil-belirlenmedi-15-crdi", "slug": "15-crdi", "engineId": "hyundai-15-crdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008], "trims": ["Admire (Y)"], "bodyTypes": [], "sourceRefs": ["TSB 177-135"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
       ]
     }
   ]

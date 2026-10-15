@@ -39,6 +39,496 @@
     "notes": "EcoBoost Hybrid için metin Haziran 2022, tablo 2020–2025 veriyor."
   },
   {
+    "id": "wp-en-renault-clio",
+    "title": "Renault Clio",
+    "url": "https://en.wikipedia.org/wiki/Renault_Clio",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1378091228 (https://en.wikipedia.org/w/index.php?oldid=1378091228)."
+  },
+  {
+    "id": "wp-en-renault-megane",
+    "title": "Renault Mégane",
+    "url": "https://en.wikipedia.org/wiki/Renault_M%C3%A9gane",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1376366156 (https://en.wikipedia.org/w/index.php?oldid=1376366156)."
+  },
+  {
+    "id": "wp-en-renault-fluence",
+    "title": "Renault Fluence",
+    "url": "https://en.wikipedia.org/wiki/Renault_Fluence",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1369999208 (https://en.wikipedia.org/w/index.php?oldid=1369999208)."
+  },
+  {
+    "id": "wp-en-renault-symbol",
+    "title": "Renault Symbol",
+    "url": "https://en.wikipedia.org/wiki/Renault_Symbol",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1369966683 (https://en.wikipedia.org/w/index.php?oldid=1369966683)."
+  },
+  {
+    "id": "wp-en-fiat-tipo-2015",
+    "title": "Fiat Tipo (2015)",
+    "url": "https://en.wikipedia.org/wiki/Fiat_Tipo_(2015)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1365508369 (https://en.wikipedia.org/w/index.php?oldid=1365508369). Türkiye'de Fiat Egea adıyla satılır."
+  },
+  {
+    "id": "wp-en-fiat-linea",
+    "title": "Fiat Linea",
+    "url": "https://en.wikipedia.org/wiki/Fiat_Linea",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1372126763 (https://en.wikipedia.org/w/index.php?oldid=1372126763)."
+  },
+  {
+    "id": "wp-en-fiat-doblo",
+    "title": "Fiat Doblò",
+    "url": "https://en.wikipedia.org/wiki/Fiat_Dobl%C3%B2",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1375144556 (https://en.wikipedia.org/w/index.php?oldid=1375144556)."
+  },
+  {
+    "id": "wp-en-toyota-corolla-e120",
+    "title": "Toyota Corolla (E120)",
+    "url": "https://en.wikipedia.org/wiki/Toyota_Corolla_(E120)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1379749500 (https://en.wikipedia.org/w/index.php?oldid=1379749500)."
+  },
+  {
+    "id": "wp-en-toyota-corolla-e140",
+    "title": "Toyota Corolla (E140)",
+    "url": "https://en.wikipedia.org/wiki/Toyota_Corolla_(E140)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1375301083 (https://en.wikipedia.org/w/index.php?oldid=1375301083)."
+  },
+  {
+    "id": "wp-en-toyota-corolla-e170",
+    "title": "Toyota Corolla (E170)",
+    "url": "https://en.wikipedia.org/wiki/Toyota_Corolla_(E170)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1379873724 (https://en.wikipedia.org/w/index.php?oldid=1379873724)."
+  },
+  {
+    "id": "wp-en-toyota-corolla-e210",
+    "title": "Toyota Corolla (E210)",
+    "url": "https://en.wikipedia.org/wiki/Toyota_Corolla_(E210)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1378368863 (https://en.wikipedia.org/w/index.php?oldid=1378368863)."
+  },
+  {
+    "id": "wp-en-toyota-auris",
+    "title": "Toyota Auris",
+    "url": "https://en.wikipedia.org/wiki/Toyota_Auris",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1376835773 (https://en.wikipedia.org/w/index.php?oldid=1376835773)."
+  },
+  {
+    "id": "wp-en-toyota-vitz",
+    "title": "Toyota Vitz",
+    "url": "https://en.wikipedia.org/wiki/Toyota_Vitz",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1376772236 (https://en.wikipedia.org/w/index.php?oldid=1376772236). Yaris XP90 ve XP130 nesilleri bu sayfada."
+  },
+  {
+    "id": "wp-en-toyota-yaris-xp210",
+    "title": "Toyota Yaris (XP210)",
+    "url": "https://en.wikipedia.org/wiki/Toyota_Yaris_(XP210)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1364000618 (https://en.wikipedia.org/w/index.php?oldid=1364000618)."
+  },
+  {
+    "id": "vw-newsroom-golf-5",
+    "title": "Golf V (2003–2008)",
+    "url": "https://www.volkswagen-newsroom.com/en/golf-5-20032008-19480",
+    "publisher": "Volkswagen AG (Volkswagen Newsroom)",
+    "tier": "primary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Volkswagen Newsroom \"Classic\" model sayfası; nesil dönemi sayfa başlığında yıl aralığı olarak verilir (üretim / pazara çıkış ayrımı yapılmaz). Golf V Variant: 2007–2009 (https://www.volkswagen-newsroom.com/en/golf-5-variant-20072009-19525)."
+  },
+  {
+    "id": "vw-newsroom-golf-6",
+    "title": "Golf VI (2008–2012)",
+    "url": "https://www.volkswagen-newsroom.com/en/golf-6-20082012-19484",
+    "publisher": "Volkswagen AG (Volkswagen Newsroom)",
+    "tier": "primary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Volkswagen Newsroom \"Classic\" model sayfası; nesil dönemi sayfa başlığında yıl aralığı olarak verilir (üretim / pazara çıkış ayrımı yapılmaz). Golf VI Variant: 2009–2013 (https://www.volkswagen-newsroom.com/en/golf-6-variant-20092013-19528); Golf VI Cabriolet: 2011–2016 (https://www.volkswagen-newsroom.com/en/golf-6-cabriolet-20112016-19494)."
+  },
+  {
+    "id": "vw-newsroom-golf-7",
+    "title": "Golf VII (2012–2019)",
+    "url": "https://www.volkswagen-newsroom.com/en/golf-7-20122019-20035",
+    "publisher": "Volkswagen AG (Volkswagen Newsroom)",
+    "tier": "primary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Volkswagen Newsroom \"Classic\" model sayfası; nesil dönemi sayfa başlığında yıl aralığı olarak verilir (üretim / pazara çıkış ayrımı yapılmaz). Dünya prömiyeri 4 Eylül 2012. Golf VII Variant: 2013–2020 (https://www.volkswagen-newsroom.com/en/golf-7-variant-20132020-20041)."
+  },
+  {
+    "id": "wp-en-vw-golf-mk8",
+    "title": "Volkswagen Golf Mk8",
+    "url": "https://en.wikipedia.org/wiki/Volkswagen_Golf_Mk8",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1379442061 (https://en.wikipedia.org/w/index.php?oldid=1379442061)."
+  },
+  {
+    "id": "vw-newsroom-passat-b6",
+    "title": "Passat B6 (2005–2010)",
+    "url": "https://www.volkswagen-newsroom.com/en/passat-b6-20052010-19549",
+    "publisher": "Volkswagen AG (Volkswagen Newsroom)",
+    "tier": "primary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Volkswagen Newsroom \"Classic\" model sayfası; nesil dönemi sayfa başlığında yıl aralığı olarak verilir (üretim / pazara çıkış ayrımı yapılmaz). Pazara çıkış: 2005 baharı."
+  },
+  {
+    "id": "vw-newsroom-passat-b7",
+    "title": "Passat B7 (2010–2014)",
+    "url": "https://www.volkswagen-newsroom.com/en/passat-b7-20102014-20036",
+    "publisher": "Volkswagen AG (Volkswagen Newsroom)",
+    "tier": "primary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Volkswagen Newsroom \"Classic\" model sayfası; nesil dönemi sayfa başlığında yıl aralığı olarak verilir (üretim / pazara çıkış ayrımı yapılmaz)."
+  },
+  {
+    "id": "wp-en-vw-passat-b8",
+    "title": "Volkswagen Passat (B8)",
+    "url": "https://en.wikipedia.org/wiki/Volkswagen_Passat_(B8)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1366132995 (https://en.wikipedia.org/w/index.php?oldid=1366132995)."
+  },
+  {
+    "id": "wp-en-vw-passat-b9",
+    "title": "Volkswagen Passat (B9)",
+    "url": "https://en.wikipedia.org/wiki/Volkswagen_Passat_(B9)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1365603710 (https://en.wikipedia.org/w/index.php?oldid=1365603710)."
+  },
+  {
+    "id": "vw-newsroom-polo-4",
+    "title": "Polo IV (2001–2009)",
+    "url": "https://www.volkswagen-newsroom.com/en/polo-iv-20012009-19150",
+    "publisher": "Volkswagen AG (Volkswagen Newsroom)",
+    "tier": "primary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Volkswagen Newsroom \"Classic\" model sayfası; nesil dönemi sayfa başlığında yıl aralığı olarak verilir (üretim / pazara çıkış ayrımı yapılmaz). Tanıtım: 2001 sonu, IAA Frankfurt."
+  },
+  {
+    "id": "vw-newsroom-polo-5",
+    "title": "Polo V (2009–2017)",
+    "url": "https://www.volkswagen-newsroom.com/en/polo-5-20092017-20044",
+    "publisher": "Volkswagen AG (Volkswagen Newsroom)",
+    "tier": "primary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Volkswagen Newsroom \"Classic\" model sayfası; nesil dönemi sayfa başlığında yıl aralığı olarak verilir (üretim / pazara çıkış ayrımı yapılmaz)."
+  },
+  {
+    "id": "wp-en-vw-polo-mk6",
+    "title": "Volkswagen Polo Mk6",
+    "url": "https://en.wikipedia.org/wiki/Volkswagen_Polo_Mk6",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1377291965 (https://en.wikipedia.org/w/index.php?oldid=1377291965)."
+  },
+  {
+    "id": "wp-en-vw-jetta-a5",
+    "title": "Volkswagen Jetta (A5)",
+    "url": "https://en.wikipedia.org/wiki/Volkswagen_Jetta_(A5)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1375227422 (https://en.wikipedia.org/w/index.php?oldid=1375227422)."
+  },
+  {
+    "id": "wp-en-vw-jetta-a6",
+    "title": "Volkswagen Jetta (A6)",
+    "url": "https://en.wikipedia.org/wiki/Volkswagen_Jetta_(A6)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1379222702 (https://en.wikipedia.org/w/index.php?oldid=1379222702)."
+  },
+  {
+    "id": "wp-en-vw-jetta-a7",
+    "title": "Volkswagen Jetta (A7)",
+    "url": "https://en.wikipedia.org/wiki/Volkswagen_Jetta_(A7)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1378059867 (https://en.wikipedia.org/w/index.php?oldid=1378059867)."
+  },
+  {
+    "id": "wp-en-hyundai-i20",
+    "title": "Hyundai i20",
+    "url": "https://en.wikipedia.org/wiki/Hyundai_i20",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1380016843 (https://en.wikipedia.org/w/index.php?oldid=1380016843)."
+  },
+  {
+    "id": "wp-en-hyundai-accent",
+    "title": "Hyundai Accent",
+    "url": "https://en.wikipedia.org/wiki/Hyundai_Accent",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1379260507 (https://en.wikipedia.org/w/index.php?oldid=1379260507)."
+  },
+  {
+    "id": "wp-en-hyundai-i30",
+    "title": "Hyundai i30",
+    "url": "https://en.wikipedia.org/wiki/Hyundai_i30",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1379338372 (https://en.wikipedia.org/w/index.php?oldid=1379338372)."
+  },
+  {
+    "id": "wp-en-opel-astra",
+    "title": "Opel Astra",
+    "url": "https://en.wikipedia.org/wiki/Opel_Astra",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1378928314 (https://en.wikipedia.org/w/index.php?oldid=1378928314)."
+  },
+  {
+    "id": "wp-en-opel-corsa",
+    "title": "Opel Corsa",
+    "url": "https://en.wikipedia.org/wiki/Opel_Corsa",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1380262570 (https://en.wikipedia.org/w/index.php?oldid=1380262570)."
+  },
+  {
+    "id": "wp-en-peugeot-208",
+    "title": "Peugeot 208",
+    "url": "https://en.wikipedia.org/wiki/Peugeot_208",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1370788746 (https://en.wikipedia.org/w/index.php?oldid=1370788746)."
+  },
+  {
+    "id": "wp-en-peugeot-301",
+    "title": "Peugeot 301 (2012)",
+    "url": "https://en.wikipedia.org/wiki/Peugeot_301_(2012)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1378163131 (https://en.wikipedia.org/w/index.php?oldid=1378163131)."
+  },
+  {
+    "id": "wp-en-peugeot-308",
+    "title": "Peugeot 308",
+    "url": "https://en.wikipedia.org/wiki/Peugeot_308",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1378430317 (https://en.wikipedia.org/w/index.php?oldid=1378430317)."
+  },
+  {
+    "id": "wp-en-dacia-duster",
+    "title": "Dacia Duster",
+    "url": "https://en.wikipedia.org/wiki/Dacia_Duster",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1380175969 (https://en.wikipedia.org/w/index.php?oldid=1380175969)."
+  },
+  {
+    "id": "wp-en-dacia-sandero",
+    "title": "Dacia Sandero",
+    "url": "https://en.wikipedia.org/wiki/Dacia_Sandero",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1378575680 (https://en.wikipedia.org/w/index.php?oldid=1378575680)."
+  },
+  {
+    "id": "wp-en-ford-fiesta-5",
+    "title": "Ford Fiesta (fifth generation)",
+    "url": "https://en.wikipedia.org/wiki/Ford_Fiesta_(fifth_generation)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1367304682 (https://en.wikipedia.org/w/index.php?oldid=1367304682)."
+  },
+  {
+    "id": "wp-en-ford-fiesta-6",
+    "title": "Ford Fiesta (sixth generation)",
+    "url": "https://en.wikipedia.org/wiki/Ford_Fiesta_(sixth_generation)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1352531799 (https://en.wikipedia.org/w/index.php?oldid=1352531799)."
+  },
+  {
+    "id": "wp-en-ford-fiesta-7",
+    "title": "Ford Fiesta (seventh generation)",
+    "url": "https://en.wikipedia.org/wiki/Ford_Fiesta_(seventh_generation)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1330404144 (https://en.wikipedia.org/w/index.php?oldid=1330404144)."
+  },
+  {
+    "id": "wp-en-ford-kuga",
+    "title": "Ford Kuga",
+    "url": "https://en.wikipedia.org/wiki/Ford_Kuga",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1377658736 (https://en.wikipedia.org/w/index.php?oldid=1377658736)."
+  },
+  {
+    "id": "wp-en-ford-mondeo-2",
+    "title": "Ford Mondeo (second generation)",
+    "url": "https://en.wikipedia.org/wiki/Ford_Mondeo_(second_generation)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1369489124 (https://en.wikipedia.org/w/index.php?oldid=1369489124)."
+  },
+  {
+    "id": "wp-en-ford-mondeo-3",
+    "title": "Ford Mondeo (third generation)",
+    "url": "https://en.wikipedia.org/wiki/Ford_Mondeo_(third_generation)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1376812849 (https://en.wikipedia.org/w/index.php?oldid=1376812849)."
+  },
+  {
+    "id": "wp-en-ford-mondeo-4",
+    "title": "Ford Mondeo (fourth generation)",
+    "url": "https://en.wikipedia.org/wiki/Ford_Mondeo_(fourth_generation)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1361372966 (https://en.wikipedia.org/w/index.php?oldid=1361372966)."
+  },
+  {
+    "id": "wp-en-ford-mondeo-5",
+    "title": "Ford Mondeo (fifth generation)",
+    "url": "https://en.wikipedia.org/wiki/Ford_Mondeo_(fifth_generation)",
+    "publisher": "Wikipedia (İngilizce)",
+    "tier": "secondary",
+    "accessedAt": "2026-10-15",
+    "language": "en",
+    "notes": "Bilgi kutusu ve metin, revizyon 1360907308 (https://en.wikipedia.org/w/index.php?oldid=1360907308)."
+  },
+  {
+    "id": "ford-tr-focus-brosur-2005-05",
+    "title": "Yeni Ford Focus broşürü (Mayıs 2005)",
+    "url": "https://web.archive.org/web/20060712175605/http://www.ford.com.tr:80/download/?fp=brosur/yeni_ford_focus.pdf",
+    "publisher": "Ford Otosan (ford.com.tr)",
+    "tier": "primary",
+    "accessedAt": "2026-10-15",
+    "language": "tr",
+    "notes": "Makyajsız Focus Mk2 Türkiye broşürü; teknik özellikler s. 32: 1.6 Duratec 100 PS (5 ileri manuel Trend; 4 ileri otomatik Trend, Ghia), 1.6 Duratec Ti-VCT 115 PS (5 ileri manuel, Ghia), 1.6 Duratorq TDCi 109 PS (5 ileri manuel, Trend, Ghia); 5 kapı ve 4 kapı sedan. PDF görüntü tabanlı. Internet Archive (Wayback Machine) kopyası; ford.com.tr artık bu adreste yayında değil."
+  },
+  {
+    "id": "ford-tr-focus-brosur-2008-02",
+    "title": "Yeni Ford Focus broşürü (Şubat 2008)",
+    "url": "https://web.archive.org/web/20090718001454/http://www.ford.com.tr/download?fp=brosur/yeni_ford_focus.pdf",
+    "publisher": "Ford Otosan (ford.com.tr)",
+    "tier": "primary",
+    "accessedAt": "2026-10-15",
+    "language": "tr",
+    "notes": "Makyajlı Focus Mk2 Türkiye broşürü (Temmuz 2009 arşiv kopyası); s. 6: 1.6 Duratec 100 PS (4 ileri otomatik), 1.6 Duratec Ti-VCT 115 PS (5 ileri manuel), 1.6 Duratorq TDCi 109 PS (5 ileri manuel); donanım Trend ve Titanium. PDF görüntü tabanlı. Internet Archive (Wayback Machine) kopyası; ford.com.tr artık bu adreste yayında değil."
+  },
+  {
+    "id": "ford-tr-focus-fiyat-2010-06",
+    "title": "Ford Türkiye fiyat yapılandırıcısı: Yeni Focus (Haziran 2010)",
+    "url": "https://web.archive.org/web/20100610000209/http://www.ford.com.tr:80/UIContent.aspx?Pid=234&AID=34&model_id=YENI+FOCUS&level0=5D&level1=CO&level2=16TD&level3=00",
+    "publisher": "Ford Otosan (ford.com.tr)",
+    "tier": "primary",
+    "accessedAt": "2026-10-15",
+    "language": "tr",
+    "notes": "Makyajlı Focus Mk2 fiyat yapılandırıcısı; bu adres (5 kapı, Collection) motor seçeneği olarak 1.6i 100PS, 1.6i 115PS ve 1.6 TDCi 90PS gösterir; diğer gövde/donanım bileşimleri ayrı adreslerde. Gövde: 3K, 4K, 5K, SW, CC; donanım: Comfort, Trend, Trend X, Collection, Titanium. Internet Archive (Wayback Machine) kopyası; ford.com.tr artık bu adreste yayında değil."
+  },
+  {
     "id": "tsb-kasko-deger-listesi",
     "title": "TSB Kasko Değer Listesi (2022-01, 2026-10)",
     "url": "https://www.tsb.org.tr/tr/kasko-deger-listesi",

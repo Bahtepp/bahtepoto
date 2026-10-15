@@ -211,6 +211,36 @@ describe('TSB → katalog', () => {
   });
 });
 
+describe('TSB → katalog: alt modeller ve elle girilmiş Türkiye durumu', () => {
+  const catalog = miniCatalog();
+  const mk2Variant = ((catalog.models.get('models/ford/focus.json')!.generations as Json[])[0]!.variants as Json[])[0]!;
+  const sold = { marketId: 'tr', status: 'sold', modelYears: [], trims: [], bodyTypes: [], sourceRefs: ['Broşür'], sourceIds: ['wp'] };
+  mk2Variant.marketIds = ['eu', 'tr'];
+  mk2Variant.marketAvailability = [sold];
+  const rows = [
+    row('FORD', '1', 'FOCUS 1.6 TDCi TITANIUM (109)', [2007, 2008]),
+    row('FORD', '2', 'FOCUS 1.6i TREND (100)', [2006, 2007]),
+    row('FORD', '3', 'FOCUS CLASSIC 1.6i TREND (100)', [2006, 2007]),
+  ];
+  const r = buildFromTsb(catalog, rows, OPTS);
+  const gens = r.merged.models.get('models/ford/focus.json')!.generations as Json[];
+  const variants = (slug: string) => (gens.find((g) => g.slug === slug)?.variants as Json[] | undefined) ?? [];
+
+  test('alt model adı geçen satır ("FOCUS CLASSIC") model yılından nesle eşlenmez', () => {
+    assert.equal(variants('mk2').filter((v) => String(v.engineId).endsWith('16-100')).length, 1);
+    const bucket = variants('nesil-belirlenmedi');
+    assert.equal(bucket.length, 1);
+    assert.deepEqual((bucket[0]!.marketAvailability as Json[])[0]!.sourceRefs, ['TSB 53-3']);
+  });
+
+  test('başka kaynakla girilmiş Türkiye durumu TSB kaydıyla ezilmez', () => {
+    const v = variants('mk2').find((x) => x.id === 'ford-focus-mk2-g8da')!;
+    assert.deepEqual(v.marketAvailability, [sold]);
+    const stripped = ((stripTsb(r.merged).models.get('models/ford/focus.json')!.generations as Json[])[0]!.variants as Json[])[0];
+    assert.deepEqual(stripped, mk2Variant);
+  });
+});
+
 describe('Türkiye pazar filtresi', () => {
   const markets = [{ id: 'eu' }, { id: 'gb', parentId: 'eu' }, { id: 'tr' }, { id: 'na' }];
   const listed = { marketIds: ['tr'], marketAvailability: [{ marketId: 'tr', status: 'listed' as const, modelYears: [], trims: [], bodyTypes: [], sourceRefs: [], sourceIds: ['x'] }] };

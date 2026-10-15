@@ -8,14 +8,15 @@
  * Nesil eşleştirme (tahminsiz):
  * 1. Tip adında nesil ipucu (III, MK7) ve katalogda bu nesil varsa → o nesil.
  * 2. Katalogda modelin nesilleri varsa ve satırın model yılları yalnızca BİR neslin yıl aralığıyla
- *    örtüşüp onun içinde kalıyorsa → o nesil. Birden fazla nesille örtüşüyorsa belirsiz.
+ *    örtüşüp onun içinde kalıyorsa → o nesil. Birden fazla nesille örtüşüyorsa belirsiz. Tip adı ayrı
+ *    satılmış bir alt modeli gösteriyorsa ("COROLLA VERSO", "GOLF PLUS"; bkz. SUBMODEL_WORDS) bu kural uygulanmaz.
  * 3. İpucu var ama katalogda nesil yoksa → ipucundan nesil ("Focus III"), yılları TSB model yılları.
  * 4. Hiçbiri değilse → "nesil belirlenmedi" grubu (açıkça etiketlenir); kayıt yine aktarılır.
  */
 import type { Json, RawCatalog } from '../lib/io.ts';
 import type { TsbRow } from './parse.ts';
 import { nearlyEqual, parseTypeName, resolveModels, type ParsedType } from './normalize.ts';
-import { BRAND_RULES, EXCLUDED_BRANDS, EXCLUDED_MODEL_PREFIXES, EXCLUDED_WORDS, type BrandRule } from './rules.ts';
+import { BRAND_RULES, EXCLUDED_BRANDS, EXCLUDED_MODEL_PREFIXES, EXCLUDED_WORDS, SUBMODEL_WORDS, type BrandRule } from './rules.ts';
 
 export const TSB_SOURCE_ID = 'tsb-kasko-deger-listesi';
 const MARKET = 'tr';
@@ -478,7 +479,11 @@ export function buildFromTsb(raw: RawCatalog, rows: TsbRow[], opts: { today: str
           const byHint = curatedGens.find((g) => new RegExp(`(^|-)mk${hn}$`).test(String(g.slug)) || new RegExp(`\\b(mk${hn}|${hint})\\b`, 'i').test(String(g.name)));
           if (byHint) return { gen: byHint, kind: 'existing' };
         }
-        const ranges = curatedGens
+        // Tip adının ham sözcükleri (gövde/donanım ayrıştırmasından önce: "PASSAT CC" gövde sayılabilir).
+        const words = fold(it.row.typeName).split(/\s+/).slice(1);
+        const byModel = SUBMODEL_WORDS.byModel[it.model] ?? [];
+        const submodel = words.some((w, i) => SUBMODEL_WORDS.anywhere.has(w) || byModel.includes(w) || (i === 0 && SUBMODEL_WORDS.first.has(w)));
+        const ranges = (submodel ? [] : curatedGens)
           .filter((g) => g.order !== 999 && g.labelPeriod)
           .map((g) => {
             const lp = g.labelPeriod as { start: { year: number }; end: { year: number } | null };
@@ -557,6 +562,12 @@ export function buildFromTsb(raw: RawCatalog, rows: TsbRow[], opts: { today: str
         const variants = gen.variants as Json[];
         const existing = variants.find((v) => v.engineId === engine.id);
         if (existing) {
+          // Elle, başka kaynakla girilmiş Türkiye durumu (örn. distribütör broşürüyle "sold") TSB'nin
+          // "listed" kaydıyla ezilmez; pazar başına tek kayıt olduğu için TSB satırları eklenmez.
+          const curated = ((existing.marketAvailability as Json[] | undefined) ?? []).some(
+            (x) => x.marketId === MARKET && !((x.sourceIds as string[] | undefined) ?? []).includes(TSB_SOURCE_ID),
+          );
+          if (curated) continue;
           const avail = ((existing.marketAvailability as Json[] | undefined) ?? []).filter((x) => x.marketId !== MARKET);
           avail.push(availability);
           existing.marketAvailability = avail;

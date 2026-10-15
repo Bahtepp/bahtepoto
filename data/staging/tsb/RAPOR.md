@@ -6,16 +6,16 @@ Kaynak dosyalar: `202201R1.xlsx`, `202610R1.xlsx` (TSB Kasko Değer Listesi). Fi
 |---|---|
 | TSB satırı (tekil marka-tip kodu) | 32427 |
 | Kapsam dışı (ağır vasıta, otobüs, panelvan, karavan, motosiklet …) | 16136 |
-| Aktarılan satır | 15155 |
+| Aktarılan satır | 15157 |
 | Aktarılamayan / belirsiz satır (`belirsiz.json`) | 1045 |
 | Marka | 96 |
-| Yeni model | 922 |
-| Yeni nesil grubu (ipucundan: 23, "nesil belirlenmedi": 920) | 943 |
+| Yeni model | 895 |
+| Yeni nesil grubu (ipucundan: 18, "nesil belirlenmedi": 918) | 936 |
 | Yeni motor (yakıt türü tip adında yazmayan: 1038) | 2397 |
-| Yeni varyant (nesil × motor) | 4437 |
-| — mevcut kataloğun nesillerine eşlenen | 12 |
-| — nesli belirlenemeyen | 4335 |
-| Türkiye durumu eklenen mevcut (elle girilmiş) varyant | 9 |
+| Yeni varyant (nesil × motor) | 4558 |
+| — mevcut kataloğun nesillerine eşlenen | 319 |
+| — nesli belirlenemeyen | 4191 |
+| Türkiye durumu eklenen mevcut (elle girilmiş) varyant | 7 |
 
 ## Kapsam dışı bırakılanlar
 
@@ -35,20 +35,20 @@ Kaynak dosyalar: `202201R1.xlsx`, `202610R1.xlsx` (TSB Kasko Değer Listesi). Fi
 | BMW | 42 | 295 |
 | Mercedes-Benz | 46 | 295 |
 | Audi | 38 | 294 |
-| Volkswagen | 34 | 266 |
-| Renault | 35 | 265 |
-| Ford | 34 | 244 |
-| Peugeot | 36 | 236 |
-| Opel | 34 | 228 |
-| Fiat | 34 | 178 |
+| Renault | 35 | 283 |
+| Volkswagen | 34 | 278 |
+| Ford | 34 | 262 |
+| Peugeot | 36 | 256 |
+| Opel | 34 | 243 |
+| Fiat | 34 | 186 |
 | Citroen | 26 | 167 |
+| Hyundai | 29 | 158 |
 | Skoda | 17 | 153 |
-| Hyundai | 29 | 147 |
 | Kia | 27 | 142 |
 | Seat | 14 | 123 |
+| Toyota | 28 | 111 |
 | Porsche | 9 | 104 |
-| Toyota | 28 | 101 |
-| Dacia | 7 | 95 |
+| Dacia | 7 | 104 |
 | Volvo | 22 | 92 |
 | Chrysler | 19 | 81 |
 | Nissan | 22 | 71 |
