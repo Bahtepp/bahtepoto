@@ -175,7 +175,8 @@ function checkEvidence(sp: string, file: StagingFile, catalogSourceIds: Set<stri
 /** Ardışık nesillerin etiket yılları üst üste biniyorsa uyarır (pazar/temel farkına işaret eder). */
 function overlapWarnings(where: string, model: Json, warnings: string[]): void {
   type G = { id: string; order: number; labelPeriod?: { start?: { year: number }; end?: { year: number } | null } };
-  const gens = ((model.generations as G[] | undefined) ?? []).slice().sort((a, b) => a.order - b.order);
+  // "Nesil belirlenmedi" grupları (sıra ≥ 900) bir nesil değildir; örtüşme denetimine girmez.
+  const gens = ((model.generations as G[] | undefined) ?? []).filter((g) => g.order < 900).sort((a, b) => a.order - b.order);
   for (let i = 1; i < gens.length; i++) {
     const prev = gens[i - 1]!;
     const next = gens[i]!;

@@ -118,6 +118,67 @@ function report(r: BuildResult, files: string[], errors: string[]): string {
   return lines.join('\n');
 }
 
+/** Eksik nesil (kasa) ve motor eşleştirmeleri: her çalıştırmada güncel liste. */
+function gapsReport(catalog: RawCatalog): string {
+  type G = { slug: string; name: string; code?: string; revisions?: unknown[]; variants: { engineId: string; revisionMapping: string; marketAvailability?: { marketId: string }[] }[] };
+  const brandName = new Map(catalog.brands.map((b) => [String(b.id), String(b.name)]));
+  const engines = new Map([...catalog.engines.values()].flat().map((e) => [String(e.id), e]));
+  const noGen: [string, string, number, number][] = [];
+  const unknownRev: string[] = [];
+  const hintGens: string[] = [];
+  for (const m of catalog.models.values()) {
+    const gens = (m.generations as G[] | undefined) ?? [];
+    const bucket = gens.find((g) => g.slug === 'nesil-belirlenmedi');
+    if (bucket) noGen.push([brandName.get(String(m.brandId)) ?? String(m.brandId), String(m.name), bucket.variants.length, gens.length - 1]);
+    for (const g of gens) {
+      if (/^nesil-\d+$/.test(g.slug)) hintGens.push(`${brandName.get(String(m.brandId))} ${g.name}`);
+      if ((g.revisions ?? []).length > 0) {
+        const n = g.variants.filter((v) => v.revisionMapping === 'unknown' && v.marketAvailability?.some((a) => a.marketId === 'tr')).length;
+        if (n) unknownRev.push(`${brandName.get(String(m.brandId))} ${g.name}: ${n} Türkiye motorunun makyaj dönemi bilinmiyor`);
+      }
+    }
+  }
+  const byBrand = new Map<string, { total: number; fuel: number; power: number; disp: number }>();
+  for (const e of engines.values()) {
+    if (!((e.sourceIds as string[] | undefined) ?? []).includes('tsb-kasko-deger-listesi')) continue;
+    const b = brandName.get(String(e.brandId)) ?? String(e.brandId);
+    const s = byBrand.get(b) ?? { total: 0, fuel: 0, power: 0, disp: 0 };
+    s.total++;
+    if (!e.fuel) s.fuel++;
+    if (!e.power) s.power++;
+    if (e.displacementL === undefined && e.fuel !== 'electric') s.disp++;
+    byBrand.set(b, s);
+  }
+  const variantsNoGen = noGen.reduce((a, x) => a + x[2], 0);
+  return [
+    '# Eksik kasa (nesil) ve motor eşleştirmeleri',
+    '',
+    '`npm run catalog:update` her çalıştığında yeniden üretilir. Katalogda model dosyasına kaynaklı nesil eklendikçe',
+    'TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.',
+    '',
+    `## Nesli belirlenemeyen varyantlar (${variantsNoGen} varyant, ${noGen.length} model)`,
+    '',
+    '| Marka | Model | Nesli belirlenemeyen varyant | Bilinen nesil |',
+    '|---|---|---|---|',
+    ...noGen.sort((a, b) => b[2] - a[2] || a[0].localeCompare(b[0], 'tr')).map(([b, m, n, k]) => `| ${b} | ${m} | ${n} | ${k} |`),
+    '',
+    `## Yalnızca TSB ipucundan oluşturulan nesiller (${hintGens.length}; kasa kodu, makyaj dönemi ve üretim yılları doğrulanmadı)`,
+    '',
+    ...hintGens.sort((a, b) => a.localeCompare(b, 'tr')).map((x) => `- ${x}`),
+    '',
+    `## Makyaj dönemi eşleşmesi bilinmeyen Türkiye motorları (${unknownRev.length} nesil)`,
+    '',
+    ...(unknownRev.length ? unknownRev.map((x) => `- ${x}`) : ['Yok.']),
+    '',
+    '## Motor bilgisi eksik TSB motorları (tip adında yazmayan alanlar)',
+    '',
+    '| Marka | Motor | Yakıt yok | Güç yok | Hacim yok |',
+    '|---|---|---|---|---|',
+    ...[...byBrand].sort((a, b) => b[1].fuel + b[1].power - (a[1].fuel + a[1].power)).map(([b, s]) => `| ${b} | ${s.total} | ${s.fuel} | ${s.power} | ${s.disp} |`),
+    '',
+  ].join('\n');
+}
+
 function writeCatalog(before: RawCatalog, after: RawCatalog): string[] {
   const dir = DEFAULT_DIRS.catalogDir;
   const written: string[] = [];
@@ -167,6 +228,7 @@ const stagingDir = join(DEFAULT_DIRS.stagingDir, 'tsb');
 mkdirSync(stagingDir, { recursive: true });
 writeFileSync(join(stagingDir, 'RAPOR.md'), report(result, files, errors), 'utf8');
 writeFileSync(join(stagingDir, 'belirsiz.json'), formatRecordList(result.rejects), 'utf8');
+writeFileSync(join(stagingDir, 'EKSIKLER.md'), gapsReport(result.merged), 'utf8');
 
 const s = result.stats;
 console.log(`Marka ${s.brands} · yeni model ${s.models} · yeni nesil ${s.generations} · yeni motor ${s.engines} · yeni varyant ${s.variants} · belirsiz ${result.rejects.length}`);

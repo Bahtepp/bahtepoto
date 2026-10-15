@@ -63,13 +63,15 @@ export function loadStaging(stagingDir: string, only?: string): LoadedStagingFil
   return listJsonFiles(stagingDir)
     .map((full) => ({ full, path: toPosix(relative(stagingDir, full)) }))
     .filter(({ path }) => !only || path.startsWith(`${only}/`))
-    .map(({ full, path }) => {
+    .map(({ full, path }): LoadedStagingFile | undefined => {
       let raw: unknown;
       try {
         raw = readJson(full);
       } catch (e) {
         return { path, errors: [`${path}: JSON okunamadı (${(e as Error).message})`] };
       }
+      // Kayıt listesi biçimindeki raporlar (örn. tsb/belirsiz.json) aday dosyası değildir.
+      if (Array.isArray(raw)) return undefined;
       const parsed = stagingFileSchema.safeParse(raw);
       if (!parsed.success) {
         return { path, errors: parsed.error.issues.map((i) => `${path}: ${i.path.join('.') || '(kök)'}: ${i.message}`) };
@@ -77,5 +79,6 @@ export function loadStaging(stagingDir: string, only?: string): LoadedStagingFil
       const folder = path.split('/')[0];
       const errors = parsed.data.adapter === folder ? [] : [`${path}: "adapter" (${parsed.data.adapter}) klasör adıyla (${folder}) aynı olmalı`];
       return { path, file: parsed.data, errors };
-    });
+    })
+    .filter((x): x is LoadedStagingFile => x !== undefined);
 }

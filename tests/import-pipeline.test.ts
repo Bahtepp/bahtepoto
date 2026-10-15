@@ -40,6 +40,12 @@ describe('geçici alan şeması', () => {
     assert.equal(stagingFileSchema.safeParse(f).success, false);
   });
 
+  test('kayıt listesi biçimindeki raporlar (örn. tsb/belirsiz.json) aday dosyası sayılmaz', () => {
+    const { a } = run({ 'tsb/belirsiz.json': [{ brand: 'FORD', reason: 'test' }] });
+    assert.deepEqual(a.errors, []);
+    assert.equal(a.staging.length, 0);
+  });
+
   test('adapter alanı klasör adıyla aynı olmalı', () => {
     const { a } = run({ 'baska/golf.json': stagingFile([]) });
     assert.ok(a.errors.some((e) => e.includes('klasör adıyla')));
