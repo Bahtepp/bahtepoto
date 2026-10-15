@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 1,
+  "adapter": "wikidata",
+  "retrievedAt": "2026-10-15",
+  "license": {
+    "name": "Wikidata",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": "Wikidata (CC0 1.0), https://www.wikidata.org",
+    "publishable": true
+  },
+  "rawFiles": [
+    "wikidata/2026-10-15/Q1428988.json",
+    "wikidata/2026-10-15/Q1417956.json",
+    "wikidata/2026-10-15/Q62362.json",
+    "wikidata/2026-10-15/Q56403002.json"
+  ],
+  "sources": [
+    {
+      "id": "wikidata-q1428988",
+      "title": "Volkswagen Golf Mk5 (Wikidata Q1428988)",
+      "url": "https://www.wikidata.org/wiki/Q1428988",
+      "publisher": "Wikidata",
+      "tier": "secondary",
+      "accessedAt": "2026-10-15",
+      "language": "mul",
+      "notes": "CC0 1.0. Topluluk tarafından düzenlenir. Okunan revizyon: 2469710653."
+    },
+    {
+      "id": "wikidata-q1417956",
+      "title": "Volkswagen Golf Mk6 (Wikidata Q1417956)",
+      "url": "https://www.wikidata.org/wiki/Q1417956",
+      "publisher": "Wikidata",
+      "tier": "secondary",
+      "accessedAt": "2026-10-15",
+      "language": "mul",
+      "notes": "CC0 1.0. Topluluk tarafından düzenlenir. Okunan revizyon: 2469714677."
+    },
+    {
+      "id": "wikidata-q62362",
+      "title": "Volkswagen Golf Mk7 (Wikidata Q62362)",
+      "url": "https://www.wikidata.org/wiki/Q62362",
+      "publisher": "Wikidata",
+      "tier": "secondary",
+      "accessedAt": "2026-10-15",
+      "language": "mul",
+      "notes": "CC0 1.0. Topluluk tarafından düzenlenir. Okunan revizyon: 2556978941."
+    },
+    {
+      "id": "wikidata-q56403002",
+      "title": "Volkswagen Golf Mk8 (Wikidata Q56403002)",
+      "url": "https://www.wikidata.org/wiki/Q56403002",
+      "publisher": "Wikidata",
+      "tier": "secondary",
+      "accessedAt": "2026-10-15",
+      "language": "mul",
+      "notes": "CC0 1.0. Topluluk tarafından düzenlenir. Okunan revizyon: 2469873933."
+    }
+  ],
+  "candidates": [
+    {
+      "kind": "model",
+      "target": "models/volkswagen/golf.json",
+      "record": {
+        "id": "volkswagen-golf",
+        "brandId": "volkswagen",
+        "slug": "golf",
+        "name": "Golf",
+        "status": "unverified",
+        "updatedAt": "2026-10-15",
+        "notes": "Wikidata nesil iskeleti (Mk5–Mk8). Makyaj dönemi, motor ve pazar verisi henüz yok; yıllar doğrulanmadı.",
+        "generations": [
+          {
+            "id": "volkswagen-golf-mk5",
+            "slug": "mk5",
+            "name": "Golf Mk5",
+            "order": 4,
+            "labelPeriod": {
+              "marketId": "eu",
+              "basis": "production",
+              "start": {
+                "year": 2003
+              },
+              "end": {
+                "year": 2009
+              }
+            },
+            "status": "unverified",
+            "sourceIds": [
+              "wikidata-q1428988"
+            ],
+            "updatedAt": "2026-10-15",
+            "notes": "Yıllar (2003–2009) Wikidata Q1428988 öğesinin P580/P582 değerlerinden alındı ve doğrulanmadı. Wikidata bu yılların üretim, satış ya da model yılı olduğunu ve hangi pazara ait olduğunu belirtmiyor; etiketteki pazar (eu) ve temel (production) kaynağa dayanmayan yer tutuculardır. Wikidata makyaj bilgisi vermediği için makyaj dönemi oluşturulmadı."
+          },
+          {
+            "id": "volkswagen-golf-mk6",
+            "slug": "mk6",
+            "name": "Golf Mk6",
+            "order": 5,
+            "labelPeriod": {
+              "marketId": "eu",
+              "basis": "production",
+              "start": {
+                "year": 2008
+              },
+              "end": {
+                "year": 2012
+              }
+            },
+            "status": "unverified",
+            "sourceIds": [
+              "wikidata-q1417956"
+            ],
+            "updatedAt": "2026-10-15",
+            "notes": "Yıllar (2008–2012) Wikidata Q1417956 öğesinin P580/P582 değerlerinden alındı ve doğrulanmadı. Wikidata bu yılların üretim, satış ya da model yılı olduğunu ve hangi pazara ait olduğunu belirtmiyor; etiketteki pazar (eu) ve temel (production) kaynağa dayanmayan yer tutuculardır. Wikidata makyaj bilgisi vermediği için makyaj dönemi oluşturulmadı."
+          },
+          {
+            "id": "volkswagen-golf-mk7",
+            "slug": "mk7",
+            "name": "Golf Mk7",
+            "order": 6,
+            "labelPeriod": {
+              "marketId": "eu",
+              "basis": "production",
+              "start": {
+                "year": 2012
+              },
+              "end": {
+                "year": 2021
+              }
+            },
+            "status": "unverified",
+            "sourceIds": [
+              "wikidata-q62362"
+            ],
+            "updatedAt": "2026-10-15",
+            "notes": "Yıllar (2012–2021) Wikidata Q62362 öğesinin P580/P582 değerlerinden alındı ve doğrulanmadı. Wikidata bu yılların üretim, satış ya da model yılı olduğunu ve hangi pazara ait olduğunu belirtmiyor; etiketteki pazar (eu) ve temel (production) kaynağa dayanmayan yer tutuculardır. Wikidata makyaj bilgisi vermediği için makyaj dönemi oluşturulmadı."
+          },
+          {
+            "id": "volkswagen-golf-mk8",
+            "slug": "mk8",
+            "name": "Golf Mk8",
+            "order": 7,
+            "labelPeriod": {
+              "marketId": "eu",
+              "basis": "production",
+              "start": {
+                "year": 2019
+              },
+              "end": null
+            },
+            "status": "unverified",
+            "sourceIds": [
+              "wikidata-q56403002"
+            ],
+            "updatedAt": "2026-10-15",
+            "notes": "Yıllar (2019–bitiş yok) Wikidata Q56403002 öğesinin P580/P582 değerlerinden alındı ve doğrulanmadı. Wikidata bu yılların üretim, satış ya da model yılı olduğunu ve hangi pazara ait olduğunu belirtmiyor; etiketteki pazar (eu) ve temel (production) kaynağa dayanmayan yer tutuculardır. Wikidata'da bitiş yılı yok; nesil \"sürüyor\" olarak yazıldı ama bu doğrulanmadı. Wikidata makyaj bilgisi vermediği için makyaj dönemi oluşturulmadı."
+          }
+        ]
+      },
+      "provenance": {
+        "volkswagen-golf-mk5": {
+          "slug": {
+            "kind": "derived",
+            "sourceId": "wikidata-q1428988",
+            "retrievedAt": "2026-10-15",
+            "sourceField": "Q1428988#labels.en",
+            "note": "\"Volkswagen Golf Mk5\" etiketinden"
+          },
+          "name": {
+            "kind": "derived",
+            "sourceId": "wikidata-q1428988",
+            "retrievedAt": "2026-10-15",
+            "sourceField": "Q1428988#labels.en",
+            "note": "\"Volkswagen Golf Mk5\" etiketinden"
+          },
+          "order": {
+            "kind": "derived",
+            "sourceId": "wikidata-q1428988",
+            "retrievedAt": "2026-10-15",
+            "sourceField": "Q1428988#labels.en",
+            "note": "\"Mk5\" sıra numarası eksi 1"
+          },
+          "labelPeriod.marketId": {
+            "kind": "placeholder",
+            "note": "Wikidata P580/P582 yılların hangi pazara ve hangi temele (üretim / satış / model yılı) ait olduğunu belirtmiyor; \"eu\" / \"production\" yer tutucudur."
+          },
+          "labelPeriod.basis": {
+            "kind": "placeholder",
+            "note": "Wikidata P580/P582 yılların hangi pazara ve hangi temele (üretim / satış / model yılı) ait olduğunu belirtmiyor; \"eu\" / \"production\" yer tutucudur."
+          },
+          "labelPeriod.start.year": {
+            "kind": "source",
+            "sourceId": "wikidata-q1428988",
+            "retrievedAt": "2026-10-15",
+            "sourceField": "Q1428988#P580",
+            "note": "Wikidata'daki dayanak: https://de.wikipedia.org/wiki/VW_Golf (P143 Q48183 üzerinden aktarılmış)."
+          },
+          "labelPeriod.end.year": {
+            "kind": "source",
+            "sourceId": "wikidata-q1428988",
+            "retrievedAt": "2026-10-15",
+            "sourceField": "Q1428988#P582",
+            "note": "Wikidata'daki dayanak: https://de.wikipedia.org/wiki/VW_Golf (P143 Q48183 üzerinden aktarılmış)."
+          }
+        },
+        "volkswagen-golf-mk6": {
+          "slug": {
+            "kind": "derived",
+            "sourceId": "wikidata-q1417956",
+            "retrievedAt": "2026-10-15",
+            "sourceField": "Q1417956#labels.en",
+            "note": "\"Volkswagen Golf Mk6\" etiketinden"
+          },
+          "name": {
+            "kind": "derived",
+            "sourceId": "wikidata-q1417956",
+            "retrievedAt": "2026-10-15",
+            "sourceField": "Q1417956#labels.en",
+            "note": "\"Volkswagen Golf Mk6\" etiketinden"
+          },
+          "order": {
+            "kind": "derived",
+            "sourceId": "wikidata-q1417956",
+            "retrievedAt": "2026-10-15",
+            "sourceField": "Q1417956#labels.en",
+            "note": "\"Mk6\" sıra numarası eksi 1"
+          },
+          "labelPeriod.marketId": {
+            "kind": "placeholder",
+            "note": "Wikidata P580/P582 yılların hangi pazara ve hangi temele (üretim / satış / model yılı) ait olduğunu belirtmiyor; \"eu\" / \"production\" yer tutucudur."
+          },
+          "labelPeriod.basis": {
+            "kind": "placeholder",
+            "note": "Wikidata P580/P582 yılların hangi pazara ve hangi temele (üretim / satış / model yılı) ait olduğunu belirtmiyor; \"eu\" / \"production\" yer tutucudur."
+          },
+          "labelPeriod.start.year": {
+            "kind": "source",
+            "sourceId": "wikidata-q1417956",
+            "retrievedAt": "2026-10-15",
+            "sourceField": "Q1417956#P580",
+            "note": "Wikidata'daki dayanak: https://de.wikipedia.org/wiki/VW_Golf (P143 Q48183 üzerinden aktarılmış)."
+          },
+          "labelPeriod.end.year": {
+            "kind": "source",
+            "sourceId": "wikidata-q1417956",
+            "retrievedAt": "2026-10-15",
+            "sourceField": "Q1417956#P582",
+            "note": "Wikidata'daki dayanak: https://de.wikipedia.org/wiki/VW_Golf (P143 Q48183 üzerinden aktarılmış)."
+          }
+        },
+        "volkswagen-golf-mk7": {
+          "slug": {
+            "kind": "derived",
+            "sourceId": "wikidata-q62362",
+            "retrievedAt": "2026-10-15",
+            "sourceField": "Q62362#labels.en",
+            "note": "\"Volkswagen Golf Mk7\" etiketinden"
+          },
+          "name": {
+            "kind": "derived",
+            "sourceId": "wikidata-q62362",
+            "retrievedAt": "2026-10-15",
+            "sourceField": "Q62362#labels.en",
+            "note": "\"Volkswagen Golf Mk7\" etiketinden"
+          },
+          "order": {
+            "kind": "derived",
+            "sourceId": "wikidata-q62362",
+            "retrievedAt": "2026-10-15",
+            "sourceField": "Q62362#labels.en",
+            "note": "\"Mk7\" sıra numarası eksi 1"
+          },
+          "labelPeriod.marketId": {
+            "kind": "placeholder",
+            "note": "Wikidata P580/P582 yılların hangi pazara ve hangi temele (üretim / satış / model yılı) ait olduğunu belirtmiyor; \"eu\" / \"production\" yer tutucudur."
+          },
+          "labelPeriod.basis": {
+            "kind": "placeholder",
+            "note": "Wikidata P580/P582 yılların hangi pazara ve hangi temele (üretim / satış / model yılı) ait olduğunu belirtmiyor; \"eu\" / \"production\" yer tutucudur."
+          },
+          "labelPeriod.start.year": {
+            "kind": "source",
+            "sourceId": "wikidata-q62362",
+            "retrievedAt": "2026-10-15",
+            "sourceField": "Q62362#P580",
+            "note": "Wikidata'daki dayanak: https://de.wikipedia.org/wiki/VW_Golf (P143 Q48183 üzerinden aktarılmış)."
+          },
+          "labelPeriod.end.year": {
+            "kind": "source",
+            "sourceId": "wikidata-q62362",
+            "retrievedAt": "2026-10-15",
+            "sourceField": "Q62362#P582",
+            "note": "Wikidata'daki dayanak: https://de.wikipedia.org/wiki/VW_Golf (P143 Q48183 üzerinden aktarılmış)."
+          }
+        },
+        "volkswagen-golf-mk8": {
+          "slug": {
+            "kind": "derived",
+            "sourceId": "wikidata-q56403002",
+            "retrievedAt": "2026-10-15",
+            "sourceField": "Q56403002#labels.en",
+            "note": "\"Volkswagen Golf Mk8\" etiketinden"
+          },
+          "name": {
+            "kind": "derived",
+            "sourceId": "wikidata-q56403002",
+            "retrievedAt": "2026-10-15",
+            "sourceField": "Q56403002#labels.en",
+            "note": "\"Volkswagen Golf Mk8\" etiketinden"
+          },
+          "order": {
+            "kind": "derived",
+            "sourceId": "wikidata-q56403002",
+            "retrievedAt": "2026-10-15",
+            "sourceField": "Q56403002#labels.en",
+            "note": "\"Mk8\" sıra numarası eksi 1"
+          },
+          "labelPeriod.marketId": {
+            "kind": "placeholder",
+            "note": "Wikidata P580/P582 yılların hangi pazara ve hangi temele (üretim / satış / model yılı) ait olduğunu belirtmiyor; \"eu\" / \"production\" yer tutucudur."
+          },
+          "labelPeriod.basis": {
+            "kind": "placeholder",
+            "note": "Wikidata P580/P582 yılların hangi pazara ve hangi temele (üretim / satış / model yılı) ait olduğunu belirtmiyor; \"eu\" / \"production\" yer tutucudur."
+          },
+          "labelPeriod.start.year": {
+            "kind": "source",
+            "sourceId": "wikidata-q56403002",
+            "retrievedAt": "2026-10-15",
+            "sourceField": "Q56403002#P580",
+            "note": "Wikidata'daki dayanak: https://de.wikipedia.org/wiki/VW_Golf (P143 Q48183 üzerinden aktarılmış)."
+          },
+          "labelPeriod.end": {
+            "kind": "placeholder",
+            "note": "Wikidata'da P582 (bitiş) yok. Katalogda null \"sürüyor\" anlamına gelir; bu kaynakta doğrulanmadı."
+          }
+        },
+        "volkswagen-golf": {
+          "slug": {
+            "kind": "editorial",
+            "note": "İçe aktarma yapılandırması (scripts/import/wikidata/config.ts)"
+          },
+          "name": {
+            "kind": "editorial",
+            "note": "İçe aktarma yapılandırması (scripts/import/wikidata/config.ts)"
+          },
+          "brandId": {
+            "kind": "editorial",
+            "note": "İçe aktarma yapılandırması (scripts/import/wikidata/config.ts); her nesilde P1716 = Q246 doğrulandı"
+          }
+        }
+      }
+    }
+  ],
+  "skipped": []
+}

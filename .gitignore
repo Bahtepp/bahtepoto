@@ -32,3 +32,6 @@ desktop.ini
 coverage/
 playwright-report/
 test-results/
+
+# İçe aktarma ham indirmeleri (scripts/import; git dışı)
+.cache/

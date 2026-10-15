@@ -1,6 +1,6 @@
 # Veri toplama ve katalog genişletme planı
 
-**Durum:** Plan (15.10.2026). Henüz hiçbir içe aktarma kodu yazılmadı ve toplu veri indirilmedi.
+**Durum:** Faz 1 ve Faz 2 uygulandı (15.10.2026). İçe aktarma iskeleti `scripts/import/` altında; Golf Mk5–Mk8 adayları ve fark raporu `data/staging/wikidata/` altında, **kataloğa aktarılmadı** (onay bekliyor).
 **Hedef:** Ford Focus dışındaki araçları, düşük maliyetle ve tahmin üretmeden kataloğa eklemek.
 
 Seçim yapısı değişmiyor: **Marka → Model → Nesil/Kasa (yıl aralığı) → Makyaj dönemi (yıl aralığı) → Motor**.
@@ -92,6 +92,29 @@ npm run import:promote            Onaylı kayıtları src/data/catalog ve src/da
   işi yalnızca fark raporu ve PR oluşturabilir; doğrudan `main`'e yazmaz ve yayınlamaz.
 - **API anahtarları:** Anahtar gerektiren kaynaklar (ör. Transport Canada API) yalnızca ortam
   değişkeniyle çalışır; anahtar yoksa bağdaştırıcı atlanır. Depoya anahtar girmez.
+
+### Kullanım (Faz 1–2)
+
+```text
+npm run import:run -- wikidata      Ham veriyi .cache/import/wikidata/<tarih>/ altına indirir, adayları data/staging/wikidata/ altına yazar
+npm run import:check                Geçici alan şeması + kanıt kuralları + katalog şemaları + validate.ts + çakışma tespiti
+npm run import:diff                 data/staging/<kaynak>/FARK-RAPORU.md
+npm run import:promote              KURU ÇALIŞTIRMA: yalnızca neyin yazılacağını gösterir
+npm run import:promote -- --write   Onaydan sonra src/data/catalog altına yazar
+```
+
+- **Kanıt kuralları:** Aday kayıttaki her veri alanının kökeni (`provenance`) olmalı: `source` (kaynakta açıkça var),
+  `derived` (kaynaktaki değerden kurala bağlı türetildi), `editorial` (içe aktarma yapılandırmasında insan kararı) veya
+  `placeholder`. Kökendeki kaynak, kaydın `sourceIds` listesinde bulunmalı.
+- **Yer tutucular:** Katalog şeması bir alanı zorunlu tuttuğu hâlde kaynak vermiyorsa (Wikidata için `labelPeriod.marketId`
+  ve `basis`; bitiş yılı yoksa `labelPeriod.end`) alan `placeholder` olarak işaretlenir. Bu kayıtlar `sourced`/`verified`
+  olamaz, `notes` ile açıklanmalıdır ve `--write` bunları yalnızca ek `--accept-placeholders` bayrağıyla yazar.
+- **Promote kapıları:** `import:check` hatası varsa hiçbir şey yazılmaz; lisansı yayın için doğrulanmamış kaynak
+  (`publishable: false`) yazılmaz; mevcut `sourced`/`verified`/`conflicting` kayıtla çelişen değer hiçbir zaman otomatik yazılmaz;
+  adayın vermediği alanlar (makyaj dönemleri, varyantlar) mevcut kayıttan korunur, içe aktarma hiçbir şey silmez.
+- **Golf adayları:** Wikidata yılları Mk5 2003–2009, Mk6 2008–2012, Mk7 2012–2021, Mk8 2019– (P582 yok). Ardışık nesillerde
+  yıllar üst üste biniyor; bu, yılların temelinin (pazar / üretim / satış) belirsiz olduğunu doğruluyor. Onaydan önce pazar ve
+  temel başka bir kaynakla (Wikipedia, üretici) belirlenmeli.
 
 ## 4. İlk test markaları
 
