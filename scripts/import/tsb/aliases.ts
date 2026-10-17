@@ -70,6 +70,14 @@ export const MODEL_ALIASES: Record<string, Record<string, ModelAlias>> = {
   ds: {
     DS7CROSSBACK: { model: 'DS7', note: 'DS 7 Crossback: bitişik yazılmış gövde adı, ayrı model değil' },
   },
+  volkswagen: {
+    ID4: { model: 'ID.4', note: 'Yazım farkı: ID4 = ID.4' },
+    'ID-4': { model: 'ID.4', note: 'Yazım farkı: ID-4 = ID.4' },
+    'AMAROK AVENTURA': { model: 'AMAROK', note: 'Aventura donanım paketi' },
+    TIGUANALLSPACE: { model: 'TIGUAN ALLSPACE', note: 'Bitişik yazım: Tiguan Allspace' },
+    'CROSS POLO': { model: 'POLO', note: 'Cross Polo: Polo’nun crossover görünümlü versiyonu' },
+    'PASSAT CC': { model: 'CC', note: 'Passat CC, Volkswagen CC ile aynı model' },
+  },
   citroen: {
     C5AIRCROSS: { model: 'C5 AIRCROSS', note: 'Bitişik yazım' },
     'C5-AC': { model: 'C5 AIRCROSS', note: 'Kısaltma: C5 AC = C5 Aircross' },

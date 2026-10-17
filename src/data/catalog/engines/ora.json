@@ -1,3 +1,3 @@
 [
-  { "id": "ora-elektrikli-105", "brandId": "ora", "slug": "elektrikli-105", "name": "ELEKTRIKLI 105 PS", "family": "ELEKTRIKLI", "fuel": "electric", "power": { "ps": 105 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+  { "id": "ora-elektrikli-105kw", "brandId": "ora", "slug": "elektrikli-105kw", "name": "ELEKTRIKLI 105 kW", "family": "ELEKTRIKLI", "fuel": "electric", "power": { "kw": 105 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
 ]

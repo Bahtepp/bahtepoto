@@ -104,7 +104,6 @@ Bu modellerin nesilleri kataloğa otomatik aktarılmadı (kaynakta çelişki vey
 - **toyota/proace-city**: Wikipedia maddesi ("Citroën Berlingo") bu modelle açıkça eşleşmiyor
 - **toyota/proace-max**: Wikipedia maddesi ("Fiat Ducato") bu modelle açıkça eşleşmiyor
 - **toyota/proace**: Wikipedia maddesi ("Citroën Jumpy") bu modelle açıkça eşleşmiyor
-- **volkswagen/cross-polo**: Wikipedia maddesi ("Volkswagen Polo") bu modelle açıkça eşleşmiyor
 - **volkswagen/multivan**: Wikipedia maddesi ("Volkswagen Transporter") bu modelle açıkça eşleşmiyor
 - **volkswagen/rabbit**: Wikipedia maddesi ("Volkswagen Golf") bu modelle açıkça eşleşmiyor
 - **volkswagen/tiguan-allspace**: Wikipedia maddesi ("Volkswagen Tiguan") bu modelle açıkça eşleşmiyor

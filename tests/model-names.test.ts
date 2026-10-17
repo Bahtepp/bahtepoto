@@ -33,6 +33,30 @@ describe('takma ad tablosu (gövde/donanım varyantları)', () => {
     assert.deepEqual(files([row('RENAULT', 'CLIO 1.5 DCI JOY'), row('RENAULT', 'CLIO GRAND TOUR 1.5 DCI JOY')]), ['models/renault/clio.json']);
     assert.deepEqual(
       files([
+        row('VOLKSWAGEN', 'ID.4 PURE 125 KW'),
+        row('VOLKSWAGEN', 'ID4 PURE 109 KW'),
+        row('VOLKSWAGEN', 'ID-4 150KW'),
+        row('VOLKSWAGEN', 'ID.3 PRO (150KW)'),
+      ]),
+      ['models/volkswagen/id-3.json', 'models/volkswagen/id-4.json'],
+    );
+    assert.deepEqual(
+      files([row('VOLKSWAGEN', 'AMAROK 2.0 TDI HIGHLINE'), row('VOLKSWAGEN', 'AMAROK AVENTURA 4x4 3.0 V6 TDI 224 OV')]),
+      ['models/volkswagen/amarok.json'],
+    );
+    assert.deepEqual(files([row('VOLKSWAGEN', 'POLO 1.0 TSI 95'), row('VOLKSWAGEN', 'CROSS POLO 1.4 (80)')]), ['models/volkswagen/polo.json']);
+    assert.deepEqual(
+      files([
+        row('VOLKSWAGEN', 'PASSAT CC 1.4 TSI 160'),
+        row('VOLKSWAGEN', 'PASSAT CC 2.0 TSI 200'),
+        row('VOLKSWAGEN', 'PASSAT CC 1.8 TFSI 160'),
+        row('RENAULT', 'MEGANE CC 1.6 110'),
+        row('RENAULT', 'MEGANE 1.6 110'),
+      ]),
+      ['models/renault/megane.json', 'models/volkswagen/cc.json'],
+    );
+    assert.deepEqual(
+      files([
         row('RENAULT', 'KADJAR 1.5 DCI 110'),
         row('RENAULT', 'KADJAR BLACK EDITION 1.5 DCI 110'),
         row('RENAULT', 'KADJAR BLACK EDITION 1.2 TCE 130'),

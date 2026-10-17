@@ -104,19 +104,25 @@ const techDisplay = (t: string) => TECH_DISPLAY[fold(t)] ?? t;
 /** Aynı gücü paylaşsalar da birbirine bağlanmayan motor aileleri. */
 const ENGINE_FAMILY_TOKENS = new Set([
   'TDCI', 'TDDI', 'TDI', 'ECOBOOST', 'ECOBLUE', 'DCI', 'CDI', 'HDI', 'BLUEHDI', 'DURATEC', 'TIVCT', 'TI-VCT',
-  'PURETECH', 'TSI', 'TFSI', 'FSI', 'TCE', 'CDTI', 'CRDI', 'MULTIJET', 'DIG-T', 'IG-T',
+  'PURETECH', 'TSI', 'TFSI', 'FSI', 'MPI', 'SDI', 'TGI', 'ETSI', 'E-TSI', 'GTE', 'TCE', 'CDTI', 'CRDI', 'MULTIJET', 'DIG-T', 'IG-T',
 ]);
 
 /**
  * Satırların tamamı aynı performans modeliyse (ST, RS) varyant adı olur.
  * ST-Line / ST Line donanım paketidir; performans modeli sayılmaz.
  */
-function performanceTrim(items: { trims: string[] }[]): string | undefined {
+function performanceTrim(items: { trims: string[]; techTokens?: string[] }[]): string | undefined {
   const labels = items.map((it) => {
     const words = it.trims.map((w) => fold(w));
+    const tech = (it.techTokens ?? []).map(fold);
     if (words[0] === 'ST-LINE' || words[0] === 'STLINE' || (words[0] === 'ST' && words[1] === 'LINE')) return '';
     if (words[0] === 'GT-LINE' || words[0] === 'GTLINE' || (words[0] === 'GT' && words[1] === 'LINE')) return '';
     if (words[0] === 'RS-LINE' || words[0] === 'RSLINE' || (words[0] === 'RS' && words[1] === 'LINE')) return '';
+    if (words[0] === 'R-LINE' || words[0] === 'RLINE' || (words[0] === 'R' && words[1] === 'LINE')) return '';
+    if (tech.includes('GTI') || words[0] === 'GTI') return 'GTI';
+    if (tech.includes('GTD') || words[0] === 'GTD') return 'GTD';
+    if (tech.includes('GTE') || words[0] === 'GTE') return 'GTE';
+    if (words[0] === 'R') return 'R';
     const w0 = words[0] ?? '';
     if (w0 === 'RS500') return 'RS500';
     if (w0 === 'RS' || w0 === 'ST') return w0;
@@ -344,11 +350,14 @@ export function buildFromTsb(
       // Model takma adları (aliases.ts): gövde/donanım sözcüğü yapışmış model adları asıl modele bağlanır.
       const alias = MODEL_ALIASES[brand.id]?.[fold(model)];
       if (alias) {
-        const extra = fold(model).replace(alias.model, '').trim();
+        const folded = fold(model);
+        const target = fold(alias.model);
+        const extra = folded.startsWith(`${target} `) ? folded.slice(target.length).trim() : folded.startsWith(target) && folded.length > target.length && !target.includes(' ') ? folded.slice(target.length).trim() : '';
         model = alias.model;
         if (extra) trimWords.unshift(extra);
         if (alias.body) parsed.body ??= alias.body;
       }
+      if (brand.id === 'volkswagen' && /^ID([.\s-]|$)/.test(fold(model)) && !parsed.fuel) parsed.fuel = 'electric';
       if (brand.modelPrefix) model = `${brand.modelPrefix} ${model}`.trim();
       // TSB'de Chrysler altında listelenen Jeep modelleri ("JEEP COMPASS", "JEEPRENEGADE") Jeep markasına.
       let rowBrand: BrandRule | undefined;
@@ -385,8 +394,10 @@ export function buildFromTsb(
       const glued = p.model.split(' ').some((w) => w.length > 14);
       // Tek harfli model adı (Mercedes "C", "E") yalnızca markada yaygınsa kabul edilir; "C MAX" gibi kopuk yazımlar değil.
       // Mercedes-Benz sınıf harfleri (A, B, C, E, G, S) gerçek model adıdır.
+      // Noktalı adlar genelde kopuk hacimdir ("1.6"). Volkswagen ID.3 / ID.4 / ID. Buzz bundan ayrıdır.
       const lonelyLetter = p.model.length === 1 && brand.id !== 'mercedes-benz' && (counts.get(p.model) ?? 0) < 10;
-      if (!p.model || /[.]/.test(p.model) || !/[A-Z0-9]/.test(p.model) || glued || lonelyLetter) {
+      const idModel = brand.id === 'volkswagen' && /^ID\.( BUZZ|\d+)$/.test(p.model);
+      if (!p.model || (/[.]/.test(p.model) && !idModel) || !/[A-Z0-9]/.test(p.model) || glued || lonelyLetter) {
         reject(row, 'model adı çözümlenemedi');
         continue;
       }
@@ -630,6 +641,8 @@ export function buildFromTsb(
       } else {
         if (model.status === 'pending') model.status = 'sourced';
         model.sourceIds = [...new Set([...((model.sourceIds as string[] | undefined) ?? []), TSB_SOURCE_ID])];
+        const shown = displayName(modelName);
+        if (model.order === 999 && slugify(String(model.name ?? '')) === modelSlug && model.name !== shown) model.name = shown;
       }
       const gens = model.generations as Json[];
       const curatedGens = [...gens];

@@ -102,7 +102,7 @@ const NEUTRAL = new Set([
   'BMT', 'ACT', 'BLUEMOTION', 'S&S', 'SS', 'START&STOP', 'START-STOP', '16V', '8V', '12V', '20V', '24V', 'TURBO', 'TWINCHARGER', 'ECO',
   'BITURBO', 'E5', 'E6', 'E6D', 'E6.2', 'EU5', 'EU6', 'EURO5', 'EURO6', 'ENERGY', 'ECOFLEX', 'ECONETIC', 'V6', 'V8', 'V10', 'V12',
 ]);
-const ROMAN = /^(II|III|IV|V|VI|VII|VIII|IX|X)$/;
+const ROMAN = /^(II|III|IV|V|VI|VII|VIII|IX)$/;
 const MK = /^MK\.?(\d{1,2})$/;
 
 function fuelOf(t: string): FuelType | undefined {
@@ -188,7 +188,12 @@ export function parseTypeName(typeName: string): ParsedType {
     .replace(/([A-Za-zÇĞİÖŞÜçğıöşü])(\d[.,]\d)/g, '$1 $2')
     // "BUSI.1.5 DCI" nokta hacmi yutmasın.
     .replace(/\.(\d[.,]\d)/g, '. $1')
-    .replace(/\(\s*(\d{2,4})\s*(?:PS|HP|BG|KW)?\s*\)/gi, ' ($1) ')
+    // "(150KW)" güç birimi kaybolmasın; "(211)" PS olarak kalır.
+    .replace(/\(\s*(\d{2,4})\s*KW\s*\)/gi, ' $1KW ')
+    .replace(/\(\s*(\d{2,4})\s*(?:PS|HP|BG)?\s*\)/gi, ' ($1) ')
+    // "105BMT", "TIP.160": güç, kısaltmaya yapışık yazılmış.
+    .replace(/(\d{2,3})(BMT|DSG|ACT)\b/gi, '$1 $2')
+    .replace(/\bTIP\.(\d{2,3})\b/gi, 'TIP $1')
     .replace(/(\d)\s+(KAPI)\b/gi, '$1$2')
     .replace(/\s+/g, ' ')
     .trim()
@@ -303,7 +308,7 @@ export function parseTypeName(typeName: string): ParsedType {
       // "TCE EDC 120", "TCE X-TRONIC 100": güç, şanzıman sözcüğünün ardında da yazılır.
       const prevKey = prev.replace(/\.$/, '');
       const afterTrans = AUTO.has(prev) || AUTO.has(prevKey) || DCT.has(prevKey) || AMT.has(prevKey) || CVT.has(prevKey) || MANUAL.has(prevKey);
-      if (fuelOf(prev) || /^\d[.,]\d/.test(prev) || NEUTRAL.has(prev) || afterPerformance || afterTrans || /^EV\d+$/.test(prev)) {
+      if (fuelOf(prev) || /^\d[.,]\d/.test(prev) || NEUTRAL.has(prev) || afterPerformance || afterTrans || /^TIP/.test(prev) || /^EV\d+$/.test(prev)) {
         const n = Number(T);
         if (n >= 50 && n <= 800) {
           out.powerPs = n;
@@ -334,7 +339,9 @@ export function parseTypeName(typeName: string): ParsedType {
         attr = true;
       } else {
         const body = BODY.find(([re]) => re.test(key));
-        if (body) {
+        // Passat CC ayrı modeldir (Volkswagen CC). Megane CC gibi kullanımlar kabrio gövdesidir.
+        const passatCc = key === 'CC' && up(out.prefix[0] ?? '') === 'PASSAT' && out.prefix.length === 1 && !seenAttr;
+        if (body && !passatCc) {
           out.body ??= body[1];
           attr = true;
         }
@@ -345,6 +352,13 @@ export function parseTypeName(typeName: string): ParsedType {
       if (out.transmission) out.transmission.gears = Number(T);
       i++;
       attr = true;
+    }
+
+    // "GOLF GTI VI" / "FOCUS III TITANIUM": nesil rakamı model ile donanım arasında da durur.
+    // Yakıt bayrağını açmaz; sonraki donanım sözcüğü model adının yanında kalır. "X" nesil değildir (ID.6 X).
+    if (out.prefix.length >= 1 && out.generationHint === undefined && (ROMAN.test(T) || MK.test(T))) {
+      out.generationHint = T.replace(/^MK\.?/, 'MK');
+      continue;
     }
 
     // İlk sözcük daima model adının parçasıdır ("CC 1.4 TSI": CC burada gövde değil, model).
@@ -362,12 +376,15 @@ export function parseTypeName(typeName: string): ParsedType {
     else out.rest.push(tok);
   }
 
-  // Nesil ipucu: modelden hemen sonra gelen roma rakamı veya MKn.
+  // Nesil ipucu döngüde yakalanmadıysa: modelden hemen sonraki roma rakamı veya MKn.
   const g = out.prefix[1] ? up(out.prefix[1]) : '';
-  if (ROMAN.test(g) || MK.test(g)) {
+  if (!out.generationHint && (ROMAN.test(g) || MK.test(g))) {
     out.generationHint = g.replace(/^MK\.?/, 'MK');
     out.prefix.splice(1, 1);
   }
+  // "GTE PHEV" / "GTE HIBRIT": yakıt zaten GTE veya eHybrid ile belli. Ek sözcük motor adı değildir.
+  const hasSpecificHybrid = out.tech.some((t) => ['GTE', 'EHYBRID', 'E-HYBRID', 'ETSI', 'E-TSI'].includes(up(t)));
+  if (hasSpecificHybrid) out.tech = out.tech.filter((t) => !['PHEV', 'HIBRIT', 'HYBRIT', 'PLUGIN', 'PLUG-IN', 'PLUG-IN-HYBRID'].includes(up(t)));
   return out;
 }
 
@@ -407,6 +424,7 @@ const NEVER_SUBMODEL = new Set([
   'TOUCH', 'DYNAMIQUE', 'PRIVILEGE', 'EXPRESSION', 'EQUILIBRE', 'AUTHENTIQUE', 'EXTREME', 'EXCEPTION',
   'CONNECT', 'OUTDOOR', 'TECHNO', 'INTENS', 'ESPRIT', 'INITIALE', 'EVOLUTION',
   'AMBIENTE', 'COOL', 'COLLECTION', 'TRENDLINE', 'AMBITION', 'ALLURE', 'ELEGANCE',
+  'AVENTURA', 'IMPRESSION', 'BUSINESS', 'R-LINE', 'RLINE',
 ]);
 
 /** "EB" ve "E.BOOST", EcoBoost'un kısaltmasıdır; ayrı motor kimliği üretmez. */

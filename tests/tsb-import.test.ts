@@ -49,6 +49,43 @@ describe('TSB tip adı ayrıştırma', () => {
     assert.equal(p.powerPs, 115);
   });
 
+  test('Golf GTI nesil ipucunu tutar; eTSI ve R-Line ayrı kalır; ID.4 kW birimi PS olmaz', () => {
+    const gti = parseTypeName('GOLF GTI VI 2.0 TSI (211) TIPTRONIC');
+    assert.equal(gti.generationHint, 'VI');
+    assert.equal(gti.powerPs, 211);
+    assert.equal(gti.fuel, 'petrol');
+    assert.ok(gti.tech.includes('TSI'));
+    assert.ok(gti.tech.includes('GTI'));
+
+    const mpi = parseTypeName('GOLF 1.6 MPI 102');
+    const tdi = parseTypeName('GOLF 1.6 TDI 105');
+    assert.equal(mpi.fuel, 'petrol');
+    assert.equal(tdi.fuel, 'diesel');
+    assert.notDeepEqual(mpi.tech, tdi.tech);
+
+    const etsi = parseTypeName('GOLF 1.0 eTSI 110 DSG R-LINE');
+    assert.equal(etsi.fuel, 'mild-hybrid');
+    assert.equal(etsi.powerPs, 110);
+    assert.equal(etsi.tech.includes('TSI'), false);
+
+    const gte = parseTypeName('GOLF 1.5 TSI DSG GTE PHEV');
+    assert.equal(gte.fuel, 'plug-in-hybrid');
+    assert.ok(gte.tech.includes('GTE'));
+    assert.equal(gte.tech.includes('PHEV'), false);
+
+    const variant = parseTypeName('PASSAT VARIANT 1.6 TDI BMT 105 COMFORTLINE');
+    assert.equal(variant.body, 'wagon');
+    assert.equal(variant.powerPs, 105);
+    assert.deepEqual(variant.prefix, ['PASSAT']);
+
+    const id3 = parseTypeName('ID.3 PRO (150KW)');
+    assert.equal(id3.powerKw, 150);
+    assert.equal(id3.powerPs, undefined);
+    const id4 = parseTypeName('ID-4 150KW');
+    assert.equal(id4.powerKw, 150);
+    assert.equal(id4.prefix[0], 'ID-4');
+  });
+
   test('ilk sözcük her zaman modeldir ("CC" gövde değil)', () => {
     const p = parseTypeName('CC 1.4 TSI 160 BMT TIPTRONIC DSG');
     assert.deepEqual(p.prefix, ['CC']);
@@ -522,7 +559,10 @@ describe('Türkiye pazar filtresi', () => {
     assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['ST-Line'] }] }), false);
     assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['RS Line'] }] }), false);
     assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['GT Line'] }] }), false);
-    assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['RS'] }] }), true);
+    assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['R-Line'] }] }), false);
+    assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['R Line'] }] }), false);
+    assert.equal(isPerformance({ ...listed, trimName: 'GTI', marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['Comfortline'] }] }), true);
+    assert.equal(isPerformance({ ...listed, trimName: 'R', marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['R'] }] }), true);
   });
 
   test('gerçek katalog: TSB varyantlarının hepsinde Türkiye durumu ve model yılları var', () => {
