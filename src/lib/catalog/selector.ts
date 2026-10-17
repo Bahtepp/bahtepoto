@@ -79,12 +79,9 @@ function optionLabel(engine: Pick<Engine, 'name' | 'power'>): string {
 }
 
 function representativeRevision(gen: GenLike, variant: Variant): string | undefined {
-  if (gen.revisions.length === 0) return undefined;
+  if (gen.revisions.length === 0 || variant.revisionMapping !== 'confirmed') return undefined;
   const ordered = [...gen.revisions].sort((a, b) => a.order - b.order);
-  if (variant.revisionMapping === 'confirmed') {
-    return ordered.find((r) => variant.revisionIds.includes(r.id))?.slug ?? ordered[0]?.slug;
-  }
-  return ordered[0]?.slug;
+  return ordered.find((r) => variant.revisionIds.includes(r.id))?.slug;
 }
 
 function chassisYears(gen: GenLike): string {

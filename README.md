@@ -1,8 +1,10 @@
 # bahtepoto.com
 
-bahtepoto.com web sitesinin kaynak kodu. Site **Astro + TypeScript** ile statik olarak üretilir ve ileride **GitHub Pages** üzerinden `bahtepoto.com` özel alan adıyla yayınlanması planlanmaktadır.
+bahtepoto.com web sitesinin kaynak kodu. Site **Astro + TypeScript** ile statik olarak üretilir. Test yayını GitHub Pages üzerindedir:
 
-> **Durum:** Geliştirme aşaması — yalnızca localhost. Henüz hosting, DNS değişikliği veya canlı yayın yok.
+**https://bahtepp.github.io/bahtepoto/**
+
+`bahtepoto.com` alan adı bu yayına bağlı değildir. DNS değiştirilmez. Hesaptaki `bahtepp.github.io` deposu bu projeden ayrıdır.
 
 ---
 
@@ -35,7 +37,7 @@ npm run dev        # geliştirme sunucusu → http://localhost:4321
 
 ```text
 bahtepoto.com/
-├── .github/workflows/             # (deploy.yml henüz yok; bkz. "Bilinen eksikler")
+├── .github/workflows/pages.yml    # GitHub Pages yayını (push → main)
 ├── docs/VERI-EKLEME.md            # Katalog verisi ekleme rehberi
 ├── docs/KRONIK-SORUNLAR.md        # Kronik sorun şeması, eşleştirme ve kanıt kuralları
 ├── docs/FOCUS-DATA-AUDIT.md       # Ford Focus veri denetimi raporu (+ focus-data-audit.json)
@@ -85,7 +87,9 @@ bahtepoto.com/
 
 ## Otomobil kataloğu
 
-Seçim hiyerarşisi: **Marka → Model → Nesil/Kasa → Makyaj dönemi → Motor**.
+Seçim hiyerarşisi: **Marka → Model → Motor/satış sürümü → Kasa → gerekirse güç**.
+
+Kasa, motor seçilmeden önce zorunlu adım değildir. Yıl seçmek gerekmez; yıl aralığı kasa kartının yanında durur. Aynı motorun donanım, şanzıman ve yıl kopyaları tek kartta birleşir. ST, RS, GTI gibi performans sürümleri ayrı kalır. Doğrulanmamış makyaj dönemi ilk döneme bağlanmaz.
 
 | Kavram | Nerede | Not |
 |---|---|---|
@@ -101,22 +105,18 @@ Seçim hiyerarşisi: **Marka → Model → Nesil/Kasa → Makyaj dönemi → Mot
 Her kayıtta benzersiz `id`, `slug`, doğrulama durumu (`status`), `sourceIds` ve `updatedAt` vardır.
 Veri ekleme kuralları için: [docs/VERI-EKLEME.md](docs/VERI-EKLEME.md).
 
-**Ölçeklenme:** Ana sayfa yalnızca marka listesini içerir. Marka seçilince `/data/brands/<marka>.json`
-(modeller + nesil özetleri), nesil seçilince `/data/models/<marka>/<model>.json` (motorlar, varyantlar,
-kaynaklar) indirilir. Veri dosyaları da marka/model başına bölündüğü için on binlerce varyantta hem
-depo (küçük diff'ler) hem tarayıcı (küçük parçalar) tarafı hafif kalır.
+**Ölçeklenme:** Ana sayfa Türkiye markalarını ve hafif arama indeksini (`/data/search.json`) içerir.
+Marka seçilince `/data/brands/<marka>.json`, model seçilince `/data/models/<marka>/<model>.json` indirilir.
+Nadir markalar arşivdedir; kayıtlar silinmez.
 
 ## Araç detay sayfası ve kronik sorunlar
 
-Kullanıcı yolu: **Marka → Model → Nesil → Makyaj dönemi → Motor → "Ayrıntılar ve kronik sorunlar"**.
-Detay sayfası (`/arac/<marka>/<model>/<nesil>/[<dönem>/]<varyant>/`) statik üretilir ve
-"Katalogda bu seçime dön" bağlantısıyla gezgini aynı seçimle açar; aynı motorun diğer dönemine ve
-aynı dönemdeki diğer motorlara doğrudan geçiş bağlantıları vardır.
+Kullanıcı yolu: **Marka → Model → Motor → Kasa → gerekirse güç → araç özeti**.
+Detay sayfası (`/arac/<marka>/<model>/<nesil>/[<dönem>/]<varyant>/`) statik üretilir.
+Makyaj dönemi doğrulanmamışsa seçim, dönem içermeyen adrese gider; eski dönem adresleri durur.
 
-Bölümler: araç kimliği, motor özellikleri (yalnızca katalog verisi; eksik alan "Veri doğrulanıyor"),
-kronik sorunlar, kaynaklar ve doğrulama durumu. Yeni bölümler (yakıt tüketimi, ikinci el kontrol
-rehberi, bakım maliyetleri, kullanıcı deneyimleri) `src/components/vehicle/` altına bileşen olarak
-eklenip sayfadaki `SECTIONS` listesine bir satırla bağlanır.
+Bölümler: araç, motor özellikleri ve bilinen sorunlar. Ham sigorta satırı ve kaynak listesi gösterilmez.
+Kasa yıllarının bir bölümü İngilizce Wikipedia olgularından gelir (CC BY-SA 4.0); bu atıf site altında durur.
 
 Kronik sorunlar katalogdan bağımsız tutulur; şema, eşleştirme ve kanıt kuralları:
 [docs/KRONIK-SORUNLAR.md](docs/KRONIK-SORUNLAR.md). Doğrulanmış kayıt yoksa sayfa "Henüz doğrulanmış
@@ -130,7 +130,7 @@ kronik sorun verisi bulunmuyor" der; "sorun yok" iddiasında bulunmaz.
 | **TypeScript `strict`** | Hataları geliştirme aşamasında yakalar. |
 | **`@/` yol kısaltması** | `../../` zincirleri yerine `@/config/site` gibi okunaklı importlar. |
 | **`trailingSlash: 'always'` + `build.format: 'directory'`** | `/sayfa/` biçiminde tek tip URL'ler; GitHub Pages ile uyumlu, yinelenen URL (SEO) sorununu önler. |
-| **`site: 'https://bahtepoto.com'`, `base` yok** | Kanonik URL ve ileride sitemap için gerekli. Özel alan adı kök dizinden yayın yapacağı için `base` gerekmez. |
+| **`site` ve `base`** | Yerelde kök dizin ve `https://bahtepoto.com`. `GITHUB_PAGES=true` iken site `https://bahtepp.github.io`, `base` `/bahtepoto`. |
 | **Asgari bağımlılık** | Yalnızca `astro`, `@astrojs/check`, `typescript`, `@types/node` (yalnızca tip kontrolü). UI kütüphanesi yok; gezgin düz TypeScript. Sitemap, Pagefind vb. ihtiyaç doğduğunda eklenecek. |
 | **Katalog verisi JSON + Content Collections** | Sunucu/veritabanı gerektirmez; build'de Zod + bütünlük denetimi. İleride harici kaynaktan içe aktarma aynı şemaya yazar. |
 | **`.gitattributes` ile LF satır sonu** | Windows'ta geliştirme, Linux'ta CI build'i arasında tutarlılık. |
@@ -138,31 +138,11 @@ kronik sorun verisi bulunmuyor" der; "sorun yok" iddiasında bulunmaz.
 
 ## Bilinen eksikler
 
-- `.github/workflows/deploy.yml` README'de anılıyor ama depoda yok; yalnızca boş bir `.github/workflows/_probe` dosyası var. Yayın aşamasında oluşturulacak.
-- Canlı kronik sorun verisi henüz boş. Build bu yüzden `issues` / `issueSources` koleksiyonları için "boş koleksiyon" uyarısı verir; ilk doğrulanmış kayıtla birlikte kaybolur.
+- Yıl aralığı filtresi henüz yok. Adresler marka, model, motor ve kasayı taşır.
 - `npm test`, TypeScript dosyalarını doğrudan çalıştırmak için Node 22.18 veya üstünü gerektirir (site build'i 22.12+ ile çalışır).
 
-## Git ve GitHub
+## Git ve yayın
 
-Bu depo GitHub'daki **`bahtepoto.com`** reposuna bağlanacaktır. Hesaptaki **`bahtepp.github.io`** deposu bu projeden tamamen bağımsızdır; bu projeden oraya hiçbir şey gönderilmez.
+Kaynak: [github.com/Bahtepp/bahtepoto](https://github.com/Bahtepp/bahtepoto). Yerel çalışma dalı `katalog-turkiye`; yayın deposunun `main` dalına gider. `bahtepp.github.io` deposuna push edilmez.
 
-Remote bağlama (repo adresi kesinleştikten sonra):
-
-```bash
-git remote add origin <REPO_ADRESİ>
-git remote -v        # doğrulama
-git push -u origin main
-```
-
-## Yayın planı (henüz uygulanmadı)
-
-1. **Workflow:** `.github/workflows/deploy.yml` hazır, ancak yalnızca `workflow_dispatch` (elle) ile tetiklenir. Canlıya alma kararıyla birlikte `push: branches: [main]` bloğu açılacak.
-2. **GitHub Pages ayarı:** Repo → *Settings → Pages → Build and deployment → Source: GitHub Actions*.
-3. **Alan adı doğrulama (önerilir):** GitHub hesap ayarları → *Pages → Add a verified domain* → `bahtepoto.com` için verilen TXT kaydını DNS'e ekleme. Alan adının başka hesaplarca ele geçirilmesini önler.
-4. **Özel alan adı:** Repo → *Settings → Pages → Custom domain*: `bahtepoto.com`, ardından *Enforce HTTPS*. (GitHub Actions ile yayında `CNAME` dosyası gerekmez; ayar repo ayarlarında tutulur.)
-5. **DNS kayıtları (alan adı sağlayıcısında):**
-   - Kök alan adı `bahtepoto.com` → `A` kayıtları: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - (İsteğe bağlı IPv6) `AAAA`: `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`
-   - `www.bahtepoto.com` → `CNAME`: `<github-kullanıcı-adı>.github.io`
-   - Bu değerler yayın öncesi GitHub'ın güncel belgeleriyle yeniden doğrulanacaktır.
-6. **Not:** Özel alan adı bağlanmadan önce site `https://<kullanıcı-adı>.github.io/bahtepoto.com/` alt yolunda yayınlanır; bu ara aşamada önizleme yapılacaksa geçici olarak `base` ayarı gerekir.
+Yayın iş akışı `.github/workflows/pages.yml`. `main` dalına push, GitHub Pages’i günceller. Özel alan adı ve DNS bu aşamada bağlanmaz.

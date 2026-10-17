@@ -8,8 +8,8 @@ export type BrandTier = 'primary' | 'review';
 
 /** Ana Türkiye kataloğu. Yeni yaygın marka buraya eklenir. */
 const PRIMARY = new Set([
-  'alfa-romeo', 'audi', 'bmw', 'byd', 'chery', 'chevrolet', 'citroen', 'cupra', 'dacia', 'daewoo',
-  'dfsk', 'ds', 'fiat', 'ford', 'geely', 'honda', 'hyundai', 'jaecoo', 'jaguar', 'jeep', 'kgm',
+  'alfa-romeo', 'audi', 'bmw', 'byd', 'chery', 'chevrolet', 'citroen', 'cupra', 'dacia',
+  'ds', 'fiat', 'ford', 'honda', 'hyundai', 'jaecoo', 'jaguar', 'jeep', 'kgm',
   'kia', 'land-rover', 'leapmotor', 'lexus', 'mazda', 'mercedes-benz', 'mg', 'mini', 'mitsubishi',
   'nissan', 'opel', 'peugeot', 'porsche', 'renault', 'seat', 'skoda', 'skywell', 'ssangyong',
   'subaru', 'suzuki', 'tesla', 'toyota', 'volkswagen', 'volvo',

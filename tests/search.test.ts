@@ -7,6 +7,7 @@ import { readFileSync } from 'node:fs';
 import { searchCatalog, type SearchIndex } from '../src/lib/catalog/search.ts';
 import { normalizeSearch } from '../src/lib/catalog/format.ts';
 import { brandTier, isPrimaryBrand } from '../src/lib/catalog/visibility.ts';
+import { performanceBadge } from '../src/lib/catalog/market.ts';
 
 const index: SearchIndex = {
   brands: [
@@ -19,6 +20,7 @@ const index: SearchIndex = {
     { brand: 'renault', brandName: 'Renault', slug: 'clio', name: 'Clio' },
     { brand: 'fiat', brandName: 'Fiat', slug: 'egea', name: 'Egea' },
     { brand: 'honda', brandName: 'Honda', slug: 'civic', name: 'Civic' },
+    { brand: 'nissan', brandName: 'Nissan', slug: 'qashqai', name: 'Qashqai' },
   ],
   engines: [
     { brand: 'bmw', brandName: 'BMW', model: '3-serisi', modelName: '3 Serisi', slug: '320d-diesel', label: '320d' },
@@ -35,6 +37,9 @@ describe('global arama', () => {
     assert.equal(d?.engine, '320d-diesel');
     const c = searchCatalog(index, 'c180')[0];
     assert.equal(c?.title, 'Mercedes-Benz C Serisi C 180');
+    assert.equal(searchCatalog(index, 'qashqai')[0]?.title, 'Nissan Qashqai');
+    assert.equal(searchCatalog(index, 'egea')[0]?.title, 'Fiat Egea');
+    assert.equal(searchCatalog(index, 'civic')[0]?.title, 'Honda Civic');
   });
 
   test('Türkçe karakter, büyük harf ve tire farkı', () => {
@@ -55,6 +60,11 @@ describe('global arama', () => {
     for (const slug of ['bmw', 'mercedes-benz', 'renault', 'fiat', 'honda', 'byd', 'chery', 'mg']) {
       assert.equal(isPrimaryBrand(slug), true, slug);
     }
+    for (const slug of ['daewoo', 'dfsk', 'geely']) assert.equal(isPrimaryBrand(slug), false, slug);
+    assert.equal(performanceBadge({ trimName: 'Titanium' }), undefined);
+    assert.equal(performanceBadge({ trimName: 'ST' }), 'ST');
+    assert.equal(performanceBadge({ trimName: 'GTI' }), 'GTI');
+    assert.equal(performanceBadge({ trimName: 'TYPE R' }), 'TYPE R');
     const review = brands.filter((b) => brandTier(b.slug) === 'review');
     assert.ok(review.length > 0);
     assert.ok(brands.some((b) => b.slug === review[0]!.slug));

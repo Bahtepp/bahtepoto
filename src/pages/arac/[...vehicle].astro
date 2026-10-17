@@ -16,6 +16,7 @@ import {
   vehiclePath,
   withBase,
 } from '@/lib/catalog/format';
+import { performanceBadge } from '@/lib/catalog/market';
 import { engineGroupIdentity } from '@/lib/catalog/selector';
 import { getIssueData } from '@/lib/issues';
 import { groupForDisplay } from '@/lib/issues/match';
@@ -125,7 +126,7 @@ const description = `${brand.name} ${model.name} ${engineTitle}: motor ve kasa �
           <div class="vehicle-switch">
             {otherRevisions.length > 0 && (
               <p>
-                <span class="issue-key">Aynı motor, diğer dönem:</span>{' '}
+                <span class="issue-key">{revision ? 'Aynı motor, diğer dönem:' : 'Makyaj dönemi doğrulanmadı:'}</span>{' '}
                 {otherRevisions.map((r, i) => (
                   <>
                     {i > 0 && ', '}
@@ -138,14 +139,17 @@ const description = `${brand.name} ${model.name} ${engineTitle}: motor ve kasa �
               <details>
                 <summary>{revision ? `${revision.name} dönemdeki` : 'Bu nesildeki'} diğer motorlar ({siblings.length})</summary>
                 <ul class="plain sibling-list">
-                  {siblings.map(({ v, e }) => (
-                    <li>
-                      <a href={pathFor(revision?.slug, v.slug)}>
-                        {e.name}
-                        {v.trimName && !e.name.includes(v.trimName) && ` (${v.trimName})`}
-                      </a>
-                    </li>
-                  ))}
+                  {siblings.map(({ v, e }) => {
+                    const badge = performanceBadge(v);
+                    return (
+                      <li>
+                        <a href={pathFor(revision?.slug, v.slug)}>
+                          {e.name}
+                          {badge && !e.name.includes(badge) && ` (${badge})`}
+                        </a>
+                      </li>
+                    );
+                  })}
                 </ul>
               </details>
             )}

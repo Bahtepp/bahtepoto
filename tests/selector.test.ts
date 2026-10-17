@@ -85,6 +85,45 @@ describe('motor öncelikli seçim', () => {
     assert.ok(civic.some((x) => /i-VTEC|Type R|1\.5|1\.6/i.test(x.label)));
   });
 
+  test('doğrulanmamış makyaj ilk döneme bağlanmaz', () => {
+    const gen = {
+      id: 'g',
+      slug: 'kasa',
+      name: 'Kasa',
+      kind: 'generation' as const,
+      labelPeriod: { start: { year: 2012 }, end: { year: 2018 } },
+      revisions: [
+        { id: 'r1', slug: 'makyajsiz', order: 1 },
+        { id: 'r2', slug: 'makyajli', order: 2 },
+      ],
+    };
+    const engine = { id: 'e', name: '1.6 TDCi', fuel: 'diesel' as const, brandId: 'ford', slug: '16', codes: [], status: 'sourced' as const, sourceIds: [], updatedAt: '2026-10-17' };
+    const variant = {
+      id: 'v',
+      slug: '16-tdci',
+      engineId: 'e',
+      revisionIds: [],
+      revisionMapping: 'unknown' as const,
+      transmissions: [],
+      marketIds: ['tr'],
+      periods: [],
+      marketAvailability: [{ marketId: 'tr', status: 'listed' as const, modelYears: [2014], trims: ['Titanium'], bodyTypes: [], sourceRefs: [], sourceIds: [] }],
+      status: 'sourced' as const,
+      sourceIds: [],
+      updatedAt: '2026-10-17',
+    };
+    const unknown = engineGroupsForModel([gen], { g: [variant] }, { e: engine }, MARKETS, 'tr');
+    assert.equal(unknown[0]?.chassis[0]?.options[0]?.revisionSlug, undefined);
+    const confirmed = engineGroupsForModel(
+      [gen],
+      { g: [{ ...variant, revisionMapping: 'confirmed', revisionIds: ['r2'] }] },
+      { e: engine },
+      MARKETS,
+      'tr',
+    );
+    assert.equal(confirmed[0]?.chassis[0]?.options[0]?.revisionSlug, 'makyajli');
+  });
+
   test('belirsiz nesil gerçek kasa adı gibi yazılmaz', () => {
     const g = groups('nissan', 'qashqai');
     for (const group of g) {

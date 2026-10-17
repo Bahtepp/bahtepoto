@@ -4,7 +4,7 @@
  */
 import type { Engine, Variant } from '@/lib/catalog/schema';
 import { FUEL_LABELS, PENDING_TEXT, formatDisplacement, formatPower, formatTransmission } from '@/lib/catalog/format';
-import { availabilityFor, formatModelYears } from '@/lib/catalog/market';
+import { availabilityFor, formatModelYears, performanceBadge } from '@/lib/catalog/market';
 
 interface Props {
   engine: Engine;
@@ -12,6 +12,7 @@ interface Props {
 }
 
 const { engine, variant } = Astro.props;
+const badge = performanceBadge(variant);
 const drivetrain = variant.drivetrain ? { fwd: 'Önden çekiş', rwd: 'Arkadan itiş', awd: 'Dört çeker' }[variant.drivetrain] : undefined;
 
 const tr = availabilityFor(variant, 'tr');
@@ -33,9 +34,11 @@ const visible = rows.filter(([, v]) => v !== undefined);
 
 <section class="vehicle-section" aria-labelledby="motor">
   <h2 id="motor">Motor özellikleri</h2>
-  <p class="section-meta">
-    {variant.trimName && <span class="badge badge-trim">{variant.trimName}</span>}
-  </p>
+  {badge && (
+    <p class="section-meta">
+      <span class="badge badge-trim">{badge}</span>
+    </p>
+  )}
   <dl class="spec-grid">
     {
       visible.map(([k, v]) => (

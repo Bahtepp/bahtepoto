@@ -88,9 +88,15 @@ function trimIsPerformance(trim: string): boolean {
 }
 
 export function isPerformance(v: V): boolean {
-  if (v.trimName && PERFORMANCE.test(v.trimName.trim())) return true;
+  if (v.trimName && trimIsPerformance(v.trimName)) return true;
   const trims = availabilityFor(v, 'tr')?.trims ?? [];
   return trims.length > 0 && trims.every(trimIsPerformance);
+}
+
+/** Ekranda gösterilecek performans kimliği. Donanım paketi adı dönmez. */
+export function performanceBadge(v: Pick<Variant, 'trimName'>): string | undefined {
+  const name = v.trimName?.trim();
+  return name && trimIsPerformance(name) ? name : undefined;
 }
 
 export function marketCounts(variants: V[], markets: Pick<Market, 'id' | 'parentId'>[]): Record<MarketView, number> {

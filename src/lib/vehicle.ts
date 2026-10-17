@@ -50,6 +50,17 @@ export async function getVehicleSelections(): Promise<VehicleSelection[]> {
             revisionMappingVerified: !revision || variant.revisionIds.includes(revision.id),
           });
         }
+        // Doğrulanmamış makyaj, ilk döneme yönlendirilmez. Seçici bu adrese gider.
+        if (generation.revisions.length > 0 && variant.revisionMapping !== 'confirmed') {
+          out.push({
+            brand,
+            model,
+            generation,
+            variant,
+            engine,
+            revisionMappingVerified: false,
+          });
+        }
       }
     }
   }
