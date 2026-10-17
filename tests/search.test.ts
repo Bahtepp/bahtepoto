@@ -57,7 +57,7 @@ describe('global arama', () => {
 
   test('Türkiye görünürlüğü yaygın markayı tutar, nadir markayı silmez', () => {
     const brands = JSON.parse(readFileSync('src/data/catalog/brands.json', 'utf8')) as { slug: string }[];
-    for (const slug of ['bmw', 'mercedes-benz', 'renault', 'fiat', 'honda', 'byd', 'chery', 'mg']) {
+    for (const slug of ['bmw', 'mercedes-benz', 'renault', 'fiat', 'honda', 'byd', 'chery', 'mg', 'togg']) {
       assert.equal(isPrimaryBrand(slug), true, slug);
     }
     for (const slug of ['daewoo', 'dfsk', 'geely']) assert.equal(isPrimaryBrand(slug), false, slug);

@@ -10,7 +10,7 @@ import { validateCatalog, type CatalogData } from './validate';
 import { marketCounts } from './market';
 import { engineGroupsForModel } from './selector';
 import type { SearchIndex } from './search';
-import { brandTier } from './visibility';
+import { brandTier, isHiddenModel } from './visibility';
 
 interface Catalog extends CatalogData {
   brandById: Map<string, Brand>;
@@ -97,7 +97,7 @@ export async function getBrandSummaries(): Promise<BrandSummary[]> {
     status: b.status,
     generationNaming: b.generationNaming,
     tier: brandTier(b.slug),
-    modelCount: models.filter((m) => m.brandId === b.id && summarizeModel(m, markets).generations.some((g) => g.marketCounts.tr > 0)).length,
+    modelCount: models.filter((m) => m.brandId === b.id && !isHiddenModel(b.slug, m.slug) && summarizeModel(m, markets).generations.some((g) => g.marketCounts.tr > 0)).length,
   }));
 }
 
@@ -114,7 +114,7 @@ export async function getSearchIndex(): Promise<SearchIndex> {
     const summary = summarizeModel(model, catalog.markets);
     if (!summary.generations.some((g) => g.marketCounts.tr > 0)) continue;
     const brand = catalog.brandById.get(model.brandId)!;
-    if (brandTier(brand.slug) !== 'primary') continue;
+    if (brandTier(brand.slug) !== 'primary' || isHiddenModel(brand.slug, model.slug)) continue;
     models.push({ brand: brand.slug, brandName: brand.name, slug: model.slug, name: model.name });
     const engineMap: Record<string, (typeof catalog.engines)[number]> = {};
     const variantsByGeneration: Record<string, (typeof model.generations)[number]['variants']> = {};
@@ -143,7 +143,7 @@ export async function getBrandPayload(brandId: string): Promise<BrandPayload> {
   if (!brand) throw new Error(`Bilinmeyen marka: ${brandId}`);
   return {
     brand,
-    models: catalog.models.filter((m) => m.brandId === brandId).map((m) => summarizeModel(m, catalog.markets)),
+    models: catalog.models.filter((m) => m.brandId === brandId && (brand.tier !== 'primary' || !isHiddenModel(brand.slug, m.slug))).map((m) => summarizeModel(m, catalog.markets)),
     markets: catalog.markets,
   };
 }
