@@ -2,7 +2,7 @@
   "id": "proton-gen-2",
   "brandId": "proton",
   "slug": "gen-2",
-  "name": "Gen 2",
+  "name": "GEN-2",
   "order": 999,
   "status": "sourced",
   "sourceIds": ["tsb-kasko-deger-listesi"],
@@ -23,13 +23,13 @@
       "notes": "Üretim yılları İngilizce Wikipedia \"Proton Gen 2\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "proton-gen-2-uretim-2004-16", "slug": "16", "engineId": "proton-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Low Line", "Medium Line", "Persona Base Line", "Persona High Line", "Persona Highline", "Persona Low Line", "Persona Medium Line"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 320-22", "TSB 320-23", "TSB 320-25", "TSB 320-46", "TSB 320-47", "TSB 320-48", "TSB 320-52", "TSB 320-53", "TSB 320-54", "TSB 320-55", "TSB 320-56", "TSB 320-57"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"GEN 2 1.6\")." }
+        { "id": "proton-gen-2-uretim-2004-16", "slug": "16", "engineId": "proton-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["High Line", "Low Line", "Medium Line", "Persona Base Line", "Persona High Line", "Persona Highline", "Persona Low Line", "Persona Medium Line", "R3"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 320-22", "TSB 320-23", "TSB 320-24", "TSB 320-25", "TSB 320-26", "TSB 320-27", "TSB 320-36", "TSB 320-37", "TSB 320-46", "TSB 320-47", "TSB 320-48", "TSB 320-52", "TSB 320-53", "TSB 320-54", "TSB 320-55", "TSB 320-56", "TSB 320-57"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"GEN 2 1.6\")." }
       ]
     },
     {
       "id": "proton-gen-2-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Gen 2 — nesli belirlenmemiş araçlar",
+      "name": "GEN-2 — nesli belirlenmemiş araçlar",
       "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2014 } },
