@@ -22,7 +22,7 @@
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "nissan-np-300-nesil-belirlenmedi-25-tdi", "slug": "25-tdi", "engineId": "nissan-25-tdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013], "trims": ["Cift K.SKYSTAR Sss", "Skystar"], "bodyTypes": ["Pick-up"], "sourceRefs": ["TSB 107-303", "TSB 107-304", "TSB 107-319"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "nissan-np-300-nesil-belirlenmedi-25-tdi", "slug": "25-tdi", "engineId": "nissan-25-tdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013], "trims": ["Cift K.SKYSTAR Sss", "Skystar"], "bodyTypes": ["Pick-up"], "sourceRefs": ["TSB 107-303", "TSB 107-304", "TSB 107-319"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"NP 300 D/C 4x4 SKYSTAR 2.5 TDI\")." }
       ]
     }
   ]

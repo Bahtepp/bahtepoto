@@ -1,4 +1,4 @@
 [
-  { "id": "ikco-16", "brandId": "ikco", "slug": "16", "name": "1.6", "displacementL": 1.6, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"SAMAND 1.6 LX\"); yakıt türü tip adında yazmıyor." },
-  { "id": "ikco-17", "brandId": "ikco", "slug": "17", "name": "1.7", "displacementL": 1.7, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"SAMAND SOREN EF7 1.7\"); yakıt türü tip adında yazmıyor." }
+  { "id": "ikco-16", "brandId": "ikco", "slug": "16", "name": "1.6", "displacementL": 1.6, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
+  { "id": "ikco-17", "brandId": "ikco", "slug": "17", "name": "1.7", "displacementL": 1.7, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." }
 ]

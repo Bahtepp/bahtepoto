@@ -73,6 +73,47 @@ describe('TSB tip adı ayrıştırma', () => {
     assert.deepEqual(resolve(parsed[0]!).trimWords, ['TITANIUM']);
     assert.equal(resolve(parsed[2]!).model, 'C-MAX');
   });
+
+  test('bitişik DIG-T dizel sayılmaz; DIG-T160 ve e-POWER ayrılır', () => {
+    const glued = parseTypeName('MC QASHQAI 1.2DIG-T XTR.PLATINUM PREMIUM PACK');
+    assert.equal(glued.displacementL, 1.2);
+    assert.equal(glued.fuel, 'petrol');
+    assert.ok(glued.tech.includes('DIG-T'));
+
+    const power = parseTypeName('QASHQAI 1.3 DIG-T160 DCT PLATINUM');
+    assert.equal(power.displacementL, 1.3);
+    assert.equal(power.powerPs, 160);
+    assert.equal(power.fuel, 'petrol');
+    assert.equal(power.transmission?.type, 'dual-clutch');
+
+    const ep = parseTypeName('QASHQAI E-POWER 190 DESIGN PACK');
+    assert.equal(ep.fuel, 'hybrid');
+    assert.equal(ep.powerPs, 190);
+    assert.ok(ep.tech.includes('E-POWER'));
+    assert.equal(ep.displacementL, undefined);
+
+    const awd = parseTypeName('X-TRAIL E-POWER 213 E-4ORCE SKYPACK 4WD');
+    assert.equal(awd.awd, true);
+    assert.equal(awd.powerPs, 213);
+    assert.equal(awd.fuel, 'hybrid');
+
+    const rr = parseTypeName('GHOST EWB 6.75');
+    assert.equal(rr.displacementL, 6.75);
+    const fiesta = parseTypeName('FIESTA TREND 5K 1.25i');
+    assert.equal(fiesta.displacementL, 1.25);
+    assert.equal(fiesta.fuel, 'petrol');
+    const aveo = parseTypeName('AVEO HB 1.416V LTZ OV');
+    assert.equal(aveo.displacementL, 1.4);
+    assert.equal(aveo.transmission?.type, 'automatic');
+  });
+
+  test('MC ön eki model adı değildir', () => {
+    const names = ['MC QASHQAI 1.2 DIG-T VISIA', 'QASHQAI 1.5 DCI VISIA'];
+    const parsed = names.map(parseTypeName);
+    const resolve = resolveModels(parsed);
+    assert.equal(resolve(parsed[0]!).model, 'QASHQAI');
+    assert.equal(resolve(parsed[1]!).model, 'QASHQAI');
+  });
 });
 
 describe('TSB dosyası', () => {
@@ -245,6 +286,98 @@ describe('TSB → katalog: alt modeller ve elle girilmiş Türkiye durumu', () =
     assert.equal(availabilityFor(v as never, 'tr')!.status, 'sold', 'arayüz en güçlü durumu gösterir');
     const stripped = ((stripTsb(r.merged).models.get('models/ford/focus.json')!.generations as Json[])[0]!.variants as Json[])[0];
     assert.deepEqual(stripped, mk2Variant);
+  });
+});
+
+describe('paylaşılan motor notu, yaklaşık nesil ve BMW ED', () => {
+  test('paylaşılan motor başka modelin tip adını örnek göstermez', () => {
+    const rows = [
+      row('NISSAN', '1', 'MICRA 1.2 TEKNA 5 KAPI', [2015, 2016]),
+      row('NISSAN', '2', 'QASHQAI 1.2 VISIA TC S/S', [2015, 2016]),
+    ];
+    const r = buildFromTsb(miniCatalog(), rows, OPTS);
+    const engines = r.merged.engines.get('nissan.json') as Json[];
+    const shared = engines.find((e) => e.name === '1.2')!;
+    assert.equal(String(shared.notes ?? '').includes('MICRA'), false);
+    assert.equal(String(shared.notes ?? '').includes('QASHQAI'), false);
+    const variantNote = (file: string) => {
+      const gens = r.merged.models.get(file)!.generations as Json[];
+      return String((gens[0]!.variants as Json[])[0]!.notes);
+    };
+    assert.match(variantNote('models/nissan/micra.json'), /MICRA 1\.2 TEKNA/);
+    assert.match(variantNote('models/nissan/qashqai.json'), /QASHQAI 1\.2 VISIA/);
+    assert.doesNotMatch(variantNote('models/nissan/qashqai.json'), /MICRA/);
+  });
+
+  test('yaklaşık dünya aralığı, yılları kapsayan kesin nesli belirsiz bırakmaz', () => {
+    const period = (start: number, end: number, approximate = false) => ({
+      marketId: 'global',
+      basis: 'production',
+      start: { year: start },
+      end: { year: end },
+      ...(approximate ? { approximate: true } : {}),
+    });
+    const catalog = miniCatalog();
+    catalog.models.set('models/nissan/x-trail.json', {
+      id: 'nissan-x-trail',
+      brandId: 'nissan',
+      slug: 'x-trail',
+      name: 'X-TRAIL',
+      status: 'sourced',
+      sourceIds: ['wpgen-1'],
+      updatedAt: '2026-10-15',
+      generations: [
+        { id: 'nissan-x-trail-t31', slug: 't31', name: 'T31', order: 2, labelPeriod: period(2007, 2019, true), status: 'sourced', sourceIds: ['wpgen-1'], updatedAt: '2026-10-15', revisions: [], variants: [] },
+        { id: 'nissan-x-trail-t32', slug: 't32', name: 'T32', order: 3, labelPeriod: period(2013, 2022), status: 'sourced', sourceIds: ['wpgen-1'], updatedAt: '2026-10-15', revisions: [], variants: [] },
+      ],
+    });
+    const r = buildFromTsb(catalog, [row('NISSAN', '9', 'X-TRAIL 1.6 DCI SKY PACK 4X2', [2014, 2015, 2016, 2017, 2018])], OPTS);
+    const gens = r.merged.models.get('models/nissan/x-trail.json')!.generations as Json[];
+    assert.equal(((gens.find((g) => g.slug === 't32')!.variants as Json[]) ?? []).length, 1);
+    assert.equal(gens.find((g) => g.slug === 'nesil-belirlenmedi'), undefined);
+  });
+
+  test('BMW 320i ED donanım paketi değil, ayrı güç sürümüdür', () => {
+    const r = buildFromTsb(miniCatalog(), [row('BMW', '2', '320i ED 170 SEDAN', [2013, 2014]), row('BMW', '1', '320d SEDAN (184)', [2012, 2013])], OPTS);
+    const engines = r.merged.engines.get('bmw.json') as Json[];
+    const ed = engines.find((e) => String(e.name).includes('ED'));
+    assert.ok(ed, JSON.stringify(engines.map((e) => e.name)));
+    assert.equal((ed!.power as Json).ps, 170);
+    assert.equal(ed!.fuel, 'petrol');
+    const model = r.merged.models.get('models/bmw/3-serisi.json')!;
+    const variants = (model.generations as Json[]).flatMap((g) => g.variants as Json[]);
+    const edVariant = variants.find((v) => String(v.notes).includes('320i ED'));
+    assert.ok(edVariant);
+    assert.deepEqual((edVariant!.marketAvailability as Json[])[0]!.trims, []);
+    assert.ok(engines.some((e) => e.fuel === 'diesel' && String(e.name).includes('320d')));
+  });
+
+  test('Mercedes "180 d" dizel eki donanım sayılmaz', () => {
+    const r = buildFromTsb(
+      miniCatalog(),
+      [row('MERCEDES', '1', 'CLA 180 d FL AMG', [2016, 2017]), row('MERCEDES', '2', 'C 180 CGI', [2010, 2011])],
+      OPTS,
+    );
+    const engines = r.merged.engines.get('mercedes-benz.json') as Json[];
+    const diesel = engines.find((e) => String(e.name).includes('180') && e.fuel === 'diesel');
+    const other = engines.find((e) => String(e.name).includes('180') && e.fuel !== 'diesel');
+    assert.ok(diesel, JSON.stringify(engines.map((e) => [e.name, e.fuel])));
+    assert.notEqual(diesel!.id, other?.id);
+    const cla = r.merged.models.get('models/mercedes-benz/cla.json')!;
+    const trims = ((cla.generations as Json[])[0]!.variants as Json[])[0]!.marketAvailability as Json[];
+    assert.equal((trims[0]!.trims as string[]).includes('D'), false);
+  });
+
+  test('6.75 litre 6.7 veya 6.8 diye kesilmez; DS7CROSSBACK ayrı model olmaz', () => {
+    const r = buildFromTsb(
+      miniCatalog(),
+      [row('ROLLS-ROYCE', '1', 'GHOST EWB 6.75', [2022, 2023]), row('DS', '1', 'DS7CROSSBACK PURETECH225 EAT8', [2021, 2022])],
+      OPTS,
+    );
+    const rolls = [...r.merged.engines.values()].flat().find((e) => (e as Json).displacementL === 6.75) as Json | undefined;
+    assert.equal(rolls?.name, '6.75');
+    assert.ok(r.merged.models.get('models/ds/ds7.json'));
+    assert.equal(r.merged.models.get('models/ds/ds7crossback.json'), undefined);
   });
 });
 

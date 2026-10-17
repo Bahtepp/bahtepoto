@@ -36,8 +36,8 @@ export interface ParsedType {
 const up = (s: string) => s.toLocaleUpperCase('tr-TR').replace(/İ/g, 'I').replace(/Ş/g, 'S').replace(/Ğ/g, 'G').replace(/Ü/g, 'U').replace(/Ö/g, 'O').replace(/Ç/g, 'C');
 
 const DIESEL = new Set(['TDCI', 'TDI', 'DCI', 'CRDI', 'CRDİ', 'HDI', 'BLUEHDI', 'E-HDI', 'JTD', 'JTDM', 'MULTIJET', 'MJET', 'MJT', 'CDTI', 'CDI', 'D4D', 'D-4D', 'DIZEL', 'DIESEL', 'SDV6', 'TDV6', 'SD4', 'TD4', 'ED4', 'CRD', 'DTEC', 'I-DTEC', 'IDTEC', 'SKYACTIV-D', 'VCDI', 'D-CAT', 'BLUETEC', 'TDS', 'SDI', 'ECOBLUE', 'BLUEDCI', 'CRDI4', 'DDIS', 'DDIS4', 'TDDI', 'TDCI4', 'D-4D4', 'XDI', 'CRTD', 'BITDI', 'BITURBODIESEL', 'TDCİ']);
-const PETROL = new Set(['EB', 'E.BOOST', 'TSI', 'TFSI', 'FSI', 'TCE', 'ECOBOOST', 'VVT', 'VVTI', 'VVT-I', 'DUAL-VVT', 'VTEC', 'I-VTEC', 'IVTEC', 'MPI', 'GDI', 'T-GDI', 'TGDI', 'PURETECH', 'THP', 'VTI', 'TJET', 'T-JET', 'MULTIAIR', 'FIRE', 'TB', 'TBI', 'BENZIN', 'BENZINLI', 'SCE', 'TI-VCT', 'TIVCT', 'DURATEC', 'ECOTEC', 'SIDI', 'TURBOJET', 'GTI', 'EVO', 'DIG-T', 'SKYACTIV-G', 'TSI-ACT', 'ECO-G', 'FIREFLY']);
-const HYBRID = new Set(['HYBRID', 'HIBRIT', 'HEV', 'FULL-HYBRID', 'E-TECH-HYBRID', 'HYBRIT', 'SELF-CHARGING']);
+const PETROL = new Set(['EB', 'E.BOOST', 'TSI', 'TFSI', 'FSI', 'TCE', 'ECOBOOST', 'VVT', 'VVTI', 'VVT-I', 'DUAL-VVT', 'VTEC', 'I-VTEC', 'IVTEC', 'MPI', 'GDI', 'T-GDI', 'TGDI', 'PURETECH', 'THP', 'VTI', 'TJET', 'T-JET', 'MULTIAIR', 'FIRE', 'TB', 'TBI', 'BENZIN', 'BENZINLI', 'SCE', 'TI-VCT', 'TIVCT', 'DURATEC', 'ECOTEC', 'SIDI', 'TURBOJET', 'GTI', 'EVO', 'DIG-T', 'DIGT', 'IG-T', 'IGT', 'SKYACTIV-G', 'TSI-ACT', 'ECO-G', 'FIREFLY']);
+const HYBRID = new Set(['HYBRID', 'HIBRIT', 'HEV', 'FULL-HYBRID', 'E-TECH-HYBRID', 'HYBRIT', 'SELF-CHARGING', 'E-POWER', 'EPOWER']);
 const PHEV = new Set(['PHEV', 'PLUG-IN', 'E-HYBRID', 'EHYBRID', 'PLUGIN', 'PLUG-IN-HYBRID', 'GTE']);
 const MHEV = new Set(['MHEV', 'ETSI', 'E-TSI', 'MILD-HYBRID', 'MILD', '48V', 'MHYBRID']);
 const ELECTRIC = new Set(['EV', 'BEV', 'ELEKTRIK', 'ELEKTRIKLI', 'ELECTRIC', 'E-TRON', 'KWH']);
@@ -77,6 +77,7 @@ const AMT = new Map<string, string>([
 const CVT = new Map<string, string>([
   ['CVT', 'CVT'],
   ['XTRONIC', 'Xtronic'],
+  ['X-TRONIC', 'Xtronic'],
   ['MULTIDRIVE', 'Multidrive'],
   ['E-CVT', 'e-CVT'],
   ['ECVT', 'e-CVT'],
@@ -85,7 +86,7 @@ const CVT = new Map<string, string>([
   ['IVT', 'IVT'],
 ]);
 const MANUAL = new Set(['MANUEL', 'MT', 'M/T', 'MANUAL', 'DUZ']);
-const AWD = new Set(['4X4', '4MOTION', 'QUATTRO', 'XDRIVE', 'AWD', '4WD', '4MATIC', 'ALL4', 'Q4', '4X4.', 'ALLGRIP', '4MOTION.', 'E-FOUR', 'ALLWHEELDRIVE', '4XMOTION']);
+const AWD = new Set(['4X4', '4MOTION', 'QUATTRO', 'XDRIVE', 'AWD', '4WD', '4MATIC', 'ALL4', 'Q4', '4X4.', 'ALLGRIP', '4MOTION.', 'E-FOUR', 'ALLWHEELDRIVE', '4XMOTION', 'E-4ORCE', 'E4ORCE']);
 const BODY: [RegExp, BodyType][] = [
   [/^3K$|^3KAPI$|^3D$|^3DR$/, 'hatchback-3'],
   [/^4K$|^4KAPI$|^SEDAN$|^4D$|^4DR$|^SD$|^SDN$/, 'sedan-4'],
@@ -128,6 +129,58 @@ const FUEL_RANK: Record<FuelType, number> = {
   diesel: 2,
   petrol: 1,
 };
+
+/**
+ * Hacme veya güce bitişik yazılmış motor teknolojisi: "1.2DIG-T", "DIG-T160", "1.6TDCI".
+ * Tek harf ("1.6d") burada çözülmez; "D" DIG-T / DCI içinden koparılmaz.
+ * Uzun takma adlar önce denenir ("BLUEDCI" → DCI + artık değil).
+ */
+const GLUED_TECH: { alias: string; canon: string }[] = [
+  ['BLUEDCI', 'BLUEDCI'],
+  ['BLUEHDI', 'BLUEHDI'],
+  ['ECOBOOST', 'ECOBOOST'],
+  ['ECOBLUE', 'ECOBLUE'],
+  ['PURETECH', 'PURETECH'],
+  ['MULTIJET', 'MULTIJET'],
+  ['E-POWER', 'E-POWER'],
+  ['EPOWER', 'E-POWER'],
+  ['DIG-T', 'DIG-T'],
+  ['DIGT', 'DIG-T'],
+  ['IG-T', 'IG-T'],
+  ['IGT', 'IG-T'],
+  ['TDCI', 'TDCI'],
+  ['TFSI', 'TFSI'],
+  ['CDTI', 'CDTI'],
+  ['CRDI', 'CRDI'],
+  ['TGDI', 'TGDI'],
+  ['T-GDI', 'T-GDI'],
+  ['TCE', 'TCE'],
+  ['TSI', 'TSI'],
+  ['TDI', 'TDI'],
+  ['DCI', 'DCI'],
+  ['CDI', 'CDI'],
+  ['HDI', 'HDI'],
+  ['GDI', 'GDI'],
+]
+  .map(([alias, canon]) => ({ alias, canon }))
+  .sort((a, b) => b.alias.replace(/-/g, '').length - a.alias.replace(/-/g, '').length);
+
+function matchGluedTech(raw: string): { canon: string; power?: number } | undefined {
+  const U = raw.replace(/-/g, '');
+  if (!U) return undefined;
+  for (const { alias, canon } of GLUED_TECH) {
+    const A = alias.replace(/-/g, '');
+    if (U === A) return { canon };
+    if (U.startsWith(A)) {
+      const rest = U.slice(A.length);
+      if (/^\d{2,3}$/.test(rest)) {
+        const n = Number(rest);
+        if (n >= 50 && n <= 800) return { canon, power: n };
+      }
+    }
+  }
+  return undefined;
+}
 
 export function parseTypeName(typeName: string): ParsedType {
   const raw = typeName
@@ -173,21 +226,56 @@ export function parseTypeName(typeName: string): ParsedType {
       attr = true;
     }
 
-    // Hacim: "1.6", "1,6", "1.6i", "1.6L", "2.0TDI", "1.4TSI", "1.6TDCI"
-    const disp = /^(\d)[.,](\d)(I|L|T|D)?([A-Z-]*)$/.exec(T);
-    if (!attr && disp && out.displacementL === undefined) {
+    // İki ondalık: "6.75", "1.25i". "1.416V" buna uymaz (supap sayısı ayrı ele alınır).
+    const disp2 = /^(\d{1,2})[.,](\d{2})([ILD])?$/.exec(T);
+    if (!attr && disp2 && out.displacementL === undefined) {
+      out.displacementL = Number(`${disp2[1]}.${disp2[2]}`);
+      if (disp2[3] === 'I') setFuel('petrol');
+      if (disp2[3] === 'D') setFuel('diesel');
+      attr = true;
+    }
+
+    // Hacim: "1.6", "1,6", "1.6i", "1.6L", "2.0TDI", "1.4TSI", "1.6TDCI", "1.2DIG-T", "1.416V"
+    // Tek harf yakıt kısaltması ("1.6i", "1.5d") yalnızca sonek TAM O harfse uygulanır.
+    // "1.2DIG-T" içindeki D dizel değildir. "6.75" tek haneye kesilmez.
+    const disp = /^(\d)[.,](\d)(.*)$/.exec(T);
+    const valveRest = /^(?:8|12|16|20|24)V$/.test(disp?.[3] ?? '');
+    if (!attr && disp && out.displacementL === undefined && (!/^\d/.test(disp[3] ?? '') || valveRest)) {
+      const rest = valveRest ? '' : (disp[3] ?? '');
+      const glued = rest ? matchGluedTech(rest) : undefined;
+      const letter = /^[ILTD]$/.test(rest) ? rest : undefined;
       out.displacementL = Number(`${disp[1]}.${disp[2]}`);
-      if (disp[3] === 'I') setFuel('petrol');
-      if (disp[3] === 'D') setFuel('diesel');
-      const glued = disp[4];
+      if (letter === 'I') setFuel('petrol');
+      if (letter === 'D') setFuel('diesel');
       if (glued) {
-        const f = fuelOf(glued);
+        const f = fuelOf(glued.canon);
         if (f) {
           setFuel(f);
-          out.tech.push(glued);
+          out.tech.push(glued.canon);
+        }
+        if (glued.power !== undefined && out.powerPs === undefined) out.powerPs = glued.power;
+      } else if (rest && !letter) {
+        const f = fuelOf(rest);
+        if (f) {
+          setFuel(f);
+          out.tech.push(rest);
         }
       }
       attr = true;
+    }
+
+    // Teknolojiye bitişik güç, hacimsiz: "DIG-T160", "E-POWER" (güç sonraki sözcüktedir).
+    if (!attr) {
+      const glued = matchGluedTech(T);
+      if (glued) {
+        const f = fuelOf(glued.canon);
+        if (f) {
+          setFuel(f);
+          out.tech.push(glued.canon);
+          if (glued.power !== undefined && out.powerPs === undefined) out.powerPs = glued.power;
+          attr = true;
+        }
+      }
     }
 
     if (!attr) {
@@ -296,7 +384,7 @@ export function nearlyEqual(a: string, b: string): boolean {
 }
 
 /** Model adı olmayan baş sözcükler ("NEW GOLF", "THE BEETLE", "MY 2017 …"). */
-const LEADING_NOISE = new Set(['NEW', 'YENI', 'THE', 'ALL', 'MY', 'ALL-NEW']);
+const LEADING_NOISE = new Set(['NEW', 'YENI', 'THE', 'ALL', 'MY', 'ALL-NEW', 'MC']);
 /** Model adına birleşen ön sözcükler ("GRAND C-MAX", "GRAND SCENIC"). */
 const JOINING = new Set(['GRAND', 'CROSS', 'BIG', 'LAND']);
 /** Hiçbir zaman alt model sayılmayan sözcükler (makyaj / model yılı kısaltmaları). */

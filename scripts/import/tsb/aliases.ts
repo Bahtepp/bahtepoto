@@ -66,6 +66,9 @@ export const MODEL_ALIASES: Record<string, Record<string, ModelAlias>> = {
     'MINI JOHN': { model: 'MINI', note: 'John Cooper Works donanım seviyesi' },
     'MINI COOPER': { model: 'MINI', note: 'Cooper donanım seviyesi' },
   },
+  ds: {
+    DS7CROSSBACK: { model: 'DS7', note: 'DS 7 Crossback: bitişik yazılmış gövde adı, ayrı model değil' },
+  },
   citroen: {
     C5AIRCROSS: { model: 'C5 AIRCROSS', note: 'Bitişik yazım' },
     'C5-AC': { model: 'C5 AIRCROSS', note: 'Kısaltma: C5 AC = C5 Aircross' },

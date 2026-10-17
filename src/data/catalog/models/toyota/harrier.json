@@ -36,7 +36,7 @@
       "notes": "Üretim yılları İngilizce Wikipedia \"Toyota Harrier\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "toyota-harrier-xu80-20-171", "slug": "20-171", "engineId": "toyota-20-171", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 144-1417"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "toyota-harrier-xu80-20-171", "slug": "20-171", "engineId": "toyota-20-171", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 144-1417"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"HARRIER IV 2.0 (171) CVT\")." }
       ]
     }
   ]

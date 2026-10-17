@@ -1,6 +1,6 @@
 [
-  { "id": "lincoln-46", "brandId": "lincoln", "slug": "46", "name": "4.6", "displacementL": 4.6, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"TOWN CAR ULTIMATE 4.6\"); yakıt türü tip adında yazmıyor." },
-  { "id": "lincoln-35", "brandId": "lincoln", "slug": "35", "name": "3.5", "displacementL": 3.5, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"NAVIGATOR 3.5 V6 AWD\"); yakıt türü tip adında yazmıyor." },
-  { "id": "lincoln-20", "brandId": "lincoln", "slug": "20", "name": "2.0", "displacementL": 2, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"NAUTILUS 2.0T\"); yakıt türü tip adında yazmıyor." },
-  { "id": "lincoln-30", "brandId": "lincoln", "slug": "30", "name": "3.0", "displacementL": 3, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"AVIATOR 3.0\"); yakıt türü tip adında yazmıyor." }
+  { "id": "lincoln-46", "brandId": "lincoln", "slug": "46", "name": "4.6", "displacementL": 4.6, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
+  { "id": "lincoln-35", "brandId": "lincoln", "slug": "35", "name": "3.5", "displacementL": 3.5, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
+  { "id": "lincoln-20", "brandId": "lincoln", "slug": "20", "name": "2.0", "displacementL": 2, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
+  { "id": "lincoln-30", "brandId": "lincoln", "slug": "30", "name": "3.0", "displacementL": 3, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." }
 ]

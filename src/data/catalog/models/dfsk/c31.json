@@ -22,7 +22,7 @@
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "dfsk-c31-nesil-belirlenmedi-15", "slug": "15", "engineId": "dfsk-15", "revisionMapping": "unknown", "transmissions": [{ "type": "manual" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023, 2024, 2025], "trims": ["G 4x2 Pro Tek Kabin"], "bodyTypes": [], "sourceRefs": ["TSB 806-1013"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "dfsk-c31-nesil-belirlenmedi-15", "slug": "15", "engineId": "dfsk-15", "revisionMapping": "unknown", "transmissions": [{ "type": "manual" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023, 2024, 2025], "trims": ["G 4x2 Pro Tek Kabin"], "bodyTypes": [], "sourceRefs": ["TSB 806-1013"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"C31 G1.5 4x2 MT PRO TEK KABIN\")." }
       ]
     }
   ]

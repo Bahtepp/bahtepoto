@@ -3,11 +3,11 @@
 `npm run catalog:update` her çalıştığında yeniden üretilir. Katalogda model dosyasına kaynaklı nesil eklendikçe
 TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 
-## Nesli belirlenemeyen varyantlar (1958 varyant, 592 model)
+## Nesli belirlenemeyen varyantlar (1924 varyant, 591 model)
 
 | Marka | Model | Nesli belirlenemeyen varyant | Bilinen nesil |
 |---|---|---|---|
-| Mercedes-Benz | E | 37 | 4 |
+| Mercedes-Benz | E | 38 | 4 |
 | Opel | Astra | 34 | 5 |
 | Mercedes-Benz | C | 30 | 6 |
 | Renault | Clio | 25 | 5 |
@@ -20,34 +20,32 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Dacia | Logan Mcv | 15 | 0 |
 | Peugeot | Partner | 15 | 0 |
 | Skoda | Octavia | 15 | 4 |
-| Volkswagen | Caravelle | 15 | 0 |
 | Audi | A6 | 14 | 6 |
 | Opel | Zafira | 14 | 0 |
 | Renault | Captur | 14 | 1 |
-| Volkswagen | Golf | 14 | 4 |
 | Land Rover | Range Rover | 13 | 0 |
 | Skoda | Fabia | 13 | 4 |
+| Volkswagen | Golf | 13 | 4 |
 | BMW | 3 Serisi | 12 | 7 |
 | Opel | Corsa | 12 | 4 |
+| Volkswagen | Caravelle | 12 | 0 |
+| BMW | 1 Serisi | 11 | 5 |
 | BMW | 7 Serisi | 11 | 7 |
 | BMW | Z4 | 11 | 0 |
 | Fiat | Punto | 11 | 3 |
-| Kia | Rio | 11 | 3 |
 | Mercedes-Benz | SL | 11 | 1 |
 | Porsche | 911 Carrera | 11 | 0 |
 | Audi | A4 | 10 | 5 |
-| BMW | 1 Serisi | 10 | 5 |
 | Fiat | Bravo | 10 | 1 |
+| Mercedes-Benz | G | 10 | 2 |
 | Mercedes-Benz | S | 10 | 7 |
 | Renault | Megane | 10 | 3 |
 | Seat | Altea | 10 | 0 |
 | Volkswagen | Passat | 10 | 4 |
-| Audi | A3 | 9 | 4 |
 | Dacia | Sandero | 9 | 3 |
 | Fiat | 500X | 9 | 1 |
 | Ford | Puma | 9 | 0 |
-| Mercedes-Benz | G | 9 | 2 |
-| Nissan | Qashqai | 9 | 3 |
+| Kia | Rio | 9 | 3 |
 | Renault | Symbol | 9 | 3 |
 | Bentley | Flying Spur | 8 | 0 |
 | Citroen | DS3 | 8 | 0 |
@@ -56,8 +54,7 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Ford | Fiesta | 8 | 3 |
 | Hyundai | I20 | 8 | 4 |
 | Kia | Xceed | 8 | 0 |
-| Nissan | X-TRAIL | 8 | 4 |
-| Opel | Insignia | 8 | 2 |
+| Nissan | Qashqai | 8 | 3 |
 | Peugeot | 2008 | 8 | 2 |
 | Peugeot | 307 | 8 | 1 |
 | Peugeot | 308 | 8 | 3 |
@@ -67,25 +64,25 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Renault | Kangoo Express | 8 | 0 |
 | Seat | Leon | 8 | 4 |
 | Tesla | Model S | 8 | 0 |
+| Audi | A3 | 7 | 4 |
 | Chrysler | Grand | 7 | 0 |
 | Citroen | Grand C4 | 7 | 0 |
 | Citroen | Spacetourer | 7 | 0 |
 | Fiat | Fiorino | 7 | 2 |
 | Ford | Focus | 7 | 4 |
 | Kia | Cerato | 7 | 1 |
+| Nissan | X-TRAIL | 7 | 4 |
 | Opel | Vectra | 7 | 0 |
 | Opel | Vivaro | 7 | 0 |
 | Porsche | Cayenne | 7 | 4 |
 | Skoda | Superb | 7 | 4 |
 | Volkswagen | Jetta | 7 | 3 |
-| Audi | Q5 | 6 | 3 |
 | Audi | S5 | 6 | 1 |
 | Dacia | Duster | 6 | 3 |
 | Dodge | Charger | 6 | 1 |
 | Fiat | Scudo Combimix | 6 | 0 |
 | Ford | Tourneocustom | 6 | 0 |
 | Honda | Civic | 6 | 11 |
-| Hyundai | Elantra | 6 | 8 |
 | Hyundai | I30 | 6 | 3 |
 | Hyundai | Ioniq | 6 | 1 |
 | Jeep | Wrangler | 6 | 0 |
@@ -99,16 +96,16 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Suzuki | S-CROSS | 6 | 0 |
 | Toyota | Corolla | 6 | 4 |
 | Toyota | Lexus | 6 | 0 |
-| Volkswagen | Polo | 6 | 3 |
 | Audi | A8 | 5 | 4 |
+| Audi | Q5 | 5 | 3 |
 | BMW | M5 | 5 | 0 |
 | BMW | X1 | 5 | 3 |
 | BMW | X3 | 5 | 4 |
 | BMW | X5 | 5 | 5 |
 | Citroen | DS4 | 5 | 0 |
 | Fiat | Egea Cross | 5 | 0 |
-| Fiat | Panda | 5 | 3 |
 | Ford | Fusion | 5 | 0 |
+| Hyundai | Elantra | 5 | 8 |
 | Hyundai | Tucson | 5 | 5 |
 | Jaguar | XJ | 5 | 3 |
 | Mercedes-Benz | A | 5 | 4 |
@@ -119,8 +116,7 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Mercedes-Benz | Maybach | 5 | 0 |
 | Mercedes-Benz | ML | 5 | 0 |
 | MG | ZS | 5 | 1 |
-| Mitsubishi | Lancer | 5 | 5 |
-| Nissan | Navara | 5 | 4 |
+| Opel | Insignia | 5 | 2 |
 | Peugeot | Traveller | 5 | 0 |
 | Porsche | Boxster | 5 | 2 |
 | Porsche | Macan | 5 | 2 |
@@ -130,21 +126,19 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Seat | Ibiza | 5 | 5 |
 | Suzuki | Grand Vitara | 5 | 0 |
 | Toyota | Camry | 5 | 1 |
-| Toyota | RAV4 | 5 | 6 |
 | Toyota | Verso | 5 | 1 |
 | Volkswagen | Multivan | 5 | 0 |
-| Volkswagen | Tiguan Allspace | 5 | 0 |
+| Volkswagen | Polo | 5 | 3 |
 | Volvo | XC70 | 5 | 1 |
 | Audi | A7 | 4 | 2 |
 | Bentley | Continental GT | 4 | 4 |
 | BMW | 6 Serisi | 4 | 4 |
-| Chevrolet | Aveo | 4 | 3 |
 | Chrysler | 300 C | 4 | 0 |
 | Chrysler | Jeep | 4 | 0 |
 | Citroen | Berlingo | 4 | 3 |
-| Dacia | Logan | 4 | 3 |
 | Fiat | Doblo | 4 | 3 |
 | Fiat | Linea Via | 4 | 0 |
+| Fiat | Panda | 4 | 3 |
 | Ford | Grand C-MAX | 4 | 0 |
 | Ford | Kuga | 4 | 3 |
 | Ford | Mondeo | 4 | 4 |
@@ -170,14 +164,13 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Peugeot | Bipper | 4 | 0 |
 | Peugeot | Rifter | 4 | 0 |
 | Renault | Trafic Passenger | 4 | 0 |
+| Toyota | RAV4 | 4 | 6 |
 | Volkswagen | Grand California | 4 | 0 |
 | Alfa Romeo | Tonale Tributo | 3 | 0 |
 | Audi | RS | 3 | 0 |
-| Audi | RS3 | 3 | 0 |
 | Audi | RS5 | 3 | 0 |
 | Audi | RS7 | 3 | 0 |
 | Bentley | Continental Gtc | 3 | 0 |
-| BMW | 2 Serisi | 3 | 2 |
 | BMW | Alpina | 3 | 0 |
 | BMW | I3 | 3 | 1 |
 | Chery | Taxim | 3 | 0 |
@@ -188,6 +181,7 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Chrysler | Sebring Convertible | 3 | 0 |
 | Citroen | C2 | 3 | 1 |
 | Cupra | Leon | 3 | 0 |
+| Dacia | Logan | 3 | 3 |
 | Daihatsu | Sirion | 3 | 0 |
 | DS | DS 4 | 3 | 1 |
 | DS | DS 7 | 3 | 0 |
@@ -202,7 +196,6 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Ford | Ranger Raptor | 3 | 0 |
 | Honda | Accord | 3 | 8 |
 | Hyundai | Matrix | 3 | 1 |
-| Hyundai | Sonata | 3 | 8 |
 | Infiniti | EX | 3 | 0 |
 | Infiniti | FX | 3 | 0 |
 | Jaguar | S-TYPE | 3 | 1 |
@@ -231,9 +224,9 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Seat | Altea Freetrack | 3 | 0 |
 | Skoda | Roomster Panorama | 3 | 0 |
 | Subaru | Impreza | 3 | 6 |
-| Suzuki | Swift | 3 | 4 |
-| Suzuki | Vitara | 3 | 4 |
+| Toyota | Yaris | 3 | 3 |
 | Volkswagen | Amarok Aventura | 3 | 0 |
+| Volkswagen | Tiguan Allspace | 3 | 0 |
 | Volkswagen | Tiguan | 3 | 3 |
 | Volvo | EC40 | 3 | 0 |
 | Volvo | EX40 | 3 | 0 |
@@ -245,6 +238,7 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Audi | A1 | 2 | 2 |
 | Audi | E-TRON | 2 | 0 |
 | Audi | Q3 | 2 | 3 |
+| Audi | RS3 | 2 | 0 |
 | Audi | S7 | 2 | 0 |
 | Audi | SQ5 | 2 | 0 |
 | Audi | SQ7 | 2 | 0 |
@@ -292,6 +286,7 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Hyundai | Genesis | 2 | 2 |
 | Hyundai | Kona | 2 | 2 |
 | Hyundai | Santa FE | 2 | 5 |
+| Hyundai | Sonata | 2 | 8 |
 | Jaguar | X-TYPE | 2 | 1 |
 | Jaguar | XJ6 | 2 | 0 |
 | Jaguar | XJ8 | 2 | 0 |
@@ -315,6 +310,7 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | MG | Marvel | 2 | 0 |
 | Mini | Cooper | 2 | 0 |
 | Mitsubishi | Outlander | 2 | 4 |
+| Nissan | Navara | 2 | 4 |
 | Nissan | Note | 2 | 3 |
 | Nissan | Pathfinder | 2 | 3 |
 | Nissan | Pulsar | 2 | 0 |
@@ -350,13 +346,14 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Subaru | Legacy | 2 | 7 |
 | Subaru | XV | 2 | 0 |
 | Suzuki | Alto | 2 | 8 |
+| Suzuki | Swift | 2 | 4 |
 | Tata | Vista | 2 | 0 |
 | Toyota | Hilux | 2 | 8 |
 | Toyota | Prius | 2 | 5 |
 | Toyota | Proace Max | 2 | 0 |
 | Toyota | Proace | 2 | 0 |
 | Toyota | Supra | 2 | 4 |
-| Toyota | Yaris | 2 | 3 |
+| Toyota | Urban | 2 | 0 |
 | Volkswagen | Beetle | 2 | 1 |
 | Volkswagen | California | 2 | 0 |
 | Volkswagen | Cross Polo | 2 | 0 |
@@ -384,6 +381,7 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Audi | S8 | 1 | 1 |
 | Audi | TT | 1 | 3 |
 | Bentley | Continental | 1 | 1 |
+| BMW | 2 Serisi | 1 | 2 |
 | BMW | I7 | 1 | 0 |
 | BMW | I8 | 1 | 0 |
 | BMW | IX1 | 1 | 1 |
@@ -464,7 +462,6 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Hyundai | IX55 | 1 | 0 |
 | Infiniti | GS | 1 | 0 |
 | Jaecoo | Jaecoo | 1 | 0 |
-| Jeep | Cherokee | 1 | 4 |
 | Jeep | Commander | 1 | 1 |
 | Jeep | Compass | 1 | 3 |
 | Jeep | Grandcherokee | 1 | 0 |
@@ -507,6 +504,7 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Mitsubishi | Attrage | 1 | 0 |
 | Mitsubishi | Eclipse Cross | 1 | 1 |
 | Mitsubishi | L200KAMYONET | 1 | 0 |
+| Mitsubishi | Lancer | 1 | 5 |
 | Mitsubishi | Spacestar | 1 | 1 |
 | Nissan | 350 | 1 | 0 |
 | Nissan | Almera | 1 | 4 |
@@ -550,6 +548,7 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Renault | Trafic | 1 | 3 |
 | Renault | Vel Satis | 1 | 1 |
 | Renault | Zoe | 1 | 0 |
+| Rolls-Royce | Ghost | 1 | 0 |
 | Rox | Polarstone | 1 | 0 |
 | Saipa | 131 | 1 | 0 |
 | Saipa | Emissa | 1 | 0 |
@@ -568,6 +567,7 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Subaru | Outback | 1 | 7 |
 | Suzuki | Across | 1 | 0 |
 | Suzuki | Jimny | 1 | 4 |
+| Suzuki | Vitara | 1 | 4 |
 | Suzuki | XL-7 | 1 | 2 |
 | Swm | G01 | 1 | 0 |
 | Swm | X30L | 1 | 0 |
@@ -584,7 +584,6 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Toyota | Highlinder | 1 | 0 |
 | Toyota | Proace City | 1 | 0 |
 | Toyota | Rav 4 | 1 | 6 |
-| Toyota | Urban | 1 | 0 |
 | Volkswagen | Caddy | 1 | 4 |
 | Volkswagen | Cross Caddy | 1 | 0 |
 | Volkswagen | ID-4 | 1 | 0 |
@@ -618,24 +617,24 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 
 | Marka | Motor | Yakıt yok | Güç yok | Hacim yok |
 |---|---|---|---|---|
-| BMW | 266 | 87 | 134 | 136 |
-| Mercedes-Benz | 131 | 92 | 98 | 72 |
-| Ford | 123 | 45 | 41 | 24 |
-| Toyota | 62 | 35 | 48 | 11 |
-| Opel | 116 | 54 | 26 | 15 |
+| BMW | 270 | 87 | 135 | 138 |
+| Mercedes-Benz | 146 | 94 | 111 | 82 |
+| Ford | 122 | 44 | 42 | 23 |
+| Toyota | 63 | 36 | 49 | 11 |
+| Opel | 116 | 55 | 26 | 15 |
 | Porsche | 80 | 62 | 14 | 24 |
-| Kia | 90 | 48 | 22 | 9 |
+| Kia | 91 | 49 | 23 | 7 |
 | Hyundai | 87 | 24 | 44 | 8 |
-| Audi | 141 | 22 | 42 | 23 |
-| Volkswagen | 139 | 29 | 29 | 5 |
+| Audi | 129 | 17 | 39 | 22 |
 | Fiat | 86 | 33 | 21 | 3 |
-| Renault | 96 | 28 | 25 | 16 |
-| Nissan | 45 | 23 | 26 | 6 |
+| Volkswagen | 135 | 25 | 29 | 5 |
+| Renault | 92 | 28 | 25 | 16 |
 | Chevrolet | 33 | 23 | 23 | 1 |
-| Skoda | 72 | 18 | 19 | 2 |
-| Volvo | 27 | 24 | 13 | 8 |
+| Nissan | 45 | 19 | 22 | 6 |
+| Volvo | 27 | 24 | 13 | 7 |
 | Honda | 30 | 16 | 20 | 0 |
 | Peugeot | 89 | 17 | 19 | 7 |
+| Skoda | 71 | 17 | 19 | 2 |
 | Jeep | 35 | 19 | 16 | 0 |
 | Land Rover | 31 | 12 | 21 | 1 |
 | Dacia | 57 | 18 | 15 | 10 |
@@ -646,7 +645,7 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Alfa Romeo | 42 | 16 | 12 | 4 |
 | Lexus | 18 | 10 | 18 | 18 |
 | Seat | 69 | 15 | 11 | 1 |
-| Jaguar | 20 | 13 | 12 | 2 |
+| Jaguar | 20 | 13 | 12 | 1 |
 | Mini | 19 | 17 | 8 | 2 |
 | Mitsubishi | 14 | 10 | 14 | 1 |
 | Mazda | 15 | 13 | 10 | 0 |
@@ -676,10 +675,10 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Lotus | 4 | 3 | 3 | 2 |
 | Smart | 5 | 4 | 2 | 5 |
 | Lada | 3 | 2 | 3 | 0 |
+| Rolls-Royce | 3 | 3 | 2 | 1 |
 | Ikco | 2 | 2 | 2 | 0 |
 | Geely | 2 | 2 | 2 | 0 |
 | Dfsk | 3 | 1 | 3 | 0 |
-| Rolls-Royce | 2 | 2 | 1 | 1 |
 | DS | 10 | 0 | 3 | 6 |
 | Daewoo | 1 | 1 | 1 | 0 |
 | Pontiac | 1 | 1 | 1 | 0 |

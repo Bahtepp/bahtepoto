@@ -1,4 +1,4 @@
 [
-  { "id": "forthing-15-evo-130kw", "brandId": "forthing", "slug": "15-evo-130kw", "name": "1.5 EVO 130 kW", "fuel": "petrol", "displacementL": 1.5, "power": { "kw": 130 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"T5 EVO PREMIUM 1.5 130KW\")." },
-  { "id": "forthing-15-130kw", "brandId": "forthing", "slug": "15-130kw", "name": "1.5 130 kW", "displacementL": 1.5, "power": { "kw": 130 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"M4 U-TOUR PREMIUM 1.5 130KW\"); yakıt türü tip adında yazmıyor." }
+  { "id": "forthing-15-evo-130kw", "brandId": "forthing", "slug": "15-evo-130kw", "name": "1.5 EVO 130 kW", "family": "1.5 EVO", "fuel": "petrol", "displacementL": 1.5, "power": { "kw": 130 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+  { "id": "forthing-15-130kw", "brandId": "forthing", "slug": "15-130kw", "name": "1.5 130 kW", "family": "1.5", "displacementL": 1.5, "power": { "kw": 130 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." }
 ]

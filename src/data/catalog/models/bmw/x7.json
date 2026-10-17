@@ -24,7 +24,7 @@
       "notes": "Üretim yılları İngilizce Wikipedia \"BMW X7\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "bmw-x7-g07-30-340", "slug": "30-340", "engineId": "bmw-30-340", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023, 2024, 2025, 2026], "trims": ["XDRIVE40d M Excellence"], "bodyTypes": [], "sourceRefs": ["TSB 21-1953"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "bmw-x7-g07-30-340", "slug": "30-340", "engineId": "bmw-30-340", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023, 2024, 2025, 2026], "trims": ["XDRIVE40d M Excellence"], "bodyTypes": [], "sourceRefs": ["TSB 21-1953"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"X7 XDRIVE40d 3.0 (340) M EXCELLENCE\")." }
       ]
     }
   ]

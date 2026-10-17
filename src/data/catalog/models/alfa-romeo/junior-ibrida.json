@@ -22,7 +22,7 @@
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "alfa-romeo-junior-ibrida-nesil-belirlenmedi-12-hybrid-136", "slug": "12-hybrid-136", "engineId": "alfa-romeo-12-hybrid-136", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["SPECIALE+", "Speciale"], "bodyTypes": [], "sourceRefs": ["TSB 3-1056", "TSB 3-1057", "TSB 3-1060"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "alfa-romeo-junior-ibrida-nesil-belirlenmedi-12-hybrid-136", "slug": "12-hybrid-136", "engineId": "alfa-romeo-12-hybrid-136", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["SPECIALE+", "Speciale"], "bodyTypes": [], "sourceRefs": ["TSB 3-1056", "TSB 3-1057", "TSB 3-1060"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"JUNIOR IBRIDA 1.2 136 HYBRID\")." }
       ]
     }
   ]

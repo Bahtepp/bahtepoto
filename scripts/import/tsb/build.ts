@@ -97,8 +97,15 @@ const TECH_DISPLAY: Record<string, string> = {
   MULTIAIR: 'MultiAir', HIBRIT: 'Hibrit', HYBRID: 'Hybrid', 'TI-VCT': 'Ti-VCT', TIVCT: 'Ti-VCT', DURATEC: 'Duratec',
   ECOTEC: 'Ecotec', BLUETEC: 'BlueTEC', 'T-JET': 'T-Jet', TJET: 'T-Jet', 'D-4D': 'D-4D', VVTI: 'VVT-i', 'VVT-I': 'VVT-i',
   'I-VTEC': 'i-VTEC', 'I-DTEC': 'i-DTEC', SKYACTIV: 'Skyactiv', 'E-TSI': 'eTSI', ETSI: 'eTSI', 'E-HYBRID': 'eHybrid', MJET: 'Multijet',
+  'E-POWER': 'e-POWER', EPOWER: 'e-POWER', 'DIG-T': 'DIG-T', 'IG-T': 'IG-T', ED: 'ED',
 };
 const techDisplay = (t: string) => TECH_DISPLAY[fold(t)] ?? t;
+
+/** 1.6 → "1.6", 6.75 → "6.75" (tek haneye yuvarlanmaz). */
+export function displacementLabel(n: number): string {
+  const cents = Math.round(n * 100);
+  return (cents / 100).toFixed(cents % 10 === 0 ? 1 : 2);
+}
 
 function brandRuleFor(tsbBrand: string): BrandRule {
   const rule = BRAND_RULES[tsbBrand];
@@ -278,6 +285,18 @@ export function buildFromTsb(
           trimWords = parsed.prefix.slice(1);
           parsed.tech.unshift(parsed.prefix[0]!);
           parsed.fuel ??= series.fuel;
+          // "320i ED 170": ED donanım paketi değil, düşük güçlü EfficientDynamics sürümüdür.
+          // "EDITION" ayrı sözcük olmadığı için burada eşleşmez.
+          const edAt = trimWords.findIndex((w) => fold(w) === 'ED');
+          if (edAt >= 0 && edAt <= 2) {
+            parsed.tech.push('ED');
+            const next = trimWords[edAt + 1] ?? '';
+            if (/^\d{2,3}$/.test(next) && parsed.powerPs === undefined && parsed.powerKw === undefined && parsed.powerHp === undefined) {
+              const n = Number(next);
+              if (n >= 50 && n <= 800) parsed.powerPs = n;
+              trimWords.splice(edAt, 2);
+            } else trimWords.splice(edAt, 1);
+          }
         }
       }
       // Mercedes-Benz: "A180", "C-180K", "E350" → sınıf (A, C, E) + motor tanımı (180, 180K, 350).
@@ -357,6 +376,15 @@ export function buildFromTsb(
           if (brand.id === 'bmw' || brand.id === 'mercedes-benz') {
             if (suffix === 'd') parsed.fuel ??= 'diesel';
             if (suffix === 'e') parsed.fuel ??= 'plug-in-hybrid';
+            // "CLA 180 d": yakıt harfi bazen ayrı sözcüktür; donanım ("FL", "AMG") değildir.
+            const next = fold(p.trims[idx] ?? '');
+            if (!suffix && (next === 'D' || next === 'CDI' || next === 'I' || next === 'E')) {
+              if (next === 'D' || next === 'CDI') parsed.fuel ??= 'diesel';
+              if (next === 'I') parsed.fuel ??= 'petrol';
+              if (next === 'E') parsed.fuel ??= 'plug-in-hybrid';
+              parsed.tech.push(next === 'D' ? 'd' : next === 'CDI' ? 'CDI' : next === 'I' ? 'i' : 'e');
+              p.trims.splice(idx, 1);
+            }
           }
           if (brand.id === 'lexus' && suffix === 'h') parsed.fuel ??= 'hybrid';
         }
@@ -368,9 +396,10 @@ export function buildFromTsb(
       const tech = [...new Set(parsed.tech.map((t) => t.replace(/[.,]$/, '')))];
       const techUp = tech.map(fold).sort();
       const power = parsed.powerPs !== undefined ? `${parsed.powerPs}ps` : parsed.powerKw !== undefined ? `${parsed.powerKw}kw` : parsed.powerHp !== undefined ? `${parsed.powerHp}hp` : '';
-      const engineKey = [parsed.displacementL?.toFixed(1) ?? '', techUp.join('+'), power].join('|');
+      const dispText = parsed.displacementL !== undefined ? displacementLabel(parsed.displacementL) : '';
+      const engineKey = [dispText, techUp.join('+'), power].join('|');
       const powerText = parsed.powerPs !== undefined ? `${parsed.powerPs} PS` : parsed.powerKw !== undefined ? `${parsed.powerKw} kW` : parsed.powerHp !== undefined ? `${parsed.powerHp} HP` : '';
-      const engineName = [parsed.displacementL?.toFixed(1), ...tech.map(techDisplay), powerText].filter(Boolean).join(' ');
+      const engineName = [dispText, ...tech.map(techDisplay), powerText].filter(Boolean).join(' ');
       items.push({ row, parsed, brand: p.brand ?? brand, model: p.model, trims: [...p.trims, ...parsed.rest], engineKey, engineName, techTokens: tech });
     }
   }
@@ -473,7 +502,7 @@ export function buildFromTsb(
         engineByKey.set(it.engineKey, existing[0]!);
         return existing[0]!;
       }
-      const slugPart = slugify([disp !== undefined ? String(Math.round(disp * 10)) : '', ...it.techTokens, ps ?? (it.parsed.powerKw ? `${it.parsed.powerKw}kw` : it.parsed.powerHp ? `${it.parsed.powerHp}hp` : '')].filter(Boolean).join(' ')) || 'motor';
+      const slugPart = slugify([disp !== undefined ? displacementLabel(disp).replace('.', '') : '', ...it.techTokens, ps ?? (it.parsed.powerKw ? `${it.parsed.powerKw}kw` : it.parsed.powerHp ? `${it.parsed.powerHp}hp` : '')].filter(Boolean).join(' ')) || 'motor';
       const prior = engines.find((e) => e.slug === slugPart && (e.sourceIds as string[] | undefined)?.includes(TSB_SOURCE_ID));
       if (prior) {
         engineByKey.set(it.engineKey, prior);
@@ -483,21 +512,29 @@ export function buildFromTsb(
       if (ps !== undefined) power.ps = ps;
       if (it.parsed.powerKw !== undefined) power.kw = it.parsed.powerKw;
       if (it.parsed.powerHp !== undefined) power.hp = it.parsed.powerHp;
+      const familyName = [disp !== undefined ? displacementLabel(disp) : '', ...it.techTokens.map(techDisplay)].filter(Boolean).join(' ');
+      const hasPower = ps !== undefined || it.parsed.powerKw !== undefined || it.parsed.powerHp !== undefined;
+      // Motor marka genelindedir ve birden çok modelde kullanılır. Not, başka bir modelin tip adını
+      // örnek göstermez; modele ait örnek varyantın kendi notundadır.
+      const engineNote =
+        fuels.length > 1
+          ? `TSB tip adlarında yakıt türü çelişiyor (${fuels.join(', ')}); yakıt boş bırakıldı.`
+          : !fuel
+            ? 'TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor.'
+            : undefined;
       const engine: Json = {
         id: uniqueId(`${brandId}-${slugPart}`),
         brandId,
         slug: slugPart,
         name: it.engineName,
+        ...(familyName && hasPower && familyName !== it.engineName ? { family: familyName } : {}),
         ...(fuel ? { fuel } : {}),
         ...(disp !== undefined ? { displacementL: disp } : {}),
         ...(Object.keys(power).length ? { power } : {}),
         status: fuels.length > 1 ? 'conflicting' : 'sourced',
         sourceIds: [TSB_SOURCE_ID],
         updatedAt: opts.today,
-        notes:
-          fuels.length > 1
-            ? `TSB tip adlarında yakıt türü çelişiyor (${fuels.join(', ')}); yakıt boş bırakıldı.`
-            : `TSB tip adından (örn. "${it.row.typeName}")${fuel ? '' : '; yakıt türü tip adında yazmıyor'}.`,
+        ...(engineNote ? { notes: engineNote } : {}),
       };
       if (!fuel) stats.fuelUnknownEngines++;
       engines.push(engine);
@@ -594,6 +631,11 @@ export function buildFromTsb(
         // 2b) Yalnızca tek bir nesil bütün yılları kapsıyorsa (diğer nesiller yılların bir kısmını dışarıda bırakıyor):
         //     "BMW 320d 2008–2012" → E90 (2004–2013) kapsar; F30 (2011–) 2008'i kapsamaz.
         if (fits.length === 1 && years.length >= 2) return { gen: fits[0]!.g, kind: 'contain' };
+        // Yaklaşık nesil, birkaç pazarın en geniş üretim aralığıdır (ör. X-Trail T31'in Çin/Endonezya
+        // uzatması). Aynı model yıllarını tam kapsayan yaklaşık OLMAYAN tek nesil varsa satır ona aittir
+        // (2014–2018 X-Trail 1.6 dCi → T32, T31'in yaklaşık aralığı bunu belirsiz bırakmaz).
+        const precise = fits.filter((r) => !(r.g.labelPeriod as { approximate?: boolean }).approximate);
+        if (precise.length === 1 && fits.length > 1 && years.length >= 2) return { gen: precise[0]!.g, kind: 'contain' };
 
         // 3) Motorla desteklenen eşleşme: yıllar birden çok nesle uyuyorsa, kaynak bu motoru (hacim + yakıt)
         //    YALNIZCA tek bir nesil için listeliyorsa. Motor hacmi tek başına kanıt sayılmaz; yakıt türü
@@ -695,6 +737,7 @@ export function buildFromTsb(
             transmissions.push({ type: t!.type, ...(t!.gears ? { gears: t!.gears } : {}), ...(t!.name ? { name: t!.name } : {}) });
           }
         }
+        const example = [...new Set(vItems.map((x) => x.row.typeName))].sort((a, b) => a.localeCompare(b, 'tr'))[0]!;
         const variants = gen.variants as Json[];
         const existing = variants.find((v) => v.engineId === engine.id);
         if (existing) {
@@ -731,6 +774,7 @@ export function buildFromTsb(
           status: 'sourced',
           sourceIds: [TSB_SOURCE_ID],
           updatedAt: opts.today,
+          notes: `TSB tip adından (örn. "${example}").`,
         });
         stats.variants++;
         modelVariants++;
