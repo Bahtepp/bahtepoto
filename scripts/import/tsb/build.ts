@@ -95,7 +95,7 @@ const TECH_DISPLAY: Record<string, string> = {
   TDCI: 'TDCi', ECOBOOST: 'EcoBoost', 'E.BOOST': 'EcoBoost', EB: 'EcoBoost', ECOBLUE: 'EcoBlue', DCI: 'dCi', BLUEDCI: 'Blue dCi', HDI: 'HDi',
   BLUEHDI: 'BlueHDi', 'E-HDI': 'e-HDi', TCE: 'TCe', CRDI: 'CRDi', CDTI: 'CDTi', PURETECH: 'PureTech', MULTIJET: 'Multijet',
   MULTIAIR: 'MultiAir', HIBRIT: 'Hibrit', HYBRID: 'Hybrid', 'TI-VCT': 'Ti-VCT', TIVCT: 'Ti-VCT', DURATEC: 'Duratec',
-  ECOTEC: 'Ecotec', BLUETEC: 'BlueTEC', 'T-JET': 'T-Jet', TJET: 'T-Jet', 'D-4D': 'D-4D', VVTI: 'VVT-i', 'VVT-I': 'VVT-i',
+  ECOTEC: 'Ecotec', BLUETEC: 'BlueTEC', 'T-JET': 'T-Jet', TJET: 'T-Jet', FIRE: 'FIRE', FIREFLY: 'FireFly', 'E-TORQ': 'E.torQ', 'D-4D': 'D-4D', VVTI: 'VVT-i', 'VVT-I': 'VVT-i',
   'I-VTEC': 'i-VTEC', 'I-DTEC': 'i-DTEC', SKYACTIV: 'Skyactiv', 'E-TSI': 'eTSI', ETSI: 'eTSI', 'E-HYBRID': 'eHybrid', MJET: 'Multijet',
   'E-POWER': 'e-POWER', EPOWER: 'e-POWER', 'DIG-T': 'DIG-T', 'IG-T': 'IG-T', ED: 'ED', 'E-TECH': 'E-Tech', 'ECO-G': 'Eco-G',
 };
@@ -105,6 +105,7 @@ const techDisplay = (t: string) => TECH_DISPLAY[fold(t)] ?? t;
 const ENGINE_FAMILY_TOKENS = new Set([
   'TDCI', 'TDDI', 'TDI', 'ECOBOOST', 'ECOBLUE', 'DCI', 'CDI', 'HDI', 'BLUEHDI', 'DURATEC', 'TIVCT', 'TI-VCT',
   'PURETECH', 'TSI', 'TFSI', 'FSI', 'MPI', 'SDI', 'TGI', 'ETSI', 'E-TSI', 'GTE', 'TCE', 'CDTI', 'CRDI', 'MULTIJET', 'DIG-T', 'IG-T',
+  'FIRE', 'T-JET', 'FIREFLY', 'E-TORQ',
 ]);
 
 /**
@@ -358,6 +359,8 @@ export function buildFromTsb(
         if (alias.body) parsed.body ??= alias.body;
       }
       if (brand.id === 'volkswagen' && /^ID([.\s-]|$)/.test(fold(model)) && !parsed.fuel) parsed.fuel = 'electric';
+      // "PUNTO EVO" kasa adıdır. EVO, 1.4 FIRE ile aynı motora yapışık ayrı bir aile değildir.
+      if (brand.id === 'fiat' && /\bPUNTO EVO\b/i.test(row.typeName)) parsed.tech = parsed.tech.filter((t) => fold(t) !== 'EVO');
       if (brand.modelPrefix) model = `${brand.modelPrefix} ${model}`.trim();
       // TSB'de Chrysler altında listelenen Jeep modelleri ("JEEP COMPASS", "JEEPRENEGADE") Jeep markasına.
       let rowBrand: BrandRule | undefined;
@@ -602,6 +605,7 @@ export function buildFromTsb(
         ...(familyName && hasPower && familyName !== it.engineName ? { family: familyName } : {}),
         ...(fuel ? { fuel } : {}),
         ...(disp !== undefined ? { displacementL: disp } : {}),
+        ...(it.parsed.batteryKwh !== undefined ? { batteryKwh: it.parsed.batteryKwh } : {}),
         ...(Object.keys(power).length ? { power } : {}),
         status: fuels.length > 1 ? 'conflicting' : 'sourced',
         sourceIds: [TSB_SOURCE_ID],
@@ -684,7 +688,11 @@ export function buildFromTsb(
         // Elektrikli E-Tech (EV60, kWh) aynı adlı içten yanmalı kasaya yıl ile bağlanmaz.
         // "1.6 E-Tech" / "E-Tech full hybrid" aynı modelin motorudur; yıl kuralı durur.
         const electricEtech = /\bE-?TECH\b/.test(rawName) && (/\bEV\d/.test(rawName) || rawName.includes('KWH') || rawName.includes('ELEKTRIK'));
-        const submodel = electricEtech || words.some((w, i) => SUBMODEL_WORDS.anywhere.has(w) || byModel.includes(w) || (i === 0 && SUBMODEL_WORDS.first.has(w)));
+        const submodel = electricEtech || words.some((w, i) => {
+          // Egea Cross, Egea’nın gövdesidir; CROSS burada ayrı kasa dönemi açmaz.
+          if (it.model === 'EGEA' && w === 'CROSS') return false;
+          return SUBMODEL_WORDS.anywhere.has(w) || byModel.includes(w) || (i === 0 && SUBMODEL_WORDS.first.has(w));
+        });
         // Kaynakta çelişkili bir neslin dönemine düşen yıllar: yıl / motor kuralıyla hiçbir nesle eşlenmez.
         const blocked = (opts.blockedSpans?.get(target) ?? []).some((sp) => years.some((y) => y >= sp.start && y <= (sp.end ?? 9999) + 1));
         const ranges = (submodel || blocked ? [] : curatedGens)

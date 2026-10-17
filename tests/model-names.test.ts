@@ -65,6 +65,45 @@ describe('takma ad tablosu (gövde/donanım varyantları)', () => {
       ['models/renault/kadjar.json'],
     );
   });
+  test('Egea Cross ve Linea Via asıl modelde; 500, 500L, 500X ve 500e ayrı', () => {
+    assert.deepEqual(
+      files([
+        row('TOFAS-FIAT', 'EGEA SEDAN EASY 1.4 FIRE 95'),
+        row('TOFAS-FIAT', 'EGEA CROSS STREET 1.4 FIRE 95'),
+        row('TOFAS-FIAT', 'EGEA CROSS URBAN 1.4 FIRE 95'),
+        row('TOFAS-FIAT', 'EGEA CROSS LOUNGE 1.4 FIRE 95'),
+        row('TOFAS-FIAT', 'EGEA HB EASY 1.6 M.JET 120'),
+      ]),
+      ['models/fiat/egea.json'],
+    );
+    assert.deepEqual(
+      files([
+        row('TOFAS-FIAT', 'LINEA 1.4 FIRE (77)'),
+        row('TOFAS-FIAT', 'LINEA VIA 1.4 FIRE 77 E5'),
+        row('TOFAS-FIAT', 'LINEA VIA 1.3 MULTIJET 90'),
+        row('TOFAS-FIAT', 'LINEA VIA 1.6 MULTIJET 105 E5'),
+      ]),
+      ['models/fiat/linea.json'],
+    );
+    assert.deepEqual(
+      files([
+        row('FIAT', 'PUNTO POP 1.4 FIRE (77)'),
+        row('FIAT', 'PUNTO EASY 1.4 FIRE (77)'),
+        row('FIAT', 'PUNTO LOUNGE 1.4 FIRE (77)'),
+        row('FIAT', 'G.PUNTO 3K 1.4 FIRE (77) ACTIVE DUALOGIC'),
+      ]),
+      ['models/fiat/punto.json'],
+    );
+    assert.deepEqual(
+      files([
+        row('FIAT', '500 POP 1.2 (69)'),
+        row('FIAT', '500L 1.4 FIRE 95 POP'),
+        row('FIAT', '500X POP 1.6 E-TORQ 110'),
+        row('FIAT', '500E HB LA PRIMA 42KWH'),
+      ]),
+      ['models/fiat/500.json', 'models/fiat/500e.json', 'models/fiat/500l.json', 'models/fiat/500x.json'],
+    );
+  });
   test('i30 CW ve Accent Era asıl modelde', () => {
     assert.deepEqual(files([row('HYUNDAI', 'I30 1.6 CRDI STYLE'), row('HYUNDAI', 'I30 CW 1.6 CRDI STYLE'), row('HYUNDAI', 'ACCENT ERA 1.5 CRDI', [2010]), row('HYUNDAI', 'ACCENT 1.5 CRDI', [2010])]), [
       'models/hyundai/accent.json',

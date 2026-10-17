@@ -92,5 +92,7 @@
   { "id": "renault-hybrid", "brandId": "renault", "slug": "hybrid", "name": "Hybrid", "fuel": "hybrid", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
   { "id": "renault-e-tech-hybrid-200", "brandId": "renault", "slug": "e-tech-hybrid-200", "name": "E-Tech Hybrid 200 PS", "family": "E-Tech Hybrid", "fuel": "hybrid", "power": { "ps": 200 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
   { "id": "renault-plug-in-300", "brandId": "renault", "slug": "plug-in-300", "name": "PLUG-IN 300 PS", "family": "PLUG-IN", "fuel": "plug-in-hybrid", "power": { "ps": 300 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+  { "id": "renault-e-tech-elektrikli-52kwh", "brandId": "renault", "slug": "e-tech-elektrikli-52kwh", "name": "E-Tech ELEKTRIKLI 52kWh", "fuel": "electric", "batteryKwh": 52, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+  { "id": "renault-e-tech-elektrikli-40kwh", "brandId": "renault", "slug": "e-tech-elektrikli-40kwh", "name": "E-Tech ELEKTRIKLI 40kWh", "fuel": "electric", "batteryKwh": 40, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
   { "id": "renault-e-tech-elektrikli", "brandId": "renault", "slug": "e-tech-elektrikli", "name": "E-Tech ELEKTRIKLI", "fuel": "electric", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
 ]

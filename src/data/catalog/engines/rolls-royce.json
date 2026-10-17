@@ -1,5 +1,5 @@
 [
   { "id": "rolls-royce-67", "brandId": "rolls-royce", "slug": "67", "name": "6.7", "displacementL": 6.7, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
   { "id": "rolls-royce-675", "brandId": "rolls-royce", "slug": "675", "name": "6.75", "displacementL": 6.75, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
-  { "id": "rolls-royce-584", "brandId": "rolls-royce", "slug": "584", "name": "584 PS", "power": { "ps": 584 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." }
+  { "id": "rolls-royce-102kwh-584", "brandId": "rolls-royce", "slug": "102kwh-584", "name": "102kWh 584 PS", "family": "102kWh", "fuel": "electric", "batteryKwh": 102, "power": { "ps": 584 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
 ]

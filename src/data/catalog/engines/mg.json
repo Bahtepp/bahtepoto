@@ -1,6 +1,6 @@
 [
   { "id": "mg-ev-115kw", "brandId": "mg", "slug": "ev-115kw", "name": "EV 115 kW", "family": "EV", "fuel": "electric", "power": { "kw": 115 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-  { "id": "mg-ev", "brandId": "mg", "slug": "ev", "name": "EV", "fuel": "electric", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+  { "id": "mg-ev-72kwh", "brandId": "mg", "slug": "ev-72kwh", "name": "EV 72kWh", "fuel": "electric", "batteryKwh": 72, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
   { "id": "mg-15-106", "brandId": "mg", "slug": "15-106", "name": "1.5 106 PS", "family": "1.5", "displacementL": 1.5, "power": { "ps": 106 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
   { "id": "mg-10-111", "brandId": "mg", "slug": "10-111", "name": "1.0 111 PS", "family": "1.0", "displacementL": 1, "power": { "ps": 111 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
   { "id": "mg-10", "brandId": "mg", "slug": "10", "name": "1.0", "displacementL": 1, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },

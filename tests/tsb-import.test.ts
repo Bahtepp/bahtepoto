@@ -86,6 +86,46 @@ describe('TSB tip adı ayrıştırma', () => {
     assert.equal(id4.prefix[0], 'ID-4');
   });
 
+  test('Egea’da FIRE, T-Jet, MultiJet ve E.torQ ayrı kalır; güç donanıma yapışmaz', () => {
+    const fire = parseTypeName('EGEA SEDAN EASY 1.4 FIRE 95 E6');
+    const tjet = parseTypeName('EGEA HB LOUNGE PLUS 1.4 T-JET 120');
+    const mjet13 = parseTypeName('EGEA SEDAN EASY 1.3 M.JET 95 E5+');
+    const mjet16 = parseTypeName('EGEA SEDAN URBAN 1.6 M.JET 120');
+    const torq = parseTypeName('EGEA S.WAGON URBAN PLUS 1.6 E-TORQ 110 AT6');
+    const hybrid = parseTypeName('EGEA SEDAN EASY 1.5 T4 HIBRIT 130 AT');
+    assert.equal(fire.fuel, 'petrol');
+    assert.equal(fire.powerPs, 95);
+    assert.equal(fire.body, 'sedan-4');
+    assert.ok(fire.tech.includes('FIRE'));
+    assert.equal(tjet.powerPs, 120);
+    assert.equal(tjet.body, 'hatchback-5');
+    assert.ok(tjet.tech.includes('T-JET'));
+    assert.equal(tjet.tech.includes('FIRE'), false);
+    assert.equal(mjet13.fuel, 'diesel');
+    assert.equal(mjet13.powerPs, 95);
+    assert.equal(mjet13.displacementL, 1.3);
+    assert.ok(mjet13.tech.includes('MULTIJET'));
+    assert.equal(mjet16.powerPs, 120);
+    assert.equal(mjet16.displacementL, 1.6);
+    assert.equal(torq.fuel, 'petrol');
+    assert.equal(torq.powerPs, 110);
+    assert.equal(torq.body, 'wagon');
+    assert.ok(torq.tech.includes('E-TORQ'));
+    assert.equal(hybrid.fuel, 'hybrid');
+    assert.equal(hybrid.powerPs, 130);
+    const serie = parseTypeName('500L 1.3 MULTIJET II 85 POP');
+    assert.equal(serie.powerPs, 85);
+    assert.equal(serie.generationHint, undefined);
+    const glued = parseTypeName('ABART 500 ANNUVERSARIO 1.4 T.JET180');
+    assert.equal(glued.powerPs, 180);
+    assert.ok(glued.tech.includes('T-JET'));
+    const ev = parseTypeName('500E HB LA PRIMA BY BOCELLI 42KWH');
+    assert.equal(ev.fuel, 'electric');
+    assert.equal(ev.batteryKwh, 42);
+    assert.equal(ev.powerPs, undefined);
+    assert.equal(ev.powerKw, undefined);
+  });
+
   test('ilk sözcük her zaman modeldir ("CC" gövde değil)', () => {
     const p = parseTypeName('CC 1.4 TSI 160 BMT TIPTRONIC DSG');
     assert.deepEqual(p.prefix, ['CC']);

@@ -68,5 +68,5 @@
   { "id": "citroen-115kw", "brandId": "citroen", "slug": "115kw", "name": "115 kW", "power": { "kw": 115 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
   { "id": "citroen-83kw", "brandId": "citroen", "slug": "83kw", "name": "83 kW", "power": { "kw": 83 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
   { "id": "citroen-157kw", "brandId": "citroen", "slug": "157kw", "name": "157 kW", "power": { "kw": 157 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
-  { "id": "citroen-bev", "brandId": "citroen", "slug": "bev", "name": "BEV", "fuel": "electric", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+  { "id": "citroen-bev-97kwh", "brandId": "citroen", "slug": "bev-97kwh", "name": "BEV 97kWh", "fuel": "electric", "batteryKwh": 97, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
 ]

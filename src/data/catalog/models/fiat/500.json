@@ -30,6 +30,22 @@
         { "id": "fiat-500-uretim-2007-12-fire-69", "slug": "12-fire-69", "engineId": "fiat-12-fire-69", "revisionMapping": "unknown", "transmissions": [{ "type": "automated-manual", "name": "Dualogic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016, 2017, 2018, 2019, 2020], "trims": ["Anniversario", "Collezione Winter", "Cult", "Lounge", "Pop", "Popstar", "Rockstar", "Sport", "Star", "Vintage 57"], "bodyTypes": [], "sourceRefs": ["TSB 52-1598", "TSB 52-1599", "TSB 52-1600", "TSB 52-1619", "TSB 52-1636", "TSB 52-1648", "TSB 52-1662", "TSB 52-1665", "TSB 52-1666", "TSB 52-1667"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"500 ANNIVERSARIO 1.2 FIRE 69 DUALOGIC\")." },
         { "id": "fiat-500-uretim-2007-10-hybrid-70", "slug": "10-hybrid-70", "engineId": "fiat-10-hybrid-70", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023], "trims": ["Cult", "Dolcevita", "Sport"], "bodyTypes": ["Cabrio"], "sourceRefs": ["TSB 52-1693", "TSB 52-1694", "TSB 52-1695", "TSB 52-1706"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"500 CABRIO DOLCEVITA 1.0 HYBRID 70\")." }
       ]
+    },
+    {
+      "id": "fiat-500-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "500 — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2026 }, "end": { "year": 2026 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-17",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "fiat-500-nesil-belirlenmedi-42kwh", "slug": "42kwh", "engineId": "fiat-42kwh", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2026 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2026], "trims": ["E Giorgio Armani"], "bodyTypes": [], "sourceRefs": ["TSB 52-1807"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"500 E GIORGIO ARMANI 42KWH AT\")." }
+      ]
     }
   ]
 }

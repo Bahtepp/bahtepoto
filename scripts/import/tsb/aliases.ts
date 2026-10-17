@@ -57,6 +57,10 @@ export const MODEL_ALIASES: Record<string, Record<string, ModelAlias>> = {
     '500L LIVING': { model: '500L', note: '500L Living: uzun gövdeli 500L' },
     '500 C': { model: '500C', note: 'Yazım farkı: 500 C = 500C' },
     'STRADA PICK': { model: 'STRADA', body: 'pickup', note: 'Strada pick-up gövdesi' },
+    'EGEA CROSS': { model: 'EGEA', body: 'suv', note: 'Egea Cross: Egea’nın yükseltilmiş gövdesi; ayrı motor ailesi değil' },
+    'LINEA VIA': { model: 'LINEA', note: 'Linea Via: Linea’nın satış adı' },
+    'G.PUNTO': { model: 'PUNTO', note: 'G.Punto: Grande Punto yazımı' },
+    ABART: { model: 'ABARTH', note: 'Yazım: Abart = Abarth' },
   },
   peugeot: {
     'PARTNER TEEPE': { model: 'PARTNER', note: 'Partner Tepee: binek Partner' },
