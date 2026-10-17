@@ -37,6 +37,11 @@ export interface ParsedType {
 
 const up = (s: string) => s.toLocaleUpperCase('tr-TR').replace(/İ/g, 'I').replace(/Ş/g, 'S').replace(/Ğ/g, 'G').replace(/Ü/g, 'U').replace(/Ö/g, 'O').replace(/Ç/g, 'C');
 
+/** Porsche 911 kasa kodları. Parantezde güç gibi durur: "911 TURBO (991) 3.8 (520)". */
+const PORSCHE_CHASSIS = new Set(['901', '930', '964', '993', '996', '997', '991', '992']);
+/** Audi satış kademesi. "50 TDI" 50 PS değildir; gerçek güç ayrı yazılır veya boş kalır. */
+const AUDI_BADGE = new Set(['25', '30', '35', '40', '45', '50', '55', '60', '70']);
+
 const DIESEL = new Set(['TDCI', 'TDI', 'DCI', 'CRDI', 'CRDİ', 'HDI', 'BLUEHDI', 'BLUHDI', 'E-HDI', 'JTD', 'JTDM', 'MULTIJET', 'MJET', 'MJT', 'M.JET', 'M-JET', 'CDTI', 'CTDI', 'CDI', 'D4D', 'D-4D', 'DIZEL', 'DIESEL', 'SDV6', 'TDV6', 'SD4', 'TD4', 'ED4', 'CRD', 'DTEC', 'I-DTEC', 'IDTEC', 'SKYACTIV-D', 'VCDI', 'D-CAT', 'BLUETEC', 'TDS', 'SDI', 'ECOBLUE', 'BLUEDCI', 'B.DCI', 'BDCI', 'CRDI4', 'DDIS', 'DDIS4', 'TDDI', 'TDCI4', 'D-4D4', 'XDI', 'CRTD', 'BITDI', 'BITURBODIESEL', 'TDCİ']);
 const PETROL = new Set(['EB', 'E.BOOST', 'TSI', 'TFSI', 'FSI', 'TCE', 'ECOBOOST', 'VVT', 'VVTI', 'VVT-I', 'DUAL-VVT', 'CVVT', 'VTEC', 'I-VTEC', 'IVTEC', 'V-TEC', 'MPI', 'GDI', 'T-GDI', 'TGDI', 'PURETECH', 'PTECH', 'THP', 'VTI', 'E-VTI', 'TJET', 'T-JET', 'T.JET', 'MULTIAIR', 'FIRE', 'TB', 'TBI', 'BENZIN', 'BENZINLI', 'SCE', 'TI-VCT', 'TIVCT', 'DURATEC', 'ECOTEC', 'SIDI', 'TURBOJET', 'GTI', 'EVO', 'DIG-T', 'DIGT', 'IG-T', 'IGT', 'SKYACTIV-G', 'TSI-ACT', 'FIREFLY', 'E-TORQ', 'E.TORQ', 'ETORQ']);
 const HYBRID = new Set(['HYBRID', 'HIBRIT', 'HIBRID', 'HEV', 'E:HEV', 'EHEV', 'FULL-HYBRID', 'F.HYBRID', 'F-HYBRID', 'E-TECH', 'ETECH', 'E-TECH-HYBRID', 'HYBRIT', 'SELF-CHARGING', 'E-POWER', 'EPOWER']);
@@ -238,11 +243,29 @@ export function parseTypeName(typeName: string): ParsedType {
     let attr = false;
 
     // Güç: "(115)", "115PS", "115 PS", "110KW", "150HP", "150BG"
+    // Parantezdeki 4 hane her zaman PS değildir. 1600 üstü veya yüzün katı büyük sayılar
+    // TSB'de cc'dir: "(4691)", "(6400)", "(1795)". 1000–1600 arası çıplak sayı güncel
+    // elektrikli/hiper otomobil gücü olabilir: "(1034)", "(1156)". Birimli yazım (PS/kW) ayrıca okunur.
     const paren = /^\((\d{2,4})\)$/.exec(T);
     const unit = /^(\d{2,4})(PS|HP|BG|KW|BHP)$/.exec(T);
     const unitNext = /^(\d{2,4})$/.exec(T) && /^(PS|HP|BG|KW|BHP)$/.test(up(raw[i + 1] ?? ''));
-    if (paren && out.powerPs === undefined) {
-      out.powerPs = Number(paren[1]);
+    const chassis = paren ? PORSCHE_CHASSIS.has(paren[1]!) : false;
+    if (paren && chassis) {
+      out.generationHint ??= paren[1];
+      attr = true;
+    } else if (paren && paren[1]!.length === 4) {
+      const n = Number(paren[1]);
+      const electric = /\b(ELECTRIC|ELEKTRIK|EV)\b/.test(raw.map(up).join(' '));
+      const asCc = !electric && (n > 1600 || (n >= 2500 && n % 100 === 0));
+      if (asCc) {
+        if (out.displacementL === undefined) out.displacementL = Math.round(n / 100) / 10;
+      } else if (out.powerPs === undefined && n >= 50) {
+        out.powerPs = n;
+      }
+      attr = true;
+    } else if (paren && out.powerPs === undefined) {
+      const n = Number(paren[1]);
+      if (n >= 50 && n <= 1200) out.powerPs = n;
       attr = true;
     } else if (unit || unitNext) {
       const n = Number(unit ? unit[1] : T);
@@ -362,6 +385,10 @@ export function parseTypeName(typeName: string): ParsedType {
     if (!attr && /^\d{2,3}$/.test(T) && seenAttr && out.powerPs === undefined && out.powerHp === undefined && out.powerKw === undefined) {
       const prev = up(raw[i - 1] ?? '');
       const next = up(raw[i + 1] ?? '');
+      // "3.0 50 TDI": 50, Audi'nin satış kademesidir. Güç olarak yazılmaz.
+      if (AUDI_BADGE.has(T) && /^(TDI|TFSI|TSI|FSI|ETRON|E-TRON)$/.test(next)) {
+        attr = true;
+      } else {
       // "2.0 ST 250": ST/RS performans modelidir, sonraki sayı güçtür. "ST LINE" donanım paketidir.
       const afterPerformance = /^(ST|RS|RS500)$/.test(prev) && next !== 'LINE';
       // "TCE EDC 120", "TCE X-TRONIC 100": güç, şanzıman sözcüğünün ardında da yazılır.
@@ -379,6 +406,7 @@ export function parseTypeName(typeName: string): ParsedType {
           out.powerPs = n;
           attr = true;
         }
+      }
       }
     }
 
@@ -452,6 +480,11 @@ export function parseTypeName(typeName: string): ParsedType {
     out.prefix.splice(1, 1);
   }
   // "GTE PHEV" / "GTE HIBRIT": yakıt zaten GTE veya eHybrid ile belli. Ek sözcük motor adı değildir.
+  // "911 (992) GT3": kasa kodu güç değildir. GT3 motor kimliği olarak kalır; güç uydurulmaz.
+  if (out.generationHint && PORSCHE_CHASSIS.has(out.generationHint)) {
+    const perf = [...out.prefix, ...out.rest].find((w) => /^(GT2|GT3|GT4|TURBO)$/i.test(up(w)));
+    if (perf && !out.tech.some((t) => up(t) === up(perf))) out.tech.push(perf);
+  }
   const hasSpecificHybrid = out.tech.some((t) => ['GTE', 'EHYBRID', 'E-HYBRID', 'ETSI', 'E-TSI'].includes(up(t)));
   if (hasSpecificHybrid) out.tech = out.tech.filter((t) => !['PHEV', 'HIBRIT', 'HYBRIT', 'PLUGIN', 'PLUG-IN', 'PLUG-IN-HYBRID'].includes(up(t)));
   return out;
@@ -563,7 +596,7 @@ export function resolveModels(parsed: ParsedType[]): (p: ParsedType) => ModelRes
     // Harf kodu + numara aralıklı yazılmış model: "XC 90 2.0", "DS 3 1.6", "RAV 4 2.0". Yalnızca satırda motor bilgisi
     // (hacim veya güç) AYRICA yazıyorsa: aksi hâlde numara motor tanımıdır ("RX 300", "FX 37", "LC 500").
     // 3 harfli önekte 3 haneli numara özel versiyon tanımıdır ("DBS 770", "DBX 707"), birleştirilmez.
-    const hasEngine = p.displacementL !== undefined || p.powerPs !== undefined || p.powerKw !== undefined || p.powerHp !== undefined;
+    const hasEngine = p.displacementL !== undefined || p.powerPs !== undefined || p.powerKw !== undefined || p.powerHp !== undefined || p.tech.length > 0;
     if (hasEngine && /^[A-Z]{1,3}$/.test(F) && /^\d{1,3}$/.test(S) && !(F.length === 3 && S.length === 3)) {
       return { model: `${first} ${second}`, trimWords: more };
     }

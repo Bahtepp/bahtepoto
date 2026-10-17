@@ -766,3 +766,43 @@ describe('pazar bazlı kronik sorun eşleştirmesi', () => {
     assert.equal(matchIssue(issue, ctx(['tr'], 'diesel')).verdict, 'applies');
   });
 });
+
+describe('güç ayrıştırma: hacim, kasa kodu ve satış etiketi PS değildir', () => {
+  test('Audi 50 TDI 50 PS olmaz', () => {
+    const p = parseTypeName('A6 3.0 50 TDI QUATTRO TIPTRONIC DESIGN');
+    assert.equal(p.powerPs, undefined);
+    assert.equal(p.displacementL, 3);
+    assert.ok(p.tech.some((t) => t.toUpperCase() === 'TDI'));
+  });
+
+  test('Audi 50 TDI (286) gerçek gücü korur', () => {
+    const p = parseTypeName('A6 3.0 50 TDI QUATTRO (286) TIPTRONIC');
+    assert.equal(p.powerPs, 286);
+  });
+
+  test('Porsche 991 ve 992 güç değildir', () => {
+    const turbo = parseTypeName('911 TURBO (991)3.8 (520)');
+    assert.equal(turbo.powerPs, 520);
+    assert.equal(turbo.displacementL, 3.8);
+    const gt3 = parseTypeName('911 (992) GT3 TOURING');
+    assert.equal(gt3.powerPs, undefined);
+  });
+
+  test('Alfa Romeo 4691 cc güç değildir', () => {
+    const p = parseTypeName('8C COMPETIOZEONE (4691)');
+    assert.equal(p.powerPs, undefined);
+    assert.equal(p.displacementL, 4.7);
+  });
+
+  test('Taycan (1034) gerçek güç olarak kalır', () => {
+    const p = parseTypeName('TAYCAN TURBO GT WEISSACH (1034)');
+    assert.equal(p.powerPs, 1034);
+    assert.equal(p.displacementL, undefined);
+  });
+
+  test('Dodge (6400) cc olarak okunur', () => {
+    const p = parseTypeName('CHALLENGER SRT8 (6400)');
+    assert.equal(p.powerPs, undefined);
+    assert.equal(p.displacementL, 6.4);
+  });
+});
