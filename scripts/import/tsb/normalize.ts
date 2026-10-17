@@ -37,10 +37,10 @@ export interface ParsedType {
 
 const up = (s: string) => s.toLocaleUpperCase('tr-TR').replace(/İ/g, 'I').replace(/Ş/g, 'S').replace(/Ğ/g, 'G').replace(/Ü/g, 'U').replace(/Ö/g, 'O').replace(/Ç/g, 'C');
 
-const DIESEL = new Set(['TDCI', 'TDI', 'DCI', 'CRDI', 'CRDİ', 'HDI', 'BLUEHDI', 'E-HDI', 'JTD', 'JTDM', 'MULTIJET', 'MJET', 'MJT', 'M.JET', 'M-JET', 'CDTI', 'CDI', 'D4D', 'D-4D', 'DIZEL', 'DIESEL', 'SDV6', 'TDV6', 'SD4', 'TD4', 'ED4', 'CRD', 'DTEC', 'I-DTEC', 'IDTEC', 'SKYACTIV-D', 'VCDI', 'D-CAT', 'BLUETEC', 'TDS', 'SDI', 'ECOBLUE', 'BLUEDCI', 'B.DCI', 'BDCI', 'CRDI4', 'DDIS', 'DDIS4', 'TDDI', 'TDCI4', 'D-4D4', 'XDI', 'CRTD', 'BITDI', 'BITURBODIESEL', 'TDCİ']);
-const PETROL = new Set(['EB', 'E.BOOST', 'TSI', 'TFSI', 'FSI', 'TCE', 'ECOBOOST', 'VVT', 'VVTI', 'VVT-I', 'DUAL-VVT', 'VTEC', 'I-VTEC', 'IVTEC', 'MPI', 'GDI', 'T-GDI', 'TGDI', 'PURETECH', 'THP', 'VTI', 'TJET', 'T-JET', 'T.JET', 'MULTIAIR', 'FIRE', 'TB', 'TBI', 'BENZIN', 'BENZINLI', 'SCE', 'TI-VCT', 'TIVCT', 'DURATEC', 'ECOTEC', 'SIDI', 'TURBOJET', 'GTI', 'EVO', 'DIG-T', 'DIGT', 'IG-T', 'IGT', 'SKYACTIV-G', 'TSI-ACT', 'FIREFLY', 'E-TORQ', 'E.TORQ', 'ETORQ']);
+const DIESEL = new Set(['TDCI', 'TDI', 'DCI', 'CRDI', 'CRDİ', 'HDI', 'BLUEHDI', 'BLUHDI', 'E-HDI', 'JTD', 'JTDM', 'MULTIJET', 'MJET', 'MJT', 'M.JET', 'M-JET', 'CDTI', 'CTDI', 'CDI', 'D4D', 'D-4D', 'DIZEL', 'DIESEL', 'SDV6', 'TDV6', 'SD4', 'TD4', 'ED4', 'CRD', 'DTEC', 'I-DTEC', 'IDTEC', 'SKYACTIV-D', 'VCDI', 'D-CAT', 'BLUETEC', 'TDS', 'SDI', 'ECOBLUE', 'BLUEDCI', 'B.DCI', 'BDCI', 'CRDI4', 'DDIS', 'DDIS4', 'TDDI', 'TDCI4', 'D-4D4', 'XDI', 'CRTD', 'BITDI', 'BITURBODIESEL', 'TDCİ']);
+const PETROL = new Set(['EB', 'E.BOOST', 'TSI', 'TFSI', 'FSI', 'TCE', 'ECOBOOST', 'VVT', 'VVTI', 'VVT-I', 'DUAL-VVT', 'VTEC', 'I-VTEC', 'IVTEC', 'MPI', 'GDI', 'T-GDI', 'TGDI', 'PURETECH', 'PTECH', 'THP', 'VTI', 'E-VTI', 'TJET', 'T-JET', 'T.JET', 'MULTIAIR', 'FIRE', 'TB', 'TBI', 'BENZIN', 'BENZINLI', 'SCE', 'TI-VCT', 'TIVCT', 'DURATEC', 'ECOTEC', 'SIDI', 'TURBOJET', 'GTI', 'EVO', 'DIG-T', 'DIGT', 'IG-T', 'IGT', 'SKYACTIV-G', 'TSI-ACT', 'FIREFLY', 'E-TORQ', 'E.TORQ', 'ETORQ']);
 const HYBRID = new Set(['HYBRID', 'HIBRIT', 'HIBRID', 'HEV', 'FULL-HYBRID', 'F.HYBRID', 'F-HYBRID', 'E-TECH', 'ETECH', 'E-TECH-HYBRID', 'HYBRIT', 'SELF-CHARGING', 'E-POWER', 'EPOWER']);
-const PHEV = new Set(['PHEV', 'PLUG-IN', 'E-HYBRID', 'EHYBRID', 'PLUGIN', 'PLUG-IN-HYBRID', 'GTE']);
+const PHEV = new Set(['PHEV', 'PLUG-IN', 'E-HYBRID', 'EHYBRID', 'PLUGIN', 'PLUG-IN-HYBRID', 'GTE', 'HYBRID4', 'E-TENSE', 'ETENSE']);
 const MHEV = new Set(['MHEV', 'ETSI', 'E-TSI', 'MILD-HYBRID', 'MILD', '48V', 'MHYBRID']);
 const ELECTRIC = new Set(['EV', 'BEV', 'ELEKTRIK', 'ELEKTRIKLI', 'ELECTRIC', 'E-TRON', 'KWH']);
 const LPG = new Set(['LPG', 'BI-FUEL', 'BIFUEL', 'ECO-G', 'ECOG']);
@@ -91,7 +91,7 @@ const MANUAL = new Set(['MANUEL', 'MT', 'M/T', 'MANUAL', 'DUZ']);
 const AWD = new Set(['4X4', '4MOTION', 'QUATTRO', 'XDRIVE', 'AWD', '4WD', '4MATIC', 'ALL4', 'Q4', '4X4.', 'ALLGRIP', '4MOTION.', 'E-FOUR', 'ALLWHEELDRIVE', '4XMOTION', 'E-4ORCE', 'E4ORCE']);
 const BODY: [RegExp, BodyType][] = [
   [/^3K$|^3KAPI$|^3D$|^3DR$/, 'hatchback-3'],
-  [/^4K$|^4KAPI$|^SEDAN$|^4D$|^4DR$|^SD$|^SDN$/, 'sedan-4'],
+  [/^4K$|^4KAPI$|^SEDAN$|^4D$|^4DR$|^SD$|^SDN$|^NB$/, 'sedan-4'],
   [/^5K$|^5KAPI$|^HB$|^HATCHBACK$|^5D$|^5DR$|^HB5$/, 'hatchback-5'],
   [/^SW$|^VARIANT$|^ESTATE$|^STATION$|^WAGON$|^KOMBI$|^TOURER$|^ST\.WAGON$|^S\.WAGON$|^STATIONWAGON$|^SWAGON$|^SPORTSWAGON$|^AVANT$|^TOURING$|^BREAK$|^SPORTBRAKE$|^SPORTS\s?TOURER$|^GRANDTOUR$|^GRANDTOURER$/, 'wagon'],
   [/^COUPE$|^COUPÉ$|^KUPE$/, 'coupe'],
@@ -164,6 +164,8 @@ const GLUED_TECH: { alias: string; canon: string }[] = [
   ['DCI', 'DCI'],
   ['CDI', 'CDI'],
   ['HDI', 'HDI'],
+  ['BLUHDI', 'BLUEHDI'],
+  ['PTECH', 'PURETECH'],
   ['GDI', 'GDI'],
 ]
   .map(([alias, canon]) => ({ alias, canon }))
@@ -206,6 +208,8 @@ export function parseTypeName(typeName: string): ParsedType {
     .replace(/\bE\.TORQ/gi, 'E-TORQ')
     .replace(/\b(M-JET|T-JET)(\d{2,3})/gi, '$1 $2')
     .replace(/(\d{2,3})DCT/gi, '$1 DCT')
+    .replace(/(\d{2,3})(DIZEL|DIESEL|CDTI|CTDI)\b/gi, '$1 $2')
+    .replace(/\bB(10|12|14)\s+X(EL|ER|FT|FL)\b/gi, 'B$1X$2')
     // "1.4 D 4D" dizel ailesidir. "HYB." ve "HIBRID" hibrittir; "M.HYB" mild hybrid.
     .replace(/\bD\s+4D\b/gi, 'D-4D')
     .replace(/\bM\.HYB\b/gi, 'MHEV')
@@ -272,11 +276,18 @@ export function parseTypeName(typeName: string): ParsedType {
     const valveRest = /^(?:8|12|16|20|24)V$/.test(disp?.[3] ?? '');
     if (!attr && disp && out.displacementL === undefined && (!/^\d/.test(disp[3] ?? '') || valveRest)) {
       const rest = valveRest ? '' : (disp[3] ?? '');
-      const glued = rest ? matchGluedTech(rest) : undefined;
+      // "7.4KW" şarj gücü veya kW'dir; 7.4 litre hacim değildir.
+      if (up(rest) === 'KW') {
+        // Ondalıklı kW (7.4KW, 7.4KW OBC) yerleşik şarj gücüdür; motor gücü veya hacim değildir.
+        if (up(raw[i + 1] ?? '') === 'OBC') i++;
+        out.tech.push('OBC');
+        attr = true;
+      }
+      const glued = !attr && rest ? matchGluedTech(rest) : undefined;
       const letter = /^[ILTD]$/.test(rest) ? rest : undefined;
-      out.displacementL = Number(`${disp[1]}.${disp[2]}`);
-      if (letter === 'I') setFuel('petrol');
-      if (letter === 'D') setFuel('diesel');
+      if (!attr) out.displacementL = Number(`${disp[1]}.${disp[2]}`);
+      if (!attr && letter === 'I') setFuel('petrol');
+      if (!attr && letter === 'D') setFuel('diesel');
       if (glued) {
         const f = fuelOf(glued.canon);
         if (f) {
@@ -284,7 +295,7 @@ export function parseTypeName(typeName: string): ParsedType {
           out.tech.push(glued.canon);
         }
         if (glued.power !== undefined && out.powerPs === undefined) out.powerPs = glued.power;
-      } else if (rest && !letter) {
+      } else if (!attr && rest && !letter) {
         const f = fuelOf(rest);
         if (f) {
           setFuel(f);
@@ -308,6 +319,11 @@ export function parseTypeName(typeName: string): ParsedType {
       }
     }
 
+    // Opel motor kodu: "B14XEL", "B10XFT". Ayrı model değildir; güç hemen ardından yazılır.
+    if (!attr && /^B\d{2}X[A-Z]{2}$/.test(T)) {
+      out.tech.push(T);
+      attr = true;
+    }
     if (!attr) {
       const f = fuelOf(T);
       if (f) {
@@ -334,7 +350,8 @@ export function parseTypeName(typeName: string): ParsedType {
       // "MULTIJET II 85": II motor serisidir; güç ondan sonra yazılır.
       const prev2 = up(raw[i - 2] ?? '').replace(/\.$/, '');
       const afterEngineSeries = ROMAN.test(prev) && fuelOf(prev2) !== undefined;
-      if (fuelOf(prev) || /^\d[.,]\d/.test(prev) || NEUTRAL.has(prev) || afterPerformance || afterTrans || afterEngineSeries || /^TIP/.test(prev) || /^EV\d+$/.test(prev)) {
+      const afterEngineCode = /^B\d{2}X[A-Z]{2}$/.test(prev);
+      if (fuelOf(prev) || /^\d[.,]\d/.test(prev) || NEUTRAL.has(prev) || afterPerformance || afterTrans || afterEngineSeries || afterEngineCode || /^TIP/.test(prev) || /^EV\d+$/.test(prev)) {
         const n = Number(T);
         if (n >= 50 && n <= 800) {
           out.powerPs = n;
@@ -468,6 +485,10 @@ function storedTech(tok: string): string {
   if (t === 'T.JET' || t === 'TJET' || t === 'T-JET') return 'T-JET';
   if (t === 'E.TORQ' || t === 'ETORQ' || t === 'E-TORQ') return 'E-TORQ';
   if (t === 'HIBRID') return 'HYBRID';
+  if (t === 'CTDI') return 'CDTI';
+  if (t === 'PTECH') return 'PURETECH';
+  if (t === 'BLUHDI') return 'BLUEHDI';
+  if (t === 'ETENSE') return 'E-TENSE';
   return tok.replace(/[.,]$/, '');
 }
 

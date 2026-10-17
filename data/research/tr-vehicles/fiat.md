@@ -9,7 +9,7 @@ Tarih: 2026-10-17. Kaynak: TSB kasko değer listesi (202201R1, 202610R1), TOFAS-
 - Katalog adı Egea. TSB’de Tipo satırı yok; uluslararası Tipo, isim benzerliğiyle Türkiye listesine eklenmedi.
 - Linea Via, Linea ile aynı model. 1.3 MultiJet 90/95 ve 1.6 MultiJet 105 ayrı. T-Jet, FIRE’dan ayrı.
 - G.Punto, Punto’ya bağlandı. Punto Evo, 1.4 FIRE / 1.3 MultiJet kartını ikinci bir motor ailesi yapmıyor. Grande Punto ile sonraki Punto aynı model adında; örtüşen yıllar kasaya zorlanmadı.
-- 500, 500C, 500L, 500X ve 500e ayrı model. 500e’de tip adındaki 42 kWh batarya alanında; kW yazmıyorsa uydurulmadı. 500L Living, 500L’de.
+- 500L, 500X ve 500e ayrı model. 500C, 500’ün cabrio gövdesidir; aynı motor kartında, gövde Cabrio. 500e’de tip adındaki 42 kWh batarya alanında; kW yazmıyorsa uydurulmadı. 500L Living, 500L’de.
 - Abart yazımı Abarth’a alındı. 1.4 T-Jet 165 ve 180 ayrı güç.
 - `HATCBACK` yazımı hatchback gövdeye çekildi. Bu yüzden Honda Civic Hatcback, Civic’e taşındı. Ducato, Fiorino, Scudo, Doblo, Pratico ve Fullback ticari modellerinde bırakıldı.
 

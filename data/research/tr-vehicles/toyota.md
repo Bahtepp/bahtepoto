@@ -21,5 +21,5 @@ Yaris: 1.33, 1.4 D-4D ve 1.5 Hybrid ayrı. Auris: 1.4 D-4D, 1.6 ve 1.8 Hybrid ay
 - Çoğu hibrit satırda PS yok. 122 veya 140 diye tamamlanmadı. Yalnızca `(140)` ve `(194)` yazanlar o güçte.
 - C-HR ve Corolla `1.2 TURBO` satırlarında yakıt ve PS yok.
 - `AURIS 1.4 4-4D` yazımı D-4D sayılmadı.
-- `models/toyota/rav-4.json` Wikipedia kasa kabuğu olarak duruyor; Türkiye satırı yok, satırlar `rav4.json` içinde.
+- `rav-4.json` boş Wikipedia kopyası kaldırıldı. Aynı kasa kaynağı ve Türkiye satırları `rav4.json` içinde.
 - TSB’de Lexus RX / GX, Toyota markasının altında `Lexus` model adıyla duruyor. Lexus markasına taşınmadı.

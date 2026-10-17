@@ -142,6 +142,55 @@ describe('TSB tip adı ayrıştırma', () => {
     assert.equal(petrol.tech.includes('HYBRID'), false);
   });
 
+  test('Opel CTDI dizel ailesidir; 7.4 kW şarj gücü hacim değildir; B14XEL motor kodu kalır', () => {
+    const ctdi = parseTypeName('ASTRA ST 1.3 CTDI (95) COSMO');
+    assert.equal(ctdi.fuel, 'diesel');
+    assert.ok(ctdi.tech.includes('CDTI'));
+    assert.equal(ctdi.powerPs, 95);
+    assert.equal(ctdi.displacementL, 1.3);
+    const charger = parseTypeName('CORSA-E ELEGANCE 7.4KW');
+    assert.equal(charger.displacementL, undefined);
+    assert.equal(charger.powerKw, undefined);
+    assert.ok(charger.tech.includes('OBC'));
+    const obc = parseTypeName('MOKKA-E ULTIMATE BOLD PACK 7.4KW OBC');
+    assert.equal(obc.displacementL, undefined);
+    assert.equal(obc.powerKw, undefined);
+    const adam = parseTypeName('ADAM B14 XEL 87 MTA JAM');
+    assert.ok(adam.tech.includes('B14XEL'));
+    assert.equal(adam.powerPs, 87);
+    const glued = parseTypeName('CROSSLAND X 1.5 120DIZEL AT6 ENJOY');
+    assert.equal(glued.fuel, 'diesel');
+    assert.equal(glued.powerPs, 120);
+    assert.equal(glued.displacementL, 1.5);
+  });
+
+  test('PureTech, VTi, THP, HDi ve BlueHDi aynı hacimde birleşmez', () => {
+    const vti = parseTypeName('208 1.2 VTI 82 ACCESS');
+    const pure = parseTypeName('208 1.2 PURETECH 130 ALLURE');
+    const ptech = parseTypeName('2008 1.2 PTECH 130 S&S EAT8');
+    const thp = parseTypeName('308 1.6 THP 156');
+    const hdi = parseTypeName('308 1.6 HDI 92');
+    const blue = parseTypeName('308 1.5 BLUHDI 130');
+    const evti = parseTypeName('C4 CACTUS 1.2 E-VTI 82 FEEL');
+    assert.equal(vti.fuel, 'petrol');
+    assert.ok(vti.tech.includes('VTI'));
+    assert.equal(vti.powerPs, 82);
+    assert.ok(pure.tech.includes('PURETECH'));
+    assert.equal(pure.powerPs, 130);
+    assert.ok(ptech.tech.includes('PURETECH'));
+    assert.equal(ptech.tech.includes('PTECH'), false);
+    assert.ok(thp.tech.includes('THP'));
+    assert.equal(thp.fuel, 'petrol');
+    assert.equal(hdi.fuel, 'diesel');
+    assert.ok(hdi.tech.includes('HDI'));
+    assert.equal(hdi.tech.includes('THP'), false);
+    assert.ok(blue.tech.includes('BLUEHDI'));
+    assert.equal(blue.fuel, 'diesel');
+    assert.ok(evti.tech.includes('E-VTI'));
+    assert.equal(evti.tech.includes('VTI'), false);
+    assert.equal(evti.tech.includes('PURETECH'), false);
+  });
+
   test('ilk sözcük her zaman modeldir ("CC" gövde değil)', () => {
     const p = parseTypeName('CC 1.4 TSI 160 BMT TIPTRONIC DSG');
     assert.deepEqual(p.prefix, ['CC']);
@@ -619,6 +668,8 @@ describe('Türkiye pazar filtresi', () => {
     assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['R Line'] }] }), false);
     assert.equal(isPerformance({ ...listed, trimName: 'GTI', marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['Comfortline'] }] }), true);
     assert.equal(isPerformance({ ...listed, trimName: 'R', marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['R'] }] }), true);
+    assert.equal(isPerformance({ ...listed, trimName: 'OPC', marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['Sport'] }] }), true);
+    assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['OPC Line'] }] }), false);
   });
 
   test('gerçek katalog: TSB varyantlarının hepsinde Türkiye durumu ve model yılları var', () => {

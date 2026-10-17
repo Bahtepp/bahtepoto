@@ -120,13 +120,17 @@ function performanceTrim(items: { trims: string[]; techTokens?: string[] }[]): s
     if (words[0] === 'GT-LINE' || words[0] === 'GTLINE' || (words[0] === 'GT' && words[1] === 'LINE')) return '';
     if (words[0] === 'RS-LINE' || words[0] === 'RSLINE' || (words[0] === 'RS' && words[1] === 'LINE')) return '';
     if (words[0] === 'R-LINE' || words[0] === 'RLINE' || (words[0] === 'R' && words[1] === 'LINE')) return '';
+    if (words[0] === 'OPC-LINE' || words[0] === 'OPCLINE' || (words[0] === 'OPC' && words[1] === 'LINE')) return '';
     if (tech.includes('GTI') || words[0] === 'GTI') return 'GTI';
     if (tech.includes('GTD') || words[0] === 'GTD') return 'GTD';
     if (tech.includes('GTE') || words[0] === 'GTE') return 'GTE';
     if (words[0] === 'R') return 'R';
     const w0 = words[0] ?? '';
     if (w0 === 'RS500') return 'RS500';
-    if (w0 === 'RS' || w0 === 'ST') return w0;
+    if (w0 === 'RS' || w0 === 'ST' || w0 === 'OPC' || w0 === 'GSI') return w0;
+    if (words.includes('GSI')) return 'GSI';
+    const opcAt = words.indexOf('OPC');
+    if (opcAt >= 0 && words[opcAt + 1] !== 'LINE') return 'OPC';
     return '';
   });
   if (labels.length === 0 || labels.some((l) => !l)) return undefined;
@@ -356,15 +360,46 @@ export function buildFromTsb(
         const extra = folded.startsWith(`${target} `) ? folded.slice(target.length).trim() : folded.startsWith(target) && folded.length > target.length && !target.includes(' ') ? folded.slice(target.length).trim() : '';
         model = alias.model;
         if (extra) trimWords.unshift(extra);
-        if (alias.body) parsed.body ??= alias.body;
+        if (alias.body) {
+          if (alias.replaceBody) parsed.body = alias.body;
+          else parsed.body ??= alias.body;
+        }
       }
       if (brand.id === 'volkswagen' && /^ID([.\s-]|$)/.test(fold(model)) && !parsed.fuel) parsed.fuel = 'electric';
       // "PUNTO EVO" kasa adıdır. EVO, 1.4 FIRE ile aynı motora yapışık ayrı bir aile değildir.
       if (brand.id === 'fiat' && /\bPUNTO EVO\b/i.test(row.typeName)) parsed.tech = parsed.tech.filter((t) => fold(t) !== 'EVO');
+      if (brand.id === 'fiat' && fold(model) === '500' && fold(trimWords[0] ?? '') === 'C') {
+        parsed.body = 'cabrio';
+        trimWords.shift();
+      }
       if (brand.id === 'toyota' && fold(model) === 'URBAN' && fold(trimWords[0] ?? '') === 'CRUISER') {
         model = 'URBAN CRUISER';
         trimWords.shift();
       }
+      // Opel "ST" Sports Tourer gövdesidir. Ford ST performans modeli bu markada aranmaz.
+      if (brand.id === 'citroen') {
+        const lead = fold(trimWords[0] ?? '');
+        const base = fold(model);
+        const renamed =
+          base === 'C5' && lead === 'AIRCROSS' ? 'C5 AIRCROSS' :
+          base === 'C3' && lead === 'AIRCROSS' ? 'C3 AIRCROSS' :
+          base === 'C5' && lead === 'X' ? 'C5 X' :
+          base === 'C4' && lead === 'X' ? 'C4 X' :
+          base === 'C4' && lead === 'PICASSO' ? 'C4 PICASSO' :
+          base === 'C4' && lead === 'CACTUS' ? 'C4 CACTUS' :
+          '';
+        if (renamed) {
+          model = renamed;
+          trimWords.shift();
+        }
+      }
+      if (brand.id === 'opel' && fold(trimWords[0] ?? '') === 'ST' && fold(trimWords[1] ?? '') !== 'LINE') {
+        parsed.body ??= 'wagon';
+        trimWords.shift();
+      }
+      if (brand.id === 'opel' && /\b(?:CORSA|ASTRA|MOKKA|ZAFIRA|FRONTERA)-E\b/.test(fold(row.typeName)) && !parsed.fuel) parsed.fuel = 'electric';
+      if ((brand.id === 'peugeot' || brand.id === 'citroen') && /\bE-\d{3,4}\b/.test(fold(row.typeName)) && !parsed.fuel) parsed.fuel = 'electric';
+      if (brand.id === 'citroen' && /\bE-C\d\b/.test(fold(row.typeName)) && !parsed.fuel) parsed.fuel = 'electric';
       if (brand.modelPrefix) model = `${brand.modelPrefix} ${model}`.trim();
       // TSB'de Chrysler altında listelenen Jeep modelleri ("JEEP COMPASS", "JEEPRENEGADE") Jeep markasına.
       let rowBrand: BrandRule | undefined;
@@ -883,8 +918,53 @@ export function buildFromTsb(
       perBrand.set(brandId, pb);
     }
   }
-  // Önceki çalıştırmadan kalan, artık hiçbir TSB satırı düşmeyen (yalnızca TSB kaynaklı) boş modeller silinir.
-  for (const [f, m] of merged.models) if (ownedByTsb(m) && ((m.generations as Json[] | undefined) ?? []).length === 0) merged.models.delete(f);
+  // Boş TSB modelleri silinir. Varyantsız Wikipedia kopyası, aynı wpgen kimliği varyantlı kardeşte varsa da silinir (rav-4.json).
+  const gensOf = (m: Json) => (m.generations as Json[] | undefined) ?? [];
+  const variantCount = (m: Json) => gensOf(m).reduce((n, g) => n + (((g.variants as Json[] | undefined) ?? []).length), 0);
+  const wpgenIds = (m: Json) => {
+    const ids: string[] = [];
+    for (const g of gensOf(m)) for (const s of (g.sourceIds as string[] | undefined) ?? []) if (String(s).startsWith('wpgen-')) ids.push(String(s));
+    return [...new Set(ids)];
+  };
+  for (const [f, m] of [...merged.models]) {
+    if (!ownedByTsb(m)) continue;
+    if (gensOf(m).length === 0) {
+      merged.models.delete(f);
+      continue;
+    }
+    if (variantCount(m) > 0) continue;
+    const ids = wpgenIds(m);
+    if (ids.length === 0) continue;
+    const brand = String(f).split('/')[1];
+    const covered = [...merged.models.entries()].some(([of, o]) => {
+      if (of === f || String(of).split('/')[1] !== brand || variantCount(o) === 0) return false;
+      const have = new Set(wpgenIds(o));
+      return ids.every((id) => have.has(id));
+    });
+    if (covered) merged.models.delete(f);
+  }
+  for (const [f, m] of [...merged.models]) {
+    if (variantCount(m) > 0) continue;
+    const brand = String(f).split('/')[1] ?? '';
+    if (MODEL_ALIASES[brand]?.[fold(String(m.name ?? ''))]) merged.models.delete(f);
+  }
+  const modelNames = new Map<string, Set<string>>();
+  for (const [f, m] of merged.models) {
+    const brand = String(f).split('/')[1] ?? '';
+    const names = modelNames.get(brand) ?? new Set<string>();
+    names.add(fold(String(m.name ?? '')));
+    modelNames.set(brand, names);
+  }
+  for (const [f, m] of merged.models) {
+    const brand = String(f).split('/')[1] ?? '';
+    const names = modelNames.get(brand) ?? new Set<string>();
+    const own = fold(String(m.name ?? ''));
+    m.generations = gensOf(m).filter((g) => {
+      if (((g.variants as Json[] | undefined) ?? []).length > 0) return true;
+      const gn = fold(String(g.name ?? ''));
+      return gn === own || !names.has(gn);
+    });
+  }
   stats.brands = touchedBrands.size;
   // Yeniden çalıştırmada da doğru sayı: kaynağı yalnızca TSB olan modeller
   stats.models = [...merged.models.values()].filter((m) => ownedByTsb(m) && ((m.generations as Json[] | undefined) ?? []).length > 0).length;

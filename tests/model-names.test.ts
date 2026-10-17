@@ -97,11 +97,83 @@ describe('takma ad tablosu (gövde/donanım varyantları)', () => {
     assert.deepEqual(
       files([
         row('FIAT', '500 POP 1.2 (69)'),
+        row('FIAT', '500C 1.2 (69) 3K'),
+        row('FIAT', '500 C 1.4 (100)'),
         row('FIAT', '500L 1.4 FIRE 95 POP'),
         row('FIAT', '500X POP 1.6 E-TORQ 110'),
         row('FIAT', '500E HB LA PRIMA 42KWH'),
       ]),
       ['models/fiat/500.json', 'models/fiat/500e.json', 'models/fiat/500l.json', 'models/fiat/500x.json'],
+    );
+    const cabrio = build([row('FIAT', '500C 1.2 (69) 3K')]).merged.models.get('models/fiat/500.json');
+    const bodies = ((cabrio?.generations as { variants: { marketAvailability?: { bodyTypes?: string[] }[] }[] }[]) ?? []).flatMap((g) =>
+      g.variants.flatMap((v) => (v.marketAvailability ?? []).flatMap((a) => a.bodyTypes ?? [])),
+    );
+    assert.ok(bodies.includes('Cabrio'));
+  });
+  test('Opel X, -e ve motor kodu ayrı model açmaz', () => {
+    assert.deepEqual(
+      files([
+        row('OPEL', 'CROSSLAND X 1.2 110 ENJOY'),
+        row('OPEL', 'CROSSLAND X 1.2 130 ENJOY'),
+        row('OPEL', 'CROSSLAND X 1.2 81 ENJOY'),
+        row('OPEL', 'CROSSLANDX 1.5DIZEL 102 MT6'),
+      ]),
+      ['models/opel/crossland.json'],
+    );
+    assert.deepEqual(
+      files([
+        row('OPEL', 'CORSA 1.2 100 AT8 EDITION'),
+        row('OPEL', 'CORSA 1.2 75 MT5 ESSENTIAL'),
+        row('OPEL', 'CORSA 1.4 90'),
+        row('OPEL', 'CORSA-E 100KW GS'),
+      ]),
+      ['models/opel/corsa.json'],
+    );
+    assert.deepEqual(
+      files([
+        row('OPEL', 'ADAM 1.4 87 JAM'),
+        row('OPEL', 'ADAM B14 XEL 87 MTA JAM'),
+        row('OPEL', 'ADAM B14 XEL 87 GLAM'),
+        row('OPEL', 'ADAM B14 XEL 87 SLAM'),
+      ]),
+      ['models/opel/adam.json'],
+    );
+    const opc = build([row('OPEL', 'ASTRA GTC OPC 2.0 280 MT6')]).merged.models.get('models/opel/astra.json');
+    const trimName = ((opc?.generations as { variants: { trimName?: string }[] }[]) ?? []).flatMap((g) => g.variants.map((v) => v.trimName)).find(Boolean);
+    assert.equal(trimName, 'OPC');
+  });
+  test('Peugeot elektrikli sürüm ve Citroën Aircross asıl modelinde', () => {
+    assert.deepEqual(
+      files([
+        row('PEUGEOT', '208 1.2 PURETECH 100 ACTIVE'),
+        row('PEUGEOT', '208 1.2 PURETECH 130 ALLURE'),
+        row('PEUGEOT', '208 1.5 BLUEHDI 100'),
+        row('PEUGEOT', 'E-208 GT 100KW'),
+      ]),
+      ['models/peugeot/208.json'],
+    );
+    assert.deepEqual(
+      files([
+        row('CITROEN', 'C3 1.2 PURETECH 83 FEEL'),
+        row('CITROEN', 'C3 1.2 PURETECH 110 SHINE'),
+        row('CITROEN', 'C3 AIRCROSS 1.2 PURETECH 110 FEEL'),
+        row('CITROEN', 'C3 AIRCROSS 1.5 BLUEHDI 120 SHINE'),
+        row('CITROEN', 'C3 AIRCROSS 1.2 PURETECH 130 SHINE'),
+        row('CITROEN', 'C3AIRCROSS 1.2 PURETECH 130'),
+      ]),
+      ['models/citroen/c3-aircross.json', 'models/citroen/c3.json'],
+    );
+    assert.deepEqual(
+      files([
+        row('CITROEN', 'C5 2.0 HDI EXCLUSIVE'),
+        row('CITROEN', 'C5 AIRCROSS 1.5 BLUEHDI 130 FEEL'),
+        row('CITROEN', 'C5 X 1.6 PHEV 181'),
+        row('CITROEN', 'C4 1.2 PURETECH 130 FEEL'),
+        row('CITROEN', 'C4 X FEEL 1.2 PURETECH 100'),
+        row('CITROEN', 'C4 PICASSO 1.6 HDI 110'),
+      ]),
+      ['models/citroen/c4-picasso.json', 'models/citroen/c4-x.json', 'models/citroen/c4.json', 'models/citroen/c5-aircross.json', 'models/citroen/c5-x.json', 'models/citroen/c5.json'],
     );
   });
   test('Corolla Cross ve Yaris Cross ayrı model; RAV 4, RAV4 ile aynı', () => {
@@ -148,7 +220,7 @@ describe('takma ad tablosu (gövde/donanım varyantları)', () => {
   });
   test('C5AIRCROSS / C5-AC → C5 Aircross; C3 Aircross ayrı kalır', () => {
     assert.deepEqual(files([row('CITROEN', 'C5AIRCROSS 1.5 BLUEHDI 130'), row('CITROEN', 'C5-AC 1.5 BLUEHDI 130'), row('CITROEN', 'C3AIRCROSS 1.2 PURETECH 110')]), [
-      'models/citroen/c3aircross.json',
+      'models/citroen/c3-aircross.json',
       'models/citroen/c5-aircross.json',
     ]);
   });

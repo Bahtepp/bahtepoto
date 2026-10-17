@@ -1,0 +1,33 @@
+{
+  "id": "citroen-c4-picasso",
+  "brandId": "citroen",
+  "slug": "c4-picasso",
+  "name": "C4 Picasso",
+  "order": 999,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-17",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "citroen-c4-picasso-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "C4 Picasso — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2019 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-17",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "citroen-c4-picasso-nesil-belirlenmedi-16-hdi-110", "slug": "16-hdi-110", "engineId": "citroen-16-hdi-110", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013], "trims": ["Mcp Dynamique", "SX 5 Kisilik", "Sxpk 5 Kisilik", "Sxpk Mcp 5 Kisilik", "Sxpk Mcp 7 Kisi"], "bodyTypes": [], "sourceRefs": ["TSB 34-241", "TSB 34-247", "TSB 34-248", "TSB 34-249", "TSB 34-343"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"C4 PICASSO 1.6 HDI (110) MCP DYNAMIQUE\")." },
+        { "id": "citroen-c4-picasso-nesil-belirlenmedi-16-hdi", "slug": "16-hdi", "engineId": "citroen-16-hdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011], "trims": ["Vtrpk", "Vtrpk Mcp"], "bodyTypes": [], "sourceRefs": ["TSB 34-322", "TSB 34-323"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"C4 PICASSO 1.6 HDI VTRPK\")." },
+        { "id": "citroen-c4-picasso-nesil-belirlenmedi-16-thp-156", "slug": "16-thp-156", "engineId": "citroen-16-thp-156", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012], "trims": ["Mcp Exclusive"], "bodyTypes": [], "sourceRefs": ["TSB 34-344"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"C4 PICASSO 1.6 THP 156 MCP EXCLUSIVE\")." },
+        { "id": "citroen-c4-picasso-nesil-belirlenmedi-16-e-hdi", "slug": "16-e-hdi", "engineId": "citroen-16-e-hdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015, 2016], "trims": ["Dynamique ETG6", "Dynamique Mcp Stt 5 Kisi", "Intensive ETG6", "Intensive ETG6 7K", "Mcp Stt"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 34-1009", "TSB 34-1046", "TSB 34-1052", "TSB 34-1053", "TSB 34-1054"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"C4 PICASSO 1.6 e-HDI DYNAMIQUE ETG6 5K\")." },
+        { "id": "citroen-c4-picasso-nesil-belirlenmedi-16-bluehdi-120", "slug": "16-bluehdi-120", "engineId": "citroen-16-bluehdi-120", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018, 2019], "trims": ["Feel", "Intensive", "Intensive 7K", "Shine"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 34-1083", "TSB 34-1084", "TSB 34-1114", "TSB 34-1121"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"C4 PICASSO 1.6 BLUEHDI 120 EAT6 FEEL 5K\")." }
+      ]
+    }
+  ]
+}

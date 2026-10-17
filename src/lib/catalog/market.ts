@@ -75,14 +75,14 @@ export function marketGroup(v: V, view: MarketView, markets: Pick<Market, 'id' |
 }
 
 /** Özel performans modelleri (ST, RS, GTI, R, AMG …): normal motor listesinden ayrı başlıkta. */
-const PERFORMANCE = /^(ST|RS|RS\d+|GTI|GTD|R|R32|AMG|TYPE R|N|M\d?|CUPRA|SRT|NISMO|JCW|ABARTH|TRACKHAWK|RS500)$/i;
+const PERFORMANCE = /^(ST|RS|RS\d+|GTI|GTD|R|R32|AMG|TYPE R|N|M\d?|CUPRA|SRT|NISMO|JCW|ABARTH|TRACKHAWK|RS500|OPC|GSI)$/i;
 
 /** ST-Line / ST Line donanım paketidir; Focus ST gibi performans modeli değildir. */
 function trimIsPerformance(trim: string): boolean {
   const words = trim.trim().split(/\s+/);
   const first = words[0] ?? '';
-  if (/^(ST-LINE|STLINE|GT-LINE|GTLINE|RS-LINE|RSLINE|R-LINE|RLINE)$/i.test(first)) return false;
-  if (/^(ST|GT|RS|R)$/i.test(first) && /^LINE$/i.test(words[1] ?? '')) return false;
+  if (/^(ST-LINE|STLINE|GT-LINE|GTLINE|RS-LINE|RSLINE|R-LINE|RLINE|OPC-LINE|OPCLINE)$/i.test(first)) return false;
+  if (/^(ST|GT|RS|R|OPC)$/i.test(first) && /^LINE$/i.test(words[1] ?? '')) return false;
   return PERFORMANCE.test(first);
 }
 
