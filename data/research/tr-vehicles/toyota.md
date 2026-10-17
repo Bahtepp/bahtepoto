@@ -4,7 +4,7 @@ Tarih: 2026-10-17. Kaynak: TSB kasko değer listesi (202201R1, 202610R1). Terra,
 
 ## Ne değişti
 
-- Corolla Cross ve Yaris Cross ayrı model. Corolla’nın 1.8 Hybrid kartına karışmıyorlar. Yaris Cross’ta 1.5 (yakıt yazmıyor) ile 1.5 Hybrid ayrı. Corolla Cross satırları 1.8 Hybrid.
+- Corolla Cross ve Yaris Cross ayrı model. 500X Cross, Panda Cross ve V40/V60/V90 Cross ana modelde kaldı. Corolla’nın 1.8 Hybrid kartına karışmıyorlar. Yaris Cross’ta 1.5 (yakıt yazmıyor) ile 1.5 Hybrid ayrı. Corolla Cross satırları 1.8 Hybrid.
 - Corolla Verso, sonraki Verso modelinden ayrı. Proace Verso, Verso’ya karışmıyor.
 - `D 4D` dizel D-4D. Corolla 1.4 D-4D, benzinli 1.4 / 1.6 kartından ayrı. RAV4 2.0 D-4D, 2.0 benzinli ve 2.5 Hybrid’den ayrı.
 - `HIBRID` ve `HYB.` hibrit. Prius 1.8 VVT-i Hibrid, 1.8 Hybrid ile aynı kartta. C-HR 1.8 Hybrid ile 1.8 Hybrid 140 ayrı güç. RAV4 2.5 Hybrid, 2.0 kartından ayrı.

@@ -3,7 +3,7 @@
 `npm run catalog:update` her çalıştığında yeniden üretilir. Katalogda model dosyasına kaynaklı nesil eklendikçe
 TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 
-## Nesli belirlenemeyen varyantlar (1903 varyant, 590 model)
+## Nesli belirlenemeyen varyantlar (1900 varyant, 586 model)
 
 | Marka | Model | Nesli belirlenemeyen varyant | Bilinen nesil |
 |---|---|---|---|
@@ -39,7 +39,7 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Mercedes-Benz | S | 10 | 7 |
 | Renault | Megane | 10 | 3 |
 | Seat | Altea | 10 | 0 |
-| Fiat | 500X Cross | 9 | 0 |
+| Fiat | 500X | 9 | 1 |
 | Ford | Puma | 9 | 0 |
 | Kia | Rio | 9 | 3 |
 | Bentley | Flying Spur | 8 | 0 |
@@ -65,7 +65,7 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Chrysler | Grand | 7 | 0 |
 | Citroen | Grand C4 | 7 | 0 |
 | Citroen | Spacetourer | 7 | 0 |
-| Fiat | Panda Cross | 7 | 0 |
+| Fiat | Panda | 7 | 3 |
 | Ford | Focus | 7 | 4 |
 | Kia | Cerato | 7 | 1 |
 | Nissan | X-TRAIL | 7 | 4 |
@@ -136,6 +136,7 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Chrysler | 300 C | 4 | 0 |
 | Chrysler | Jeep | 4 | 0 |
 | Citroen | Berlingo | 4 | 3 |
+| Fiat | 500L | 4 | 1 |
 | Fiat | Doblo | 4 | 3 |
 | Ford | Grand C-MAX | 4 | 0 |
 | Ford | Mondeo | 4 | 4 |
@@ -228,7 +229,7 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Volvo | EX40 | 3 | 0 |
 | Volvo | S60 | 3 | 3 |
 | Volvo | S90 | 3 | 1 |
-| Volvo | V40 Cross | 3 | 0 |
+| Volvo | V40 | 3 | 2 |
 | Alfa Romeo | Spider | 2 | 0 |
 | Aston Martin | Dbs | 2 | 1 |
 | Audi | A1 | 2 | 2 |
@@ -268,8 +269,6 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | DS | DS | 2 | 0 |
 | DS | DS9 | 2 | 0 |
 | Fiat | 124 | 2 | 1 |
-| Fiat | 500L Cross | 2 | 0 |
-| Fiat | 500L | 2 | 1 |
 | Fiat | Abarth | 2 | 0 |
 | Fiat | Doblo Classic | 2 | 0 |
 | Fiat | Scudo | 2 | 0 |
@@ -355,7 +354,7 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Volkswagen | Beetle | 2 | 1 |
 | Volkswagen | California | 2 | 0 |
 | Volvo | V70 | 2 | 3 |
-| Volvo | V90 Cross | 2 | 0 |
+| Volvo | V90 | 2 | 1 |
 | Volvo | XC 70 | 2 | 1 |
 | Volvo | XC90 | 2 | 2 |
 | Alfa Romeo | 156 | 1 | 1 |
@@ -436,11 +435,9 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Ferrari | SF | 1 | 0 |
 | Fiat | 500 | 1 | 1 |
 | Fiat | 500E | 1 | 0 |
-| Fiat | 500X | 1 | 1 |
 | Fiat | 600 | 1 | 0 |
 | Fiat | E-DOBLO | 1 | 0 |
 | Fiat | Freemont | 1 | 0 |
-| Fiat | Panda | 1 | 3 |
 | Fiat | Pratico | 1 | 0 |
 | Ford | Crown | 1 | 0 |
 | Ford | Edge | 1 | 3 |
@@ -591,8 +588,7 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Volkswagen | Touran | 1 | 2 |
 | Volvo | EX30 | 1 | 1 |
 | Volvo | V 70 | 1 | 3 |
-| Volvo | V40 | 1 | 2 |
-| Volvo | V60 Cross | 1 | 0 |
+| Volvo | V60 | 1 | 2 |
 | Volvo | V90 Crosscountry | 1 | 0 |
 | Volvo | XC40 T2 | 1 | 0 |
 | Volvo | XC60 | 1 | 2 |

@@ -9,12 +9,12 @@ Kaynak dosyalar: `202201R1.xlsx`, `202610R1.xlsx` (TSB Kasko Değer Listesi). Fi
 | Aktarılan satır | 15299 |
 | Aktarılamayan / belirsiz satır (`belirsiz.json`) | 858 |
 | Marka | 97 |
-| Yalnızca TSB kaynaklı model | 870 |
-| Yeni nesil grubu (ipucundan: 5, "nesil belirlenmedi": 590) | 595 |
+| Yalnızca TSB kaynaklı model | 864 |
+| Yeni nesil grubu (ipucundan: 5, "nesil belirlenmedi": 586) | 591 |
 | Yeni motor (yakıt türü tip adında yazmayan: 1039) | 2447 |
-| Yeni varyant (nesil × motor) | 4991 |
+| Yeni varyant (nesil × motor) | 4988 |
 | — mevcut kataloğun nesillerine eşlenen | 3083 |
-| — nesli belirlenemeyen | 1903 |
+| — nesli belirlenemeyen | 1900 |
 | Türkiye durumu eklenen mevcut (elle girilmiş) varyant | 12 |
 
 ## Kapsam dışı bırakılanlar
@@ -40,7 +40,7 @@ Kaynak dosyalar: `202201R1.xlsx`, `202610R1.xlsx` (TSB Kasko Değer Listesi). Fi
 | Peugeot | 34 | 259 |
 | Renault | 28 | 251 |
 | Opel | 31 | 239 |
-| Fiat | 33 | 185 |
+| Fiat | 30 | 183 |
 | Hyundai | 26 | 180 |
 | Citroen | 26 | 171 |
 | Skoda | 15 | 168 |
@@ -48,7 +48,7 @@ Kaynak dosyalar: `202201R1.xlsx`, `202610R1.xlsx` (TSB Kasko Değer Listesi). Fi
 | Toyota | 30 | 136 |
 | Seat | 12 | 128 |
 | Porsche | 9 | 115 |
-| Volvo | 28 | 113 |
+| Volvo | 25 | 112 |
 | Dacia | 7 | 106 |
 | Nissan | 24 | 94 |
 | Land Rover | 8 | 73 |
@@ -159,7 +159,7 @@ varyanta girer). Nesil eklendikçe toplam varyant sayısının artması bu yüzd
 | model yılları kaynakta çelişkili bir neslin dönemine düşüyor | 488 | 16 |
 | satırın model yılları iki neslin dönemine yayılıyor | 321 | 72 |
 | model yılları bilinen hiçbir neslin dönemine uymuyor | 310 | 45 |
-| alt model / farklı kasa (ör. VERSO, PLUS, SEDAN): yalnızca kasa kodu veya nesil ipucuyla eşlenir | 278 | 57 |
+| alt model / farklı kasa (ör. VERSO, PLUS, SEDAN): yalnızca kasa kodu veya nesil ipucuyla eşlenir | 278 | 54 |
 | tek model yılı, komşu nesil sınırında | 240 | 72 |
 | kaynaklı nesil yok — madde var, nesil bilgi kutusu yok | 227 | 41 |
 | kaynaklı nesil yok — diğer | 17 | 6 |

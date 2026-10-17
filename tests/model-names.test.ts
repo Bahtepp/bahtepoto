@@ -122,6 +122,16 @@ describe('takma ad tablosu (gövde/donanım varyantları)', () => {
     );
     assert.deepEqual(
       files([
+        row('FIAT', '500X POP 1.6 E-TORQ 110'),
+        row('FIAT', '500X CROSS 1.6 E-TORQ 110'),
+        row('FIAT', '500X CROSS 1.4 MULTIAIR 140'),
+        row('FIAT', '500X CROSS PLUS 1.6 E-TORQ 110'),
+        row('FIAT', 'PANDA CROSS 1.2'),
+      ]),
+      ['models/fiat/500x.json', 'models/fiat/panda.json'],
+    );
+    assert.deepEqual(
+      files([
         cross('RAV4 2.5 HYBRID PREMIUM 4x4'),
         cross('RAV4 2.0 MULTIDRIVE S'),
         cross('RAV4 2.2 D-4D PREMIUM'),

@@ -39,7 +39,7 @@ Fiat sonrası TSB satırı 15.420’den 15.433’e çıktı (düşen 0). Toyota 
 |---|---:|---:|
 | Marka kaydı | 100 | 100 |
 | Modeli olan marka | 97 | 97 |
-| Model dosyası | 889 | 898 |
+| Model dosyası | 889 | 892 |
 | Gerçek kasa | 1.356 | 1.356 |
 | Varyant | 5.046 | 5.046 |
 | Nesli belirsiz varyant | 1.901 | 1.903 |

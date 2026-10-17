@@ -499,9 +499,10 @@ export function resolveModels(parsed: ParsedType[]): (p: ParsedType) => ModelRes
     }
   }
   // "X1 SDRIVE16D": sDrive/xDrive tanımı motor/çekiş bilgisidir, alt model değildir.
-  // CROSS / VERSO birden çok modelin gerçek gövde modelidir (Corolla Cross, Yaris Cross, Corolla Verso).
-  // Motorun ardında da geçebilirler ("CROSS SPORT"); bu, model adının yanındaki kullanımı donanım yapmaz.
-  const WITH_FIRST = new Set(['CROSS', 'VERSO']);
+  // VERSO birden çok gerçek modeldir (Corolla Verso, Proace Verso).
+  // CROSS yalnızca Corolla, Yaris ve Egea'da model adıdır. 500X Cross, Panda Cross ve V40 Cross ana modelde kalır.
+  const WITH_FIRST = new Set(['VERSO']);
+  const CROSS_MODEL = new Set(['COROLLA', 'YARIS', 'EGEA']);
   const trimLike = (W: string) =>
     !WITH_FIRST.has(W) &&
     (W.includes('.') || /^[SX]DRIVE/.test(W) || afterAttr.has(W) || NEVER_SUBMODEL.has(W) || [...afterAttr].some((t) => t.length >= 5 && nearlyEqual(t, W)));
@@ -521,8 +522,9 @@ export function resolveModels(parsed: ParsedType[]): (p: ParsedType) => ModelRes
       return { model: `${first} ${second}`, trimWords: more };
     }
     // "FOCUS C-MAX": ikinci sözcük de markada başlı başına bir model → o model
-    if (isHead(S) && isHead(F) && !trimLike(S) && !WITH_FIRST.has(S)) return { model: second, trimWords: more };
-    const sub = (pairs.get(`${F} ${S}`) ?? 0) >= 3 && !trimLike(S) && /[A-Z]/.test(S) && ((followers.get(S)?.size ?? 0) === 1 || WITH_FIRST.has(S));
+    const crossModel = S === 'CROSS' && CROSS_MODEL.has(F);
+    if (isHead(S) && isHead(F) && !trimLike(S) && !WITH_FIRST.has(S) && !crossModel) return { model: second, trimWords: more };
+    const sub = (pairs.get(`${F} ${S}`) ?? 0) >= 3 && /[A-Z]/.test(S) && (crossModel || (!trimLike(S) && ((followers.get(S)?.size ?? 0) === 1 || WITH_FIRST.has(S))));
     if (sub) return { model: `${first} ${second}`, trimWords: more };
     return { model: first, trimWords: [second, ...more] };
   };
