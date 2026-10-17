@@ -12,16 +12,17 @@
     {
       "id": "skywell-et5-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "ET5 (nesil belirlenmedi)",
+      "name": "ET5 — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2023 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "skywell-et5-nesil-belirlenmedi-elektrikli-150kw", "slug": "elektrikli-150kw", "engineId": "skywell-elektrikli-150kw", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023], "trims": ["Comfort", "Long Range Exclusive", "Long Range Legend"], "bodyTypes": [], "sourceRefs": ["TSB 750-1001", "TSB 750-1005", "TSB 750-1006"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "skywell-et5-nesil-belirlenmedi-elektrikli-150kw", "slug": "elektrikli-150kw", "engineId": "skywell-elektrikli-150kw", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023], "trims": ["Comfort", "Long Range Exclusive", "Long Range Legend"], "bodyTypes": [], "sourceRefs": ["TSB 750-1001", "TSB 750-1005", "TSB 750-1006"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

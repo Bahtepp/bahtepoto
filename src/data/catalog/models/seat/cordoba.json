@@ -10,22 +10,55 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "seat-cordoba-6k",
+      "slug": "6k",
+      "name": "Cordoba 1. nesil (6K)",
+      "code": "6K",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1993 }, "end": { "year": 2002 } },
+      "engineDisplacementsL": [1.6, 1.8, 1.9, 2],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1533544"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"SEAT Córdoba\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "seat-cordoba-6l",
+      "slug": "6l",
+      "name": "Cordoba 2. nesil (6L)",
+      "code": "6L",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2002 }, "end": { "year": 2008 } },
+      "engineDisplacementsL": [1.2, 1.4, 1.6, 1.9, 2],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1533544"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"SEAT Córdoba\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "seat-cordoba-6l-14-75", "slug": "14-75", "engineId": "seat-14-75", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008], "trims": ["Elegance"], "bodyTypes": [], "sourceRefs": ["TSB 19-239"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
       "id": "seat-cordoba-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Cordoba (nesil belirlenmedi)",
+      "name": "Cordoba — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "seat-cordoba-nesil-belirlenmedi-14-tdi-75", "slug": "14-tdi-75", "engineId": "seat-14-tdi-75", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Referance", "Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-181", "TSB 19-192"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "seat-cordoba-nesil-belirlenmedi-14-75", "slug": "14-75", "engineId": "seat-14-75", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Elegance", "Referance"], "bodyTypes": [], "sourceRefs": ["TSB 19-188", "TSB 19-238", "TSB 19-239"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "seat-cordoba-nesil-belirlenmedi-14-100", "slug": "14-100", "engineId": "seat-14-100", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Elegance", "Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-191", "TSB 19-258"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "seat-cordoba-nesil-belirlenmedi-14-tdi-80", "slug": "14-tdi-80", "engineId": "seat-14-tdi-80", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Elegance", "Reference", "Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-240", "TSB 19-244", "TSB 19-249"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "seat-cordoba-nesil-belirlenmedi-14-85", "slug": "14-85", "engineId": "seat-14-85", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Elegance", "Referance"], "bodyTypes": [], "sourceRefs": ["TSB 19-247", "TSB 19-248"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "seat-cordoba-nesil-belirlenmedi-14-tdi-75", "slug": "14-tdi-75", "engineId": "seat-14-tdi-75", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Referance", "Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-181", "TSB 19-192"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "seat-cordoba-nesil-belirlenmedi-14-75", "slug": "14-75", "engineId": "seat-14-75", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Elegance", "Referance"], "bodyTypes": [], "sourceRefs": ["TSB 19-188", "TSB 19-238"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "seat-cordoba-nesil-belirlenmedi-14-100", "slug": "14-100", "engineId": "seat-14-100", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Elegance", "Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-191", "TSB 19-258"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "seat-cordoba-nesil-belirlenmedi-14-tdi-80", "slug": "14-tdi-80", "engineId": "seat-14-tdi-80", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Elegance", "Reference", "Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-240", "TSB 19-244", "TSB 19-249"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "seat-cordoba-nesil-belirlenmedi-14-85", "slug": "14-85", "engineId": "seat-14-85", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Elegance", "Referance"], "bodyTypes": [], "sourceRefs": ["TSB 19-247", "TSB 19-248"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

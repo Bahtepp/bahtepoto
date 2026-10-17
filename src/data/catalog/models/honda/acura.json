@@ -12,17 +12,18 @@
     {
       "id": "honda-acura-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Acura (nesil belirlenmedi)",
+      "name": "Acura — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "honda-acura-nesil-belirlenmedi-35", "slug": "35", "engineId": "honda-35", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Mdx"], "bodyTypes": [], "sourceRefs": ["TSB 61-124"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "honda-acura-nesil-belirlenmedi-37", "slug": "37", "engineId": "honda-37", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008], "trims": ["Mdx"], "bodyTypes": [], "sourceRefs": ["TSB 61-1062"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "honda-acura-nesil-belirlenmedi-35", "slug": "35", "engineId": "honda-35", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Mdx"], "bodyTypes": [], "sourceRefs": ["TSB 61-124"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "honda-acura-nesil-belirlenmedi-37", "slug": "37", "engineId": "honda-37", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008], "trims": ["Mdx"], "bodyTypes": [], "sourceRefs": ["TSB 61-1062"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

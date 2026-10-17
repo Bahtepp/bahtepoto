@@ -12,16 +12,17 @@
     {
       "id": "lincoln-mkc-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Mkc (nesil belirlenmedi)",
+      "name": "Mkc — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2019 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "lincoln-mkc-nesil-belirlenmedi-20", "slug": "20", "engineId": "lincoln-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 82-1007"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "lincoln-mkc-nesil-belirlenmedi-20", "slug": "20", "engineId": "lincoln-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 82-1007"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

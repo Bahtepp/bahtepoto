@@ -12,17 +12,18 @@
     {
       "id": "kia-venga-panorama-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Venga Panorama (nesil belirlenmedi)",
+      "name": "Venga Panorama — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2012 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "kia-venga-panorama-nesil-belirlenmedi-16", "slug": "16", "engineId": "kia-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 800-213"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "kia-venga-panorama-nesil-belirlenmedi-16-crdi", "slug": "16-crdi", "engineId": "kia-16-crdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012], "trims": ["Plus"], "bodyTypes": [], "sourceRefs": ["TSB 800-214", "TSB 800-215"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "kia-venga-panorama-nesil-belirlenmedi-16", "slug": "16", "engineId": "kia-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 800-213"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "kia-venga-panorama-nesil-belirlenmedi-16-crdi", "slug": "16-crdi", "engineId": "kia-16-crdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012], "trims": ["Plus"], "bodyTypes": [], "sourceRefs": ["TSB 800-214", "TSB 800-215"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

@@ -12,17 +12,18 @@
     {
       "id": "nissan-patrol-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Patrol (nesil belirlenmedi)",
+      "name": "Patrol — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2024 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "nissan-patrol-nesil-belirlenmedi-30-tdi", "slug": "30-tdi", "engineId": "nissan-30-tdi", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 107-186"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "nissan-patrol-nesil-belirlenmedi-56", "slug": "56", "engineId": "nissan-56", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2023, 2024], "trims": ["SE Platinum"], "bodyTypes": [], "sourceRefs": ["TSB 107-1074", "TSB 107-1241"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "nissan-patrol-nesil-belirlenmedi-30-tdi", "slug": "30-tdi", "engineId": "nissan-30-tdi", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 107-186"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "nissan-patrol-nesil-belirlenmedi-56", "slug": "56", "engineId": "nissan-56", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2023, 2024], "trims": ["SE Platinum"], "bodyTypes": [], "sourceRefs": ["TSB 107-1074", "TSB 107-1241"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     },
     {
@@ -33,11 +34,11 @@
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2025 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Nesil adı TSB tip adlarındaki \"VII\" ifadesinden alındı; yıllar bu tiplerin TSB listesinde yer aldığı model yılları (Türkiye). Üretim yılları ve makyaj dönemleri doğrulanmadı.",
       "revisions": [],
       "variants": [
-        { "id": "nissan-patrol-nesil-7-38", "slug": "38", "engineId": "nissan-38", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025], "trims": ["SE Titanium"], "bodyTypes": [], "sourceRefs": ["TSB 107-1276"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "nissan-patrol-nesil-7-38", "slug": "38", "engineId": "nissan-38", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025], "trims": ["SE Titanium"], "bodyTypes": [], "sourceRefs": ["TSB 107-1276"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

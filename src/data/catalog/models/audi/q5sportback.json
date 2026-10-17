@@ -12,16 +12,17 @@
     {
       "id": "audi-q5sportback-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Q5SPORTBACK (nesil belirlenmedi)",
+      "name": "Q5SPORTBACK — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2024 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "audi-q5sportback-nesil-belirlenmedi-265", "slug": "265", "engineId": "audi-265", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023, 2024], "trims": ["45TFSIQUATTRO Advanced Str PI"], "bodyTypes": [], "sourceRefs": ["TSB 9-1553"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "audi-q5sportback-nesil-belirlenmedi-265", "slug": "265", "engineId": "audi-265", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023, 2024], "trims": ["45TFSIQUATTRO Advanced Str PI"], "bodyTypes": [], "sourceRefs": ["TSB 9-1553"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

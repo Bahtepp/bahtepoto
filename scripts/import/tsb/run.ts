@@ -20,7 +20,8 @@ import { loadRawCatalog, type RawCatalog } from '../lib/io.ts';
 import { formatJson, formatRecordList } from '../lib/json-format.ts';
 import { DEFAULT_DIRS, today } from '../lib/paths.ts';
 import { readFirstSheet } from '../lib/xlsx.ts';
-import { buildFromTsb, type BuildResult } from './build.ts';
+import { buildFromTsb, stripTsb, type BuildResult } from './build.ts';
+import { applyGenerations, importBlocker, type ModelGenerations } from '../generations/build.ts';
 import { mergeRows, parseSheet } from './parse.ts';
 
 const BASE = 'https://www.tsb.org.tr';
@@ -29,7 +30,7 @@ const USER_AGENT = 'bahtepoto-import/0.1 (https://bahtepoto.com; katalog veri i�
 const ARCHIVES = [{ year: 2022, monthId: 2 }];
 
 const { values } = parseArgs({
-  options: { write: { type: 'boolean' }, offline: { type: 'boolean' }, refresh: { type: 'boolean' } },
+  options: { write: { type: 'boolean' }, offline: { type: 'boolean' }, refresh: { type: 'boolean' }, 'without-generations': { type: 'boolean' } },
 });
 
 async function getJson<T>(path: string): Promise<T> {
@@ -88,7 +89,7 @@ function report(r: BuildResult, files: string[], errors: string[]): string {
     `| Aktarılan satır | ${s.imported} |`,
     `| Aktarılamayan / belirsiz satır (\`belirsiz.json\`) | ${sum(s.rejected)} |`,
     `| Marka | ${s.brands} |`,
-    `| Yeni model | ${s.models} |`,
+    `| Yalnızca TSB kaynaklı model | ${s.models} |`,
     `| Yeni nesil grubu (ipucundan: ${s.hintGenerations}, "nesil belirlenmedi": ${s.generations - s.hintGenerations}) | ${s.generations} |`,
     `| Yeni motor (yakıt türü tip adında yazmayan: ${s.fuelUnknownEngines}) | ${s.engines} |`,
     `| Yeni varyant (nesil × motor) | ${s.variants} |`,
@@ -193,6 +194,7 @@ function writeCatalog(before: RawCatalog, after: RawCatalog): string[] {
   const prev = (rel: string) => (existsSync(join(dir, rel)) ? readFileSync(join(dir, rel), 'utf8') : undefined);
   if (!same(before.brands, after.brands)) put('brands.json', formatRecordList(after.brands, prev('brands.json')));
   if (!same(before.sources, after.sources)) put('sources.json', formatJson(after.sources));
+  if (!same(before.markets, after.markets)) put('markets.json', formatJson(after.markets));
   for (const [f, list] of after.engines) if (!same(before.engines.get(f), list)) put(`engines/${f}`, formatRecordList(list, prev(`engines/${f}`)));
   for (const [f, m] of after.models) if (!same(before.models.get(f), m)) put(f, formatJson(m));
   for (const f of before.models.keys()) {
@@ -216,7 +218,25 @@ const parsed = files.map((f) => {
 const rows = mergeRows(parsed);
 const raw = loadRawCatalog(DEFAULT_DIRS.catalogDir);
 const names = files.map((f) => f.split(/[\\/]/).pop()!.replace(/R\d*\.xlsx$/, '')).map((n) => `${n.slice(0, 4)}-${n.slice(4, 6)}`);
-const result = buildFromTsb(raw, rows, {
+
+// Wikipedia nesilleri (data/staging/wikipedia/generations.json): çelişkisiz ve kimliği açıkça eşleşen
+// modellerin nesilleri eklenir; önceki Wikipedia nesilleri her çalıştırmada temizlenip yeniden kurulur.
+// `--without-generations` bütün Wikipedia nesillerini geri alır.
+const genFile = join(DEFAULT_DIRS.stagingDir, 'wikipedia', 'generations.json');
+const genStaged: ModelGenerations[] = !values['without-generations'] && existsSync(genFile) ? (JSON.parse(readFileSync(genFile, 'utf8')) as { models: ModelGenerations[] }).models : [];
+const brandName = new Map(raw.brands.map((b) => [String(b.id), String(b.name)]));
+const excluded: { model: string; reason: string }[] = [];
+const accepted = genStaged.filter((mg) => {
+  const m = raw.models.get(mg.modelFile);
+  if (!m || mg.status === 'skipped-curated' || mg.status === 'not-found' || mg.status === 'no-generations') return false;
+  const why = importBlocker(mg, brandName.get(String(m.brandId)) ?? '', String(m.name));
+  if (why) excluded.push({ model: mg.modelFile.replace(/^models\/|\.json$/g, ''), reason: why });
+  return !why;
+});
+const withGens = applyGenerations(stripTsb(raw), accepted, today());
+console.log(`Wikipedia nesilleri: ${withGens.added} nesil, ${withGens.models} model eklendi · çelişki/kimlik nedeniyle dışarıda ${excluded.length} model`);
+
+const result = buildFromTsb(withGens.catalog, rows, {
   today: today(),
   sourceTitle: `TSB Kasko Değer Listesi (${names.join(', ')})`,
   sourceNotes:
@@ -226,9 +246,25 @@ const errors = validateMerged(result.merged);
 
 const stagingDir = join(DEFAULT_DIRS.stagingDir, 'tsb');
 mkdirSync(stagingDir, { recursive: true });
-writeFileSync(join(stagingDir, 'RAPOR.md'), report(result, files, errors), 'utf8');
+const genSection = [
+  '## Wikipedia nesilleri',
+  '',
+  '| | Sayı |',
+  '|---|---|',
+  `| Eklenen nesil | ${withGens.added} |`,
+  `| Nesil eklenen model | ${withGens.models} |`,
+  `| Çelişki veya belirsiz model kimliği nedeniyle dışarıda bırakılan model (\`data/staging/wikipedia/DISARIDA.md\`) | ${excluded.length} |`,
+  `| Tip adındaki kasa koduyla eşlenen varyant | ${result.stats.matchedByCode} |`,
+  `| Kaynaktaki motor hacmiyle desteklenerek eşlenen varyant | ${result.stats.matchedByEngine} |`,
+  '',
+  'Not: Aynı motor birden çok nesilde satıldıysa her nesil için ayrı varyant oluşur (bir TSB satırı yalnızca bir',
+  'varyanta girer). Nesil eklendikçe toplam varyant sayısının artması bu yüzdendir.',
+  '',
+];
+writeFileSync(join(stagingDir, 'RAPOR.md'), `${report(result, files, errors)}\n${genSection.join('\n')}`, 'utf8');
 writeFileSync(join(stagingDir, 'belirsiz.json'), formatRecordList(result.rejects), 'utf8');
 writeFileSync(join(stagingDir, 'EKSIKLER.md'), gapsReport(result.merged), 'utf8');
+writeFileSync(join(DEFAULT_DIRS.stagingDir, 'wikipedia', 'DISARIDA.md'), ['# Wikipedia nesilleri: dışarıda bırakılan modeller', '', 'Bu modellerin nesilleri kataloğa otomatik aktarılmadı (kaynakta çelişki veya model kimliği açık değil).', '', ...excluded.map((x) => `- **${x.model}**: ${x.reason}`), ''].join('\n'), 'utf8');
 
 const s = result.stats;
 console.log(`Marka ${s.brands} · yeni model ${s.models} · yeni nesil ${s.generations} · yeni motor ${s.engines} · yeni varyant ${s.variants} · belirsiz ${result.rejects.length}`);

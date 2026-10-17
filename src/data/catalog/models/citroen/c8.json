@@ -12,16 +12,17 @@
     {
       "id": "citroen-c8-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "C8 (nesil belirlenmedi)",
+      "name": "C8 — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2012 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "citroen-c8-nesil-belirlenmedi-20-hdi", "slug": "20-hdi", "engineId": "citroen-20-hdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012], "trims": ["Exclusive Bva"], "bodyTypes": [], "sourceRefs": ["TSB 34-1107"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "citroen-c8-nesil-belirlenmedi-20-hdi", "slug": "20-hdi", "engineId": "citroen-20-hdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012], "trims": ["Exclusive Bva"], "bodyTypes": [], "sourceRefs": ["TSB 34-1107"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

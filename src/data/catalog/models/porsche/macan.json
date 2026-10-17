@@ -10,26 +10,55 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "porsche-macan-1-nesil",
+      "slug": "1-nesil",
+      "name": "Macan 1. nesil",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2014 }, "end": { "year": 2026 } },
+      "engineDisplacementsL": [2, 2.9, 3, 3.6],
+      "status": "sourced",
+      "sourceIds": ["wpgen-28972217"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Porsche Macan\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "porsche-macan-1-nesil-dizel", "slug": "dizel", "engineId": "porsche-dizel", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016, 2017, 2018], "trims": ["S"], "bodyTypes": [], "sourceRefs": ["TSB 118-1017"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "porsche-macan-1-nesil-20", "slug": "20", "engineId": "porsche-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018, 2019, 2020, 2021], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 118-1024"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "porsche-macan-1-nesil-20-252", "slug": "20-252", "engineId": "porsche-20-252", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 118-1132"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
+      "id": "porsche-macan-2-nesil",
+      "slug": "2-nesil",
+      "name": "Macan 2. nesil",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2024 }, "end": null },
+      "status": "sourced",
+      "sourceIds": ["wpgen-28972217"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Porsche Macan\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
       "id": "porsche-macan-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Macan (nesil belirlenmedi)",
+      "name": "Macan — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2026 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2026 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "porsche-macan-nesil-belirlenmedi-dizel", "slug": "dizel", "engineId": "porsche-dizel", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016, 2017, 2018], "trims": ["S"], "bodyTypes": [], "sourceRefs": ["TSB 118-1017"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "porsche-macan-nesil-belirlenmedi-20", "slug": "20", "engineId": "porsche-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018, 2019, 2020, 2021], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 118-1024"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "porsche-macan-nesil-belirlenmedi-20-265", "slug": "20-265", "engineId": "porsche-20-265", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023, 2024, 2025, 2026], "trims": ["T"], "bodyTypes": [], "sourceRefs": ["TSB 118-1100", "TSB 118-1139"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "porsche-macan-nesil-belirlenmedi-20-252", "slug": "20-252", "engineId": "porsche-20-252", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 118-1132"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "porsche-macan-nesil-belirlenmedi-29-380", "slug": "29-380", "engineId": "porsche-29-380", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023], "trims": ["S"], "bodyTypes": [], "sourceRefs": ["TSB 118-1162"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "porsche-macan-nesil-belirlenmedi-29-440", "slug": "29-440", "engineId": "porsche-29-440", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023], "trims": ["Gts"], "bodyTypes": [], "sourceRefs": ["TSB 118-1163"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "porsche-macan-nesil-belirlenmedi-408", "slug": "408", "engineId": "porsche-408", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["4"], "bodyTypes": [], "sourceRefs": ["TSB 118-1198"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "porsche-macan-nesil-belirlenmedi-639", "slug": "639", "engineId": "porsche-639", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["Turbo"], "bodyTypes": [], "sourceRefs": ["TSB 118-1199"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "porsche-macan-nesil-belirlenmedi-571", "slug": "571", "engineId": "porsche-571", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["Gts"], "bodyTypes": [], "sourceRefs": ["TSB 118-1219"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "porsche-macan-nesil-belirlenmedi-20-265", "slug": "20-265", "engineId": "porsche-20-265", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023, 2024, 2025, 2026], "trims": ["T"], "bodyTypes": [], "sourceRefs": ["TSB 118-1100", "TSB 118-1139"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "porsche-macan-nesil-belirlenmedi-29-380", "slug": "29-380", "engineId": "porsche-29-380", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023], "trims": ["S"], "bodyTypes": [], "sourceRefs": ["TSB 118-1162"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "porsche-macan-nesil-belirlenmedi-29-440", "slug": "29-440", "engineId": "porsche-29-440", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023], "trims": ["Gts"], "bodyTypes": [], "sourceRefs": ["TSB 118-1163"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "porsche-macan-nesil-belirlenmedi-408", "slug": "408", "engineId": "porsche-408", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["4"], "bodyTypes": [], "sourceRefs": ["TSB 118-1198"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "porsche-macan-nesil-belirlenmedi-639", "slug": "639", "engineId": "porsche-639", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["Turbo"], "bodyTypes": [], "sourceRefs": ["TSB 118-1199"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "porsche-macan-nesil-belirlenmedi-571", "slug": "571", "engineId": "porsche-571", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["Gts"], "bodyTypes": [], "sourceRefs": ["TSB 118-1219"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

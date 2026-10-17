@@ -10,20 +10,67 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "ford-edge-u387",
+      "slug": "u387",
+      "name": "Edge 1. nesil (U387)",
+      "code": "U387",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2006 }, "end": { "year": 2014 } },
+      "engineDisplacementsL": [2, 3.5, 3.7],
+      "status": "sourced",
+      "sourceIds": ["wpgen-3014744"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Ford Edge\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "ford-edge-cd539",
+      "slug": "cd539",
+      "name": "Edge 2. nesil (CD539)",
+      "code": "CD539",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2014 }, "end": { "year": 2024 } },
+      "engineDisplacementsL": [2],
+      "status": "sourced",
+      "sourceIds": ["wpgen-3014744"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Ford Edge\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "ford-edge-cd539-20-tdci-210", "slug": "20-tdci-210", "engineId": "ford-20-tdci-210", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "PowerShift" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017], "trims": ["Titanium"], "bodyTypes": [], "sourceRefs": ["TSB 53-2189"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "ford-edge-cd539-20-tdci-238", "slug": "20-tdci-238", "engineId": "ford-20-tdci-238", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2019], "trims": ["Mca Titanium"], "bodyTypes": [], "sourceRefs": ["TSB 53-2281"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
+      "id": "ford-edge-cdx706",
+      "slug": "cdx706",
+      "name": "Edge 3. nesil (CDX706)",
+      "code": "CDX706",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2023 }, "end": null },
+      "engineDisplacementsL": [2],
+      "status": "sourced",
+      "sourceIds": ["wpgen-3014744"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Ford Edge\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
       "id": "ford-edge-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Edge (nesil belirlenmedi)",
+      "name": "Edge — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2024 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2024 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "ford-edge-nesil-belirlenmedi-20-tdci-210", "slug": "20-tdci-210", "engineId": "ford-20-tdci-210", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "PowerShift" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017], "trims": ["Titanium"], "bodyTypes": [], "sourceRefs": ["TSB 53-2189"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "ford-edge-nesil-belirlenmedi-20-tdci-238", "slug": "20-tdci-238", "engineId": "ford-20-tdci-238", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2019], "trims": ["Mca Titanium"], "bodyTypes": [], "sourceRefs": ["TSB 53-2281"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "ford-edge-nesil-belirlenmedi-20-ecoboost", "slug": "20-ecoboost", "engineId": "ford-20-ecoboost", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "imported", "modelYears": [2024], "trims": ["Select", "Titanium"], "bodyTypes": [], "sourceRefs": ["TSB 175-1058", "TSB 175-1059"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "ford-edge-nesil-belirlenmedi-20-ecoboost", "slug": "20-ecoboost", "engineId": "ford-20-ecoboost", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "imported", "modelYears": [2024], "trims": ["Select", "Titanium"], "bodyTypes": [], "sourceRefs": ["TSB 175-1058", "TSB 175-1059"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

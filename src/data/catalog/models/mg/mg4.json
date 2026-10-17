@@ -12,18 +12,19 @@
     {
       "id": "mg-mg4-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "MG4 (nesil belirlenmedi)",
+      "name": "MG4 — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2023 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "mg-mg4-nesil-belirlenmedi-electric-125kw", "slug": "electric-125kw", "engineId": "mg-electric-125kw", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2023], "trims": ["Comfort"], "bodyTypes": [], "sourceRefs": ["TSB 588-1011"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "mg-mg4-nesil-belirlenmedi-electric-150kw", "slug": "electric-150kw", "engineId": "mg-electric-150kw", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2023], "trims": ["Luxury"], "bodyTypes": [], "sourceRefs": ["TSB 588-1012"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "mg-mg4-nesil-belirlenmedi-electric-320kw", "slug": "electric-320kw", "engineId": "mg-electric-320kw", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023], "trims": ["Xpower"], "bodyTypes": [], "sourceRefs": ["TSB 588-1018"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "mg-mg4-nesil-belirlenmedi-electric-125kw", "slug": "electric-125kw", "engineId": "mg-electric-125kw", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2023], "trims": ["Comfort"], "bodyTypes": [], "sourceRefs": ["TSB 588-1011"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "mg-mg4-nesil-belirlenmedi-electric-150kw", "slug": "electric-150kw", "engineId": "mg-electric-150kw", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2023], "trims": ["Luxury"], "bodyTypes": [], "sourceRefs": ["TSB 588-1012"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "mg-mg4-nesil-belirlenmedi-electric-320kw", "slug": "electric-320kw", "engineId": "mg-electric-320kw", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023], "trims": ["Xpower"], "bodyTypes": [], "sourceRefs": ["TSB 588-1018"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

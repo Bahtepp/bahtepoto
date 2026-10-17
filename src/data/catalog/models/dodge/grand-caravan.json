@@ -12,17 +12,18 @@
     {
       "id": "dodge-grand-caravan-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Grand Caravan (nesil belirlenmedi)",
+      "name": "Grand Caravan — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2014 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "dodge-grand-caravan-nesil-belirlenmedi-36", "slug": "36", "engineId": "dodge-36", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "imported", "modelYears": [2014], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 45-1012"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "dodge-grand-caravan-nesil-belirlenmedi-3300", "slug": "3300", "engineId": "dodge-3300", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "imported", "modelYears": [2010], "trims": ["SE"], "bodyTypes": [], "sourceRefs": ["TSB 45-1023"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "dodge-grand-caravan-nesil-belirlenmedi-36", "slug": "36", "engineId": "dodge-36", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "imported", "modelYears": [2014], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 45-1012"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "dodge-grand-caravan-nesil-belirlenmedi-3300", "slug": "3300", "engineId": "dodge-3300", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "imported", "modelYears": [2010], "trims": ["SE"], "bodyTypes": [], "sourceRefs": ["TSB 45-1023"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

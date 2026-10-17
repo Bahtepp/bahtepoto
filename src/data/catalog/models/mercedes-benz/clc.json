@@ -12,18 +12,19 @@
     {
       "id": "mercedes-benz-clc-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Clc (nesil belirlenmedi)",
+      "name": "Clc — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2011 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "mercedes-benz-clc-nesil-belirlenmedi-180", "slug": "180", "engineId": "mercedes-benz-180", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2010, 2011], "trims": ["K"], "bodyTypes": [], "sourceRefs": ["TSB 90-848"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "mercedes-benz-clc-nesil-belirlenmedi-200", "slug": "200", "engineId": "mercedes-benz-200", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2010, 2011], "trims": ["K"], "bodyTypes": [], "sourceRefs": ["TSB 90-849"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "mercedes-benz-clc-nesil-belirlenmedi-160", "slug": "160", "engineId": "mercedes-benz-160", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2010, 2011], "trims": ["Emotion", "Emotion Plus", "Grand Prix", "Prime", "Sport"], "bodyTypes": [], "sourceRefs": ["TSB 90-871", "TSB 90-872", "TSB 90-873", "TSB 90-902", "TSB 90-903"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "mercedes-benz-clc-nesil-belirlenmedi-180", "slug": "180", "engineId": "mercedes-benz-180", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2010, 2011], "trims": ["K"], "bodyTypes": [], "sourceRefs": ["TSB 90-848"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "mercedes-benz-clc-nesil-belirlenmedi-200", "slug": "200", "engineId": "mercedes-benz-200", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2010, 2011], "trims": ["K"], "bodyTypes": [], "sourceRefs": ["TSB 90-849"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "mercedes-benz-clc-nesil-belirlenmedi-160", "slug": "160", "engineId": "mercedes-benz-160", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2010, 2011], "trims": ["Emotion", "Emotion Plus", "Grand Prix", "Prime", "Sport"], "bodyTypes": [], "sourceRefs": ["TSB 90-871", "TSB 90-872", "TSB 90-873", "TSB 90-902", "TSB 90-903"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

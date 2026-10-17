@@ -12,16 +12,17 @@
     {
       "id": "bmw-m550d-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "M550D (nesil belirlenmedi)",
+      "name": "M550D — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2018 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "bmw-m550d-nesil-belirlenmedi-30-400", "slug": "30-400", "engineId": "bmw-30-400", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018], "trims": ["M Sport", "Pure", "Xdrivesedan M Sport"], "bodyTypes": ["4 kapı sedan", "Station wagon"], "sourceRefs": ["TSB 21-1625", "TSB 21-1626", "TSB 21-1683", "TSB 21-1684"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "bmw-m550d-nesil-belirlenmedi-30-400", "slug": "30-400", "engineId": "bmw-30-400", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018], "trims": ["M Sport", "Pure", "Xdrivesedan M Sport"], "bodyTypes": ["4 kapı sedan", "Station wagon"], "sourceRefs": ["TSB 21-1625", "TSB 21-1626", "TSB 21-1683", "TSB 21-1684"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

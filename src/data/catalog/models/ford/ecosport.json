@@ -10,20 +10,36 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "ford-ecosport-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Ecosport (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2022 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "ford-ecosport-bv226",
+      "slug": "bv226",
+      "name": "Ecosport 1. nesil (BV226)",
+      "code": "BV226",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2003 }, "end": { "year": 2012 } },
+      "engineDisplacementsL": [1, 1.4, 1.6, 2],
+      "status": "sourced",
+      "sourceIds": ["wpgen-963474"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Ford EcoSport\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "ford-ecosport-b515",
+      "slug": "b515",
+      "name": "Ecosport 2. nesil (B515)",
+      "code": "B515",
+      "order": 2,
+      "labelPeriod": { "marketId": "eu", "basis": "production", "start": { "year": 2017 }, "end": { "year": 2022 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-963474"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Ford EcoSport\" bilgi kutusundan (Romania). Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "ford-ecosport-nesil-belirlenmedi-ecoboost-10-125ps-c519", "slug": "ecoboost-10-125ps-c519", "engineId": "ford-ecoboost-10-125ps-c519", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2019, 2020, 2021, 2022], "trims": ["ST-LINE", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 53-2228", "TSB 53-2283"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "ford-ecosport-nesil-belirlenmedi-15-tdci-100", "slug": "15-tdci-100", "engineId": "ford-15-tdci-100", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2019], "trims": ["ST-LINE"], "bodyTypes": [], "sourceRefs": ["TSB 53-2229"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "ford-ecosport-nesil-belirlenmedi-15-tdci", "slug": "15-tdci", "engineId": "ford-15-tdci", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017], "trims": ["Titanium"], "bodyTypes": [], "sourceRefs": ["TSB 53-2341"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "ford-ecosport-b515-ecoboost-10-125ps-c519", "slug": "ecoboost-10-125ps-c519", "engineId": "ford-ecoboost-10-125ps-c519", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2019, 2020, 2021, 2022], "trims": ["ST-LINE", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 53-2228", "TSB 53-2283"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "ford-ecosport-b515-15-tdci-100", "slug": "15-tdci-100", "engineId": "ford-15-tdci-100", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2019], "trims": ["ST-LINE"], "bodyTypes": [], "sourceRefs": ["TSB 53-2229"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "ford-ecosport-b515-15-tdci", "slug": "15-tdci", "engineId": "ford-15-tdci", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017], "trims": ["Titanium"], "bodyTypes": [], "sourceRefs": ["TSB 53-2341"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

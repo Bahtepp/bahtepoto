@@ -10,22 +10,51 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "porsche-boxster-2-nesil",
+      "slug": "2-nesil",
+      "name": "Boxster 2. nesil",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2004 }, "end": { "year": 2012 }, "approximate": true },
+      "engineDisplacementsL": [2.7, 2.9, 3.2, 3.4],
+      "status": "sourced",
+      "sourceIds": ["wpgen-969009"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Porsche Boxster and Cayman (987)\" bilgi kutusundan (farklı pazarlar: Boxster; Cayman); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "porsche-boxster-3-nesil",
+      "slug": "3-nesil",
+      "name": "Boxster 3. nesil",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2012 }, "end": { "year": 2016 } },
+      "engineDisplacementsL": [2.7, 3.4, 3.8],
+      "status": "sourced",
+      "sourceIds": ["wpgen-38908804"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Porsche Boxster and Cayman (981)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
       "id": "porsche-boxster-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Boxster (nesil belirlenmedi)",
+      "name": "Boxster — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2024 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "porsche-boxster-nesil-belirlenmedi-20-300", "slug": "20-300", "engineId": "porsche-20-300", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024], "trims": ["Style Edition"], "bodyTypes": [], "sourceRefs": ["TSB 118-1034", "TSB 118-1141", "TSB 118-1167"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "porsche-boxster-nesil-belirlenmedi-25-350", "slug": "25-350", "engineId": "porsche-25-350", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019, 2020], "trims": ["S"], "bodyTypes": [], "sourceRefs": ["TSB 118-1035"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "porsche-boxster-nesil-belirlenmedi-25", "slug": "25", "engineId": "porsche-25", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018, 2019], "trims": ["Gts"], "bodyTypes": [], "sourceRefs": ["TSB 118-1057"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "porsche-boxster-nesil-belirlenmedi-40-400", "slug": "40-400", "engineId": "porsche-40-400", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020], "trims": ["Gts"], "bodyTypes": [], "sourceRefs": ["TSB 118-1074"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "porsche-boxster-nesil-belirlenmedi-40", "slug": "40", "engineId": "porsche-40", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023, 2024], "trims": ["Gts"], "bodyTypes": [], "sourceRefs": ["TSB 118-1174"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "porsche-boxster-nesil-belirlenmedi-20-300", "slug": "20-300", "engineId": "porsche-20-300", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024], "trims": ["Style Edition"], "bodyTypes": [], "sourceRefs": ["TSB 118-1034", "TSB 118-1141", "TSB 118-1167"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "porsche-boxster-nesil-belirlenmedi-25-350", "slug": "25-350", "engineId": "porsche-25-350", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019, 2020], "trims": ["S"], "bodyTypes": [], "sourceRefs": ["TSB 118-1035"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "porsche-boxster-nesil-belirlenmedi-25", "slug": "25", "engineId": "porsche-25", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018, 2019], "trims": ["Gts"], "bodyTypes": [], "sourceRefs": ["TSB 118-1057"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "porsche-boxster-nesil-belirlenmedi-40-400", "slug": "40-400", "engineId": "porsche-40-400", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020], "trims": ["Gts"], "bodyTypes": [], "sourceRefs": ["TSB 118-1074"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "porsche-boxster-nesil-belirlenmedi-40", "slug": "40", "engineId": "porsche-40", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023, 2024], "trims": ["Gts"], "bodyTypes": [], "sourceRefs": ["TSB 118-1174"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

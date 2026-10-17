@@ -62,7 +62,9 @@ export function formatYearRange(period: Pick<Period, 'start' | 'end'> & { approx
 }
 
 /** "Focus Mk2 (2004–2010)". Nesil adı hiçbir zaman yılsız üretilmez. */
-export function generationLabel(gen: { name: string; labelPeriod: Pick<Period, 'start' | 'end'> & { approximate?: boolean } }): string {
+export function generationLabel(gen: { name: string; kind?: 'generation' | 'unassigned'; labelPeriod: Pick<Period, 'start' | 'end'> & { approximate?: boolean } }): string {
+  // Nesli belirlenmemiş araçlar grubu gerçek bir kasa değildir: yıl aralığıyla nesil gibi gösterilmez.
+  if (gen.kind === 'unassigned') return gen.name;
   return `${gen.name} (${formatYearRange(gen.labelPeriod)})`;
 }
 

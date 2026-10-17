@@ -12,18 +12,19 @@
     {
       "id": "renault-grand-modus-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Grand Modus (nesil belirlenmedi)",
+      "name": "Grand Modus — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "renault-grand-modus-nesil-belirlenmedi-14", "slug": "14", "engineId": "renault-14", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Authentique", "Dynamique"], "bodyTypes": [], "sourceRefs": ["TSB 123-655", "TSB 123-656"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "renault-grand-modus-nesil-belirlenmedi-15-dci-85", "slug": "15-dci-85", "engineId": "renault-15-dci-85", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Authentique", "Dynamique", "Dynamique Bvr"], "bodyTypes": [], "sourceRefs": ["TSB 123-657", "TSB 123-658", "TSB 123-659"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "renault-grand-modus-nesil-belirlenmedi-16", "slug": "16", "engineId": "renault-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010], "trims": ["Authentique", "Dynamique"], "bodyTypes": [], "sourceRefs": ["TSB 123-660", "TSB 123-673"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "renault-grand-modus-nesil-belirlenmedi-14", "slug": "14", "engineId": "renault-14", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Authentique", "Dynamique"], "bodyTypes": [], "sourceRefs": ["TSB 123-655", "TSB 123-656"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "renault-grand-modus-nesil-belirlenmedi-15-dci-85", "slug": "15-dci-85", "engineId": "renault-15-dci-85", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Authentique", "Dynamique", "Dynamique Bvr"], "bodyTypes": [], "sourceRefs": ["TSB 123-657", "TSB 123-658", "TSB 123-659"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "renault-grand-modus-nesil-belirlenmedi-16", "slug": "16", "engineId": "renault-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010], "trims": ["Authentique", "Dynamique"], "bodyTypes": [], "sourceRefs": ["TSB 123-660", "TSB 123-673"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

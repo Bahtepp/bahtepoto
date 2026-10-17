@@ -12,18 +12,19 @@
     {
       "id": "bmw-alpina-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Alpina (nesil belirlenmedi)",
+      "name": "Alpina — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2025 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "bmw-alpina-nesil-belirlenmedi-30-462", "slug": "30-462", "engineId": "bmw-30-462", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021], "trims": ["B3"], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 21-1896"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "bmw-alpina-nesil-belirlenmedi-44", "slug": "44", "engineId": "bmw-44", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024], "trims": ["B8 Gran SWITCH-TRONIC"], "bodyTypes": ["Coupé"], "sourceRefs": ["TSB 21-2011"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "bmw-alpina-nesil-belirlenmedi-30-389", "slug": "30-389", "engineId": "bmw-30-389", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025], "trims": ["B3 GT Saloon Switch", "B3 GT Switch"], "bodyTypes": ["4 kapı sedan", "Station wagon"], "sourceRefs": ["TSB 21-2053", "TSB 21-2054"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "bmw-alpina-nesil-belirlenmedi-30-462", "slug": "30-462", "engineId": "bmw-30-462", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021], "trims": ["B3"], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 21-1896"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "bmw-alpina-nesil-belirlenmedi-44", "slug": "44", "engineId": "bmw-44", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024], "trims": ["B8 Gran SWITCH-TRONIC"], "bodyTypes": ["Coupé"], "sourceRefs": ["TSB 21-2011"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "bmw-alpina-nesil-belirlenmedi-30-389", "slug": "30-389", "engineId": "bmw-30-389", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025], "trims": ["B3 GT Saloon Switch", "B3 GT Switch"], "bodyTypes": ["4 kapı sedan", "Station wagon"], "sourceRefs": ["TSB 21-2053", "TSB 21-2054"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

@@ -12,16 +12,17 @@
     {
       "id": "forthing-m4-u-tour-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "M4 U-TOUR (nesil belirlenmedi)",
+      "name": "M4 U-TOUR — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2025 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "forthing-m4-u-tour-nesil-belirlenmedi-15-130kw", "slug": "15-130kw", "engineId": "forthing-15-130kw", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025], "trims": ["Executive", "Premium"], "bodyTypes": [], "sourceRefs": ["TSB 760-1004", "TSB 760-1005", "TSB 760-1006"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "forthing-m4-u-tour-nesil-belirlenmedi-15-130kw", "slug": "15-130kw", "engineId": "forthing-15-130kw", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025], "trims": ["Executive", "Premium"], "bodyTypes": [], "sourceRefs": ["TSB 760-1004", "TSB 760-1005", "TSB 760-1006"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

@@ -12,16 +12,17 @@
     {
       "id": "byd-byd-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Byd (nesil belirlenmedi)",
+      "name": "Byd — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2025 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "byd-byd-nesil-belirlenmedi-15-plug-in-hybrid", "slug": "15-plug-in-hybrid", "engineId": "byd-15-plug-in-hybrid", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025], "trims": ["Tang"], "bodyTypes": [], "sourceRefs": ["TSB 741-1017"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "byd-byd-nesil-belirlenmedi-15-plug-in-hybrid", "slug": "15-plug-in-hybrid", "engineId": "byd-15-plug-in-hybrid", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025], "trims": ["Tang"], "bodyTypes": [], "sourceRefs": ["TSB 741-1017"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

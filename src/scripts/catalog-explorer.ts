@@ -51,6 +51,8 @@ interface Selection {
   model?: string;
   gen?: string;
   rev?: string;
+  /** Nesli belirlenmemiş araçlarda seçilen model yılı. */
+  year?: number;
 }
 
 // ---------------------------------------------------------------------------
@@ -158,6 +160,7 @@ export function initCatalogExplorer(root: HTMLElement) {
       model: q.get('model') ?? undefined,
       gen: q.get('nesil') ?? undefined,
       rev: q.get('donem') ?? undefined,
+      year: Number(q.get('yil')) || undefined,
     };
   };
 
@@ -167,6 +170,7 @@ export function initCatalogExplorer(root: HTMLElement) {
     if (sel.model) q.set('model', sel.model);
     if (sel.gen) q.set('nesil', sel.gen);
     if (sel.rev) q.set('donem', sel.rev);
+    if (sel.year) q.set('yil', String(sel.year));
     if (market !== DEFAULT_MARKET_VIEW) q.set('pazar', market);
     const url = `${location.pathname}${q.size ? `?${q}` : ''}`;
     if (url === `${location.pathname}${location.search}`) return;
@@ -301,8 +305,10 @@ export function initCatalogExplorer(root: HTMLElement) {
         if (m.generations.length === 0) {
           sub.append(h('li', { class: 'tree-empty' }, pending(), ' Nesil bilgisi henüz girilmedi.'));
         }
-        for (const g of gens) {
+        const ordered = [...gens].sort((x, y) => Number(x.kind === 'unassigned') - Number(y.kind === 'unassigned'));
+        for (const g of ordered) {
           const active = sel.model === m.slug && sel.gen === g.slug;
+          const unassigned = g.kind === 'unassigned';
           sub.append(
             h(
               'li',
@@ -311,7 +317,7 @@ export function initCatalogExplorer(root: HTMLElement) {
                 'button',
                 {
                   type: 'button',
-                  class: 'list-item gen-item',
+                  class: unassigned ? 'list-item gen-item gen-unassigned' : 'list-item gen-item',
                   'aria-pressed': String(active),
                   onclick: () => selectGeneration(m.slug, g.slug),
                 },
@@ -319,12 +325,18 @@ export function initCatalogExplorer(root: HTMLElement) {
                 h(
                   'span',
                   { class: 'list-item-meta' },
-                  [
-                    g.code,
+                  (unassigned
+                    ? [
+                        g.modelYears.length ? `Türkiye listesinde model yılı ${formatModelYears(g.modelYears)}` : null,
+                        'kasa bilgisi yok; model yılı ve motorla seçin',
+                      ]
+                    : [
+                    g.code ? `Kasa: ${g.code}` : null,
                     `${marketName(g.labelPeriod.marketId)}, ${BASIS_LABELS[g.labelPeriod.basis]} yılları`,
                     market === 'world' ? null : `${MARKET_VIEWS.find((m) => m.id === market)!.label}: ${g.marketCounts?.[market] ?? 0} motor`,
                     g.revisions.length > 0 ? `${g.revisions.length} makyaj dönemi` : null,
-                  ]
+                  ])
+                    .concat(unassigned && market !== 'world' ? [`${MARKET_VIEWS.find((x) => x.id === market)!.label}: ${g.marketCounts?.[market] ?? 0} motor`] : [])
                     .filter(Boolean)
                     .join(' · '),
                 ),
@@ -473,7 +485,8 @@ export function initCatalogExplorer(root: HTMLElement) {
 
     // Pazar filtresi: Türkiye'de ana liste yalnızca Türkiye kaydı olanlar; ithaller ve diğer pazarlar ayrı.
     const markets = Object.values(modelData!.markets).concat(brandData?.markets ?? []);
-    const inMarket = everything.filter((v) => marketGroup(v, market, markets) === 'primary');
+    const byYear = (v: Variant) => !sel.year || (availabilityFor(v, 'tr')?.modelYears ?? []).includes(sel.year);
+    const inMarket = everything.filter((v) => marketGroup(v, market, markets) === 'primary' && byYear(v));
     const imported = everything.filter((v) => marketGroup(v, market, markets) === 'imported');
     const hiddenCount = everything.length - inMarket.length - imported.length;
     const performance = inMarket.filter(isPerformance);
@@ -532,7 +545,7 @@ export function initCatalogExplorer(root: HTMLElement) {
       again.setSelectionRange(again.value.length, again.value.length);
     });
 
-    const heading = rev ? `${rev.name} döneme ait motorlar` : 'Motorlar';
+    const heading = rev ? `${rev.name} döneme ait motorlar` : sel.year ? `${sel.year} model yılı motorları` : 'Motorlar';
     const issuesHint = h(
       'p',
       { class: 'engines-hint' },
@@ -659,8 +672,12 @@ export function initCatalogExplorer(root: HTMLElement) {
     const facts = h(
       'dl',
       { class: 'facts' },
-      h('div', {}, h('dt', {}, 'Kasa / platform kodu'), h('dd', {}, gen.code ?? pending())),
-      h('div', {}, h('dt', {}, 'Etiketteki yıllar'), h('dd', {}, periodText(gen.labelPeriod, marketName))),
+      gen.kind === 'unassigned'
+        ? h('div', {}, h('dt', {}, 'Kasa / nesil'), h('dd', {}, 'Kaynaklarda belirlenmedi; aşağıdan model yılı ve motor seçin.'))
+        : h('div', {}, h('dt', {}, 'Kasa / platform kodu'), h('dd', {}, gen.code ?? pending())),
+      gen.kind === 'unassigned'
+        ? h('div', {}, h('dt', {}, 'Türkiye listesindeki model yılları'), h('dd', {}, gen.modelYears.length ? formatModelYears(gen.modelYears) : pending()))
+        : h('div', {}, h('dt', {}, 'Etiketteki yıllar'), h('dd', {}, periodText(gen.labelPeriod, marketName))),
       gen.periods.length
         ? h('div', {}, h('dt', {}, 'Diğer dönemler'), h('dd', {}, gen.periods.map((p) => periodText(p, marketName)).join('; ')))
         : null,
@@ -708,10 +725,28 @@ export function initCatalogExplorer(root: HTMLElement) {
       );
     }
 
+    // Nesli belirlenmemiş araçlar: model yılı seçimi (Marka → Model → Model yılı → Motor)
+    let yearPicker: HTMLElement | null = null;
+    if (gen.kind === 'unassigned' && gen.modelYears.length > 0) {
+      yearPicker = h(
+        'fieldset',
+        { class: 'revisions chips year-picker' },
+        h('legend', {}, 'Model yılı'),
+        ...gen.modelYears.map((y) =>
+          h(
+            'label',
+            { class: 'chip' },
+            h('input', { type: 'radio', name: `yil-${gen.id}`, value: String(y), checked: sel.year === y, onchange: () => selectYear(y) }),
+            h('span', {}, String(y)),
+          ),
+        ),
+      );
+    }
+
     const engines = h('section', { class: 'engines', 'aria-label': 'Motor seçenekleri' });
     const sourcesBox = h('section', { class: 'sources', 'aria-label': 'Kaynaklar' });
 
-    detail.replaceChildren(head, genNote ?? '', revisionPicker ?? '', engines, sourcesBox);
+    detail.replaceChildren(head, genNote ?? '', revisionPicker ?? '', yearPicker ?? '', engines, sourcesBox);
 
     if (gen.revisions.length > 0 && !rev) {
       engines.replaceChildren(h('p', { class: 'callout' }, 'Motor seçeneklerini görmek için bir makyaj dönemi seçin.'));
@@ -830,6 +865,12 @@ export function initCatalogExplorer(root: HTMLElement) {
       if (!narrow.matches) detail.querySelector<HTMLElement>('.detail-title')?.focus();
     });
     setStep('detail', true);
+  }
+
+  function selectYear(year: number) {
+    sel = { ...sel, year };
+    writeUrl(false);
+    void renderDetail().then(() => detail.querySelector<HTMLInputElement>(`.year-picker input[value="${year}"]`)?.focus());
   }
 
   function selectRevision(revSlug: string) {

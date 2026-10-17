@@ -10,18 +10,88 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "honda-prelude-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Prelude (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "honda-prelude-1-nesil",
+      "slug": "1-nesil",
+      "name": "Prelude 1. nesil",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1978 }, "end": { "year": 1982 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-432888"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Honda Prelude\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "honda-prelude-ba1",
+      "slug": "ba1",
+      "name": "Prelude 2. nesil (BA1)",
+      "code": "BA1",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1982 }, "end": { "year": 1987 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-432888"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Honda Prelude\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "honda-prelude-ba3",
+      "slug": "ba3",
+      "name": "Prelude 3. nesil (BA3)",
+      "code": "BA3",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1987 }, "end": { "year": 1991 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-432888"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Honda Prelude\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "honda-prelude-ba8-bb1",
+      "slug": "ba8-bb1",
+      "name": "Prelude 4. nesil (BA8/BB1)",
+      "code": "BA8/BB1",
+      "order": 4,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1991 }, "end": { "year": 1996 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-432888"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Honda Prelude\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "honda-prelude-bb5",
+      "slug": "bb5",
+      "name": "Prelude 5. nesil (BB5)",
+      "code": "BB5",
+      "order": 5,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1996 }, "end": { "year": 2001 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-432888"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Honda Prelude\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "honda-prelude-bf1",
+      "slug": "bf1",
+      "name": "Prelude 6. nesil (BF1)",
+      "code": "BF1",
+      "order": 6,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2025 }, "end": null },
+      "status": "sourced",
+      "sourceIds": ["wpgen-432888"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Honda Prelude\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "honda-prelude-nesil-belirlenmedi-20", "slug": "20", "engineId": "honda-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["Advance"], "bodyTypes": [], "sourceRefs": ["TSB 61-1247"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "honda-prelude-bf1-20", "slug": "20", "engineId": "honda-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["Advance"], "bodyTypes": [], "sourceRefs": ["TSB 61-1247"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

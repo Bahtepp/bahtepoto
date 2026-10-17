@@ -10,25 +10,72 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "renault-laguna-x56",
+      "slug": "x56",
+      "name": "Laguna 1. nesil (X56)",
+      "code": "X56",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1994 }, "end": { "year": 2000 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-662176"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Renault Laguna\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "renault-laguna-x74",
+      "slug": "x74",
+      "name": "Laguna 2. nesil (X74)",
+      "code": "X74",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2000 }, "end": { "year": 2007 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-662176"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Renault Laguna\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "renault-laguna-x91",
+      "slug": "x91",
+      "name": "Laguna 3. nesil (X91)",
+      "code": "X91",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2005 }, "end": { "year": 2015 }, "approximate": true },
+      "status": "sourced",
+      "sourceIds": ["wpgen-662176"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Renault Laguna\" bilgi kutusundan (farklı pazarlar: LHD; RHD; except Australia); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "renault-laguna-x91-20-dci-150", "slug": "20-dci-150", "engineId": "renault-20-dci-150", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2010, 2011, 2012], "trims": ["Dynamique GT", "Executive", "Privilege", "Sport Emotion"], "bodyTypes": [], "sourceRefs": ["TSB 123-687", "TSB 123-690", "TSB 123-692", "TSB 123-738"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "renault-laguna-x91-20-170", "slug": "20-170", "engineId": "renault-20-170", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2010, 2011, 2012], "trims": ["Sport Emotion"], "bodyTypes": [], "sourceRefs": ["TSB 123-688"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "renault-laguna-x91-15-dci-110", "slug": "15-dci-110", "engineId": "renault-15-dci-110", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012], "trims": ["Dynamique GT", "Executive"], "bodyTypes": [], "sourceRefs": ["TSB 123-689", "TSB 123-691"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
       "id": "renault-laguna-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Laguna (nesil belirlenmedi)",
+      "name": "Laguna — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "renault-laguna-nesil-belirlenmedi-16", "slug": "16", "engineId": "renault-16", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Expression", "Expression Plus", "Privilege"], "bodyTypes": [], "sourceRefs": ["TSB 123-235", "TSB 123-236", "TSB 123-557"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "renault-laguna-nesil-belirlenmedi-20", "slug": "20", "engineId": "renault-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009], "trims": ["Dynamique", "Privilege"], "bodyTypes": [], "sourceRefs": ["TSB 123-237", "TSB 123-238", "TSB 123-590"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "renault-laguna-nesil-belirlenmedi-30", "slug": "30", "engineId": "renault-30", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009], "trims": ["Initiale"], "bodyTypes": [], "sourceRefs": ["TSB 123-239"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "renault-laguna-nesil-belirlenmedi-19-dci", "slug": "19-dci", "engineId": "renault-19-dci", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009], "trims": ["Expression Plus", "Privilege"], "bodyTypes": [], "sourceRefs": ["TSB 123-565", "TSB 123-566"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "renault-laguna-nesil-belirlenmedi-15-dci-110", "slug": "15-dci-110", "engineId": "renault-15-dci-110", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["Dynamique", "Dynamique GT", "Executive", "Expression", "Privilege"], "bodyTypes": [], "sourceRefs": ["TSB 123-639", "TSB 123-641", "TSB 123-645", "TSB 123-689", "TSB 123-691"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "renault-laguna-nesil-belirlenmedi-16-110", "slug": "16-110", "engineId": "renault-16-110", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["Dynamique", "Expression", "Privilege"], "bodyTypes": [], "sourceRefs": ["TSB 123-640", "TSB 123-642", "TSB 123-646"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "renault-laguna-nesil-belirlenmedi-20-dci-150", "slug": "20-dci-150", "engineId": "renault-20-dci-150", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["Dynamique", "Dynamique GT", "Executive", "Privilege", "Sport Emotion"], "bodyTypes": [], "sourceRefs": ["TSB 123-643", "TSB 123-647", "TSB 123-687", "TSB 123-690", "TSB 123-692", "TSB 123-738"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "renault-laguna-nesil-belirlenmedi-20-170", "slug": "20-170", "engineId": "renault-20-170", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["Dynamique", "Privilege", "Sport Emotion"], "bodyTypes": [], "sourceRefs": ["TSB 123-644", "TSB 123-648", "TSB 123-688"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "renault-laguna-nesil-belirlenmedi-16", "slug": "16", "engineId": "renault-16", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Expression", "Expression Plus", "Privilege"], "bodyTypes": [], "sourceRefs": ["TSB 123-235", "TSB 123-236", "TSB 123-557"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "renault-laguna-nesil-belirlenmedi-20", "slug": "20", "engineId": "renault-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009], "trims": ["Dynamique", "Privilege"], "bodyTypes": [], "sourceRefs": ["TSB 123-237", "TSB 123-238", "TSB 123-590"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "renault-laguna-nesil-belirlenmedi-30", "slug": "30", "engineId": "renault-30", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009], "trims": ["Initiale"], "bodyTypes": [], "sourceRefs": ["TSB 123-239"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "renault-laguna-nesil-belirlenmedi-19-dci", "slug": "19-dci", "engineId": "renault-19-dci", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009], "trims": ["Expression Plus", "Privilege"], "bodyTypes": [], "sourceRefs": ["TSB 123-565", "TSB 123-566"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "renault-laguna-nesil-belirlenmedi-15-dci-110", "slug": "15-dci-110", "engineId": "renault-15-dci-110", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["Dynamique", "Expression", "Privilege"], "bodyTypes": [], "sourceRefs": ["TSB 123-639", "TSB 123-641", "TSB 123-645"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "renault-laguna-nesil-belirlenmedi-16-110", "slug": "16-110", "engineId": "renault-16-110", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["Dynamique", "Expression", "Privilege"], "bodyTypes": [], "sourceRefs": ["TSB 123-640", "TSB 123-642", "TSB 123-646"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "renault-laguna-nesil-belirlenmedi-20-dci-150", "slug": "20-dci-150", "engineId": "renault-20-dci-150", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Dynamique", "Privilege"], "bodyTypes": [], "sourceRefs": ["TSB 123-643", "TSB 123-647"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "renault-laguna-nesil-belirlenmedi-20-170", "slug": "20-170", "engineId": "renault-20-170", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["Dynamique", "Privilege"], "bodyTypes": [], "sourceRefs": ["TSB 123-644", "TSB 123-648"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

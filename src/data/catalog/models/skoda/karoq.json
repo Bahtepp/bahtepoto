@@ -10,21 +10,23 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "skoda-karoq-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Karoq (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2026 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "skoda-karoq-nu7",
+      "slug": "nu7",
+      "name": "Karoq (NU7)",
+      "code": "NU7",
+      "order": 217,
+      "labelPeriod": { "marketId": "eu", "basis": "production", "start": { "year": 2017 }, "end": null },
+      "engineDisplacementsL": [1, 1.2, 1.4, 1.5, 1.6, 2],
+      "status": "sourced",
+      "sourceIds": ["wpgen-54100452"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Škoda Karoq\" bilgi kutusundan (Global). Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "skoda-karoq-nesil-belirlenmedi-10-tsi-115", "slug": "10-tsi-115", "engineId": "skoda-10-tsi-115", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2019], "trims": ["Ambition", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 133-1206", "TSB 133-1207", "TSB 133-1208"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "skoda-karoq-nesil-belirlenmedi-15-tsi-act-150", "slug": "15-tsi-act-150", "engineId": "skoda-15-tsi-act-150", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026], "trims": ["FL Elite", "FL Premium", "FL Prestige", "FL Sportline", "Premium", "Prestige", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 133-1209", "TSB 133-1238", "TSB 133-1241", "TSB 133-1290", "TSB 133-1291", "TSB 133-1292", "TSB 133-1321"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "skoda-karoq-nesil-belirlenmedi-16-tdi-115", "slug": "16-tdi-115", "engineId": "skoda-16-tdi-115", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018, 2019, 2020, 2021], "trims": ["Ambition", "Scr Premium", "Scr Prestige", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 133-1210", "TSB 133-1211", "TSB 133-1212", "TSB 133-1239", "TSB 133-1240"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "skoda-karoq-nesil-belirlenmedi-20-tdi-150", "slug": "20-tdi-150", "engineId": "skoda-20-tdi-150", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018], "trims": ["Style"], "bodyTypes": [], "sourceRefs": ["TSB 133-1214"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "skoda-karoq-nu7-10-tsi-115", "slug": "10-tsi-115", "engineId": "skoda-10-tsi-115", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2019], "trims": ["Ambition", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 133-1206", "TSB 133-1207", "TSB 133-1208"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "skoda-karoq-nu7-15-tsi-act-150", "slug": "15-tsi-act-150", "engineId": "skoda-15-tsi-act-150", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026], "trims": ["FL Elite", "FL Premium", "FL Prestige", "FL Sportline", "Premium", "Prestige", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 133-1209", "TSB 133-1238", "TSB 133-1241", "TSB 133-1290", "TSB 133-1291", "TSB 133-1292", "TSB 133-1321"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "skoda-karoq-nu7-16-tdi-115", "slug": "16-tdi-115", "engineId": "skoda-16-tdi-115", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018, 2019, 2020, 2021], "trims": ["Ambition", "Scr Premium", "Scr Prestige", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 133-1210", "TSB 133-1211", "TSB 133-1212", "TSB 133-1239", "TSB 133-1240"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "skoda-karoq-nu7-20-tdi-150", "slug": "20-tdi-150", "engineId": "skoda-20-tdi-150", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018], "trims": ["Style"], "bodyTypes": [], "sourceRefs": ["TSB 133-1214"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

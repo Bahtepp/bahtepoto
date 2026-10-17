@@ -10,20 +10,49 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "daihatsu-terios-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Terios (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2013 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "daihatsu-terios-j100-f500",
+      "slug": "j100-f500",
+      "name": "Terios 1. nesil (J100/F500)",
+      "code": "J100/F500",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1997 }, "end": { "year": 2006 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1167808"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Daihatsu Terios\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "daihatsu-terios-j200-f700",
+      "slug": "j200-f700",
+      "name": "Terios 2. nesil (J200/F700)",
+      "code": "J200/F700",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2006 }, "end": { "year": 2017 }, "approximate": true },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1167808"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Daihatsu Terios\" bilgi kutusundan (farklı pazarlar: Japan; Indonesia; international; Nautica); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "daihatsu-terios-nesil-belirlenmedi-13", "slug": "13", "engineId": "daihatsu-13", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["SX"], "bodyTypes": [], "sourceRefs": ["TSB 43-45", "TSB 43-46", "TSB 43-83"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "daihatsu-terios-nesil-belirlenmedi-15", "slug": "15", "engineId": "daihatsu-15", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013], "trims": ["Galaxy", "Gold", "Prime", "Prime 4x2", "Silver", "Star"], "bodyTypes": [], "sourceRefs": ["TSB 43-74", "TSB 43-75", "TSB 43-76", "TSB 43-77", "TSB 43-84", "TSB 43-85", "TSB 43-86", "TSB 43-87"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "daihatsu-terios-j200-f700-13", "slug": "13", "engineId": "daihatsu-13", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["SX"], "bodyTypes": [], "sourceRefs": ["TSB 43-45", "TSB 43-46", "TSB 43-83"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "daihatsu-terios-j200-f700-15", "slug": "15", "engineId": "daihatsu-15", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013], "trims": ["Galaxy", "Gold", "Prime", "Prime 4x2", "Silver", "Star"], "bodyTypes": [], "sourceRefs": ["TSB 43-74", "TSB 43-75", "TSB 43-76", "TSB 43-77", "TSB 43-84", "TSB 43-85", "TSB 43-86", "TSB 43-87"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
+    },
+    {
+      "id": "daihatsu-terios-f800-f850",
+      "slug": "f800-f850",
+      "name": "Terios 3. nesil (F800/F850)",
+      "code": "F800/F850",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2017 }, "end": null },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1167808"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Daihatsu Terios\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
     }
   ]
 }

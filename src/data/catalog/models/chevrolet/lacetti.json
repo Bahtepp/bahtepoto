@@ -12,17 +12,18 @@
     {
       "id": "chevrolet-lacetti-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Lacetti (nesil belirlenmedi)",
+      "name": "Lacetti — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "chevrolet-lacetti-nesil-belirlenmedi-16", "slug": "16", "engineId": "chevrolet-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["Cdx", "NB Cdx", "NB SE", "NB SX", "SE", "SX", "Wtcc"], "bodyTypes": ["4 kapı sedan", "5 kapı", "Station wagon"], "sourceRefs": ["TSB 32-129", "TSB 32-133", "TSB 32-138", "TSB 32-140", "TSB 32-141", "TSB 32-143", "TSB 32-144", "TSB 32-145", "TSB 32-146", "TSB 32-147", "TSB 32-148", "TSB 32-149", "TSB 32-183", "TSB 32-184", "TSB 32-185"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "chevrolet-lacetti-nesil-belirlenmedi-14", "slug": "14", "engineId": "chevrolet-14", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["NB SE", "SE", "SX"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 32-132", "TSB 32-134", "TSB 32-142"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "chevrolet-lacetti-nesil-belirlenmedi-16", "slug": "16", "engineId": "chevrolet-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["Cdx", "NB Cdx", "NB SE", "NB SX", "SE", "SX", "Wtcc"], "bodyTypes": ["4 kapı sedan", "5 kapı", "Station wagon"], "sourceRefs": ["TSB 32-129", "TSB 32-133", "TSB 32-138", "TSB 32-140", "TSB 32-141", "TSB 32-143", "TSB 32-144", "TSB 32-145", "TSB 32-146", "TSB 32-147", "TSB 32-148", "TSB 32-149", "TSB 32-183", "TSB 32-184", "TSB 32-185"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "chevrolet-lacetti-nesil-belirlenmedi-14", "slug": "14", "engineId": "chevrolet-14", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["NB SE", "SE", "SX"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 32-132", "TSB 32-134", "TSB 32-142"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

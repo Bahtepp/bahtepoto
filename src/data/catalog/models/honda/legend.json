@@ -10,18 +10,64 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "honda-legend-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Legend (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "honda-legend-ka1",
+      "slug": "ka1",
+      "name": "Legend 1. nesil (KA1)",
+      "code": "KA1",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1985 }, "end": { "year": 1990 } },
+      "engineDisplacementsL": [2, 2.5, 2.7],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1059621"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Honda Legend\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "honda-legend-ka7",
+      "slug": "ka7",
+      "name": "Legend 2. nesil (KA7)",
+      "code": "KA7",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1990 }, "end": { "year": 1995 } },
+      "engineDisplacementsL": [3.2],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1059621"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Honda Legend\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "honda-legend-ka9",
+      "slug": "ka9",
+      "name": "Legend 3. nesil (KA9)",
+      "code": "KA9",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1995 }, "end": { "year": 2004 } },
+      "engineDisplacementsL": [3.5],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1059621"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Honda Legend\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "honda-legend-kb1",
+      "slug": "kb1",
+      "name": "Legend 4. nesil (KB1)",
+      "code": "KB1",
+      "order": 4,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2004 }, "end": { "year": 2012 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1059621"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Honda Legend\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "honda-legend-nesil-belirlenmedi-35", "slug": "35", "engineId": "honda-35", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 61-150"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "honda-legend-kb1-35", "slug": "35", "engineId": "honda-35", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 61-150"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

@@ -10,20 +10,102 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "subaru-impreza-1-nesil",
+      "slug": "1-nesil",
+      "name": "Impreza 1. nesil",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1992 }, "end": { "year": 2000 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-527976"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Subaru Impreza\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "subaru-impreza-2-nesil",
+      "slug": "2-nesil",
+      "name": "Impreza 2. nesil",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2000 }, "end": { "year": 2007 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-527976"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Subaru Impreza\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "subaru-impreza-3-nesil",
+      "slug": "3-nesil",
+      "name": "Impreza 3. nesil",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2007 }, "end": { "year": 2011 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-527976"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Subaru Impreza\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "subaru-impreza-3-nesil-20", "slug": "20", "engineId": "subaru-20", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009], "trims": ["4AT Elegance", "5MT Elegance"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 137-147", "TSB 137-148"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
+      "id": "subaru-impreza-4-nesil",
+      "slug": "4-nesil",
+      "name": "Impreza 4. nesil",
+      "order": 4,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2011 }, "end": { "year": 2016 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-527976"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Subaru Impreza\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "subaru-impreza-5-nesil",
+      "slug": "5-nesil",
+      "name": "Impreza 5. nesil",
+      "order": 5,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2016 }, "end": { "year": 2023 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-527976"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Subaru Impreza\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "subaru-impreza-6-nesil",
+      "slug": "6-nesil",
+      "name": "Impreza 6. nesil",
+      "order": 6,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2023 }, "end": null },
+      "engineDisplacementsL": [2, 2.5],
+      "status": "sourced",
+      "sourceIds": ["wpgen-527976"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Subaru Impreza\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
       "id": "subaru-impreza-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Impreza (nesil belirlenmedi)",
+      "name": "Impreza — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2016 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "subaru-impreza-nesil-belirlenmedi-25", "slug": "25", "engineId": "subaru-25", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2016], "trims": ["Turbo Wrx 5MT", "Wrx Sti", "Wrx Sti 6MT"], "bodyTypes": [], "sourceRefs": ["TSB 137-100", "TSB 137-1018", "TSB 137-118"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "subaru-impreza-nesil-belirlenmedi-20", "slug": "20", "engineId": "subaru-20", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["4AT 1K", "4AT 4Q", "4AT Comfort", "4AT Elegance", "5MT 1K", "5MT 4Q", "5MT Comfort", "5MT Elegance"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 137-101", "TSB 137-102", "TSB 137-103", "TSB 137-104", "TSB 137-133", "TSB 137-134", "TSB 137-135", "TSB 137-136", "TSB 137-147", "TSB 137-148"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "subaru-impreza-nesil-belirlenmedi-15", "slug": "15", "engineId": "subaru-15", "revisionMapping": "unknown", "transmissions": [{ "type": "manual" }, { "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["4AT 1X", "4AT Comfort", "4AT Elegance", "4AT RK", "5MT 1X", "5MT Comfort", "5MT Elegance", "5MT RK", "Elegance", "Fwd", "Fwd PX", "Fwd RK"], "bodyTypes": ["4 kapı sedan", "5 kapı"], "sourceRefs": ["TSB 137-105", "TSB 137-106", "TSB 137-107", "TSB 137-108", "TSB 137-129", "TSB 137-130", "TSB 137-131", "TSB 137-132", "TSB 137-143", "TSB 137-144", "TSB 137-145", "TSB 137-146", "TSB 137-154", "TSB 137-155", "TSB 137-156", "TSB 137-157", "TSB 137-158", "TSB 137-159"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "subaru-impreza-nesil-belirlenmedi-25", "slug": "25", "engineId": "subaru-25", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2016], "trims": ["Turbo Wrx 5MT", "Wrx Sti", "Wrx Sti 6MT"], "bodyTypes": [], "sourceRefs": ["TSB 137-100", "TSB 137-1018", "TSB 137-118"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "subaru-impreza-nesil-belirlenmedi-20", "slug": "20", "engineId": "subaru-20", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["4AT 1K", "4AT 4Q", "4AT Comfort", "4AT Elegance", "5MT 1K", "5MT 4Q", "5MT Comfort", "5MT Elegance"], "bodyTypes": [], "sourceRefs": ["TSB 137-101", "TSB 137-102", "TSB 137-103", "TSB 137-104", "TSB 137-133", "TSB 137-134", "TSB 137-135", "TSB 137-136"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "subaru-impreza-nesil-belirlenmedi-15", "slug": "15", "engineId": "subaru-15", "revisionMapping": "unknown", "transmissions": [{ "type": "manual" }, { "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["4AT 1X", "4AT Comfort", "4AT Elegance", "4AT RK", "5MT 1X", "5MT Comfort", "5MT Elegance", "5MT RK", "Elegance", "Fwd", "Fwd PX", "Fwd RK"], "bodyTypes": ["4 kapı sedan", "5 kapı"], "sourceRefs": ["TSB 137-105", "TSB 137-106", "TSB 137-107", "TSB 137-108", "TSB 137-129", "TSB 137-130", "TSB 137-131", "TSB 137-132", "TSB 137-143", "TSB 137-144", "TSB 137-145", "TSB 137-146", "TSB 137-154", "TSB 137-155", "TSB 137-156", "TSB 137-157", "TSB 137-158", "TSB 137-159"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

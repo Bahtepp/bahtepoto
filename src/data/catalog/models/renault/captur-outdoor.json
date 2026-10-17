@@ -12,18 +12,19 @@
     {
       "id": "renault-captur-outdoor-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Captur Outdoor (nesil belirlenmedi)",
+      "name": "Captur Outdoor — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2019 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "renault-captur-outdoor-nesil-belirlenmedi-12", "slug": "12", "engineId": "renault-12", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "EDC" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016, 2017, 2018], "trims": ["120"], "bodyTypes": [], "sourceRefs": ["TSB 123-2080"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "renault-captur-outdoor-nesil-belirlenmedi-15-dci-90", "slug": "15-dci-90", "engineId": "renault-15-dci-90", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016, 2017, 2018], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 123-2081"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "renault-captur-outdoor-nesil-belirlenmedi-15-dci", "slug": "15-dci", "engineId": "renault-15-dci", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "EDC" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016, 2017, 2018, 2019], "trims": ["90"], "bodyTypes": [], "sourceRefs": ["TSB 123-2082"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "renault-captur-outdoor-nesil-belirlenmedi-12", "slug": "12", "engineId": "renault-12", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "EDC" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016, 2017, 2018], "trims": ["120"], "bodyTypes": [], "sourceRefs": ["TSB 123-2080"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "renault-captur-outdoor-nesil-belirlenmedi-15-dci-90", "slug": "15-dci-90", "engineId": "renault-15-dci-90", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016, 2017, 2018], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 123-2081"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "renault-captur-outdoor-nesil-belirlenmedi-15-dci", "slug": "15-dci", "engineId": "renault-15-dci", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "EDC" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016, 2017, 2018, 2019], "trims": ["90"], "bodyTypes": [], "sourceRefs": ["TSB 123-2082"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

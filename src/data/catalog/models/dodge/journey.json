@@ -10,19 +10,19 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "dodge-journey-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Journey (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2014 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "dodge-journey-uretim-2008",
+      "slug": "uretim-2008",
+      "name": "Journey",
+      "order": 208,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2008 }, "end": { "year": 2020 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-11617869"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Dodge Journey\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "dodge-journey-nesil-belirlenmedi-20-crd", "slug": "20-crd", "engineId": "dodge-20-crd", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "imported", "modelYears": [2009, 2010, 2011], "trims": ["R/T", "Sxt"], "bodyTypes": [], "sourceRefs": ["TSB 45-416", "TSB 45-417"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "dodge-journey-nesil-belirlenmedi-36", "slug": "36", "engineId": "dodge-36", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "imported", "modelYears": [2014], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 45-1013"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "dodge-journey-uretim-2008-20-crd", "slug": "20-crd", "engineId": "dodge-20-crd", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "imported", "modelYears": [2009, 2010, 2011], "trims": ["R/T", "Sxt"], "bodyTypes": [], "sourceRefs": ["TSB 45-416", "TSB 45-417"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "dodge-journey-uretim-2008-36", "slug": "36", "engineId": "dodge-36", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "imported", "modelYears": [2014], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 45-1013"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

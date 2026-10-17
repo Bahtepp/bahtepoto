@@ -12,16 +12,17 @@
     {
       "id": "bmw-x1-sdrive16d-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "X1 SDRIVE16D (nesil belirlenmedi)",
+      "name": "X1 SDRIVE16D — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2022 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "bmw-x1-sdrive16d-nesil-belirlenmedi-15-116", "slug": "15-116", "engineId": "bmw-15-116", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019, 2020, 2021, 2022], "trims": ["Joy", "M Sport", "Premium Line", "Prestige", "Sport Line", "Ultimate Edition M Sport", "Ultimate Edition X-LINE", "X Line"], "bodyTypes": [], "sourceRefs": ["TSB 21-1311", "TSB 21-1312", "TSB 21-1313", "TSB 21-1314", "TSB 21-1315", "TSB 21-1701", "TSB 21-1868", "TSB 21-1870"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "bmw-x1-sdrive16d-nesil-belirlenmedi-15-116", "slug": "15-116", "engineId": "bmw-15-116", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019, 2020, 2021, 2022], "trims": ["Joy", "M Sport", "Premium Line", "Prestige", "Sport Line", "Ultimate Edition M Sport", "Ultimate Edition X-LINE", "X Line"], "bodyTypes": [], "sourceRefs": ["TSB 21-1311", "TSB 21-1312", "TSB 21-1313", "TSB 21-1314", "TSB 21-1315", "TSB 21-1701", "TSB 21-1868", "TSB 21-1870"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

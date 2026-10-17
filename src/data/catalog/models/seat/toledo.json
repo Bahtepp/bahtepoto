@@ -10,29 +10,90 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "seat-toledo-1l",
+      "slug": "1l",
+      "name": "Toledo 1. nesil (1L)",
+      "code": "1L",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1991 }, "end": { "year": 1999 } },
+      "engineDisplacementsL": [1.6, 1.8, 1.9, 2],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1176162"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"SEAT Toledo\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "seat-toledo-1m",
+      "slug": "1m",
+      "name": "Toledo 2. nesil (1M)",
+      "code": "1M",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1998 }, "end": { "year": 2004 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1176162"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"SEAT Toledo\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "seat-toledo-5p",
+      "slug": "5p",
+      "name": "Toledo 3. nesil (5P)",
+      "code": "5P",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2004 }, "end": { "year": 2009 } },
+      "engineDisplacementsL": [1.6, 1.8, 1.9, 2],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1176162"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"SEAT Toledo\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "seat-toledo-5p-20-fsi-150", "slug": "20-fsi-150", "engineId": "seat-20-fsi-150", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009], "trims": ["Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-201", "TSB 19-202"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
+      "id": "seat-toledo-4-nesil",
+      "slug": "4-nesil",
+      "name": "Toledo 4. nesil",
+      "order": 4,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2012 }, "end": { "year": 2019 } },
+      "engineDisplacementsL": [1, 1.2, 1.4, 1.6],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1176162"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"SEAT Toledo\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "seat-toledo-4-nesil-14-tsi-122", "slug": "14-tsi-122", "engineId": "seat-14-tsi-122", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2015], "trims": ["Reference", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 19-1015", "TSB 19-1019"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "seat-toledo-4-nesil-16-tdi-105", "slug": "16-tdi-105", "engineId": "seat-16-tdi-105", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015], "trims": ["Reference", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 19-1016", "TSB 19-1020"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "seat-toledo-4-nesil-12-tsi-105", "slug": "12-tsi-105", "engineId": "seat-12-tsi-105", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2015], "trims": ["Reference", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 19-1017", "TSB 19-1018"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "seat-toledo-4-nesil-16-tdi-90", "slug": "16-tdi-90", "engineId": "seat-16-tdi-90", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2015], "trims": ["Style"], "bodyTypes": [], "sourceRefs": ["TSB 19-1027"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "seat-toledo-4-nesil-12-tsi-90", "slug": "12-tsi-90", "engineId": "seat-12-tsi-90", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015], "trims": ["Style"], "bodyTypes": [], "sourceRefs": ["TSB 19-1050"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "seat-toledo-4-nesil-12-tsi-110", "slug": "12-tsi-110", "engineId": "seat-12-tsi-110", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017], "trims": ["Style"], "bodyTypes": [], "sourceRefs": ["TSB 19-1051"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "seat-toledo-4-nesil-14-tsi-125", "slug": "14-tsi-125", "engineId": "seat-14-tsi-125", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017], "trims": ["Style"], "bodyTypes": [], "sourceRefs": ["TSB 19-1052"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "seat-toledo-4-nesil-14-tdi-90", "slug": "14-tdi-90", "engineId": "seat-14-tdi-90", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017], "trims": ["Style"], "bodyTypes": [], "sourceRefs": ["TSB 19-1053", "TSB 19-1054"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
       "id": "seat-toledo-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Toledo (nesil belirlenmedi)",
+      "name": "Toledo — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2017 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "seat-toledo-nesil-belirlenmedi-16-102", "slug": "16-102", "engineId": "seat-16-102", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Reference", "Selection", "Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-199", "TSB 19-200", "TSB 19-227"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "seat-toledo-nesil-belirlenmedi-20-fsi-150", "slug": "20-fsi-150", "engineId": "seat-20-fsi-150", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009], "trims": ["Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-201", "TSB 19-202"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "seat-toledo-nesil-belirlenmedi-19-tdi-105", "slug": "19-tdi-105", "engineId": "seat-19-tdi-105", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010], "trims": ["Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-203"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "seat-toledo-nesil-belirlenmedi-20-tdi-140", "slug": "20-tdi-140", "engineId": "seat-20-tdi-140", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010], "trims": ["Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-204", "TSB 19-205"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "seat-toledo-nesil-belirlenmedi-14-tsi-122", "slug": "14-tsi-122", "engineId": "seat-14-tsi-122", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2015], "trims": ["Reference", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 19-1015", "TSB 19-1019"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "seat-toledo-nesil-belirlenmedi-16-tdi-105", "slug": "16-tdi-105", "engineId": "seat-16-tdi-105", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015], "trims": ["Reference", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 19-1016", "TSB 19-1020"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "seat-toledo-nesil-belirlenmedi-12-tsi-105", "slug": "12-tsi-105", "engineId": "seat-12-tsi-105", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2015], "trims": ["Reference", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 19-1017", "TSB 19-1018"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "seat-toledo-nesil-belirlenmedi-16-tdi-90", "slug": "16-tdi-90", "engineId": "seat-16-tdi-90", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2015], "trims": ["Style"], "bodyTypes": [], "sourceRefs": ["TSB 19-1027"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "seat-toledo-nesil-belirlenmedi-12-tsi-90", "slug": "12-tsi-90", "engineId": "seat-12-tsi-90", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015], "trims": ["Style"], "bodyTypes": [], "sourceRefs": ["TSB 19-1050"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "seat-toledo-nesil-belirlenmedi-12-tsi-110", "slug": "12-tsi-110", "engineId": "seat-12-tsi-110", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017], "trims": ["Style"], "bodyTypes": [], "sourceRefs": ["TSB 19-1051"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "seat-toledo-nesil-belirlenmedi-14-tsi-125", "slug": "14-tsi-125", "engineId": "seat-14-tsi-125", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017], "trims": ["Style"], "bodyTypes": [], "sourceRefs": ["TSB 19-1052"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "seat-toledo-nesil-belirlenmedi-14-tdi-90", "slug": "14-tdi-90", "engineId": "seat-14-tdi-90", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017], "trims": ["Style"], "bodyTypes": [], "sourceRefs": ["TSB 19-1053", "TSB 19-1054"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "seat-toledo-nesil-belirlenmedi-16-102", "slug": "16-102", "engineId": "seat-16-102", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Reference", "Selection", "Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-199", "TSB 19-200", "TSB 19-227"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "seat-toledo-nesil-belirlenmedi-19-tdi-105", "slug": "19-tdi-105", "engineId": "seat-19-tdi-105", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010], "trims": ["Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-203"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "seat-toledo-nesil-belirlenmedi-20-tdi-140", "slug": "20-tdi-140", "engineId": "seat-20-tdi-140", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010], "trims": ["Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-204", "TSB 19-205"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

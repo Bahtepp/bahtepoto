@@ -10,20 +10,34 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "chevrolet-trax-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Trax (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2013 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "chevrolet-trax-u200",
+      "slug": "u200",
+      "name": "Trax 1. nesil (U200)",
+      "code": "U200",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2013 }, "end": { "year": 2022 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-35829879"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Trax\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "chevrolet-trax-nesil-belirlenmedi-16", "slug": "16", "engineId": "chevrolet-16", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013], "trims": ["LS 4x2", "LT 4x2"], "bodyTypes": [], "sourceRefs": ["TSB 32-1053", "TSB 32-1054"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "chevrolet-trax-nesil-belirlenmedi-14-140", "slug": "14-140", "engineId": "chevrolet-14-140", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013], "trims": ["LS", "LT"], "bodyTypes": [], "sourceRefs": ["TSB 32-1055", "TSB 32-1060", "TSB 32-1061"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "chevrolet-trax-u200-16", "slug": "16", "engineId": "chevrolet-16", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013], "trims": ["LS 4x2", "LT 4x2"], "bodyTypes": [], "sourceRefs": ["TSB 32-1053", "TSB 32-1054"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "chevrolet-trax-u200-14-140", "slug": "14-140", "engineId": "chevrolet-14-140", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013], "trims": ["LS", "LT"], "bodyTypes": [], "sourceRefs": ["TSB 32-1055", "TSB 32-1060", "TSB 32-1061"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
+    },
+    {
+      "id": "chevrolet-trax-2-nesil",
+      "slug": "2-nesil",
+      "name": "Trax 2. nesil",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2023 }, "end": null },
+      "status": "sourced",
+      "sourceIds": ["wpgen-35829879"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Trax\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
     }
   ]
 }

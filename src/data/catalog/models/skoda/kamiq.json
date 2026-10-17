@@ -10,21 +10,23 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "skoda-kamiq-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Kamiq (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2026 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "skoda-kamiq-nw4",
+      "slug": "nw4",
+      "name": "Kamiq (NW4)",
+      "code": "NW4",
+      "order": 219,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2019 }, "end": null },
+      "engineDisplacementsL": [1, 1.5, 1.6],
+      "status": "sourced",
+      "sourceIds": ["wpgen-58655831"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Škoda Kamiq\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "skoda-kamiq-nesil-belirlenmedi-10-tsi-115", "slug": "10-tsi-115", "engineId": "skoda-10-tsi-115", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2024, 2025, 2026], "trims": ["Elite FL", "Premium", "Premium FL"], "bodyTypes": [], "sourceRefs": ["TSB 133-1243", "TSB 133-1307", "TSB 133-1309"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "skoda-kamiq-nesil-belirlenmedi-15-tsi-act-150", "slug": "15-tsi-act-150", "engineId": "skoda-15-tsi-act-150", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021, 2022, 2023, 2024, 2025, 2026], "trims": ["Elite", "Elite FL", "Monte Carlo FL", "Premium", "Premium FL"], "bodyTypes": [], "sourceRefs": ["TSB 133-1244", "TSB 133-1295", "TSB 133-1308", "TSB 133-1310", "TSB 133-1311"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "skoda-kamiq-nesil-belirlenmedi-16-tdi-115", "slug": "16-tdi-115", "engineId": "skoda-16-tdi-115", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021], "trims": ["Premium"], "bodyTypes": [], "sourceRefs": ["TSB 133-1245"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "skoda-kamiq-nesil-belirlenmedi-10-tsi-110", "slug": "10-tsi-110", "engineId": "skoda-10-tsi-110", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021, 2022, 2023, 2024], "trims": ["Elite", "Premium"], "bodyTypes": [], "sourceRefs": ["TSB 133-1258", "TSB 133-1266"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "skoda-kamiq-nw4-10-tsi-115", "slug": "10-tsi-115", "engineId": "skoda-10-tsi-115", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2024, 2025, 2026], "trims": ["Elite FL", "Premium", "Premium FL"], "bodyTypes": [], "sourceRefs": ["TSB 133-1243", "TSB 133-1307", "TSB 133-1309"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "skoda-kamiq-nw4-15-tsi-act-150", "slug": "15-tsi-act-150", "engineId": "skoda-15-tsi-act-150", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021, 2022, 2023, 2024, 2025, 2026], "trims": ["Elite", "Elite FL", "Monte Carlo FL", "Premium", "Premium FL"], "bodyTypes": [], "sourceRefs": ["TSB 133-1244", "TSB 133-1295", "TSB 133-1308", "TSB 133-1310", "TSB 133-1311"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "skoda-kamiq-nw4-16-tdi-115", "slug": "16-tdi-115", "engineId": "skoda-16-tdi-115", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021], "trims": ["Premium"], "bodyTypes": [], "sourceRefs": ["TSB 133-1245"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "skoda-kamiq-nw4-10-tsi-110", "slug": "10-tsi-110", "engineId": "skoda-10-tsi-110", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021, 2022, 2023, 2024], "trims": ["Elite", "Premium"], "bodyTypes": [], "sourceRefs": ["TSB 133-1258", "TSB 133-1266"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

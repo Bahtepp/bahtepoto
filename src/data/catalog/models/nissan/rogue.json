@@ -10,19 +10,63 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "nissan-rogue-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Rogue (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2018 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "nissan-rogue-s35",
+      "slug": "s35",
+      "name": "Rogue 1. nesil (S35)",
+      "code": "S35",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2007 }, "end": { "year": 2015 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-7615869"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Nissan Rogue\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "nissan-rogue-t32",
+      "slug": "t32",
+      "name": "Rogue 2. nesil (T32)",
+      "code": "T32",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2013 }, "end": { "year": 2020 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-7615869"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Nissan Rogue\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "nissan-rogue-nesil-belirlenmedi-25-170", "slug": "25-170", "engineId": "nissan-25-170", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 107-1243"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "nissan-rogue-t32-25-170", "slug": "25-170", "engineId": "nissan-25-170", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 107-1243"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
+    },
+    {
+      "id": "nissan-rogue-t33",
+      "slug": "t33",
+      "name": "Rogue 3. nesil (T33)",
+      "code": "T33",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2020 }, "end": { "year": 2026 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-7615869"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Nissan Rogue\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "nissan-rogue-t34",
+      "slug": "t34",
+      "name": "Rogue 4. nesil (T34)",
+      "code": "T34",
+      "order": 4,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2026 }, "end": { "year": 2026 }, "approximate": true },
+      "engineDisplacementsL": [1.5],
+      "status": "sourced",
+      "sourceIds": ["wpgen-7615869"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Nissan Rogue\" bilgi kutusundan (farklı pazarlar: to commence); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
     }
   ]
 }

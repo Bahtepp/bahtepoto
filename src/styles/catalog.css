@@ -718,3 +718,20 @@
   color: var(--text-muted);
   margin-top: 0.125rem;
 }
+
+/* Nesli belirlenmemiş araçlar: gerçek bir kasa gibi görünmesin */
+.gen-unassigned {
+  border-style: dashed;
+  color: var(--text-muted);
+}
+
+.gen-unassigned .list-item-title {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.year-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}

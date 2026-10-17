@@ -10,20 +10,61 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "kia-carens-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Carens (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "kia-carens-1-nesil",
+      "slug": "1-nesil",
+      "name": "Carens 1. nesil",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1999 }, "end": { "year": 2006 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1823004"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Kia Carens\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "kia-carens-2-nesil",
+      "slug": "2-nesil",
+      "name": "Carens 2. nesil",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2006 }, "end": { "year": 2013 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1823004"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Kia Carens\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "kia-carens-nesil-belirlenmedi-20", "slug": "20", "engineId": "kia-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Dsl", "EX"], "bodyTypes": [], "sourceRefs": ["TSB 800-149", "TSB 800-72"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "kia-carens-nesil-belirlenmedi-16", "slug": "16", "engineId": "kia-16", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011], "trims": ["Gsl"], "bodyTypes": [], "sourceRefs": ["TSB 800-183"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "kia-carens-2-nesil-20", "slug": "20", "engineId": "kia-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Dsl", "EX"], "bodyTypes": [], "sourceRefs": ["TSB 800-149", "TSB 800-72"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "kia-carens-2-nesil-16", "slug": "16", "engineId": "kia-16", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011], "trims": ["Gsl"], "bodyTypes": [], "sourceRefs": ["TSB 800-183"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
+    },
+    {
+      "id": "kia-carens-3-nesil",
+      "slug": "3-nesil",
+      "name": "Carens 3. nesil",
+      "order": 3,
+      "labelPeriod": { "marketId": "eu", "basis": "production", "start": { "year": 2013 }, "end": { "year": 2019 } },
+      "engineDisplacementsL": [1.6, 1.7, 2],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1823004"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Kia Carens\" bilgi kutusundan (global). Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "kia-carens-4-nesil",
+      "slug": "4-nesil",
+      "name": "Carens 4. nesil",
+      "order": 4,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2021 }, "end": null },
+      "engineDisplacementsL": [1.4, 1.5],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1823004"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Kia Carens\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
     }
   ]
 }

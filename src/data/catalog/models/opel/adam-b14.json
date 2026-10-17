@@ -12,17 +12,18 @@
     {
       "id": "opel-adam-b14-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Adam B14 (nesil belirlenmedi)",
+      "name": "Adam B14 — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2017 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "opel-adam-b14-nesil-belirlenmedi-87", "slug": "87", "engineId": "opel-87", "revisionMapping": "unknown", "transmissions": [{ "type": "automated-manual", "name": "MTA" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017], "trims": ["Xel Glam", "Xel Jam", "Xel Rocks", "Xel Slam"], "bodyTypes": [], "sourceRefs": ["TSB 111-1171", "TSB 111-1174", "TSB 111-1177", "TSB 111-1179"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "opel-adam-b14-nesil-belirlenmedi-150", "slug": "150", "engineId": "opel-150", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017], "trims": ["Neh Adam S"], "bodyTypes": [], "sourceRefs": ["TSB 111-1181"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "opel-adam-b14-nesil-belirlenmedi-87", "slug": "87", "engineId": "opel-87", "revisionMapping": "unknown", "transmissions": [{ "type": "automated-manual", "name": "MTA" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017], "trims": ["Xel Glam", "Xel Jam", "Xel Rocks", "Xel Slam"], "bodyTypes": [], "sourceRefs": ["TSB 111-1171", "TSB 111-1174", "TSB 111-1177", "TSB 111-1179"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "opel-adam-b14-nesil-belirlenmedi-150", "slug": "150", "engineId": "opel-150", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017], "trims": ["Neh Adam S"], "bodyTypes": [], "sourceRefs": ["TSB 111-1181"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

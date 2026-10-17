@@ -45,6 +45,10 @@ export interface BuildStats {
   hintGenerations: number;
   /** Katalogdaki mevcut nesillere eşlenen varyant sayısı. */
   variantsOnExistingGenerations: number;
+  /** Tip adındaki kasa koduyla eşlenen varyant. */
+  matchedByCode: number;
+  /** Kaynaktaki motor hacmiyle desteklenerek eşlenen varyant. */
+  matchedByEngine: number;
   /** Mevcut varyantlara eklenen Türkiye pazar durumu. */
   existingVariantsEnriched: number;
   fuelUnknownEngines: number;
@@ -100,6 +104,8 @@ function brandRuleFor(tsbBrand: string): BrandRule {
 
 const ROMAN: Record<string, number> = { II: 2, III: 3, IV: 4, V: 5, VI: 6, VII: 7, VIII: 8, IX: 9, X: 10 };
 const hintNumber = (hint: string) => ROMAN[hint] ?? (/^MK(\d+)$/.exec(hint) ? Number(/^MK(\d+)$/.exec(hint)![1]) : undefined);
+
+type MatchKind = 'code' | 'existing' | 'engine' | 'hint' | 'none';
 
 interface Item {
   row: TsbRow;
@@ -206,6 +212,8 @@ export function buildFromTsb(raw: RawCatalog, rows: TsbRow[], opts: { today: str
     variantsWithoutGeneration: 0,
     hintGenerations: 0,
     variantsOnExistingGenerations: 0,
+    matchedByCode: 0,
+    matchedByEngine: 0,
     existingVariantsEnriched: 0,
     fuelUnknownEngines: 0,
   };
@@ -333,7 +341,9 @@ export function buildFromTsb(raw: RawCatalog, rows: TsbRow[], opts: { today: str
   };
 
   if (!merged.sources.some((s) => s.id === TSB_SOURCE_ID)) {
-    merged.sources.push({
+    // Wikipedia nesil kaynaklarından (wpgen-…) önce: tekrar çalıştırmada kaynak sırası değişmesin.
+    const at = merged.sources.findIndex((s) => String(s.id).startsWith("wpgen-"));
+    merged.sources.splice(at < 0 ? merged.sources.length : at, 0, {
       id: TSB_SOURCE_ID,
       title: opts.sourceTitle,
       url: 'https://www.tsb.org.tr/tr/kasko-deger-listesi',
@@ -469,12 +479,25 @@ export function buildFromTsb(raw: RawCatalog, rows: TsbRow[], opts: { today: str
       const curatedGens = [...gens];
       const bucketGens = new Map<string, Json>();
 
-      const genFor = (it: Item): { gen: Json; kind: 'existing' | 'hint' | 'none' } => {
+      const genFor = (it: Item): { gen: Json; kind: MatchKind } => {
         const years = it.row.modelYears;
         const a = years[0]!;
         const b = years.at(-1)!;
         const hint = it.parsed.generationHint;
         const hn = hint ? hintNumber(hint) : undefined;
+        const real = curatedGens.filter((g) => g.kind !== 'unassigned' && g.order !== 999 && g.labelPeriod);
+
+        // 1) Kesin kasa / model kodu: tip adında geçen kod, neslin kaynaktaki kod listesinde.
+        //    "4K" (4 kapı) gibi gövde kısaltmalarıyla karışmasın diye yalnızca harfle başlayan veya 3+ karakterli kodlar.
+        const tokens = new Set(fold(it.row.typeName).split(/[\s/(),]+/));
+        const byCode = real.filter((g) =>
+          String(g.code ?? '')
+            .split('/')
+            .map((c) => fold(c.trim()))
+            .some((c) => /\d/.test(c) && /[A-Z]/.test(c) && (c.length >= 3 || /^[A-Z]\d+$/.test(c)) && tokens.has(c)),
+        );
+        if (byCode.length === 1) return { gen: byCode[0]!, kind: 'code' };
+
         if (hn !== undefined) {
           const byHint = curatedGens.find((g) => new RegExp(`(^|-)mk${hn}$`).test(String(g.slug)) || new RegExp(`\\b(mk${hn}|${hint})\\b`, 'i').test(String(g.name)));
           if (byHint) return { gen: byHint, kind: 'existing' };
@@ -495,6 +518,24 @@ export function buildFromTsb(raw: RawCatalog, rows: TsbRow[], opts: { today: str
         const near = ranges.filter((r) => r.s <= b + 1 && r.e >= a - 1);
         if (overlapping.length === 1 && near.length === 1 && overlapping[0]!.s <= a && overlapping[0]!.e >= b) return { gen: overlapping[0]!.g, kind: 'existing' };
 
+        // 3) Motorla desteklenen eşleşme: model yılları birden çok neslin dönemine uyuyorsa, yalnızca
+        //    kaynak bu motor hacmini TEK bir nesil için listeliyorsa ve diğer adayların listesi bu hacmi
+        //    içermiyorsa (listesi olmayan aday varsa karar verilmez). Üretim temelli dönemde model yılı
+        //    üretim bitişinden bir yıl sonra olabilir.
+        const disp = it.parsed.displacementL;
+        if (disp !== undefined) {
+          const fits = ranges.filter((r) => {
+            const lp = r.g.labelPeriod as { basis: string };
+            const end = r.e === 9999 ? 9999 : r.e + (lp.basis === 'production' ? 1 : 0);
+            return r.s <= a && end >= b;
+          });
+          const lists = fits.map((r) => ((r.g.engineDisplacementsL as number[] | undefined) ?? []).map((x) => Math.round(x * 10) / 10));
+          if (fits.length > 1 && lists.every((l) => l.length > 0)) {
+            const has = fits.filter((_r, i) => lists[i]!.includes(Math.round(disp * 10) / 10));
+            if (has.length === 1) return { gen: has[0]!.g, kind: 'engine' };
+          }
+        }
+
         const key = hn !== undefined && overlapping.length === 0 ? `hint-${hn}` : 'none';
         // Aynı model dosyasına farklı TSB adlarından gelen satırlar aynı grubu paylaşır.
         const bucketSlug = key === 'none' ? 'nesil-belirlenmedi' : `nesil-${hn}`;
@@ -504,7 +545,8 @@ export function buildFromTsb(raw: RawCatalog, rows: TsbRow[], opts: { today: str
           gen = {
             id: uniqueId(`${model!.id}-${isHint ? `nesil-${hn}` : 'nesil-belirlenmedi'}`),
             slug: isHint ? `nesil-${hn}` : 'nesil-belirlenmedi',
-            name: isHint ? `${displayName(modelName)} ${hint}` : `${displayName(modelName)} (nesil belirlenmedi)`,
+            name: isHint ? `${displayName(modelName)} ${hint}` : `${displayName(modelName)} — nesli belirlenmemiş araçlar`,
+            ...(isHint ? {} : { kind: 'unassigned' }),
             order: isHint ? 900 + (hn ?? 0) : 999,
             labelPeriod: { marketId: MARKET, basis: 'model-year', start: { year: a }, end: { year: b } },
             status: 'unverified',
@@ -593,7 +635,9 @@ export function buildFromTsb(raw: RawCatalog, rows: TsbRow[], opts: { today: str
         stats.variants++;
         modelVariants++;
         if (kind === 'none') stats.variantsWithoutGeneration++;
-        if (kind === 'existing') stats.variantsOnExistingGenerations++;
+        if (kind === 'existing' || kind === 'code' || kind === 'engine') stats.variantsOnExistingGenerations++;
+        if (kind === 'code') stats.matchedByCode++;
+        if (kind === 'engine') stats.matchedByEngine++;
         stats.imported += vItems.length;
       }
       const pb = perBrand.get(brandId) ?? { name: rule.name, models: 0, variants: 0 };

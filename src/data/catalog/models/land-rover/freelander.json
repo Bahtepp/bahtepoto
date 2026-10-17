@@ -10,21 +10,51 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "land-rover-freelander-l314",
+      "slug": "l314",
+      "name": "Freelander 1. nesil (L314)",
+      "code": "L314",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1997 }, "end": { "year": 2006 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-884077"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Land Rover Freelander\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "land-rover-freelander-l359",
+      "slug": "l359",
+      "name": "Freelander 2 (L359)",
+      "code": "L359",
+      "order": 206,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2006 }, "end": { "year": 2014 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-884077"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Land Rover Freelander\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "land-rover-freelander-l359-22-td4", "slug": "22-td4", "engineId": "land-rover-22-td4", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["2 GS", "2 GS Premium", "2 Hse", "2 Premium GS LE", "2 SE", "2 XS", "2 XS Limited", "2 XS Premium"], "bodyTypes": [], "sourceRefs": ["TSB 420-1002", "TSB 420-60", "TSB 420-61", "TSB 420-62", "TSB 420-64", "TSB 420-65", "TSB 420-66", "TSB 420-67"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "land-rover-freelander-l359-22-sd4", "slug": "22-sd4", "engineId": "land-rover-22-sd4", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012], "trims": ["2 Hse"], "bodyTypes": [], "sourceRefs": ["TSB 420-73"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "land-rover-freelander-l359-20", "slug": "20", "engineId": "land-rover-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013], "trims": ["2 Si4 Premium XS", "2 Si4 SE"], "bodyTypes": [], "sourceRefs": ["TSB 420-1003", "TSB 420-1005"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
       "id": "land-rover-freelander-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Freelander (nesil belirlenmedi)",
+      "name": "Freelander — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2013 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "land-rover-freelander-nesil-belirlenmedi-20-td4", "slug": "20-td4", "engineId": "land-rover-20-td4", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Classic Hse"], "bodyTypes": [], "sourceRefs": ["TSB 420-59"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "land-rover-freelander-nesil-belirlenmedi-22-td4", "slug": "22-td4", "engineId": "land-rover-22-td4", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["2 GS", "2 GS Premium", "2 Hse", "2 Premium GS LE", "2 SE", "2 XS", "2 XS Limited", "2 XS Premium"], "bodyTypes": [], "sourceRefs": ["TSB 420-1002", "TSB 420-60", "TSB 420-61", "TSB 420-62", "TSB 420-64", "TSB 420-65", "TSB 420-66", "TSB 420-67"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "land-rover-freelander-nesil-belirlenmedi-22-sd4", "slug": "22-sd4", "engineId": "land-rover-22-sd4", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012], "trims": ["2 Hse"], "bodyTypes": [], "sourceRefs": ["TSB 420-73"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "land-rover-freelander-nesil-belirlenmedi-20", "slug": "20", "engineId": "land-rover-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013], "trims": ["2 Si4 Premium XS", "2 Si4 SE"], "bodyTypes": [], "sourceRefs": ["TSB 420-1003", "TSB 420-1005"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "land-rover-freelander-nesil-belirlenmedi-20-td4", "slug": "20-td4", "engineId": "land-rover-20-td4", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Classic Hse"], "bodyTypes": [], "sourceRefs": ["TSB 420-59"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

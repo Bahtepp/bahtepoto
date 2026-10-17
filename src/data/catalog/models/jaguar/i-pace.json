@@ -10,18 +10,18 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "jaguar-i-pace-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "I-PACE (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2024 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "jaguar-i-pace-uretim-2018",
+      "slug": "uretim-2018",
+      "name": "I-Pace",
+      "order": 218,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2018 }, "end": { "year": 2024 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-52331455"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Jaguar I-Pace\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "jaguar-i-pace-nesil-belirlenmedi-400", "slug": "400", "engineId": "jaguar-400", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023, 2024], "trims": ["R-DYNAMIC Hse", "R-DYNAMIC SE"], "bodyTypes": [], "sourceRefs": ["TSB 220-1133", "TSB 220-1134"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "jaguar-i-pace-uretim-2018-400", "slug": "400", "engineId": "jaguar-400", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023, 2024], "trims": ["R-DYNAMIC Hse", "R-DYNAMIC SE"], "bodyTypes": [], "sourceRefs": ["TSB 220-1133", "TSB 220-1134"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

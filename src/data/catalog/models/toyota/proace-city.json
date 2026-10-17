@@ -12,16 +12,17 @@
     {
       "id": "toyota-proace-city-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Proace City (nesil belirlenmedi)",
+      "name": "Proace City — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2026 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "toyota-proace-city-nesil-belirlenmedi-15", "slug": "15", "engineId": "toyota-15", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }, { "type": "manual" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021, 2022, 2023, 2024, 2025, 2026], "trims": ["Cargo D 100 Vision 5MT", "Cargo D Dream 5MT", "Cargo D Dream 6", "Cargo D Vision 6MT", "D 100 Dream", "D 130 Dream", "D 130 Flame X-PACK", "D 130 Passion X-PACK", "Dream 6MT"], "bodyTypes": [], "sourceRefs": ["TSB 144-1338", "TSB 144-1339", "TSB 144-1340", "TSB 144-1341", "TSB 144-1347", "TSB 144-1348", "TSB 144-1349", "TSB 144-1350", "TSB 144-1351"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "toyota-proace-city-nesil-belirlenmedi-15", "slug": "15", "engineId": "toyota-15", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }, { "type": "manual" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021, 2022, 2023, 2024, 2025, 2026], "trims": ["Cargo D 100 Vision 5MT", "Cargo D Dream 5MT", "Cargo D Dream 6", "Cargo D Vision 6MT", "D 100 Dream", "D 130 Dream", "D 130 Flame X-PACK", "D 130 Passion X-PACK", "Dream 6MT"], "bodyTypes": [], "sourceRefs": ["TSB 144-1338", "TSB 144-1339", "TSB 144-1340", "TSB 144-1341", "TSB 144-1347", "TSB 144-1348", "TSB 144-1349", "TSB 144-1350", "TSB 144-1351"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

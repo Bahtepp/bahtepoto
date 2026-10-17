@@ -10,18 +10,19 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "fiat-sedici-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Sedici (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "fiat-sedici-uretim-2005",
+      "slug": "uretim-2005",
+      "name": "Sedici",
+      "order": 205,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2005 }, "end": { "year": 2014 }, "approximate": true },
+      "engineDisplacementsL": [1.6, 1.9, 2],
+      "status": "sourced",
+      "sourceIds": ["wpgen-3308542"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Fiat Sedici\" bilgi kutusundan (farklı pazarlar: LHD; RHD); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "fiat-sedici-nesil-belirlenmedi-16", "slug": "16", "engineId": "fiat-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010], "trims": ["4x2 Dynamic", "4x2 Emotion", "Dynamic"], "bodyTypes": [], "sourceRefs": ["TSB 52-330", "TSB 52-331", "TSB 52-332"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "fiat-sedici-uretim-2005-16", "slug": "16", "engineId": "fiat-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010], "trims": ["4x2 Dynamic", "4x2 Emotion", "Dynamic"], "bodyTypes": [], "sourceRefs": ["TSB 52-330", "TSB 52-331", "TSB 52-332"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

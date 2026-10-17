@@ -10,18 +10,20 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "daewoo-lacetti-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Lacetti (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2009 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "daewoo-lacetti-j200",
+      "slug": "j200",
+      "name": "Lacetti 1. nesil (J200)",
+      "code": "J200",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2002 }, "end": { "year": 2024 }, "approximate": true },
+      "engineDisplacementsL": [1.4, 1.5, 1.6, 1.8, 2],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1780646"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Daewoo Lacetti\" bilgi kutusundan (farklı pazarlar: South Korea; Colombia; China; India; Russia; Uzbekistan); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "daewoo-lacetti-nesil-belirlenmedi-16", "slug": "16", "engineId": "daewoo-16", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 30-1101"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "daewoo-lacetti-j200-16", "slug": "16", "engineId": "daewoo-16", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 30-1101"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

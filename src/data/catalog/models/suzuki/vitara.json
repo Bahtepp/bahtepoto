@@ -10,22 +10,79 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "suzuki-vitara-1-nesil",
+      "slug": "1-nesil",
+      "name": "Vitara 1. nesil",
+      "order": 1,
+      "labelPeriod": { "marketId": "eu", "basis": "production", "start": { "year": 1988 }, "end": { "year": 1998 } },
+      "engineDisplacementsL": [2],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1598326"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Suzuki Vitara\" bilgi kutusundan (continued to be produced in Indonesia until 2001 and Spain until 2006). Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "suzuki-vitara-2-nesil",
+      "slug": "2-nesil",
+      "name": "Vitara 2. nesil",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1998 }, "end": { "year": 2005 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1598326"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Suzuki Vitara\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "suzuki-vitara-3-nesil",
+      "slug": "3-nesil",
+      "name": "Vitara 3. nesil",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2005 }, "end": { "year": 2017 }, "approximate": true },
+      "engineDisplacementsL": [1.6, 1.9, 2, 2.4, 2.7, 3.2],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1598326"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Suzuki Vitara\" bilgi kutusundan (farklı pazarlar: extended production continued for some markets until 2019); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "suzuki-vitara-4-nesil",
+      "slug": "4-nesil",
+      "name": "Vitara 4. nesil",
+      "order": 4,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2015 }, "end": null },
+      "engineDisplacementsL": [1, 1.4, 1.5, 1.6],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1598326"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Suzuki Vitara\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "suzuki-vitara-4-nesil-14", "slug": "14", "engineId": "suzuki-14", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019, 2020, 2021], "trims": ["GL+", "Glx", "Glx Premium", "S"], "bodyTypes": [], "sourceRefs": ["TSB 130-1024", "TSB 130-1033", "TSB 130-1043", "TSB 130-1044", "TSB 130-1045", "TSB 130-1046", "TSB 130-1047", "TSB 130-1048"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "suzuki-vitara-4-nesil-14-mild-hybrid-129", "slug": "14-mild-hybrid-129", "engineId": "suzuki-14-mild-hybrid-129", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023, 2024, 2025, 2026], "trims": ["GL Elegance", "GL Elegance 4x2", "Glx Premium", "Glx Premium 4x2"], "bodyTypes": [], "sourceRefs": ["TSB 130-1055", "TSB 130-1056", "TSB 130-1057", "TSB 130-1058"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "suzuki-vitara-4-nesil-14-mhev-109", "slug": "14-mhev-109", "engineId": "suzuki-14-mhev-109", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2026 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2026], "trims": ["Glx Black EDT.", "Glx Black EDT. 4x2"], "bodyTypes": [], "sourceRefs": ["TSB 130-1069", "TSB 130-1070"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
       "id": "suzuki-vitara-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Vitara (nesil belirlenmedi)",
+      "name": "Vitara — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2026 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2018 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "suzuki-vitara-nesil-belirlenmedi-16", "slug": "16", "engineId": "suzuki-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018], "trims": ["GL+", "GL+ 120", "Glx"], "bodyTypes": [], "sourceRefs": ["TSB 130-1019", "TSB 130-1020", "TSB 130-1022", "TSB 130-1023", "TSB 130-1025", "TSB 130-1026", "TSB 130-1029"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "suzuki-vitara-nesil-belirlenmedi-14", "slug": "14", "engineId": "suzuki-14", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019, 2020, 2021], "trims": ["GL+", "Glx", "Glx Premium", "S"], "bodyTypes": [], "sourceRefs": ["TSB 130-1024", "TSB 130-1033", "TSB 130-1043", "TSB 130-1044", "TSB 130-1045", "TSB 130-1046", "TSB 130-1047", "TSB 130-1048"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "suzuki-vitara-nesil-belirlenmedi-16-dizel", "slug": "16-dizel", "engineId": "suzuki-16-dizel", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018], "trims": ["GL+", "Glx"], "bodyTypes": [], "sourceRefs": ["TSB 130-1035", "TSB 130-1036", "TSB 130-1037"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "suzuki-vitara-nesil-belirlenmedi-14-mild-hybrid-129", "slug": "14-mild-hybrid-129", "engineId": "suzuki-14-mild-hybrid-129", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023, 2024, 2025, 2026], "trims": ["GL Elegance", "GL Elegance 4x2", "Glx Premium", "Glx Premium 4x2"], "bodyTypes": [], "sourceRefs": ["TSB 130-1055", "TSB 130-1056", "TSB 130-1057", "TSB 130-1058"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "suzuki-vitara-nesil-belirlenmedi-14-mhev-109", "slug": "14-mhev-109", "engineId": "suzuki-14-mhev-109", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2026 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2026], "trims": ["Glx Black EDT.", "Glx Black EDT. 4x2"], "bodyTypes": [], "sourceRefs": ["TSB 130-1069", "TSB 130-1070"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "suzuki-vitara-nesil-belirlenmedi-16", "slug": "16", "engineId": "suzuki-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018], "trims": ["GL+", "GL+ 120", "Glx"], "bodyTypes": [], "sourceRefs": ["TSB 130-1019", "TSB 130-1020", "TSB 130-1022", "TSB 130-1023", "TSB 130-1025", "TSB 130-1026", "TSB 130-1029"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "suzuki-vitara-nesil-belirlenmedi-16-dizel", "slug": "16-dizel", "engineId": "suzuki-16-dizel", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018], "trims": ["GL+", "Glx"], "bodyTypes": [], "sourceRefs": ["TSB 130-1035", "TSB 130-1036", "TSB 130-1037"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

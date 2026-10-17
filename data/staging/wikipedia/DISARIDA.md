@@ -1,0 +1,138 @@
+# Wikipedia nesilleri: dışarıda bırakılan modeller
+
+Bu modellerin nesilleri kataloğa otomatik aktarılmadı (kaynakta çelişki veya model kimliği açık değil).
+
+- **audi/a8l**: Wikipedia maddesi ("Audi A8") bu modelle açıkça eşleşmiyor
+- **audi/rs**: Wikipedia maddesi ("Audi S and RS models") bu modelle açıkça eşleşmiyor
+- **audi/rs3**: Wikipedia maddesi ("Audi A3") bu modelle açıkça eşleşmiyor
+- **audi/rs5**: Wikipedia maddesi ("Audi A5") bu modelle açıkça eşleşmiyor
+- **audi/rs7**: Wikipedia maddesi ("Audi A7") bu modelle açıkça eşleşmiyor
+- **audi/s7**: Wikipedia maddesi ("Audi A7") bu modelle açıkça eşleşmiyor
+- **audi/sq5**: Wikipedia maddesi ("Audi Q5") bu modelle açıkça eşleşmiyor
+- **audi/sq7**: Wikipedia maddesi ("Audi Q7") bu modelle açıkça eşleşmiyor
+- **audi/sq8**: Wikipedia maddesi ("Audi Q8") bu modelle açıkça eşleşmiyor
+- **bmw/z4**: Wikipedia maddesi ("BMW Z") bu modelle açıkça eşleşmiyor
+- **buick/enclave**: kaynakta çelişki: 2-nesil: iki kaynak satırı farklı yıllar veriyor (2017–2024 / 2019–2025); ilki kullanıldı
+- **byd/seal-u**: Wikipedia maddesi ("BYD Song Plus") bu modelle açıkça eşleşmiyor
+- **caterham/seven**: Wikipedia maddesi ("Caterham 7") bu modelle açıkça eşleşmiyor
+- **chery/alia**: Wikipedia maddesi ("Chery A5") bu modelle açıkça eşleşmiyor
+- **chery/chance**: Wikipedia maddesi ("Chery A3") bu modelle açıkça eşleşmiyor
+- **chery/niche**: Wikipedia maddesi ("Chery A3") bu modelle açıkça eşleşmiyor
+- **chevrolet/corvette-c7**: Wikipedia maddesi ("Chevrolet Corvette (C7)") bu modelle açıkça eşleşmiyor
+- **chevrolet/corvette**: kaynakta çelişki: c6: iki kaynak satırı farklı yıllar veriyor (2004–2013 / 2005–2013); ilki kullanıldı
+- **chevrolet/cruze**: kaynakta çelişki: j400: iki kaynak satırı farklı yıllar veriyor (2016–2023 / 2014–2016); ilki kullanıldı
+- **chevrolet/epica**: Wikipedia maddesi ("Daewoo Tosca") bu modelle açıkça eşleşmiyor
+- **chevrolet/evanda**: Wikipedia maddesi ("Daewoo Magnus") bu modelle açıkça eşleşmiyor
+- **chevrolet/lacetti**: Wikipedia maddesi ("Daewoo Lacetti") bu modelle açıkça eşleşmiyor
+- **chevrolet/rezzo**: Wikipedia maddesi ("Daewoo Tacuma") bu modelle açıkça eşleşmiyor
+- **chevrolet/spark**: kaynakta çelişki: m300: iki kaynak satırı farklı yıllar veriyor (2010–2022 / 2013–2016); ilki kullanıldı
+- **chrysler/grand-voyager**: Wikipedia maddesi ("Chrysler minivans (S)") bu modelle açıkça eşleşmiyor
+- **citroen/c3**: kaynakta çelişki: 3-nesil: iki kaynak satırı farklı yıllar veriyor (2016–2024 / 2022–…); ilki kullanıldı
+- **citroen/c4**: kaynakta çelişki: c4: iki kaynak satırı farklı yıllar veriyor (2012–2017 / 2014–2020); ilki kullanıldı
+- **citroen/c8**: Wikipedia maddesi ("Eurovans") bu modelle açıkça eşleşmiyor
+- **citroen/ds3**: Wikipedia maddesi ("DS 3") bu modelle açıkça eşleşmiyor
+- **citroen/ds4**: Wikipedia maddesi ("DS 4") bu modelle açıkça eşleşmiyor
+- **citroen/spacetourer**: Wikipedia maddesi ("Citroën Jumpy") bu modelle açıkça eşleşmiyor
+- **cupra/ateca**: Wikipedia maddesi ("SEAT Ateca") bu modelle açıkça eşleşmiyor
+- **cupra/leon**: Wikipedia maddesi ("SEAT León") bu modelle açıkça eşleşmiyor
+- **daihatsu/materia**: Wikipedia maddesi ("Toyota bB") bu modelle açıkça eşleşmiyor
+- **dodge/grand-caravan**: Wikipedia maddesi ("Dodge Caravan") bu modelle açıkça eşleşmiyor
+- **dodge/ram**: Wikipedia maddesi ("Ram pickup") bu modelle açıkça eşleşmiyor
+- **fiat/fiorino**: kaynakta çelişki: 3-nesil: iki kaynak satırı farklı yıllar veriyor (2007–2024 / 2013–…); ilki kullanıldı
+- **fiat/freemont**: Wikipedia maddesi ("Dodge Journey") bu modelle açıkça eşleşmiyor
+- **fiat/scudo**: Wikipedia maddesi ("Citroën Jumpy") bu modelle açıkça eşleşmiyor
+- **fiat/ulysse**: Wikipedia maddesi ("Eurovans") bu modelle açıkça eşleşmiyor
+- **ford/f150**: Wikipedia maddesi ("Ford F-Series") bu modelle açıkça eşleşmiyor
+- **ford/grand-c-max**: Wikipedia maddesi ("Ford C-Max") bu modelle açıkça eşleşmiyor
+- **ford/ka**: kaynakta çelişki: 2. nesil iki kez: KA 2. nesil (B420) ve KA 2. nesil (B402)
+- **ford/ranger-raptor**: Wikipedia maddesi ("Ford Ranger (T6)") bu modelle açıkça eşleşmiyor
+- **ford/tourneo-courier**: Wikipedia maddesi ("Ford Transit Courier") bu modelle açıkça eşleşmiyor
+- **ford/tourneo**: kaynakta çelişki: 1-nesil: iki kaynak satırı farklı yıllar veriyor (1965–1977 / 1977–1986); ilki kullanıldı
+- **geely/emgrand-ec7**: Wikipedia maddesi ("Geely Emgrand") bu modelle açıkça eşleşmiyor
+- **gmc/canyon**: Wikipedia maddesi ("Chevrolet Colorado") bu modelle açıkça eşleşmiyor
+- **gmc/savana**: Wikipedia maddesi ("Chevrolet Express") bu modelle açıkça eşleşmiyor
+- **gmc/sierra**: Wikipedia maddesi ("Chevrolet Silverado") bu modelle açıkça eşleşmiyor
+- **gmc/yukon**: Wikipedia maddesi ("Chevrolet Tahoe") bu modelle açıkça eşleşmiyor
+- **honda/accord**: kaynakta çelişki: 7-nesil: iki kaynak satırı farklı yıllar veriyor (2002–2008 / 2002–2007); ilki kullanıldı · 8-nesil: iki kaynak satırı farklı yıllar veriyor (2008–2015 / 2007–2012); ilki kullanıldı · 5. nesil iki kez: Accord 5. nesil (CD3) ve Accord 5. nesil (CC7/CE7)
+- **hyundai/matrix**: Wikipedia maddesi ("Hyundai Lavita") bu modelle açıkça eşleşmiyor
+- **infiniti/ex**: Wikipedia maddesi ("Infiniti QX50") bu modelle açıkça eşleşmiyor
+- **infiniti/fx**: Wikipedia maddesi ("Infiniti QX70") bu modelle açıkça eşleşmiyor
+- **jaguar/xj6**: Wikipedia maddesi ("Jaguar XJ") bu modelle açıkça eşleşmiyor
+- **jaguar/xj8**: Wikipedia maddesi ("Jaguar XJ (X308)") bu modelle açıkça eşleşmiyor
+- **jaguar/xk8**: Wikipedia maddesi ("Jaguar XK (X100)") bu modelle açıkça eşleşmiyor
+- **kgm/korando**: Wikipedia maddesi ("SsangYong Korando") bu modelle açıkça eşleşmiyor
+- **kgm/musso**: Wikipedia maddesi ("SsangYong Musso") bu modelle açıkça eşleşmiyor
+- **kgm/rexton**: Wikipedia maddesi ("SsangYong Rexton") bu modelle açıkça eşleşmiyor
+- **kia/magentis**: Wikipedia maddesi ("Kia K5") bu modelle açıkça eşleşmiyor
+- **kia/optima**: Wikipedia maddesi ("Kia K5") bu modelle açıkça eşleşmiyor
+- **kia/rio**: kaynakta çelişki: 4-nesil: iki kaynak satırı farklı yıllar veriyor (2016–2023 / 2017–2022); ilki kullanıldı
+- **kia/xceed**: Wikipedia maddesi ("Kia Ceed") bu modelle açıkça eşleşmiyor
+- **lancia/delta**: kaynakta çelişki: 1-nesil: iki kaynak satırı farklı yıllar veriyor (1979–1994 / 1992–1996); ilki kullanıldı
+- **lancia/phedra**: Wikipedia maddesi ("Eurovans") bu modelle açıkça eşleşmiyor
+- **lancia/voyager**: Wikipedia maddesi ("Chrysler Voyager") bu modelle açıkça eşleşmiyor
+- **land-rover/discovery**: kaynakta çelişki: l319: iki kaynak satırı farklı yıllar veriyor (2004–2010 / 2009–2016); ilki kullanıldı · 2. nesil iki kez: Discovery 2. nesil ve Discovery 2. nesil (L318)
+- **land-rover/range-rover-evoque**: Wikipedia maddesi ("Range Rover Evoque") bu modelle açıkça eşleşmiyor
+- **land-rover/range-rover-sport**: Wikipedia maddesi ("Range Rover Sport") bu modelle açıkça eşleşmiyor
+- **land-rover/range-rover-velar**: Wikipedia maddesi ("Range Rover Velar") bu modelle açıkça eşleşmiyor
+- **land-rover/range-rover**: Wikipedia maddesi ("Range Rover") bu modelle açıkça eşleşmiyor
+- **mahindra/goa**: Wikipedia maddesi ("Mahindra Scorpio") bu modelle açıkça eşleşmiyor
+- **mercedes-benz/e**: kaynakta çelişki: w212: iki kaynak satırı farklı yıllar veriyor (2008–2016 / 2009–2017); ilki kullanıldı
+- **mercedes-benz/gl**: Wikipedia maddesi ("Mercedes-Benz GLS") bu modelle açıkça eşleşmiyor
+- **mercedes-benz/maybach**: Wikipedia maddesi ("Maybach 57 and 62") bu modelle açıkça eşleşmiyor
+- **mercedes-benz/ml**: Wikipedia maddesi ("Mercedes-Benz GLE") bu modelle açıkça eşleşmiyor
+- **mercedes-benz/s320**: Wikipedia maddesi ("Mercedes-Benz S-Class") bu modelle açıkça eşleşmiyor
+- **mercedes-benz/s350**: Wikipedia maddesi ("Mercedes-Benz S-Class") bu modelle açıkça eşleşmiyor
+- **mercedes-benz/viano**: Wikipedia maddesi ("Mercedes-Benz Vito") bu modelle açıkça eşleşmiyor
+- **mitsubishi/attrage**: Wikipedia maddesi ("Mitsubishi Mirage") bu modelle açıkça eşleşmiyor
+- **nissan/350**: Wikipedia maddesi ("Nissan 350Z") bu modelle açıkça eşleşmiyor
+- **nissan/pathfinder**: kaynakta çelişki: r50: iki kaynak satırı farklı yıllar veriyor (1995–2004 / 1996–2002); ilki kullanıldı · r53: iki kaynak satırı farklı yıllar veriyor (2021–… / 2023–…); ilki kullanıldı
+- **nissan/patrol**: kaynakta çelişki: 3-nesil: iki kaynak satırı farklı yıllar veriyor (1980–1989 / 1986–2002); ilki kullanıldı
+- **opel/combo-tour**: Wikipedia maddesi ("Opel Combo") bu modelle açıkça eşleşmiyor
+- **opel/zafira-life**: Wikipedia maddesi ("Citroën Jumpy") bu modelle açıkça eşleşmiyor
+- **peugeot/bipper**: kaynakta çelişki: 3-nesil: iki kaynak satırı farklı yıllar veriyor (2007–2024 / 2013–…); ilki kullanıldı
+- **peugeot/e-2008**: Wikipedia maddesi ("Peugeot 2008") bu modelle açıkça eşleşmiyor
+- **peugeot/expert**: Wikipedia maddesi ("Citroën Jumpy") bu modelle açıkça eşleşmiyor
+- **peugeot/partner**: Wikipedia maddesi ("Citroën Berlingo") bu modelle açıkça eşleşmiyor
+- **peugeot/rifter**: Wikipedia maddesi ("Citroën Berlingo") bu modelle açıkça eşleşmiyor
+- **peugeot/traveller**: Wikipedia maddesi ("Citroën Jumpy") bu modelle açıkça eşleşmiyor
+- **porsche/911-carrera**: Wikipedia maddesi ("Porsche 911") bu modelle açıkça eşleşmiyor
+- **porsche/cayman**: Wikipedia maddesi ("Porsche Boxster and Cayman") bu modelle açıkça eşleşmiyor
+- **proton/saga**: kaynakta çelişki: c21a-c22a: iki kaynak satırı farklı yıllar veriyor (1985–1992 / 1992–2003); ilki kullanıldı · c21a-c22a: iki kaynak satırı farklı yıllar veriyor (1985–1992 / 2003–2008); ilki kullanıldı · bt3-bt6: iki kaynak satırı farklı yıllar veriyor (2008–2010 / 2010–2012); ilki kullanıldı · bt3-bt6: iki kaynak satırı farklı yıllar veriyor (2008–2010 / 2011–2016); ilki kullanıldı
+- **ravon/r4**: Wikipedia maddesi ("Chevrolet Cobalt") bu modelle açıkça eşleşmiyor
+- **renault/captur**: kaynakta çelişki: 1. nesil iki kez: Captur 1. nesil (J87) ve Captur 1. nesil
+- **renault/duster**: Wikipedia maddesi ("Dacia Duster") bu modelle açıkça eşleşmiyor
+- **renault/espace**: kaynakta çelişki: 5-nesil: iki kaynak satırı farklı yıllar veriyor (2015–2023 / 2013–2013); ilki kullanıldı
+- **renault/grand-scenic**: kaynakta çelişki: 1-nesil: iki kaynak satırı farklı yıllar veriyor (1996–2003 / 2000–2003); ilki kullanıldı
+- **renault/r5**: Wikipedia maddesi ("Renault 5") bu modelle açıkça eşleşmiyor
+- **renault/scenic**: kaynakta çelişki: 1-nesil: iki kaynak satırı farklı yıllar veriyor (1996–2003 / 2000–2003); ilki kullanıldı
+- **renault/taliant**: Wikipedia maddesi ("Dacia Logan") bu modelle açıkça eşleşmiyor
+- **renault/trafic-passenger**: Wikipedia maddesi ("Renault Trafic") bu modelle açıkça eşleşmiyor
+- **saab/9-3-convertible**: Wikipedia maddesi ("Saab 9-3") bu modelle açıkça eşleşmiyor
+- **saipa/131**: Wikipedia maddesi ("Ford Festiva") bu modelle açıkça eşleşmiyor
+- **skoda/citigo**: Wikipedia maddesi ("Volkswagen Up") bu modelle açıkça eşleşmiyor
+- **ssangyong/tivoli**: Wikipedia maddesi ("KGM Tivoli") bu modelle açıkça eşleşmiyor
+- **ssangyong/torres**: Wikipedia maddesi ("KGM Torres") bu modelle açıkça eşleşmiyor
+- **subaru/b9**: Wikipedia maddesi ("Subaru Tribeca") bu modelle açıkça eşleşmiyor
+- **subaru/brz**: Wikipedia maddesi ("Toyota 86") bu modelle açıkça eşleşmiyor
+- **subaru/xv**: Wikipedia maddesi ("Subaru Crosstrek") bu modelle açıkça eşleşmiyor
+- **suzuki/alto**: kaynakta çelişki: 7. nesil iki kez: Alto 7. nesil ve Alto 7. nesil (HA25/HA35)
+- **suzuki/grand-vitara**: Wikipedia maddesi ("Suzuki Vitara") bu modelle açıkça eşleşmiyor
+- **suzuki/ignis**: kaynakta çelişki: 1-nesil: iki kaynak satırı farklı yıllar veriyor (2000–2008 / 2001–2008); ilki kullanıldı
+- **suzuki/s-cross**: Wikipedia maddesi ("Suzuki SX4") bu modelle açıkça eşleşmiyor
+- **tata/manza**: Wikipedia maddesi ("Tata Indigo") bu modelle açıkça eşleşmiyor
+- **tata/marina**: Wikipedia maddesi ("Tata Indigo") bu modelle açıkça eşleşmiyor
+- **tata/vista**: Wikipedia maddesi ("Tata Indica") bu modelle açıkça eşleşmiyor
+- **toyota/hiace**: kaynakta çelişki: h100: iki kaynak satırı farklı yıllar veriyor (1989–2004 / 1995–2012); ilki kullanıldı
+- **toyota/hilux**: kaynakta çelişki: n140-n150-n160-n170-n190: iki kaynak satırı farklı yıllar veriyor (1997–2006 / 1998–2004); ilki kullanıldı
+- **toyota/proace-city**: Wikipedia maddesi ("Citroën Berlingo") bu modelle açıkça eşleşmiyor
+- **toyota/proace-max**: Wikipedia maddesi ("Fiat Ducato") bu modelle açıkça eşleşmiyor
+- **toyota/proace**: Wikipedia maddesi ("Citroën Jumpy") bu modelle açıkça eşleşmiyor
+- **toyota/rav**: Wikipedia maddesi ("Toyota RAV4") bu modelle açıkça eşleşmiyor
+- **volkswagen/cross-polo**: kaynakta çelişki: 6n: iki kaynak satırı farklı yıllar veriyor (1994–2002 / 1998–2002); ilki kullanıldı
+- **volkswagen/multivan**: Wikipedia maddesi ("Volkswagen Transporter") bu modelle açıkça eşleşmiyor
+- **volkswagen/rabbit**: kaynakta çelişki: a2-1g: iki kaynak satırı farklı yıllar veriyor (1983–1992 / 1991–1998); ilki kullanıldı · a5-1k: iki kaynak satırı farklı yıllar veriyor (2003–2009 / 2008–2013); ilki kullanıldı · 7. nesil iki kez: Rabbit 7. nesil (5G) ve Rabbit 7. nesil
+- **volkswagen/teramont**: Wikipedia maddesi ("Volkswagen Atlas") bu modelle açıkça eşleşmiyor
+- **volkswagen/tiguan-allspace**: Wikipedia maddesi ("Volkswagen Tiguan") bu modelle açıkça eşleşmiyor
+- **volvo/ec40**: Wikipedia maddesi ("Volvo XC40") bu modelle açıkça eşleşmiyor
+- **volvo/ex40**: Wikipedia maddesi ("Volvo XC40") bu modelle açıkça eşleşmiyor
+- **zotye/nomad**: Wikipedia maddesi ("Zotye 2008") bu modelle açıkça eşleşmiyor

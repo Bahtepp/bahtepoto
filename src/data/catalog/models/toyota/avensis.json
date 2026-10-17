@@ -10,24 +10,71 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "toyota-avensis-t220",
+      "slug": "t220",
+      "name": "Avensis 1. nesil (T220)",
+      "code": "T220",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1997 }, "end": { "year": 2003 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-600175"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Toyota Avensis\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "toyota-avensis-t250",
+      "slug": "t250",
+      "name": "Avensis 2. nesil (T250)",
+      "code": "T250",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2003 }, "end": { "year": 2009 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-600175"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Toyota Avensis\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "toyota-avensis-t270",
+      "slug": "t270",
+      "name": "Avensis 3. nesil (T270)",
+      "code": "T270",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2009 }, "end": { "year": 2018 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-600175"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Toyota Avensis\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "toyota-avensis-t270-16", "slug": "16", "engineId": "toyota-16", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015, 2016, 2017], "trims": ["Advance", "Elegant Extra", "Premium"], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 144-1036", "TSB 144-1129", "TSB 144-1130", "TSB 144-766"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "toyota-avensis-t270-20", "slug": "20", "engineId": "toyota-20", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "Multidrive" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015, 2016, 2017], "trims": ["Elegant Extra S", "Premium Plus S", "Premium Plus S Navi", "Premium S", "TS Premium Plus S", "TS Premium Plus S Navi", "TS Premium S"], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 144-1082", "TSB 144-1091", "TSB 144-1132", "TSB 144-1133", "TSB 144-1140", "TSB 144-1141", "TSB 144-1142", "TSB 144-767"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "toyota-avensis-t270-20-d-4d", "slug": "20-d-4d", "engineId": "toyota-20-d-4d", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015, 2016, 2017], "trims": ["Elegant Extra", "Premium", "Premium Plus", "Premium Plus Navi", "TS Premium Plus", "TS Premium Plus Navi"], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 144-1083", "TSB 144-1138", "TSB 144-1139", "TSB 144-1146", "TSB 144-1147", "TSB 144-768"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "toyota-avensis-t270-18", "slug": "18", "engineId": "toyota-18", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "Multidrive" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015, 2016, 2017], "trims": ["Elegant Extra S", "Elegant S", "Premium S"], "bodyTypes": [], "sourceRefs": ["TSB 144-1035", "TSB 144-1131", "TSB 144-774"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "toyota-avensis-t270-20-d-4d-124", "slug": "20-d-4d-124", "engineId": "toyota-20-d-4d-124", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014], "trims": ["Premium"], "bodyTypes": [], "sourceRefs": ["TSB 144-1028"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "toyota-avensis-t270-16-d-4d", "slug": "16-d-4d", "engineId": "toyota-16-d-4d", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017], "trims": ["Advance", "Premium", "Premium Plus", "Premium Plus Navi", "TS Premium", "TS Premium Plus", "TS Premium Plus Navi"], "bodyTypes": [], "sourceRefs": ["TSB 144-1134", "TSB 144-1135", "TSB 144-1136", "TSB 144-1137", "TSB 144-1143", "TSB 144-1144", "TSB 144-1145"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
       "id": "toyota-avensis-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Avensis (nesil belirlenmedi)",
+      "name": "Avensis — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2017 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "toyota-avensis-nesil-belirlenmedi-16", "slug": "16", "engineId": "toyota-16", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017], "trims": ["Advance", "Comfort", "Elegant", "Elegant Extra", "Linea", "Premium"], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 144-1036", "TSB 144-1129", "TSB 144-1130", "TSB 144-604", "TSB 144-616", "TSB 144-650", "TSB 144-766"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "toyota-avensis-nesil-belirlenmedi-20", "slug": "20", "engineId": "toyota-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }, { "type": "cvt", "name": "Multidrive" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017], "trims": ["D Elegant", "Elegant", "Elegant Extra S", "Executive Elegant", "Premium Plus S", "Premium Plus S Navi", "Premium S", "TS Premium Plus S", "TS Premium Plus S Navi", "TS Premium S"], "bodyTypes": ["4 kapı sedan", "Station wagon"], "sourceRefs": ["TSB 144-1082", "TSB 144-1091", "TSB 144-1132", "TSB 144-1133", "TSB 144-1140", "TSB 144-1141", "TSB 144-1142", "TSB 144-610", "TSB 144-611", "TSB 144-612", "TSB 144-647", "TSB 144-713", "TSB 144-767"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "toyota-avensis-nesil-belirlenmedi-20-d-4d", "slug": "20-d-4d", "engineId": "toyota-20-d-4d", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017], "trims": ["Elegant Executive", "Elegant Extra", "Premium", "Premium Plus", "Premium Plus Navi", "TS Premium Plus", "TS Premium Plus Navi"], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 144-1083", "TSB 144-1138", "TSB 144-1139", "TSB 144-1146", "TSB 144-1147", "TSB 144-665", "TSB 144-714", "TSB 144-768"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "toyota-avensis-nesil-belirlenmedi-16-132", "slug": "16-132", "engineId": "toyota-16-132", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2010, 2011, 2012, 2013, 2014, 2015], "trims": ["Elegant"], "bodyTypes": [], "sourceRefs": ["TSB 144-712"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "toyota-avensis-nesil-belirlenmedi-18", "slug": "18", "engineId": "toyota-18", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "Multidrive" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015, 2016, 2017], "trims": ["Elegant Extra S", "Elegant S", "Premium S"], "bodyTypes": [], "sourceRefs": ["TSB 144-1035", "TSB 144-1131", "TSB 144-774"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "toyota-avensis-nesil-belirlenmedi-20-d-4d-124", "slug": "20-d-4d-124", "engineId": "toyota-20-d-4d-124", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014], "trims": ["Premium"], "bodyTypes": [], "sourceRefs": ["TSB 144-1028"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "toyota-avensis-nesil-belirlenmedi-16-d-4d", "slug": "16-d-4d", "engineId": "toyota-16-d-4d", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017], "trims": ["Advance", "Premium", "Premium Plus", "Premium Plus Navi", "TS Premium", "TS Premium Plus", "TS Premium Plus Navi"], "bodyTypes": [], "sourceRefs": ["TSB 144-1134", "TSB 144-1135", "TSB 144-1136", "TSB 144-1137", "TSB 144-1143", "TSB 144-1144", "TSB 144-1145"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "toyota-avensis-nesil-belirlenmedi-16", "slug": "16", "engineId": "toyota-16", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Comfort", "Elegant", "Linea"], "bodyTypes": [], "sourceRefs": ["TSB 144-604", "TSB 144-616", "TSB 144-650"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "toyota-avensis-nesil-belirlenmedi-20", "slug": "20", "engineId": "toyota-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }, { "type": "cvt", "name": "Multidrive" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017], "trims": ["D Elegant", "Elegant", "Executive Elegant", "Premium S"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 144-610", "TSB 144-611", "TSB 144-612", "TSB 144-647", "TSB 144-713"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "toyota-avensis-nesil-belirlenmedi-20-d-4d", "slug": "20-d-4d", "engineId": "toyota-20-d-4d", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015], "trims": ["Elegant Executive", "Premium"], "bodyTypes": [], "sourceRefs": ["TSB 144-665", "TSB 144-714"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "toyota-avensis-nesil-belirlenmedi-16-132", "slug": "16-132", "engineId": "toyota-16-132", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2010, 2011, 2012, 2013, 2014, 2015], "trims": ["Elegant"], "bodyTypes": [], "sourceRefs": ["TSB 144-712"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

@@ -12,16 +12,17 @@
     {
       "id": "ds-ds3-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "DS3 (nesil belirlenmedi)",
+      "name": "DS3 — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2021 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "ds-ds3-nesil-belirlenmedi-15-bluehdi-130", "slug": "15-bluehdi-130", "engineId": "ds-15-bluehdi-130", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021], "trims": ["Crossback SO Chic", "Crossback Sochicbasti"], "bodyTypes": [], "sourceRefs": ["TSB 748-1008", "TSB 748-1013"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "ds-ds3-nesil-belirlenmedi-15-bluehdi-130", "slug": "15-bluehdi-130", "engineId": "ds-15-bluehdi-130", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021], "trims": ["Crossback SO Chic", "Crossback Sochicbasti"], "bodyTypes": [], "sourceRefs": ["TSB 748-1008", "TSB 748-1013"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

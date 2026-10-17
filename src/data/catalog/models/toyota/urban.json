@@ -12,16 +12,17 @@
     {
       "id": "toyota-urban-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Urban (nesil belirlenmedi)",
+      "name": "Urban — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2014 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "toyota-urban-nesil-belirlenmedi-14-d-4d", "slug": "14-d-4d", "engineId": "toyota-14-d-4d", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013, 2014], "trims": ["Cruiser Comfort", "Cruiser Elegant"], "bodyTypes": [], "sourceRefs": ["TSB 144-740", "TSB 144-741"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "toyota-urban-nesil-belirlenmedi-14-d-4d", "slug": "14-d-4d", "engineId": "toyota-14-d-4d", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013, 2014], "trims": ["Cruiser Comfort", "Cruiser Elegant"], "bodyTypes": [], "sourceRefs": ["TSB 144-740", "TSB 144-741"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

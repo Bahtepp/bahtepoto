@@ -12,17 +12,18 @@
     {
       "id": "toyota-proace-max-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Proace Max (nesil belirlenmedi)",
+      "name": "Proace Max — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "toyota-proace-max-nesil-belirlenmedi-22-140", "slug": "22-140", "engineId": "toyota-22-140", "revisionMapping": "unknown", "transmissions": [{ "type": "manual" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["13M3", "15M3 4.25T"], "bodyTypes": [], "sourceRefs": ["TSB 144-1409", "TSB 144-1428"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "toyota-proace-max-nesil-belirlenmedi-22-180", "slug": "22-180", "engineId": "toyota-22-180", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["15M3", "17M3"], "bodyTypes": [], "sourceRefs": ["TSB 144-1410", "TSB 144-1411"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "toyota-proace-max-nesil-belirlenmedi-22-140", "slug": "22-140", "engineId": "toyota-22-140", "revisionMapping": "unknown", "transmissions": [{ "type": "manual" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["13M3", "15M3 4.25T"], "bodyTypes": [], "sourceRefs": ["TSB 144-1409", "TSB 144-1428"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "toyota-proace-max-nesil-belirlenmedi-22-180", "slug": "22-180", "engineId": "toyota-22-180", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["15M3", "17M3"], "bodyTypes": [], "sourceRefs": ["TSB 144-1410", "TSB 144-1411"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

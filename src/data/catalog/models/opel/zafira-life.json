@@ -12,18 +12,19 @@
     {
       "id": "opel-zafira-life-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Zafira Life (nesil belirlenmedi)",
+      "name": "Zafira Life — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2024 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "opel-zafira-life-nesil-belirlenmedi-20", "slug": "20", "engineId": "opel-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019], "trims": ["Business DIZEL177 AT8"], "bodyTypes": [], "sourceRefs": ["TSB 111-1383"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "opel-zafira-life-nesil-belirlenmedi-20-dizel", "slug": "20-dizel", "engineId": "opel-20-dizel", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021], "trims": ["AT8 177 Elegance XL"], "bodyTypes": [], "sourceRefs": ["TSB 111-1519"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "opel-zafira-life-nesil-belirlenmedi-20-dizel-180", "slug": "20-dizel-180", "engineId": "opel-20-dizel-180", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023, 2024], "trims": ["Elegance XL AT8"], "bodyTypes": [], "sourceRefs": ["TSB 111-1616"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "opel-zafira-life-nesil-belirlenmedi-20", "slug": "20", "engineId": "opel-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019], "trims": ["Business DIZEL177 AT8"], "bodyTypes": [], "sourceRefs": ["TSB 111-1383"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "opel-zafira-life-nesil-belirlenmedi-20-dizel", "slug": "20-dizel", "engineId": "opel-20-dizel", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021], "trims": ["AT8 177 Elegance XL"], "bodyTypes": [], "sourceRefs": ["TSB 111-1519"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "opel-zafira-life-nesil-belirlenmedi-20-dizel-180", "slug": "20-dizel-180", "engineId": "opel-20-dizel-180", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023, 2024], "trims": ["Elegance XL AT8"], "bodyTypes": [], "sourceRefs": ["TSB 111-1616"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

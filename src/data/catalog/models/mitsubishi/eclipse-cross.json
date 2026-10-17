@@ -10,18 +10,32 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "mitsubishi-eclipse-cross-1-nesil",
+      "slug": "1-nesil",
+      "name": "Eclipse Cross 1. nesil",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2017 }, "end": null },
+      "status": "sourced",
+      "sourceIds": ["wpgen-53458521"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Mitsubishi Eclipse Cross\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
       "id": "mitsubishi-eclipse-cross-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Eclipse Cross (nesil belirlenmedi)",
+      "name": "Eclipse Cross — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2020 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "mitsubishi-eclipse-cross-nesil-belirlenmedi-15", "slug": "15", "engineId": "mitsubishi-15", "revisionMapping": "unknown", "transmissions": [{ "type": "manual" }, { "type": "cvt", "name": "CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2019, 2020], "trims": ["2WD Intense", "2WD Intense Plus", "2WD Invite", "2WD Invite Sport Pack", "Instyle", "Intense", "Intense Plus"], "bodyTypes": [], "sourceRefs": ["TSB 94-1061", "TSB 94-1062", "TSB 94-1063", "TSB 94-1064", "TSB 94-1065", "TSB 94-1079", "TSB 94-1086", "TSB 94-1090"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "mitsubishi-eclipse-cross-nesil-belirlenmedi-15", "slug": "15", "engineId": "mitsubishi-15", "revisionMapping": "unknown", "transmissions": [{ "type": "manual" }, { "type": "cvt", "name": "CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2019, 2020], "trims": ["2WD Intense", "2WD Intense Plus", "2WD Invite", "2WD Invite Sport Pack", "Instyle", "Intense", "Intense Plus"], "bodyTypes": [], "sourceRefs": ["TSB 94-1061", "TSB 94-1062", "TSB 94-1063", "TSB 94-1064", "TSB 94-1065", "TSB 94-1079", "TSB 94-1086", "TSB 94-1090"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

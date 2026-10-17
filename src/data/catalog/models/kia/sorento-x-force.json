@@ -12,16 +12,17 @@
     {
       "id": "kia-sorento-x-force-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Sorento X-FORCE (nesil belirlenmedi)",
+      "name": "Sorento X-FORCE — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "kia-sorento-x-force-nesil-belirlenmedi-25", "slug": "25", "engineId": "kia-25", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Dsl EX Active", "Dsl EX Premium", "Dsl EX Superior", "Dsl Prestige"], "bodyTypes": [], "sourceRefs": ["TSB 800-136", "TSB 800-137", "TSB 800-138", "TSB 800-151"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "kia-sorento-x-force-nesil-belirlenmedi-25", "slug": "25", "engineId": "kia-25", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Dsl EX Active", "Dsl EX Premium", "Dsl EX Superior", "Dsl Prestige"], "bodyTypes": [], "sourceRefs": ["TSB 800-136", "TSB 800-137", "TSB 800-138", "TSB 800-151"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

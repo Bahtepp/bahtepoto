@@ -12,17 +12,18 @@
     {
       "id": "suzuki-baleno-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Baleno (nesil belirlenmedi)",
+      "name": "Baleno — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2018 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "suzuki-baleno-nesil-belirlenmedi-12-90", "slug": "12-90", "engineId": "suzuki-12-90", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017], "trims": ["GL"], "bodyTypes": [], "sourceRefs": ["TSB 130-1027", "TSB 130-1028"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "suzuki-baleno-nesil-belirlenmedi-12", "slug": "12", "engineId": "suzuki-12", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018], "trims": ["Techno"], "bodyTypes": [], "sourceRefs": ["TSB 130-1038", "TSB 130-1039"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "suzuki-baleno-nesil-belirlenmedi-12-90", "slug": "12-90", "engineId": "suzuki-12-90", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017], "trims": ["GL"], "bodyTypes": [], "sourceRefs": ["TSB 130-1027", "TSB 130-1028"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "suzuki-baleno-nesil-belirlenmedi-12", "slug": "12", "engineId": "suzuki-12", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018], "trims": ["Techno"], "bodyTypes": [], "sourceRefs": ["TSB 130-1038", "TSB 130-1039"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

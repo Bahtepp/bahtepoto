@@ -10,25 +10,85 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "nissan-x-trail-t30",
+      "slug": "t30",
+      "name": "X-TRAIL 1. nesil (T30)",
+      "code": "T30",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2000 }, "end": { "year": 2014 }, "approximate": true },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1849060"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Nissan X-Trail\" bilgi kutusundan (farklı pazarlar: Japan; Thailand; Taiwan; Indonesia; Malaysia; Philippines); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "nissan-x-trail-t31",
+      "slug": "t31",
+      "name": "X-TRAIL 2. nesil (T31)",
+      "code": "T31",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2007 }, "end": { "year": 2019 }, "approximate": true },
+      "engineDisplacementsL": [2],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1849060"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Nissan X-Trail\" bilgi kutusundan (farklı pazarlar: Japan; Indonesia, Russia; China); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "nissan-x-trail-t32",
+      "slug": "t32",
+      "name": "X-TRAIL 3. nesil (T32)",
+      "code": "T32",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2013 }, "end": { "year": 2022 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1849060"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Nissan X-Trail\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "nissan-x-trail-t33",
+      "slug": "t33",
+      "name": "X-TRAIL 4. nesil (T33)",
+      "code": "T33",
+      "order": 4,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2021 }, "end": null },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1849060"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Nissan X-Trail\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "nissan-x-trail-t33-15-dig-t-163", "slug": "15-dig-t-163", "engineId": "nissan-15-dig-t-163", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["X-TRONIC PLT.PREMI", "X-TRONIC Platinum"], "bodyTypes": [], "sourceRefs": ["TSB 107-1251", "TSB 107-1252"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
       "id": "nissan-x-trail-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "X-TRAIL (nesil belirlenmedi)",
+      "name": "X-TRAIL — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2026 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2024 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "nissan-x-trail-nesil-belirlenmedi-20", "slug": "20", "engineId": "nissan-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }, { "type": "cvt", "name": "CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Elegance", "LE", "SE", "Sport"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 107-223", "TSB 107-224", "TSB 107-270", "TSB 107-271"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "nissan-x-trail-nesil-belirlenmedi-20-dci", "slug": "20-dci", "engineId": "nissan-20-dci", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014], "trims": ["LE", "Platinum", "SE"], "bodyTypes": [], "sourceRefs": ["TSB 107-272", "TSB 107-273", "TSB 107-317"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "nissan-x-trail-nesil-belirlenmedi-16-dci", "slug": "16-dci", "engineId": "nissan-16-dci", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "Xtronic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016, 2017, 2018], "trims": ["Black Edition 4x2", "Black Edition 4x2 X-TRONIC", "Design Pack 19 Alloy", "Design Pack 19 Alloy 4x2", "Platinum 4x2", "Platinum 4x2 X-TRONIC", "Platinum Premium 4x2 X-TRONIC", "Platinum Premium Pack 4x2", "Sky Pack", "Sky Pack 4X2", "Sky Pack 4x2 X-TRONIC", "Visia 17 Alloy 4X2"], "bodyTypes": [], "sourceRefs": ["TSB 107-1076", "TSB 107-1077", "TSB 107-1078", "TSB 107-1079", "TSB 107-1080", "TSB 107-1081", "TSB 107-1082", "TSB 107-1083", "TSB 107-1084", "TSB 107-1085", "TSB 107-1086", "TSB 107-1087", "TSB 107-1088"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "nissan-x-trail-nesil-belirlenmedi-16-dci-130", "slug": "16-dci-130", "engineId": "nissan-16-dci-130", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018], "trims": ["Design Pack X-TRONIC", "Platinum", "Platinum X-TRONIC"], "bodyTypes": [], "sourceRefs": ["TSB 107-1133", "TSB 107-1134", "TSB 107-1135"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "nissan-x-trail-nesil-belirlenmedi-13-dig-t-160", "slug": "13-dig-t-160", "engineId": "nissan-13-dig-t-160", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DCT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020], "trims": ["Design Pack", "Platinum", "Platinum 7 Koltuk"], "bodyTypes": [], "sourceRefs": ["TSB 107-1182", "TSB 107-1183", "TSB 107-1184"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "nissan-x-trail-nesil-belirlenmedi-13-dig-t-158", "slug": "13-dig-t-158", "engineId": "nissan-13-dig-t-158", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DCT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021], "trims": ["Design Pack", "Platinum 5 Kisilik", "Platinum 7 Koltuk"], "bodyTypes": [], "sourceRefs": ["TSB 107-1202", "TSB 107-1203", "TSB 107-1204"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "nissan-x-trail-nesil-belirlenmedi-15-dig-t-163", "slug": "15-dig-t-163", "engineId": "nissan-15-dig-t-163", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2023, 2024, 2025, 2026], "trims": ["Ice Platinumpremium", "Ice Skypack", "X-TRONIC PLT.PREMI", "X-TRONIC Platinum"], "bodyTypes": [], "sourceRefs": ["TSB 107-1234", "TSB 107-1235", "TSB 107-1251", "TSB 107-1252"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "nissan-x-trail-nesil-belirlenmedi-213", "slug": "213", "engineId": "nissan-213", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2023], "trims": ["E-POWER E-4ORCE PLAT.PREM. 7K", "E-POWER E-4ORCE PLATINUMPREM.", "E-POWER E-4ORCE Skypack"], "bodyTypes": [], "sourceRefs": ["TSB 107-1236", "TSB 107-1237", "TSB 107-1238"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "nissan-x-trail-nesil-belirlenmedi-20", "slug": "20", "engineId": "nissan-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }, { "type": "cvt", "name": "CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Elegance", "LE", "SE", "Sport"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 107-223", "TSB 107-224", "TSB 107-270", "TSB 107-271"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "nissan-x-trail-nesil-belirlenmedi-20-dci", "slug": "20-dci", "engineId": "nissan-20-dci", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014], "trims": ["LE", "Platinum", "SE"], "bodyTypes": [], "sourceRefs": ["TSB 107-272", "TSB 107-273", "TSB 107-317"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "nissan-x-trail-nesil-belirlenmedi-16-dci", "slug": "16-dci", "engineId": "nissan-16-dci", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "Xtronic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016, 2017, 2018], "trims": ["Black Edition 4x2", "Black Edition 4x2 X-TRONIC", "Design Pack 19 Alloy", "Design Pack 19 Alloy 4x2", "Platinum 4x2", "Platinum 4x2 X-TRONIC", "Platinum Premium 4x2 X-TRONIC", "Platinum Premium Pack 4x2", "Sky Pack", "Sky Pack 4X2", "Sky Pack 4x2 X-TRONIC", "Visia 17 Alloy 4X2"], "bodyTypes": [], "sourceRefs": ["TSB 107-1076", "TSB 107-1077", "TSB 107-1078", "TSB 107-1079", "TSB 107-1080", "TSB 107-1081", "TSB 107-1082", "TSB 107-1083", "TSB 107-1084", "TSB 107-1085", "TSB 107-1086", "TSB 107-1087", "TSB 107-1088"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "nissan-x-trail-nesil-belirlenmedi-16-dci-130", "slug": "16-dci-130", "engineId": "nissan-16-dci-130", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018], "trims": ["Design Pack X-TRONIC", "Platinum", "Platinum X-TRONIC"], "bodyTypes": [], "sourceRefs": ["TSB 107-1133", "TSB 107-1134", "TSB 107-1135"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "nissan-x-trail-nesil-belirlenmedi-13-dig-t-160", "slug": "13-dig-t-160", "engineId": "nissan-13-dig-t-160", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DCT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020], "trims": ["Design Pack", "Platinum", "Platinum 7 Koltuk"], "bodyTypes": [], "sourceRefs": ["TSB 107-1182", "TSB 107-1183", "TSB 107-1184"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "nissan-x-trail-nesil-belirlenmedi-13-dig-t-158", "slug": "13-dig-t-158", "engineId": "nissan-13-dig-t-158", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DCT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021], "trims": ["Design Pack", "Platinum 5 Kisilik", "Platinum 7 Koltuk"], "bodyTypes": [], "sourceRefs": ["TSB 107-1202", "TSB 107-1203", "TSB 107-1204"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "nissan-x-trail-nesil-belirlenmedi-15-dig-t-163", "slug": "15-dig-t-163", "engineId": "nissan-15-dig-t-163", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2023, 2024], "trims": ["Ice Platinumpremium", "Ice Skypack"], "bodyTypes": [], "sourceRefs": ["TSB 107-1234", "TSB 107-1235"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "nissan-x-trail-nesil-belirlenmedi-213", "slug": "213", "engineId": "nissan-213", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2023], "trims": ["E-POWER E-4ORCE PLAT.PREM. 7K", "E-POWER E-4ORCE PLATINUMPREM.", "E-POWER E-4ORCE Skypack"], "bodyTypes": [], "sourceRefs": ["TSB 107-1236", "TSB 107-1237", "TSB 107-1238"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

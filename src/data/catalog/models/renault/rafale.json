@@ -10,18 +10,19 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "renault-rafale-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Rafale (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2025 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "renault-rafale-uretim-2024",
+      "slug": "uretim-2024",
+      "name": "Rafale",
+      "order": 224,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2024 }, "end": null },
+      "engineDisplacementsL": [1.2],
+      "status": "sourced",
+      "sourceIds": ["wpgen-73812681"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Renault Rafale\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "renault-rafale-nesil-belirlenmedi-plug-in-300", "slug": "plug-in-300", "engineId": "renault-plug-in-300", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025], "trims": ["Esprit Alpine Hyper E."], "bodyTypes": [], "sourceRefs": ["TSB 123-2317"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "renault-rafale-uretim-2024-plug-in-300", "slug": "plug-in-300", "engineId": "renault-plug-in-300", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025], "trims": ["Esprit Alpine Hyper E."], "bodyTypes": [], "sourceRefs": ["TSB 123-2317"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

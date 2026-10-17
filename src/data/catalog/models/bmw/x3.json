@@ -10,28 +10,92 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "bmw-x3-e83",
+      "slug": "e83",
+      "name": "X3 1. nesil (E83)",
+      "code": "E83",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2003 }, "end": { "year": 2010 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1527538"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"BMW X3\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "bmw-x3-f25",
+      "slug": "f25",
+      "name": "X3 2. nesil (F25)",
+      "code": "F25",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2010 }, "end": { "year": 2017 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1527538"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"BMW X3\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "bmw-x3-f25-20i", "slug": "20i", "engineId": "bmw-20i", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015], "trims": ["Sdrive M Sport"], "bodyTypes": [], "sourceRefs": ["TSB 21-1380"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "bmw-x3-f25-20", "slug": "20", "engineId": "bmw-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013], "trims": ["SDRIVE18d"], "bodyTypes": [], "sourceRefs": ["TSB 21-1978"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
+      "id": "bmw-x3-g01",
+      "slug": "g01",
+      "name": "X3 3. nesil (G01)",
+      "code": "G01",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2017 }, "end": { "year": 2024 } },
+      "engineDisplacementsL": [2, 3],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1527538"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"BMW X3\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "bmw-x3-g01-20-190", "slug": "20-190", "engineId": "bmw-20-190", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022], "trims": ["Lci 20d", "Lci SDRIVE20d M Sport", "Lci SDRIVE20d X Line"], "bodyTypes": [], "sourceRefs": ["TSB 21-1908", "TSB 21-1916", "TSB 21-1917"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "bmw-x3-g01-hybrid", "slug": "hybrid", "engineId": "bmw-hybrid", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020], "trims": ["XDRIVE20D"], "bodyTypes": [], "sourceRefs": ["TSB 21-1956"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
+      "id": "bmw-x3-g45-na5",
+      "slug": "g45-na5",
+      "name": "X3 (G45/G48)",
+      "code": "G45/NA5",
+      "order": 4,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2024 }, "end": null },
+      "engineDisplacementsL": [2, 3],
+      "status": "sourced",
+      "sourceIds": ["wpgen-78561300"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"BMW X3 (G45)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
       "id": "bmw-x3-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "X3 (nesil belirlenmedi)",
+      "name": "X3 — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2026 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "bmw-x3-nesil-belirlenmedi-30", "slug": "30", "engineId": "bmw-30", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 21-490", "TSB 21-491", "TSB 21-541", "TSB 21-542"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "bmw-x3-nesil-belirlenmedi-25", "slug": "25", "engineId": "bmw-25", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 21-492", "TSB 21-540"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "bmw-x3-nesil-belirlenmedi-20", "slug": "20", "engineId": "bmw-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2013], "trims": ["Premium", "SDRIVE18d"], "bodyTypes": [], "sourceRefs": ["TSB 21-1978", "TSB 21-497", "TSB 21-573"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "bmw-x3-nesil-belirlenmedi-35", "slug": "35", "engineId": "bmw-35", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 21-594"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "bmw-x3-nesil-belirlenmedi-20i", "slug": "20i", "engineId": "bmw-20i", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016], "trims": ["Sdrive", "Sdrive M Sport"], "bodyTypes": [], "sourceRefs": ["TSB 21-1072", "TSB 21-1380"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "bmw-x3-nesil-belirlenmedi-16-170", "slug": "16-170", "engineId": "bmw-16-170", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024], "trims": ["Lci SDRIVE20i M Sport", "Lci SDRIVE20i X Line", "SDIRVE20i First Edition Luxury", "SDRIVE20i", "SDRIVE20i First Edition M", "SDRIVE20i First Edition X", "SDRIVE20i Joy", "SDRIVE20i Luxury Line", "SDRIVE20i M Plus", "SDRIVE20i M Sport", "SDRIVE20i M Sport FL", "SDRIVE20i Prestige", "SDRIVE20i Pure", "SDRIVE20i X Line", "SDRIVE20i X Plus", "SDRIVE20i X-LINE FL"], "bodyTypes": [], "sourceRefs": ["TSB 21-1321", "TSB 21-1322", "TSB 21-1323", "TSB 21-1324", "TSB 21-1555", "TSB 21-1633", "TSB 21-1634", "TSB 21-1635", "TSB 21-1727", "TSB 21-1728", "TSB 21-1729", "TSB 21-1734", "TSB 21-1898", "TSB 21-1899", "TSB 21-2002", "TSB 21-2003"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "bmw-x3-nesil-belirlenmedi-20-190", "slug": "20-190", "engineId": "bmw-20-190", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024], "trims": ["Lci 20d", "Lci SDRIVE20d M Sport", "Lci SDRIVE20d X Line", "Lci XDRIVE20d X-LINE", "Lci XRIVE20d M Sport", "XDRIVE20d First Edition Luxury", "XDRIVE20d First Edition M", "XDRIVE20d First Edition X", "XDRIVE20d Joy", "XDRIVE20d Luxury Line", "XDRIVE20d M Plus", "XDRIVE20d M Sport", "XDRIVE20d Prestige", "XDRIVE20d Pure", "XDRIVE20d X Line", "XDRIVE20d X Plus"], "bodyTypes": [], "sourceRefs": ["TSB 21-1325", "TSB 21-1326", "TSB 21-1327", "TSB 21-1328", "TSB 21-1556", "TSB 21-1571", "TSB 21-1576", "TSB 21-1578", "TSB 21-1730", "TSB 21-1731", "TSB 21-1732", "TSB 21-1908", "TSB 21-1916", "TSB 21-1917", "TSB 21-1921", "TSB 21-1922"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "bmw-x3-nesil-belirlenmedi-hybrid", "slug": "hybrid", "engineId": "bmw-hybrid", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020], "trims": ["XDRIVE20D"], "bodyTypes": [], "sourceRefs": ["TSB 21-1956"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "bmw-x3-nesil-belirlenmedi-20-245", "slug": "20-245", "engineId": "bmw-20-245", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023], "trims": ["Lci XDRIVE30i M Sport"], "bodyTypes": [], "sourceRefs": ["TSB 21-1979"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "bmw-x3-nesil-belirlenmedi-20-197", "slug": "20-197", "engineId": "bmw-20-197", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["XRIVE20d M Sport", "xDRIVE20d M Sport"], "bodyTypes": [], "sourceRefs": ["TSB 21-2039", "TSB 21-2044"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "bmw-x3-nesil-belirlenmedi-16-190", "slug": "16-190", "engineId": "bmw-16-190", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["20 M Sport", "20 X-LINE"], "bodyTypes": [], "sourceRefs": ["TSB 21-2045", "TSB 21-2046"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "bmw-x3-nesil-belirlenmedi-30", "slug": "30", "engineId": "bmw-30", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 21-490", "TSB 21-491", "TSB 21-541", "TSB 21-542"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "bmw-x3-nesil-belirlenmedi-25", "slug": "25", "engineId": "bmw-25", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 21-492", "TSB 21-540"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "bmw-x3-nesil-belirlenmedi-20", "slug": "20", "engineId": "bmw-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Premium"], "bodyTypes": [], "sourceRefs": ["TSB 21-497", "TSB 21-573"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "bmw-x3-nesil-belirlenmedi-35", "slug": "35", "engineId": "bmw-35", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 21-594"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "bmw-x3-nesil-belirlenmedi-20i", "slug": "20i", "engineId": "bmw-20i", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016], "trims": ["Sdrive"], "bodyTypes": [], "sourceRefs": ["TSB 21-1072"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "bmw-x3-nesil-belirlenmedi-16-170", "slug": "16-170", "engineId": "bmw-16-170", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024], "trims": ["Lci SDRIVE20i M Sport", "Lci SDRIVE20i X Line", "SDIRVE20i First Edition Luxury", "SDRIVE20i", "SDRIVE20i First Edition M", "SDRIVE20i First Edition X", "SDRIVE20i Joy", "SDRIVE20i Luxury Line", "SDRIVE20i M Plus", "SDRIVE20i M Sport", "SDRIVE20i M Sport FL", "SDRIVE20i Prestige", "SDRIVE20i Pure", "SDRIVE20i X Line", "SDRIVE20i X Plus", "SDRIVE20i X-LINE FL"], "bodyTypes": [], "sourceRefs": ["TSB 21-1321", "TSB 21-1322", "TSB 21-1323", "TSB 21-1324", "TSB 21-1555", "TSB 21-1633", "TSB 21-1634", "TSB 21-1635", "TSB 21-1727", "TSB 21-1728", "TSB 21-1729", "TSB 21-1734", "TSB 21-1898", "TSB 21-1899", "TSB 21-2002", "TSB 21-2003"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "bmw-x3-nesil-belirlenmedi-20-190", "slug": "20-190", "engineId": "bmw-20-190", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024], "trims": ["Lci XDRIVE20d X-LINE", "Lci XRIVE20d M Sport", "XDRIVE20d First Edition Luxury", "XDRIVE20d First Edition M", "XDRIVE20d First Edition X", "XDRIVE20d Joy", "XDRIVE20d Luxury Line", "XDRIVE20d M Plus", "XDRIVE20d M Sport", "XDRIVE20d Prestige", "XDRIVE20d Pure", "XDRIVE20d X Line", "XDRIVE20d X Plus"], "bodyTypes": [], "sourceRefs": ["TSB 21-1325", "TSB 21-1326", "TSB 21-1327", "TSB 21-1328", "TSB 21-1556", "TSB 21-1571", "TSB 21-1576", "TSB 21-1578", "TSB 21-1730", "TSB 21-1731", "TSB 21-1732", "TSB 21-1921", "TSB 21-1922"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "bmw-x3-nesil-belirlenmedi-20-245", "slug": "20-245", "engineId": "bmw-20-245", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023], "trims": ["Lci XDRIVE30i M Sport"], "bodyTypes": [], "sourceRefs": ["TSB 21-1979"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "bmw-x3-nesil-belirlenmedi-20-197", "slug": "20-197", "engineId": "bmw-20-197", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["XRIVE20d M Sport", "xDRIVE20d M Sport"], "bodyTypes": [], "sourceRefs": ["TSB 21-2039", "TSB 21-2044"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "bmw-x3-nesil-belirlenmedi-16-190", "slug": "16-190", "engineId": "bmw-16-190", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["20 M Sport", "20 X-LINE"], "bodyTypes": [], "sourceRefs": ["TSB 21-2045", "TSB 21-2046"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

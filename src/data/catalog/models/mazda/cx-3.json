@@ -10,18 +10,18 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "mazda-cx-3-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "CX-3 (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2020 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "mazda-cx-3-uretim-2014",
+      "slug": "uretim-2014",
+      "name": "CX-3",
+      "order": 214,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2014 }, "end": null },
+      "status": "sourced",
+      "sourceIds": ["wpgen-44468830"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Mazda CX-3\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "mazda-cx-3-nesil-belirlenmedi-15", "slug": "15", "engineId": "mazda-15", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018, 2019, 2020], "trims": ["SKY-D Motion", "SKY-D Power", "SKY-D Power Sense", "SKY-D Power Sense Plus", "SKY-D Reflex"], "bodyTypes": [], "sourceRefs": ["TSB 89-1031", "TSB 89-1032", "TSB 89-1033", "TSB 89-1034", "TSB 89-1035", "TSB 89-1036", "TSB 89-1056"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "mazda-cx-3-uretim-2014-15", "slug": "15", "engineId": "mazda-15", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018, 2019, 2020], "trims": ["SKY-D Motion", "SKY-D Power", "SKY-D Power Sense", "SKY-D Power Sense Plus", "SKY-D Reflex"], "bodyTypes": [], "sourceRefs": ["TSB 89-1031", "TSB 89-1032", "TSB 89-1033", "TSB 89-1034", "TSB 89-1035", "TSB 89-1036", "TSB 89-1056"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

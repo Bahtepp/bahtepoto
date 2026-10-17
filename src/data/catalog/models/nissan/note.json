@@ -10,22 +10,66 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "nissan-note-e11",
+      "slug": "e11",
+      "name": "Note 1. nesil (E11)",
+      "code": "E11",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2004 }, "end": { "year": 2013 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-4148881"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Nissan Note\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "nissan-note-e12",
+      "slug": "e12",
+      "name": "Note 2. nesil (E12)",
+      "code": "E12",
+      "order": 2,
+      "labelPeriod": { "marketId": "eu", "basis": "production", "start": { "year": 2012 }, "end": { "year": 2022 } },
+      "engineDisplacementsL": [1.5],
+      "status": "sourced",
+      "sourceIds": ["wpgen-4148881"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Nissan Note\" bilgi kutusundan (Japan; United Kingdom; Mexico; Thailand). Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "nissan-note-e13",
+      "slug": "e13",
+      "name": "Note 3. nesil (E13)",
+      "code": "E13",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2020 }, "end": null },
+      "status": "sourced",
+      "sourceIds": ["wpgen-4148881"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Nissan Note\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
       "id": "nissan-note-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Note (nesil belirlenmedi)",
+      "name": "Note — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2016 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "nissan-note-nesil-belirlenmedi-14-88", "slug": "14-88", "engineId": "nissan-14-88", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013], "trims": ["Tekna", "Visia"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 107-250", "TSB 107-253"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "nissan-note-nesil-belirlenmedi-16-110", "slug": "16-110", "engineId": "nissan-16-110", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["Tekna", "Visia"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 107-251", "TSB 107-252", "TSB 107-254", "TSB 107-255"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "nissan-note-nesil-belirlenmedi-15-dci", "slug": "15-dci", "engineId": "nissan-15-dci", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016], "trims": ["Platinum", "Tekna", "Tekna Pack", "Visia"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 107-1019", "TSB 107-1043", "TSB 107-1044", "TSB 107-1045", "TSB 107-267", "TSB 107-268"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "nissan-note-nesil-belirlenmedi-16", "slug": "16", "engineId": "nissan-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013], "trims": ["Tekna Pack"], "bodyTypes": [], "sourceRefs": ["TSB 107-1024"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "nissan-note-nesil-belirlenmedi-12", "slug": "12", "engineId": "nissan-12", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2015, 2016], "trims": ["Tekna", "Visia"], "bodyTypes": [], "sourceRefs": ["TSB 107-1041", "TSB 107-1042"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "nissan-note-nesil-belirlenmedi-14-88", "slug": "14-88", "engineId": "nissan-14-88", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013], "trims": ["Tekna", "Visia"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 107-250", "TSB 107-253"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "nissan-note-nesil-belirlenmedi-16-110", "slug": "16-110", "engineId": "nissan-16-110", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["Tekna", "Visia"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 107-251", "TSB 107-252", "TSB 107-254", "TSB 107-255"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "nissan-note-nesil-belirlenmedi-15-dci", "slug": "15-dci", "engineId": "nissan-15-dci", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016], "trims": ["Platinum", "Tekna", "Tekna Pack", "Visia"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 107-1019", "TSB 107-1043", "TSB 107-1044", "TSB 107-1045", "TSB 107-267", "TSB 107-268"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "nissan-note-nesil-belirlenmedi-16", "slug": "16", "engineId": "nissan-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013], "trims": ["Tekna Pack"], "bodyTypes": [], "sourceRefs": ["TSB 107-1024"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "nissan-note-nesil-belirlenmedi-12", "slug": "12", "engineId": "nissan-12", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2015, 2016], "trims": ["Tekna", "Visia"], "bodyTypes": [], "sourceRefs": ["TSB 107-1041", "TSB 107-1042"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

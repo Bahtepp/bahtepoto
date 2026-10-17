@@ -318,3 +318,27 @@ export function candidateTitles(brand: string, model: string): string[] {
   for (const f of [...forms]) forms.add(title(f));
   return [...forms].map((f) => `${brand} ${f}`);
 }
+
+const norm = (s: string) =>
+  s
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/\s*\(.*\)\s*$/, '')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+
+/**
+ * Bir modelin Wikipedia adaylarının kataloğa otomatik aktarılıp aktarılamayacağı.
+ * Döndürülen metin dışarıda bırakma nedenidir; `undefined` aktarılabilir.
+ */
+export function importBlocker(mg: ModelGenerations, brand: string, modelName: string): string | undefined {
+  if (mg.status !== 'found' || mg.generations.length === 0) return `nesil bulunamadı (${mg.status})`;
+  if (mg.conflicts.length > 0) return `kaynakta çelişki: ${mg.conflicts.join(' · ')}`;
+  // Marka ve model kimliği: madde başlığı markayla başlamalı ve model adını (veya İngilizce karşılığını) içermeli.
+  const title = norm(mg.article ?? '');
+  const forms = candidateTitles(brand, modelName).map((t) => norm(t));
+  const tight = (x: string) => x.replace(/ /g, "");
+  if (!forms.some((f) => title === f || title.startsWith(`${f} `) || tight(title) === tight(f))) return `Wikipedia maddesi ("${mg.article}") bu modelle açıkça eşleşmiyor`;
+  return undefined;
+}

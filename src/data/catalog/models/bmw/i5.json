@@ -12,17 +12,18 @@
     {
       "id": "bmw-i5-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "I5 (nesil belirlenmedi)",
+      "name": "I5 — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2026 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "bmw-i5-nesil-belirlenmedi-160", "slug": "160", "engineId": "bmw-160", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023, 2024, 2025, 2026], "trims": ["EDRIVE40 Edition M Sport", "EDRIVE40 Luxury Line", "EDRIVE40 M Sport"], "bodyTypes": [], "sourceRefs": ["TSB 21-1986", "TSB 21-2001", "TSB 21-2057"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "bmw-i5-nesil-belirlenmedi-40-290", "slug": "40-290", "engineId": "bmw-40-290", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["Edition M Sport", "Luxury Line", "M Sport"], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 21-2007", "TSB 21-2008", "TSB 21-2040", "TSB 21-2058", "TSB 21-2059"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "bmw-i5-nesil-belirlenmedi-160", "slug": "160", "engineId": "bmw-160", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023, 2024, 2025, 2026], "trims": ["EDRIVE40 Edition M Sport", "EDRIVE40 Luxury Line", "EDRIVE40 M Sport"], "bodyTypes": [], "sourceRefs": ["TSB 21-1986", "TSB 21-2001", "TSB 21-2057"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "bmw-i5-nesil-belirlenmedi-40-290", "slug": "40-290", "engineId": "bmw-40-290", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["Edition M Sport", "Luxury Line", "M Sport"], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 21-2007", "TSB 21-2008", "TSB 21-2040", "TSB 21-2058", "TSB 21-2059"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

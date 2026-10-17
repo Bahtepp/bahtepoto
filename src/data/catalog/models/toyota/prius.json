@@ -10,20 +10,93 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "toyota-prius-xw10",
+      "slug": "xw10",
+      "name": "Prius (XW10)",
+      "code": "XW10",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1997 }, "end": { "year": 2003 }, "approximate": true },
+      "engineDisplacementsL": [1.5],
+      "status": "sourced",
+      "sourceIds": ["wpgen-29762304"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Toyota Prius (XW10)\" bilgi kutusundan (farklı pazarlar: NHW10; NHW11); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "toyota-prius-xw20",
+      "slug": "xw20",
+      "name": "Prius (XW20)",
+      "code": "XW20",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2003 }, "end": { "year": 2012 }, "approximate": true },
+      "engineDisplacementsL": [1.5],
+      "status": "sourced",
+      "sourceIds": ["wpgen-29762303"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Toyota Prius (XW20)\" bilgi kutusundan (farklı pazarlar: Japan; China); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "toyota-prius-xw30",
+      "slug": "xw30",
+      "name": "Prius (XW30)",
+      "code": "XW30",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2009 }, "end": { "year": 2016 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-29762302"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Toyota Prius (XW30)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "toyota-prius-xw50",
+      "slug": "xw50",
+      "name": "Prius (XW50)",
+      "code": "XW50",
+      "order": 4,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2015 }, "end": { "year": 2022 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-49813095"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Toyota Prius (XW50)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "toyota-prius-xw60",
+      "slug": "xw60",
+      "name": "Prius 5. nesil (XW60)",
+      "code": "XW60",
+      "order": 5,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2022 }, "end": null },
+      "status": "sourced",
+      "sourceIds": ["wpgen-346651"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Toyota Prius\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
       "id": "toyota-prius-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Prius (nesil belirlenmedi)",
+      "name": "Prius — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2018 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "toyota-prius-nesil-belirlenmedi-18-vvt-i", "slug": "18-vvt-i", "engineId": "toyota-18-vvt-i", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013, 2014, 2015], "trims": ["Hibrid Elegant", "Hibrid Premium"], "bodyTypes": [], "sourceRefs": ["TSB 144-745", "TSB 144-746"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "toyota-prius-nesil-belirlenmedi-15-hybrid", "slug": "15-hybrid", "engineId": "toyota-15-hybrid", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2013], "trims": ["C", "Triptronic"], "bodyTypes": [], "sourceRefs": ["TSB 144-1125", "TSB 144-1418"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "toyota-prius-nesil-belirlenmedi-18-hybrid", "slug": "18-hybrid", "engineId": "toyota-18-hybrid", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018], "trims": ["Advance", "Premium", "Synergy Drive Elegant", "Synergy Drive Premium"], "bodyTypes": [], "sourceRefs": ["TSB 144-1126", "TSB 144-1127", "TSB 144-1180", "TSB 144-1236"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "toyota-prius-nesil-belirlenmedi-18-vvt-i", "slug": "18-vvt-i", "engineId": "toyota-18-vvt-i", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013, 2014, 2015], "trims": ["Hibrid Elegant", "Hibrid Premium"], "bodyTypes": [], "sourceRefs": ["TSB 144-745", "TSB 144-746"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "toyota-prius-nesil-belirlenmedi-15-hybrid", "slug": "15-hybrid", "engineId": "toyota-15-hybrid", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2013], "trims": ["C", "Triptronic"], "bodyTypes": [], "sourceRefs": ["TSB 144-1125", "TSB 144-1418"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "toyota-prius-nesil-belirlenmedi-18-hybrid", "slug": "18-hybrid", "engineId": "toyota-18-hybrid", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018], "trims": ["Advance", "Premium", "Synergy Drive Elegant", "Synergy Drive Premium"], "bodyTypes": [], "sourceRefs": ["TSB 144-1126", "TSB 144-1127", "TSB 144-1180", "TSB 144-1236"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

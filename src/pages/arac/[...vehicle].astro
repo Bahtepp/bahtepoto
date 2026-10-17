@@ -129,15 +129,23 @@ const description = `${title} ${subtitle}: motor özellikleri, kronik sorunlar v
       <dl class="spec-grid">
         <div><dt>Marka</dt><dd>{brand.name}</dd></div>
         <div><dt>Model</dt><dd>{model.name}</dd></div>
-        <div><dt>Nesil</dt><dd>{genLabel}</dd></div>
-        <div><dt>Kasa / platform kodu</dt><dd>{generation.code ?? <span class="pending">Veri doğrulanıyor</span>}</dd></div>
-        <div>
-          <dt>Nesil yılları</dt>
-          <dd>
-            {formatYearRange(generation.labelPeriod, true)} · {catalog.marketById.get(generation.labelPeriod.marketId)?.name} ·{' '}
-            {BASIS_LABELS[generation.labelPeriod.basis]}
-          </dd>
-        </div>
+        {
+          generation.kind === 'unassigned' ? (
+            <div><dt>Nesil / kasa</dt><dd><span class="pending">Kaynaklarda belirlenmedi</span> (araç model yılı ve motorla listelendi)</dd></div>
+          ) : (
+            <>
+              <div><dt>Nesil</dt><dd>{genLabel}</dd></div>
+              <div><dt>Kasa / platform kodu</dt><dd>{generation.code ?? <span class="pending">Veri doğrulanıyor</span>}</dd></div>
+              <div>
+                <dt>Nesil yılları</dt>
+                <dd>
+                  {formatYearRange(generation.labelPeriod, true)} · {catalog.marketById.get(generation.labelPeriod.marketId)?.name} ·{' '}
+                  {BASIS_LABELS[generation.labelPeriod.basis]}
+                </dd>
+              </div>
+            </>
+          )
+        }
         {
           revision && (
             <div>

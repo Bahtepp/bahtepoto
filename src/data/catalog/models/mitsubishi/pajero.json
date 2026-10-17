@@ -10,20 +10,76 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "mitsubishi-pajero-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Pajero (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2021 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "mitsubishi-pajero-l040-l140",
+      "slug": "l040-l140",
+      "name": "Pajero 1. nesil (L040/L140)",
+      "code": "L040/L140",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1982 }, "end": { "year": 1991 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1983488"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Mitsubishi Pajero\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "mitsubishi-pajero-v20-v30-v40",
+      "slug": "v20-v30-v40",
+      "name": "Pajero 2. nesil (V20/V30/V40)",
+      "code": "V20/V30/V40",
+      "order": 2,
+      "labelPeriod": { "marketId": "eu", "basis": "production", "start": { "year": 1999 }, "end": { "year": 2005 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1983488"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Mitsubishi Pajero\" bilgi kutusundan (Spain: Galloper España). Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "mitsubishi-pajero-v60-v70",
+      "slug": "v60-v70",
+      "name": "Pajero 3. nesil (V60/V70)",
+      "code": "V60/V70",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1999 }, "end": { "year": 2006 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1983488"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Mitsubishi Pajero\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "mitsubishi-pajero-v80-v90",
+      "slug": "v80-v90",
+      "name": "Pajero 4. nesil (V80/V90)",
+      "code": "V80/V90",
+      "order": 4,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2006 }, "end": { "year": 2021 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1983488"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Mitsubishi Pajero\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "mitsubishi-pajero-nesil-belirlenmedi-32", "slug": "32", "engineId": "mitsubishi-32", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017], "trims": ["BK Didc Gls Instyle", "Dakar", "Did Instyle"], "bodyTypes": [], "sourceRefs": ["TSB 94-1027", "TSB 94-356", "TSB 94-365"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "mitsubishi-pajero-nesil-belirlenmedi-38", "slug": "38", "engineId": "mitsubishi-38", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 94-1100"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "mitsubishi-pajero-v80-v90-32", "slug": "32", "engineId": "mitsubishi-32", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017], "trims": ["BK Didc Gls Instyle", "Dakar", "Did Instyle"], "bodyTypes": [], "sourceRefs": ["TSB 94-1027", "TSB 94-356", "TSB 94-365"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "mitsubishi-pajero-v80-v90-38", "slug": "38", "engineId": "mitsubishi-38", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 94-1100"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
+    },
+    {
+      "id": "mitsubishi-pajero-5-nesil",
+      "slug": "5-nesil",
+      "name": "Pajero 5. nesil",
+      "order": 5,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2026 }, "end": { "year": 2026 }, "approximate": true },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1983488"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Mitsubishi Pajero\" bilgi kutusundan (farklı pazarlar: to commence); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
     }
   ]
 }

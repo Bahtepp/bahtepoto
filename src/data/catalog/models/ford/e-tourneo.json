@@ -12,17 +12,18 @@
     {
       "id": "ford-e-tourneo-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "E-TOURNEO (nesil belirlenmedi)",
+      "name": "E-TOURNEO — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "ford-e-tourneo-nesil-belirlenmedi-340s-160kw", "slug": "340s-160kw", "engineId": "ford-340s-160kw", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025], "trims": ["Custom Deluxe", "Custom Titanium"], "bodyTypes": [], "sourceRefs": ["TSB 53-2940", "TSB 53-2943"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "ford-e-tourneo-nesil-belirlenmedi-340l-160kw", "slug": "340l-160kw", "engineId": "ford-340l-160kw", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["Custom Deluxe", "Custom Titanium"], "bodyTypes": [], "sourceRefs": ["TSB 53-2941", "TSB 53-2942"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "ford-e-tourneo-nesil-belirlenmedi-340s-160kw", "slug": "340s-160kw", "engineId": "ford-340s-160kw", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025], "trims": ["Custom Deluxe", "Custom Titanium"], "bodyTypes": [], "sourceRefs": ["TSB 53-2940", "TSB 53-2943"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "ford-e-tourneo-nesil-belirlenmedi-340l-160kw", "slug": "340l-160kw", "engineId": "ford-340l-160kw", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["Custom Deluxe", "Custom Titanium"], "bodyTypes": [], "sourceRefs": ["TSB 53-2941", "TSB 53-2942"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

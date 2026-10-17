@@ -10,22 +10,66 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "jaguar-xj-xj40",
+      "slug": "xj40",
+      "name": "XJ (XJ40)",
+      "code": "XJ40",
+      "order": 186,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1986 }, "end": { "year": 1994 } },
+      "engineDisplacementsL": [6],
+      "status": "sourced",
+      "sourceIds": ["wpgen-33772563"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Jaguar XJ (XJ40)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "jaguar-xj-x300",
+      "slug": "x300",
+      "name": "XJ (X300)",
+      "code": "X300",
+      "order": 194,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1994 }, "end": { "year": 1997 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-33740643"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Jaguar XJ (X300)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "jaguar-xj-x308",
+      "slug": "x308",
+      "name": "XJ (X308)",
+      "code": "X308",
+      "order": 197,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1997 }, "end": { "year": 2002 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-33813058"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Jaguar XJ (X308)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
       "id": "jaguar-xj-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "XJ (nesil belirlenmedi)",
+      "name": "XJ — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2019 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "jaguar-xj-nesil-belirlenmedi-42", "slug": "42", "engineId": "jaguar-42", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Super 8"], "bodyTypes": ["Pick-up"], "sourceRefs": ["TSB 220-52"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "jaguar-xj-nesil-belirlenmedi-30-diesel", "slug": "30-diesel", "engineId": "jaguar-30-diesel", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013, 2014], "trims": ["Portfolio", "Portfolio Lwb", "Premium Luxury", "Premium Luxury Lwb", "Supersport", "Supersport Lwb"], "bodyTypes": [], "sourceRefs": ["TSB 220-1022", "TSB 220-1023", "TSB 220-1024", "TSB 220-83", "TSB 220-85", "TSB 220-87"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "jaguar-xj-nesil-belirlenmedi-50", "slug": "50", "engineId": "jaguar-50", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013, 2014], "trims": ["Portfolio", "Portfolio Lwb", "Premium Luxury", "Premium Luxury Lwb", "Supercharded Supersport Lwb", "Supercharged Supersport"], "bodyTypes": [], "sourceRefs": ["TSB 220-1025", "TSB 220-1026", "TSB 220-1027", "TSB 220-84", "TSB 220-86", "TSB 220-88"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "jaguar-xj-nesil-belirlenmedi-20", "slug": "20", "engineId": "jaguar-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015, 2016, 2017], "trims": ["Luxury", "Luxury Lwb", "Lwb Portfolio Premium Arkakoltuk P Si4", "Lwb Premium Luxury Arka Koltuk P. Si4", "Lwb Premium Luxury Si4", "Lwb Premium Luxury Spor Si4", "Lwb Premiumluxurysportplus Si4", "Portfolio", "Portfolio Lwb", "Premium Luxury", "Premium Luxury Lwb", "Swb Luxury Si4", "Swb Premium Luxury Sport Plus Si4", "Swb Premium Luxury Sport Si4"], "bodyTypes": [], "sourceRefs": ["TSB 220-1001", "TSB 220-1002", "TSB 220-1003", "TSB 220-1004", "TSB 220-1005", "TSB 220-1006", "TSB 220-1035", "TSB 220-1036", "TSB 220-1037", "TSB 220-1038", "TSB 220-1059", "TSB 220-1060", "TSB 220-1071", "TSB 220-1077"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "jaguar-xj-nesil-belirlenmedi-30", "slug": "30", "engineId": "jaguar-30", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2016, 2017, 2018, 2019], "trims": ["Lwb Portfolio", "Lwb Portfolio Si4", "Lwb Portfolio d", "Lwb Premium Luxury", "Swb Portfolio", "Swb Premium Luxury"], "bodyTypes": ["Pick-up"], "sourceRefs": ["TSB 220-1014", "TSB 220-1015", "TSB 220-1016", "TSB 220-1017", "TSB 220-1063", "TSB 220-1064"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "jaguar-xj-nesil-belirlenmedi-42", "slug": "42", "engineId": "jaguar-42", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Super 8"], "bodyTypes": ["Pick-up"], "sourceRefs": ["TSB 220-52"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "jaguar-xj-nesil-belirlenmedi-30-diesel", "slug": "30-diesel", "engineId": "jaguar-30-diesel", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013, 2014], "trims": ["Portfolio", "Portfolio Lwb", "Premium Luxury", "Premium Luxury Lwb", "Supersport", "Supersport Lwb"], "bodyTypes": [], "sourceRefs": ["TSB 220-1022", "TSB 220-1023", "TSB 220-1024", "TSB 220-83", "TSB 220-85", "TSB 220-87"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "jaguar-xj-nesil-belirlenmedi-50", "slug": "50", "engineId": "jaguar-50", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013, 2014], "trims": ["Portfolio", "Portfolio Lwb", "Premium Luxury", "Premium Luxury Lwb", "Supercharded Supersport Lwb", "Supercharged Supersport"], "bodyTypes": [], "sourceRefs": ["TSB 220-1025", "TSB 220-1026", "TSB 220-1027", "TSB 220-84", "TSB 220-86", "TSB 220-88"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "jaguar-xj-nesil-belirlenmedi-20", "slug": "20", "engineId": "jaguar-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015, 2016, 2017], "trims": ["Luxury", "Luxury Lwb", "Lwb Portfolio Premium Arkakoltuk P Si4", "Lwb Premium Luxury Arka Koltuk P. Si4", "Lwb Premium Luxury Si4", "Lwb Premium Luxury Spor Si4", "Lwb Premiumluxurysportplus Si4", "Portfolio", "Portfolio Lwb", "Premium Luxury", "Premium Luxury Lwb", "Swb Luxury Si4", "Swb Premium Luxury Sport Plus Si4", "Swb Premium Luxury Sport Si4"], "bodyTypes": [], "sourceRefs": ["TSB 220-1001", "TSB 220-1002", "TSB 220-1003", "TSB 220-1004", "TSB 220-1005", "TSB 220-1006", "TSB 220-1035", "TSB 220-1036", "TSB 220-1037", "TSB 220-1038", "TSB 220-1059", "TSB 220-1060", "TSB 220-1071", "TSB 220-1077"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "jaguar-xj-nesil-belirlenmedi-30", "slug": "30", "engineId": "jaguar-30", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2016, 2017, 2018, 2019], "trims": ["Lwb Portfolio", "Lwb Portfolio Si4", "Lwb Portfolio d", "Lwb Premium Luxury", "Swb Portfolio", "Swb Premium Luxury"], "bodyTypes": ["Pick-up"], "sourceRefs": ["TSB 220-1014", "TSB 220-1015", "TSB 220-1016", "TSB 220-1017", "TSB 220-1063", "TSB 220-1064"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

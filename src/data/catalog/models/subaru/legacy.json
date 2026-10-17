@@ -10,19 +10,116 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "subaru-legacy-1-nesil",
+      "slug": "1-nesil",
+      "name": "Legacy BC-BJ-BF Serisi",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1989 }, "end": { "year": 1994 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-20702990"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Subaru Legacy (first generation)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "subaru-legacy-2-nesil",
+      "slug": "2-nesil",
+      "name": "Legacy BD-BG-BK series",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1993 }, "end": { "year": 1999 } },
+      "engineDisplacementsL": [2, 2.2, 2.5],
+      "status": "sourced",
+      "sourceIds": ["wpgen-20718543"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Subaru Legacy (second generation)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "subaru-legacy-3-nesil",
+      "slug": "3-nesil",
+      "name": "Legacy BE-BH-BT series",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1998 }, "end": { "year": 2004 } },
+      "engineDisplacementsL": [2, 2.5, 3],
+      "status": "sourced",
+      "sourceIds": ["wpgen-20718660"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Subaru Legacy (third generation)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "subaru-legacy-4-nesil",
+      "slug": "4-nesil",
+      "name": "Legacy BL-BP series",
+      "order": 4,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2003 }, "end": { "year": 2009 } },
+      "engineDisplacementsL": [2, 2.5, 3],
+      "status": "sourced",
+      "sourceIds": ["wpgen-20718757"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Subaru Legacy (fourth generation)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "subaru-legacy-5-nesil",
+      "slug": "5-nesil",
+      "name": "Legacy 5. nesil",
+      "order": 5,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2009 }, "end": { "year": 2014 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-22378055"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Subaru Legacy (fifth generation)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "subaru-legacy-5-nesil-20", "slug": "20", "engineId": "subaru-20", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "CVT" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012], "trims": ["Business", "Comfort", "D-S Style", "Elegance"], "bodyTypes": ["4 kapı sedan", "Station wagon"], "sourceRefs": ["TSB 137-163", "TSB 137-164", "TSB 137-165", "TSB 137-166"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
+      "id": "subaru-legacy-6-nesil",
+      "slug": "6-nesil",
+      "name": "Legacy BN series",
+      "order": 6,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2014 }, "end": { "year": 2019 }, "approximate": true },
+      "status": "sourced",
+      "sourceIds": ["wpgen-44082386"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Subaru Legacy (sixth generation)\" bilgi kutusundan (farklı pazarlar: Sedan); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "subaru-legacy-7-nesil",
+      "slug": "7-nesil",
+      "name": "Legacy 7. nesil",
+      "order": 7,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2019 }, "end": { "year": 2025 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-60353374"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Subaru Legacy (seventh generation)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
       "id": "subaru-legacy-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Legacy (nesil belirlenmedi)",
+      "name": "Legacy — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2014 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "subaru-legacy-nesil-belirlenmedi-30", "slug": "30", "engineId": "subaru-30", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010], "trims": ["5AT Elegance", "5AT ZS", "R"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 137-117", "TSB 137-122", "TSB 137-73"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "subaru-legacy-nesil-belirlenmedi-20", "slug": "20", "engineId": "subaru-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }, { "type": "cvt", "name": "CVT" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014], "trims": ["4AT Comfort", "4AT Elegance", "4AT FS", "Business", "Comfort", "D-S Style", "Elegance", "Limited", "S.WAGON 4AT", "TD Comfort", "TD Elegance", "TD Premium"], "bodyTypes": ["4 kapı sedan", "Station wagon"], "sourceRefs": ["TSB 137-112", "TSB 137-113", "TSB 137-114", "TSB 137-119", "TSB 137-120", "TSB 137-121", "TSB 137-141", "TSB 137-142", "TSB 137-151", "TSB 137-160", "TSB 137-161", "TSB 137-163", "TSB 137-164", "TSB 137-165", "TSB 137-166", "TSB 137-75", "TSB 137-76", "TSB 137-77"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "subaru-legacy-nesil-belirlenmedi-30", "slug": "30", "engineId": "subaru-30", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010], "trims": ["5AT Elegance", "5AT ZS", "R"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 137-117", "TSB 137-122", "TSB 137-73"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "subaru-legacy-nesil-belirlenmedi-20", "slug": "20", "engineId": "subaru-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }, { "type": "cvt", "name": "CVT" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014], "trims": ["4AT Comfort", "4AT Elegance", "4AT FS", "Comfort", "Elegance", "Limited", "S.WAGON 4AT", "TD Comfort", "TD Elegance", "TD Premium"], "bodyTypes": ["4 kapı sedan", "Station wagon"], "sourceRefs": ["TSB 137-112", "TSB 137-113", "TSB 137-114", "TSB 137-119", "TSB 137-120", "TSB 137-121", "TSB 137-141", "TSB 137-142", "TSB 137-151", "TSB 137-160", "TSB 137-161", "TSB 137-75", "TSB 137-76", "TSB 137-77"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

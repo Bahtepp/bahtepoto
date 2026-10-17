@@ -12,16 +12,17 @@
     {
       "id": "ford-tourneoconnect-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Tourneoconnect (nesil belirlenmedi)",
+      "name": "Tourneoconnect — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2022 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "ford-tourneoconnect-nesil-belirlenmedi-15-100", "slug": "15-100", "engineId": "ford-15-100", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021, 2022], "trims": ["Deluxe Mca Kisa"], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 53-1681"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "ford-tourneoconnect-nesil-belirlenmedi-15-100", "slug": "15-100", "engineId": "ford-15-100", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021, 2022], "trims": ["Deluxe Mca Kisa"], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 53-1681"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

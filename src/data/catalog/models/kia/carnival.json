@@ -10,19 +10,63 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "kia-carnival-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Carnival (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "kia-carnival-1-nesil",
+      "slug": "1-nesil",
+      "name": "Carnival 1. nesil",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1998 }, "end": { "year": 2005 } },
+      "engineDisplacementsL": [2.5, 2.9, 3.5],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1700354"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Kia Carnival\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "kia-carnival-2-nesil",
+      "slug": "2-nesil",
+      "name": "Carnival 2. nesil",
+      "order": 2,
+      "labelPeriod": { "marketId": "eu", "basis": "production", "start": { "year": 2006 }, "end": { "year": 2012 } },
+      "engineDisplacementsL": [2.2, 2.7, 2.9, 3.5, 3.8],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1700354"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Kia Carnival\" bilgi kutusundan (Europe). Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "kia-carnival-nesil-belirlenmedi-29", "slug": "29", "engineId": "kia-29", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Dsl EX"], "bodyTypes": [], "sourceRefs": ["TSB 800-81"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "kia-carnival-2-nesil-29", "slug": "29", "engineId": "kia-29", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Dsl EX"], "bodyTypes": [], "sourceRefs": ["TSB 800-81"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
+    },
+    {
+      "id": "kia-carnival-3-nesil",
+      "slug": "3-nesil",
+      "name": "Carnival 3. nesil",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2014 }, "end": { "year": 2020 } },
+      "engineDisplacementsL": [2.2, 3.3],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1700354"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Kia Carnival\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "kia-carnival-ka4",
+      "slug": "ka4",
+      "name": "Carnival 4. nesil (KA4)",
+      "code": "KA4",
+      "order": 4,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2020 }, "end": null },
+      "engineDisplacementsL": [1.6],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1700354"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Kia Carnival\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
     }
   ]
 }

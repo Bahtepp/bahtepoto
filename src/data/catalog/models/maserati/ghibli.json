@@ -10,26 +10,70 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "maserati-ghibli-am115",
+      "slug": "am115",
+      "name": "Ghibli (AM115)",
+      "code": "AM115",
+      "order": 167,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1967 }, "end": { "year": 1973 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1986848"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Maserati Ghibli\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "maserati-ghibli-am336",
+      "slug": "am336",
+      "name": "Ghibli (AM336)",
+      "code": "AM336",
+      "order": 192,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1992 }, "end": { "year": 1998 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1986848"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Maserati Ghibli\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "maserati-ghibli-m157",
+      "slug": "m157",
+      "name": "Ghibli (M157)",
+      "code": "M157",
+      "order": 213,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2013 }, "end": { "year": 2023 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1986848"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Maserati Ghibli\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "maserati-ghibli-m157-diesel", "slug": "diesel", "engineId": "maserati-diesel", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2015, 2016], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 86-1011"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "maserati-ghibli-m157-410", "slug": "410", "engineId": "maserati-410", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017], "trims": ["S V6"], "bodyTypes": [], "sourceRefs": ["TSB 86-1016"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "maserati-ghibli-m157-330", "slug": "330", "engineId": "maserati-330", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017], "trims": ["V6"], "bodyTypes": [], "sourceRefs": ["TSB 86-1017"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "maserati-ghibli-m157-diesel-275", "slug": "diesel-275", "engineId": "maserati-diesel-275", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018, 2019, 2020], "trims": ["Granlusso", "Gransport"], "bodyTypes": [], "sourceRefs": ["TSB 86-1027", "TSB 86-1028", "TSB 86-1029"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "maserati-ghibli-m157-430", "slug": "430", "engineId": "maserati-430", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023], "trims": ["V6 Modena", "V6 Modena S"], "bodyTypes": [], "sourceRefs": ["TSB 86-1061", "TSB 86-1062", "TSB 86-1074"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "maserati-ghibli-m157-20-mhev-330", "slug": "20-mhev-330", "engineId": "maserati-20-mhev-330", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021, 2022, 2023], "trims": ["Granlusso", "Gransport"], "bodyTypes": [], "sourceRefs": ["TSB 86-1050", "TSB 86-1051", "TSB 86-1052"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "maserati-ghibli-m157-350", "slug": "350", "engineId": "maserati-350", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022], "trims": ["V6 Modena"], "bodyTypes": [], "sourceRefs": ["TSB 86-1060"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "maserati-ghibli-m157-580", "slug": "580", "engineId": "maserati-580", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023], "trims": ["V8 Trofeo"], "bodyTypes": [], "sourceRefs": ["TSB 86-1063"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
       "id": "maserati-ghibli-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Ghibli (nesil belirlenmedi)",
+      "name": "Ghibli — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2024 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2024 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "maserati-ghibli-nesil-belirlenmedi-diesel", "slug": "diesel", "engineId": "maserati-diesel", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2015, 2016], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 86-1011"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "maserati-ghibli-nesil-belirlenmedi-410", "slug": "410", "engineId": "maserati-410", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017], "trims": ["S V6"], "bodyTypes": [], "sourceRefs": ["TSB 86-1016"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "maserati-ghibli-nesil-belirlenmedi-330", "slug": "330", "engineId": "maserati-330", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017], "trims": ["V6"], "bodyTypes": [], "sourceRefs": ["TSB 86-1017"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "maserati-ghibli-nesil-belirlenmedi-diesel-275", "slug": "diesel-275", "engineId": "maserati-diesel-275", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018, 2019, 2020], "trims": ["Granlusso", "Gransport"], "bodyTypes": [], "sourceRefs": ["TSB 86-1027", "TSB 86-1028", "TSB 86-1029"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "maserati-ghibli-nesil-belirlenmedi-430", "slug": "430", "engineId": "maserati-430", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023], "trims": ["V6 Modena", "V6 Modena S"], "bodyTypes": [], "sourceRefs": ["TSB 86-1061", "TSB 86-1062", "TSB 86-1074"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "maserati-ghibli-nesil-belirlenmedi-20-mhev-330", "slug": "20-mhev-330", "engineId": "maserati-20-mhev-330", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021, 2022, 2023], "trims": ["Granlusso", "Gransport"], "bodyTypes": [], "sourceRefs": ["TSB 86-1050", "TSB 86-1051", "TSB 86-1052"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "maserati-ghibli-nesil-belirlenmedi-hybrid-330", "slug": "hybrid-330", "engineId": "maserati-hybrid-330", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023, 2024], "trims": ["GT"], "bodyTypes": [], "sourceRefs": ["TSB 86-1056"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "maserati-ghibli-nesil-belirlenmedi-350", "slug": "350", "engineId": "maserati-350", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022], "trims": ["V6 Modena"], "bodyTypes": [], "sourceRefs": ["TSB 86-1060"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "maserati-ghibli-nesil-belirlenmedi-580", "slug": "580", "engineId": "maserati-580", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023], "trims": ["V8 Trofeo"], "bodyTypes": [], "sourceRefs": ["TSB 86-1063"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "maserati-ghibli-nesil-belirlenmedi-hybrid-330", "slug": "hybrid-330", "engineId": "maserati-hybrid-330", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023, 2024], "trims": ["GT"], "bodyTypes": [], "sourceRefs": ["TSB 86-1056"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

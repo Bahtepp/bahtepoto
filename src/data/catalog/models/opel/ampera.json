@@ -12,16 +12,17 @@
     {
       "id": "opel-ampera-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Ampera (nesil belirlenmedi)",
+      "name": "Ampera — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2012 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "opel-ampera-nesil-belirlenmedi-14-150", "slug": "14-150", "engineId": "opel-14-150", "revisionMapping": "unknown", "transmissions": [{ "type": "automated-manual", "name": "MTA" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012], "trims": ["Elc A"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 111-1052"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "opel-ampera-nesil-belirlenmedi-14-150", "slug": "14-150", "engineId": "opel-14-150", "revisionMapping": "unknown", "transmissions": [{ "type": "automated-manual", "name": "MTA" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012], "trims": ["Elc A"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 111-1052"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

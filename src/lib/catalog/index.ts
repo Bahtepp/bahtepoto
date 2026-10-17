@@ -71,6 +71,7 @@ function summarizeModel(model: Model, markets: Market[]): ModelSummary {
         slug: g.slug,
         name: g.name,
         code: g.code,
+        kind: g.kind,
         order: g.order,
         labelPeriod: g.labelPeriod,
         periods: g.periods,
@@ -78,6 +79,7 @@ function summarizeModel(model: Model, markets: Market[]): ModelSummary {
         notes: g.notes,
         variantCount: g.variants.length,
         marketCounts: marketCounts(g.variants, markets),
+        modelYears: [...new Set(g.variants.flatMap((v) => v.marketAvailability.flatMap((a) => (a.marketId === 'tr' ? a.modelYears : []))))].sort((x, y) => x - y),
         revisions: [...g.revisions]
           .sort((a, b) => a.order - b.order)
           .map(({ id, slug, name, kind, order, periods, status, notes }) => ({ id, slug, name, kind, order, periods, status, notes })),

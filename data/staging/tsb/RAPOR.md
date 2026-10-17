@@ -9,12 +9,12 @@ Kaynak dosyalar: `202201R1.xlsx`, `202610R1.xlsx` (TSB Kasko Değer Listesi). Fi
 | Aktarılan satır | 15157 |
 | Aktarılamayan / belirsiz satır (`belirsiz.json`) | 1045 |
 | Marka | 96 |
-| Yeni model | 895 |
-| Yeni nesil grubu (ipucundan: 18, "nesil belirlenmedi": 918) | 936 |
-| Yeni motor (yakıt türü tip adında yazmayan: 1038) | 2397 |
-| Yeni varyant (nesil × motor) | 4558 |
-| — mevcut kataloğun nesillerine eşlenen | 319 |
-| — nesli belirlenemeyen | 4191 |
+| Yalnızca TSB kaynaklı model | 895 |
+| Yeni nesil grubu (ipucundan: 10, "nesil belirlenmedi": 727) | 737 |
+| Yeni motor (yakıt türü tip adında yazmayan: 1039) | 2397 |
+| Yeni varyant (nesil × motor) | 4944 |
+| — mevcut kataloğun nesillerine eşlenen | 1824 |
+| — nesli belirlenemeyen | 3101 |
 | Türkiye durumu eklenen mevcut (elle girilmiş) varyant | 7 |
 
 ## Kapsam dışı bırakılanlar
@@ -32,61 +32,61 @@ Kaynak dosyalar: `202201R1.xlsx`, `202610R1.xlsx` (TSB Kasko Değer Listesi). Fi
 
 | Marka | Model | Varyant |
 |---|---|---|
-| BMW | 42 | 295 |
-| Mercedes-Benz | 46 | 295 |
-| Audi | 38 | 294 |
-| Renault | 35 | 283 |
-| Volkswagen | 34 | 278 |
-| Ford | 34 | 262 |
-| Peugeot | 36 | 256 |
-| Opel | 34 | 243 |
-| Fiat | 34 | 186 |
-| Citroen | 26 | 167 |
-| Hyundai | 29 | 158 |
-| Skoda | 17 | 153 |
-| Kia | 27 | 142 |
-| Seat | 14 | 123 |
-| Toyota | 28 | 111 |
-| Porsche | 9 | 104 |
+| BMW | 42 | 363 |
+| Audi | 38 | 343 |
+| Mercedes-Benz | 46 | 325 |
+| Renault | 35 | 295 |
+| Peugeot | 36 | 288 |
+| Volkswagen | 34 | 286 |
+| Ford | 34 | 267 |
+| Opel | 34 | 250 |
+| Fiat | 34 | 199 |
+| Skoda | 17 | 177 |
+| Citroen | 26 | 170 |
+| Hyundai | 29 | 166 |
+| Kia | 27 | 152 |
+| Seat | 14 | 134 |
+| Toyota | 28 | 118 |
+| Porsche | 9 | 116 |
+| Volvo | 22 | 111 |
 | Dacia | 7 | 104 |
-| Volvo | 22 | 92 |
+| Nissan | 22 | 87 |
 | Chrysler | 19 | 81 |
-| Nissan | 22 | 71 |
+| Alfa Romeo | 17 | 65 |
 | Land Rover | 8 | 64 |
-| Alfa Romeo | 17 | 60 |
-| Chevrolet | 24 | 55 |
-| Honda | 15 | 48 |
-| Jaguar | 13 | 42 |
-| Suzuki | 14 | 38 |
+| Chevrolet | 24 | 59 |
+| Honda | 15 | 55 |
+| Jaguar | 13 | 44 |
+| Suzuki | 14 | 42 |
+| Lexus | 13 | 36 |
 | Dodge | 10 | 33 |
-| Lexus | 13 | 32 |
+| Mazda | 11 | 30 |
+| Bentley | 6 | 29 |
 | Mini | 4 | 28 |
-| Bentley | 6 | 27 |
-| Mazda | 11 | 24 |
-| Maserati | 4 | 22 |
-| Lancia | 6 | 21 |
-| SsangYong | 12 | 21 |
-| Mitsubishi | 10 | 19 |
+| Lancia | 6 | 24 |
+| Maserati | 4 | 23 |
+| SsangYong | 12 | 23 |
+| Subaru | 10 | 21 |
+| Mitsubishi | 10 | 20 |
 | Infiniti | 8 | 19 |
 | Saab | 3 | 18 |
-| Cadillac | 10 | 17 |
-| Subaru | 10 | 17 |
+| Cadillac | 10 | 18 |
 | Cupra | 5 | 17 |
 | Chery | 7 | 15 |
 | DS | 5 | 15 |
+| Proton | 8 | 14 |
 | MG | 6 | 14 |
+| BYD | 11 | 14 |
 | GMC | 7 | 14 |
 | Aston Martin | 10 | 13 |
-| BYD | 11 | 13 |
-| Proton | 8 | 11 |
 | Tesla | 2 | 11 |
 | Tata | 7 | 10 |
+| Lada | 7 | 9 |
 | Lamborghini | 6 | 9 |
 | Daihatsu | 5 | 8 |
-| Lada | 7 | 8 |
+| Lincoln | 6 | 7 |
 | Dfsk | 6 | 7 |
 | KGM | 7 | 7 |
-| Lincoln | 6 | 6 |
 | Ferrari | 4 | 5 |
 | Mercury | 4 | 5 |
 | Lotus | 5 | 5 |
@@ -132,3 +132,16 @@ Kaynak dosyalar: `202201R1.xlsx`, `202610R1.xlsx` (TSB Kasko Değer Listesi). Fi
 ## Denetim
 
 Katalog şemaları ve bütünlük denetimi geçti.
+
+## Wikipedia nesilleri
+
+| | Sayı |
+|---|---|
+| Eklenen nesil | 1015 |
+| Nesil eklenen model | 424 |
+| Çelişki veya belirsiz model kimliği nedeniyle dışarıda bırakılan model (`data/staging/wikipedia/DISARIDA.md`) | 134 |
+| Tip adındaki kasa koduyla eşlenen varyant | 27 |
+| Kaynaktaki motor hacmiyle desteklenerek eşlenen varyant | 20 |
+
+Not: Aynı motor birden çok nesilde satıldıysa her nesil için ayrı varyant oluşur (bir TSB satırı yalnızca bir
+varyanta girer). Nesil eklendikçe toplam varyant sayısının artması bu yüzdendir.

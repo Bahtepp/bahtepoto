@@ -10,20 +10,103 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "chevrolet-camaro-1-nesil",
+      "slug": "1-nesil",
+      "name": "Camaro 1. nesil",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1966 }, "end": { "year": 1969 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-9131254"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Camaro (first generation)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "chevrolet-camaro-2-nesil",
+      "slug": "2-nesil",
+      "name": "Camaro 2. nesil",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1970 }, "end": { "year": 1981 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-8776522"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Camaro (second generation)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "chevrolet-camaro-3-nesil",
+      "slug": "3-nesil",
+      "name": "Camaro 3. nesil",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1981 }, "end": { "year": 1992 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-8739264"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Camaro (third generation)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "chevrolet-camaro-4-nesil",
+      "slug": "4-nesil",
+      "name": "Camaro 4. nesil",
+      "order": 4,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1992 }, "end": { "year": 2002 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-8639567"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Camaro (fourth generation)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "chevrolet-camaro-5-nesil",
+      "slug": "5-nesil",
+      "name": "Camaro 5. nesil",
+      "order": 5,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2009 }, "end": { "year": 2015 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-8635173"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Camaro (fifth generation)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "chevrolet-camaro-5-nesil-36", "slug": "36", "engineId": "chevrolet-36", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013], "trims": ["2LT V6"], "bodyTypes": ["Cabrio"], "sourceRefs": ["TSB 32-120", "TSB 32-1508"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "chevrolet-camaro-5-nesil-62", "slug": "62", "engineId": "chevrolet-62", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013], "trims": ["2SS", "Convertible"], "bodyTypes": ["Coupé"], "sourceRefs": ["TSB 32-1501", "TSB 32-1502", "TSB 32-1504", "TSB 32-1505"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
+      "id": "chevrolet-camaro-6-nesil",
+      "slug": "6-nesil",
+      "name": "Camaro 6. nesil",
+      "order": 6,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2015 }, "end": { "year": 2023 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-46896692"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Camaro (sixth generation)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "chevrolet-camaro-6-nesil-62", "slug": "62", "engineId": "chevrolet-62", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 32-1544"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
       "id": "chevrolet-camaro-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Camaro (nesil belirlenmedi)",
+      "name": "Camaro — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2022 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2022 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "chevrolet-camaro-nesil-belirlenmedi-36", "slug": "36", "engineId": "chevrolet-36", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013], "trims": ["2LT V6"], "bodyTypes": ["Cabrio"], "sourceRefs": ["TSB 32-120", "TSB 32-1508"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "chevrolet-camaro-nesil-belirlenmedi-62", "slug": "62", "engineId": "chevrolet-62", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2022], "trims": ["2SS", "Convertible", "ZL1 Convertible"], "bodyTypes": ["Coupé"], "sourceRefs": ["TSB 32-1501", "TSB 32-1502", "TSB 32-1503", "TSB 32-1504", "TSB 32-1505", "TSB 32-1532", "TSB 32-1544"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "chevrolet-camaro-nesil-belirlenmedi-20", "slug": "20", "engineId": "chevrolet-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022], "trims": ["LT RS"], "bodyTypes": ["Cabrio", "Coupé"], "sourceRefs": ["TSB 32-1525", "TSB 32-1530"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "chevrolet-camaro-nesil-belirlenmedi-62", "slug": "62", "engineId": "chevrolet-62", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015, 2016, 2017], "trims": ["ZL1 Convertible"], "bodyTypes": ["Coupé"], "sourceRefs": ["TSB 32-1503", "TSB 32-1532"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "chevrolet-camaro-nesil-belirlenmedi-20", "slug": "20", "engineId": "chevrolet-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022], "trims": ["LT RS"], "bodyTypes": ["Cabrio", "Coupé"], "sourceRefs": ["TSB 32-1525", "TSB 32-1530"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

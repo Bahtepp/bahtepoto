@@ -245,6 +245,12 @@ export const generationSchema = z.object({
   name: z.string(),
   /** Platform/kasa kodu, örn. "C307". */
   code: z.string().optional(),
+  /**
+   * - generation: gerçek bir nesil/kasa.
+   * - unassigned: nesli belirlenemeyen kayıtların toplandığı grup ("nesil belirlenmedi"). Gerçek bir kasa
+   *   değildir; arayüzde model yılı → motor akışıyla gösterilir.
+   */
+  kind: z.enum(['generation', 'unassigned']).default('generation'),
   order: z.number().int().min(0),
   /**
    * Etiketteki yıl aralığı. Nesil adı ASLA yılsız gösterilmez; bu alan zorunludur.
@@ -253,6 +259,11 @@ export const generationSchema = z.object({
   labelPeriod: periodSchema,
   /** Pazar bazlı ek dönemler (diğer ülkeler, satış/model yılı farkları). */
   periods: z.array(periodSchema).default([]),
+  /**
+   * Kaynağın bu nesil için listelediği motor hacimleri (L). Yalnızca eşleştirmede destekleyici kanıt
+   * olarak kullanılır (örn. iki nesle uyan model yılında hangi neslin bu hacmi sunduğu); motor kaydı değildir.
+   */
+  engineDisplacementsL: z.array(z.number().positive()).default([]),
   revisions: z.array(revisionSchema).default([]),
   variants: z.array(variantSchema).default([]),
   ...recordMeta,

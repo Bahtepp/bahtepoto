@@ -10,19 +10,36 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "bmw-8-serisi-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "8 Serisi (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2026 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "bmw-8-serisi-e31",
+      "slug": "e31",
+      "name": "8 Serisi (E31)",
+      "code": "E31",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1990 }, "end": { "year": 1999 } },
+      "engineDisplacementsL": [4, 4.4, 5, 5.4, 5.6],
+      "status": "sourced",
+      "sourceIds": ["wpgen-47171270"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"BMW 8 Series (E31)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "bmw-8-serisi-g14-g15-g16",
+      "slug": "g14-g15-g16",
+      "name": "8 Serisi (G14/G15/G16)",
+      "code": "G14/G15/G16",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2018 }, "end": { "year": 2026 } },
+      "engineDisplacementsL": [3, 4.4],
+      "status": "sourced",
+      "sourceIds": ["wpgen-57690024"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"BMW 8 Series (G15)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "bmw-8-serisi-nesil-belirlenmedi-840i", "slug": "840i", "engineId": "bmw-840i", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026], "trims": ["Gran M Sport", "Gran M Technic", "M Sport", "M Technic"], "bodyTypes": ["Cabrio", "Coupé"], "sourceRefs": ["TSB 21-1761", "TSB 21-1762", "TSB 21-1763", "TSB 21-1764", "TSB 21-1788", "TSB 21-1789"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "bmw-8-serisi-nesil-belirlenmedi-840d", "slug": "840d", "engineId": "bmw-840d", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021, 2022], "trims": ["Gran M Sport", "Gran M Technic"], "bodyTypes": ["Coupé"], "sourceRefs": ["TSB 21-1765", "TSB 21-1766"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "bmw-8-serisi-g14-g15-g16-840i", "slug": "840i", "engineId": "bmw-840i", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026], "trims": ["Gran M Sport", "Gran M Technic", "M Sport", "M Technic"], "bodyTypes": ["Cabrio", "Coupé"], "sourceRefs": ["TSB 21-1761", "TSB 21-1762", "TSB 21-1763", "TSB 21-1764", "TSB 21-1788", "TSB 21-1789"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "bmw-8-serisi-g14-g15-g16-840d", "slug": "840d", "engineId": "bmw-840d", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021, 2022], "trims": ["Gran M Sport", "Gran M Technic"], "bodyTypes": ["Coupé"], "sourceRefs": ["TSB 21-1765", "TSB 21-1766"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

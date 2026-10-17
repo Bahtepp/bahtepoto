@@ -12,16 +12,17 @@
     {
       "id": "ssangyong-torres-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Torres (nesil belirlenmedi)",
+      "name": "Torres — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2023 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "ssangyong-torres-nesil-belirlenmedi-15-gdi", "slug": "15-gdi", "engineId": "ssangyong-15-gdi", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023], "trims": ["4x2"], "bodyTypes": [], "sourceRefs": ["TSB 128-1117", "TSB 128-1118"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "ssangyong-torres-nesil-belirlenmedi-15-gdi", "slug": "15-gdi", "engineId": "ssangyong-15-gdi", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023], "trims": ["4x2"], "bodyTypes": [], "sourceRefs": ["TSB 128-1117", "TSB 128-1118"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

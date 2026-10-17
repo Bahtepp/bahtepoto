@@ -10,18 +10,19 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "kgm-torres-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Torres (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2026 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "kgm-torres-j100-u100",
+      "slug": "j100-u100",
+      "name": "Torres (J100/U100)",
+      "code": "J100/U100",
+      "order": 222,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2022 }, "end": null },
+      "status": "sourced",
+      "sourceIds": ["wpgen-70825313"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"KGM Torres\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "kgm-torres-nesil-belirlenmedi-15-gdi", "slug": "15-gdi", "engineId": "kgm-15-gdi", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023, 2024, 2025, 2026], "trims": ["4x2"], "bodyTypes": [], "sourceRefs": ["TSB 505-1011", "TSB 505-1012"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "kgm-torres-j100-u100-15-gdi", "slug": "15-gdi", "engineId": "kgm-15-gdi", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023, 2024, 2025, 2026], "trims": ["4x2"], "bodyTypes": [], "sourceRefs": ["TSB 505-1011", "TSB 505-1012"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

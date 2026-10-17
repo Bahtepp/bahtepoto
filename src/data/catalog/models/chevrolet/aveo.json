@@ -10,21 +10,67 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "chevrolet-aveo-t200",
+      "slug": "t200",
+      "name": "Aveo 1. nesil (T200)",
+      "code": "T200",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2002 }, "end": { "year": 2023 }, "approximate": true },
+      "status": "sourced",
+      "sourceIds": ["wpgen-30393328"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Aveo\" bilgi kutusundan (farklı pazarlar: South Korea; under license); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "chevrolet-aveo-t200-12", "slug": "12", "engineId": "chevrolet-12", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009], "trims": ["Sport SE"], "bodyTypes": [], "sourceRefs": ["TSB 32-163"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "chevrolet-aveo-t200-14", "slug": "14", "engineId": "chevrolet-14", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009], "trims": ["Sport SE"], "bodyTypes": [], "sourceRefs": ["TSB 32-164", "TSB 32-165"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
+      "id": "chevrolet-aveo-t300",
+      "slug": "t300",
+      "name": "Aveo 2. nesil (T300)",
+      "code": "T300",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2011 }, "end": { "year": 2020 } },
+      "engineDisplacementsL": [1.2, 1.3, 1.4, 1.6, 1.8],
+      "status": "sourced",
+      "sourceIds": ["wpgen-30393328"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Aveo\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "chevrolet-aveo-3-nesil",
+      "slug": "3-nesil",
+      "name": "Aveo 3. nesil",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2023 }, "end": null },
+      "status": "sourced",
+      "sourceIds": ["wpgen-30393328"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Aveo\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
       "id": "chevrolet-aveo-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Aveo (nesil belirlenmedi)",
+      "name": "Aveo — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2013 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "chevrolet-aveo-nesil-belirlenmedi-12", "slug": "12", "engineId": "chevrolet-12", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013], "trims": ["LS", "NB S", "NB SE", "S", "SE", "Sport SE"], "bodyTypes": ["4 kapı sedan", "5 kapı"], "sourceRefs": ["TSB 32-157", "TSB 32-158", "TSB 32-163", "TSB 32-166", "TSB 32-167", "TSB 32-207", "TSB 32-212"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "chevrolet-aveo-nesil-belirlenmedi-14", "slug": "14", "engineId": "chevrolet-14", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013], "trims": ["LT", "Ltz", "Ltz MY Link", "Ltz Mylink", "NB S", "NB SE", "NB SX", "SE", "SX", "Sport SE"], "bodyTypes": ["4 kapı sedan", "5 kapı"], "sourceRefs": ["TSB 32-1042", "TSB 32-1043", "TSB 32-1045", "TSB 32-1046", "TSB 32-159", "TSB 32-160", "TSB 32-161", "TSB 32-162", "TSB 32-164", "TSB 32-165", "TSB 32-168", "TSB 32-169", "TSB 32-177", "TSB 32-180", "TSB 32-189", "TSB 32-208", "TSB 32-209", "TSB 32-210", "TSB 32-213", "TSB 32-214", "TSB 32-215", "TSB 32-216"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "chevrolet-aveo-nesil-belirlenmedi-13-dizel-75", "slug": "13-dizel-75", "engineId": "chevrolet-13-dizel-75", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013], "trims": ["LS", "LT"], "bodyTypes": ["4 kapı sedan", "5 kapı"], "sourceRefs": ["TSB 32-1013", "TSB 32-1014", "TSB 32-1016", "TSB 32-1017"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "chevrolet-aveo-nesil-belirlenmedi-13-dizel-95", "slug": "13-dizel-95", "engineId": "chevrolet-13-dizel-95", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013], "trims": ["Ltz", "Ltz MY Link", "Ltz Mylink"], "bodyTypes": ["4 kapı sedan", "5 kapı"], "sourceRefs": ["TSB 32-1015", "TSB 32-1018", "TSB 32-1044", "TSB 32-1047"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "chevrolet-aveo-nesil-belirlenmedi-12", "slug": "12", "engineId": "chevrolet-12", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013], "trims": ["LS", "NB S", "NB SE", "S", "SE"], "bodyTypes": ["4 kapı sedan", "5 kapı"], "sourceRefs": ["TSB 32-157", "TSB 32-158", "TSB 32-166", "TSB 32-167", "TSB 32-207", "TSB 32-212"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "chevrolet-aveo-nesil-belirlenmedi-14", "slug": "14", "engineId": "chevrolet-14", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013], "trims": ["LT", "Ltz", "Ltz MY Link", "Ltz Mylink", "NB S", "NB SE", "NB SX", "SE", "SX"], "bodyTypes": ["4 kapı sedan", "5 kapı"], "sourceRefs": ["TSB 32-1042", "TSB 32-1043", "TSB 32-1045", "TSB 32-1046", "TSB 32-159", "TSB 32-160", "TSB 32-161", "TSB 32-162", "TSB 32-168", "TSB 32-169", "TSB 32-177", "TSB 32-180", "TSB 32-189", "TSB 32-208", "TSB 32-209", "TSB 32-210", "TSB 32-213", "TSB 32-214", "TSB 32-215", "TSB 32-216"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "chevrolet-aveo-nesil-belirlenmedi-13-dizel-75", "slug": "13-dizel-75", "engineId": "chevrolet-13-dizel-75", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013], "trims": ["LS", "LT"], "bodyTypes": ["4 kapı sedan", "5 kapı"], "sourceRefs": ["TSB 32-1013", "TSB 32-1014", "TSB 32-1016", "TSB 32-1017"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "chevrolet-aveo-nesil-belirlenmedi-13-dizel-95", "slug": "13-dizel-95", "engineId": "chevrolet-13-dizel-95", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013], "trims": ["Ltz", "Ltz MY Link", "Ltz Mylink"], "bodyTypes": ["4 kapı sedan", "5 kapı"], "sourceRefs": ["TSB 32-1015", "TSB 32-1018", "TSB 32-1044", "TSB 32-1047"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

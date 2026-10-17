@@ -12,17 +12,18 @@
     {
       "id": "chevrolet-aveo-classic-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Aveo Classic (nesil belirlenmedi)",
+      "name": "Aveo Classic — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2012 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "chevrolet-aveo-classic-nesil-belirlenmedi-12", "slug": "12", "engineId": "chevrolet-12", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012], "trims": ["S", "SE"], "bodyTypes": ["4 kapı sedan", "5 kapı"], "sourceRefs": ["TSB 32-1026", "TSB 32-1029", "TSB 32-1030"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "chevrolet-aveo-classic-nesil-belirlenmedi-14", "slug": "14", "engineId": "chevrolet-14", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012], "trims": ["SE", "SX"], "bodyTypes": ["4 kapı sedan", "5 kapı"], "sourceRefs": ["TSB 32-1027", "TSB 32-1028", "TSB 32-1031", "TSB 32-1032", "TSB 32-1033"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "chevrolet-aveo-classic-nesil-belirlenmedi-12", "slug": "12", "engineId": "chevrolet-12", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012], "trims": ["S", "SE"], "bodyTypes": ["4 kapı sedan", "5 kapı"], "sourceRefs": ["TSB 32-1026", "TSB 32-1029", "TSB 32-1030"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "chevrolet-aveo-classic-nesil-belirlenmedi-14", "slug": "14", "engineId": "chevrolet-14", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012], "trims": ["SE", "SX"], "bodyTypes": ["4 kapı sedan", "5 kapı"], "sourceRefs": ["TSB 32-1027", "TSB 32-1028", "TSB 32-1031", "TSB 32-1032", "TSB 32-1033"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

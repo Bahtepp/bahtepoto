@@ -10,21 +10,64 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "lexus-gs-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "GS (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2019 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "lexus-gs-s140",
+      "slug": "s140",
+      "name": "GS 1. nesil (S140)",
+      "code": "S140",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1991 }, "end": { "year": 1997 }, "approximate": true },
+      "status": "sourced",
+      "sourceIds": ["wpgen-680721"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Lexus GS\" bilgi kutusundan (farklı pazarlar: Toyota Aristo; Lexus GS); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "lexus-gs-s160",
+      "slug": "s160",
+      "name": "GS 2. nesil (S160)",
+      "code": "S160",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1997 }, "end": { "year": 2005 }, "approximate": true },
+      "status": "sourced",
+      "sourceIds": ["wpgen-680721"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Lexus GS\" bilgi kutusundan (farklı pazarlar: Lexus GS; Toyota Aristo); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "lexus-gs-s190",
+      "slug": "s190",
+      "name": "GS 3. nesil (S190)",
+      "code": "S190",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2005 }, "end": { "year": 2011 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-680721"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Lexus GS\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "lexus-gs-l10",
+      "slug": "l10",
+      "name": "GS 4. nesil (L10)",
+      "code": "L10",
+      "order": 4,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2011 }, "end": { "year": 2020 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-680721"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Lexus GS\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "lexus-gs-nesil-belirlenmedi-200t", "slug": "200t", "engineId": "lexus-200t", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018, 2019], "trims": ["Comfort", "Comfort Plus", "Exclusive", "F Sport", "Luxury"], "bodyTypes": [], "sourceRefs": ["TSB 571-1007", "TSB 571-1008", "TSB 571-1009", "TSB 571-1031", "TSB 571-1032"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "lexus-gs-nesil-belirlenmedi-350", "slug": "350", "engineId": "lexus-350", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 571-1029"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "lexus-gs-nesil-belirlenmedi-300h", "slug": "300h", "engineId": "lexus-300h", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "e-CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018], "trims": ["Comfort", "Exclusive", "F Sport"], "bodyTypes": [], "sourceRefs": ["TSB 571-1046", "TSB 571-1048", "TSB 571-1049"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "lexus-gs-nesil-belirlenmedi-450h", "slug": "450h", "engineId": "lexus-450h", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "e-CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018], "trims": ["Comfort", "Comfort Plus", "Exclusive"], "bodyTypes": [], "sourceRefs": ["TSB 571-1050", "TSB 571-1051", "TSB 571-1052"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "lexus-gs-l10-200t", "slug": "200t", "engineId": "lexus-200t", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018, 2019], "trims": ["Comfort", "Comfort Plus", "Exclusive", "F Sport", "Luxury"], "bodyTypes": [], "sourceRefs": ["TSB 571-1007", "TSB 571-1008", "TSB 571-1009", "TSB 571-1031", "TSB 571-1032"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "lexus-gs-l10-350", "slug": "350", "engineId": "lexus-350", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 571-1029"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "lexus-gs-l10-300h", "slug": "300h", "engineId": "lexus-300h", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "e-CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018], "trims": ["Comfort", "Exclusive", "F Sport"], "bodyTypes": [], "sourceRefs": ["TSB 571-1046", "TSB 571-1048", "TSB 571-1049"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "lexus-gs-l10-450h", "slug": "450h", "engineId": "lexus-450h", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "e-CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018], "trims": ["Comfort", "Comfort Plus", "Exclusive"], "bodyTypes": [], "sourceRefs": ["TSB 571-1050", "TSB 571-1051", "TSB 571-1052"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

@@ -10,18 +10,18 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "kia-ev3-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "EV3 (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "kia-ev3-uretim-2024",
+      "slug": "uretim-2024",
+      "name": "EV3",
+      "order": 224,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2024 }, "end": null },
+      "status": "sourced",
+      "sourceIds": ["wpgen-76692798"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Kia EV3\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "kia-ev3-nesil-belirlenmedi-204", "slug": "204", "engineId": "kia-204", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["Cool Long Range", "Elegance Comfort Standart Range", "Elegance Long Range", "Elegance Standart Range", "GT-LINE Long Range", "Prestige Long Range", "Prestige Standart Range"], "bodyTypes": [], "sourceRefs": ["TSB 800-1280", "TSB 800-1281", "TSB 800-1282", "TSB 800-1283", "TSB 800-1292", "TSB 800-1311", "TSB 800-1312"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "kia-ev3-uretim-2024-204", "slug": "204", "engineId": "kia-204", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["Cool Long Range", "Elegance Comfort Standart Range", "Elegance Long Range", "Elegance Standart Range", "GT-LINE Long Range", "Prestige Long Range", "Prestige Standart Range"], "bodyTypes": [], "sourceRefs": ["TSB 800-1280", "TSB 800-1281", "TSB 800-1282", "TSB 800-1283", "TSB 800-1292", "TSB 800-1311", "TSB 800-1312"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

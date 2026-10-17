@@ -12,16 +12,17 @@
     {
       "id": "dfsk-glory-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Glory (nesil belirlenmedi)",
+      "name": "Glory — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2023 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "dfsk-glory-nesil-belirlenmedi-15", "slug": "15", "engineId": "dfsk-15", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2023], "trims": ["580", "580 G 4x2 Premium"], "bodyTypes": [], "sourceRefs": ["TSB 806-1008", "TSB 806-1011"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "dfsk-glory-nesil-belirlenmedi-15", "slug": "15", "engineId": "dfsk-15", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2023], "trims": ["580", "580 G 4x2 Premium"], "bodyTypes": [], "sourceRefs": ["TSB 806-1008", "TSB 806-1011"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

@@ -10,22 +10,36 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "volvo-s40-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "S40 (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "volvo-s40-1-nesil",
+      "slug": "1-nesil",
+      "name": "S40 1. nesil",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1995 }, "end": { "year": 2004 }, "approximate": true },
+      "status": "sourced",
+      "sourceIds": ["wpgen-954681"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Volvo S40\" bilgi kutusundan (farklı pazarlar: 1,000,034 units); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "volvo-s40-2-nesil",
+      "slug": "2-nesil",
+      "name": "S40 2. nesil",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2003 }, "end": { "year": 2012 } },
+      "engineDisplacementsL": [1.6, 1.8, 2, 2.4, 2.5],
+      "status": "sourced",
+      "sourceIds": ["wpgen-954681"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Volvo S40\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "volvo-s40-nesil-belirlenmedi-18", "slug": "18", "engineId": "volvo-18", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 154-197"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "volvo-s40-nesil-belirlenmedi-24", "slug": "24", "engineId": "volvo-24", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 154-201"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "volvo-s40-nesil-belirlenmedi-16", "slug": "16", "engineId": "volvo-16", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["D Drive", "D Dynamic", "D Premium", "D Prime", "D R-DESIGN", "D2", "D2 Drive", "D2 Drive R-DESIGN", "D2 Dynamic Edition", "D2 PREMIUM+DYNAMIC Edition", "D2 Premium Edition", "D2 R-DESIGN", "Dynamic", "Premium", "Prime", "R-DESIGN"], "bodyTypes": [], "sourceRefs": ["TSB 154-219", "TSB 154-221", "TSB 154-280", "TSB 154-281", "TSB 154-282", "TSB 154-283", "TSB 154-284", "TSB 154-285", "TSB 154-394", "TSB 154-395", "TSB 154-396", "TSB 154-418", "TSB 154-419", "TSB 154-446", "TSB 154-447", "TSB 154-448", "TSB 154-449", "TSB 154-450"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "volvo-s40-nesil-belirlenmedi-20", "slug": "20", "engineId": "volvo-20", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "PowerShift" }, { "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["D Dynamic", "D Powersift", "D Premium", "D Prime", "D4"], "bodyTypes": [], "sourceRefs": ["TSB 154-223", "TSB 154-286", "TSB 154-287", "TSB 154-288", "TSB 154-289", "TSB 154-290", "TSB 154-291", "TSB 154-397", "TSB 154-398", "TSB 154-420", "TSB 154-492"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "volvo-s40-nesil-belirlenmedi-25", "slug": "25", "engineId": "volvo-25", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["T5", "T5 Dynamic", "T5 Premium", "T5 Prime"], "bodyTypes": [], "sourceRefs": ["TSB 154-226", "TSB 154-227", "TSB 154-292", "TSB 154-293", "TSB 154-294", "TSB 154-295", "TSB 154-296", "TSB 154-297", "TSB 154-298", "TSB 154-299", "TSB 154-300", "TSB 154-301", "TSB 154-302", "TSB 154-303"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "volvo-s40-2-nesil-18", "slug": "18", "engineId": "volvo-18", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 154-197"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "volvo-s40-2-nesil-24", "slug": "24", "engineId": "volvo-24", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 154-201"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "volvo-s40-2-nesil-16", "slug": "16", "engineId": "volvo-16", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["D Drive", "D Dynamic", "D Premium", "D Prime", "D R-DESIGN", "D2", "D2 Drive", "D2 Drive R-DESIGN", "D2 Dynamic Edition", "D2 PREMIUM+DYNAMIC Edition", "D2 Premium Edition", "D2 R-DESIGN", "Dynamic", "Premium", "Prime", "R-DESIGN"], "bodyTypes": [], "sourceRefs": ["TSB 154-219", "TSB 154-221", "TSB 154-280", "TSB 154-281", "TSB 154-282", "TSB 154-283", "TSB 154-284", "TSB 154-285", "TSB 154-394", "TSB 154-395", "TSB 154-396", "TSB 154-418", "TSB 154-419", "TSB 154-446", "TSB 154-447", "TSB 154-448", "TSB 154-449", "TSB 154-450"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "volvo-s40-2-nesil-20", "slug": "20", "engineId": "volvo-20", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "PowerShift" }, { "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["D Dynamic", "D Powersift", "D Premium", "D Prime", "D4"], "bodyTypes": [], "sourceRefs": ["TSB 154-223", "TSB 154-286", "TSB 154-287", "TSB 154-288", "TSB 154-289", "TSB 154-290", "TSB 154-291", "TSB 154-397", "TSB 154-398", "TSB 154-420", "TSB 154-492"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "volvo-s40-2-nesil-25", "slug": "25", "engineId": "volvo-25", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["T5", "T5 Dynamic", "T5 Premium", "T5 Prime"], "bodyTypes": [], "sourceRefs": ["TSB 154-226", "TSB 154-227", "TSB 154-292", "TSB 154-293", "TSB 154-294", "TSB 154-295", "TSB 154-296", "TSB 154-297", "TSB 154-298", "TSB 154-299", "TSB 154-300", "TSB 154-301", "TSB 154-302", "TSB 154-303"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

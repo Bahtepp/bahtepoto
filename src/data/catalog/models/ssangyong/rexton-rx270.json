@@ -12,16 +12,17 @@
     {
       "id": "ssangyong-rexton-rx270-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Rexton RX270 (nesil belirlenmedi)",
+      "name": "Rexton RX270 — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "ssangyong-rexton-rx270-nesil-belirlenmedi-xdi", "slug": "xdi", "engineId": "ssangyong-xdi", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["LX", "Lux", "Spr LX"], "bodyTypes": [], "sourceRefs": ["TSB 128-36", "TSB 128-37", "TSB 128-45", "TSB 128-46", "TSB 128-79"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "ssangyong-rexton-rx270-nesil-belirlenmedi-xdi", "slug": "xdi", "engineId": "ssangyong-xdi", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["LX", "Lux", "Spr LX"], "bodyTypes": [], "sourceRefs": ["TSB 128-36", "TSB 128-37", "TSB 128-45", "TSB 128-46", "TSB 128-79"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

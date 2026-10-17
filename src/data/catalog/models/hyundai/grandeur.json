@@ -10,19 +10,114 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "hyundai-grandeur-1-nesil",
+      "slug": "1-nesil",
+      "name": "Grandeur 1. nesil",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1986 }, "end": { "year": 1992 } },
+      "engineDisplacementsL": [2, 2.4, 3],
+      "status": "sourced",
+      "sourceIds": ["wpgen-2648004"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Hyundai Grandeur\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "hyundai-grandeur-2-nesil",
+      "slug": "2-nesil",
+      "name": "Grandeur 2. nesil",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1992 }, "end": { "year": 1998 } },
+      "engineDisplacementsL": [2, 2.4, 2.5, 3, 3.5],
+      "status": "sourced",
+      "sourceIds": ["wpgen-2648004"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Hyundai Grandeur\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "hyundai-grandeur-3-nesil",
+      "slug": "3-nesil",
+      "name": "Grandeur 3. nesil",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1998 }, "end": { "year": 2005 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-2648004"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Hyundai Grandeur\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "hyundai-grandeur-4-nesil",
+      "slug": "4-nesil",
+      "name": "Grandeur 4. nesil",
+      "order": 4,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2005 }, "end": { "year": 2011 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-2648004"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Hyundai Grandeur\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "hyundai-grandeur-5-nesil",
+      "slug": "5-nesil",
+      "name": "Grandeur 5. nesil",
+      "order": 5,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2011 }, "end": { "year": 2017 }, "approximate": true },
+      "status": "sourced",
+      "sourceIds": ["wpgen-2648004"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Hyundai Grandeur\" bilgi kutusundan (farklı pazarlar: petrol, LPG and diesel; hybrid); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "hyundai-grandeur-6-nesil",
+      "slug": "6-nesil",
+      "name": "Grandeur 6. nesil",
+      "order": 6,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2016 }, "end": { "year": 2022 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-2648004"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Hyundai Grandeur\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "hyundai-grandeur-gn7",
+      "slug": "gn7",
+      "name": "Grandeur 7. nesil (GN7)",
+      "code": "GN7",
+      "order": 7,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2022 }, "end": null },
+      "status": "sourced",
+      "sourceIds": ["wpgen-2648004"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Hyundai Grandeur\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
       "id": "hyundai-grandeur-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "Grandeur (nesil belirlenmedi)",
+      "name": "Grandeur — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "hyundai-grandeur-nesil-belirlenmedi-33", "slug": "33", "engineId": "hyundai-33", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["H-MATIC"], "bodyTypes": [], "sourceRefs": ["TSB 177-201"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "hyundai-grandeur-nesil-belirlenmedi-22", "slug": "22", "engineId": "hyundai-22", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2010, 2011, 2012], "trims": ["Vgt"], "bodyTypes": [], "sourceRefs": ["TSB 177-298"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "hyundai-grandeur-nesil-belirlenmedi-33", "slug": "33", "engineId": "hyundai-33", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["H-MATIC"], "bodyTypes": [], "sourceRefs": ["TSB 177-201"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "hyundai-grandeur-nesil-belirlenmedi-22", "slug": "22", "engineId": "hyundai-22", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2010, 2011, 2012], "trims": ["Vgt"], "bodyTypes": [], "sourceRefs": ["TSB 177-298"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

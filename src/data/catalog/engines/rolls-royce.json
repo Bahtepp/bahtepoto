@@ -1,4 +1,4 @@
 [
-  { "id": "rolls-royce-67", "brandId": "rolls-royce", "slug": "67", "name": "6.7", "displacementL": 6.7, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"CULLINAN 6.7\"); yakıt türü tip adında yazmıyor." },
-  { "id": "rolls-royce-584", "brandId": "rolls-royce", "slug": "584", "name": "584 PS", "power": { "ps": 584 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15", "notes": "TSB tip adından (örn. \"SPECTRE 102KWH (584) AWD\"); yakıt türü tip adında yazmıyor." }
+  { "id": "rolls-royce-67", "brandId": "rolls-royce", "slug": "67", "name": "6.7", "displacementL": 6.7, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"CULLINAN 6.7\"); yakıt türü tip adında yazmıyor." },
+  { "id": "rolls-royce-584", "brandId": "rolls-royce", "slug": "584", "name": "584 PS", "power": { "ps": 584 }, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"SPECTRE 102KWH (584) AWD\"); yakıt türü tip adında yazmıyor." }
 ]

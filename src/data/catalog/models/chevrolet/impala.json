@@ -10,19 +10,124 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "chevrolet-impala-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Impala (nesil belirlenmedi)",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2019 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "id": "chevrolet-impala-2-nesil",
+      "slug": "2-nesil",
+      "name": "Impala 2. nesil",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1958 }, "end": { "year": 1960 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-284998"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Impala\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "chevrolet-impala-3-nesil",
+      "slug": "3-nesil",
+      "name": "Impala 3. nesil",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1960 }, "end": { "year": 1964 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-284998"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Impala\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "chevrolet-impala-4-nesil",
+      "slug": "4-nesil",
+      "name": "Impala 4. nesil",
+      "order": 4,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1964 }, "end": { "year": 1970 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-284998"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Impala\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "chevrolet-impala-5-nesil",
+      "slug": "5-nesil",
+      "name": "Impala 5. nesil",
+      "order": 5,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1970 }, "end": { "year": 1976 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-284998"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Impala\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "chevrolet-impala-6-nesil",
+      "slug": "6-nesil",
+      "name": "Impala 6. nesil",
+      "order": 6,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1976 }, "end": { "year": 1985 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-284998"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Impala\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "chevrolet-impala-7-nesil",
+      "slug": "7-nesil",
+      "name": "Impala 7. nesil",
+      "order": 7,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1994 }, "end": { "year": 1996 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-284998"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Impala\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "chevrolet-impala-8-nesil",
+      "slug": "8-nesil",
+      "name": "Impala 8. nesil",
+      "order": 8,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1999 }, "end": { "year": 2005 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-284998"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Impala\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "chevrolet-impala-9-nesil",
+      "slug": "9-nesil",
+      "name": "Impala 9. nesil",
+      "order": 9,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2005 }, "end": { "year": 2013 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-284998"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Impala\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "chevrolet-impala-nesil-belirlenmedi-35", "slug": "35", "engineId": "chevrolet-35", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008], "trims": ["LT"], "bodyTypes": [], "sourceRefs": ["TSB 32-1533"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "chevrolet-impala-nesil-belirlenmedi-36-305", "slug": "36-305", "engineId": "chevrolet-36-305", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 32-1538"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "chevrolet-impala-9-nesil-35", "slug": "35", "engineId": "chevrolet-35", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008], "trims": ["LT"], "bodyTypes": [], "sourceRefs": ["TSB 32-1533"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
+      "id": "chevrolet-impala-10-nesil",
+      "slug": "10-nesil",
+      "name": "Impala 10. nesil",
+      "order": 10,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2013 }, "end": { "year": 2020 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-284998"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Impala\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "chevrolet-impala-10-nesil-36-305", "slug": "36-305", "engineId": "chevrolet-36-305", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 32-1538"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

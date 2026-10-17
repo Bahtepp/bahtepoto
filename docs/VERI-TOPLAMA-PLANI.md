@@ -44,9 +44,22 @@ Nesil bölümlerindeki "Infobox automobile" kutularından ya da `{{Main|…}}` i
 üretim yıllarını (Türkiye > Avrupa > açıklamasız satır; aksi hâlde en geniş aralık "yaklaşık"), yalnızca yazıyorsa
 kasa kodunu ve motor hacimlerini alır. Makyaj dönemi üretmez. Elle girilmiş nesli olan modeller atlanır.
 
-Çıktı yalnızca geçici alandadır: `data/staging/wikipedia/generations.json` ve `NESIL-RAPORU.md`. Rapor ayrıca
-adayların katalog kopyasına eklenip TSB içe aktarmasının yeniden çalıştırıldığı bir **eşleştirme denemesi** içerir
-(katalog yazılmaz). Adayların kataloğa aktarılması insan onayı bekler (`applyGenerations` hazır, bağlanmadı).
+Toplayıcının çıktısı `data/staging/wikipedia/generations.json` ve `NESIL-RAPORU.md` (bellekte eşleştirme denemesi
+dahil). **Otomatik aktarım:** `npm run import` (= `catalog:update`) bu adayları kataloğa ekler, ancak yalnızca:
+madde başlığı marka + modelle açıkça eşleşiyorsa, kaynakta çelişki yoksa ve modelin elle girilmiş nesli yoksa.
+Dışarıda kalanlar ve nedenleri `data/staging/wikipedia/DISARIDA.md` içinde. Wikipedia nesilleri "kaynaklı"
+(ikincil kaynak) olarak işaretlenir; resmi doğrulama sayılmaz.
+
+TSB varyantları nesillere şu öncelikle eşlenir: (1) tip adındaki kasa kodu, (2) tip adındaki nesil ipucu veya yalnızca
+tek neslin dönemine uyan ve komşu nesil sınırına 1 yıldan uzak model yılları, (3) birden çok nesle uyan yılda kaynağın
+motor hacmini yalnızca tek nesil için listelemesi. Bunların hiçbiri yoksa kayıt "nesli belirlenmemiş araçlar"
+grubunda kalır (`kind: "unassigned"`); arayüzde gerçek kasa gibi gösterilmez ve Marka → Model → Model yılı → Motor
+akışıyla seçilir. Aynı motor birden çok nesilde satıldıysa her nesil için ayrı varyant oluşur; bir TSB satırı yalnızca
+bir varyanta girer.
+
+İçe aktarma her çalıştırmada önceki TSB ve Wikipedia kayıtlarını temizleyip yeniden kurar (ikinci çalıştırma 0 dosya
+yazar); elle girilmiş nesil ve varyantlara dokunmaz. **Geri alma:** `npm run import -- --without-generations` bütün
+Wikipedia nesillerini kaldırır, TSB araçları korunur.
 
 ### Pazar görünümü
 

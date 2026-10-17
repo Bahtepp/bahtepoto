@@ -10,21 +10,68 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "mazda-cx-5-1-nesil",
+      "slug": "1-nesil",
+      "name": "CX-5 1. nesil",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2012 }, "end": { "year": 2017 } },
+      "engineDisplacementsL": [2, 2.2, 2.5],
+      "status": "sourced",
+      "sourceIds": ["wpgen-6498321"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Mazda CX-5\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "mazda-cx-5-1-nesil-20", "slug": "20", "engineId": "mazda-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014], "trims": ["Reflex SKY-G"], "bodyTypes": [], "sourceRefs": ["TSB 89-1008"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "mazda-cx-5-1-nesil-22-150", "slug": "22-150", "engineId": "mazda-22-150", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014], "trims": ["Reflex SKY-D"], "bodyTypes": [], "sourceRefs": ["TSB 89-1010", "TSB 89-1011"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
+      "id": "mazda-cx-5-2-nesil",
+      "slug": "2-nesil",
+      "name": "CX-5 2. nesil",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2016 }, "end": { "year": 2025 } },
+      "engineDisplacementsL": [2, 2.2, 2.5],
+      "status": "sourced",
+      "sourceIds": ["wpgen-6498321"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Mazda CX-5\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "mazda-cx-5-2-nesil-20", "slug": "20", "engineId": "mazda-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021, 2022, 2023], "trims": ["Power Sense Plus SKY-G", "Power Sense Sport SKY-G", "SKY-G Power Sense 100. Yil"], "bodyTypes": [], "sourceRefs": ["TSB 89-1070", "TSB 89-1081", "TSB 89-1090"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
+      "id": "mazda-cx-5-3-nesil",
+      "slug": "3-nesil",
+      "name": "CX-5 3. nesil",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2025 }, "end": null },
+      "engineDisplacementsL": [2.5],
+      "status": "sourced",
+      "sourceIds": ["wpgen-6498321"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Mazda CX-5\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
       "id": "mazda-cx-5-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
-      "name": "CX-5 (nesil belirlenmedi)",
+      "name": "CX-5 — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
       "order": 999,
       "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2023 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "mazda-cx-5-nesil-belirlenmedi-37", "slug": "37", "engineId": "mazda-37", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015], "trims": ["Sport"], "bodyTypes": [], "sourceRefs": ["TSB 89-439"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "mazda-cx-5-nesil-belirlenmedi-20", "slug": "20", "engineId": "mazda-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023], "trims": ["Power SKY-G", "Power Sense Plus SKY-G", "Power Sense SKY-G", "Power Sense Sport SKY-G", "Reflex SKY-G", "SKY-G Power Sense 100. Yil"], "bodyTypes": [], "sourceRefs": ["TSB 89-1008", "TSB 89-1009", "TSB 89-1062", "TSB 89-1070", "TSB 89-1081", "TSB 89-1090"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "mazda-cx-5-nesil-belirlenmedi-22-150", "slug": "22-150", "engineId": "mazda-22-150", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014], "trims": ["Reflex SKY-D"], "bodyTypes": [], "sourceRefs": ["TSB 89-1010", "TSB 89-1011"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-        { "id": "mazda-cx-5-nesil-belirlenmedi-22-175", "slug": "22-175", "engineId": "mazda-22-175", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015, 2016], "trims": ["Power SKY-D"], "bodyTypes": [], "sourceRefs": ["TSB 89-1012"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+        { "id": "mazda-cx-5-nesil-belirlenmedi-37", "slug": "37", "engineId": "mazda-37", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015], "trims": ["Sport"], "bodyTypes": [], "sourceRefs": ["TSB 89-439"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "mazda-cx-5-nesil-belirlenmedi-20", "slug": "20", "engineId": "mazda-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023], "trims": ["Power SKY-G", "Power Sense SKY-G"], "bodyTypes": [], "sourceRefs": ["TSB 89-1009", "TSB 89-1062"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "mazda-cx-5-nesil-belirlenmedi-22-175", "slug": "22-175", "engineId": "mazda-22-175", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015, 2016], "trims": ["Power SKY-D"], "bodyTypes": [], "sourceRefs": ["TSB 89-1012"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

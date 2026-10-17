@@ -28,12 +28,14 @@ export type RevisionSummary = Pick<Revision, 'id' | 'slug' | 'name' | 'kind' | '
 
 export type GenerationSummary = Pick<
   Generation,
-  'id' | 'slug' | 'name' | 'code' | 'order' | 'labelPeriod' | 'periods' | 'status' | 'notes'
+  'id' | 'slug' | 'name' | 'code' | 'kind' | 'order' | 'labelPeriod' | 'periods' | 'status' | 'notes'
 > & {
   revisions: RevisionSummary[];
   variantCount: number;
   /** Pazar görünümüne göre listelenen motor sayısı (bkz. market.ts). */
   marketCounts: Record<MarketView, number>;
+  /** Varyantların Türkiye listesindeki model yılları (nesli belirlenmemiş araçlarda yıl seçimi için). */
+  modelYears: number[];
 };
 
 export type ModelSummary = Pick<Model, 'id' | 'slug' | 'name' | 'status' | 'notes'> & {
