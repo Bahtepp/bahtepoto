@@ -21,6 +21,7 @@
     "catalog:tsb": "node scripts/import/tsb/run.ts",
     "catalog:update": "node scripts/import/tsb/run.ts --write",
     "catalog:generations": "node scripts/import/generations/run.ts",
+    "catalog:audit": "node scripts/catalog/audit.ts",
     "import": "node scripts/import/tsb/run.ts --write"
   },
   "dependencies": {
