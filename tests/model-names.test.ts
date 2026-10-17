@@ -31,6 +31,15 @@ const placement = (rows: TsbRow[]) => {
 describe('takma ad tablosu (gövde/donanım varyantları)', () => {
   test('Clio Grand Tour, Clio ile aynı modelde; gövde station wagon', () => {
     assert.deepEqual(files([row('RENAULT', 'CLIO 1.5 DCI JOY'), row('RENAULT', 'CLIO GRAND TOUR 1.5 DCI JOY')]), ['models/renault/clio.json']);
+    assert.deepEqual(
+      files([
+        row('RENAULT', 'KADJAR 1.5 DCI 110'),
+        row('RENAULT', 'KADJAR BLACK EDITION 1.5 DCI 110'),
+        row('RENAULT', 'KADJAR BLACK EDITION 1.2 TCE 130'),
+        row('RENAULT', 'KADJAR BLACK EDITION 1.5 DCI EDC 110'),
+      ]),
+      ['models/renault/kadjar.json'],
+    );
   });
   test('i30 CW ve Accent Era asıl modelde', () => {
     assert.deepEqual(files([row('HYUNDAI', 'I30 1.6 CRDI STYLE'), row('HYUNDAI', 'I30 CW 1.6 CRDI STYLE'), row('HYUNDAI', 'ACCENT ERA 1.5 CRDI', [2010]), row('HYUNDAI', 'ACCENT 1.5 CRDI', [2010])]), [

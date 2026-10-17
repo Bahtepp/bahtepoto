@@ -12,31 +12,34 @@ Derin bakılanlar:
 - BMW 3 Serisi: `320i ED` ayrı güç sürümü (170 PS), M Sport donanım olarak kaldı
 - Mercedes-Benz: `180 d` dizel eki `180` benzin kaydından ayrıldı
 - Ford Focus, Fiesta, Mondeo, C-Max, Grand C-Max, S-Max, Kuga, Puma (`ford.md`)
+- Renault Clio, Megane, Symbol, Fluence, Taliant, Captur, Kadjar, Austral, Scenic, Laguna, Talisman, Koleos ve diğer binek modeller (`renault.md`)
 
-Bu turda bütün markalara eklenen ortak kurallar: EcoBoost kısaltması `EB` ayrı motor değil; ST/RS performans varyantı, ST-Line donanım; Cool/Trend/Titanium ve benzeri paketler alt model değil; hp ile aynı tam sayıdaki PS, motor ailesi tutuyorsa bağlanır; yakıtsız satır ve ST-Line, ST/RS motor kaydına bağlanmaz. Listede aynı ailenin birden çok gücü tek başlık altında gruplanır. Donanım paketleri kartta seçenek olarak gösterilmez; TSB satırında durur.
+Bu turda bütün markalara eklenen ortak kurallar: EcoBoost kısaltması `EB` ayrı motor değil; ST/RS performans varyantı, ST-Line ve RS Line donanım; Cool/Trend/Titanium/Joy/Touch/Icon/Equilibre ve benzeri paketler alt model değil; hp ile aynı tam sayıdaki PS, motor ailesi tutuyorsa bağlanır; yakıtsız satır ve ST-Line, ST/RS motor kaydına bağlanmaz. Şanzıman veya Eco etiketinden sonraki sayı güçtür. Listede aynı ailenin birden çok gücü tek başlık altında gruplanır. Donanım paketleri kartta seçenek olarak gösterilmez; TSB satırında durur.
 
 ## Sıradaki
 
 Aynı kurallar aktarımda duruyor. Model model bakılacak:
 
-1. Renault Clio, Megane
-2. Volkswagen Golf, Passat
-3. Fiat Egea, Toyota Corolla, Hyundai i20 / Tucson, Honda Civic
-4. Opel Astra, Peugeot 208 / 308 / 3008, Citroën C3 / C4
-5. Audi A3 / A4 / A6, Skoda Octavia / Superb
+1. Volkswagen Golf, Passat
+2. Fiat Egea, Toyota Corolla, Hyundai i20 / Tucson, Honda Civic
+3. Opel Astra, Peugeot 208 / 308 / 3008, Citroën C3 / C4
+4. Audi A3 / A4 / A6, Skoda Octavia / Superb
+5. Seat, Dacia, Kia, Volvo
 6. Kalan Türkiye modelleri
 
-Belirsizler: `nissan.md`, `ford.md`.
+Belirsizler: `nissan.md`, `ford.md`, `renault.md`.
 
 ## Sayılar
 
-| | Önce | Sonra |
+Sayılar Ford turunun sonuna göre. İkinci kuru çalıştırma: düşen 0, yeni 0, silinen model 0, değişen elle girilmiş kayıt 0.
+
+| | Ford sonrası | Renault sonrası |
 |---|---:|---:|
 | Marka kaydı | 100 | 100 |
 | Modeli olan marka | 97 | 97 |
-| Model dosyası | 898 | 897 |
+| Model dosyası | 897 | 892 |
 | Gerçek kasa | 1.356 | 1.356 |
-| Varyant | 5.093 | 5.090 |
-| Nesli belirsiz varyant | 1.924 | 1.922 |
-| Motor | 2.502 | 2.505 |
-| TSB satırı | 15.401 | 15.401 |
+| Varyant | 5.090 | 5.057 |
+| Nesli belirsiz varyant | 1.922 | 1.907 |
+| Motor | 2.505 | 2.502 |
+| TSB satırı | 15.401 | 15.413 |

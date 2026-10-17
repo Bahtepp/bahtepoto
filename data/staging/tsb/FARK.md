@@ -6,8 +6,8 @@ Aktarma güvenli: kayıp yok.
 
 | | Sayı |
 |---|---|
-| Mevcut katalogdaki TSB satırı | 15401 |
-| Yeni katalogdaki TSB satırı | 15401 |
+| Mevcut katalogdaki TSB satırı | 15413 |
+| Yeni katalogdaki TSB satırı | 15413 |
 | Düşecek TSB satırı | 0 |
 | Yeni TSB satırı | 0 |
 | Silinecek model dosyası | 0 |

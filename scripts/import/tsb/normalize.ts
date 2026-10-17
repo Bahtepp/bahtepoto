@@ -35,13 +35,13 @@ export interface ParsedType {
 
 const up = (s: string) => s.toLocaleUpperCase('tr-TR').replace(/İ/g, 'I').replace(/Ş/g, 'S').replace(/Ğ/g, 'G').replace(/Ü/g, 'U').replace(/Ö/g, 'O').replace(/Ç/g, 'C');
 
-const DIESEL = new Set(['TDCI', 'TDI', 'DCI', 'CRDI', 'CRDİ', 'HDI', 'BLUEHDI', 'E-HDI', 'JTD', 'JTDM', 'MULTIJET', 'MJET', 'MJT', 'CDTI', 'CDI', 'D4D', 'D-4D', 'DIZEL', 'DIESEL', 'SDV6', 'TDV6', 'SD4', 'TD4', 'ED4', 'CRD', 'DTEC', 'I-DTEC', 'IDTEC', 'SKYACTIV-D', 'VCDI', 'D-CAT', 'BLUETEC', 'TDS', 'SDI', 'ECOBLUE', 'BLUEDCI', 'CRDI4', 'DDIS', 'DDIS4', 'TDDI', 'TDCI4', 'D-4D4', 'XDI', 'CRTD', 'BITDI', 'BITURBODIESEL', 'TDCİ']);
-const PETROL = new Set(['EB', 'E.BOOST', 'TSI', 'TFSI', 'FSI', 'TCE', 'ECOBOOST', 'VVT', 'VVTI', 'VVT-I', 'DUAL-VVT', 'VTEC', 'I-VTEC', 'IVTEC', 'MPI', 'GDI', 'T-GDI', 'TGDI', 'PURETECH', 'THP', 'VTI', 'TJET', 'T-JET', 'MULTIAIR', 'FIRE', 'TB', 'TBI', 'BENZIN', 'BENZINLI', 'SCE', 'TI-VCT', 'TIVCT', 'DURATEC', 'ECOTEC', 'SIDI', 'TURBOJET', 'GTI', 'EVO', 'DIG-T', 'DIGT', 'IG-T', 'IGT', 'SKYACTIV-G', 'TSI-ACT', 'ECO-G', 'FIREFLY']);
-const HYBRID = new Set(['HYBRID', 'HIBRIT', 'HEV', 'FULL-HYBRID', 'E-TECH-HYBRID', 'HYBRIT', 'SELF-CHARGING', 'E-POWER', 'EPOWER']);
+const DIESEL = new Set(['TDCI', 'TDI', 'DCI', 'CRDI', 'CRDİ', 'HDI', 'BLUEHDI', 'E-HDI', 'JTD', 'JTDM', 'MULTIJET', 'MJET', 'MJT', 'CDTI', 'CDI', 'D4D', 'D-4D', 'DIZEL', 'DIESEL', 'SDV6', 'TDV6', 'SD4', 'TD4', 'ED4', 'CRD', 'DTEC', 'I-DTEC', 'IDTEC', 'SKYACTIV-D', 'VCDI', 'D-CAT', 'BLUETEC', 'TDS', 'SDI', 'ECOBLUE', 'BLUEDCI', 'B.DCI', 'BDCI', 'CRDI4', 'DDIS', 'DDIS4', 'TDDI', 'TDCI4', 'D-4D4', 'XDI', 'CRTD', 'BITDI', 'BITURBODIESEL', 'TDCİ']);
+const PETROL = new Set(['EB', 'E.BOOST', 'TSI', 'TFSI', 'FSI', 'TCE', 'ECOBOOST', 'VVT', 'VVTI', 'VVT-I', 'DUAL-VVT', 'VTEC', 'I-VTEC', 'IVTEC', 'MPI', 'GDI', 'T-GDI', 'TGDI', 'PURETECH', 'THP', 'VTI', 'TJET', 'T-JET', 'MULTIAIR', 'FIRE', 'TB', 'TBI', 'BENZIN', 'BENZINLI', 'SCE', 'TI-VCT', 'TIVCT', 'DURATEC', 'ECOTEC', 'SIDI', 'TURBOJET', 'GTI', 'EVO', 'DIG-T', 'DIGT', 'IG-T', 'IGT', 'SKYACTIV-G', 'TSI-ACT', 'FIREFLY']);
+const HYBRID = new Set(['HYBRID', 'HIBRIT', 'HEV', 'FULL-HYBRID', 'F.HYBRID', 'F-HYBRID', 'E-TECH', 'ETECH', 'E-TECH-HYBRID', 'HYBRIT', 'SELF-CHARGING', 'E-POWER', 'EPOWER']);
 const PHEV = new Set(['PHEV', 'PLUG-IN', 'E-HYBRID', 'EHYBRID', 'PLUGIN', 'PLUG-IN-HYBRID', 'GTE']);
 const MHEV = new Set(['MHEV', 'ETSI', 'E-TSI', 'MILD-HYBRID', 'MILD', '48V', 'MHYBRID']);
 const ELECTRIC = new Set(['EV', 'BEV', 'ELEKTRIK', 'ELEKTRIKLI', 'ELECTRIC', 'E-TRON', 'KWH']);
-const LPG = new Set(['LPG', 'BI-FUEL', 'BIFUEL']);
+const LPG = new Set(['LPG', 'BI-FUEL', 'BIFUEL', 'ECO-G', 'ECOG']);
 const CNG = new Set(['CNG', 'TGI', 'METAN']);
 
 const AUTO = new Set(['OV', 'O.V', 'O.V.', 'OTOMATIK', 'OTM', 'OTOM', 'AT', 'A/T', 'TIPTRONIC', 'STEPTRONIC', 'AUTO', 'OTOMATIK.', 'GEARTRONIC', 'AUTOMATIC', 'EAT6', 'EAT8', 'EAT', '8AT', '6AT', '7AT', '9AT', '9G-TRONIC', '7G-TRONIC', 'OTOM.', 'TORQUE']);
@@ -99,7 +99,7 @@ const BODY: [RegExp, BodyType][] = [
 ];
 /** Motor tanımının parçası olup donanım sayılmayan sözcükler (emisyon sınıfı, start-stop vb.). */
 const NEUTRAL = new Set([
-  'BMT', 'ACT', 'BLUEMOTION', 'S&S', 'SS', 'START&STOP', 'START-STOP', '16V', '8V', '12V', '20V', '24V', 'TURBO', 'TWINCHARGER',
+  'BMT', 'ACT', 'BLUEMOTION', 'S&S', 'SS', 'START&STOP', 'START-STOP', '16V', '8V', '12V', '20V', '24V', 'TURBO', 'TWINCHARGER', 'ECO',
   'BITURBO', 'E5', 'E6', 'E6D', 'E6.2', 'EU5', 'EU6', 'EURO5', 'EURO6', 'ENERGY', 'ECOFLEX', 'ECONETIC', 'V6', 'V8', 'V10', 'V12',
 ]);
 const ROMAN = /^(II|III|IV|V|VI|VII|VIII|IX|X)$/;
@@ -186,6 +186,8 @@ export function parseTypeName(typeName: string): ParsedType {
   const raw = typeName
     // Bitişik yazımlar: "TITANIUM1.6i" → "TITANIUM 1.6i"
     .replace(/([A-Za-zÇĞİÖŞÜçğıöşü])(\d[.,]\d)/g, '$1 $2')
+    // "BUSI.1.5 DCI" nokta hacmi yutmasın.
+    .replace(/\.(\d[.,]\d)/g, '. $1')
     .replace(/\(\s*(\d{2,4})\s*(?:PS|HP|BG|KW)?\s*\)/gi, ' ($1) ')
     .replace(/(\d)\s+(KAPI)\b/gi, '$1$2')
     .replace(/\s+/g, ' ')
@@ -298,7 +300,10 @@ export function parseTypeName(typeName: string): ParsedType {
       const next = up(raw[i + 1] ?? '');
       // "2.0 ST 250": ST/RS performans modelidir, sonraki sayı güçtür. "ST LINE" donanım paketidir.
       const afterPerformance = /^(ST|RS|RS500)$/.test(prev) && next !== 'LINE';
-      if (fuelOf(prev) || /^\d[.,]\d/.test(prev) || NEUTRAL.has(prev) || afterPerformance) {
+      // "TCE EDC 120", "TCE X-TRONIC 100": güç, şanzıman sözcüğünün ardında da yazılır.
+      const prevKey = prev.replace(/\.$/, '');
+      const afterTrans = AUTO.has(prev) || AUTO.has(prevKey) || DCT.has(prevKey) || AMT.has(prevKey) || CVT.has(prevKey) || MANUAL.has(prevKey);
+      if (fuelOf(prev) || /^\d[.,]\d/.test(prev) || NEUTRAL.has(prev) || afterPerformance || afterTrans || /^EV\d+$/.test(prev)) {
         const n = Number(T);
         if (n >= 50 && n <= 800) {
           out.powerPs = n;
@@ -397,8 +402,10 @@ const JOINING = new Set(['GRAND', 'CROSS', 'BIG', 'LAND']);
  */
 const NEVER_SUBMODEL = new Set([
   'MCA', 'FL', 'MY', 'NEW', 'YENI', 'FACELIFT', 'MCA1', 'MCAI', 'ICA', 'ICA3',
-  'ST', 'RS', 'RS500', 'ST-LINE', 'STLINE',
+  'ST', 'RS', 'RS500', 'ST-LINE', 'STLINE', 'GT-LINE', 'GTLINE', 'RS-LINE', 'RSLINE',
   'TREND', 'TITANIUM', 'GHIA', 'STYLE', 'COMFORTLINE', 'HIGHLINE', 'TEKNA', 'VISIA', 'ICON', 'JOY',
+  'TOUCH', 'DYNAMIQUE', 'PRIVILEGE', 'EXPRESSION', 'EQUILIBRE', 'AUTHENTIQUE', 'EXTREME', 'EXCEPTION',
+  'CONNECT', 'OUTDOOR', 'TECHNO', 'INTENS', 'ESPRIT', 'INITIALE', 'EVOLUTION',
   'AMBIENTE', 'COOL', 'COLLECTION', 'TRENDLINE', 'AMBITION', 'ALLURE', 'ELEGANCE',
 ]);
 
@@ -406,6 +413,9 @@ const NEVER_SUBMODEL = new Set([
 function storedTech(tok: string): string {
   const t = up(tok).replace(/[.,]$/, '');
   if (t === 'EB' || t === 'E.BOOST' || t === 'EBOOST' || t === 'E-BOOST') return 'ECOBOOST';
+  if (t === 'B.DCI' || t === 'BDCI') return 'BLUEDCI';
+  if (t === 'F.HYBRID' || t === 'F-HYBRID') return 'HYBRID';
+  if (t === 'ETECH') return 'E-TECH';
   return tok.replace(/[.,]$/, '');
 }
 

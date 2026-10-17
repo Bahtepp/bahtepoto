@@ -29,6 +29,7 @@ export const MODEL_ALIASES: Record<string, Record<string, ModelAlias>> = {
     'CLIO GRAND': { model: 'CLIO', body: 'wagon', note: 'Clio Grand Tour: Clio station wagon gövdesi' },
     'SYMBOL COLLECTION': { model: 'SYMBOL', note: 'Collection donanım paketi' },
     'FLUENCE BOLD': { model: 'FLUENCE', note: 'Bold donanım paketi' },
+    'KADJAR BLACK': { model: 'KADJAR', note: 'Black Edition donanım paketi' },
   },
   seat: {
     'IBIZA SPORTOURER': { model: 'IBIZA', body: 'wagon', note: 'Ibiza ST (Sportourer) station wagon gövdesi' },

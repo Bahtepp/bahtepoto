@@ -97,7 +97,7 @@ const TECH_DISPLAY: Record<string, string> = {
   MULTIAIR: 'MultiAir', HIBRIT: 'Hibrit', HYBRID: 'Hybrid', 'TI-VCT': 'Ti-VCT', TIVCT: 'Ti-VCT', DURATEC: 'Duratec',
   ECOTEC: 'Ecotec', BLUETEC: 'BlueTEC', 'T-JET': 'T-Jet', TJET: 'T-Jet', 'D-4D': 'D-4D', VVTI: 'VVT-i', 'VVT-I': 'VVT-i',
   'I-VTEC': 'i-VTEC', 'I-DTEC': 'i-DTEC', SKYACTIV: 'Skyactiv', 'E-TSI': 'eTSI', ETSI: 'eTSI', 'E-HYBRID': 'eHybrid', MJET: 'Multijet',
-  'E-POWER': 'e-POWER', EPOWER: 'e-POWER', 'DIG-T': 'DIG-T', 'IG-T': 'IG-T', ED: 'ED',
+  'E-POWER': 'e-POWER', EPOWER: 'e-POWER', 'DIG-T': 'DIG-T', 'IG-T': 'IG-T', ED: 'ED', 'E-TECH': 'E-Tech', 'ECO-G': 'Eco-G',
 };
 const techDisplay = (t: string) => TECH_DISPLAY[fold(t)] ?? t;
 
@@ -115,6 +115,8 @@ function performanceTrim(items: { trims: string[] }[]): string | undefined {
   const labels = items.map((it) => {
     const words = it.trims.map((w) => fold(w));
     if (words[0] === 'ST-LINE' || words[0] === 'STLINE' || (words[0] === 'ST' && words[1] === 'LINE')) return '';
+    if (words[0] === 'GT-LINE' || words[0] === 'GTLINE' || (words[0] === 'GT' && words[1] === 'LINE')) return '';
+    if (words[0] === 'RS-LINE' || words[0] === 'RSLINE' || (words[0] === 'RS' && words[1] === 'LINE')) return '';
     const w0 = words[0] ?? '';
     if (w0 === 'RS500') return 'RS500';
     if (w0 === 'RS' || w0 === 'ST') return w0;
@@ -665,7 +667,11 @@ export function buildFromTsb(
         // Tip adının ham sözcükleri (gövde/donanım ayrıştırmasından önce: "PASSAT CC" gövde sayılabilir).
         const words = fold(it.row.typeName).split(/\s+/).slice(1);
         const byModel = SUBMODEL_WORDS.byModel[it.model] ?? [];
-        const submodel = words.some((w, i) => SUBMODEL_WORDS.anywhere.has(w) || byModel.includes(w) || (i === 0 && SUBMODEL_WORDS.first.has(w)));
+        const rawName = fold(it.row.typeName);
+        // Elektrikli E-Tech (EV60, kWh) aynı adlı içten yanmalı kasaya yıl ile bağlanmaz.
+        // "1.6 E-Tech" / "E-Tech full hybrid" aynı modelin motorudur; yıl kuralı durur.
+        const electricEtech = /\bE-?TECH\b/.test(rawName) && (/\bEV\d/.test(rawName) || rawName.includes('KWH') || rawName.includes('ELEKTRIK'));
+        const submodel = electricEtech || words.some((w, i) => SUBMODEL_WORDS.anywhere.has(w) || byModel.includes(w) || (i === 0 && SUBMODEL_WORDS.first.has(w)));
         // Kaynakta çelişkili bir neslin dönemine düşen yıllar: yıl / motor kuralıyla hiçbir nesle eşlenmez.
         const blocked = (opts.blockedSpans?.get(target) ?? []).some((sp) => years.some((y) => y >= sp.start && y <= (sp.end ?? 9999) + 1));
         const ranges = (submodel || blocked ? [] : curatedGens)

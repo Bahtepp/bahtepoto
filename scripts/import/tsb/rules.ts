@@ -80,7 +80,7 @@ export const EXCLUDED_MODEL_PREFIXES = [
  */
 export const SUBMODEL_WORDS = {
   first: new Set(['PLUS', 'PRO']),
-  anywhere: new Set(['VERSO', 'CLASSIC', 'CROSS', 'SYMBOL', 'CC', 'E-TECH', 'ETECH', 'TWINTOP', 'CAMPUS']),
+  anywhere: new Set(['VERSO', 'CLASSIC', 'CROSS', 'SYMBOL', 'CC', 'TWINTOP', 'CAMPUS']),
   /**
    * Yalnızca belirli modelde alt model gösteren sözcükler (TSB model adı → sözcükler).
    * POLO SEDAN: uzun dingil mesafeli Polo sedan (Vento) 2010'dan beri Avrupa dışı pazarlar için ayrı

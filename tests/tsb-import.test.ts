@@ -56,6 +56,47 @@ describe('TSB tip adı ayrıştırma', () => {
     assert.equal(p.powerPs, 160);
   });
 
+  test('şanzıman veya Eco etiketinden sonraki sayı güçtür; 1.2 atmosferik TCe olmaz', () => {
+    const edc = parseTypeName('CLIO GT LINE 1.2 TURBO EDC 120');
+    assert.equal(edc.displacementL, 1.2);
+    assert.equal(edc.powerPs, 120);
+    assert.equal(edc.transmission?.type, 'dual-clutch');
+    assert.equal(edc.tech.includes('TCE'), false);
+
+    const atmo = parseTypeName('CLIO HB ICON 1.2 16V 75');
+    assert.equal(atmo.displacementL, 1.2);
+    assert.equal(atmo.powerPs, 75);
+    assert.equal(atmo.tech.includes('TCE'), false);
+    assert.equal(atmo.fuel, undefined);
+
+    const tce = parseTypeName('CLIO JOY 1.0 TCE X-TRONIC 100');
+    assert.equal(tce.powerPs, 100);
+    assert.equal(tce.fuel, 'petrol');
+    assert.ok(tce.tech.includes('TCE'));
+    assert.equal(tce.transmission?.type, 'cvt');
+
+    const eco = parseTypeName('CLIO EQUILIBRE 1.0 TCE ECO 100');
+    assert.equal(eco.powerPs, 100);
+    assert.equal(eco.fuel, 'petrol');
+
+    const glued = parseTypeName('MEGANE II S. AUTHENTIQUE BUSI.1.5 DCI 85');
+    assert.equal(glued.displacementL, 1.5);
+    assert.equal(glued.powerPs, 85);
+    assert.equal(glued.fuel, 'diesel');
+
+    const names = ['CLIO EQUILIBRE 1.0 SCE 65', 'CLIO EQUILIBRE 1.0 TCE 90', 'CLIO EQUILIBRE 1.0 TCE ECO 100', 'CLIO JOY 1.0 TCE 90'];
+    const parsed = names.map(parseTypeName);
+    const resolve = resolveModels(parsed);
+    assert.equal(resolve(parsed[0]!).model, 'CLIO');
+
+    const rsLine = parseTypeName('CLIO RS LINE 1.0 TCE X-TRONIC 100');
+    assert.equal(rsLine.powerPs, 100);
+    const hybrid = parseTypeName('CAPTUR ESPRIT ALPINE 1.6 E-TECH F.HYBRID 145');
+    assert.equal(hybrid.displacementL, 1.6);
+    assert.equal(hybrid.fuel, 'hybrid');
+    assert.equal(hybrid.powerPs, 145);
+  });
+
   test('EB EcoBoost kısaltmasıdır; ST gücü okunur; Cool ve ST-Line ayrı model değildir', () => {
     const eb = parseTypeName('FOCUS ST-LINE 1.0 MHEV EB 125 7AT');
     assert.equal(eb.fuel, 'mild-hybrid');
@@ -479,6 +520,9 @@ describe('Türkiye pazar filtresi', () => {
     assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['Titanium', 'ST'] }] }), false);
     assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['ST Line'] }] }), false);
     assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['ST-Line'] }] }), false);
+    assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['RS Line'] }] }), false);
+    assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['GT Line'] }] }), false);
+    assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['RS'] }] }), true);
   });
 
   test('gerçek katalog: TSB varyantlarının hepsinde Türkiye durumu ve model yılları var', () => {
