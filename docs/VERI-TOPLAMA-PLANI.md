@@ -32,6 +32,21 @@ eşleştir → kataloğa yaz → rapor). Yazmadan denemek için `npm run catalog
 - **Yeniden çalıştırma güvenli:** önce bir önceki TSB aktarımının ürettikleri (tek kaynağı TSB olan motor, nesil,
   varyant ve boş kalan modeller) temizlenir, sonra yeniden kurulur. Elle girilmiş kayıtlara yalnızca Türkiye durumu
   eklenir; diğer alanları değişmez.
+- **Güvenli aktarma** (`scripts/import/tsb/{source,guard,pipeline}.ts`, `scripts/import/lib/safe-write.ts`):
+  - Dosyalar önce geçici klasöre iner ve doğrulanır (geçerli ZIP/XLSX, "Marka Kodu" başlığı, dosya adı `YYYYMM…`,
+    en az 1000 satır). İndirme hatası (HTTP 400, ağ), bozuk veya eksik dosya → katalog okunmadan çıkılır; önbellekte
+    boş klasör kalmaz. Çevrimdışı mod yalnızca geçerli dosya içeren en yeni önbellek klasörünü kullanır.
+  - Yeni katalog mevcutla karşılaştırılır (`data/staging/tsb/FARK.md`): TSB satırı düşecekse veya model dosyası
+    silinecekse durur; yalnızca `--onayla-silme` ile yapılır. Elle girilmiş / başka kaynaklı kayıt değişecekse her
+    zaman durur. Durdurulan aktarmanın dosyaları önbelleğe girmez.
+  - Yazım yedekli ve günlüklüdür (`.cache/import/yedek/katalog/`, son 5 yedek): hata olursa eski dosyalar geri
+    yüklenir; süreç yarıda ölürse bir sonraki çalıştırma önce önceki kataloğu geri yükler.
+    `npm run import -- --geri-al` son başarılı aktarmayı geri alır.
+  - İçeriği değişmeyen kayıtlar eski tarihini korur: aynı veri başka gün aktarılınca 0 dosya yazılır.
+- **TSB indirme hatası (Ekim 2026):** HTTP 400'ün nedeni User-Agent başlığındaki Türkçe karakterlerdi (HTTP
+  başlıkları ASCII olmalı); erişim engeli değildi. Başlık ASCII yapıldı. Otomatik indirme yine çalışmazsa
+  dosyaları TSB sayfasından indirip `data/gelen/tsb/` klasörüne bırakın ve `npm run import -- --elle` çalıştırın
+  (başka klasör: `--klasor <yol>`; ayrıntı `data/gelen/tsb/BENIOKU.md`).
 - **Lisans notu:** TSB sayfası "Tüm hakları saklıdır" der; liste herkese açık indirme olarak sunuluyor. Yalnızca
   olgusal araç tanımları ve model yılları kullanılıyor, değerler kullanılmıyor. Yayından önce TSB'nin bu kullanımı
   onaylaması önerilir.

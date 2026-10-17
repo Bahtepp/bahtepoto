@@ -35,3 +35,6 @@ test-results/
 
 # İçe aktarma ham indirmeleri (scripts/import; git dışı)
 .cache/
+
+# Elle indirilen TSB listeleri (data/gelen/tsb/BENIOKU.md)
+data/gelen/**/*.xlsx
