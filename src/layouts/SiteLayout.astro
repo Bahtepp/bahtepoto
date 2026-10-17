@@ -17,8 +17,7 @@ const { title, description, noindex } = Astro.props;
 <BaseLayout title={title} description={description} noindex={noindex}>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a href="/" class="logo" aria-label={`${SITE.name} ana sayfa`}>BAHTEPOTO</a>
-      <span class="tag">Prototip</span>
+      <a href={import.meta.env.BASE_URL} class="logo" aria-label={`${SITE.name} ana sayfa`}>BAHTEPOTO</a>
     </div>
   </header>
 
@@ -28,8 +27,7 @@ const { title, description, noindex } = Astro.props;
 
   <footer class="wrap site-footer">
     <p>
-      Prototip aşaması: yalnızca Ford Focus nesilleri veri içerir. Veriler belirtilen kaynaklara dayanır; doğrulama durumu
-      her kayıtta ayrıca gösterilir. Çelişkili veya eksik alanlar açıkça işaretlenir.
+      Türkiye’de kullanılan otomobillerin marka, model, motor ve kasa seçimi. Kasa yıllarının bir bölümü İngilizce Wikipedia maddelerindeki olgulardan derlendi (CC BY-SA 4.0).
     </p>
   </footer>
 </BaseLayout>

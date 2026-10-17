@@ -9,19 +9,18 @@
 import SiteLayout from '@/layouts/SiteLayout.astro';
 import EngineSpecs from '@/components/vehicle/EngineSpecs.astro';
 import IssuesSection from '@/components/vehicle/IssuesSection.astro';
-import VehicleSources from '@/components/vehicle/VehicleSources.astro';
-import { getCatalog } from '@/lib/catalog';
 import {
-  BASIS_LABELS,
   catalogPath,
   formatYearRange,
   generationLabel,
   vehiclePath,
+  withBase,
 } from '@/lib/catalog/format';
+import { engineGroupIdentity } from '@/lib/catalog/selector';
 import { getIssueData } from '@/lib/issues';
 import { groupForDisplay } from '@/lib/issues/match';
-import type { IssueSource } from '@/lib/issues/schema';
 import '@/styles/vehicle.css';
+import { getCatalog } from '@/lib/catalog';
 import { getLabeler, getVehicleSelections, revisionsForVariant, toVehicleContext, type VehicleSelection } from '@/lib/vehicle';
 
 export async function getStaticPaths() {
@@ -53,18 +52,11 @@ const live = await getIssueData('live');
 const groups = groupForDisplay(live.issues, ctx);
 
 const genLabel = generationLabel(generation);
-const revPeriod = revision?.periods[0];
-const revText = revision ? `${revision.name}${revPeriod ? ` (${formatYearRange(revPeriod)})` : ''}` : undefined;
-const engineTitle = variant.trimName && !engine.name.includes(variant.trimName) ? `${engine.name} (${variant.trimName})` : engine.name;
-const title = `${brand.name} ${genLabel}`;
-const subtitle = [engineTitle, revText].filter(Boolean).join(' — ');
-
-const shownIssues = [...groups.known, ...groups.possible, ...groups.recalls];
-const issueSources = [...new Set(shownIssues.flatMap(({ issue }) => issue.claims.map((c) => c.sourceId)))]
-  .map((id) => live.sourceById.get(id))
-  .filter((s): s is IssueSource => Boolean(s));
-
-const back = catalogPath({ brand: brand.slug, model: model.slug, generation: generation.slug, revision: revision?.slug });
+const engineGroup = engineGroupIdentity(engine, variant);
+const engineTitle = engineGroup.label;
+const title = `${brand.name} ${model.name} ${engineTitle}`;
+const subtitle = generation.kind === 'unassigned' ? 'Kasa bilgisi yok' : genLabel;
+const back = withBase(catalogPath({ brand: brand.slug, model: model.slug, engine: engineGroup.slug }));
 const pathFor = (revSlug: string | undefined, variantSlug: string) =>
   vehiclePath({ brand: brand.slug, model: model.slug, generation: generation.slug, revision: revSlug, variant: variantSlug });
 
@@ -77,17 +69,12 @@ const siblings = generation.variants
 
 /** Sayfa bölümleri. Yeni bölüm: bileşenini ekleyin ve buraya bir satır yazın. */
 const SECTIONS = [
-  { id: 'kimlik', title: 'Araç kimliği' },
-  { id: 'motor', title: 'Motor özellikleri' },
-  { id: 'kronik-sorunlar', title: 'Bilinen sorunlar ve geri çağırmalar' },
-  { id: 'kaynaklar', title: 'Kaynaklar' },
-  // { id: 'yakit-tuketimi', title: 'Yakıt tüketimi' },
-  // { id: 'ikinci-el-kontrol', title: 'İkinci el kontrol rehberi' },
-  // { id: 'bakim-maliyetleri', title: 'Bakım maliyetleri' },
-  // { id: 'kullanici-deneyimleri', title: 'Kullanıcı deneyimleri' },
+  { id: 'kimlik', title: 'Araç' },
+  { id: 'motor', title: 'Motor' },
+  { id: 'kronik-sorunlar', title: 'Bilinen sorunlar' },
 ];
 
-const description = `${title} ${subtitle}: motor özellikleri, kronik sorunlar ve kaynaklar.`;
+const description = `${brand.name} ${model.name} ${engineTitle}: motor ve kasa özeti.`;
 ---
 
 <SiteLayout title={`${title} ${subtitle}`} description={description}>
@@ -95,7 +82,7 @@ const description = `${title} ${subtitle}: motor özellikleri, kronik sorunlar v
     <nav class="vehicle-crumbs" aria-label="Konum">
       <a href={back}>← Katalogda bu seçime dön</a>
       <span aria-hidden="true">·</span>
-      <span>{brand.name} › {model.name} › {genLabel}{revision && ` › ${revision.name}`}</span>
+      <span>{brand.name} › {model.name} › {engineGroup.label} › {generation.kind === 'unassigned' ? 'Kasa bilgisi yok' : genLabel}</span>
     </nav>
 
     <header class="vehicle-head" id="kimlik">
@@ -115,52 +102,23 @@ const description = `${title} ${subtitle}: motor özellikleri, kronik sorunlar v
       </ul>
     </nav>
 
-    {
-      !revisionMappingVerified && (
-        <p class="callout-warn">
-          {engine.name} motorunun {revision?.name.toLocaleLowerCase('tr-TR')} dönemde sunulduğu kaynaklarla henüz
-          doğrulanmadı. Bu sayfa, katalogdaki "eşleşmesi doğrulanmamış motorlar" listesinden açıldı.
-        </p>
-      )
-    }
-
     <section class="vehicle-section" aria-labelledby="kimlik-baslik">
-      <h2 id="kimlik-baslik">Araç kimliği ve temel bilgiler</h2>
+      <h2 id="kimlik-baslik">Araç</h2>
       <dl class="spec-grid">
         <div><dt>Marka</dt><dd>{brand.name}</dd></div>
         <div><dt>Model</dt><dd>{model.name}</dd></div>
+        <div><dt>Motor</dt><dd>{engineTitle}</dd></div>
         {
           generation.kind === 'unassigned' ? (
-            <div><dt>Nesil / kasa</dt><dd><span class="pending">Kaynaklarda belirlenmedi</span> (araç model yılı ve motorla listelendi)</dd></div>
+            <div><dt>Kasa</dt><dd>Kasa bilgisi yok</dd></div>
           ) : (
             <>
-              <div><dt>Nesil</dt><dd>{genLabel}</dd></div>
-              <div><dt>Kasa / platform kodu</dt><dd>{generation.code ?? <span class="pending">Veri doğrulanıyor</span>}</dd></div>
-              <div>
-                <dt>Nesil yılları</dt>
-                <dd>
-                  {formatYearRange(generation.labelPeriod, true)} · {catalog.marketById.get(generation.labelPeriod.marketId)?.name} ·{' '}
-                  {BASIS_LABELS[generation.labelPeriod.basis]}
-                </dd>
-              </div>
+              <div><dt>Kasa</dt><dd>{generation.code ? `${genLabel} · ${generation.code}` : genLabel}</dd></div>
+              <div><dt>Yıllar</dt><dd>{formatYearRange(generation.labelPeriod)}</dd></div>
             </>
           )
         }
-        {
-          revision && (
-            <div>
-              <dt>Makyaj dönemi</dt>
-              <dd>
-                {revision.name}
-                {revPeriod &&
-                  ` · ${formatYearRange(revPeriod)} · ${catalog.marketById.get(revPeriod.marketId)?.name} · ${BASIS_LABELS[revPeriod.basis]}${revPeriod.approximate ? ' (yaklaşık)' : ''}`}
-              </dd>
-            </div>
-          )
-        }
-        <div><dt>Motor</dt><dd>{engineTitle}</dd></div>
       </dl>
-      {revision?.notes && <p class="note">{revision.notes}</p>}
 
       {
         (otherRevisions.length > 0 || siblings.length > 0) && (
@@ -186,7 +144,6 @@ const description = `${title} ${subtitle}: motor özellikleri, kronik sorunlar v
                         {e.name}
                         {v.trimName && !e.name.includes(v.trimName) && ` (${v.trimName})`}
                       </a>
-                      {revision && !v.revisionIds.includes(revision.id) && <span class="issue-ref"> — dönem eşleşmesi doğrulanmadı</span>}
                     </li>
                   ))}
                 </ul>
@@ -197,22 +154,13 @@ const description = `${title} ${subtitle}: motor özellikleri, kronik sorunlar v
       }
     </section>
 
-    <EngineSpecs engine={engine} variant={variant} revisions={generation.revisions} markets={catalog.marketById} />
+    <EngineSpecs engine={engine} variant={variant} />
 
     <IssuesSection
       groups={groups}
       sourceById={live.sourceById}
       label={label}
       engineMappingUncertain={!revisionMappingVerified}
-    />
-
-    <VehicleSources
-      generation={generation}
-      revision={revision}
-      variant={variant}
-      engine={engine}
-      catalogSources={catalog.sourceById}
-      issueSources={issueSources}
     />
   </article>
 </SiteLayout>

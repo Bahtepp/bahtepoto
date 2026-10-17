@@ -8,7 +8,7 @@
   --col-model: 21rem;
   display: grid;
   grid-template-columns: var(--col-brand) var(--col-model) minmax(0, 1fr);
-  grid-template-areas: 'market market market' 'brand model detail';
+  grid-template-areas: 'search search search' 'brand model detail';
   gap: 1rem;
   align-items: start;
 }
@@ -577,7 +577,7 @@
 @media (max-width: 1099px) {
   .explorer {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: 'market' 'steps' 'panel';
+    grid-template-areas: 'search' 'steps' 'panel';
     gap: 0.75rem;
   }
 
@@ -684,8 +684,39 @@
 
 /* ---------- Pazar seçimi (Türkiye varsayılan) ---------- */
 
+.global-search {
+  grid-area: search;
+  position: relative;
+}
+
+.search-results {
+  list-style: none;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  max-height: 22rem;
+  overflow: auto;
+}
+
+.search-results:empty {
+  display: none;
+}
+
+.archive-toggle {
+  margin-top: 0.35rem;
+  border: 0;
+  background: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.8125rem;
+  text-decoration: underline;
+  padding: 0;
+}
+
 .market-switch {
-  grid-area: market;
+  grid-area: search;
   display: flex;
   flex-wrap: wrap;
   align-items: center;

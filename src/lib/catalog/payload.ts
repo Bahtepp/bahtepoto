@@ -21,7 +21,10 @@ import type {
 import type { MarketView } from './market';
 
 export type BrandSummary = Pick<Brand, 'id' | 'slug' | 'name' | 'status' | 'generationNaming'> & {
+  /** Türkiye'de kaydı olan model sayısı. */
   modelCount: number;
+  /** Ana katalog veya daha sonra incelenecek arşiv. */
+  tier: 'primary' | 'review';
 };
 
 export type RevisionSummary = Pick<Revision, 'id' | 'slug' | 'name' | 'kind' | 'order' | 'periods' | 'status' | 'notes'>;

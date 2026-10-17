@@ -106,13 +106,20 @@ export function vehiclePath(p: { brand: string; model: string; generation: strin
 }
 
 /** Katalog gezginini aynı seçimle açan adres (detay sayfasından geri dönüş için). */
-export function catalogPath(p: { brand: string; model?: string; generation?: string; revision?: string }): string {
+export function catalogPath(p: { brand: string; model?: string; generation?: string; engine?: string }): string {
   const q = new URLSearchParams();
   q.set('marka', p.brand);
   if (p.model) q.set('model', p.model);
+  if (p.engine) q.set('motor', p.engine);
   if (p.generation) q.set('nesil', p.generation);
-  if (p.revision) q.set('donem', p.revision);
   return `/?${q}`;
+}
+
+/** GitHub Pages alt dizini dahil mutlak site yolu. */
+export function withBase(path: string): string {
+  const base = import.meta.env.BASE_URL ?? '/';
+  const prefix = base.endsWith('/') ? base.slice(0, -1) : base;
+  return `${prefix}${path.startsWith('/') ? path : `/${path}`}`;
 }
 
 /** Türkçe büyük/küçük harf duyarsız arama için normalleştirme. */

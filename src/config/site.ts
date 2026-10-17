@@ -9,5 +9,5 @@ export const SITE = {
   lang: 'tr',
   locale: 'tr_TR',
   description:
-    'Otomobilleri marka, model, nesil, makyaj dönemi ve motor seçeneklerine göre adım adım bulun. Kaynak gösterilen, doğrulama durumu açık katalog.',
+    'Türkiye’deki otomobilleri marka, model ve motoruna göre bulun. Kasa, motor seçildikten sonra gelir.',
 } as const;

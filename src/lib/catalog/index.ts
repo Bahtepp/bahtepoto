@@ -8,6 +8,9 @@ import type { BrandPayload, BrandSummary, ModelPayload, ModelSummary } from './p
 import type { Brand, Engine, Market, Model, Source } from './schema';
 import { validateCatalog, type CatalogData } from './validate';
 import { marketCounts } from './market';
+import { engineGroupsForModel } from './selector';
+import type { SearchIndex } from './search';
+import { brandTier } from './visibility';
 
 interface Catalog extends CatalogData {
   brandById: Map<string, Brand>;
@@ -63,7 +66,6 @@ function summarizeModel(model: Model, markets: Market[]): ModelSummary {
     slug: model.slug,
     name: model.name,
     status: model.status,
-    notes: model.notes,
     generations: [...model.generations]
       .sort((a, b) => a.order - b.order)
       .map((g) => ({
@@ -76,27 +78,63 @@ function summarizeModel(model: Model, markets: Market[]): ModelSummary {
         labelPeriod: g.labelPeriod,
         periods: g.periods,
         status: g.status,
-        notes: g.notes,
         variantCount: g.variants.length,
         marketCounts: marketCounts(g.variants, markets),
         modelYears: [...new Set(g.variants.flatMap((v) => v.marketAvailability.flatMap((a) => (a.marketId === 'tr' ? a.modelYears : []))))].sort((x, y) => x - y),
         revisions: [...g.revisions]
           .sort((a, b) => a.order - b.order)
-          .map(({ id, slug, name, kind, order, periods, status, notes }) => ({ id, slug, name, kind, order, periods, status, notes })),
+          .map(({ id, slug, name, kind, order, periods, status }) => ({ id, slug, name, kind, order, periods, status })),
       })),
   };
 }
 
 export async function getBrandSummaries(): Promise<BrandSummary[]> {
-  const { brands, models } = await getCatalog();
+  const { brands, models, markets } = await getCatalog();
   return brands.map((b) => ({
     id: b.id,
     slug: b.slug,
     name: b.name,
     status: b.status,
     generationNaming: b.generationNaming,
-    modelCount: models.filter((m) => m.brandId === b.id).length,
+    tier: brandTier(b.slug),
+    modelCount: models.filter((m) => m.brandId === b.id && summarizeModel(m, markets).generations.some((g) => g.marketCounts.tr > 0)).length,
   }));
+}
+
+/** Ana sayfa araması için küçük indeks. Türkiye kaydı olmayan modeller girmez. */
+export async function getSearchIndex(): Promise<SearchIndex> {
+  const catalog = await getCatalog();
+  const listed = await getBrandSummaries();
+  const brands = listed.filter((b) => (b.tier === 'primary' ? b.modelCount > 0 : true));
+  const brandIds = new Set(brands.map((b) => b.id));
+  const models: SearchIndex['models'] = [];
+  const engines: SearchIndex['engines'] = [];
+  for (const model of catalog.models) {
+    if (!brandIds.has(model.brandId)) continue;
+    const summary = summarizeModel(model, catalog.markets);
+    if (!summary.generations.some((g) => g.marketCounts.tr > 0)) continue;
+    const brand = catalog.brandById.get(model.brandId)!;
+    if (brandTier(brand.slug) !== 'primary') continue;
+    models.push({ brand: brand.slug, brandName: brand.name, slug: model.slug, name: model.name });
+    const engineMap: Record<string, (typeof catalog.engines)[number]> = {};
+    const variantsByGeneration: Record<string, (typeof model.generations)[number]['variants']> = {};
+    for (const gen of model.generations) {
+      variantsByGeneration[gen.id] = gen.variants;
+      for (const v of gen.variants) {
+        const engine = catalog.engineById.get(v.engineId);
+        if (engine) engineMap[engine.id] = engine;
+      }
+    }
+    for (const group of engineGroupsForModel(summary.generations, variantsByGeneration, engineMap, catalog.markets, 'tr')) {
+      if (group.chassis.length === 0) continue;
+      engines.push({ brand: brand.slug, brandName: brand.name, model: model.slug, modelName: model.name, slug: group.slug, label: group.label });
+    }
+  }
+  return {
+    brands: brands.map((b) => ({ slug: b.slug, name: b.name, tier: b.tier })),
+    models,
+    engines,
+  };
 }
 
 export async function getBrandPayload(brandId: string): Promise<BrandPayload> {
@@ -116,29 +154,19 @@ export async function getModelPayload(modelId: string): Promise<ModelPayload> {
   if (!model) throw new Error(`Bilinmeyen model: ${modelId}`);
 
   const engines: ModelPayload['engines'] = {};
-  const sources: ModelPayload['sources'] = {};
   const markets: ModelPayload['markets'] = {};
-  const addSources = (ids: string[]) => {
-    for (const id of ids) sources[id] = catalog.sourceById.get(id)!;
-  };
-
-  addSources(model.sourceIds);
   const variantsByGeneration: ModelPayload['variantsByGeneration'] = {};
   let updatedAt = model.updatedAt;
 
   for (const gen of model.generations) {
-    addSources(gen.sourceIds);
-    gen.revisions.forEach((r) => addSources(r.sourceIds));
-    variantsByGeneration[gen.id] = gen.variants;
+    variantsByGeneration[gen.id] = gen.variants.map((v) => ({ ...v, notes: undefined }));
     for (const v of gen.variants) {
       const engine = catalog.engineById.get(v.engineId)!;
-      engines[engine.id] = engine;
-      addSources(v.sourceIds);
-      addSources(engine.sourceIds);
+      engines[engine.id] = { ...engine, notes: undefined };
       for (const mid of v.marketIds) markets[mid] = catalog.marketById.get(mid)!;
       for (const d of [v.updatedAt, engine.updatedAt, gen.updatedAt]) if (d > updatedAt) updatedAt = d;
     }
   }
 
-  return { modelId: model.id, brandId: model.brandId, variantsByGeneration, engines, sources, markets, updatedAt };
+  return { modelId: model.id, brandId: model.brandId, variantsByGeneration, engines, sources: {}, markets, updatedAt };
 }

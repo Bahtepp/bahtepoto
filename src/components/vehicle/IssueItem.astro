@@ -10,15 +10,8 @@
 import type { MatchResult, MatchScope } from '@/lib/issues/match';
 import type { Issue, IssueSource } from '@/lib/issues/schema';
 import {
-  ASPECT_LABELS,
-  CATEGORY_LABELS,
-  ISSUE_KIND_LABELS,
   ISSUE_STATUS_DESCRIPTIONS,
   ISSUE_STATUS_LABELS,
-  PREVALENCE_LABELS,
-  SEVERITY_LABELS,
-  SOURCE_KIND_LABELS,
-  STANCE_LABELS,
   describeScope,
 } from '@/lib/issues/format';
 
@@ -32,7 +25,7 @@ interface Props {
   anchorPrefix: string;
 }
 
-const { issue, match, scope, sourceById, label, anchorPrefix } = Astro.props;
+const { issue, match, scope, label, anchorPrefix } = Astro.props;
 
 const SCOPE_TEXT: Record<MatchScope, string> = {
   engine: 'Bu motora özgü',
@@ -46,24 +39,6 @@ const selectorNotes = new Set([...issue.appliesTo, ...issue.excludes].map((s) =>
 const reasons = match.reasons.filter((x) => !selectorNotes.has(x));
 const headSymptoms = issue.symptoms.slice(0, 3);
 const allSymptoms = [...issue.symptoms, ...issue.symptomDetails];
-const sourceIds = [...new Set(issue.claims.map((c) => c.sourceId))];
-const srcs = sourceIds.map((id) => sourceById.get(id)).filter((s): s is IssueSource => Boolean(s));
-const hasContradiction = issue.claims.some((c) => c.stance === 'contradicts');
-
-// "Kaynak: Güvenilirlik araştırması (ADAC, 11 rapor)" gibi sade özet.
-const byKind = new Map<string, Set<string>>();
-for (const s of srcs) {
-  const k = SOURCE_KIND_LABELS[s.kind];
-  if (!byKind.has(k)) byKind.set(k, new Set());
-  byKind.get(k)!.add(s.publisher ?? s.title);
-}
-const sourceSummary = [...byKind.entries()]
-  .map(([k, pubs]) => {
-    const n = srcs.filter((s) => SOURCE_KIND_LABELS[s.kind] === k).length;
-    return `${k} (${[...pubs].slice(0, 2).join(', ')}${pubs.size > 2 ? '…' : ''}${n > 1 ? `, ${n} kayıt` : ''})`;
-  })
-  .join(' · ');
-
 const fmtDate = (d?: string) => (d ? new Date(d).toLocaleDateString('tr-TR') : undefined);
 const r = issue.recall;
 const recallLine = r
@@ -95,8 +70,6 @@ const statusTitle = isRecall && issue.status === 'verified'
       {recallLine && <p class="issue-line">{recallLine}</p>}
       <p class="issue-meta">
         <span class={`issue-status issue-status-${issue.status}`} title={statusTitle}>{statusText}</span>
-        <span>Kaynak: {sourceSummary}</span>
-        {hasContradiction && <span class="issue-warn">Kaynaklar çelişiyor</span>}
         <span class="issue-more" aria-hidden="true">Ayrıntılar</span>
       </p>
     </summary>
@@ -143,87 +116,6 @@ const statusTitle = isRecall && issue.status === 'verified'
         )
       }
 
-      <section>
-        <h5>Kaynaklar</h5>
-        <ul class="issue-sources">
-          {
-            srcs.map((s) => (
-              <li>
-                {s.url ? (
-                  <a href={s.url} rel="noopener" target="_blank">
-                    {s.title}
-                  </a>
-                ) : (
-                  s.title
-                )}
-                <span class="issue-ref"> — {SOURCE_KIND_LABELS[s.kind]}</span>
-              </li>
-            ))
-          }
-        </ul>
-      </section>
-
-      <details class="issue-tech">
-        <summary>Teknik doğrulama ayrıntıları</summary>
-        <dl class="issue-facts">
-          <div>
-            <dt>Kayıt türü</dt>
-            <dd>{ISSUE_KIND_LABELS[issue.kind]} · {CATEGORY_LABELS[issue.category]}</dd>
-          </div>
-          <div>
-            <dt>Doğrulama durumu</dt>
-            <dd>{ISSUE_STATUS_LABELS[issue.status]} — {ISSUE_STATUS_DESCRIPTIONS[issue.status]}</dd>
-          </div>
-          <div>
-            <dt>Ciddiyet</dt>
-            <dd>{issue.severity ? `${SEVERITY_LABELS[issue.severity.level]} — ${issue.severity.rationale}` : 'Kaynakla belirlenmedi'}</dd>
-          </div>
-          <div>
-            <dt>Görülme sıklığı kanıtı</dt>
-            <dd>
-              {PREVALENCE_LABELS[issue.prevalence.evidence]}
-              {issue.prevalence.note && ` — ${issue.prevalence.note}`}
-            </dd>
-          </div>
-          {
-            r && (
-              <div>
-                <dt>Kampanya</dt>
-                <dd>
-                  {[
-                    r.reportingCountries.length ? `Bildiren ülke: ${r.reportingCountries.join(', ')}` : null,
-                    r.vinRangePublished ? 'VIN aralığı yayımlandı' : 'VIN aralığı yayımlanmadı',
-                    r.relatedIssueIds.length ? 'İlişkili kampanyalar ayrı kayıt olarak listelenir; aynı sorunun tekrarı sayılmaz' : null,
-                  ]
-                    .filter(Boolean)
-                    .join(' · ')}
-                </dd>
-              </div>
-            )
-          }
-        </dl>
-        <ul class="issue-sources">
-          {
-            issue.claims.map((c) => {
-              const s = sourceById.get(c.sourceId);
-              return (
-                <li class={c.stance === 'contradicts' ? 'contradicts' : undefined}>
-                  {s?.title ?? c.sourceId}
-                  <span class="issue-ref">
-                    {' '}
-                    — {c.aspects.map((a) => ASPECT_LABELS[a]).join(', ')} konusunda <strong>{STANCE_LABELS[c.stance]}</strong>
-                    {s?.reference && ` · ${s.reference}`}
-                    {s?.review && ` · içerik ${s.review.status === 'content-checked' ? 'okundu' : s.review.status === 'inaccessible' ? 'erişilemedi' : 'kontrol edilmedi'} (${fmtDate(s.review.checkedAt)})`}
-                    {c.note && `. ${c.note}`}
-                  </span>
-                </li>
-              );
-            })
-          }
-        </ul>
-        {issue.notes && <p class="issue-note">{issue.notes}</p>}
-        <p class="issue-ref">Son güncelleme: {fmtDate(issue.updatedAt)}</p>
-      </details>
     </div>
   </details>
 </li>
