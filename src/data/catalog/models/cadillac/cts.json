@@ -10,12 +10,62 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "cadillac-cts-1-nesil",
+      "slug": "1-nesil",
+      "name": "Cts 1. nesil",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2002 }, "end": { "year": 2007 } },
+      "engineDisplacementsL": [2.6, 2.8, 3.2, 3.6, 5.7, 6],
+      "engineSignatures": ["2.6:?", "2.8:?", "3.2:?", "3.6:?", "5.7:?", "6.0:?"],
+      "status": "sourced",
+      "sourceIds": ["wpgen-782759"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Cadillac CTS\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "cadillac-cts-2-nesil",
+      "slug": "2-nesil",
+      "name": "Cts 2. nesil",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2007 }, "end": { "year": 2014 } },
+      "engineDisplacementsL": [2.8, 3, 6.2],
+      "engineSignatures": ["2.8:?", "3.0:?", "6.2:?"],
+      "status": "sourced",
+      "sourceIds": ["wpgen-782759"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Cadillac CTS\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "cadillac-cts-2-nesil-36", "slug": "36", "engineId": "cadillac-36", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009], "trims": ["V6"], "bodyTypes": [], "sourceRefs": ["TSB 31-1005"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "cadillac-cts-2-nesil-62", "slug": "62", "engineId": "cadillac-62", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015], "trims": ["V8"], "bodyTypes": [], "sourceRefs": ["TSB 31-1007"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
+      "id": "cadillac-cts-3-nesil",
+      "slug": "3-nesil",
+      "name": "Cts 3. nesil",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2013 }, "end": { "year": 2019 } },
+      "engineDisplacementsL": [2, 3.6, 6.2],
+      "engineSignatures": ["2.0:?", "3.6:?", "6.2:?"],
+      "status": "sourced",
+      "sourceIds": ["wpgen-782759"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Cadillac CTS\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "cadillac-cts-3-nesil-20", "slug": "20", "engineId": "cadillac-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 31-1009"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
       "id": "cadillac-cts-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
       "name": "Cts — nesli belirlenmemiş araçlar",
       "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2017 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
       "updatedAt": "2026-10-17",
@@ -23,24 +73,7 @@
       "revisions": [],
       "variants": [
         { "id": "cadillac-cts-nesil-belirlenmedi-28", "slug": "28", "engineId": "cadillac-28", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 31-19"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "cadillac-cts-nesil-belirlenmedi-36", "slug": "36", "engineId": "cadillac-36", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009], "trims": ["V6"], "bodyTypes": [], "sourceRefs": ["TSB 31-1005"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "cadillac-cts-nesil-belirlenmedi-20", "slug": "20", "engineId": "cadillac-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 31-1009"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
         { "id": "cadillac-cts-nesil-belirlenmedi-36-311", "slug": "36-311", "engineId": "cadillac-36-311", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 31-1019"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
-      ]
-    },
-    {
-      "id": "cadillac-cts-nesil-5",
-      "slug": "nesil-5",
-      "name": "Cts V",
-      "order": 905,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2015 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-17",
-      "notes": "Nesil adı TSB tip adlarındaki \"V\" ifadesinden alındı; yıllar bu tiplerin TSB listesinde yer aldığı model yılları (Türkiye). Üretim yılları ve makyaj dönemleri doğrulanmadı.",
-      "revisions": [],
-      "variants": [
-        { "id": "cadillac-cts-nesil-5-62", "slug": "62", "engineId": "cadillac-62", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015], "trims": ["V8"], "bodyTypes": [], "sourceRefs": ["TSB 31-1007"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

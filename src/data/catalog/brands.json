@@ -97,5 +97,6 @@
   { "id": "togg", "slug": "togg", "name": "Togg", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
   { "id": "lucid", "slug": "lucid", "name": "Lucid", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
   { "id": "rox", "slug": "rox", "name": "Rox", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
-  { "id": "omoda", "slug": "omoda", "name": "Omoda", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" }
+  { "id": "omoda", "slug": "omoda", "name": "Omoda", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-15" },
+  { "id": "jeep", "slug": "jeep", "name": "Jeep", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
 ]

@@ -36,7 +36,8 @@
       "revisions": [],
       "variants": [
         { "id": "renault-trafic-x83-19-dci", "slug": "19-dci", "engineId": "renault-19-dci", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["Multix Confort (5)", "Multix Confort (6)", "Multix G.CONFORT (5)", "Multix G.CONFORT (6)"], "bodyTypes": [], "sourceRefs": ["TSB 123-545", "TSB 123-546", "TSB 123-549", "TSB 123-550"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "renault-trafic-x83-20-dci", "slug": "20-dci", "engineId": "renault-20-dci", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012], "trims": ["Multix Grand Confort (5)", "Multix Grand Confort (6)"], "bodyTypes": [], "sourceRefs": ["TSB 123-710", "TSB 123-711"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "renault-trafic-x83-20-dci", "slug": "20-dci", "engineId": "renault-20-dci", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012], "trims": ["Multix Grand Confort (5)", "Multix Grand Confort (6)"], "bodyTypes": [], "sourceRefs": ["TSB 123-710", "TSB 123-711"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "renault-trafic-x83-20-115", "slug": "20-115", "engineId": "renault-20-115", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2015], "trims": ["Multix Grand Confort 6M3"], "bodyTypes": [], "sourceRefs": ["TSB 123-2039"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     },
     {
@@ -47,12 +48,14 @@
       "order": 3,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2014 }, "end": null },
       "engineDisplacementsL": [1.6, 2],
+      "engineSignatures": ["1.6:?", "2.0:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-578655"],
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"Renault Trafic\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
+        { "id": "renault-trafic-x82-16-115", "slug": "16-115", "engineId": "renault-16-115", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018], "trims": ["5+1 Multix Grandconfort 6M3"], "bodyTypes": [], "sourceRefs": ["TSB 123-1073"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
         { "id": "renault-trafic-x82-16-125", "slug": "16-125", "engineId": "renault-16-125", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017], "trims": ["Multix 5+1 Confort 6M3"], "bodyTypes": [], "sourceRefs": ["TSB 123-1091"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
         { "id": "renault-trafic-x82-16-dci", "slug": "16-dci", "engineId": "renault-16-dci", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2019, 2020], "trims": ["Multix 5+1 Grand Confort 6M3"], "bodyTypes": [], "sourceRefs": ["TSB 123-2151"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
@@ -63,16 +66,14 @@
       "name": "Trafic — nesli belirlenmemiş araçlar",
       "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2018 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2013 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
       "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "renault-trafic-nesil-belirlenmedi-16-115", "slug": "16-115", "engineId": "renault-16-115", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018], "trims": ["5+1 Multix Grandconfort 6M3"], "bodyTypes": [], "sourceRefs": ["TSB 123-1073"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "renault-trafic-nesil-belirlenmedi-20-dci-115", "slug": "20-dci-115", "engineId": "renault-20-dci-115", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013], "trims": ["Dolmus 7+1 5M3"], "bodyTypes": [], "sourceRefs": ["TSB 123-2036"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "renault-trafic-nesil-belirlenmedi-20-115", "slug": "20-115", "engineId": "renault-20-115", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2015], "trims": ["Multix Grand Confort 6M3"], "bodyTypes": [], "sourceRefs": ["TSB 123-2039"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "renault-trafic-nesil-belirlenmedi-20-dci-115", "slug": "20-dci-115", "engineId": "renault-20-dci-115", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013], "trims": ["Dolmus 7+1 5M3"], "bodyTypes": [], "sourceRefs": ["TSB 123-2036"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

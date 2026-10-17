@@ -105,7 +105,9 @@
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"Lexus ES\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
-      "variants": []
+      "variants": [
+        { "id": "lexus-es-xz10-300h", "slug": "300h", "engineId": "lexus-300h", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "e-CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025], "trims": ["Business", "Business Plus", "Exclusive", "Executive"], "bodyTypes": [], "sourceRefs": ["TSB 571-1082", "TSB 571-1083", "TSB 571-1084", "TSB 571-1096"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
     },
     {
       "id": "lexus-es-xz20",
@@ -127,14 +129,13 @@
       "name": "ES — nesli belirlenmemiş araçlar",
       "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2025 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2018 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
       "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "lexus-es-nesil-belirlenmedi-300h", "slug": "300h", "engineId": "lexus-300h", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "e-CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025], "trims": ["Business", "Business Plus", "Exclusive", "Executive"], "bodyTypes": [], "sourceRefs": ["TSB 571-1082", "TSB 571-1083", "TSB 571-1084", "TSB 571-1096"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
         { "id": "lexus-es-nesil-belirlenmedi-350", "slug": "350", "engineId": "lexus-350", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 571-1110"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }

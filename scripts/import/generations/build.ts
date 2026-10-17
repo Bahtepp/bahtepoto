@@ -10,7 +10,7 @@
  * - Yeniden çalıştırma: önceki Wikipedia nesilleri (kaynağı yalnızca `wpgen-…`) temizlenip yeniden kurulur.
  */
 import type { Json, RawCatalog } from '../lib/io.ts';
-import { chassisCodes, engineDisplacements, generationOrdinal, parseInfoboxes, parseProduction, plain, sectionsWithMain, type Infobox, type ProductionLine } from './wikitext.ts';
+import { chassisCodes, engineDisplacements, engineSignatures, generationOrdinal, parseInfoboxes, parseProduction, plain, sectionsWithMain, type Infobox, type ProductionLine } from './wikitext.ts';
 
 export const WPGEN_PREFIX = 'wpgen-';
 const ownedByWp = (r: Json) => {
@@ -36,6 +36,8 @@ export interface StagedGeneration {
   marketId: 'tr' | 'eu' | 'global';
   approximate: boolean;
   engineDisplacementsL: number[];
+  /** "hacim:yakıt" imzaları (bkz. wikitext.engineSignatures). */
+  engineSignatures?: string[];
   /** Kaynak sayfa ve satır açıklaması (rapor ve not için). */
   page: string;
   productionNote: string;
@@ -46,12 +48,18 @@ export interface ModelGenerations {
   modelId: string;
   article?: string;
   status: 'found' | 'not-found' | 'no-generations' | 'skipped-curated';
+  /** Model kimliği nasıl doğrulandı: madde başlığı veya Wikidata etiketi/diğer adı (tam eşleşme). */
+  identity?: { via: 'title' | 'wikidata'; qid?: string; label?: string };
   generations: StagedGeneration[];
   pages: { title: string; pageid: number; revid: number }[];
   /** Gerçek çelişkiler (aynı nesil için farklı yıllar, aynı sıra numarası iki kez). */
   conflicts: string[];
   /** Ardışık nesillerin 2 yıldan fazla örtüşmesi (gövde/pazar farkı; bilgi amaçlı). */
   overlaps: string[];
+  /** Çelişkiye karışan nesil kimlikleri: bunlar aktarılmaz; diğer nesiller aktarılabilir. */
+  conflictSlugs?: string[];
+  /** Çelişkili nesillerin kaynakta geçen dönemleri: bu yıllara düşen TSB satırları hiçbir nesle eşlenmez. */
+  blockedSpans?: { start: number; end: number | null }[];
 }
 
 const TURKEY = /\bturkey\b|\btürkiye\b|bursa|izmit|gölcük|golcuk|sakarya|adapazarı|kocaeli/i;
@@ -123,6 +131,7 @@ function stageFrom(ib: Infobox, heading: string, page: WikiPage, brand: string, 
     marketId: picked.marketId,
     approximate: picked.approximate,
     engineDisplacementsL: engineDisplacements(ib.fields.engine ?? ''),
+    engineSignatures: engineSignatures(ib.fields.engine ?? ''),
     page: page.title,
     productionNote: picked.note,
   };
@@ -139,7 +148,7 @@ export function generationsFromArticle(
   brand: string,
   modelName: string,
   currentYear = new Date().getFullYear(),
-): { gens: StagedGeneration[]; used: WikiPage[]; conflicts: string[]; overlaps: string[] } {
+): { gens: StagedGeneration[]; used: WikiPage[]; conflicts: string[]; overlaps: string[]; conflictSlugs: string[]; blockedSpans: { start: number; end: number | null }[] } {
   const gens: StagedGeneration[] = [];
   const used = new Set<WikiPage>();
   const conflicts: string[] = [];
@@ -184,6 +193,9 @@ export function generationsFromArticle(
 
   // Tekrarları ayıkla (aynı slug) ve çelişkileri raporla
   const bySlug = new Map<string, StagedGeneration>();
+  /** Çelişkiye karışan nesiller (aktarılmaz) ve kaynakta geçen bütün dönemleri (bu yıllara eşleştirme yapılmaz). */
+  const conflictSlugs = new Set<string>();
+  const blockedSpans: { start: number; end: number | null }[] = [];
   for (const g of gens) {
     const prev = bySlug.get(g.slug);
     if (!prev) bySlug.set(g.slug, g);
@@ -192,22 +204,31 @@ export function generationsFromArticle(
       const slug = `${g.slug}-${g.ordinal}-nesil`;
       bySlug.set(slug, { ...g, slug });
     } else if (prev.start !== g.start || prev.end !== g.end) {
-      conflicts.push(`${g.slug}: iki kaynak satırı farklı yıllar veriyor (${prev.start}–${prev.end ?? '…'} / ${g.start}–${g.end ?? '…'}); ilki kullanıldı`);
+      conflicts.push(`${g.slug}: iki kaynak satırı farklı yıllar veriyor (${prev.start}–${prev.end ?? '…'} / ${g.start}–${g.end ?? '…'})`);
+      conflictSlugs.add(g.slug);
+      blockedSpans.push({ start: prev.start, end: prev.end }, { start: g.start, end: g.end });
     }
   }
   const unique = [...bySlug.values()].sort((a, b) => a.start - b.start);
-  const ordinals = new Map<number, string>();
+  const ordinals = new Map<number, StagedGeneration>();
   for (const g of unique) {
     if (g.ordinal === undefined) continue;
-    if (ordinals.has(g.ordinal)) conflicts.push(`${g.ordinal}. nesil iki kez: ${ordinals.get(g.ordinal)} ve ${g.name}`);
-    ordinals.set(g.ordinal, g.name);
+    const prev = ordinals.get(g.ordinal);
+    if (prev) {
+      conflicts.push(`${g.ordinal}. nesil iki kez: ${prev.name} ve ${g.name}`);
+      for (const x of [prev, g]) {
+        conflictSlugs.add(x.slug);
+        blockedSpans.push({ start: x.start, end: x.end });
+      }
+    }
+    ordinals.set(g.ordinal, g);
   }
   for (let i = 1; i < unique.length; i++) {
     const p = unique[i - 1]!;
     const n = unique[i]!;
     if (p.end !== null && n.start < p.end - 1) overlaps.push(`${p.name} (${p.start}–${p.end}) ile ${n.name} (${n.start}–${n.end ?? '…'}) 2 yıldan fazla örtüşüyor (farklı gövde/pazar olabilir)`);
   }
-  return { gens: unique, used: [...used], conflicts, overlaps };
+  return { gens: unique, used: [...used], conflicts, overlaps, conflictSlugs: [...conflictSlugs], blockedSpans };
 }
 
 /** Modelin elle girilmiş nesli var mı (TSB ve Wikipedia dışı kaynak)? */
@@ -262,7 +283,9 @@ export function applyGenerations(cat: RawCatalog, staged: ModelGenerations[], to
     const gens = [...((model.generations as Json[] | undefined) ?? [])];
     const usedSlugs = new Set(gens.map((g) => String(g.slug)));
     let any = false;
+    const conflicting = new Set(mg.conflictSlugs ?? []);
     for (const g of mg.generations) {
+      if (conflicting.has(g.slug)) continue; // çelişkili nesil aktarılmaz
       const page = mg.pages.find((p) => p.title === g.page);
       if (!page) continue;
       const sid = sourceIdForPage(page.pageid);
@@ -290,6 +313,7 @@ export function applyGenerations(cat: RawCatalog, staged: ModelGenerations[], to
         order: g.ordinal ?? 100 + (g.start - 1900),
         labelPeriod: { marketId: g.marketId, basis: 'production', start: { year: g.start }, end: g.end === null ? null : { year: g.end }, ...(g.approximate ? { approximate: true } : {}) },
         ...(g.engineDisplacementsL.length ? { engineDisplacementsL: g.engineDisplacementsL } : {}),
+        ...(g.engineSignatures?.length ? { engineSignatures: g.engineSignatures } : {}),
         status: 'sourced',
         sourceIds: [sid],
         updatedAt: today,
@@ -313,7 +337,10 @@ export function applyGenerations(cat: RawCatalog, staged: ModelGenerations[], to
 export function candidateTitles(brand: string, model: string): string[] {
   const forms = new Set<string>([model]);
   forms.add(model.replace(/\bSerisi\b/i, 'Series'));
-  if (/^[A-Z]{1,3}$/.test(model)) forms.add(`${model}-Class`);
+  // Kısa harf kodları büyük harfle ("Cla" → "CLA", "Xf" → "XF"): katalog görünen adı küçük harfe çevirmiş olabilir.
+  const upperShort = model.replace(/\b[A-Za-z]{1,3}\b/g, (w) => w.toUpperCase());
+  forms.add(upperShort);
+  if (/^[A-Z]{1,3}$/i.test(model)) forms.add(`${model.toUpperCase()}-Class`);
   const title = (s: string) => s.replace(/\b([A-Za-z])([A-Za-z]*)\b/g, (_m, a: string, b: string) => a.toUpperCase() + b.toLowerCase());
   for (const f of [...forms]) forms.add(title(f));
   return [...forms].map((f) => `${brand} ${f}`);
@@ -334,11 +361,22 @@ const norm = (s: string) =>
  */
 export function importBlocker(mg: ModelGenerations, brand: string, modelName: string): string | undefined {
   if (mg.status !== 'found' || mg.generations.length === 0) return `nesil bulunamadı (${mg.status})`;
-  if (mg.conflicts.length > 0) return `kaynakta çelişki: ${mg.conflicts.join(' · ')}`;
-  // Marka ve model kimliği: madde başlığı markayla başlamalı ve model adını (veya İngilizce karşılığını) içermeli.
-  const title = norm(mg.article ?? '');
-  const forms = candidateTitles(brand, modelName).map((t) => norm(t));
-  const tight = (x: string) => x.replace(/ /g, "");
-  if (!forms.some((f) => title === f || title.startsWith(`${f} `) || tight(title) === tight(f))) return `Wikipedia maddesi ("${mg.article}") bu modelle açıkça eşleşmiyor`;
+  // Çelişki yalnızca ilgili nesilleri dışarıda bırakır; çelişkisiz nesil kalmıyorsa model aktarılmaz.
+  const conflicting = new Set(mg.conflictSlugs ?? []);
+  if (mg.conflicts.length > 0 && (conflicting.size === 0 || mg.generations.every((g) => conflicting.has(g.slug)))) {
+    return `kaynakta çelişki: ${mg.conflicts.join(' · ')}`;
+  }
+  // Marka ve model kimliği: Wikidata'da etiketi/diğer adı birebir eşleşen öğe (bkz. wikidata.ts) ya da
+  // markayla başlayıp model adını (veya İngilizce karşılığını) içeren madde başlığı.
+  if (mg.identity?.via === 'wikidata') return undefined;
+  if (!titleMatchesModel(mg.article ?? '', brand, modelName)) return `Wikipedia maddesi ("${mg.article}") bu modelle açıkça eşleşmiyor`;
   return undefined;
+}
+
+/** Madde başlığı bu marka + modeli açıkça adlandırıyor mu (aksan/boşluk farkı hariç)? */
+export function titleMatchesModel(article: string, brand: string, modelName: string): boolean {
+  const title = norm(article);
+  const forms = candidateTitles(brand, modelName).map((t) => norm(t));
+  const tight = (x: string) => x.replace(/ /g, '');
+  return forms.some((f) => title === f || title.startsWith(`${f} `) || tight(title) === tight(f));
 }

@@ -16,6 +16,7 @@
       "order": 209,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2009 }, "end": { "year": 2019 } },
       "engineDisplacementsL": [1.4, 1.6],
+      "engineSignatures": ["1.4:diesel", "1.4:petrol", "1.6:diesel", "1.6:petrol"],
       "status": "sourced",
       "sourceIds": ["wpgen-24045513"],
       "updatedAt": "2026-10-17",

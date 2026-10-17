@@ -34,22 +34,8 @@
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"Hyundai Starex\" bilgi kutusundan (farklı pazarlar: South Korea; International); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
       "revisions": [],
-      "variants": []
-    },
-    {
-      "id": "hyundai-starex-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Starex — nesli belirlenmemiş araçlar",
-      "kind": "unassigned",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-17",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
-      "revisions": [],
       "variants": [
-        { "id": "hyundai-starex-nesil-belirlenmedi-crdi", "slug": "crdi", "engineId": "hyundai-crdi", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Multiway", "Multiway (Y)", "Space S (Y)"], "bodyTypes": [], "sourceRefs": ["TSB 177-125", "TSB 177-157", "TSB 177-159"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "hyundai-starex-2-nesil-crdi", "slug": "crdi", "engineId": "hyundai-crdi", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Multiway", "Multiway (Y)", "Space S (Y)"], "bodyTypes": [], "sourceRefs": ["TSB 177-125", "TSB 177-157", "TSB 177-159"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

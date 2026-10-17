@@ -17,6 +17,7 @@
       "order": 217,
       "labelPeriod": { "marketId": "eu", "basis": "production", "start": { "year": 2017 }, "end": null },
       "engineDisplacementsL": [1, 1.2, 1.4, 1.5, 1.6, 2],
+      "engineSignatures": ["1.0:petrol", "1.2:petrol", "1.4:petrol", "1.5:petrol", "1.6:diesel", "1.6:petrol", "2.0:diesel", "2.0:petrol"],
       "status": "sourced",
       "sourceIds": ["wpgen-54100452"],
       "updatedAt": "2026-10-17",

@@ -31,8 +31,28 @@ export const AVAILABILITY_LABELS: Record<MarketAvailability['status'], string> =
 
 type V = Pick<Variant, 'marketIds' | 'marketAvailability' | 'trimName'>;
 
-export const availabilityFor = (v: Pick<Variant, 'marketAvailability'>, marketId: string) =>
-  (v.marketAvailability ?? []).find((a) => a.marketId === marketId);
+/** Pazar için en güçlü kayıt (sold > listed > imported > unverified > not-offered); kaynaklar ayrı kayıt tutabilir. */
+const STATUS_RANK: Record<MarketAvailability['status'], number> = { sold: 4, listed: 3, imported: 2, unverified: 1, 'not-offered': 0 };
+/**
+ * Pazarın birleşik görünümü: en güçlü durum + bütün kayıtların model yılları, donanımları, gövde tipleri ve
+ * kaynakları (örn. broşürle "sold" kaydı ve TSB "listed" kaydı birlikte).
+ */
+export function availabilityFor(v: Pick<Variant, 'marketAvailability'>, marketId: string): MarketAvailability | undefined {
+  const list = (v.marketAvailability ?? []).filter((a) => a.marketId === marketId).sort((a, b) => STATUS_RANK[b.status] - STATUS_RANK[a.status]);
+  if (list.length <= 1) return list[0];
+  const union = <T>(pick: (a: MarketAvailability) => T[]) => [...new Set(list.flatMap(pick))];
+  return {
+    ...list[0]!,
+    modelYears: union((a) => a.modelYears).sort((x, y) => x - y),
+    trims: union((a) => a.trims).sort(),
+    bodyTypes: union((a) => a.bodyTypes).sort(),
+    sourceRefs: union((a) => a.sourceRefs).sort(),
+    sourceIds: union((a) => a.sourceIds),
+  };
+}
+
+/** Bir pazarın bütün kayıtları (örn. broşürle "sold" ve TSB "listed"); model yılları ve donanımlar birleşik gösterilebilir. */
+export const availabilitiesFor = (v: Pick<Variant, 'marketAvailability'>, marketId: string) => (v.marketAvailability ?? []).filter((a) => a.marketId === marketId);
 
 function inRegion(marketId: string, region: string, markets: Pick<Market, 'id' | 'parentId'>[]): boolean {
   let cur: string | undefined = marketId;

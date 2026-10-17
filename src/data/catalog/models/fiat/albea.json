@@ -16,6 +16,7 @@
       "order": 202,
       "labelPeriod": { "marketId": "tr", "basis": "production", "start": { "year": 2002 }, "end": { "year": 2012 } },
       "engineDisplacementsL": [1.2, 1.3, 1.4, 1.6],
+      "engineSignatures": ["1.2:petrol", "1.3:diesel", "1.4:petrol", "1.6:petrol"],
       "status": "sourced",
       "sourceIds": ["wpgen-1415652"],
       "updatedAt": "2026-10-17",

@@ -16,13 +16,14 @@
       "order": 1,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2005 }, "end": { "year": 2014 } },
       "engineDisplacementsL": [1, 1.4],
+      "engineSignatures": ["1.0:petrol", "1.4:diesel"],
       "status": "sourced",
       "sourceIds": ["wpgen-1255697"],
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"Citroën C1\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "citroen-c1-1-nesil-10", "slug": "10", "engineId": "citroen-10", "revisionMapping": "unknown", "transmissions": [{ "type": "automated-manual", "name": "SensoDrive" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["SX"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 34-236", "TSB 34-258"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "citroen-c1-1-nesil-10", "slug": "10", "engineId": "citroen-10", "revisionMapping": "unknown", "transmissions": [{ "type": "automated-manual", "name": "SensoDrive" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014], "trims": ["Confort", "SX"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 34-1019", "TSB 34-236", "TSB 34-258"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
         { "id": "citroen-c1-1-nesil-14-hdi", "slug": "14-hdi", "engineId": "citroen-14-hdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["SX"], "bodyTypes": ["5 kapı"], "sourceRefs": ["TSB 34-237"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     },
@@ -38,7 +39,9 @@
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"Citroën C1\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
-      "variants": []
+      "variants": [
+        { "id": "citroen-c1-ab40-10-vti-68", "slug": "10-vti-68", "engineId": "citroen-10-vti-68", "revisionMapping": "unknown", "transmissions": [{ "type": "automated-manual", "name": "ETG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016], "trims": ["Airscape", "Shine"], "bodyTypes": [], "sourceRefs": ["TSB 34-1074", "TSB 34-1075"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
     },
     {
       "id": "citroen-c1-nesil-belirlenmedi",
@@ -46,15 +49,14 @@
       "name": "C1 — nesli belirlenmemiş araçlar",
       "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2016 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2015 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
       "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "citroen-c1-nesil-belirlenmedi-10", "slug": "10", "engineId": "citroen-10", "revisionMapping": "unknown", "transmissions": [{ "type": "automated-manual", "name": "SensoDrive" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014], "trims": ["Confort"], "bodyTypes": [], "sourceRefs": ["TSB 34-1019"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "citroen-c1-nesil-belirlenmedi-10-vti-68", "slug": "10-vti-68", "engineId": "citroen-10-vti-68", "revisionMapping": "unknown", "transmissions": [{ "type": "automated-manual", "name": "ETG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016], "trims": ["Airscape", "Feel", "Shine"], "bodyTypes": [], "sourceRefs": ["TSB 34-1073", "TSB 34-1074", "TSB 34-1075"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "citroen-c1-nesil-belirlenmedi-10-vti-68", "slug": "10-vti-68", "engineId": "citroen-10-vti-68", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015], "trims": ["Feel"], "bodyTypes": [], "sourceRefs": ["TSB 34-1073"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

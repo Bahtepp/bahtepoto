@@ -16,6 +16,7 @@
       "order": 212,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2012 }, "end": { "year": 2022 } },
       "engineDisplacementsL": [0.9, 1.3, 1.4, 1.6],
+      "engineSignatures": ["0.9:?", "1.3:diesel", "1.4:?", "1.4:petrol", "1.6:diesel"],
       "status": "sourced",
       "sourceIds": ["wpgen-34912138"],
       "updatedAt": "2026-10-17",

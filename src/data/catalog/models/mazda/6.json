@@ -35,7 +35,10 @@
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"Mazda6\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
-      "variants": []
+      "variants": [
+        { "id": "mazda-6-gh1-gh2-20", "slug": "20", "engineId": "mazda-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["DYNAMIC+", "Dynamic", "Exclusive"], "bodyTypes": [], "sourceRefs": ["TSB 89-418", "TSB 89-419", "TSB 89-420", "TSB 89-421", "TSB 89-422"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "mazda-6-gh1-gh2-20-155", "slug": "20-155", "engineId": "mazda-20-155", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013], "trims": ["Sport"], "bodyTypes": [], "sourceRefs": ["TSB 89-444"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
     },
     {
       "id": "mazda-6-gj1",
@@ -50,7 +53,7 @@
       "notes": "Üretim yılları İngilizce Wikipedia \"Mazda6\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "mazda-6-gj1-20", "slug": "20", "engineId": "mazda-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022], "trims": ["SKY-G Power", "SKY-G Power Sense"], "bodyTypes": [], "sourceRefs": ["TSB 89-1037", "TSB 89-1069"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "mazda-6-gj1-20", "slug": "20", "engineId": "mazda-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022], "trims": ["SKY-G Power", "SKY-G Power Sense", "Sport SKY-G"], "bodyTypes": [], "sourceRefs": ["TSB 89-1017", "TSB 89-1037", "TSB 89-1069"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
         { "id": "mazda-6-gj1-22", "slug": "22", "engineId": "mazda-22", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016], "trims": ["SKY-D Power Sense"], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 89-1052", "TSB 89-1053"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     },
@@ -60,15 +63,14 @@
       "name": "6 — nesli belirlenmemiş araçlar",
       "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2015 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2009 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
       "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "mazda-6-nesil-belirlenmedi-20", "slug": "20", "engineId": "mazda-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015], "trims": ["Base", "Comfort", "DYNAMIC+", "Dynamic", "Exclusive", "Mid", "Sport", "Sport SKY-G"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 89-1017", "TSB 89-371", "TSB 89-372", "TSB 89-373", "TSB 89-374", "TSB 89-408", "TSB 89-409", "TSB 89-410", "TSB 89-417", "TSB 89-418", "TSB 89-419", "TSB 89-420", "TSB 89-421", "TSB 89-422"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "mazda-6-nesil-belirlenmedi-20-155", "slug": "20-155", "engineId": "mazda-20-155", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013], "trims": ["Sport"], "bodyTypes": [], "sourceRefs": ["TSB 89-444"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "mazda-6-nesil-belirlenmedi-20", "slug": "20", "engineId": "mazda-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009], "trims": ["Base", "Comfort", "Mid", "Sport"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 89-371", "TSB 89-372", "TSB 89-373", "TSB 89-374", "TSB 89-408", "TSB 89-409", "TSB 89-410", "TSB 89-417"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

@@ -123,11 +123,13 @@ export function validateCatalog(data: CatalogData): string[] {
           }
         }
         for (const mid of v.marketIds) if (!marketIds.has(mid)) err(vw, `bilinmeyen pazar "${mid}"`);
-        const availMarkets = new Set<string>();
+        // Aynı pazar için birden çok kayıt yalnızca farklı kaynaklardan geliyorsa (örn. broşür "sold" + TSB "listed").
+        const availKeys = new Set<string>();
         for (const a of v.marketAvailability) {
           if (!marketIds.has(a.marketId)) err(vw, `pazar durumu: bilinmeyen pazar "${a.marketId}"`);
-          if (availMarkets.has(a.marketId)) err(vw, `pazar durumu: "${a.marketId}" birden fazla kez tanımlı`);
-          availMarkets.add(a.marketId);
+          const key = `${a.marketId}|${[...a.sourceIds].sort().join(',')}`;
+          if (availKeys.has(key)) err(vw, `pazar durumu: "${a.marketId}" aynı kaynakla birden fazla kez tanımlı`);
+          availKeys.add(key);
           for (const sid of a.sourceIds) if (!sourcesById.has(sid)) err(vw, `pazar durumu: bilinmeyen kaynak "${sid}"`);
           if (a.status !== 'unverified' && a.sourceIds.length === 0) err(vw, `pazar durumu "${a.status}" kaynak gerektirir`);
         }

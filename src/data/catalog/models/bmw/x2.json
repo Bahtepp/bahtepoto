@@ -17,15 +17,16 @@
       "order": 1,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2017 }, "end": { "year": 2023 } },
       "engineDisplacementsL": [1.5, 2],
+      "engineSignatures": ["1.5:?", "2.0:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-35901792"],
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"BMW X2\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "bmw-x2-f39-15-140", "slug": "15-140", "engineId": "bmw-15-140", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2019, 2020, 2021], "trims": ["SDRIVE18i Special Edition M Mesh", "Sdrive 18i", "Sdrive 18i M Sport", "Sdrive 18i M Sport X", "Sdrive 18i Premium Line"], "bodyTypes": [], "sourceRefs": ["TSB 21-1714", "TSB 21-1715", "TSB 21-1716", "TSB 21-1717", "TSB 21-1895"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "bmw-x2-f39-15-140", "slug": "15-140", "engineId": "bmw-15-140", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2019, 2020, 2021, 2022, 2023], "trims": ["SDRIVE18i M Sport", "SDRIVE18i M Sport X", "SDRIVE18i Special Edition M Mesh", "SDRIVE18i Special Edition M Sportx", "SDRIVE18i Specical Edition M Sport", "Sdrive 18i", "Sdrive 18i M Sport", "Sdrive 18i M Sport X", "Sdrive 18i Premium Line"], "bodyTypes": [], "sourceRefs": ["TSB 21-1714", "TSB 21-1715", "TSB 21-1716", "TSB 21-1717", "TSB 21-1891", "TSB 21-1892", "TSB 21-1893", "TSB 21-1894", "TSB 21-1895"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
         { "id": "bmw-x2-f39-20-190", "slug": "20-190", "engineId": "bmw-20-190", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018], "trims": ["XDRIVE20d", "XDRIVE20d M Sport", "XDRIVE20d M Sport X", "XDRIVE20d Premium Line"], "bodyTypes": [], "sourceRefs": ["TSB 21-1718", "TSB 21-1719", "TSB 21-1720", "TSB 21-1721"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "bmw-x2-f39-15-116", "slug": "15-116", "engineId": "bmw-15-116", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021], "trims": ["Sdrive 16d Edition M Mesh", "Sdrive 16d Special Edition M Mesh"], "bodyTypes": [], "sourceRefs": ["TSB 21-1835", "TSB 21-1874"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "bmw-x2-f39-15-116", "slug": "15-116", "engineId": "bmw-15-116", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021, 2022], "trims": ["Sdrive 16d Edition M Mesh", "Sdrive 16d M Sport", "Sdrive 16d M Sport X", "Sdrive 16d Special Edition M Mesh", "Sdrive 16d Special Edition M Sport", "Sdrive 16d Specialedition Msport X"], "bodyTypes": [], "sourceRefs": ["TSB 21-1759", "TSB 21-1760", "TSB 21-1835", "TSB 21-1872", "TSB 21-1873", "TSB 21-1874"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     },
     {
@@ -36,29 +37,14 @@
       "order": 2,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2023 }, "end": null },
       "engineDisplacementsL": [1.5, 2],
+      "engineSignatures": ["1.5:hybrid", "2.0:?", "2.0:hybrid"],
       "status": "sourced",
       "sourceIds": ["wpgen-35901792"],
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"BMW X2\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
-      "variants": []
-    },
-    {
-      "id": "bmw-x2-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "X2 — nesli belirlenmemiş araçlar",
-      "kind": "unassigned",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2026 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-17",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
-      "revisions": [],
       "variants": [
-        { "id": "bmw-x2-nesil-belirlenmedi-15-116", "slug": "15-116", "engineId": "bmw-15-116", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021, 2022], "trims": ["Sdrive 16d M Sport", "Sdrive 16d M Sport X", "Sdrive 16d Special Edition M Sport", "Sdrive 16d Specialedition Msport X"], "bodyTypes": [], "sourceRefs": ["TSB 21-1759", "TSB 21-1760", "TSB 21-1872", "TSB 21-1873"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "bmw-x2-nesil-belirlenmedi-15-140", "slug": "15-140", "engineId": "bmw-15-140", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023], "trims": ["SDRIVE18i M Sport", "SDRIVE18i M Sport X", "SDRIVE18i Special Edition M Sportx", "SDRIVE18i Specical Edition M Sport"], "bodyTypes": [], "sourceRefs": ["TSB 21-1891", "TSB 21-1892", "TSB 21-1893", "TSB 21-1894"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "bmw-x2-nesil-belirlenmedi-15-170", "slug": "15-170", "engineId": "bmw-15-170", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["SDRIVE20i M Sport"], "bodyTypes": [], "sourceRefs": ["TSB 21-1998"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "bmw-x2-u10-15-170", "slug": "15-170", "engineId": "bmw-15-170", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["SDRIVE20i M Sport"], "bodyTypes": [], "sourceRefs": ["TSB 21-1998"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

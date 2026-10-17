@@ -16,6 +16,7 @@
       "order": 203,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2003 }, "end": { "year": 2011 } },
       "engineDisplacementsL": [2.7, 3, 3.3, 3.5, 3.8],
+      "engineSignatures": ["2.7:?", "3.0:?", "3.3:?", "3.5:?", "3.8:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-1306055"],
       "updatedAt": "2026-10-17",

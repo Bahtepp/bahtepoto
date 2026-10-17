@@ -52,7 +52,8 @@
       "notes": "Üretim yılları İngilizce Wikipedia \"Audi RS 6\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "audi-rs6-4g-40-tfsi-560", "slug": "40-tfsi-560", "engineId": "audi-40-tfsi-560", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2015, 2016, 2017], "trims": [], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 9-1077"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "audi-rs6-4g-40-tfsi-560", "slug": "40-tfsi-560", "engineId": "audi-40-tfsi-560", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2015, 2016, 2017], "trims": [], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 9-1077"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "audi-rs6-4g-40-tfsi-605", "slug": "40-tfsi-605", "engineId": "audi-40-tfsi-605", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018], "trims": ["Performance Quattrotip"], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 9-1216"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     },
     {
@@ -68,24 +69,8 @@
       "notes": "Üretim yılları İngilizce Wikipedia \"Audi RS 6\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
+        { "id": "audi-rs6-5g-tfsi", "slug": "tfsi", "engineId": "audi-tfsi", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021, 2022, 2023, 2024], "trims": ["40 600"], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 9-1468"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
         { "id": "audi-rs6-5g-40-tfsi-630", "slug": "40-tfsi-630", "engineId": "audi-40-tfsi-630", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023, 2024, 2025], "trims": ["Performance TP"], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 9-1585"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
-      ]
-    },
-    {
-      "id": "audi-rs6-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "RS6 — nesli belirlenmemiş araçlar",
-      "kind": "unassigned",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2024 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-17",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
-      "revisions": [],
-      "variants": [
-        { "id": "audi-rs6-nesil-belirlenmedi-40-tfsi-605", "slug": "40-tfsi-605", "engineId": "audi-40-tfsi-605", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018], "trims": ["Performance Quattrotip"], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 9-1216"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "audi-rs6-nesil-belirlenmedi-tfsi", "slug": "tfsi", "engineId": "audi-tfsi", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021, 2022, 2023, 2024], "trims": ["40 600"], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 9-1468"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

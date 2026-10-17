@@ -10,20 +10,19 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "ferrari-gtc4lusso-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "GTC4LUSSO — nesli belirlenmemiş araçlar",
-      "kind": "unassigned",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2020 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "id": "ferrari-gtc4lusso-uretim-2016",
+      "slug": "uretim-2016",
+      "name": "GTC4Lusso",
+      "order": 216,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2016 }, "end": { "year": 2020 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-49362685"],
       "updatedAt": "2026-10-17",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Ferrari GTC4Lusso\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "ferrari-gtc4lusso-nesil-belirlenmedi-39", "slug": "39", "engineId": "ferrari-39", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DCT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019, 2020], "trims": ["T"], "bodyTypes": [], "sourceRefs": ["TSB 50-1008"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "ferrari-gtc4lusso-nesil-belirlenmedi-63", "slug": "63", "engineId": "ferrari-63", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DCT" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019, 2020], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 50-1009"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "ferrari-gtc4lusso-uretim-2016-39", "slug": "39", "engineId": "ferrari-39", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DCT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019, 2020], "trims": ["T"], "bodyTypes": [], "sourceRefs": ["TSB 50-1008"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "ferrari-gtc4lusso-uretim-2016-63", "slug": "63", "engineId": "ferrari-63", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DCT" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019, 2020], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 50-1009"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

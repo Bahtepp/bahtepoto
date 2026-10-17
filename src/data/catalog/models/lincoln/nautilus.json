@@ -17,12 +17,15 @@
       "order": 1,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2018 }, "end": { "year": 2023 } },
       "engineDisplacementsL": [2, 2.7],
+      "engineSignatures": ["2.0:petrol", "2.7:petrol"],
       "status": "sourced",
       "sourceIds": ["wpgen-55931691"],
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"Lincoln Nautilus\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
-      "variants": []
+      "variants": [
+        { "id": "lincoln-nautilus-u540-20", "slug": "20", "engineId": "lincoln-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 82-1101"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
     },
     {
       "id": "lincoln-nautilus-cdx707",
@@ -32,28 +35,13 @@
       "order": 2,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2023 }, "end": null },
       "engineDisplacementsL": [2],
+      "engineSignatures": ["2.0:petrol"],
       "status": "sourced",
       "sourceIds": ["wpgen-55931691"],
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"Lincoln Nautilus\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": []
-    },
-    {
-      "id": "lincoln-nautilus-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Nautilus — nesli belirlenmemiş araçlar",
-      "kind": "unassigned",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2022 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-17",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
-      "revisions": [],
-      "variants": [
-        { "id": "lincoln-nautilus-nesil-belirlenmedi-20", "slug": "20", "engineId": "lincoln-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2022 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 82-1101"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
-      ]
     }
   ]
 }

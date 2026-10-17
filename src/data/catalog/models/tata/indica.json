@@ -29,28 +29,15 @@
       "order": 2,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2008 }, "end": { "year": 2015 } },
       "engineDisplacementsL": [1.2, 1.3, 1.4],
+      "engineSignatures": ["1.2:petrol", "1.3:diesel", "1.4:diesel", "1.4:petrol"],
       "status": "sourced",
       "sourceIds": ["wpgen-867402"],
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"Tata Indica\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
-      "variants": []
-    },
-    {
-      "id": "tata-indica-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Indica — nesli belirlenmemiş araçlar",
-      "kind": "unassigned",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-17",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
-      "revisions": [],
       "variants": [
-        { "id": "tata-indica-nesil-belirlenmedi-14", "slug": "14", "engineId": "tata-14", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Mpfi Comfort", "NA Basic"], "bodyTypes": [], "sourceRefs": ["TSB 119-103", "TSB 119-20"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "tata-indica-nesil-belirlenmedi-14-tdi", "slug": "14-tdi", "engineId": "tata-14-tdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Comfort", "Trend"], "bodyTypes": [], "sourceRefs": ["TSB 119-21", "TSB 119-22"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "tata-indica-2-nesil-14", "slug": "14", "engineId": "tata-14", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Mpfi Comfort", "NA Basic"], "bodyTypes": [], "sourceRefs": ["TSB 119-103", "TSB 119-20"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "tata-indica-2-nesil-14-tdi", "slug": "14-tdi", "engineId": "tata-14-tdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Comfort", "Trend"], "bodyTypes": [], "sourceRefs": ["TSB 119-21", "TSB 119-22"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

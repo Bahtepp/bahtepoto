@@ -16,6 +16,7 @@
       "order": 207,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2007 }, "end": { "year": 2007 } },
       "engineDisplacementsL": [3, 4.2],
+      "engineSignatures": ["3.0:diesel", "3.0:petrol", "4.2:petrol"],
       "status": "sourced",
       "sourceIds": ["wpgen-15379943"],
       "updatedAt": "2026-10-17",

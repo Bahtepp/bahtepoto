@@ -17,6 +17,7 @@
       "order": 1,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1991 }, "end": { "year": 1999 } },
       "engineDisplacementsL": [1.6, 1.8, 1.9, 2],
+      "engineSignatures": ["1.6:?", "1.8:?", "1.9:?", "1.9:diesel", "2.0:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-1176162"],
       "updatedAt": "2026-10-17",
@@ -46,13 +47,16 @@
       "order": 3,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2004 }, "end": { "year": 2009 } },
       "engineDisplacementsL": [1.6, 1.8, 1.9, 2],
+      "engineSignatures": ["1.6:petrol", "1.8:petrol", "1.9:diesel", "2.0:diesel", "2.0:petrol"],
       "status": "sourced",
       "sourceIds": ["wpgen-1176162"],
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"SEAT Toledo\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "seat-toledo-5p-20-fsi-150", "slug": "20-fsi-150", "engineId": "seat-20-fsi-150", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009], "trims": ["Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-201", "TSB 19-202"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "seat-toledo-5p-20-fsi-150", "slug": "20-fsi-150", "engineId": "seat-20-fsi-150", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009], "trims": ["Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-201", "TSB 19-202"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "seat-toledo-5p-19-tdi-105", "slug": "19-tdi-105", "engineId": "seat-19-tdi-105", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010], "trims": ["Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-203"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "seat-toledo-5p-20-tdi-140", "slug": "20-tdi-140", "engineId": "seat-20-tdi-140", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010], "trims": ["Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-204", "TSB 19-205"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     },
     {
@@ -62,6 +66,7 @@
       "order": 4,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2012 }, "end": { "year": 2019 } },
       "engineDisplacementsL": [1, 1.2, 1.4, 1.6],
+      "engineSignatures": ["1.0:petrol", "1.2:petrol", "1.4:diesel", "1.4:petrol", "1.6:diesel"],
       "status": "sourced",
       "sourceIds": ["wpgen-1176162"],
       "updatedAt": "2026-10-17",
@@ -91,9 +96,7 @@
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "seat-toledo-nesil-belirlenmedi-16-102", "slug": "16-102", "engineId": "seat-16-102", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Reference", "Selection", "Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-199", "TSB 19-200", "TSB 19-227"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "seat-toledo-nesil-belirlenmedi-19-tdi-105", "slug": "19-tdi-105", "engineId": "seat-19-tdi-105", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010], "trims": ["Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-203"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "seat-toledo-nesil-belirlenmedi-20-tdi-140", "slug": "20-tdi-140", "engineId": "seat-20-tdi-140", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010], "trims": ["Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-204", "TSB 19-205"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "seat-toledo-nesil-belirlenmedi-16-102", "slug": "16-102", "engineId": "seat-16-102", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Reference", "Selection", "Stylance"], "bodyTypes": [], "sourceRefs": ["TSB 19-199", "TSB 19-200", "TSB 19-227"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

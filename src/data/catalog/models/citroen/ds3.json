@@ -10,27 +10,44 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "citroen-ds3-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "DS3 — nesli belirlenmemiş araçlar",
-      "kind": "unassigned",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2017 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "id": "citroen-ds3-1-nesil",
+      "slug": "1-nesil",
+      "name": "DS3 1. nesil",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2009 }, "end": { "year": 2019 } },
+      "engineDisplacementsL": [1.2, 1.4, 1.6],
+      "engineSignatures": ["1.2:?", "1.4:?", "1.6:?"],
+      "status": "sourced",
+      "sourceIds": ["wpgen-21378361"],
       "updatedAt": "2026-10-17",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "notes": "Üretim yılları İngilizce Wikipedia \"DS 3\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "citroen-ds3-nesil-belirlenmedi-16-hdi-92", "slug": "16-hdi-92", "engineId": "citroen-16-hdi-92", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012], "trims": ["Dstyle"], "bodyTypes": [], "sourceRefs": ["TSB 34-318"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "citroen-ds3-nesil-belirlenmedi-16-vti-120", "slug": "16-vti-120", "engineId": "citroen-16-vti-120", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013], "trims": ["Dstyle"], "bodyTypes": [], "sourceRefs": ["TSB 34-319"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "citroen-ds3-nesil-belirlenmedi-16-thp-156", "slug": "16-thp-156", "engineId": "citroen-16-thp-156", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013], "trims": ["Dsport"], "bodyTypes": [], "sourceRefs": ["TSB 34-320"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "citroen-ds3-nesil-belirlenmedi-16-thp-202", "slug": "16-thp-202", "engineId": "citroen-16-thp-202", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013], "trims": ["Racing"], "bodyTypes": [], "sourceRefs": ["TSB 34-348"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "citroen-ds3-nesil-belirlenmedi-16-e-hdi-92", "slug": "16-e-hdi-92", "engineId": "citroen-16-e-hdi-92", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015], "trims": ["Dsport Mcp Stt", "Dstyle Mcp Stt", "Dstyle Stt"], "bodyTypes": ["Cabrio"], "sourceRefs": ["TSB 34-1023", "TSB 34-1024", "TSB 34-1051"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "citroen-ds3-nesil-belirlenmedi-12-vti-82", "slug": "12-vti-82", "engineId": "citroen-12-vti-82", "revisionMapping": "unknown", "transmissions": [{ "type": "automated-manual", "name": "ETG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015], "trims": ["Dstyle"], "bodyTypes": [], "sourceRefs": ["TSB 34-1076"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "citroen-ds3-nesil-belirlenmedi-12-puretech-110", "slug": "12-puretech-110", "engineId": "citroen-12-puretech-110", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 34-1091"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "citroen-ds3-nesil-belirlenmedi-16-thp-208", "slug": "16-thp-208", "engineId": "citroen-16-thp-208", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016], "trims": ["Performance"], "bodyTypes": [], "sourceRefs": ["TSB 34-1106"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "citroen-ds3-1-nesil-16-hdi-92", "slug": "16-hdi-92", "engineId": "citroen-16-hdi-92", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012], "trims": ["Dstyle"], "bodyTypes": [], "sourceRefs": ["TSB 34-318"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "citroen-ds3-1-nesil-16-vti-120", "slug": "16-vti-120", "engineId": "citroen-16-vti-120", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013], "trims": ["Dstyle"], "bodyTypes": [], "sourceRefs": ["TSB 34-319"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "citroen-ds3-1-nesil-16-thp-156", "slug": "16-thp-156", "engineId": "citroen-16-thp-156", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013], "trims": ["Dsport"], "bodyTypes": [], "sourceRefs": ["TSB 34-320"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "citroen-ds3-1-nesil-16-thp-202", "slug": "16-thp-202", "engineId": "citroen-16-thp-202", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013], "trims": ["Racing"], "bodyTypes": [], "sourceRefs": ["TSB 34-348"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "citroen-ds3-1-nesil-16-e-hdi-92", "slug": "16-e-hdi-92", "engineId": "citroen-16-e-hdi-92", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015], "trims": ["Dsport Mcp Stt", "Dstyle Mcp Stt", "Dstyle Stt"], "bodyTypes": ["Cabrio"], "sourceRefs": ["TSB 34-1023", "TSB 34-1024", "TSB 34-1051"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "citroen-ds3-1-nesil-12-vti-82", "slug": "12-vti-82", "engineId": "citroen-12-vti-82", "revisionMapping": "unknown", "transmissions": [{ "type": "automated-manual", "name": "ETG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015], "trims": ["Dstyle"], "bodyTypes": [], "sourceRefs": ["TSB 34-1076"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "citroen-ds3-1-nesil-12-puretech-110", "slug": "12-puretech-110", "engineId": "citroen-12-puretech-110", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 34-1091"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "citroen-ds3-1-nesil-16-thp-208", "slug": "16-thp-208", "engineId": "citroen-16-thp-208", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016], "trims": ["Performance"], "bodyTypes": [], "sourceRefs": ["TSB 34-1106"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
+    },
+    {
+      "id": "citroen-ds3-d34",
+      "slug": "d34",
+      "name": "DS3 2. nesil (D34)",
+      "code": "D34",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2018 }, "end": null },
+      "engineDisplacementsL": [1.2, 1.5],
+      "engineSignatures": ["1.2:?", "1.5:diesel"],
+      "status": "sourced",
+      "sourceIds": ["wpgen-21378361"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"DS 3\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
     }
   ]
 }

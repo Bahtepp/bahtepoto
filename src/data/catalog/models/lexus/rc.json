@@ -17,6 +17,7 @@
       "order": 214,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2014 }, "end": { "year": 2025 } },
       "engineDisplacementsL": [2, 2.5, 3.5, 5],
+      "engineSignatures": ["2.0:petrol", "2.5:hybrid", "3.5:petrol", "5.0:petrol"],
       "status": "sourced",
       "sourceIds": ["wpgen-40969591"],
       "updatedAt": "2026-10-17",

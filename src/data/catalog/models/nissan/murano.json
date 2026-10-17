@@ -17,6 +17,7 @@
       "order": 1,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2002 }, "end": { "year": 2007 } },
       "engineDisplacementsL": [2.5, 3.5],
+      "engineSignatures": ["2.5:?", "3.5:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-1278102"],
       "updatedAt": "2026-10-17",
@@ -32,12 +33,15 @@
       "order": 2,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2007 }, "end": { "year": 2014 } },
       "engineDisplacementsL": [2.5, 3.5],
+      "engineSignatures": ["2.5:?", "3.5:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-1278102"],
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"Nissan Murano\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
-      "variants": []
+      "variants": [
+        { "id": "nissan-murano-z51-35", "slug": "35", "engineId": "nissan-35", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["SE"], "bodyTypes": [], "sourceRefs": ["TSB 107-225"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
     },
     {
       "id": "nissan-murano-z52",
@@ -47,6 +51,7 @@
       "order": 3,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2014 }, "end": { "year": 2024 } },
       "engineDisplacementsL": [2.5],
+      "engineSignatures": ["2.5:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-1278102"],
       "updatedAt": "2026-10-17",
@@ -62,28 +67,13 @@
       "order": 4,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2024 }, "end": null },
       "engineDisplacementsL": [2],
+      "engineSignatures": ["2.0:petrol"],
       "status": "sourced",
       "sourceIds": ["wpgen-1278102"],
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"Nissan Murano\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": []
-    },
-    {
-      "id": "nissan-murano-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Murano — nesli belirlenmemiş araçlar",
-      "kind": "unassigned",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-17",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
-      "revisions": [],
-      "variants": [
-        { "id": "nissan-murano-nesil-belirlenmedi-35", "slug": "35", "engineId": "nissan-35", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["SE"], "bodyTypes": [], "sourceRefs": ["TSB 107-225"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
-      ]
     }
   ]
 }

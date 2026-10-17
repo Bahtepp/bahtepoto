@@ -162,3 +162,21 @@ export function engineDisplacements(value: string): number[] {
   const cc = [...t.matchAll(/\b(\d{3,4})\s?cc\b/gi)].map((x) => Math.round(Number(x[1]) / 100) / 10);
   return [...new Set([...litres, ...cc])].filter((x) => x > 0.5 && x < 9).sort((a, b) => a - b);
 }
+
+const DIESEL_WORDS = /\b(diesel|tdi|tdci|crdi|dci|hdi|bluehdi|cdi|cdti|jtd|jtdm|multijet|d-4d|d4d|sdi|bluetec|ecoblue|i-dtec|dtec|skyactiv-d|tdv6|sdv6|bitdi)\b/i;
+const PETROL_WORDS = /\b(petrol|gasoline|tsi|tfsi|fsi|mpi|gdi|t-gdi|tce|ecoboost|puretech|thp|vtec|i-vtec|vvt-i|vvt|multiair|t-jet|tjet|ti-vct|duratec|skyactiv-g|turbo petrol|twinpower turbo i[346])\b/i;
+const HYBRID_WORDS = /\b(hybrid|plug-in|phev|e-tech)\b/i;
+
+/**
+ * Bilgi kutusundaki motor satırlarından "hacim:yakıt" imzaları. Yakıt aynı satırda yazmıyorsa "?".
+ * "2.0 L TDI I4" → "2.0:diesel"; "1.4 L TSI" → "1.4:petrol"; "1.6 L I4" → "1.6:?".
+ */
+export function engineSignatures(value: string): string[] {
+  const out = new Set<string>();
+  for (const line of plain(value).split(/\n|\*/)) {
+    const fuel = HYBRID_WORDS.test(line) ? 'hybrid' : DIESEL_WORDS.test(line) ? 'diesel' : PETROL_WORDS.test(line) ? 'petrol' : '?';
+    for (const m of line.matchAll(/\b(\d)\.(\d)\s?(?:L|litre|liter|l\b)/gi)) out.add(`${m[1]}.${m[2]}:${fuel}`);
+    for (const m of line.matchAll(/\b(\d{3,4})\s?cc\b/gi)) out.add(`${(Math.round(Number(m[1]) / 100) / 10).toFixed(1)}:${fuel}`);
+  }
+  return [...out].sort();
+}

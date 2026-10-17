@@ -16,6 +16,7 @@
       "order": 210,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2010 }, "end": { "year": 2020 } },
       "engineDisplacementsL": [5.9],
+      "engineSignatures": ["5.9:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-3676405"],
       "updatedAt": "2026-10-17",

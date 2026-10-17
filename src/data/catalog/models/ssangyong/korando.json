@@ -29,6 +29,7 @@
       "order": 2,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1996 }, "end": { "year": 2014 }, "approximate": true },
       "engineDisplacementsL": [2.3, 2.9, 3.2],
+      "engineSignatures": ["2.3:diesel", "2.3:petrol", "2.9:diesel", "3.2:petrol"],
       "status": "sourced",
       "sourceIds": ["wpgen-2514840"],
       "updatedAt": "2026-10-17",
@@ -49,7 +50,7 @@
       "notes": "Üretim yılları İngilizce Wikipedia \"SsangYong Korando\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "ssangyong-korando-c200-20", "slug": "20", "engineId": "ssangyong-20", "revisionMapping": "unknown", "transmissions": [{ "type": "manual" }, { "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017], "trims": ["Sports D 4x2 Full", "Sports D Full"], "bodyTypes": [], "sourceRefs": ["TSB 128-1074", "TSB 128-1075", "TSB 128-1076", "TSB 128-1077"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "ssangyong-korando-c200-20", "slug": "20", "engineId": "ssangyong-20", "revisionMapping": "unknown", "transmissions": [{ "type": "manual" }, { "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016, 2017], "trims": ["Sports D 4x2 Full", "Sports D Full", "Sports e-XDI 4x2 5AT Limited", "Sports e-XDI 4x2 5AT Special EDI.", "Sports e-XDI 4x2 6MT Limited", "Sports e-XDI 4x2 6MT Modes", "Sports e-XDI 4x2 6MT Special EDI."], "bodyTypes": [], "sourceRefs": ["TSB 128-1026", "TSB 128-1027", "TSB 128-1028", "TSB 128-1029", "TSB 128-1030", "TSB 128-1074", "TSB 128-1075", "TSB 128-1076", "TSB 128-1077"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     },
     {
@@ -64,7 +65,10 @@
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"SsangYong Korando\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
-      "variants": []
+      "variants": [
+        { "id": "ssangyong-korando-c300-16", "slug": "16", "engineId": "ssangyong-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021, 2022, 2023], "trims": ["D 4x2 Platinum", "D 4x2 Titanium"], "bodyTypes": [], "sourceRefs": ["TSB 128-1103", "TSB 128-1109"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "ssangyong-korando-c300-15", "slug": "15", "engineId": "ssangyong-15", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021, 2022, 2023], "trims": ["G 4x2 Limited", "G 4x2 Platinum", "G Edition"], "bodyTypes": [], "sourceRefs": ["TSB 128-1107", "TSB 128-1108", "TSB 128-1114"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
     },
     {
       "id": "ssangyong-korando-nesil-belirlenmedi",
@@ -72,16 +76,15 @@
       "name": "Korando — nesli belirlenmemiş araçlar",
       "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2023 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2020 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
       "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "ssangyong-korando-nesil-belirlenmedi-20", "slug": "20", "engineId": "ssangyong-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015, 2016], "trims": ["E-XDI 4x2 6/AT", "E-XDI 4x2 6/AT SE", "E-XDI 4x2 6/MT", "E-XDI 6/AT", "E-XDI 6/MT", "Sports E-XDI 4x2 6/AT", "Sports E-XDI 4x2 6/MT", "Sports E-XDI 4x2 Q SE", "Sports e-XDI 4x2 5AT Limited", "Sports e-XDI 4x2 5AT Special EDI.", "Sports e-XDI 4x2 6MT Limited", "Sports e-XDI 4x2 6MT Modes", "Sports e-XDI 4x2 6MT Q", "Sports e-XDI 4x2 6MT Special EDI.", "Sports e-XDI 4x2 Q", "Sports e-XDI 4x2 Q Special Edi"], "bodyTypes": [], "sourceRefs": ["TSB 128-1001", "TSB 128-1002", "TSB 128-1003", "TSB 128-1004", "TSB 128-1018", "TSB 128-1019", "TSB 128-1025", "TSB 128-1026", "TSB 128-1027", "TSB 128-1028", "TSB 128-1029", "TSB 128-1030", "TSB 128-80", "TSB 128-81", "TSB 128-88", "TSB 128-89"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "ssangyong-korando-nesil-belirlenmedi-16", "slug": "16", "engineId": "ssangyong-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021, 2022, 2023], "trims": ["D 4x2 Limited", "D 4x2 Platinum", "D 4x2 Titanium", "D Edition"], "bodyTypes": [], "sourceRefs": ["TSB 128-1102", "TSB 128-1103", "TSB 128-1105", "TSB 128-1109"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "ssangyong-korando-nesil-belirlenmedi-15", "slug": "15", "engineId": "ssangyong-15", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021, 2022, 2023], "trims": ["G 4x2 Limited", "G 4x2 Platinum", "G Edition"], "bodyTypes": [], "sourceRefs": ["TSB 128-1107", "TSB 128-1108", "TSB 128-1114"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "ssangyong-korando-nesil-belirlenmedi-20", "slug": "20", "engineId": "ssangyong-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014], "trims": ["E-XDI 4x2 6/AT", "E-XDI 4x2 6/AT SE", "E-XDI 4x2 6/MT", "E-XDI 6/AT", "E-XDI 6/MT", "Sports E-XDI 4x2 6/AT", "Sports E-XDI 4x2 6/MT", "Sports E-XDI 4x2 Q SE", "Sports e-XDI 4x2 6MT Q", "Sports e-XDI 4x2 Q", "Sports e-XDI 4x2 Q Special Edi"], "bodyTypes": [], "sourceRefs": ["TSB 128-1001", "TSB 128-1002", "TSB 128-1003", "TSB 128-1004", "TSB 128-1018", "TSB 128-1019", "TSB 128-1025", "TSB 128-80", "TSB 128-81", "TSB 128-88", "TSB 128-89"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "ssangyong-korando-nesil-belirlenmedi-16", "slug": "16", "engineId": "ssangyong-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020], "trims": ["D 4x2 Limited", "D Edition"], "bodyTypes": [], "sourceRefs": ["TSB 128-1102", "TSB 128-1105"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

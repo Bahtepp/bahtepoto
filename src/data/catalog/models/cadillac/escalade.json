@@ -16,6 +16,7 @@
       "order": 1,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1998 }, "end": { "year": 2000 } },
       "engineDisplacementsL": [5.7],
+      "engineSignatures": ["5.7:petrol"],
       "status": "sourced",
       "sourceIds": ["wpgen-417850"],
       "updatedAt": "2026-10-17",
@@ -30,6 +31,7 @@
       "order": 2,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2001 }, "end": { "year": 2006 }, "approximate": true },
       "engineDisplacementsL": [5.3, 6],
+      "engineSignatures": ["5.3:?", "6.0:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-417850"],
       "updatedAt": "2026-10-17",
@@ -44,12 +46,15 @@
       "order": 3,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2006 }, "end": { "year": 2014 } },
       "engineDisplacementsL": [6, 6.2],
+      "engineSignatures": ["6.0:?", "6.2:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-417850"],
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"Cadillac Escalade\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
-      "variants": []
+      "variants": [
+        { "id": "cadillac-escalade-3-nesil-60-hybrid", "slug": "60-hybrid", "engineId": "cadillac-60-hybrid", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 31-22"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
     },
     {
       "id": "cadillac-escalade-4-nesil",
@@ -58,6 +63,7 @@
       "order": 4,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2014 }, "end": { "year": 2019 } },
       "engineDisplacementsL": [6.2],
+      "engineSignatures": ["6.2:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-417850"],
       "updatedAt": "2026-10-17",
@@ -72,6 +78,7 @@
       "order": 5,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2020 }, "end": null },
       "engineDisplacementsL": [6.2],
+      "engineSignatures": ["6.2:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-417850"],
       "updatedAt": "2026-10-17",
@@ -95,8 +102,7 @@
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "cadillac-escalade-nesil-belirlenmedi-62", "slug": "62", "engineId": "cadillac-62", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 31-17"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "cadillac-escalade-nesil-belirlenmedi-60-hybrid", "slug": "60-hybrid", "engineId": "cadillac-60-hybrid", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 31-22"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "cadillac-escalade-nesil-belirlenmedi-62", "slug": "62", "engineId": "cadillac-62", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 31-17"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

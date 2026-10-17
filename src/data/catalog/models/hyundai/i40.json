@@ -10,20 +10,19 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "hyundai-i40-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "I40 — nesli belirlenmemiş araçlar",
-      "kind": "unassigned",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2015 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "id": "hyundai-i40-uretim-2011",
+      "slug": "uretim-2011",
+      "name": "i40",
+      "order": 211,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2011 }, "end": { "year": 2019 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-16446731"],
       "updatedAt": "2026-10-17",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Hyundai i40\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "hyundai-i40-nesil-belirlenmedi-16-gdi-135", "slug": "16-gdi-135", "engineId": "hyundai-16-gdi-135", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014], "trims": ["Prime"], "bodyTypes": [], "sourceRefs": ["TSB 177-1042"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "hyundai-i40-nesil-belirlenmedi-17-crdi-136", "slug": "17-crdi-136", "engineId": "hyundai-17-crdi-136", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015], "trims": ["Executive"], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 177-1043", "TSB 177-1273"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "hyundai-i40-uretim-2011-16-gdi-135", "slug": "16-gdi-135", "engineId": "hyundai-16-gdi-135", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014], "trims": ["Prime"], "bodyTypes": [], "sourceRefs": ["TSB 177-1042"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "hyundai-i40-uretim-2011-17-crdi-136", "slug": "17-crdi-136", "engineId": "hyundai-17-crdi-136", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015], "trims": ["Executive"], "bodyTypes": ["Station wagon"], "sourceRefs": ["TSB 177-1043", "TSB 177-1273"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

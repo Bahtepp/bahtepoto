@@ -49,7 +49,9 @@
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"Lincoln Navigator\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
-      "variants": []
+      "variants": [
+        { "id": "lincoln-navigator-u326-u418-35", "slug": "35", "engineId": "lincoln-35", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016, 2017, 2018], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 82-1004"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
     },
     {
       "id": "lincoln-navigator-u554",
@@ -80,22 +82,6 @@
       "notes": "Üretim yılları İngilizce Wikipedia \"Lincoln Navigator\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": []
-    },
-    {
-      "id": "lincoln-navigator-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Navigator — nesli belirlenmemiş araçlar",
-      "kind": "unassigned",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2018 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-17",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
-      "revisions": [],
-      "variants": [
-        { "id": "lincoln-navigator-nesil-belirlenmedi-35", "slug": "35", "engineId": "lincoln-35", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016, 2017, 2018], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 82-1004"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
-      ]
     }
   ]
 }

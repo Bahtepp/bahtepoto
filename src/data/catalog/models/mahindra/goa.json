@@ -10,20 +10,33 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "mahindra-goa-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Goa — nesli belirlenmemiş araçlar",
-      "kind": "unassigned",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "id": "mahindra-goa-1-nesil",
+      "slug": "1-nesil",
+      "name": "Goa 1. nesil",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2002 }, "end": null },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1126288"],
       "updatedAt": "2026-10-17",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Mahindra Scorpio\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "mahindra-goa-nesil-belirlenmedi-26-crdi", "slug": "26-crdi", "engineId": "mahindra-26-crdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["4x2"], "bodyTypes": [], "sourceRefs": ["TSB 720-40", "TSB 720-41"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "mahindra-goa-1-nesil-26-crdi", "slug": "26-crdi", "engineId": "mahindra-26-crdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["4x2"], "bodyTypes": [], "sourceRefs": ["TSB 720-40", "TSB 720-41"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
+    },
+    {
+      "id": "mahindra-goa-z101",
+      "slug": "z101",
+      "name": "Goa 2. nesil (Z101)",
+      "code": "Z101",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2022 }, "end": null },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1126288"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Mahindra Scorpio\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
     }
   ]
 }

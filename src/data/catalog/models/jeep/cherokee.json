@@ -1,0 +1,91 @@
+{
+  "id": "jeep-cherokee",
+  "brandId": "jeep",
+  "slug": "cherokee",
+  "name": "Cherokee",
+  "order": 999,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-17",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "jeep-cherokee-1-nesil",
+      "slug": "1-nesil",
+      "name": "Cherokee (SJ)",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1974 }, "end": { "year": 1983 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-3758614"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Jeep Cherokee (SJ)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "jeep-cherokee-2-nesil",
+      "slug": "2-nesil",
+      "name": "Cherokee (XJ)",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1983 }, "end": { "year": 2014 }, "approximate": true },
+      "engineDisplacementsL": [2, 2.4, 2.5, 2.7],
+      "engineSignatures": ["2.0:?", "2.4:?", "2.5:?", "2.7:?"],
+      "status": "sourced",
+      "sourceIds": ["wpgen-3758625"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Jeep Cherokee (XJ)\" bilgi kutusundan (farklı pazarlar: Beijing Jeep; Shuanghuan; BAW); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "jeep-cherokee-2-nesil-37", "slug": "37", "engineId": "jeep-37", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Limited", "Renegade"], "bodyTypes": [], "sourceRefs": ["TSB 33-235", "TSB 33-239"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "jeep-cherokee-2-nesil-24", "slug": "24", "engineId": "jeep-24", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Sport"], "bodyTypes": [], "sourceRefs": ["TSB 33-238"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "jeep-cherokee-2-nesil-28-crd", "slug": "28-crd", "engineId": "jeep-28-crd", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013], "trims": ["Limited", "Renegade"], "bodyTypes": [], "sourceRefs": ["TSB 33-240", "TSB 33-265"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
+      "id": "jeep-cherokee-5-nesil",
+      "slug": "5-nesil",
+      "name": "Cherokee (KL)",
+      "order": 5,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2013 }, "end": { "year": 2023 } },
+      "engineDisplacementsL": [2, 2.2, 2.4, 3.2],
+      "engineSignatures": ["2.0:?", "2.0:diesel", "2.2:diesel", "2.4:?", "3.2:?"],
+      "status": "sourced",
+      "sourceIds": ["wpgen-38656652"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Jeep Cherokee (KL)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "jeep-cherokee-5-nesil-20-170", "slug": "20-170", "engineId": "jeep-20-170", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016], "trims": ["9ATX Limited D.75.Y"], "bodyTypes": [], "sourceRefs": ["TSB 33-1023"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
+      "id": "jeep-cherokee-6-nesil",
+      "slug": "6-nesil",
+      "name": "Cherokee (KM)",
+      "order": 6,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2025 }, "end": null },
+      "status": "sourced",
+      "sourceIds": ["wpgen-80830254"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Jeep Cherokee (KM)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "jeep-cherokee-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Cherokee — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2015 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-17",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "jeep-cherokee-nesil-belirlenmedi-20-dizel", "slug": "20-dizel", "engineId": "jeep-20-dizel", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015], "trims": ["9ATX Limited", "9ATX Longitude"], "bodyTypes": [], "sourceRefs": ["TSB 33-1005", "TSB 33-1006"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    }
+  ]
+}

@@ -22,7 +22,8 @@
       "notes": "Üretim yılları İngilizce Wikipedia \"BMW X4\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "bmw-x4-f26-20d", "slug": "20d", "engineId": "bmw-20d", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 21-1079"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "bmw-x4-f26-20d", "slug": "20d", "engineId": "bmw-20d", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 21-1079"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "bmw-x4-f26-20-190", "slug": "20-190", "engineId": "bmw-20-190", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018], "trims": ["XDRIVE20d Exlusive", "XDRIVE20d Joy", "XDRIVE20d M Sport", "XDRIVE20d X Line"], "bodyTypes": [], "sourceRefs": ["TSB 21-1329", "TSB 21-1330", "TSB 21-1331", "TSB 21-1332"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     },
     {
@@ -45,14 +46,14 @@
       "name": "X4 — nesli belirlenmemiş araçlar",
       "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2018 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2017 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
       "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "bmw-x4-nesil-belirlenmedi-20-190", "slug": "20-190", "engineId": "bmw-20-190", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018], "trims": ["XDRIVE20d Exlusive", "XDRIVE20d Joy", "XDRIVE20d M Sport", "XDRIVE20d Pure", "XDRIVE20d X Line"], "bodyTypes": [], "sourceRefs": ["TSB 21-1329", "TSB 21-1330", "TSB 21-1331", "TSB 21-1332", "TSB 21-1557"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "bmw-x4-nesil-belirlenmedi-20-190", "slug": "20-190", "engineId": "bmw-20-190", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017], "trims": ["XDRIVE20d Pure"], "bodyTypes": [], "sourceRefs": ["TSB 21-1557"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

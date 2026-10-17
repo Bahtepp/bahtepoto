@@ -1,0 +1,29 @@
+{
+  "id": "jeep-grandcherokee",
+  "brandId": "jeep",
+  "slug": "grandcherokee",
+  "name": "Grandcherokee",
+  "order": 999,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-17",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "jeep-grandcherokee-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Grandcherokee — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2018 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-17",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "jeep-grandcherokee-nesil-belirlenmedi-30-dizel", "slug": "30-dizel", "engineId": "jeep-30-dizel", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2017 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2017, 2018], "trims": ["Summit S2", "Trailhawk S2"], "bodyTypes": [], "sourceRefs": ["TSB 33-1042", "TSB 33-1044"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    }
+  ]
+}

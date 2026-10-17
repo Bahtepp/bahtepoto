@@ -49,6 +49,8 @@ export interface BuildStats {
   matchedByCode: number;
   /** Kaynaktaki motor hacmiyle desteklenerek eşlenen varyant. */
   matchedByEngine: number;
+  /** Satırın bütün model yıllarını yalnızca tek neslin kapsamasıyla eşlenen varyant. */
+  matchedByContainment: number;
   /** Mevcut varyantlara eklenen Türkiye pazar durumu. */
   existingVariantsEnriched: number;
   fuelUnknownEngines: number;
@@ -58,6 +60,7 @@ export interface BuildResult {
   merged: RawCatalog;
   stats: BuildStats;
   rejects: RejectedRow[];
+  unassignedReasons: { reason: string; model: string }[];
   /** Model başına özet (rapor için). */
   perBrand: Map<string, { name: string; models: number; variants: number }>;
 }
@@ -105,7 +108,7 @@ function brandRuleFor(tsbBrand: string): BrandRule {
 const ROMAN: Record<string, number> = { II: 2, III: 3, IV: 4, V: 5, VI: 6, VII: 7, VIII: 8, IX: 9, X: 10 };
 const hintNumber = (hint: string) => ROMAN[hint] ?? (/^MK(\d+)$/.exec(hint) ? Number(/^MK(\d+)$/.exec(hint)![1]) : undefined);
 
-type MatchKind = 'code' | 'existing' | 'engine' | 'hint' | 'none';
+type MatchKind = 'code' | 'existing' | 'contain' | 'engine' | 'hint' | 'none';
 
 interface Item {
   row: TsbRow;
@@ -146,7 +149,8 @@ function excludedReason(row: TsbRow, p: ParsedType): string | undefined {
 
 /** BMW: "320d" → model "3 Serisi", motor tanımı "320d" (d: dizel, i: benzin, e: plug-in). */
 function bmwSeries(first: string): { model: string; fuel?: ParsedType['fuel'] } | undefined {
-  const m = /^(\d)(\d{2})([A-Za-z]*)$/.exec(first);
+  // "320d" ve M Performance tanımları ("M340d", "M550i"): seri numarası ilk rakam. "M3", "M5" ayrı modeldir (3 rakam yok).
+  const m = /^M?(\d)(\d{2})([A-Za-z]*)$/i.exec(first);
   if (!m) return undefined;
   const suffix = m[3]!.toLowerCase();
   const fuel = /d$/.test(suffix) ? 'diesel' : /e$/.test(suffix) ? 'plug-in-hybrid' : /i$/.test(suffix) ? 'petrol' : undefined;
@@ -198,7 +202,17 @@ export function stripTsb(raw: RawCatalog): RawCatalog {
 
 // ---------------------------------------------------------------------------
 
-export function buildFromTsb(raw: RawCatalog, rows: TsbRow[], opts: { today: string; sourceTitle: string; sourceNotes: string }): BuildResult {
+export function buildFromTsb(
+  raw: RawCatalog,
+  rows: TsbRow[],
+  opts: {
+    today: string;
+    sourceTitle: string;
+    sourceNotes: string;
+    /** Model dosyası → kaynakta çelişkili nesillerin dönemleri: bu yıllara düşen satırlar yıl/motor kuralıyla eşlenmez. */
+    blockedSpans?: Map<string, { start: number; end: number | null }[]>;
+  },
+): BuildResult {
   const stats: BuildStats = {
     rows: rows.length,
     excluded: {},
@@ -214,10 +228,13 @@ export function buildFromTsb(raw: RawCatalog, rows: TsbRow[], opts: { today: str
     variantsOnExistingGenerations: 0,
     matchedByCode: 0,
     matchedByEngine: 0,
+    matchedByContainment: 0,
     existingVariantsEnriched: 0,
     fuelUnknownEngines: 0,
   };
   const rejects: RejectedRow[] = [];
+  /** Nesli belirlenemeyen her TSB satırı için neden (rapor). */
+  const unassignedReasons: { reason: string; model: string }[] = [];
   const reject = (row: TsbRow, reason: string, bucket = stats.rejected) => {
     bucket[reason] = (bucket[reason] ?? 0) + 1;
     if (bucket === stats.rejected) {
@@ -250,7 +267,7 @@ export function buildFromTsb(raw: RawCatalog, rows: TsbRow[], opts: { today: str
   for (const [tsbBrand, list] of byBrand) {
     const brand = brandRuleFor(tsbBrand);
     const resolve = resolveModels(list.map((x) => x.parsed));
-    const pre: { row: TsbRow; parsed: ParsedType; model: string; trims: string[] }[] = [];
+    const pre: { row: TsbRow; parsed: ParsedType; model: string; trims: string[]; brand?: BrandRule }[] = [];
     for (const { row, parsed } of list) {
       let { model, trimWords } = resolve(parsed);
       if (brand.id === 'bmw') {
@@ -262,8 +279,30 @@ export function buildFromTsb(raw: RawCatalog, rows: TsbRow[], opts: { today: str
           parsed.fuel ??= series.fuel;
         }
       }
+      // Mercedes-Benz: "A180", "C-180K", "E350" → sınıf (A, C, E) + motor tanımı (180, 180K, 350).
+      // Sınıf adı ile motor tanımı TSB'de bazen bitişik yazılıyor; ayrı yazılanlarla aynı modelde toplanır.
+      if (brand.id === 'mercedes-benz') {
+        const mb = /^([A-Z]{1,3})-?(\d{2,3}[A-Z]{0,2})$/i.exec(model);
+        if (mb) {
+          model = mb[1]!.toUpperCase();
+          parsed.tech.unshift(mb[2]!);
+        }
+      }
       if (brand.modelPrefix) model = `${brand.modelPrefix} ${model}`.trim();
-      pre.push({ row, parsed, model: fold(model), trims: trimWords });
+      // TSB'de Chrysler altında listelenen Jeep modelleri ("JEEP COMPASS", "JEEPRENEGADE") Jeep markasına.
+      let rowBrand: BrandRule | undefined;
+      if (brand.id === 'chrysler' && /^JEEP/i.test(model)) {
+        // "JEEP COMPASS" (model JEEP, donanım COMPASS) veya bitişik "JEEPRENEGADE"
+        const glued = model.replace(/^JEEP\s?/i, '').trim();
+        const rest = glued || trimWords[0] || '';
+        // Kısaltmalı adlar ("G. CHEROKEE") tahminle açılmaz: satır eski yerinde (Chrysler › Jeep) kalır, kaybolmaz.
+        if (rest && !rest.includes('.')) {
+          if (!glued) trimWords.shift();
+          rowBrand = { id: 'jeep', name: 'Jeep' };
+          model = rest;
+        }
+      }
+      pre.push({ row, parsed, model: fold(model), trims: trimWords, brand: rowBrand });
     }
 
     // Yazım hatası birleştirme: 1–2 satırlık model adı, 5+ satırlı bir modele 1 harf uzaklıktaysa.
@@ -282,7 +321,8 @@ export function buildFromTsb(raw: RawCatalog, rows: TsbRow[], opts: { today: str
       // Bitişik yazılmış uzun adlar ("TOURNEOCUSTOM320LECOBLUE") güvenilir model adı değildir.
       const glued = p.model.split(' ').some((w) => w.length > 14);
       // Tek harfli model adı (Mercedes "C", "E") yalnızca markada yaygınsa kabul edilir; "C MAX" gibi kopuk yazımlar değil.
-      const lonelyLetter = p.model.length === 1 && (counts.get(p.model) ?? 0) < 10;
+      // Mercedes-Benz sınıf harfleri (A, B, C, E, G, S) gerçek model adıdır.
+      const lonelyLetter = p.model.length === 1 && brand.id !== 'mercedes-benz' && (counts.get(p.model) ?? 0) < 10;
       if (!p.model || /[.]/.test(p.model) || !/[A-Z0-9]/.test(p.model) || glued || lonelyLetter) {
         reject(row, 'model adı çözümlenemedi');
         continue;
@@ -313,7 +353,7 @@ export function buildFromTsb(raw: RawCatalog, rows: TsbRow[], opts: { today: str
       const engineKey = [parsed.displacementL?.toFixed(1) ?? '', techUp.join('+'), power].join('|');
       const powerText = parsed.powerPs !== undefined ? `${parsed.powerPs} PS` : parsed.powerKw !== undefined ? `${parsed.powerKw} kW` : parsed.powerHp !== undefined ? `${parsed.powerHp} HP` : '';
       const engineName = [parsed.displacementL?.toFixed(1), ...tech.map(techDisplay), powerText].filter(Boolean).join(' ');
-      items.push({ row, parsed, brand, model: p.model, trims: [...p.trims, ...parsed.rest], engineKey, engineName, techTokens: tech });
+      items.push({ row, parsed, brand: p.brand ?? brand, model: p.model, trims: [...p.trims, ...parsed.rest], engineKey, engineName, techTokens: tech });
     }
   }
 
@@ -499,14 +539,22 @@ export function buildFromTsb(raw: RawCatalog, rows: TsbRow[], opts: { today: str
         if (byCode.length === 1) return { gen: byCode[0]!, kind: 'code' };
 
         if (hn !== undefined) {
-          const byHint = curatedGens.find((g) => new RegExp(`(^|-)mk${hn}$`).test(String(g.slug)) || new RegExp(`\\b(mk${hn}|${hint})\\b`, 'i').test(String(g.name)));
+          const byHint = curatedGens.find(
+            (g) =>
+              new RegExp(`(^|-)mk${hn}$`).test(String(g.slug)) ||
+              new RegExp(`\\b(mk${hn}|${hint})\\b`, 'i').test(String(g.name)) ||
+              // Wikipedia nesli: kaynaktaki nesil numarası ("Golf VII" ↔ "Mk7" / 7. nesil)
+              (((g.sourceIds as string[] | undefined) ?? []).some((s) => s.startsWith('wpgen-')) && g.order === hn),
+          );
           if (byHint) return { gen: byHint, kind: 'existing' };
         }
         // Tip adının ham sözcükleri (gövde/donanım ayrıştırmasından önce: "PASSAT CC" gövde sayılabilir).
         const words = fold(it.row.typeName).split(/\s+/).slice(1);
         const byModel = SUBMODEL_WORDS.byModel[it.model] ?? [];
         const submodel = words.some((w, i) => SUBMODEL_WORDS.anywhere.has(w) || byModel.includes(w) || (i === 0 && SUBMODEL_WORDS.first.has(w)));
-        const ranges = (submodel ? [] : curatedGens)
+        // Kaynakta çelişkili bir neslin dönemine düşen yıllar: yıl / motor kuralıyla hiçbir nesle eşlenmez.
+        const blocked = (opts.blockedSpans?.get(target) ?? []).some((sp) => years.some((y) => y >= sp.start && y <= (sp.end ?? 9999) + 1));
+        const ranges = (submodel || blocked ? [] : curatedGens)
           .filter((g) => g.order !== 999 && g.labelPeriod)
           .map((g) => {
             const lp = g.labelPeriod as { start: { year: number }; end: { year: number } | null };
@@ -518,23 +566,51 @@ export function buildFromTsb(raw: RawCatalog, rows: TsbRow[], opts: { today: str
         const near = ranges.filter((r) => r.s <= b + 1 && r.e >= a - 1);
         if (overlapping.length === 1 && near.length === 1 && overlapping[0]!.s <= a && overlapping[0]!.e >= b) return { gen: overlapping[0]!.g, kind: 'existing' };
 
-        // 3) Motorla desteklenen eşleşme: model yılları birden çok neslin dönemine uyuyorsa, yalnızca
-        //    kaynak bu motor hacmini TEK bir nesil için listeliyorsa ve diğer adayların listesi bu hacmi
-        //    içermiyorsa (listesi olmayan aday varsa karar verilmez). Üretim temelli dönemde model yılı
-        //    üretim bitişinden bir yıl sonra olabilir.
+        // Satırın BÜTÜN model yıllarını kapsayan nesiller. Üretim temelli dönemde model yılı üretim
+        // bitişinden bir yıl sonra olabilir (örn. 2006 üretimi 2007 model yılı); başlangıçta pay yok.
+        const fits = ranges.filter((r) => {
+          const lp = r.g.labelPeriod as { basis: string };
+          const end = r.e === 9999 ? 9999 : r.e + (lp.basis === 'production' ? 1 : 0);
+          return r.s <= a && end >= b;
+        });
+        // 2b) Yalnızca tek bir nesil bütün yılları kapsıyorsa (diğer nesiller yılların bir kısmını dışarıda bırakıyor):
+        //     "BMW 320d 2008–2012" → E90 (2004–2013) kapsar; F30 (2011–) 2008'i kapsamaz.
+        if (fits.length === 1 && years.length >= 2) return { gen: fits[0]!.g, kind: 'contain' };
+
+        // 3) Motorla desteklenen eşleşme: yıllar birden çok nesle uyuyorsa, kaynak bu motoru (hacim + yakıt)
+        //    YALNIZCA tek bir nesil için listeliyorsa. Motor hacmi tek başına kanıt sayılmaz; yakıt türü
+        //    bilinmeyen TSB motoru veya imzası olmayan aday nesil varsa karar verilmez.
         const disp = it.parsed.displacementL;
-        if (disp !== undefined) {
-          const fits = ranges.filter((r) => {
-            const lp = r.g.labelPeriod as { basis: string };
-            const end = r.e === 9999 ? 9999 : r.e + (lp.basis === 'production' ? 1 : 0);
-            return r.s <= a && end >= b;
-          });
-          const lists = fits.map((r) => ((r.g.engineDisplacementsL as number[] | undefined) ?? []).map((x) => Math.round(x * 10) / 10));
-          if (fits.length > 1 && lists.every((l) => l.length > 0)) {
-            const has = fits.filter((_r, i) => lists[i]!.includes(Math.round(disp * 10) / 10));
-            if (has.length === 1) return { gen: has[0]!.g, kind: 'engine' };
+        const fuel = it.parsed.fuel;
+        if (disp !== undefined && fuel && fits.length > 1) {
+          const fuelKey = fuel === 'diesel' ? 'diesel' : fuel === 'petrol' ? 'petrol' : /hybrid/.test(fuel) ? 'hybrid' : fuel;
+          const d = (Math.round(disp * 10) / 10).toFixed(1);
+          const sigs = fits.map((r) => (r.g.engineSignatures as string[] | undefined) ?? []);
+          if (sigs.every((s) => s.length > 0)) {
+            const possible = fits.filter((_r, i) => sigs[i]!.includes(`${d}:${fuelKey}`) || sigs[i]!.includes(`${d}:?`));
+            if (possible.length === 1 && ((possible[0]!.g.engineSignatures as string[]) ?? []).includes(`${d}:${fuelKey}`)) {
+              return { gen: possible[0]!.g, kind: 'engine' };
+            }
           }
         }
+
+        // Neden belirsiz kaldı (rapor için)
+        const reason = blocked
+          ? 'model yılları kaynakta çelişkili bir neslin dönemine düşüyor'
+          : submodel
+          ? 'alt model / farklı kasa (ör. VERSO, PLUS, SEDAN): yalnızca kasa kodu veya nesil ipucuyla eşlenir'
+          : real.length === 0
+            ? 'modelin kaynaklı nesli yok'
+            : overlapping.length === 0
+              ? 'model yılları bilinen hiçbir neslin dönemine uymuyor'
+              : fits.length === 0
+                ? 'satırın model yılları iki neslin dönemine yayılıyor'
+                : fits.length > 1
+                  ? disp === undefined || !fuel
+                    ? 'yıllar birden çok nesle uyuyor; motor hacmi veya yakıt türü bilinmiyor'
+                    : 'yıllar birden çok nesle uyuyor; kaynaktaki motor bilgisi tek nesli göstermiyor'
+                  : 'tek model yılı, komşu nesil sınırında';
+        unassignedReasons.push({ reason, model: `${brandId}/${String(model!.slug)}` });
 
         const key = hn !== undefined && overlapping.length === 0 ? `hint-${hn}` : 'none';
         // Aynı model dosyasına farklı TSB adlarından gelen satırlar aynı grubu paylaşır.
@@ -604,14 +680,20 @@ export function buildFromTsb(raw: RawCatalog, rows: TsbRow[], opts: { today: str
         const variants = gen.variants as Json[];
         const existing = variants.find((v) => v.engineId === engine.id);
         if (existing) {
-          // Elle, başka kaynakla girilmiş Türkiye durumu (örn. distribütör broşürüyle "sold") TSB'nin
-          // "listed" kaydıyla ezilmez; pazar başına tek kayıt olduğu için TSB satırları eklenmez.
-          const curated = ((existing.marketAvailability as Json[] | undefined) ?? []).some(
-            (x) => x.marketId === MARKET && !((x.sourceIds as string[] | undefined) ?? []).includes(TSB_SOURCE_ID),
-          );
-          if (curated) continue;
-          const avail = ((existing.marketAvailability as Json[] | undefined) ?? []).filter((x) => x.marketId !== MARKET);
-          avail.push(availability);
+          // Elle, başka kaynakla girilmiş Türkiye durumu (örn. distribütör broşürüyle "sold") ezilmez ve
+          // değiştirilmez; TSB'nin "listed" kaydı onun YANINA ayrı bir kayıt olarak eklenir (TSB satırlarının
+          // kimlikleri izlenebilir kalır). Aynı varyanta düşen birden çok TSB grubu birleştirilir.
+          const avail = [...((existing.marketAvailability as Json[] | undefined) ?? [])];
+          const isTsb = (x: Json) => x.marketId === MARKET && ((x.sourceIds as string[] | undefined) ?? []).includes(TSB_SOURCE_ID);
+          const prev = avail.find(isTsb);
+          if (prev) {
+            const union = (k: string) => [...new Set([...((prev[k] as unknown[]) ?? []), ...((availability[k] as unknown[]) ?? [])])];
+            prev.modelYears = (union('modelYears') as number[]).sort((x, y) => x - y);
+            prev.trims = (union('trims') as string[]).sort();
+            prev.bodyTypes = (union('bodyTypes') as string[]).sort();
+            prev.sourceRefs = (union('sourceRefs') as string[]).sort();
+            if (prev.status !== availability.status) prev.status = 'listed';
+          } else avail.push(availability);
           existing.marketAvailability = avail;
           existing.marketIds = [...new Set([...((existing.marketIds as string[] | undefined) ?? []), MARKET])];
           if (!(existing.sourceIds as string[] | undefined)?.includes(TSB_SOURCE_ID)) stats.existingVariantsEnriched++;
@@ -635,7 +717,8 @@ export function buildFromTsb(raw: RawCatalog, rows: TsbRow[], opts: { today: str
         stats.variants++;
         modelVariants++;
         if (kind === 'none') stats.variantsWithoutGeneration++;
-        if (kind === 'existing' || kind === 'code' || kind === 'engine') stats.variantsOnExistingGenerations++;
+        if (kind === 'existing' || kind === 'code' || kind === 'engine' || kind === 'contain') stats.variantsOnExistingGenerations++;
+        if (kind === 'contain') stats.matchedByContainment++;
         if (kind === 'code') stats.matchedByCode++;
         if (kind === 'engine') stats.matchedByEngine++;
         stats.imported += vItems.length;
@@ -652,5 +735,5 @@ export function buildFromTsb(raw: RawCatalog, rows: TsbRow[], opts: { today: str
   // Yeniden çalıştırmada da doğru sayı: kaynağı yalnızca TSB olan modeller
   stats.models = [...merged.models.values()].filter((m) => ownedByTsb(m) && ((m.generations as Json[] | undefined) ?? []).length > 0).length;
   void FUEL_ORDER;
-  return { merged, stats, rejects, perBrand };
+  return { merged, stats, rejects, perBrand, unassignedReasons };
 }

@@ -21,7 +21,9 @@
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"Nissan Navara\" bilgi kutusundan (farklı pazarlar: Facelift version); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
       "revisions": [],
-      "variants": []
+      "variants": [
+        { "id": "nissan-navara-d22-23-dci-190", "slug": "23-dci-190", "engineId": "nissan-23-dci-190", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021, 2022, 2023, 2024, 2025], "trims": ["Platinum"], "bodyTypes": [], "sourceRefs": ["TSB 107-1176"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
     },
     {
       "id": "nissan-navara-d40",
@@ -31,6 +33,7 @@
       "order": 2,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2004 }, "end": { "year": 2021 }, "approximate": true },
       "engineDisplacementsL": [2.5, 3, 3.8, 4],
+      "engineSignatures": ["2.5:?", "3.0:?", "3.8:?", "4.0:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-427065"],
       "updatedAt": "2026-10-17",
@@ -72,7 +75,7 @@
       "name": "Navara — nesli belirlenmemiş araçlar",
       "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2025 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2021 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
       "updatedAt": "2026-10-17",
@@ -81,7 +84,7 @@
       "variants": [
         { "id": "nissan-navara-nesil-belirlenmedi-30-tdi", "slug": "30-tdi", "engineId": "nissan-30-tdi", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012], "trims": ["LE 5A/T Uzun Kasa"], "bodyTypes": ["Pick-up"], "sourceRefs": ["TSB 107-328"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
         { "id": "nissan-navara-nesil-belirlenmedi-23-dci-160", "slug": "23-dci-160", "engineId": "nissan-23-dci-160", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018], "trims": ["4X2 Tekna", "4x2 Visia", "Tekna", "Visia"], "bodyTypes": [], "sourceRefs": ["TSB 107-1117", "TSB 107-1118", "TSB 107-1119", "TSB 107-1120"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "nissan-navara-nesil-belirlenmedi-23-dci-190", "slug": "23-dci-190", "engineId": "nissan-23-dci-190", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025], "trims": ["Platinum"], "bodyTypes": [], "sourceRefs": ["TSB 107-1121", "TSB 107-1176"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "nissan-navara-nesil-belirlenmedi-23-dci-190", "slug": "23-dci-190", "engineId": "nissan-23-dci-190", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018], "trims": ["Platinum"], "bodyTypes": [], "sourceRefs": ["TSB 107-1121"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
         { "id": "nissan-navara-nesil-belirlenmedi-23-dci", "slug": "23-dci", "engineId": "nissan-23-dci", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018], "trims": ["Force"], "bodyTypes": [], "sourceRefs": ["TSB 107-1158"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
         { "id": "nissan-navara-nesil-belirlenmedi-23-dci-163", "slug": "23-dci-163", "engineId": "nissan-23-dci-163", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021], "trims": ["Tekna", "Visia"], "bodyTypes": [], "sourceRefs": ["TSB 107-1174", "TSB 107-1175"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]

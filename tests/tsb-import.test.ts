@@ -10,7 +10,7 @@ import { DEFAULT_DIRS } from '../scripts/import/lib/paths.ts';
 import { buildFromTsb, stripTsb, TSB_SOURCE_ID } from '../scripts/import/tsb/build.ts';
 import { parseTypeName, resolveModels } from '../scripts/import/tsb/normalize.ts';
 import { mergeRows, parseSheet, type TsbRow } from '../scripts/import/tsb/parse.ts';
-import { isPerformance, marketCounts, marketGroup } from '../src/lib/catalog/market.ts';
+import { availabilityFor, isPerformance, marketCounts, marketGroup } from '../src/lib/catalog/market.ts';
 import { matchIssue, type VehicleContext } from '../src/lib/issues/match.ts';
 import { makeIssue } from './helpers.ts';
 
@@ -143,6 +143,7 @@ const ROWS = [
   row('FORD', '3', 'FOCUS III TITANIUM 1.6 TDCi (115) 4K', [2012, 2013]),
   row('FORD', '4', 'FOCUS III TREND 1.6 TDCi (115) 5K', [2014]),
   row('FORD', '5', 'FOCUS 1.6i COLLECTION 5 KAPI OV (100)', [2009, 2010, 2011]),
+  row('FORD', '10', 'FOCUS 1.6i TITANIUM 4 KAPI (100)', [2011]),
   row('FORD', '6', 'KAMYON CARGO 2538 6x2', [2015]),
   row('FORD', '7', 'FOCUS TITANIUM', [2015]),
   row('FORD', '8', 'FOCUS RS 2.3 ECOBOOST (350)', [2016, 2017]),
@@ -173,11 +174,13 @@ describe('TSB → katalog', () => {
     assert.deepEqual((v.marketAvailability as Json[])[0]!.modelYears, [2006, 2007, 2008]);
   });
 
-  test('iki neslin sınırına düşen satır tahminle nesle eklenmez ("nesil belirlenmedi")', () => {
+  test('iki neslin sınırındaki tek model yılı tahminle nesle eklenmez; bütün yılları tek nesil kapsıyorsa o nesil', () => {
     const bucket = gen('nesil-belirlenmedi');
     assert.ok(bucket, 'nesil belirlenmedi grubu yok');
-    assert.equal(bucket.status, 'unverified');
-    assert.ok((bucket.variants as Json[]).some((v) => ((v.marketAvailability as Json[])[0]!.modelYears as number[]).includes(2011)));
+    // 2011 tek başına: Mk2 (üretim 2010 → model yılı 2011 olabilir) ve Mk3 (model yılı 2011–) ikisine de uyar.
+    assert.ok((bucket.variants as Json[]).some((v) => ((v.marketAvailability as Json[])[0]!.sourceRefs as string[]).includes('TSB 53-10')));
+    // 2009–2011: bütün yılları yalnızca Mk2 kapsar (Mk3 2009'u kapsamaz).
+    assert.ok(variants('mk2').some((v) => ((v.marketAvailability as Json[])[0]!.sourceRefs as string[]).includes('TSB 53-5')));
     assert.equal(variants('mk3').some((v) => ((v.marketAvailability as Json[])[0]!.modelYears as number[]).includes(2011)), false);
   });
 
@@ -233,9 +236,13 @@ describe('TSB → katalog: alt modeller ve elle girilmiş Türkiye durumu', () =
     assert.deepEqual((bucket[0]!.marketAvailability as Json[])[0]!.sourceRefs, ['TSB 53-3']);
   });
 
-  test('başka kaynakla girilmiş Türkiye durumu TSB kaydıyla ezilmez', () => {
+  test('başka kaynakla girilmiş Türkiye durumu TSB kaydıyla ezilmez; TSB satırları yanında izlenebilir kalır', () => {
     const v = variants('mk2').find((x) => x.id === 'ford-focus-mk2-g8da')!;
-    assert.deepEqual(v.marketAvailability, [sold]);
+    const avail = v.marketAvailability as Json[];
+    assert.deepEqual(avail[0], sold, 'elle girilmiş kayıt değişmez');
+    const tsb = avail.find((a) => ((a.sourceIds as string[]) ?? []).includes('tsb-kasko-deger-listesi'));
+    assert.ok(tsb && (tsb.sourceRefs as string[]).length > 0, 'TSB satır kimlikleri ayrı kayıtta korunur');
+    assert.equal(availabilityFor(v as never, 'tr')!.status, 'sold', 'arayüz en güçlü durumu gösterir');
     const stripped = ((stripTsb(r.merged).models.get('models/ford/focus.json')!.generations as Json[])[0]!.variants as Json[])[0];
     assert.deepEqual(stripped, mk2Variant);
   });

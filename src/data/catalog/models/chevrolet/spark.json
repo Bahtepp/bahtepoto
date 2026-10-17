@@ -10,6 +10,48 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "chevrolet-spark-m100-m150",
+      "slug": "m100-m150",
+      "name": "Spark 1. nesil (M100/M150)",
+      "code": "M100/M150",
+      "order": 1,
+      "labelPeriod": { "marketId": "eu", "basis": "production", "start": { "year": 1998 }, "end": { "year": 2008 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1753031"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Spark\" bilgi kutusundan (M100, Poland; M100, Romania). Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "chevrolet-spark-m200-m250",
+      "slug": "m200-m250",
+      "name": "Spark 2. nesil (M200/M250)",
+      "code": "M200/M250",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2005 }, "end": { "year": 2017 }, "approximate": true },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1753031"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Spark\" bilgi kutusundan (farklı pazarlar: South Korea; India; Pakistan; Latin America); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "chevrolet-spark-m400",
+      "slug": "m400",
+      "name": "Spark 4. nesil (M400)",
+      "code": "M400",
+      "order": 4,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2015 }, "end": { "year": 2022 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1753031"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Spark\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
       "id": "chevrolet-spark-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
       "name": "Spark — nesli belirlenmemiş araçlar",

@@ -17,12 +17,15 @@
       "order": 1,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1996 }, "end": { "year": 2010 } },
       "engineDisplacementsL": [1.8, 1.9, 2, 2.8],
+      "engineSignatures": ["1.8:?", "1.9:diesel", "2.0:?", "2.0:diesel", "2.8:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-499093"],
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"SEAT Alhambra\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
-      "variants": []
+      "variants": [
+        { "id": "seat-alhambra-7m-19-tdi", "slug": "19-tdi", "engineId": "seat-19-tdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 19-274"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
     },
     {
       "id": "seat-alhambra-7n",
@@ -32,6 +35,7 @@
       "order": 2,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2010 }, "end": { "year": 2020 } },
       "engineDisplacementsL": [1.4, 2],
+      "engineSignatures": ["1.4:petrol", "2.0:diesel", "2.0:petrol"],
       "status": "sourced",
       "sourceIds": ["wpgen-499093"],
       "updatedAt": "2026-10-17",
@@ -39,22 +43,6 @@
       "revisions": [],
       "variants": [
         { "id": "seat-alhambra-7n-20-200", "slug": "20-200", "engineId": "seat-20-200", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "DSG" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013], "trims": ["Style"], "bodyTypes": [], "sourceRefs": ["TSB 19-1025"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
-      ]
-    },
-    {
-      "id": "seat-alhambra-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Alhambra — nesli belirlenmemiş araçlar",
-      "kind": "unassigned",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-17",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
-      "revisions": [],
-      "variants": [
-        { "id": "seat-alhambra-nesil-belirlenmedi-19-tdi", "slug": "19-tdi", "engineId": "seat-19-tdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2010 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 19-274"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

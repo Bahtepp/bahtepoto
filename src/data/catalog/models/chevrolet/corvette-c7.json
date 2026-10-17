@@ -10,6 +10,19 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "chevrolet-corvette-c7-uretim-2017",
+      "slug": "uretim-2017",
+      "name": "Corvette (C7)",
+      "order": 217,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2017 }, "end": { "year": 2019 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-37393650"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Corvette (C7)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
       "id": "chevrolet-corvette-c7-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
       "name": "Corvette C7 — nesli belirlenmemiş araçlar",

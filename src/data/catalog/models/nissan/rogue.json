@@ -61,6 +61,7 @@
       "order": 4,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2026 }, "end": { "year": 2026 }, "approximate": true },
       "engineDisplacementsL": [1.5],
+      "engineSignatures": ["1.5:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-7615869"],
       "updatedAt": "2026-10-17",

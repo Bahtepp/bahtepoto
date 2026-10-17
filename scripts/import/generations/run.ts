@@ -17,14 +17,16 @@ import { analyze } from '../lib/analyze.ts';
 import { readFirstSheet } from '../lib/xlsx.ts';
 import { buildFromTsb, stripTsb } from '../tsb/build.ts';
 import { mergeRows, parseSheet } from '../tsb/parse.ts';
-import { applyGenerations, candidateTitles, generationsFromArticle, hasCuratedGenerations, WPGEN_PREFIX, type ModelGenerations } from './build.ts';
+import { applyGenerations, candidateTitles, generationsFromArticle, hasCuratedGenerations, titleMatchesModel, WPGEN_PREFIX, type ModelGenerations } from './build.ts';
+import { resolveViaWikidata, type WikidataMatch } from './wikidata.ts';
 import { fetchPages, hasCarInfobox, isDisambiguation } from './fetch.ts';
 import { sectionsWithMain } from './wikitext.ts';
 
-const { values } = parseArgs({ options: { offline: { type: 'boolean' } } });
+const { values } = parseArgs({ options: { offline: { type: 'boolean' }, refresh: { type: 'boolean' } } });
 const cacheBase = join(DEFAULT_DIRS.cacheDir, 'wikipedia');
 const latestCache = () => (existsSync(cacheBase) ? readdirSync(cacheBase).filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d)).sort().at(-1) : undefined);
-const cacheDir = join(cacheBase, values.offline ? (latestCache() ?? today()) : today());
+// Başlık önbelleği kalıcıdır: en son klasör kullanılır (yalnızca yeni başlıklar indirilir); --refresh yeni klasörle baştan indirir.
+const cacheDir = join(cacheBase, values.refresh ? today() : (latestCache() ?? today()));
 const log = (m: string) => console.log(m);
 
 
@@ -41,9 +43,34 @@ const articlePages = await fetchPages([...candidates.values()].flat(), { cacheDi
 // 2) Bağlantılı nesil maddeleri
 const articleFor = new Map<string, NonNullable<ReturnType<typeof articlePages.get>>>();
 for (const [f, titles] of candidates) {
-  const page = titles.map((t) => articlePages.get(t)).find((p) => p && !isDisambiguation(p) && hasCarInfobox(p));
+  // Bilgi kutusu olmayan model maddesi de kabul: nesil maddelerine {{Main}} ile bağlanıyorsa (örn. "Jaguar XF").
+  const page = titles.map((t) => articlePages.get(t)).find((p) => p && !isDisambiguation(p) && (hasCarInfobox(p) || sectionsWithMain(p.wikitext).some((s) => s.mains.length > 0)));
   if (page) articleFor.set(f, page);
 }
+// 2b) Wikidata ile ad normalleştirme: maddesi bulunamayan veya başlığı modelle eşleşmeyen modeller.
+//     Wikidata'daki enwiki bağlantısı bir yönlendirmeyse (örn. "Audi RS 3" → "Audi A3") kabul edilmez.
+const identityVia = new Map<string, WikidataMatch>();
+const needWd = targets.filter(([f, m]) => !hasCuratedGenerations(m) && (!articleFor.get(f) || !titleMatchesModel(articleFor.get(f)!.title, brandName.get(String(m.brandId)) ?? '', String(m.name))));
+const wdQuery = (m: Json) => `${brandName.get(String(m.brandId)) ?? ''} ${String(m.name).replace(/\b[A-Za-z]{1,3}\b/g, (w) => w.toUpperCase())}`;
+const wd = await resolveViaWikidata(needWd.map(([, m]) => wdQuery(m)), { cacheDir: join(DEFAULT_DIRS.cacheDir, 'wikidata-ara'), offline: values.offline, log });
+const wdPages = await fetchPages([...wd.values()].map((x) => x.enwiki), { cacheDir, offline: values.offline, log });
+// Başlıkla zaten başka bir katalog modeline ait olan madde, türev modele (örn. "Focus WRC" → "Ford Focus")
+// ikinci kez verilmez; grup maddeleri ("Audi S and RS models") tek model sayılmaz.
+const titleOwned = new Set(
+  targets
+    .filter(([f, m]) => articleFor.get(f) && titleMatchesModel(articleFor.get(f)!.title, brandName.get(String(m.brandId)) ?? '', String(m.name)))
+    .map(([f]) => articleFor.get(f)!.pageid),
+);
+for (const [f, m] of needWd) {
+  const match = wd.get(wdQuery(m));
+  const page = match ? wdPages.get(match.enwiki) : undefined;
+  if (!match || !page || page.title !== match.enwiki || isDisambiguation(page)) continue;
+  if (titleOwned.has(page.pageid) || /\b(models|and|list of|family)\b/i.test(page.title)) continue;
+  articleFor.set(f, page);
+  identityVia.set(f, match);
+}
+console.log(`Wikidata ile kimliği doğrulanan model: ${identityVia.size} (sorgu ${needWd.length})`);
+
 const linkedTitles = [...articleFor.values()].flatMap((p) => sectionsWithMain(p.wikitext).flatMap((s) => s.mains));
 const linkedPages = await fetchPages(linkedTitles, { cacheDir, offline: values.offline, log });
 
@@ -60,15 +87,18 @@ for (const [f, m] of targets) {
     results.push({ ...base, status: 'not-found' });
     continue;
   }
-  const { gens, used, conflicts, overlaps } = generationsFromArticle(article, linkedPages, brandName.get(String(m.brandId)) ?? '', String(m.name));
+  const { gens, used, conflicts, overlaps, conflictSlugs, blockedSpans } = generationsFromArticle(article, linkedPages, brandName.get(String(m.brandId)) ?? '', String(m.name));
   results.push({
     ...base,
     article: article.title,
     status: gens.length ? 'found' : 'no-generations',
+    identity: identityVia.has(f) ? { via: 'wikidata', qid: identityVia.get(f)!.qid, label: identityVia.get(f)!.label } : { via: 'title' },
     generations: gens,
     pages: used.map((p) => ({ title: p.title, pageid: p.pageid, revid: p.revid })),
     conflicts,
     overlaps,
+    conflictSlugs,
+    blockedSpans,
   });
 }
 
@@ -150,8 +180,8 @@ function trialMatch(): string[] | undefined {
   return [
     '## Eşleştirme denemesi (bellekte; katalog YAZILMADI)',
     '',
-    'Adaylar katalog kopyasına eklenip TSB içe aktarması mevcut kurallarla (tip adındaki kod/ipucu, yalnızca tek',
-    'nesle düşen ve komşu nesil sınırına 1 yıldan uzak model yılları, alt model kuralı) yeniden çalıştırıldı.',
+    'Adaylar katalog kopyasına eklenip TSB içe aktarması içe aktarmanın kurallarıyla (tip adındaki kasa kodu / nesil ipucu,',
+    'bütün model yıllarını yalnızca tek neslin kapsaması, motor hacmi + yakıt kanıtı, alt model ve çelişkili dönem kuralları) yeniden çalıştırıldı.',
     '',
     '| | Şimdiki katalog | Adaylarla |',
     '|---|---|---|',

@@ -50,12 +50,24 @@ madde başlığı marka + modelle açıkça eşleşiyorsa, kaynakta çelişki yo
 Dışarıda kalanlar ve nedenleri `data/staging/wikipedia/DISARIDA.md` içinde. Wikipedia nesilleri "kaynaklı"
 (ikincil kaynak) olarak işaretlenir; resmi doğrulama sayılmaz.
 
-TSB varyantları nesillere şu öncelikle eşlenir: (1) tip adındaki kasa kodu, (2) tip adındaki nesil ipucu veya yalnızca
-tek neslin dönemine uyan ve komşu nesil sınırına 1 yıldan uzak model yılları, (3) birden çok nesle uyan yılda kaynağın
-motor hacmini yalnızca tek nesil için listelemesi. Bunların hiçbiri yoksa kayıt "nesli belirlenmemiş araçlar"
-grubunda kalır (`kind: "unassigned"`); arayüzde gerçek kasa gibi gösterilmez ve Marka → Model → Model yılı → Motor
-akışıyla seçilir. Aynı motor birden çok nesilde satıldıysa her nesil için ayrı varyant oluşur; bir TSB satırı yalnızca
-bir varyanta girer.
+TSB varyantları nesillere şu öncelikle eşlenir: (1) tip adındaki kasa kodu, (2) tip adındaki nesil ipucu (Wikipedia
+neslinin numarasıyla da: "Golf VII" ↔ 7. nesil), (3) satırın BÜTÜN model yıllarını yalnızca tek neslin dönemi kapsıyorsa
+(üretim temelli dönemde model yılı bitişten bir yıl sonra olabilir), (4) yıllar birden çok nesle uyuyorsa kaynağın motor
+listesinde aynı hacim + yakıt (örn. "1.6:petrol") yalnızca tek nesilde varsa — motor hacmi tek başına kanıt sayılmaz.
+Kaynakta çelişkili nesillerin dönemine düşen yıllar hiçbir nesle eşlenmez. Bunların hiçbiri yoksa kayıt "nesli
+belirlenmemiş araçlar" grubunda kalır (`kind: "unassigned"`); arayüzde gerçek kasa gibi gösterilmez ve Marka → Model →
+Model yılı → Motor akışıyla seçilir. Neden belirsiz kaldığı `data/staging/tsb/RAPOR.md` içinde sayılır. Aynı motor birden
+çok nesilde satıldıysa her nesil için ayrı varyant oluşur; bir TSB satırı yalnızca bir varyanta girer ve kimliği
+(`sourceRefs`, örn. "TSB 53-821") korunur. Elle başka kaynakla girilmiş Türkiye kaydı (örn. broşür "sold") değişmez; TSB
+"listed" kaydı onun yanına ayrı kayıt olarak eklenir.
+
+**Ad normalleştirme:** Kısa harf kodları ("Cla" → "CLA"), "Serisi" → "Series", tek harf → "-Class"; Wikidata bağdaştırıcısı
+(`scripts/import/generations/wikidata.ts`) başlıkla bulunamayan modeller için etiketi/diğer adı birebir "<Marka> <Model>"
+olan otomobil modeli öğesini ve İngilizce Wikipedia bağlantısını bulur (yönlendirme, grup maddesi veya başka bir katalog
+modeline ait madde kabul edilmez). TSB tarafında Mercedes "C180" → C, BMW "M340d" → 3 Serisi, "X1 sDrive16d" → X1,
+Chrysler altındaki "JEEP COMPASS" → Jeep Compass. Çelişkili modellerde yalnızca çelişkili nesiller dışarıda kalır.
+Wikipedia ve Wikidata yanıtları başlık/sorgu bazında kalıcı önbellekte tutulur (`.cache/import/`); yalnızca yeni
+başlıklar indirilir (`--refresh` baştan indirir).
 
 İçe aktarma her çalıştırmada önceki TSB ve Wikipedia kayıtlarını temizleyip yeniden kurar (ikinci çalıştırma 0 dosya
 yazar); elle girilmiş nesil ve varyantlara dokunmaz. **Geri alma:** `npm run import -- --without-generations` bütün

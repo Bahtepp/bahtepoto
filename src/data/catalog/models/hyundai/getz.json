@@ -22,25 +22,9 @@
       "revisions": [],
       "variants": [
         { "id": "hyundai-getz-uretim-2002-16", "slug": "16", "engineId": "hyundai-16", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008], "trims": ["Cool"], "bodyTypes": ["3 kapı"], "sourceRefs": ["TSB 177-165"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "hyundai-getz-uretim-2002-15-crdi", "slug": "15-crdi", "engineId": "hyundai-15-crdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Vgt"], "bodyTypes": [], "sourceRefs": ["TSB 177-182"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
-      ]
-    },
-    {
-      "id": "hyundai-getz-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Getz — nesli belirlenmemiş araçlar",
-      "kind": "unassigned",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-17",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
-      "revisions": [],
-      "variants": [
-        { "id": "hyundai-getz-nesil-belirlenmedi-14", "slug": "14", "engineId": "hyundai-14", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["Start"], "bodyTypes": [], "sourceRefs": ["TSB 177-180", "TSB 177-181", "TSB 177-249", "TSB 177-259"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "hyundai-getz-nesil-belirlenmedi-15-crdi-110", "slug": "15-crdi-110", "engineId": "hyundai-15-crdi-110", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["Vgt"], "bodyTypes": [], "sourceRefs": ["TSB 177-183"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "hyundai-getz-nesil-belirlenmedi-15-crdi", "slug": "15-crdi", "engineId": "hyundai-15-crdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009, 2010, 2011, 2012], "trims": ["Vgt Start"], "bodyTypes": [], "sourceRefs": ["TSB 177-250"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "hyundai-getz-uretim-2002-14", "slug": "14", "engineId": "hyundai-14", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["Start"], "bodyTypes": [], "sourceRefs": ["TSB 177-180", "TSB 177-181", "TSB 177-249", "TSB 177-259"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "hyundai-getz-uretim-2002-15-crdi", "slug": "15-crdi", "engineId": "hyundai-15-crdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["Vgt", "Vgt Start"], "bodyTypes": [], "sourceRefs": ["TSB 177-182", "TSB 177-250"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "hyundai-getz-uretim-2002-15-crdi-110", "slug": "15-crdi-110", "engineId": "hyundai-15-crdi-110", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012], "trims": ["Vgt"], "bodyTypes": [], "sourceRefs": ["TSB 177-183"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

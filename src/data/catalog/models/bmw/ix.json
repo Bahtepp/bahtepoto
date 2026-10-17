@@ -10,21 +10,21 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "bmw-ix-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "IX — nesli belirlenmemiş araçlar",
-      "kind": "unassigned",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2026 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "id": "bmw-ix-i20",
+      "slug": "i20",
+      "name": "iX (I20)",
+      "code": "I20",
+      "order": 221,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2021 }, "end": null },
+      "status": "sourced",
+      "sourceIds": ["wpgen-63276814"],
       "updatedAt": "2026-10-17",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "notes": "Üretim yılları İngilizce Wikipedia \"BMW iX\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "bmw-ix-nesil-belirlenmedi-40", "slug": "40", "engineId": "bmw-40", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023, 2024], "trims": ["First Edition Essence", "First Edition Sport"], "bodyTypes": [], "sourceRefs": ["TSB 21-1887", "TSB 21-1888"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "bmw-ix-nesil-belirlenmedi-50", "slug": "50", "engineId": "bmw-50", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023, 2024], "trims": ["First Edition Sport"], "bodyTypes": [], "sourceRefs": ["TSB 21-1890", "TSB 21-1925"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "bmw-ix-nesil-belirlenmedi-60", "slug": "60", "engineId": "bmw-60", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["M Sport"], "bodyTypes": [], "sourceRefs": ["TSB 21-2036"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "bmw-ix-i20-40", "slug": "40", "engineId": "bmw-40", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023, 2024], "trims": ["First Edition Essence", "First Edition Sport"], "bodyTypes": [], "sourceRefs": ["TSB 21-1887", "TSB 21-1888"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "bmw-ix-i20-50", "slug": "50", "engineId": "bmw-50", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2021 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2021, 2022, 2023, 2024], "trims": ["First Edition Sport"], "bodyTypes": [], "sourceRefs": ["TSB 21-1890", "TSB 21-1925"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "bmw-ix-i20-60", "slug": "60", "engineId": "bmw-60", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["M Sport"], "bodyTypes": [], "sourceRefs": ["TSB 21-2036"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

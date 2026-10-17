@@ -16,6 +16,7 @@
       "order": 1,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2012 }, "end": { "year": 2017 } },
       "engineDisplacementsL": [1.6, 2],
+      "engineSignatures": ["1.6:?", "2.0:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-62007219"],
       "updatedAt": "2026-10-17",
@@ -30,6 +31,7 @@
       "order": 2,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2017 }, "end": { "year": 2023 } },
       "engineDisplacementsL": [1.6, 2, 2.5],
+      "engineSignatures": ["1.6:?", "2.0:?", "2.5:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-62007219"],
       "updatedAt": "2026-10-17",
@@ -44,27 +46,14 @@
       "order": 3,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2022 }, "end": null },
       "engineDisplacementsL": [2, 2.5],
+      "engineSignatures": ["2.0:?", "2.5:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-62007219"],
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"Subaru Crosstrek\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
-      "variants": []
-    },
-    {
-      "id": "subaru-crosstrek-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Crosstrek — nesli belirlenmemiş araçlar",
-      "kind": "unassigned",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2025 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
-      "updatedAt": "2026-10-17",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
-      "revisions": [],
       "variants": [
-        { "id": "subaru-crosstrek-nesil-belirlenmedi-20", "slug": "20", "engineId": "subaru-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023, 2024, 2025], "trims": ["E-BOXER Xclusive"], "bodyTypes": [], "sourceRefs": ["TSB 137-1042"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "subaru-crosstrek-3-nesil-20", "slug": "20", "engineId": "subaru-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023, 2024, 2025], "trims": ["E-BOXER Xclusive"], "bodyTypes": [], "sourceRefs": ["TSB 137-1042"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

@@ -10,6 +10,19 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "aston-martin-dbs-uretim-1967",
+      "slug": "uretim-1967",
+      "name": "DBS",
+      "order": 167,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1967 }, "end": { "year": 1972 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-2104601"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Aston Martin DBS\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
       "id": "aston-martin-dbs-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
       "name": "Dbs — nesli belirlenmemiş araçlar",

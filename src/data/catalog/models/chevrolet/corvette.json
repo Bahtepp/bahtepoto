@@ -10,12 +10,112 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "chevrolet-corvette-c1",
+      "slug": "c1",
+      "name": "Corvette (C1)",
+      "code": "C1",
+      "order": 153,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1953 }, "end": { "year": 1962 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-4218645"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Corvette (C1)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "chevrolet-corvette-c2",
+      "slug": "c2",
+      "name": "Corvette (C2)",
+      "code": "C2",
+      "order": 162,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1962 }, "end": { "year": 1967 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-4219002"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Corvette (C2)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "chevrolet-corvette-c3",
+      "slug": "c3",
+      "name": "Corvette (C3)",
+      "code": "C3",
+      "order": 167,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1967 }, "end": { "year": 1982 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-4219173"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Corvette (C3)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "chevrolet-corvette-c4",
+      "slug": "c4",
+      "name": "Corvette (C4)",
+      "code": "C4",
+      "order": 183,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1983 }, "end": { "year": 1996 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-4219348"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Corvette (C4)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "chevrolet-corvette-c5",
+      "slug": "c5",
+      "name": "Corvette (C5)",
+      "code": "C5",
+      "order": 196,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1996 }, "end": { "year": 2004 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-4217949"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Corvette (C5)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "chevrolet-corvette-c7-2",
+      "slug": "c7",
+      "name": "Corvette (C7)",
+      "code": "C7",
+      "order": 217,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2017 }, "end": { "year": 2019 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-37393650"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Corvette (C7)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "chevrolet-corvette-c8",
+      "slug": "c8",
+      "name": "Corvette (C8)",
+      "code": "C8",
+      "order": 220,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2020 }, "end": null },
+      "status": "sourced",
+      "sourceIds": ["wpgen-51552240"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Chevrolet Corvette (C8)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "chevrolet-corvette-c8-62", "slug": "62", "engineId": "chevrolet-62", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021, 2022, 2023], "trims": ["C8", "Convertible Stingray"], "bodyTypes": ["Coupé"], "sourceRefs": ["TSB 32-1535", "TSB 32-1545"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
       "id": "chevrolet-corvette-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
       "name": "Corvette — nesli belirlenmemiş araçlar",
       "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2023 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2017 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
       "updatedAt": "2026-10-17",
@@ -23,7 +123,7 @@
       "revisions": [],
       "variants": [
         { "id": "chevrolet-corvette-nesil-belirlenmedi-60", "slug": "60", "engineId": "chevrolet-60", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": [], "bodyTypes": ["Coupé"], "sourceRefs": ["TSB 32-113"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "chevrolet-corvette-nesil-belirlenmedi-62", "slug": "62", "engineId": "chevrolet-62", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2023 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2015, 2016, 2017, 2020, 2021, 2022, 2023], "trims": ["C8", "Convertible", "Convertible Stingray", "Grand Sport", "Z06", "ZR1"], "bodyTypes": ["Coupé"], "sourceRefs": ["TSB 32-1515", "TSB 32-1517", "TSB 32-1520", "TSB 32-1521", "TSB 32-1529", "TSB 32-1535", "TSB 32-1545"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "chevrolet-corvette-nesil-belirlenmedi-62", "slug": "62", "engineId": "chevrolet-62", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2015, 2016, 2017], "trims": ["Convertible", "Grand Sport", "Z06", "ZR1"], "bodyTypes": ["Coupé"], "sourceRefs": ["TSB 32-1515", "TSB 32-1517", "TSB 32-1520", "TSB 32-1521", "TSB 32-1529"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
         { "id": "chevrolet-corvette-nesil-belirlenmedi-70", "slug": "70", "engineId": "chevrolet-70", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2009 }, "end": { "year": 2009 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2009], "trims": ["Z06"], "bodyTypes": [], "sourceRefs": ["TSB 32-1519"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }

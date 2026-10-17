@@ -329,7 +329,8 @@ export function resolveModels(parsed: ParsedType[]): (p: ParsedType) => ModelRes
       pairs.set(`${up(a)} ${B}`, (pairs.get(`${up(a)} ${B}`) ?? 0) + 1);
     }
   }
-  const trimLike = (W: string) => W.includes('.') || afterAttr.has(W) || NEVER_SUBMODEL.has(W) || [...afterAttr].some((t) => t.length >= 5 && nearlyEqual(t, W));
+  // "X1 SDRIVE16D": sDrive/xDrive tanımı motor/çekiş bilgisidir, alt model değildir.
+  const trimLike = (W: string) => W.includes('.') || /^[SX]DRIVE/.test(W) || afterAttr.has(W) || NEVER_SUBMODEL.has(W) || [...afterAttr].some((t) => t.length >= 5 && nearlyEqual(t, W));
   const isHead = (W: string) => (heads.get(W) ?? 0) >= 3;
   return (p) => {
     const [first, second, ...more] = strip(p.prefix);

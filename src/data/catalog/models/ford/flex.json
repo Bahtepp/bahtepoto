@@ -16,6 +16,7 @@
       "order": 208,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2008 }, "end": { "year": 2019 } },
       "engineDisplacementsL": [3.5],
+      "engineSignatures": ["3.5:petrol"],
       "status": "sourced",
       "sourceIds": ["wpgen-10249749"],
       "updatedAt": "2026-10-17",

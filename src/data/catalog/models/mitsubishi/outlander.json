@@ -16,6 +16,7 @@
       "order": 1,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2001 }, "end": { "year": 2008 }, "approximate": true },
       "engineDisplacementsL": [2, 2.4],
+      "engineSignatures": ["2.0:?", "2.4:?", "2.4:petrol"],
       "status": "sourced",
       "sourceIds": ["wpgen-1277603"],
       "updatedAt": "2026-10-17",
@@ -34,7 +35,9 @@
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"Mitsubishi Outlander\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
-      "variants": []
+      "variants": [
+        { "id": "mitsubishi-outlander-2-nesil-20", "slug": "20", "engineId": "mitsubishi-20", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2013 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013], "trims": ["4x2", "Did Instyle"], "bodyTypes": [], "sourceRefs": ["TSB 94-370", "TSB 94-439"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
     },
     {
       "id": "mitsubishi-outlander-3-nesil",
@@ -47,7 +50,9 @@
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"Mitsubishi Outlander\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
-      "variants": []
+      "variants": [
+        { "id": "mitsubishi-outlander-3-nesil-20", "slug": "20", "engineId": "mitsubishi-20", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "CVT" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020], "trims": ["Instyle"], "bodyTypes": [], "sourceRefs": ["TSB 94-1013"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
     },
     {
       "id": "mitsubishi-outlander-4-nesil",
@@ -68,14 +73,14 @@
       "name": "Outlander — nesli belirlenmemiş araçlar",
       "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2020 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
       "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "mitsubishi-outlander-nesil-belirlenmedi-20", "slug": "20", "engineId": "mitsubishi-20", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020], "trims": ["4x2", "Did Instyle", "Instyle", "Sport"], "bodyTypes": [], "sourceRefs": ["TSB 94-1013", "TSB 94-337", "TSB 94-370", "TSB 94-439"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "mitsubishi-outlander-nesil-belirlenmedi-20", "slug": "20", "engineId": "mitsubishi-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008], "trims": ["Sport"], "bodyTypes": [], "sourceRefs": ["TSB 94-337"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
         { "id": "mitsubishi-outlander-nesil-belirlenmedi-24", "slug": "24", "engineId": "mitsubishi-24", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008], "trims": ["Lux"], "bodyTypes": [], "sourceRefs": ["TSB 94-355"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }

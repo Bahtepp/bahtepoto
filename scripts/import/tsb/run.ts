@@ -236,7 +236,9 @@ const accepted = genStaged.filter((mg) => {
 const withGens = applyGenerations(stripTsb(raw), accepted, today());
 console.log(`Wikipedia nesilleri: ${withGens.added} nesil, ${withGens.models} model eklendi · çelişki/kimlik nedeniyle dışarıda ${excluded.length} model`);
 
+const blockedSpans = new Map(accepted.filter((mg) => (mg.blockedSpans ?? []).length > 0).map((mg) => [mg.modelFile, mg.blockedSpans!]));
 const result = buildFromTsb(withGens.catalog, rows, {
+  blockedSpans,
   today: today(),
   sourceTitle: `TSB Kasko Değer Listesi (${names.join(', ')})`,
   sourceNotes:
@@ -246,6 +248,36 @@ const errors = validateMerged(result.merged);
 
 const stagingDir = join(DEFAULT_DIRS.stagingDir, 'tsb');
 mkdirSync(stagingDir, { recursive: true });
+// Neden belirsiz: satır ve model sayıları ("kaynaklı nesil yok" toplayıcı durumuna göre ayrıntılandırılır)
+const genStatus = new Map(genStaged.map((mg) => [mg.modelFile.replace(/^models\/|\.json$/g, ''), mg.status as string]));
+const excludedWhy = new Map(excluded.map((x) => [x.model, x.reason.startsWith('kaynakta çelişki') ? 'kaynakta çelişki' : 'Wikipedia maddesi modelle eşleşmedi (adlandırma farkı / türev model)']));
+const reasonRows = new Map<string, { rows: number; models: Set<string> }>();
+for (const u of result.unassignedReasons) {
+  let reason = u.reason;
+  if (reason === 'modelin kaynaklı nesli yok') {
+    const st = genStatus.get(u.model);
+    reason = excludedWhy.get(u.model)
+      ? `kaynaklı nesil yok — ${excludedWhy.get(u.model)}`
+      : st === 'not-found'
+        ? 'kaynaklı nesil yok — Wikipedia maddesi bulunamadı'
+        : st === 'no-generations'
+          ? 'kaynaklı nesil yok — madde var, nesil bilgi kutusu yok'
+          : 'kaynaklı nesil yok — diğer';
+  }
+  const r = reasonRows.get(reason) ?? { rows: 0, models: new Set<string>() };
+  r.rows++;
+  r.models.add(u.model);
+  reasonRows.set(reason, r);
+}
+const reasonSection = [
+  '## Nesli belirlenemeyen TSB satırları: nedenler',
+  '',
+  '| Neden | TSB satırı | Model |',
+  '|---|---|---|',
+  ...[...reasonRows].sort((x, y) => y[1].rows - x[1].rows).map(([k, v]) => `| ${k} | ${v.rows} | ${v.models.size} |`),
+  '',
+];
+
 const genSection = [
   '## Wikipedia nesilleri',
   '',
@@ -255,13 +287,14 @@ const genSection = [
   `| Nesil eklenen model | ${withGens.models} |`,
   `| Çelişki veya belirsiz model kimliği nedeniyle dışarıda bırakılan model (\`data/staging/wikipedia/DISARIDA.md\`) | ${excluded.length} |`,
   `| Tip adındaki kasa koduyla eşlenen varyant | ${result.stats.matchedByCode} |`,
-  `| Kaynaktaki motor hacmiyle desteklenerek eşlenen varyant | ${result.stats.matchedByEngine} |`,
+  `| Kaynaktaki motor (hacim + yakıt) bilgisiyle eşlenen varyant | ${result.stats.matchedByEngine} |`,
+  `| Bütün model yılları yalnızca tek neslin dönemine düşen varyant | ${result.stats.matchedByContainment} |`,
   '',
   'Not: Aynı motor birden çok nesilde satıldıysa her nesil için ayrı varyant oluşur (bir TSB satırı yalnızca bir',
   'varyanta girer). Nesil eklendikçe toplam varyant sayısının artması bu yüzdendir.',
   '',
 ];
-writeFileSync(join(stagingDir, 'RAPOR.md'), `${report(result, files, errors)}\n${genSection.join('\n')}`, 'utf8');
+writeFileSync(join(stagingDir, 'RAPOR.md'), `${report(result, files, errors)}\n${genSection.join('\n')}\n${reasonSection.join('\n')}`, 'utf8');
 writeFileSync(join(stagingDir, 'belirsiz.json'), formatRecordList(result.rejects), 'utf8');
 writeFileSync(join(stagingDir, 'EKSIKLER.md'), gapsReport(result.merged), 'utf8');
 writeFileSync(join(DEFAULT_DIRS.stagingDir, 'wikipedia', 'DISARIDA.md'), ['# Wikipedia nesilleri: dışarıda bırakılan modeller', '', 'Bu modellerin nesilleri kataloğa otomatik aktarılmadı (kaynakta çelişki veya model kimliği açık değil).', '', ...excluded.map((x) => `- **${x.model}**: ${x.reason}`), ''].join('\n'), 'utf8');

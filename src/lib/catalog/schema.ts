@@ -264,6 +264,11 @@ export const generationSchema = z.object({
    * olarak kullanılır (örn. iki nesle uyan model yılında hangi neslin bu hacmi sunduğu); motor kaydı değildir.
    */
   engineDisplacementsL: z.array(z.number().positive()).default([]),
+  /**
+   * Kaynağın bu nesil için listelediği motorların "hacim:yakıt" imzaları (örn. "2.0:diesel"; yakıt satırda
+   * yazmıyorsa "2.0:?"). Yalnızca eşleştirmede kanıt; hacim tek başına yeterli sayılmaz.
+   */
+  engineSignatures: z.array(z.string()).default([]),
   revisions: z.array(revisionSchema).default([]),
   variants: z.array(variantSchema).default([]),
   ...recordMeta,

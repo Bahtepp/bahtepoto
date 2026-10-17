@@ -16,6 +16,7 @@
       "order": 1,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2020 }, "end": null },
       "engineDisplacementsL": [2, 3],
+      "engineSignatures": ["2.0:?", "3.0:petrol"],
       "status": "sourced",
       "sourceIds": ["wpgen-65568225"],
       "updatedAt": "2026-10-17",

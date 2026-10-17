@@ -55,6 +55,7 @@
       "order": 4,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1990 }, "end": { "year": 1996 } },
       "engineDisplacementsL": [4.3, 5, 5.7],
+      "engineSignatures": ["4.3:?", "5.0:?", "5.7:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-406306"],
       "updatedAt": "2026-10-17",

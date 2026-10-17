@@ -17,6 +17,7 @@
       "order": 204,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2004 }, "end": { "year": 2016 } },
       "engineDisplacementsL": [5.9],
+      "engineSignatures": ["5.9:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-539267"],
       "updatedAt": "2026-10-17",

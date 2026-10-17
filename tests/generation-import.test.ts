@@ -15,7 +15,7 @@ import type { TsbRow } from '../scripts/import/tsb/parse.ts';
 const OPTS = { today: '2026-10-17', sourceTitle: 'TSB test', sourceNotes: 'test' };
 const row = (typeCode: string, typeName: string, modelYears: number[]): TsbRow => ({ brandCode: '20', typeCode, brand: 'BMW', typeName, modelYears, files: ['t'] });
 
-const gen = (slug: string, code: string, ordinal: number, start: number, end: number | null, engines: number[]): StagedGeneration => ({
+const gen = (slug: string, code: string, ordinal: number, start: number, end: number | null, engines: number[], signatures: string[] = []): StagedGeneration => ({
   slug,
   name: `3 Serisi (${code})`,
   code,
@@ -25,6 +25,7 @@ const gen = (slug: string, code: string, ordinal: number, start: number, end: nu
   marketId: 'global',
   approximate: false,
   engineDisplacementsL: engines,
+  engineSignatures: signatures,
   page: `BMW 3 Series (${code})`,
   productionNote: '',
 });
@@ -54,11 +55,12 @@ function catalog(): RawCatalog {
 }
 
 // E46 1997–2006 ve E90 2004–2013 üretim yılları örtüşüyor (2004–2006 iki nesle de uyar).
-const STAGED = [staged([gen('e46', 'E46', 4, 1997, 2006, [1.9, 3]), gen('e90', 'E90/E91/E92/E93', 5, 2004, 2013, [2, 3])])];
+// Motor imzaları (hacim:yakıt): 1.9 benzinli yalnızca E46 için listeli; 3.0 benzinli ikisinde de var.
+const STAGED = [staged([gen('e46', 'E46', 4, 1997, 2006, [1.9, 3], ['1.9:petrol', '3.0:petrol']), gen('e90', 'E90/E91/E92/E93', 5, 2004, 2013, [2, 3], ['2.0:diesel', '3.0:petrol'])])];
 const ROWS = [
   row('1', '320d E90 2.0 (177) SEDAN', [2006]), // kasa kodu yazıyor → E90
   row('2', '320d 2.0 (163)', [2008, 2009, 2010]), // yalnızca E90'nın dönemine uyuyor
-  row('3', '318i 1.9 (118)', [2005]), // iki nesle uyar; 1.9 L yalnızca E46 için listeli → E46
+  row('3', '318i 1.9 (118)', [2005]), // iki nesle uyar; 1.9 L benzinli (318i) yalnızca E46 için listeli → E46
   row('4', '330i 3.0 (231)', [2005]), // iki nesle uyar; 3.0 L ikisinde de var → belirsiz
 ];
 

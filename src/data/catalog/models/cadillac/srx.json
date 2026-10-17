@@ -10,6 +10,34 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "cadillac-srx-1-nesil",
+      "slug": "1-nesil",
+      "name": "Srx 1. nesil",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2003 }, "end": { "year": 2010 }, "approximate": true },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1240486"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Cadillac SRX\" bilgi kutusundan (farklı pazarlar: US; Russia); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "cadillac-srx-2-nesil",
+      "slug": "2-nesil",
+      "name": "Srx 2. nesil",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2009 }, "end": { "year": 2016 } },
+      "engineDisplacementsL": [2.8, 3, 3.6],
+      "engineSignatures": ["2.8:petrol", "3.0:petrol", "3.6:petrol"],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1240486"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Cadillac SRX\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
       "id": "cadillac-srx-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
       "name": "Srx — nesli belirlenmemiş araçlar",

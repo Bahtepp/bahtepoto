@@ -15,7 +15,7 @@
       "name": "LC (Z100)",
       "code": "Z100",
       "order": 217,
-      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2017 }, "end": null },
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2017 }, "end": { "year": 2026 } },
       "status": "sourced",
       "sourceIds": ["wpgen-49085620"],
       "updatedAt": "2026-10-17",

@@ -17,6 +17,7 @@
       "order": 1,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1994 }, "end": { "year": 2003 }, "approximate": true },
       "engineDisplacementsL": [2],
+      "engineSignatures": ["2.0:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-1335430"],
       "updatedAt": "2026-10-17",
@@ -32,6 +33,7 @@
       "order": 2,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2000 }, "end": { "year": 2005 } },
       "engineDisplacementsL": [1.8, 2, 2.4],
+      "engineSignatures": ["1.8:petrol", "2.0:diesel", "2.0:petrol", "2.4:petrol"],
       "status": "sourced",
       "sourceIds": ["wpgen-1335430"],
       "updatedAt": "2026-10-17",
@@ -47,12 +49,16 @@
       "order": 3,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2005 }, "end": { "year": 2016 }, "approximate": true },
       "engineDisplacementsL": [2, 2.2, 2.4, 2.5, 3.5],
+      "engineSignatures": ["2.0:?", "2.0:petrol", "2.2:?", "2.2:diesel", "2.4:petrol", "2.5:petrol", "3.5:petrol"],
       "status": "sourced",
       "sourceIds": ["wpgen-1335430"],
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"Toyota RAV4\" bilgi kutusundan (farklı pazarlar: export; Japan; RAV4 EV); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
       "revisions": [],
-      "variants": []
+      "variants": [
+        { "id": "toyota-rav4-xa30-20", "slug": "20", "engineId": "toyota-20", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "Multidrive" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013, 2014, 2015], "trims": ["Extra S", "S", "S Elegant", "S Premium", "S Premium Plus"], "bodyTypes": [], "sourceRefs": ["TSB 144-764", "TSB 144-765", "TSB 144-770", "TSB 144-771", "TSB 144-772"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "toyota-rav4-xa30-22-d-4d", "slug": "22-d-4d", "engineId": "toyota-22-d-4d", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012], "trims": ["Premium Plus"], "bodyTypes": [], "sourceRefs": ["TSB 144-773"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
     },
     {
       "id": "toyota-rav4-xa40",
@@ -62,12 +68,15 @@
       "order": 4,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2012 }, "end": { "year": 2018 } },
       "engineDisplacementsL": [2, 2.2, 2.5],
+      "engineSignatures": ["2.0:?", "2.0:petrol", "2.2:diesel", "2.5:?", "2.5:petrol"],
       "status": "sourced",
       "sourceIds": ["wpgen-1335430"],
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"Toyota RAV4\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
-      "variants": []
+      "variants": [
+        { "id": "toyota-rav4-xa40-25-hybrid", "slug": "25-hybrid", "engineId": "toyota-25-hybrid", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018], "trims": ["Advance", "Premium", "Premium Plus", "Premium Plus Navi"], "bodyTypes": [], "sourceRefs": ["TSB 144-1186", "TSB 144-1187", "TSB 144-1234", "TSB 144-1235"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
     },
     {
       "id": "toyota-rav4-xa50",
@@ -77,12 +86,15 @@
       "order": 5,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2018 }, "end": { "year": 2025 } },
       "engineDisplacementsL": [2, 2.5],
+      "engineSignatures": ["2.0:?", "2.5:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-1335430"],
       "updatedAt": "2026-10-17",
       "notes": "Üretim yılları İngilizce Wikipedia \"Toyota RAV4\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
-      "variants": []
+      "variants": [
+        { "id": "toyota-rav4-xa50-25-hybrid", "slug": "25-hybrid", "engineId": "toyota-25-hybrid", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "e-CVT" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021, 2022, 2023, 2024, 2025], "trims": ["Flame", "GR Sport", "Passion", "Passion X-PACK", "Passion X-SPORT"], "bodyTypes": [], "sourceRefs": ["TSB 144-1288", "TSB 144-1289", "TSB 144-1290", "TSB 144-1307", "TSB 144-1403"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
     },
     {
       "id": "toyota-rav4-xa60",
@@ -92,6 +104,7 @@
       "order": 6,
       "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2025 }, "end": null },
       "engineDisplacementsL": [2, 2.5],
+      "engineSignatures": ["2.0:?", "2.5:?"],
       "status": "sourced",
       "sourceIds": ["wpgen-1335430"],
       "updatedAt": "2026-10-17",
@@ -105,19 +118,18 @@
       "name": "RAV4 — nesli belirlenmemiş araçlar",
       "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2026 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2026 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
       "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "toyota-rav4-nesil-belirlenmedi-20", "slug": "20", "engineId": "toyota-20", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "Multidrive" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017], "trims": ["Extra S", "S", "S Advance", "S Elegant", "S Premium", "S Premium Plus", "S Premium Plus Jbl ED", "S Premium Plus Jbl EDITI.", "S Premium Plus Navi", "S Premuim Plus Navi Jbl"], "bodyTypes": [], "sourceRefs": ["TSB 144-1118", "TSB 144-1119", "TSB 144-1152", "TSB 144-1181", "TSB 144-1182", "TSB 144-1183", "TSB 144-1184", "TSB 144-764", "TSB 144-765", "TSB 144-770", "TSB 144-771", "TSB 144-772"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "toyota-rav4-nesil-belirlenmedi-22-d-4d", "slug": "22-d-4d", "engineId": "toyota-22-d-4d", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012], "trims": ["Premium Plus"], "bodyTypes": [], "sourceRefs": ["TSB 144-773"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
         { "id": "toyota-rav4-nesil-belirlenmedi-20-d-4d", "slug": "20-d-4d", "engineId": "toyota-20-d-4d", "revisionMapping": "unknown", "transmissions": [{ "type": "manual" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2015], "trims": ["Elegant 4x2 Vites"], "bodyTypes": [], "sourceRefs": ["TSB 144-1060"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
         { "id": "toyota-rav4-nesil-belirlenmedi-22-d-cat", "slug": "22-d-cat", "engineId": "toyota-22-d-cat", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2013 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2013, 2014, 2015], "trims": ["Premium Plus", "Premium Plus Jbl Edition", "Premium Plus Navi Jbl EDIT."], "bodyTypes": [], "sourceRefs": ["TSB 144-1061", "TSB 144-1120", "TSB 144-1121"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "toyota-rav4-nesil-belirlenmedi-20", "slug": "20", "engineId": "toyota-20", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "Multidrive" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016, 2017], "trims": ["S Advance", "S Premium", "S Premium Plus", "S Premium Plus Jbl ED", "S Premium Plus Jbl EDITI.", "S Premium Plus Navi", "S Premuim Plus Navi Jbl"], "bodyTypes": [], "sourceRefs": ["TSB 144-1118", "TSB 144-1119", "TSB 144-1152", "TSB 144-1181", "TSB 144-1182", "TSB 144-1183", "TSB 144-1184"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
         { "id": "toyota-rav4-nesil-belirlenmedi-20-diesel", "slug": "20-diesel", "engineId": "toyota-20-diesel", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016], "trims": ["Advance"], "bodyTypes": [], "sourceRefs": ["TSB 144-1185"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "toyota-rav4-nesil-belirlenmedi-25-hybrid", "slug": "25-hybrid", "engineId": "toyota-25-hybrid", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "e-CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026], "trims": ["4x2 Passion", "Advance", "Advance 4x2", "Executive 194", "Flame", "GR Sport", "Passion", "Passion X-PACK", "Passion X-SPORT", "Premium", "Premium Plus", "Premium Plus Navi"], "bodyTypes": [], "sourceRefs": ["TSB 144-1186", "TSB 144-1187", "TSB 144-1234", "TSB 144-1235", "TSB 144-1266", "TSB 144-1288", "TSB 144-1289", "TSB 144-1290", "TSB 144-1307", "TSB 144-1400", "TSB 144-1403", "TSB 144-1429"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "toyota-rav4-nesil-belirlenmedi-25-hybrid", "slug": "25-hybrid", "engineId": "toyota-25-hybrid", "revisionMapping": "unknown", "transmissions": [{ "type": "cvt", "name": "e-CVT" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2018 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2018, 2024, 2026], "trims": ["4x2 Passion", "Advance 4x2", "Executive 194"], "bodyTypes": [], "sourceRefs": ["TSB 144-1266", "TSB 144-1400", "TSB 144-1429"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]
