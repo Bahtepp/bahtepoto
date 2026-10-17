@@ -27,11 +27,14 @@ export function jsonArrayDirLoader(dir: string): Loader {
     name: 'json-array-dir',
     load: async ({ config, store, parseData, generateDigest, logger, watcher }) => {
       const root = fileURLToPath(new URL(dir, config.root));
+      const siteRoot = fileURLToPath(config.root);
+      const relativeToSite = (file: string) => relative(siteRoot, file).replaceAll('\\', '/');
 
       const sync = async () => {
         store.clear();
         for (const file of await listJsonFiles(root)) {
           const rel = relative(root, file);
+          const filePath = relativeToSite(file);
           const raw: unknown = JSON.parse(await readFile(file, 'utf-8'));
           if (!Array.isArray(raw)) {
             throw new Error(`${dir}/${rel}: dosya bir JSON dizisi olmalı`);
@@ -40,8 +43,8 @@ export function jsonArrayDirLoader(dir: string): Loader {
             const id = item.id;
             if (typeof id !== 'string') throw new Error(`${dir}/${rel}: her kaydın string "id" alanı olmalı`);
             if (store.has(id)) throw new Error(`${dir}/${rel}: "${id}" kimliği birden fazla kez tanımlı`);
-            const data = await parseData({ id, data: item, filePath: file });
-            store.set({ id, data, digest: generateDigest(item), filePath: file });
+            const data = await parseData({ id, data: item, filePath });
+            store.set({ id, data, digest: generateDigest(item), filePath });
           }
         }
       };
