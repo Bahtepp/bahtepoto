@@ -17,8 +17,9 @@ import { analyze } from '../lib/analyze.ts';
 import { readFirstSheet } from '../lib/xlsx.ts';
 import { buildFromTsb, stripTsb } from '../tsb/build.ts';
 import { mergeRows, parseSheet } from '../tsb/parse.ts';
-import { applyGenerations, candidateTitles, generationsFromArticle, hasCuratedGenerations, titleMatchesModel, WPGEN_PREFIX, type ModelGenerations } from './build.ts';
+import { applyGenerations, candidateTitles, generationsFromArticle, hasCuratedGenerations, qualifiedLinks, titleMatchesModel, WPGEN_PREFIX, type ModelGenerations } from './build.ts';
 import { resolveViaWikidata, type WikidataMatch } from './wikidata.ts';
+import { WIKIPEDIA_TITLES } from '../tsb/aliases.ts';
 import { fetchPages, hasCarInfobox, isDisambiguation } from './fetch.ts';
 import { sectionsWithMain } from './wikitext.ts';
 
@@ -37,14 +38,22 @@ console.log(`Wikipedia nesil toplama: ${targets.length} model`);
 
 // 1) Model maddeleri
 const candidates = new Map<string, string[]>();
-for (const [f, m] of targets) candidates.set(f, candidateTitles(brandName.get(String(m.brandId)) ?? String(m.brandId), String(m.name)));
+const modelKey = (f: string) => f.replace(/^models\/|\.json$/g, '');
+for (const [f, m] of targets) {
+  // Takma ad tablosundaki kesin başlık (örn. MINI → "Mini Hatch") önce denenir.
+  const override = WIKIPEDIA_TITLES[modelKey(f)];
+  candidates.set(f, [...(override ? [override] : []), ...candidateTitles(brandName.get(String(m.brandId)) ?? String(m.brandId), String(m.name))]);
+}
 const articlePages = await fetchPages([...candidates.values()].flat(), { cacheDir, offline: values.offline, log });
 
 // 2) Bağlantılı nesil maddeleri
 const articleFor = new Map<string, NonNullable<ReturnType<typeof articlePages.get>>>();
 for (const [f, titles] of candidates) {
   // Bilgi kutusu olmayan model maddesi de kabul: nesil maddelerine {{Main}} ile bağlanıyorsa (örn. "Jaguar XF").
-  const page = titles.map((t) => articlePages.get(t)).find((p) => p && !isDisambiguation(p) && (hasCarInfobox(p) || sectionsWithMain(p.wikitext).some((s) => s.mains.length > 0)));
+  // Anlam ayrımı sayfası yalnızca yıl/kod nitelendirmeli nesil bağlantısı veriyorsa kabul edilir (bkz. qualifiedLinks).
+  const page = titles
+    .map((t) => articlePages.get(t))
+    .find((p) => p && ((!isDisambiguation(p) && (hasCarInfobox(p) || sectionsWithMain(p.wikitext).some((s) => s.mains.length > 0))) || qualifiedLinks(p).length > 0));
   if (page) articleFor.set(f, page);
 }
 // 2b) Wikidata ile ad normalleştirme: maddesi bulunamayan veya başlığı modelle eşleşmeyen modeller.
@@ -71,7 +80,7 @@ for (const [f, m] of needWd) {
 }
 console.log(`Wikidata ile kimliği doğrulanan model: ${identityVia.size} (sorgu ${needWd.length})`);
 
-const linkedTitles = [...articleFor.values()].flatMap((p) => sectionsWithMain(p.wikitext).flatMap((s) => s.mains));
+const linkedTitles = [...articleFor.values()].flatMap((p) => [...sectionsWithMain(p.wikitext).flatMap((s) => s.mains), ...qualifiedLinks(p)]);
 const linkedPages = await fetchPages(linkedTitles, { cacheDir, offline: values.offline, log });
 
 // 3) Normalize
@@ -92,7 +101,11 @@ for (const [f, m] of targets) {
     ...base,
     article: article.title,
     status: gens.length ? 'found' : 'no-generations',
-    identity: identityVia.has(f) ? { via: 'wikidata', qid: identityVia.get(f)!.qid, label: identityVia.get(f)!.label } : { via: 'title' },
+    identity: identityVia.has(f)
+      ? { via: 'wikidata', qid: identityVia.get(f)!.qid, label: identityVia.get(f)!.label }
+      : WIKIPEDIA_TITLES[modelKey(f)] && articlePages.get(WIKIPEDIA_TITLES[modelKey(f)]!)?.pageid === article.pageid
+        ? { via: 'alias', label: WIKIPEDIA_TITLES[modelKey(f)] }
+        : { via: 'title' },
     generations: gens,
     pages: used.map((p) => ({ title: p.title, pageid: p.pageid, revid: p.revid })),
     conflicts,

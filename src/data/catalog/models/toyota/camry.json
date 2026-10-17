@@ -10,6 +10,20 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "toyota-camry-xv10",
+      "slug": "xv10",
+      "name": "Camry (XV10)",
+      "code": "XV10",
+      "order": 191,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1991 }, "end": { "year": 2002 }, "approximate": true },
+      "status": "sourced",
+      "sourceIds": ["wpgen-3669020"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Toyota Camry (XV10)\" bilgi kutusundan (farklı pazarlar: US; Japan; China; South Africa; Australia; Thailand); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
       "id": "toyota-camry-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
       "name": "Camry — nesli belirlenmemiş araçlar",

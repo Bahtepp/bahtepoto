@@ -49,7 +49,7 @@ export interface ModelGenerations {
   article?: string;
   status: 'found' | 'not-found' | 'no-generations' | 'skipped-curated';
   /** Model kimliği nasıl doğrulandı: madde başlığı veya Wikidata etiketi/diğer adı (tam eşleşme). */
-  identity?: { via: 'title' | 'wikidata'; qid?: string; label?: string };
+  identity?: { via: 'title' | 'wikidata' | 'alias'; qid?: string; label?: string };
   generations: StagedGeneration[];
   pages: { title: string; pageid: number; revid: number }[];
   /** Gerçek çelişkiler (aynı nesil için farklı yıllar, aynı sıra numarası iki kez). */
@@ -177,6 +177,23 @@ export function generationsFromArticle(
       if (!ib) continue;
       const g = stageFrom(ib, heading, page, brand, modelName, true, currentYear);
       if (g) {
+        gens.push(g);
+        used.add(page);
+      }
+    }
+  }
+  // Anlam ayrımı veya yalnızca bağlantı veren madde: "<Model> (1995–2004)", "<Model> (X250)" gibi yıl/kod
+  // nitelendirmeli bağlantılar nesil maddesidir. Sözcük nitelendirmeliler ("coupé", "Americas") ayrı araçtır, alınmaz.
+  if (gens.length === 0) {
+    const seen = new Set<number>();
+    for (const target of qualifiedLinks(article)) {
+      const page = linked.get(target);
+      if (!page || seen.has(page.pageid)) continue;
+      const ib = parseInfoboxes(page.wikitext)[0];
+      if (!ib) continue;
+      const g = stageFrom(ib, '', page, brand, modelName, true, currentYear);
+      if (g) {
+        seen.add(page.pageid);
         gens.push(g);
         used.add(page);
       }
@@ -343,7 +360,19 @@ export function candidateTitles(brand: string, model: string): string[] {
   if (/^[A-Z]{1,3}$/i.test(model)) forms.add(`${model.toUpperCase()}-Class`);
   const title = (s: string) => s.replace(/\b([A-Za-z])([A-Za-z]*)\b/g, (_m, a: string, b: string) => a.toUpperCase() + b.toLowerCase());
   for (const f of [...forms]) forms.add(title(f));
-  return [...forms].map((f) => `${brand} ${f}`);
+  for (const f of [...forms]) {
+    // Harf kodu + numara: "XC 90" → "XC90" / "XC-90"
+    const m = /^([A-Za-z]{1,3})[ -](\d{1,3})(\b.*)$/.exec(f);
+    if (m) {
+      forms.add(`${m[1]}${m[2]}${m[3]}`);
+      forms.add(`${m[1]}-${m[2]}${m[3]}`);
+    }
+    // Küçük harfle başlayan model kodları: "I3" → "i3", "IX1" → "iX1"
+    if (/^I[A-Z0-9]/.test(f)) forms.add(`i${f.slice(1)}`);
+  }
+  // Model adı marka adıyla başlıyorsa marka tekrar edilmez: marka "DS", model "DS 3" → "DS 3"
+  const brandKey = brand.toLowerCase();
+  return [...forms].map((f) => (f.toLowerCase().startsWith(`${brandKey} `) ? f : `${brand} ${f}`));
 }
 
 const norm = (s: string) =>
@@ -368,7 +397,7 @@ export function importBlocker(mg: ModelGenerations, brand: string, modelName: st
   }
   // Marka ve model kimliği: Wikidata'da etiketi/diğer adı birebir eşleşen öğe (bkz. wikidata.ts) ya da
   // markayla başlayıp model adını (veya İngilizce karşılığını) içeren madde başlığı.
-  if (mg.identity?.via === 'wikidata') return undefined;
+  if (mg.identity?.via === 'wikidata' || mg.identity?.via === 'alias') return undefined;
   if (!titleMatchesModel(mg.article ?? '', brand, modelName)) return `Wikipedia maddesi ("${mg.article}") bu modelle açıkça eşleşmiyor`;
   return undefined;
 }
@@ -379,4 +408,19 @@ export function titleMatchesModel(article: string, brand: string, modelName: str
   const forms = candidateTitles(brand, modelName).map((t) => norm(t));
   const tight = (x: string) => x.replace(/ /g, '');
   return forms.some((f) => title === f || title.startsWith(`${f} `) || tight(title) === tight(f));
+}
+
+/** Nesil maddesi sayılan nitelendirme: yıl, yıl aralığı veya kasa/şasi kodu ("1995–2004", "2012", "X250", "750/101", "T6"). */
+const GENERATION_QUALIFIER = /^(\d{4}(\s?[–-]\s?(\d{4}|present))?|[A-Z]{0,3}\d{1,4}[A-Z]?(\/[A-Z]{0,3}\d{1,4}[A-Z]?)*)$/;
+
+/** Maddedeki "<madde başlığı> (<yıl veya kod>)" bağlantıları (anlam ayrımı ve bağlantı veren madde için). */
+export function qualifiedLinks(article: WikiPage): string[] {
+  const base = article.title.replace(/\s*\(.*\)$/, '');
+  const out = new Set<string>();
+  for (const m of article.wikitext.matchAll(/\[\[([^\]|#]+)(?:\|[^\]]*)?\]\]/g)) {
+    const target = m[1]!.trim();
+    const q = new RegExp(`^${base.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')} \\(([^)]+)\\)$`, 'i').exec(target);
+    if (q && GENERATION_QUALIFIER.test(q[1]!.trim())) out.add(target);
+  }
+  return [...out];
 }

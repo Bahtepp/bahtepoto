@@ -3,10 +3,10 @@
   "brandId": "alfa-romeo",
   "slug": "junior-ibrida",
   "name": "Junior Ibrida",
-  "order": 0,
+  "order": 999,
   "status": "sourced",
   "sourceIds": ["tsb-kasko-deger-listesi"],
-  "updatedAt": "2026-10-15",
+  "updatedAt": "2026-10-17",
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {

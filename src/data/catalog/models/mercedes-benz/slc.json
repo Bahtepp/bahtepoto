@@ -3,10 +3,10 @@
   "brandId": "mercedes-benz",
   "slug": "slc",
   "name": "Slc",
-  "order": 0,
+  "order": 999,
   "status": "sourced",
   "sourceIds": ["tsb-kasko-deger-listesi"],
-  "updatedAt": "2026-10-15",
+  "updatedAt": "2026-10-17",
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
@@ -15,7 +15,7 @@
       "name": "Slc — nesli belirlenmemiş araçlar",
       "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2019 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2020 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
       "updatedAt": "2026-10-17",
@@ -23,7 +23,8 @@
       "revisions": [],
       "variants": [
         { "id": "mercedes-benz-slc-nesil-belirlenmedi-16", "slug": "16", "engineId": "mercedes-benz-16", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019], "trims": ["180 AMG"], "bodyTypes": [], "sourceRefs": ["TSB 90-2272"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "mercedes-benz-slc-nesil-belirlenmedi-20", "slug": "20", "engineId": "mercedes-benz-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018], "trims": ["300 AMG"], "bodyTypes": [], "sourceRefs": ["TSB 90-2273"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "mercedes-benz-slc-nesil-belirlenmedi-20", "slug": "20", "engineId": "mercedes-benz-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018], "trims": ["300 AMG"], "bodyTypes": [], "sourceRefs": ["TSB 90-2273"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "mercedes-benz-slc-nesil-belirlenmedi-43", "slug": "43", "engineId": "mercedes-benz-43", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017, 2018, 2019, 2020], "trims": ["AMG"], "bodyTypes": [], "sourceRefs": ["TSB 90-2274"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

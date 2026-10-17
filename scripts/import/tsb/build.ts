@@ -16,6 +16,7 @@
 import type { Json, RawCatalog } from '../lib/io.ts';
 import type { TsbRow } from './parse.ts';
 import { nearlyEqual, parseTypeName, resolveModels, type ParsedType } from './normalize.ts';
+import { MODEL_ALIASES } from './aliases.ts';
 import { BRAND_RULES, EXCLUDED_BRANDS, EXCLUDED_MODEL_PREFIXES, EXCLUDED_WORDS, SUBMODEL_WORDS, type BrandRule } from './rules.ts';
 
 export const TSB_SOURCE_ID = 'tsb-kasko-deger-listesi';
@@ -282,11 +283,26 @@ export function buildFromTsb(
       // Mercedes-Benz: "A180", "C-180K", "E350" → sınıf (A, C, E) + motor tanımı (180, 180K, 350).
       // Sınıf adı ile motor tanımı TSB'de bazen bitişik yazılıyor; ayrı yazılanlarla aynı modelde toplanır.
       if (brand.id === 'mercedes-benz') {
-        const mb = /^([A-Z]{1,3})-?(\d{2,3}[A-Z]{0,2})$/i.exec(model);
+        // "MERCEDES-AMG C 63", "MERCEDES-MAYBACH S 580": ön ek marka alt adıdır; sınıf sonraki sözcüktür.
+        // Yalnızca ardından sınıf adı (harfle başlayan: C, GT, CLE …) geliyorsa; "MERCEDES-AMG 63 S" gibi
+        // numarayla devam eden adlar eski yerinde kalır (model tahmin edilmez).
+        if (/^MERCEDES-?(AMG|MAYBACH)$/i.test(model) && /^[A-Z]/i.test(trimWords[0] ?? '')) {
+          trimWords.unshift(model.replace(/^MERCEDES-?/i, ''));
+          model = trimWords.splice(1, 1)[0]!;
+        }
+        const mb = /^([A-Z]{1,3})[- ]?(\d{2,3}[A-Z]{0,2})$/i.exec(model);
         if (mb) {
           model = mb[1]!.toUpperCase();
           parsed.tech.unshift(mb[2]!);
         }
+      }
+      // Model takma adları (aliases.ts): gövde/donanım sözcüğü yapışmış model adları asıl modele bağlanır.
+      const alias = MODEL_ALIASES[brand.id]?.[fold(model)];
+      if (alias) {
+        const extra = fold(model).replace(alias.model, '').trim();
+        model = alias.model;
+        if (extra) trimWords.unshift(extra);
+        if (alias.body) parsed.body ??= alias.body;
       }
       if (brand.modelPrefix) model = `${brand.modelPrefix} ${model}`.trim();
       // TSB'de Chrysler altında listelenen Jeep modelleri ("JEEP COMPASS", "JEEPRENEGADE") Jeep markasına.
@@ -311,7 +327,9 @@ export function buildFromTsb(
     const big = [...counts].filter(([, n]) => n >= 5).map(([m]) => m);
     for (const p of pre) {
       if ((counts.get(p.model) ?? 0) <= 2) {
-        const target = big.find((b) => b !== p.model && b.length >= 4 && nearlyEqual(b, p.model));
+        // Rakam farkı yazım hatası değildir ("C3AIRCROSS" ≠ "C5AIRCROSS", "208" ≠ "308"): rakamlar aynı olmalı.
+        const digits = (x: string) => x.replace(/\D/g, '');
+        const target = big.find((b) => b !== p.model && b.length >= 4 && digits(b) === digits(p.model) && nearlyEqual(b, p.model));
         if (target) p.model = target;
       }
     }

@@ -10,16 +10,15 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "jaguar-s-type-x200",
-      "slug": "x200",
-      "name": "S-Type (X200)",
-      "code": "X200",
-      "order": 199,
-      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1999 }, "end": { "year": 2007 } },
+      "id": "jaguar-s-type-uretim-1963",
+      "slug": "uretim-1963",
+      "name": "S-Type (1963–1968)",
+      "order": 163,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1963 }, "end": { "year": 1968 } },
       "status": "sourced",
-      "sourceIds": ["wpgen-504570"],
+      "sourceIds": ["wpgen-2340193"],
       "updatedAt": "2026-10-17",
-      "notes": "Üretim yılları İngilizce Wikipedia \"Jaguar S-Type (1999)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Jaguar S-Type (1963)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": []
     },

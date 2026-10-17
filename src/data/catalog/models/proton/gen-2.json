@@ -1,0 +1,47 @@
+{
+  "id": "proton-gen-2",
+  "brandId": "proton",
+  "slug": "gen-2",
+  "name": "Gen 2",
+  "order": 999,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-17",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "proton-gen-2-uretim-2004",
+      "slug": "uretim-2004",
+      "name": "Gen 2 (2004)",
+      "order": 204,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2004 }, "end": { "year": 2012 } },
+      "engineDisplacementsL": [1.3, 1.5, 1.6],
+      "engineSignatures": ["1.3:?", "1.5:?", "1.6:?"],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1488290"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Proton Gen 2\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "proton-gen-2-uretim-2004-16", "slug": "16", "engineId": "proton-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2011 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008, 2009, 2010, 2011], "trims": ["Low Line", "Medium Line", "Persona Base Line", "Persona High Line", "Persona Highline", "Persona Low Line", "Persona Medium Line"], "bodyTypes": ["4 kapı sedan"], "sourceRefs": ["TSB 320-22", "TSB 320-23", "TSB 320-25", "TSB 320-46", "TSB 320-47", "TSB 320-48", "TSB 320-52", "TSB 320-53", "TSB 320-54", "TSB 320-55", "TSB 320-56", "TSB 320-57"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
+      "id": "proton-gen-2-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Gen 2 — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2014 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-17",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "proton-gen-2-nesil-belirlenmedi-16", "slug": "16", "engineId": "proton-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014], "trims": ["Face Lift Lowline", "Face Lift Medium Line", "Persona Face Lift Low Line", "Persona Face Lift Medium Line"], "bodyTypes": [], "sourceRefs": ["TSB 320-1001", "TSB 320-1003", "TSB 320-1005", "TSB 320-1007", "TSB 320-1009", "TSB 320-1011"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "proton-gen-2-nesil-belirlenmedi-16-lpg", "slug": "16-lpg", "engineId": "proton-16-lpg", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2014 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014], "trims": ["Face Lift Low Line", "Face Lift Medium Line", "Persona Face Lift Low Line", "Persona Face Lift Medium", "Persona Face Lift Medium Line O"], "bodyTypes": [], "sourceRefs": ["TSB 320-1002", "TSB 320-1004", "TSB 320-1006", "TSB 320-1008", "TSB 320-1010", "TSB 320-1012"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    }
+  ]
+}

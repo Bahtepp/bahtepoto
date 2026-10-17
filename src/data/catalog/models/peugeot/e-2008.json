@@ -3,10 +3,10 @@
   "brandId": "peugeot",
   "slug": "e-2008",
   "name": "E-2008",
-  "order": 0,
+  "order": 999,
   "status": "sourced",
   "sourceIds": ["tsb-kasko-deger-listesi"],
-  "updatedAt": "2026-10-15",
+  "updatedAt": "2026-10-17",
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
@@ -23,8 +23,7 @@
       "revisions": [],
       "variants": [
         { "id": "peugeot-e-2008-nesil-belirlenmedi-100kw", "slug": "100kw", "engineId": "peugeot-100kw", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2022 }, "end": { "year": 2025 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2022, 2023, 2024, 2025], "trims": ["Allure FL", "GT"], "bodyTypes": [], "sourceRefs": ["TSB 114-2345", "TSB 114-2378"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "peugeot-e-2008-nesil-belirlenmedi-115kw", "slug": "115kw", "engineId": "peugeot-115kw", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023, 2024, 2025, 2026], "trims": ["Allure FL", "GT FL"], "bodyTypes": [], "sourceRefs": ["TSB 114-2371", "TSB 114-2425"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "peugeot-e-2008-nesil-belirlenmedi-157kw", "slug": "157kw", "engineId": "peugeot-157kw", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2024 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2024, 2025, 2026], "trims": ["Allure (YENI)", "GT (YENI)"], "bodyTypes": [], "sourceRefs": ["TSB 114-2402", "TSB 114-2403"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "peugeot-e-2008-nesil-belirlenmedi-115kw", "slug": "115kw", "engineId": "peugeot-115kw", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2023 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2023, 2024, 2025, 2026], "trims": ["Allure FL", "GT FL"], "bodyTypes": [], "sourceRefs": ["TSB 114-2371", "TSB 114-2425"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

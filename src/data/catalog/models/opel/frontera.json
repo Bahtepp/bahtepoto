@@ -10,19 +10,19 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "opel-frontera-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Frontera — nesli belirlenmemiş araçlar",
-      "kind": "unassigned",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "id": "opel-frontera-ov24",
+      "slug": "ov24",
+      "name": "Frontera (OV24)",
+      "code": "OV24",
+      "order": 224,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2024 }, "end": null },
+      "status": "sourced",
+      "sourceIds": ["wpgen-76563217"],
       "updatedAt": "2026-10-17",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Opel Frontera (2024)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "opel-frontera-nesil-belirlenmedi-mhev-136", "slug": "mhev-136", "engineId": "opel-mhev-136", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["E-DCT Edition", "E-DCT GS"], "bodyTypes": [], "sourceRefs": ["TSB 111-1700", "TSB 111-1702"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "opel-frontera-ov24-mhev-136", "slug": "mhev-136", "engineId": "opel-mhev-136", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["E-DCT Edition", "E-DCT GS"], "bodyTypes": [], "sourceRefs": ["TSB 111-1700", "TSB 111-1702"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

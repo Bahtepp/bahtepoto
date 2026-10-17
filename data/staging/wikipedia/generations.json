@@ -249,23 +249,23 @@
    "modelId": "alfa-romeo-giulia",
    "generations": [
     {
-     "slug": "uretim-1962",
-     "name": "Giulia (Type 105)",
-     "start": 1962,
-     "end": 1978,
+     "slug": "uretim-2015",
+     "name": "Giulia",
+     "start": 2015,
+     "end": null,
      "marketId": "global",
      "approximate": false,
      "engineDisplacementsL": [],
      "engineSignatures": [],
-     "page": "Alfa Romeo Giulia",
+     "page": "Alfa Romeo Giulia (2015)",
      "productionNote": ""
     }
    ],
    "pages": [
     {
-     "title": "Alfa Romeo Giulia",
-     "pageid": 2387032,
-     "revid": 1367037408
+     "title": "Alfa Romeo Giulia (2015)",
+     "pageid": 27912435,
+     "revid": 1379716303
     }
    ],
    "conflicts": [],
@@ -281,11 +281,70 @@
   {
    "modelFile": "models/alfa-romeo/giulietta.json",
    "modelId": "alfa-romeo-giulietta",
-   "generations": [],
-   "pages": [],
+   "generations": [
+    {
+     "slug": "uretim-1954",
+     "name": "Giulietta",
+     "start": 1954,
+     "end": 1965,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Alfa Romeo Giulietta (1954)",
+     "productionNote": ""
+    },
+    {
+     "slug": "uretim-1977",
+     "name": "Giulietta",
+     "start": 1977,
+     "end": 1985,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Alfa Romeo Giulietta (1977)",
+     "productionNote": ""
+    },
+    {
+     "slug": "uretim-2010",
+     "name": "Giulietta",
+     "start": 2010,
+     "end": 2020,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Alfa Romeo Giulietta (2010)",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Alfa Romeo Giulietta (1954)",
+     "pageid": 8261156,
+     "revid": 1361594813
+    },
+    {
+     "title": "Alfa Romeo Giulietta (1977)",
+     "pageid": 9263305,
+     "revid": 1365385913
+    },
+    {
+     "title": "Alfa Romeo Giulietta (2010)",
+     "pageid": 4366582,
+     "revid": 1373436567
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
-   "status": "not-found"
+   "article": "Alfa Romeo Giulietta",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
   },
   {
    "modelFile": "models/alfa-romeo/gt.json",
@@ -622,23 +681,23 @@
    "modelId": "aston-martin-dbs",
    "generations": [
     {
-     "slug": "uretim-1967",
+     "slug": "uretim-2007",
      "name": "DBS",
-     "start": 1967,
-     "end": 1972,
+     "start": 2007,
+     "end": 2012,
      "marketId": "global",
      "approximate": false,
      "engineDisplacementsL": [],
      "engineSignatures": [],
-     "page": "Aston Martin DBS",
+     "page": "Aston Martin DBS (2007)",
      "productionNote": ""
     }
    ],
    "pages": [
     {
-     "title": "Aston Martin DBS",
-     "pageid": 2104601,
-     "revid": 1378046738
+     "title": "Aston Martin DBS (2007)",
+     "pageid": 5097015,
+     "revid": 1371875679
     }
    ],
    "conflicts": [],
@@ -3157,15 +3216,6 @@
    "blockedSpans": []
   },
   {
-   "modelFile": "models/audi/ttr.json",
-   "modelId": "audi-ttr",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
-  },
-  {
    "modelFile": "models/audi/tts.json",
    "modelId": "audi-tts",
    "generations": [
@@ -3431,12 +3481,31 @@
   {
    "modelFile": "models/bentley/continental.json",
    "modelId": "bentley-continental",
-   "generations": [],
-   "pages": [],
+   "generations": [
+    {
+     "slug": "uretim-1971",
+     "name": "Continental (1971)",
+     "start": 1971,
+     "end": 1995,
+     "marketId": "global",
+     "approximate": true,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Rolls-Royce Corniche",
+     "productionNote": "farklı pazarlar: 6,823 produced"
+    }
+   ],
+   "pages": [
+    {
+     "title": "Rolls-Royce Corniche",
+     "pageid": 3827606,
+     "revid": 1376697555
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
    "article": "Bentley Continental",
-   "status": "no-generations",
+   "status": "found",
    "identity": {
     "via": "title"
    },
@@ -3444,8 +3513,8 @@
    "blockedSpans": []
   },
   {
-   "modelFile": "models/bentley/flying.json",
-   "modelId": "bentley-flying",
+   "modelFile": "models/bentley/flying-spur.json",
+   "modelId": "bentley-flying-spur",
    "generations": [],
    "pages": [],
    "conflicts": [],
@@ -3455,11 +3524,53 @@
   {
    "modelFile": "models/bentley/mulsanne.json",
    "modelId": "bentley-mulsanne",
-   "generations": [],
-   "pages": [],
+   "generations": [
+    {
+     "slug": "uretim-1980",
+     "name": "Mulsanne",
+     "start": 1980,
+     "end": 1992,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Bentley Mulsanne (1980–1992)",
+     "productionNote": ""
+    },
+    {
+     "slug": "uretim-2010",
+     "name": "Mulsanne",
+     "start": 2010,
+     "end": 2020,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Bentley Mulsanne (2010)",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Bentley Mulsanne (1980–1992)",
+     "pageid": 2362428,
+     "revid": 1371873842
+    },
+    {
+     "title": "Bentley Mulsanne (2010)",
+     "pageid": 24007140,
+     "revid": 1368385212
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
-   "status": "not-found"
+   "article": "Bentley Mulsanne",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
   },
   {
    "modelFile": "models/bmw/1-serisi.json",
@@ -4734,11 +4845,37 @@
   {
    "modelFile": "models/bmw/i3.json",
    "modelId": "bmw-i3",
-   "generations": [],
-   "pages": [],
+   "generations": [
+    {
+     "slug": "na0",
+     "name": "i3 (NA0)",
+     "code": "NA0",
+     "start": 2026,
+     "end": null,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "BMW i3 (NA0)",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "BMW i3 (NA0)",
+     "pageid": 81125146,
+     "revid": 1379500428
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
-   "status": "not-found"
+   "article": "BMW i3",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
   },
   {
    "modelFile": "models/bmw/i3s.json",
@@ -4779,9 +4916,7 @@
    "article": "BMW i4",
    "status": "found",
    "identity": {
-    "via": "wikidata",
-    "qid": "Q50886612",
-    "label": "BMW i4"
+    "via": "title"
    },
    "conflictSlugs": [],
    "blockedSpans": []
@@ -4789,20 +4924,90 @@
   {
    "modelFile": "models/bmw/i5.json",
    "modelId": "bmw-i5",
-   "generations": [],
-   "pages": [],
+   "generations": [
+    {
+     "slug": "g30",
+     "name": "I5 (G30)",
+     "code": "G30",
+     "start": 2016,
+     "end": 2023,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [
+      2,
+      3,
+      4.4
+     ],
+     "engineSignatures": [
+      "2.0:?",
+      "3.0:?",
+      "4.4:?"
+     ],
+     "page": "BMW 5 Series (G30)",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "BMW 5 Series (G30)",
+     "pageid": 49312904,
+     "revid": 1378541102
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
-   "status": "not-found"
+   "article": "BMW 5 Series (G60)",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
   },
   {
    "modelFile": "models/bmw/i7.json",
    "modelId": "bmw-i7",
-   "generations": [],
-   "pages": [],
+   "generations": [
+    {
+     "slug": "g11",
+     "name": "I7 (G11)",
+     "code": "G11",
+     "start": 2015,
+     "end": 2022,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [
+      2,
+      3,
+      4.4,
+      6.6
+     ],
+     "engineSignatures": [
+      "2.0:?",
+      "3.0:?",
+      "4.4:?",
+      "6.6:?"
+     ],
+     "page": "BMW 7 Series (G11)",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "BMW 7 Series (G11)",
+     "pageid": 47585951,
+     "revid": 1352864998
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
-   "status": "not-found"
+   "article": "BMW 7 Series (G70)",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
   },
   {
    "modelFile": "models/bmw/i8.json",
@@ -4851,9 +5056,7 @@
    "article": "BMW iX",
    "status": "found",
    "identity": {
-    "via": "wikidata",
-    "qid": "Q86663388",
-    "label": "BMW iX"
+    "via": "title"
    },
    "conflictSlugs": [],
    "blockedSpans": []
@@ -4863,11 +5066,11 @@
    "modelId": "bmw-ix1",
    "generations": [
     {
-     "slug": "u11-u12",
-     "name": "IX1 (U11/U12)",
-     "code": "U11/U12",
-     "start": 2022,
-     "end": null,
+     "slug": "f48",
+     "name": "IX1 (F48)",
+     "code": "F48",
+     "start": 2015,
+     "end": 2022,
      "marketId": "global",
      "approximate": false,
      "engineDisplacementsL": [
@@ -4876,17 +5079,17 @@
      ],
      "engineSignatures": [
       "1.5:?",
-      "2.0:hybrid"
+      "2.0:?"
      ],
-     "page": "BMW X1 (U11)",
+     "page": "BMW X1 (F48)",
      "productionNote": ""
     }
    ],
    "pages": [
     {
-     "title": "BMW X1 (U11)",
-     "pageid": 70920390,
-     "revid": 1378293867
+     "title": "BMW X1 (F48)",
+     "pageid": 57650603,
+     "revid": 1372074580
     }
    ],
    "conflicts": [],
@@ -4904,11 +5107,37 @@
   {
    "modelFile": "models/bmw/ix3.json",
    "modelId": "bmw-ix3",
-   "generations": [],
-   "pages": [],
+   "generations": [
+    {
+     "slug": "x3",
+     "name": "IX3 (X3)",
+     "code": "X3",
+     "start": 2003,
+     "end": null,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "BMW X3",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "BMW X3",
+     "pageid": 1527538,
+     "revid": 1378672752
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
-   "status": "not-found"
+   "article": "BMW iX3",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
   },
   {
    "modelFile": "models/bmw/m2.json",
@@ -7126,6 +7355,15 @@
    "status": "not-found"
   },
   {
+   "modelFile": "models/chery/tiggo5.json",
+   "modelId": "chery-tiggo5",
+   "generations": [],
+   "pages": [],
+   "conflicts": [],
+   "overlaps": [],
+   "status": "not-found"
+  },
+  {
    "modelFile": "models/chevrolet/avalanche.json",
    "modelId": "chevrolet-avalanche",
    "generations": [
@@ -7545,23 +7783,42 @@
    "modelId": "chevrolet-corvette-c7",
    "generations": [
     {
-     "slug": "uretim-2017",
-     "name": "Corvette (C7)",
-     "start": 2017,
-     "end": 2019,
+     "slug": "c6",
+     "name": "Corvette (C6)",
+     "code": "C6",
+     "start": 2004,
+     "end": 2013,
      "marketId": "global",
      "approximate": false,
      "engineDisplacementsL": [],
      "engineSignatures": [],
-     "page": "Chevrolet Corvette (C7)",
+     "page": "Chevrolet Corvette (C6)",
+     "productionNote": ""
+    },
+    {
+     "slug": "c8",
+     "name": "Corvette (C8)",
+     "code": "C8",
+     "start": 2020,
+     "end": null,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Chevrolet Corvette (C8)",
      "productionNote": ""
     }
    ],
    "pages": [
     {
-     "title": "Chevrolet Corvette (C7)",
-     "pageid": 37393650,
-     "revid": 1378845283
+     "title": "Chevrolet Corvette (C6)",
+     "pageid": 3498935,
+     "revid": 1379957616
+    },
+    {
+     "title": "Chevrolet Corvette (C8)",
+     "pageid": 51552240,
+     "revid": 1379957155
     }
    ],
    "conflicts": [],
@@ -9682,6 +9939,15 @@
    ]
   },
   {
+   "modelFile": "models/citroen/c3aircross.json",
+   "modelId": "citroen-c3aircross",
+   "generations": [],
+   "pages": [],
+   "conflicts": [],
+   "overlaps": [],
+   "status": "not-found"
+  },
+  {
    "modelFile": "models/citroen/c4-cactus.json",
    "modelId": "citroen-c4-cactus",
    "generations": [
@@ -9846,13 +10112,71 @@
    ]
   },
   {
-   "modelFile": "models/citroen/c5-ac.json",
-   "modelId": "citroen-c5-ac",
-   "generations": [],
-   "pages": [],
+   "modelFile": "models/citroen/c5-aircross.json",
+   "modelId": "citroen-c5-aircross",
+   "generations": [
+    {
+     "slug": "c84",
+     "name": "C5 Aircross 1. nesil (C84)",
+     "code": "C84",
+     "ordinal": 1,
+     "start": 2017,
+     "end": 2025,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [
+      1.2,
+      1.5,
+      1.6,
+      2
+     ],
+     "engineSignatures": [
+      "1.2:?",
+      "1.5:diesel",
+      "1.6:?",
+      "1.6:hybrid",
+      "2.0:diesel"
+     ],
+     "page": "Citroën C5 Aircross",
+     "productionNote": ""
+    },
+    {
+     "slug": "cr3",
+     "name": "C5 Aircross 2. nesil (CR3)",
+     "code": "CR3",
+     "ordinal": 2,
+     "start": 2025,
+     "end": null,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [
+      1.2,
+      1.6
+     ],
+     "engineSignatures": [
+      "1.2:?",
+      "1.6:?"
+     ],
+     "page": "Citroën C5 Aircross",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Citroën C5 Aircross",
+     "pageid": 55527133,
+     "revid": 1379938130
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
-   "status": "not-found"
+   "article": "Citroën C5 Aircross",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
   },
   {
    "modelFile": "models/citroen/c5.json",
@@ -9951,15 +10275,6 @@
    },
    "conflictSlugs": [],
    "blockedSpans": []
-  },
-  {
-   "modelFile": "models/citroen/c5aircross.json",
-   "modelId": "citroen-c5aircross",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
   },
   {
    "modelFile": "models/citroen/c6.json",
@@ -10082,9 +10397,7 @@
    "article": "DS 3",
    "status": "found",
    "identity": {
-    "via": "wikidata",
-    "qid": "Q748426",
-    "label": "Citroën DS3"
+    "via": "title"
    },
    "conflictSlugs": [],
    "blockedSpans": []
@@ -11622,23 +11935,24 @@
    "modelId": "dodge-journey",
    "generations": [
     {
-     "slug": "uretim-2008",
-     "name": "Journey",
-     "start": 2008,
-     "end": 2020,
+     "slug": "gs5",
+     "name": "Journey (GS5)",
+     "code": "GS5",
+     "start": 2011,
+     "end": 2025,
      "marketId": "global",
      "approximate": false,
      "engineDisplacementsL": [],
      "engineSignatures": [],
-     "page": "Dodge Journey",
+     "page": "Trumpchi GS5",
      "productionNote": ""
     }
    ],
    "pages": [
     {
-     "title": "Dodge Journey",
-     "pageid": 11617869,
-     "revid": 1373618316
+     "title": "Trumpchi GS5",
+     "pageid": 55622928,
+     "revid": 1373927929
     }
    ],
    "conflicts": [],
@@ -11889,6 +12203,120 @@
    "blockedSpans": []
   },
   {
+   "modelFile": "models/ds/ds-3.json",
+   "modelId": "ds-ds-3",
+   "generations": [
+    {
+     "slug": "1-nesil",
+     "name": "DS 3 1. nesil",
+     "ordinal": 1,
+     "start": 2009,
+     "end": 2019,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [
+      1.2,
+      1.4,
+      1.6
+     ],
+     "engineSignatures": [
+      "1.2:?",
+      "1.4:?",
+      "1.6:?"
+     ],
+     "page": "DS 3",
+     "productionNote": ""
+    },
+    {
+     "slug": "d34",
+     "name": "DS 3 2. nesil (D34)",
+     "code": "D34",
+     "ordinal": 2,
+     "start": 2018,
+     "end": null,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [
+      1.2,
+      1.5
+     ],
+     "engineSignatures": [
+      "1.2:?",
+      "1.5:diesel"
+     ],
+     "page": "DS 3",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "DS 3",
+     "pageid": 21378361,
+     "revid": 1375305530
+    }
+   ],
+   "conflicts": [],
+   "overlaps": [],
+   "article": "DS 3",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
+  },
+  {
+   "modelFile": "models/ds/ds-4.json",
+   "modelId": "ds-ds-4",
+   "generations": [
+    {
+     "slug": "uretim-2010",
+     "name": "DS 4 (2010)",
+     "start": 2010,
+     "end": 2018,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [
+      1.6,
+      2
+     ],
+     "engineSignatures": [
+      "1.6:?",
+      "1.6:diesel",
+      "1.6:petrol",
+      "2.0:diesel"
+     ],
+     "page": "DS 4",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "DS 4",
+     "pageid": 27899114,
+     "revid": 1348247374
+    }
+   ],
+   "conflicts": [],
+   "overlaps": [],
+   "article": "DS 4",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
+  },
+  {
+   "modelFile": "models/ds/ds-7.json",
+   "modelId": "ds-ds-7",
+   "generations": [],
+   "pages": [],
+   "conflicts": [],
+   "overlaps": [],
+   "status": "not-found"
+  },
+  {
    "modelFile": "models/ds/ds.json",
    "modelId": "ds-ds",
    "generations": [],
@@ -12087,36 +12515,40 @@
    "blockedSpans": []
   },
   {
-   "modelFile": "models/fiat/500-c.json",
-   "modelId": "fiat-500-c",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
-  },
-  {
    "modelFile": "models/fiat/500.json",
    "modelId": "fiat-500",
    "generations": [
     {
-     "slug": "uretim-1957",
-     "name": "500",
-     "start": 1957,
-     "end": 1975,
-     "marketId": "global",
+     "slug": "uretim-2007",
+     "name": "500 (312)",
+     "start": 2007,
+     "end": 2024,
+     "marketId": "eu",
      "approximate": false,
-     "engineDisplacementsL": [],
-     "engineSignatures": [],
-     "page": "Fiat 500",
-     "productionNote": ""
+     "engineDisplacementsL": [
+      0.9,
+      1,
+      1.2,
+      1.3,
+      1.4
+     ],
+     "engineSignatures": [
+      "0.9:?",
+      "1.0:hybrid",
+      "1.2:?",
+      "1.3:diesel",
+      "1.4:?",
+      "1.4:petrol"
+     ],
+     "page": "Fiat 500 (2007)",
+     "productionNote": "Poland"
     }
    ],
    "pages": [
     {
-     "title": "Fiat 500",
-     "pageid": 484016,
-     "revid": 1372192145
+     "title": "Fiat 500 (2007)",
+     "pageid": 5802146,
+     "revid": 1380399113
     }
    ],
    "conflicts": [],
@@ -12143,15 +12575,6 @@
    },
    "conflictSlugs": [],
    "blockedSpans": []
-  },
-  {
-   "modelFile": "models/fiat/500l-living.json",
-   "modelId": "fiat-500l-living",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
   },
   {
    "modelFile": "models/fiat/500l.json",
@@ -12532,23 +12955,24 @@
    "modelId": "fiat-freemont",
    "generations": [
     {
-     "slug": "uretim-2008",
-     "name": "Freemont (2008)",
-     "start": 2008,
-     "end": 2020,
+     "slug": "gs5",
+     "name": "Freemont (GS5)",
+     "code": "GS5",
+     "start": 2011,
+     "end": 2025,
      "marketId": "global",
      "approximate": false,
      "engineDisplacementsL": [],
      "engineSignatures": [],
-     "page": "Dodge Journey",
+     "page": "Trumpchi GS5",
      "productionNote": ""
     }
    ],
    "pages": [
     {
-     "title": "Dodge Journey",
-     "pageid": 11617869,
-     "revid": 1373618316
+     "title": "Trumpchi GS5",
+     "pageid": 55622928,
+     "revid": 1373927929
     }
    ],
    "conflicts": [],
@@ -13063,13 +13487,77 @@
    "blockedSpans": []
   },
   {
-   "modelFile": "models/fiat/strada-pick.json",
-   "modelId": "fiat-strada-pick",
-   "generations": [],
-   "pages": [],
+   "modelFile": "models/fiat/strada.json",
+   "modelId": "fiat-strada",
+   "generations": [
+    {
+     "slug": "1-nesil",
+     "name": "Strada 1. nesil",
+     "ordinal": 1,
+     "start": 1998,
+     "end": 2021,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [
+      1.2,
+      1.3,
+      1.4,
+      1.5,
+      1.6,
+      1.8,
+      1.9
+     ],
+     "engineSignatures": [
+      "1.2:?",
+      "1.3:?",
+      "1.3:diesel",
+      "1.4:?",
+      "1.5:?",
+      "1.6:?",
+      "1.8:?",
+      "1.9:diesel"
+     ],
+     "page": "Fiat Strada",
+     "productionNote": ""
+    },
+    {
+     "slug": "2-nesil",
+     "name": "Strada 2. nesil",
+     "ordinal": 2,
+     "start": 2020,
+     "end": null,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [
+      1,
+      1.3,
+      1.4
+     ],
+     "engineSignatures": [
+      "1.0:?",
+      "1.3:?",
+      "1.4:?"
+     ],
+     "page": "Fiat Strada",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Fiat Strada",
+     "pageid": 1272695,
+     "revid": 1351591207
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
-   "status": "not-found"
+   "article": "Fiat Strada",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
   },
   {
    "modelFile": "models/fiat/ulysse-s3.json",
@@ -13827,6 +14315,269 @@
     "Explorer 2. nesil (UN105) (1994–2003) ile Explorer 3. nesil (U152) (2000–2005) 2 yıldan fazla örtüşüyor (farklı gövde/pazar olabilir)"
    ],
    "article": "Ford Explorer",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
+  },
+  {
+   "modelFile": "models/ford/f-150.json",
+   "modelId": "ford-f-150",
+   "generations": [
+    {
+     "slug": "1-nesil",
+     "name": "F 150 1. nesil",
+     "ordinal": 1,
+     "start": 1952,
+     "end": 1952,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Ford F-Series (first generation)",
+     "productionNote": ""
+    },
+    {
+     "slug": "2-nesil",
+     "name": "F 150 2. nesil",
+     "ordinal": 2,
+     "start": 1952,
+     "end": 1956,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [
+      3.5,
+      3.7,
+      3.9,
+      4.2,
+      4.6,
+      5.2
+     ],
+     "engineSignatures": [
+      "3.5:?",
+      "3.7:?",
+      "3.9:?",
+      "4.2:?",
+      "4.6:?",
+      "5.2:?"
+     ],
+     "page": "Ford F-Series (second generation)",
+     "productionNote": ""
+    },
+    {
+     "slug": "3-nesil",
+     "name": "3. nesil Ford F-Serisi",
+     "ordinal": 3,
+     "start": 1957,
+     "end": 1960,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Ford F-Series (third generation)",
+     "productionNote": ""
+    },
+    {
+     "slug": "4-nesil",
+     "name": "F 150 4. nesil",
+     "ordinal": 4,
+     "start": 1960,
+     "end": 1966,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Ford F-Series (fourth generation)",
+     "productionNote": ""
+    },
+    {
+     "slug": "5-nesil",
+     "name": "5. nesil Ford F-Serisi",
+     "ordinal": 5,
+     "start": 1966,
+     "end": 1972,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [
+      2.8
+     ],
+     "engineSignatures": [
+      "2.8:?"
+     ],
+     "page": "Ford F-Series (fifth generation)",
+     "productionNote": ""
+    },
+    {
+     "slug": "6-nesil",
+     "name": "F 150 6. nesil",
+     "ordinal": 6,
+     "start": 1972,
+     "end": 1981,
+     "marketId": "global",
+     "approximate": true,
+     "engineDisplacementsL": [
+      3.3
+     ],
+     "engineSignatures": [
+      "3.3:diesel"
+     ],
+     "page": "Ford F-Series (sixth generation)",
+     "productionNote": "farklı pazarlar: USA; Mexico, Australia and Venezuela; Argentina, F-100, F-250, F-600 and F-700; Argentina, F-350"
+    },
+    {
+     "slug": "7-nesil",
+     "name": "F-series 7. nesil",
+     "ordinal": 7,
+     "start": 1979,
+     "end": 1986,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Ford F-Series (seventh generation)",
+     "productionNote": ""
+    },
+    {
+     "slug": "8-nesil",
+     "name": "F 150 8. nesil",
+     "ordinal": 8,
+     "start": 1986,
+     "end": 1995,
+     "marketId": "global",
+     "approximate": true,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Ford F-Series (eighth generation)",
+     "productionNote": "farklı pazarlar: USA, Mexico, Canada, and Venezuela; Australia; Argentina; Brazil; Argentina, Brazilian trim model"
+    },
+    {
+     "slug": "9-nesil",
+     "name": "F 150 9. nesil",
+     "ordinal": 9,
+     "start": 1991,
+     "end": 1997,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Ford F-Series (ninth generation)",
+     "productionNote": ""
+    },
+    {
+     "slug": "10-nesil",
+     "name": "F 150 10. nesil",
+     "ordinal": 10,
+     "start": 1995,
+     "end": 2004,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Ford F-Series (tenth generation)",
+     "productionNote": ""
+    },
+    {
+     "slug": "11-nesil",
+     "name": "F 150 11. nesil",
+     "ordinal": 11,
+     "start": 2003,
+     "end": 2008,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [
+      5.4
+     ],
+     "engineSignatures": [
+      "5.4:?"
+     ],
+     "page": "Ford F-Series (eleventh generation)",
+     "productionNote": ""
+    },
+    {
+     "slug": "12-nesil",
+     "name": "12. nesil Ford F-150 (P415)",
+     "ordinal": 12,
+     "start": 2008,
+     "end": 2014,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Ford F-Series (twelfth generation)",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Ford F-Series (first generation)",
+     "pageid": 34957525,
+     "revid": 1358133473
+    },
+    {
+     "title": "Ford F-Series (second generation)",
+     "pageid": 34957771,
+     "revid": 1369275097
+    },
+    {
+     "title": "Ford F-Series (third generation)",
+     "pageid": 34957778,
+     "revid": 1363417139
+    },
+    {
+     "title": "Ford F-Series (fourth generation)",
+     "pageid": 34957780,
+     "revid": 1380705099
+    },
+    {
+     "title": "Ford F-Series (fifth generation)",
+     "pageid": 34957783,
+     "revid": 1377852776
+    },
+    {
+     "title": "Ford F-Series (sixth generation)",
+     "pageid": 34957788,
+     "revid": 1371175914
+    },
+    {
+     "title": "Ford F-Series (seventh generation)",
+     "pageid": 34957798,
+     "revid": 1371179596
+    },
+    {
+     "title": "Ford F-Series (eighth generation)",
+     "pageid": 34957800,
+     "revid": 1379777257
+    },
+    {
+     "title": "Ford F-Series (ninth generation)",
+     "pageid": 34957804,
+     "revid": 1360674507
+    },
+    {
+     "title": "Ford F-Series (tenth generation)",
+     "pageid": 34957810,
+     "revid": 1379593206
+    },
+    {
+     "title": "Ford F-Series (eleventh generation)",
+     "pageid": 34957812,
+     "revid": 1357864798
+    },
+    {
+     "title": "Ford F-Series (twelfth generation)",
+     "pageid": 34957765,
+     "revid": 1371177540
+    }
+   ],
+   "conflicts": [],
+   "overlaps": [
+    "F 150 6. nesil (1972–1981) ile F-series 7. nesil (1979–1986) 2 yıldan fazla örtüşüyor (farklı gövde/pazar olabilir)",
+    "F 150 8. nesil (1986–1995) ile F 150 9. nesil (1991–1997) 2 yıldan fazla örtüşüyor (farklı gövde/pazar olabilir)",
+    "F 150 9. nesil (1991–1997) ile F 150 10. nesil (1995–2004) 2 yıldan fazla örtüşüyor (farklı gövde/pazar olabilir)"
+   ],
+   "article": "Ford F-Series",
    "status": "found",
    "identity": {
     "via": "title"
@@ -14710,11 +15461,37 @@
   {
    "modelFile": "models/ford/ranger.json",
    "modelId": "ford-ranger",
-   "generations": [],
-   "pages": [],
+   "generations": [
+    {
+     "slug": "t6",
+     "name": "Ranger (T6)",
+     "code": "T6",
+     "start": 2011,
+     "end": null,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Ford Ranger (T6)",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Ford Ranger (T6)",
+     "pageid": 32311240,
+     "revid": 1377829128
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
-   "status": "not-found"
+   "article": "Ford Ranger",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
   },
   {
    "modelFile": "models/ford/s-max.json",
@@ -16812,11 +17589,113 @@
   {
    "modelFile": "models/honda/jazz.json",
    "modelId": "honda-jazz",
-   "generations": [],
-   "pages": [],
+   "generations": [
+    {
+     "slug": "gd1-gd2-gd3-gd4-gd5-ge1-ge2-ge3",
+     "name": "Jazz 1. nesil (GD1/GD2/GD3/GD4/GD5/GE1/GE2/GE3)",
+     "code": "GD1/GD2/GD3/GD4/GD5/GE1/GE2/GE3",
+     "ordinal": 1,
+     "start": 2001,
+     "end": 2008,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Honda Fit (first generation)",
+     "productionNote": ""
+    },
+    {
+     "slug": "ge6-ge7-ge8-ge9-gg1-gg2-gg3-gg4-gg5-gg6",
+     "name": "Jazz 2. nesil (GE6/GE7/GE8/GE9/GG1/GG2/GG3/GG4/GG5/GG6)",
+     "code": "GE6/GE7/GE8/GE9/GG1/GG2/GG3/GG4/GG5/GG6",
+     "ordinal": 2,
+     "start": 2007,
+     "end": 2014,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [
+      1.2,
+      1.3,
+      1.5
+     ],
+     "engineSignatures": [
+      "1.2:petrol",
+      "1.3:?",
+      "1.3:petrol",
+      "1.5:?",
+      "1.5:petrol"
+     ],
+     "page": "Honda Fit (second generation)",
+     "productionNote": ""
+    },
+    {
+     "slug": "gk3-gk4-gk5-gk6-gk7-gh7-gp5-gp6",
+     "name": "Jazz 3. nesil (GK3/GK4/GK5/GK6/GK7/GH7/GP5/GP6)",
+     "code": "GK3/GK4/GK5/GK6/GK7/GH7/GP5/GP6",
+     "ordinal": 3,
+     "start": 2013,
+     "end": 2022,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [
+      1.2,
+      1.3,
+      1.5
+     ],
+     "engineSignatures": [
+      "1.2:petrol",
+      "1.3:petrol",
+      "1.5:?",
+      "1.5:diesel",
+      "1.5:petrol"
+     ],
+     "page": "Honda Fit",
+     "productionNote": ""
+    },
+    {
+     "slug": "gr1-gr2-gr3-gr4-gr5-gr6-gr7-gr8-gs4-gs5-gs6-gs7",
+     "name": "Jazz 4. nesil (GR1/GR2/GR3/GR4/GR5/GR6/GR7/GR8/GS4/GS5/GS6/GS7)",
+     "code": "GR1/GR2/GR3/GR4/GR5/GR6/GR7/GR8/GS4/GS5/GS6/GS7",
+     "ordinal": 4,
+     "start": 2020,
+     "end": null,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Honda Fit",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Honda Fit",
+     "pageid": 417157,
+     "revid": 1380069362
+    },
+    {
+     "title": "Honda Fit (first generation)",
+     "pageid": 68127406,
+     "revid": 1373669910
+    },
+    {
+     "title": "Honda Fit (second generation)",
+     "pageid": 66264897,
+     "revid": 1376721275
+    }
+   ],
    "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
+   "overlaps": [
+    "Jazz 3. nesil (GK3/GK4/GK5/GK6/GK7/GH7/GP5/GP6) (2013–2022) ile Jazz 4. nesil (GR1/GR2/GR3/GR4/GR5/GR6/GR7/GR8/GS4/GS5/GS6/GS7) (2020–…) 2 yıldan fazla örtüşüyor (farklı gövde/pazar olabilir)"
+   ],
+   "article": "Honda Fit",
+   "status": "found",
+   "identity": {
+    "via": "alias",
+    "label": "Honda Fit"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
   },
   {
    "modelFile": "models/honda/legend.json",
@@ -17198,15 +18077,6 @@
    },
    "conflictSlugs": [],
    "blockedSpans": []
-  },
-  {
-   "modelFile": "models/hyundai/accent-era.json",
-   "modelId": "hyundai-accent-era",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
   },
   {
    "modelFile": "models/hyundai/accent.json",
@@ -17886,30 +18756,10 @@
    "article": "Hyundai i10",
    "status": "found",
    "identity": {
-    "via": "wikidata",
-    "qid": "Q494384",
-    "label": "Hyundai i10"
+    "via": "title"
    },
    "conflictSlugs": [],
    "blockedSpans": []
-  },
-  {
-   "modelFile": "models/hyundai/i20-active.json",
-   "modelId": "hyundai-i20-active",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
-  },
-  {
-   "modelFile": "models/hyundai/i20-troy.json",
-   "modelId": "hyundai-i20-troy",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
   },
   {
    "modelFile": "models/hyundai/i20.json",
@@ -17919,15 +18769,6 @@
    "conflicts": [],
    "overlaps": [],
    "status": "skipped-curated"
-  },
-  {
-   "modelFile": "models/hyundai/i30-cw.json",
-   "modelId": "hyundai-i30-cw",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
   },
   {
    "modelFile": "models/hyundai/i30.json",
@@ -17967,9 +18808,7 @@
    "article": "Hyundai i40",
    "status": "found",
    "identity": {
-    "via": "wikidata",
-    "qid": "Q483092",
-    "label": "Hyundai i40"
+    "via": "title"
    },
    "conflictSlugs": [],
    "blockedSpans": []
@@ -18020,6 +18859,15 @@
   {
    "modelFile": "models/hyundai/ix35.json",
    "modelId": "hyundai-ix35",
+   "generations": [],
+   "pages": [],
+   "conflicts": [],
+   "overlaps": [],
+   "status": "not-found"
+  },
+  {
+   "modelFile": "models/hyundai/ix55.json",
+   "modelId": "hyundai-ix55",
    "generations": [],
    "pages": [],
    "conflicts": [],
@@ -19310,24 +20158,23 @@
    "modelId": "jaguar-s-type",
    "generations": [
     {
-     "slug": "x200",
-     "name": "S-Type (X200)",
-     "code": "X200",
-     "start": 1999,
-     "end": 2007,
+     "slug": "uretim-1963",
+     "name": "S-Type (1963–1968)",
+     "start": 1963,
+     "end": 1968,
      "marketId": "global",
      "approximate": false,
      "engineDisplacementsL": [],
      "engineSignatures": [],
-     "page": "Jaguar S-Type (1999)",
+     "page": "Jaguar S-Type (1963)",
      "productionNote": ""
     }
    ],
    "pages": [
     {
-     "title": "Jaguar S-Type (1999)",
-     "pageid": 504570,
-     "revid": 1343513136
+     "title": "Jaguar S-Type (1963)",
+     "pageid": 2340193,
+     "revid": 1372840882
     }
    ],
    "conflicts": [],
@@ -19435,11 +20282,55 @@
   {
    "modelFile": "models/jaguar/xf.json",
    "modelId": "jaguar-xf",
-   "generations": [],
-   "pages": [],
+   "generations": [
+    {
+     "slug": "x250",
+     "name": "XF (X250)",
+     "code": "X250",
+     "start": 2007,
+     "end": 2015,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Jaguar XF (X250)",
+     "productionNote": ""
+    },
+    {
+     "slug": "x260",
+     "name": "XF (X260)",
+     "code": "X260",
+     "start": 2015,
+     "end": 2024,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Jaguar XF (X260)",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Jaguar XF (X250)",
+     "pageid": 8165623,
+     "revid": 1380675904
+    },
+    {
+     "title": "Jaguar XF (X260)",
+     "pageid": 56680246,
+     "revid": 1343512539
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
-   "status": "not-found"
+   "article": "Jaguar XF",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
   },
   {
    "modelFile": "models/jaguar/xj.json",
@@ -19596,24 +20487,42 @@
    "modelId": "jaguar-xj8",
    "generations": [
     {
-     "slug": "x308",
-     "name": "XJ8 (X308)",
-     "code": "X308",
-     "start": 1997,
-     "end": 2002,
+     "slug": "x300",
+     "name": "XJ8 (X300)",
+     "code": "X300",
+     "start": 1994,
+     "end": 1997,
      "marketId": "global",
      "approximate": false,
      "engineDisplacementsL": [],
      "engineSignatures": [],
-     "page": "Jaguar XJ (X308)",
+     "page": "Jaguar XJ (X300)",
+     "productionNote": ""
+    },
+    {
+     "slug": "x350",
+     "name": "XJ8 (X350)",
+     "code": "X350",
+     "start": 2002,
+     "end": 2009,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Jaguar XJ (X350)",
      "productionNote": ""
     }
    ],
    "pages": [
     {
-     "title": "Jaguar XJ (X308)",
-     "pageid": 33813058,
-     "revid": 1375299156
+     "title": "Jaguar XJ (X300)",
+     "pageid": 33740643,
+     "revid": 1372413683
+    },
+    {
+     "title": "Jaguar XJ (X350)",
+     "pageid": 23634270,
+     "revid": 1368211668
     }
    ],
    "conflicts": [],
@@ -19631,24 +20540,24 @@
    "modelId": "jaguar-xk8",
    "generations": [
     {
-     "slug": "x100",
-     "name": "XK8 (X100)",
-     "code": "X100",
-     "start": 1996,
-     "end": 2005,
+     "slug": "x150",
+     "name": "XK8 (X150)",
+     "code": "X150",
+     "start": 2005,
+     "end": 2014,
      "marketId": "global",
      "approximate": false,
      "engineDisplacementsL": [],
      "engineSignatures": [],
-     "page": "Jaguar XK (X100)",
+     "page": "Jaguar XK (X150)",
      "productionNote": ""
     }
    ],
    "pages": [
     {
-     "title": "Jaguar XK (X100)",
-     "pageid": 32325273,
-     "revid": 1375901981
+     "title": "Jaguar XK (X150)",
+     "pageid": 24505559,
+     "revid": 1371535548
     }
    ],
    "conflicts": [],
@@ -19865,11 +20774,43 @@
   {
    "modelFile": "models/jeep/commander.json",
    "modelId": "jeep-commander",
-   "generations": [],
-   "pages": [],
+   "generations": [
+    {
+     "slug": "uretim-2021",
+     "name": "Commander",
+     "start": 2021,
+     "end": null,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [
+      1.3,
+      2
+     ],
+     "engineSignatures": [
+      "1.3:?",
+      "2.0:?",
+      "2.0:diesel"
+     ],
+     "page": "Jeep Commander (2022)",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Jeep Commander (2022)",
+     "pageid": 68577259,
+     "revid": 1363648231
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
-   "status": "not-found"
+   "article": "Jeep Commander",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
   },
   {
    "modelFile": "models/jeep/compass.json",
@@ -20198,15 +21139,6 @@
    },
    "conflictSlugs": [],
    "blockedSpans": []
-  },
-  {
-   "modelFile": "models/kgm/musso-grand.json",
-   "modelId": "kgm-musso-grand",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
   },
   {
    "modelFile": "models/kgm/musso.json",
@@ -20656,15 +21588,6 @@
    },
    "conflictSlugs": [],
    "blockedSpans": []
-  },
-  {
-   "modelFile": "models/kia/ceed-sportywagon.json",
-   "modelId": "kia-ceed-sportywagon",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
   },
   {
    "modelFile": "models/kia/ceed.json",
@@ -25477,6 +26400,54 @@
    "blockedSpans": []
   },
   {
+   "modelFile": "models/mazda/cx-9.json",
+   "modelId": "mazda-cx-9",
+   "generations": [
+    {
+     "slug": "1-nesil",
+     "name": "CX-9 1. nesil",
+     "ordinal": 1,
+     "start": 2006,
+     "end": 2015,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Mazda CX-9",
+     "productionNote": ""
+    },
+    {
+     "slug": "2-nesil",
+     "name": "CX-9 2. nesil",
+     "ordinal": 2,
+     "start": 2016,
+     "end": 2023,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Mazda CX-9",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Mazda CX-9",
+     "pageid": 3983050,
+     "revid": 1369074762
+    }
+   ],
+   "conflicts": [],
+   "overlaps": [],
+   "article": "Mazda CX-9",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
+  },
+  {
    "modelFile": "models/mazda/mx-5-rf.json",
    "modelId": "mazda-mx-5-rf",
    "generations": [],
@@ -25752,15 +26723,6 @@
    },
    "conflictSlugs": [],
    "blockedSpans": []
-  },
-  {
-   "modelFile": "models/mercedes-benz/c-180k.json",
-   "modelId": "mercedes-benz-c-180k",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
   },
   {
    "modelFile": "models/mercedes-benz/c.json",
@@ -26111,44 +27073,81 @@
    "modelId": "mercedes-benz-clc",
    "generations": [
     {
-     "slug": "w203",
-     "name": "Clc (W203)",
-     "code": "W203",
-     "start": 1999,
-     "end": 2010,
+     "slug": "w202",
+     "name": "Clc (W202)",
+     "code": "W202",
+     "start": 1992,
+     "end": 2001,
      "marketId": "global",
      "approximate": true,
      "engineDisplacementsL": [
       1.8,
       2,
-      2.1,
+      2.2,
+      2.3,
       2.5,
-      2.6,
-      3,
-      3.2,
-      3.5,
+      2.8,
+      3.6,
+      4.3,
       5.4
      ],
      "engineSignatures": [
       "1.8:?",
       "2.0:?",
-      "2.1:diesel",
+      "2.2:?",
+      "2.2:diesel",
+      "2.3:?",
       "2.5:?",
-      "2.6:?",
-      "3.0:diesel",
-      "3.2:?",
-      "3.5:?",
+      "2.8:?",
+      "3.6:?",
+      "4.3:?",
       "5.4:?"
      ],
-     "page": "Mercedes-Benz C-Class (W203)",
-     "productionNote": "farklı pazarlar: sedan; station wagon; coupe"
+     "page": "Mercedes-Benz C-Class (W202)",
+     "productionNote": "farklı pazarlar: sedan; station wagon"
+    },
+    {
+     "slug": "w204",
+     "name": "Clc (W204)",
+     "code": "W204",
+     "start": 2007,
+     "end": 2015,
+     "marketId": "global",
+     "approximate": true,
+     "engineDisplacementsL": [
+      1.6,
+      1.8,
+      2.1,
+      2.2,
+      2.5,
+      3,
+      3.5,
+      6.2
+     ],
+     "engineSignatures": [
+      "1.6:?",
+      "1.8:?",
+      "2.1:diesel",
+      "2.2:diesel",
+      "2.5:?",
+      "3.0:diesel",
+      "3.5:?",
+      "6.2:?"
+     ],
+     "page": "Mercedes-Benz C-Class (W204)",
+     "productionNote": "farklı pazarlar: sedan; station wagon; coupé"
     }
    ],
    "pages": [
     {
-     "title": "Mercedes-Benz C-Class (W203)",
-     "pageid": 43111312,
-     "revid": 1366622628
+     "title": "Mercedes-Benz C-Class (W202)",
+     "pageid": 43111244,
+     "revid": 1378513445
+    },
+    {
+     "title": "Mercedes-Benz C-Class (W204)",
+     "pageid": 4922964,
+     "revid": 1376410678
     }
    ],
    "conflicts": [],
@@ -27214,6 +28213,15 @@
    "blockedSpans": []
   },
   {
+   "modelFile": "models/mercedes-benz/gt.json",
+   "modelId": "mercedes-benz-gt",
+   "generations": [],
+   "pages": [],
+   "conflicts": [],
+   "overlaps": [],
+   "status": "not-found"
+  },
+  {
    "modelFile": "models/mercedes-benz/maybach.json",
    "modelId": "mercedes-benz-maybach",
    "generations": [
@@ -27560,12 +28568,39 @@
   {
    "modelFile": "models/mercedes-benz/sl.json",
    "modelId": "mercedes-benz-sl",
-   "generations": [],
-   "pages": [],
+   "generations": [
+    {
+     "slug": "r232",
+     "name": "SL (R232)",
+     "code": "R232",
+     "start": 2022,
+     "end": null,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [
+      2,
+      4
+     ],
+     "engineSignatures": [
+      "2.0:hybrid",
+      "4.0:?",
+      "4.0:hybrid"
+     ],
+     "page": "Mercedes-Benz SL (R232)",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Mercedes-Benz SL (R232)",
+     "pageid": 63160111,
+     "revid": 1363256421
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
    "article": "Mercedes-Benz SL-Class",
-   "status": "no-generations",
+   "status": "found",
    "identity": {
     "via": "title"
    },
@@ -28371,11 +29406,36 @@
   {
    "modelFile": "models/mg/zs.json",
    "modelId": "mg-zs",
-   "generations": [],
-   "pages": [],
+   "generations": [
+    {
+     "slug": "uretim-2001",
+     "name": "ZS",
+     "start": 2001,
+     "end": 2005,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "MG ZS (2001)",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "MG ZS (2001)",
+     "pageid": 1335110,
+     "revid": 1377593992
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
-   "status": "not-found"
+   "article": "MG ZS",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
   },
   {
    "modelFile": "models/mini/cooper.json",
@@ -28387,31 +29447,108 @@
    "status": "not-found"
   },
   {
-   "modelFile": "models/mini/mini-john.json",
-   "modelId": "mini-mini-john",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
-  },
-  {
-   "modelFile": "models/mini/mini-one.json",
-   "modelId": "mini-mini-one",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
-  },
-  {
    "modelFile": "models/mini/mini.json",
    "modelId": "mini-mini",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
+   "generations": [
+    {
+     "slug": "r50",
+     "name": "Mini 1. nesil (R50)",
+     "code": "R50",
+     "ordinal": 1,
+     "start": 2001,
+     "end": 2008,
+     "marketId": "global",
+     "approximate": true,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Mini Hatch",
+     "productionNote": "farklı pazarlar: R50/53; R52"
+    },
+    {
+     "slug": "r56",
+     "name": "Mini 2. nesil (R56)",
+     "code": "R56",
+     "ordinal": 2,
+     "start": 2006,
+     "end": 2015,
+     "marketId": "global",
+     "approximate": true,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Mini Hatch",
+     "productionNote": "farklı pazarlar: Hatch; Convertible"
+    },
+    {
+     "slug": "f55",
+     "name": "Mini 3. nesil (F55)",
+     "code": "F55",
+     "ordinal": 3,
+     "start": 2013,
+     "end": 2024,
+     "marketId": "global",
+     "approximate": true,
+     "engineDisplacementsL": [
+      1.2,
+      1.5,
+      2
+     ],
+     "engineSignatures": [
+      "1.2:petrol",
+      "1.5:?",
+      "1.5:petrol",
+      "2.0:petrol"
+     ],
+     "page": "Mini Hatch",
+     "productionNote": "farklı pazarlar: Hatch; Convertible"
+    },
+    {
+     "slug": "j01-f65",
+     "name": "Mini 4. nesil (J01/F65)",
+     "code": "J01/F65",
+     "ordinal": 4,
+     "start": 2023,
+     "end": null,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Mini Hatch",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Mini Hatch",
+     "pageid": 35024802,
+     "revid": 1378389791
+    }
+   ],
+   "conflicts": [
+    "j01-f65: iki kaynak satırı farklı yıllar veriyor (2023–… / 2024–…)"
+   ],
+   "overlaps": [
+    "Mini 1. nesil (R50) (2001–2008) ile Mini 2. nesil (R56) (2006–2015) 2 yıldan fazla örtüşüyor (farklı gövde/pazar olabilir)",
+    "Mini 2. nesil (R56) (2006–2015) ile Mini 3. nesil (F55) (2013–2024) 2 yıldan fazla örtüşüyor (farklı gövde/pazar olabilir)"
+   ],
+   "article": "Mini Hatch",
+   "status": "found",
+   "identity": {
+    "via": "alias",
+    "label": "Mini Hatch"
+   },
+   "conflictSlugs": [
+    "j01-f65"
+   ],
+   "blockedSpans": [
+    {
+     "start": 2023,
+     "end": null
+    },
+    {
+     "start": 2024,
+     "end": null
+    }
+   ]
   },
   {
    "modelFile": "models/mitsubishi/asx.json",
@@ -30005,6 +31142,96 @@
    "blockedSpans": []
   },
   {
+   "modelFile": "models/nissan/np-300.json",
+   "modelId": "nissan-np-300",
+   "generations": [
+    {
+     "slug": "d22",
+     "name": "NP 300 1. nesil (D22)",
+     "code": "D22",
+     "ordinal": 1,
+     "start": 1997,
+     "end": null,
+     "marketId": "global",
+     "approximate": true,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Nissan Navara",
+     "productionNote": "farklı pazarlar: Facelift version"
+    },
+    {
+     "slug": "d40",
+     "name": "NP 300 2. nesil (D40)",
+     "code": "D40",
+     "ordinal": 2,
+     "start": 2004,
+     "end": 2021,
+     "marketId": "global",
+     "approximate": true,
+     "engineDisplacementsL": [
+      2.5,
+      3,
+      3.8,
+      4
+     ],
+     "engineSignatures": [
+      "2.5:?",
+      "3.0:?",
+      "3.8:?",
+      "4.0:?"
+     ],
+     "page": "Nissan Navara",
+     "productionNote": "farklı pazarlar: United States; Thailand; Brazil"
+    },
+    {
+     "slug": "d23",
+     "name": "NP 300 3. nesil (D23)",
+     "code": "D23",
+     "ordinal": 3,
+     "start": 2015,
+     "end": 2021,
+     "marketId": "eu",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Nissan Navara",
+     "productionNote": "Spain"
+    },
+    {
+     "slug": "d27",
+     "name": "NP 300 4. nesil (D27)",
+     "code": "D27",
+     "ordinal": 4,
+     "start": 2025,
+     "end": null,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Nissan Navara",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Nissan Navara",
+     "pageid": 427065,
+     "revid": 1379351425
+    }
+   ],
+   "conflicts": [],
+   "overlaps": [
+    "NP 300 2. nesil (D40) (2004–2021) ile NP 300 3. nesil (D23) (2015–2021) 2 yıldan fazla örtüşüyor (farklı gövde/pazar olabilir)"
+   ],
+   "article": "Nissan Navara",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
+  },
+  {
    "modelFile": "models/nissan/np.json",
    "modelId": "nissan-np",
    "generations": [],
@@ -30956,185 +32183,6 @@
    "status": "not-found"
   },
   {
-   "modelFile": "models/opel/astra-gtc.json",
-   "modelId": "opel-astra-gtc",
-   "generations": [
-    {
-     "slug": "t91",
-     "name": "Astra Gtc 1. nesil (T91)",
-     "code": "T91",
-     "ordinal": 1,
-     "start": 1991,
-     "end": 2003,
-     "marketId": "global",
-     "approximate": false,
-     "engineDisplacementsL": [
-      1.4,
-      1.6,
-      1.7,
-      1.8,
-      2
-     ],
-     "engineSignatures": [
-      "1.4:?",
-      "1.6:?",
-      "1.7:?",
-      "1.8:?",
-      "2.0:?"
-     ],
-     "page": "Opel Astra",
-     "productionNote": ""
-    },
-    {
-     "slug": "a04",
-     "name": "Astra Gtc 3. nesil (A04)",
-     "code": "A04",
-     "ordinal": 3,
-     "start": 2004,
-     "end": 2014,
-     "marketId": "global",
-     "approximate": true,
-     "engineDisplacementsL": [
-      1.2,
-      1.3,
-      1.4,
-      1.6,
-      1.7,
-      1.8,
-      1.9,
-      2,
-      2.2,
-      2.4
-     ],
-     "engineSignatures": [
-      "1.2:?",
-      "1.3:diesel",
-      "1.4:?",
-      "1.6:?",
-      "1.7:diesel",
-      "1.8:?",
-      "1.9:diesel",
-      "2.0:?",
-      "2.2:?",
-      "2.4:?"
-     ],
-     "page": "Opel Astra",
-     "productionNote": "farklı pazarlar: Opel; Chevrolet; Saturn"
-    },
-    {
-     "slug": "p09",
-     "name": "Astra Gtc 4. nesil (P09)",
-     "code": "P09",
-     "ordinal": 4,
-     "start": 2009,
-     "end": 2015,
-     "marketId": "global",
-     "approximate": false,
-     "engineDisplacementsL": [
-      1.3,
-      1.4,
-      1.6,
-      1.7,
-      1.8,
-      2
-     ],
-     "engineSignatures": [
-      "1.3:?",
-      "1.4:?",
-      "1.6:?",
-      "1.7:?",
-      "1.8:?",
-      "2.0:?"
-     ],
-     "page": "Opel Astra",
-     "productionNote": ""
-    },
-    {
-     "slug": "b15",
-     "name": "Astra Gtc 5. nesil (B15)",
-     "code": "B15",
-     "ordinal": 5,
-     "start": 2015,
-     "end": 2021,
-     "marketId": "global",
-     "approximate": false,
-     "engineDisplacementsL": [
-      1,
-      1.2,
-      1.3,
-      1.4,
-      1.5,
-      1.6
-     ],
-     "engineSignatures": [
-      "1.0:?",
-      "1.2:?",
-      "1.3:?",
-      "1.4:?",
-      "1.5:diesel",
-      "1.6:?",
-      "1.6:diesel"
-     ],
-     "page": "Opel Astra",
-     "productionNote": ""
-    },
-    {
-     "slug": "c02",
-     "name": "Astra Gtc 6. nesil (C02)",
-     "code": "C02",
-     "ordinal": 6,
-     "start": 2021,
-     "end": null,
-     "marketId": "global",
-     "approximate": false,
-     "engineDisplacementsL": [
-      1.2,
-      1.5,
-      1.6
-     ],
-     "engineSignatures": [
-      "1.2:?",
-      "1.2:hybrid",
-      "1.5:diesel",
-      "1.6:?"
-     ],
-     "page": "Opel Astra",
-     "productionNote": ""
-    }
-   ],
-   "pages": [
-    {
-     "title": "Opel Astra",
-     "pageid": 373870,
-     "revid": 1378928314
-    }
-   ],
-   "conflicts": [
-    "t91: iki kaynak satırı farklı yıllar veriyor (1991–2003 / 1998–2011)"
-   ],
-   "overlaps": [
-    "Astra Gtc 3. nesil (A04) (2004–2014) ile Astra Gtc 4. nesil (P09) (2009–2015) 2 yıldan fazla örtüşüyor (farklı gövde/pazar olabilir)"
-   ],
-   "article": "Opel Astra",
-   "status": "found",
-   "identity": {
-    "via": "title"
-   },
-   "conflictSlugs": [
-    "t91"
-   ],
-   "blockedSpans": [
-    {
-     "start": 1991,
-     "end": 2003
-    },
-    {
-     "start": 1998,
-     "end": 2011
-    }
-   ]
-  },
-  {
    "modelFile": "models/opel/astra.json",
    "modelId": "opel-astra",
    "generations": [],
@@ -31341,11 +32389,37 @@
   {
    "modelFile": "models/opel/frontera.json",
    "modelId": "opel-frontera",
-   "generations": [],
-   "pages": [],
+   "generations": [
+    {
+     "slug": "ov24",
+     "name": "Frontera (OV24)",
+     "code": "OV24",
+     "start": 2024,
+     "end": null,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Opel Frontera (2024)",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Opel Frontera (2024)",
+     "pageid": 76563217,
+     "revid": 1371558604
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
-   "status": "not-found"
+   "article": "Opel Frontera",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
   },
   {
    "modelFile": "models/opel/grandland.json",
@@ -31426,24 +32500,6 @@
    },
    "conflictSlugs": [],
    "blockedSpans": []
-  },
-  {
-   "modelFile": "models/opel/insignia-countrytourer.json",
-   "modelId": "opel-insignia-countrytourer",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
-  },
-  {
-   "modelFile": "models/opel/insignia-grand.json",
-   "modelId": "opel-insignia-grand",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
   },
   {
    "modelFile": "models/opel/insignia.json",
@@ -32633,6 +33689,15 @@
    "blockedSpans": []
   },
   {
+   "modelFile": "models/peugeot/e-3008.json",
+   "modelId": "peugeot-e-3008",
+   "generations": [],
+   "pages": [],
+   "conflicts": [],
+   "overlaps": [],
+   "status": "not-found"
+  },
+  {
    "modelFile": "models/peugeot/e-308.json",
    "modelId": "peugeot-e-308",
    "generations": [],
@@ -32736,24 +33801,6 @@
    },
    "conflictSlugs": [],
    "blockedSpans": []
-  },
-  {
-   "modelFile": "models/peugeot/partner-origin.json",
-   "modelId": "peugeot-partner-origin",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
-  },
-  {
-   "modelFile": "models/peugeot/partner-teepe.json",
-   "modelId": "peugeot-partner-teepe",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
   },
   {
    "modelFile": "models/peugeot/partner.json",
@@ -33555,21 +34602,12 @@
    "blockedSpans": []
   },
   {
-   "modelFile": "models/proton/gen.json",
-   "modelId": "proton-gen",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
-  },
-  {
-   "modelFile": "models/proton/gen2.json",
-   "modelId": "proton-gen2",
+   "modelFile": "models/proton/gen-2.json",
+   "modelId": "proton-gen-2",
    "generations": [
     {
      "slug": "uretim-2004",
-     "name": "GEN2 (2004)",
+     "name": "Gen 2 (2004)",
      "start": 2004,
      "end": 2012,
      "marketId": "global",
@@ -33600,12 +34638,19 @@
    "article": "Proton Gen 2",
    "status": "found",
    "identity": {
-    "via": "wikidata",
-    "qid": "Q1784527",
-    "label": "Proton GEN2"
+    "via": "title"
    },
    "conflictSlugs": [],
    "blockedSpans": []
+  },
+  {
+   "modelFile": "models/proton/gen2.json",
+   "modelId": "proton-gen2",
+   "generations": [],
+   "pages": [],
+   "conflicts": [],
+   "overlaps": [],
+   "status": "not-found"
   },
   {
    "modelFile": "models/proton/perdana.json",
@@ -34212,15 +35257,6 @@
    "status": "not-found"
   },
   {
-   "modelFile": "models/renault/clio-grand.json",
-   "modelId": "renault-clio-grand",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
-  },
-  {
    "modelFile": "models/renault/clio.json",
    "modelId": "renault-clio",
    "generations": [],
@@ -34440,15 +35476,6 @@
      "end": 2013
     }
    ]
-  },
-  {
-   "modelFile": "models/renault/fluence-bold.json",
-   "modelId": "renault-fluence-bold",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
   },
   {
    "modelFile": "models/renault/fluence.json",
@@ -35230,15 +36257,6 @@
    ]
   },
   {
-   "modelFile": "models/renault/symbol-collection.json",
-   "modelId": "renault-symbol-collection",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
-  },
-  {
    "modelFile": "models/renault/symbol.json",
    "modelId": "renault-symbol",
    "generations": [],
@@ -35945,15 +36963,6 @@
    "status": "not-found"
   },
   {
-   "modelFile": "models/seat/altea-xl.json",
-   "modelId": "seat-altea-xl",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
-  },
-  {
    "modelFile": "models/seat/altea.json",
    "modelId": "seat-altea",
    "generations": [],
@@ -36167,15 +37176,6 @@
    },
    "conflictSlugs": [],
    "blockedSpans": []
-  },
-  {
-   "modelFile": "models/seat/ibiza-sportourer.json",
-   "modelId": "seat-ibiza-sportourer",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
   },
   {
    "modelFile": "models/seat/ibiza.json",
@@ -37121,22 +38121,50 @@
    "blockedSpans": []
   },
   {
-   "modelFile": "models/skoda/rapid-spaceback.json",
-   "modelId": "skoda-rapid-spaceback",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
-  },
-  {
    "modelFile": "models/skoda/rapid.json",
    "modelId": "skoda-rapid",
-   "generations": [],
-   "pages": [],
+   "generations": [
+    {
+     "slug": "uretim-2012",
+     "name": "Rapid (NH1/2/3)",
+     "start": 2012,
+     "end": 2019,
+     "marketId": "eu",
+     "approximate": false,
+     "engineDisplacementsL": [
+      1,
+      1.2,
+      1.4,
+      1.6
+     ],
+     "engineSignatures": [
+      "1.0:petrol",
+      "1.2:petrol",
+      "1.4:diesel",
+      "1.4:petrol",
+      "1.6:diesel",
+      "1.6:petrol"
+     ],
+     "page": "Škoda Rapid (2012)",
+     "productionNote": "Czech Republic"
+    }
+   ],
+   "pages": [
+    {
+     "title": "Škoda Rapid (2012)",
+     "pageid": 36355401,
+     "revid": 1373780020
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
-   "status": "not-found"
+   "article": "Škoda Rapid",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
   },
   {
    "modelFile": "models/skoda/roomster-panorama.json",
@@ -37337,15 +38365,6 @@
    },
    "conflictSlugs": [],
    "blockedSpans": []
-  },
-  {
-   "modelFile": "models/skoda/yeti-experience.json",
-   "modelId": "skoda-yeti-experience",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
   },
   {
    "modelFile": "models/skoda/yeti-greenline.json",
@@ -37686,24 +38705,6 @@
    },
    "conflictSlugs": [],
    "blockedSpans": []
-  },
-  {
-   "modelFile": "models/ssangyong/rexton-rx270.json",
-   "modelId": "ssangyong-rexton-rx270",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
-  },
-  {
-   "modelFile": "models/ssangyong/rexton-w.json",
-   "modelId": "ssangyong-rexton-w",
-   "generations": [],
-   "pages": [],
-   "conflicts": [],
-   "overlaps": [],
-   "status": "not-found"
   },
   {
    "modelFile": "models/ssangyong/rexton.json",
@@ -38992,11 +39993,36 @@
   {
    "modelFile": "models/suzuki/baleno.json",
    "modelId": "suzuki-baleno",
-   "generations": [],
-   "pages": [],
+   "generations": [
+    {
+     "slug": "uretim-2015",
+     "name": "Baleno",
+     "start": 2015,
+     "end": null,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Suzuki Baleno (2015)",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Suzuki Baleno (2015)",
+     "pageid": 50578595,
+     "revid": 1380212682
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
-   "status": "not-found"
+   "article": "Suzuki Baleno",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
   },
   {
    "modelFile": "models/suzuki/celerio.json",
@@ -40394,12 +41420,32 @@
   {
    "modelFile": "models/toyota/camry.json",
    "modelId": "toyota-camry",
-   "generations": [],
-   "pages": [],
+   "generations": [
+    {
+     "slug": "xv10",
+     "name": "Camry (XV10)",
+     "code": "XV10",
+     "start": 1991,
+     "end": 2002,
+     "marketId": "global",
+     "approximate": true,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Toyota Camry (XV10)",
+     "productionNote": "farklı pazarlar: US; Japan; China; South Africa; Australia; Thailand"
+    }
+   ],
+   "pages": [
+    {
+     "title": "Toyota Camry (XV10)",
+     "pageid": 3669020,
+     "revid": 1362557469
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
    "article": "Toyota Camry",
-   "status": "no-generations",
+   "status": "found",
    "identity": {
     "via": "title"
    },
@@ -40945,13 +41991,74 @@
    ]
   },
   {
-   "modelFile": "models/toyota/land.json",
-   "modelId": "toyota-land",
-   "generations": [],
-   "pages": [],
+   "modelFile": "models/toyota/land-cruiser.json",
+   "modelId": "toyota-land-cruiser",
+   "generations": [
+    {
+     "slug": "j40",
+     "name": "Land Cruiser (J40)",
+     "code": "J40",
+     "start": 1960,
+     "end": 1984,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Toyota Land Cruiser (J40)",
+     "productionNote": ""
+    },
+    {
+     "slug": "j70",
+     "name": "Land Cruiser (J70)",
+     "code": "J70",
+     "start": 1984,
+     "end": null,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Toyota Land Cruiser (J70)",
+     "productionNote": ""
+    },
+    {
+     "slug": "uretim-1984",
+     "name": "Land Cruiser Prado",
+     "start": 1984,
+     "end": null,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Toyota Land Cruiser Prado",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Toyota Land Cruiser (J40)",
+     "pageid": 1834952,
+     "revid": 1375295267
+    },
+    {
+     "title": "Toyota Land Cruiser (J70)",
+     "pageid": 7034102,
+     "revid": 1379038969
+    },
+    {
+     "title": "Toyota Land Cruiser Prado",
+     "pageid": 4855960,
+     "revid": 1373868750
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
-   "status": "not-found"
+   "article": "Toyota Land Cruiser",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
   },
   {
    "modelFile": "models/toyota/lexus.json",
@@ -41349,12 +42456,12 @@
    "blockedSpans": []
   },
   {
-   "modelFile": "models/toyota/rav.json",
-   "modelId": "toyota-rav",
+   "modelFile": "models/toyota/rav-4.json",
+   "modelId": "toyota-rav-4",
    "generations": [
     {
      "slug": "xa10",
-     "name": "Rav 1. nesil (XA10)",
+     "name": "Rav 4 1. nesil (XA10)",
      "code": "XA10",
      "ordinal": 1,
      "start": 1994,
@@ -41372,7 +42479,7 @@
     },
     {
      "slug": "xa20",
-     "name": "Rav 2. nesil (XA20)",
+     "name": "Rav 4 2. nesil (XA20)",
      "code": "XA20",
      "ordinal": 2,
      "start": 2000,
@@ -41395,7 +42502,7 @@
     },
     {
      "slug": "xa30",
-     "name": "Rav 3. nesil (XA30)",
+     "name": "Rav 4 3. nesil (XA30)",
      "code": "XA30",
      "ordinal": 3,
      "start": 2005,
@@ -41423,7 +42530,7 @@
     },
     {
      "slug": "xa40",
-     "name": "Rav 4. nesil (XA40)",
+     "name": "Rav 4 4. nesil (XA40)",
      "code": "XA40",
      "ordinal": 4,
      "start": 2012,
@@ -41447,7 +42554,7 @@
     },
     {
      "slug": "xa50",
-     "name": "Rav 5. nesil (XA50)",
+     "name": "Rav 4 5. nesil (XA50)",
      "code": "XA50",
      "ordinal": 5,
      "start": 2018,
@@ -41467,7 +42574,7 @@
     },
     {
      "slug": "xa60",
-     "name": "Rav 6. nesil (XA60)",
+     "name": "Rav 4 6. nesil (XA60)",
      "code": "XA60",
      "ordinal": 6,
      "start": 2025,
@@ -41495,8 +42602,8 @@
    ],
    "conflicts": [],
    "overlaps": [
-    "Rav 1. nesil (XA10) (1994–2003) ile Rav 2. nesil (XA20) (2000–2005) 2 yıldan fazla örtüşüyor (farklı gövde/pazar olabilir)",
-    "Rav 3. nesil (XA30) (2005–2016) ile Rav 4. nesil (XA40) (2012–2018) 2 yıldan fazla örtüşüyor (farklı gövde/pazar olabilir)"
+    "Rav 4 1. nesil (XA10) (1994–2003) ile Rav 4 2. nesil (XA20) (2000–2005) 2 yıldan fazla örtüşüyor (farklı gövde/pazar olabilir)",
+    "Rav 4 3. nesil (XA30) (2005–2016) ile Rav 4 4. nesil (XA40) (2012–2018) 2 yıldan fazla örtüşüyor (farklı gövde/pazar olabilir)"
    ],
    "article": "Toyota RAV4",
    "status": "found",
@@ -42084,23 +43191,24 @@
    "modelId": "volkswagen-beetle",
    "generations": [
     {
-     "slug": "uretim-2003",
-     "name": "Beetle (2003)",
-     "start": 2003,
-     "end": 2003,
+     "slug": "a5",
+     "name": "Beetle (A5)",
+     "code": "A5",
+     "start": 2011,
+     "end": 2019,
      "marketId": "global",
      "approximate": false,
      "engineDisplacementsL": [],
      "engineSignatures": [],
-     "page": "Volkswagen Beetle",
+     "page": "Volkswagen Beetle (A5)",
      "productionNote": ""
     }
    ],
    "pages": [
     {
-     "title": "Volkswagen Beetle",
-     "pageid": 65685,
-     "revid": 1375680608
+     "title": "Volkswagen Beetle (A5)",
+     "pageid": 34382224,
+     "revid": 1352402644
     }
    ],
    "conflicts": [],
@@ -44003,6 +45111,54 @@
    "blockedSpans": []
   },
   {
+   "modelFile": "models/volvo/s-80.json",
+   "modelId": "volvo-s-80",
+   "generations": [
+    {
+     "slug": "1-nesil",
+     "name": "S 80 1. nesil",
+     "ordinal": 1,
+     "start": 1998,
+     "end": 2006,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Volvo S80",
+     "productionNote": ""
+    },
+    {
+     "slug": "2-nesil",
+     "name": "S 80 2. nesil",
+     "ordinal": 2,
+     "start": 2005,
+     "end": 2016,
+     "marketId": "global",
+     "approximate": true,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Volvo S80",
+     "productionNote": "farklı pazarlar: LHD; RHD"
+    }
+   ],
+   "pages": [
+    {
+     "title": "Volvo S80",
+     "pageid": 615355,
+     "revid": 1371712276
+    }
+   ],
+   "conflicts": [],
+   "overlaps": [],
+   "article": "Volvo S80",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
+  },
+  {
    "modelFile": "models/volvo/s40.json",
    "modelId": "volvo-s40",
    "generations": [
@@ -44211,13 +45367,134 @@
    "blockedSpans": []
   },
   {
-   "modelFile": "models/volvo/v40.json",
-   "modelId": "volvo-v40",
-   "generations": [],
-   "pages": [],
+   "modelFile": "models/volvo/v-70.json",
+   "modelId": "volvo-v-70",
+   "generations": [
+    {
+     "slug": "1-nesil",
+     "name": "V 70 1. nesil",
+     "ordinal": 1,
+     "start": 1996,
+     "end": 2000,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [
+      2.4,
+      2.5
+     ],
+     "engineSignatures": [
+      "2.4:diesel",
+      "2.5:diesel"
+     ],
+     "page": "Volvo V70",
+     "productionNote": ""
+    },
+    {
+     "slug": "2-nesil",
+     "name": "V 70 2. nesil",
+     "ordinal": 2,
+     "start": 2000,
+     "end": 2007,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Volvo V70",
+     "productionNote": ""
+    },
+    {
+     "slug": "3-nesil",
+     "name": "V 70 3. nesil",
+     "ordinal": 3,
+     "start": 2006,
+     "end": 2016,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Volvo V70",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Volvo V70",
+     "pageid": 1147701,
+     "revid": 1379946720
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
-   "status": "not-found"
+   "article": "Volvo V70",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
+  },
+  {
+   "modelFile": "models/volvo/v40.json",
+   "modelId": "volvo-v40",
+   "generations": [
+    {
+     "slug": "s40",
+     "name": "V40 (S40)",
+     "code": "S40",
+     "start": 1995,
+     "end": 2012,
+     "marketId": "global",
+     "approximate": true,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Volvo S40",
+     "productionNote": "farklı pazarlar: 1,026,401 produced; 1995–2004"
+    },
+    {
+     "slug": "uretim-2012",
+     "name": "V40",
+     "start": 2012,
+     "end": 2019,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [
+      1.5,
+      1.6,
+      2,
+      2.5
+     ],
+     "engineSignatures": [
+      "1.5:?",
+      "1.6:?",
+      "1.6:petrol",
+      "2.0:?",
+      "2.5:?"
+     ],
+     "page": "Volvo V40 (2012–2019)",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Volvo S40",
+     "pageid": 954681,
+     "revid": 1373951469
+    },
+    {
+     "title": "Volvo V40 (2012–2019)",
+     "pageid": 954684,
+     "revid": 1362734173
+    }
+   ],
+   "conflicts": [],
+   "overlaps": [],
+   "article": "Volvo V40",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
   },
   {
    "modelFile": "models/volvo/v50.json",
@@ -44416,13 +45693,87 @@
    "blockedSpans": []
   },
   {
-   "modelFile": "models/volvo/xc.json",
-   "modelId": "volvo-xc",
-   "generations": [],
-   "pages": [],
+   "modelFile": "models/volvo/xc-70.json",
+   "modelId": "volvo-xc-70",
+   "generations": [
+    {
+     "slug": "v446k",
+     "name": "XC 70 (V446K)",
+     "code": "V446K",
+     "start": 2025,
+     "end": null,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Volvo XC70 (2025)",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Volvo XC70 (2025)",
+     "pageid": 79901374,
+     "revid": 1370708011
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
-   "status": "not-found"
+   "article": "Volvo XC70",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
+  },
+  {
+   "modelFile": "models/volvo/xc-90.json",
+   "modelId": "volvo-xc-90",
+   "generations": [
+    {
+     "slug": "1-nesil",
+     "name": "XC 90 1. nesil",
+     "ordinal": 1,
+     "start": 2002,
+     "end": 2016,
+     "marketId": "global",
+     "approximate": true,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Volvo XC90",
+     "productionNote": "farklı pazarlar: XC90; XC Classic"
+    },
+    {
+     "slug": "2-nesil",
+     "name": "XC 90 2. nesil",
+     "ordinal": 2,
+     "start": 2015,
+     "end": null,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Volvo XC90",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Volvo XC90",
+     "pageid": 966153,
+     "revid": 1378434641
+    }
+   ],
+   "conflicts": [],
+   "overlaps": [],
+   "article": "Volvo XC90",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
   },
   {
    "modelFile": "models/volvo/xc40-t2.json",
@@ -44524,11 +45875,37 @@
   {
    "modelFile": "models/volvo/xc70.json",
    "modelId": "volvo-xc70",
-   "generations": [],
-   "pages": [],
+   "generations": [
+    {
+     "slug": "v446k",
+     "name": "XC70 (V446K)",
+     "code": "V446K",
+     "start": 2025,
+     "end": null,
+     "marketId": "global",
+     "approximate": false,
+     "engineDisplacementsL": [],
+     "engineSignatures": [],
+     "page": "Volvo XC70 (2025)",
+     "productionNote": ""
+    }
+   ],
+   "pages": [
+    {
+     "title": "Volvo XC70 (2025)",
+     "pageid": 79901374,
+     "revid": 1370708011
+    }
+   ],
    "conflicts": [],
    "overlaps": [],
-   "status": "not-found"
+   "article": "Volvo XC70",
+   "status": "found",
+   "identity": {
+    "via": "title"
+   },
+   "conflictSlugs": [],
+   "blockedSpans": []
   },
   {
    "modelFile": "models/volvo/xc90.json",

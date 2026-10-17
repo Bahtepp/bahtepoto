@@ -3,10 +3,10 @@
   "brandId": "hyundai",
   "slug": "ix35",
   "name": "IX35",
-  "order": 0,
+  "order": 999,
   "status": "sourced",
   "sourceIds": ["tsb-kasko-deger-listesi"],
-  "updatedAt": "2026-10-15",
+  "updatedAt": "2026-10-17",
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
@@ -22,7 +22,6 @@
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "hyundai-ix35-nesil-belirlenmedi-30-crdi", "slug": "30-crdi", "engineId": "hyundai-30-crdi", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012], "trims": [], "bodyTypes": [], "sourceRefs": ["TSB 177-337"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
         { "id": "hyundai-ix35-nesil-belirlenmedi-20", "slug": "20", "engineId": "hyundai-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2010 }, "end": { "year": 2012 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2010, 2011, 2012], "trims": ["R Style", "R Style Plus"], "bodyTypes": [], "sourceRefs": ["TSB 177-340", "TSB 177-341"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
         { "id": "hyundai-ix35-nesil-belirlenmedi-16-gdi", "slug": "16-gdi", "engineId": "hyundai-16-gdi", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2011 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2011, 2012, 2013, 2014, 2015], "trims": ["6MT 4X2 Style", "6MT 4x2 Style Plus", "Design Pack", "Elite", "Style"], "bodyTypes": [], "sourceRefs": ["TSB 177-1061", "TSB 177-1062", "TSB 177-1063", "TSB 177-1087", "TSB 177-1106", "TSB 177-1107", "TSB 177-373", "TSB 177-374"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
         { "id": "hyundai-ix35-nesil-belirlenmedi-20-crdi", "slug": "20-crdi", "engineId": "hyundai-20-crdi", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2015 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015], "trims": ["Elite", "Style Plus"], "bodyTypes": [], "sourceRefs": ["TSB 177-1039", "TSB 177-1064"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },

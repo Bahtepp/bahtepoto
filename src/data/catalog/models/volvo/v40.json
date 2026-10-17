@@ -10,21 +10,54 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "volvo-v40-s40",
+      "slug": "s40",
+      "name": "V40 (S40)",
+      "code": "S40",
+      "order": 195,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1995 }, "end": { "year": 2012 }, "approximate": true },
+      "status": "sourced",
+      "sourceIds": ["wpgen-954681"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Volvo S40\" bilgi kutusundan (farklı pazarlar: 1,026,401 produced; 1995–2004); satırlar farklı pazarlara ait, en geniş aralık gösteriliyor. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "volvo-v40-uretim-2012",
+      "slug": "uretim-2012",
+      "name": "V40",
+      "order": 212,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2012 }, "end": { "year": 2019 } },
+      "engineDisplacementsL": [1.5, 1.6, 2, 2.5],
+      "engineSignatures": ["1.5:?", "1.6:?", "1.6:petrol", "2.0:?", "2.5:?"],
+      "status": "sourced",
+      "sourceIds": ["wpgen-954684"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Volvo V40 (2012–2019)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "volvo-v40-uretim-2012-16", "slug": "16", "engineId": "volvo-16", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "PowerShift" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015, 2016], "trims": ["D2", "D2 Advance", "D2 Premium", "D2 R-DESIGN", "D2 Volvo Ocean Race", "T3", "T3 Advance", "T3 Premium", "T4", "T4 Advance", "T4 Premium", "T4 R-DESIGN", "T4 Volvo Ocean Race"], "bodyTypes": [], "sourceRefs": ["TSB 154-1036", "TSB 154-1037", "TSB 154-1038", "TSB 154-1039", "TSB 154-1040", "TSB 154-1041", "TSB 154-1042", "TSB 154-1043", "TSB 154-1044", "TSB 154-1045", "TSB 154-1058", "TSB 154-1059", "TSB 154-1060", "TSB 154-1061", "TSB 154-1079", "TSB 154-1081"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "volvo-v40-uretim-2012-20", "slug": "20", "engineId": "volvo-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2014 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2014, 2015, 2016], "trims": ["D4", "D4 Advance", "D4 Inscription", "D4 Momentum", "D4 Premium", "D4 R-DESIGN", "D4 R-DESIGN Plus", "T5 R-DESIGN", "T5 R-DESIGN Plus"], "bodyTypes": [], "sourceRefs": ["TSB 154-1080", "TSB 154-1104", "TSB 154-1105", "TSB 154-1106", "TSB 154-1107", "TSB 154-1108", "TSB 154-1141", "TSB 154-1142", "TSB 154-1143", "TSB 154-1144"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "volvo-v40-uretim-2012-15", "slug": "15", "engineId": "volvo-15", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018, 2019], "trims": ["T3 Advance", "T3 Inscription", "T3 Momentum", "T3 Premium", "T3 R-DESIGN", "T3 R-DESIGN Plus Geartonic"], "bodyTypes": [], "sourceRefs": ["TSB 154-1101", "TSB 154-1102", "TSB 154-1103", "TSB 154-1138", "TSB 154-1139", "TSB 154-1140"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
       "id": "volvo-v40-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
       "name": "V40 — nesli belirlenmemiş araçlar",
       "kind": "unassigned",
       "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2019 } },
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2018 } },
       "status": "unverified",
       "sourceIds": ["tsb-kasko-deger-listesi"],
       "updatedAt": "2026-10-17",
       "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
       "revisions": [],
       "variants": [
-        { "id": "volvo-v40-nesil-belirlenmedi-16", "slug": "16", "engineId": "volvo-16", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "PowerShift" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015, 2016], "trims": ["Cross Counry D2 Volvo Ocean Race Pow", "Cross Country D2", "Cross Country D2 Advance", "Cross Country D2 Premium", "Cross Country T4", "Cross Country T4 Advance", "Cross Country T4 Premium", "D2", "D2 Advance", "D2 Premium", "D2 R-DESIGN", "D2 Volvo Ocean Race", "T3", "T3 Advance", "T3 Premium", "T4", "T4 Advance", "T4 Premium", "T4 R-DESIGN", "T4 Volvo Ocean Race"], "bodyTypes": [], "sourceRefs": ["TSB 154-1036", "TSB 154-1037", "TSB 154-1038", "TSB 154-1039", "TSB 154-1040", "TSB 154-1041", "TSB 154-1042", "TSB 154-1043", "TSB 154-1044", "TSB 154-1045", "TSB 154-1046", "TSB 154-1047", "TSB 154-1048", "TSB 154-1049", "TSB 154-1050", "TSB 154-1051", "TSB 154-1054", "TSB 154-1055", "TSB 154-1056", "TSB 154-1057", "TSB 154-1058", "TSB 154-1059", "TSB 154-1060", "TSB 154-1061", "TSB 154-1079", "TSB 154-1081", "TSB 154-1082"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "volvo-v40-nesil-belirlenmedi-20", "slug": "20", "engineId": "volvo-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015, 2016], "trims": ["Cross Country D4", "Cross Country D4 Advance", "Cross Country D4 Premium", "Cross Country T5 Advance G.TRONIC", "Cross Country T5 Premium G.TRONIC", "D4", "D4 Advance", "D4 Inscription", "D4 Momentum", "D4 Premium", "D4 R-DESIGN", "D4 R-DESIGN Plus", "T5 R-DESIGN", "T5 R-DESIGN Plus"], "bodyTypes": [], "sourceRefs": ["TSB 154-1052", "TSB 154-1053", "TSB 154-1080", "TSB 154-1104", "TSB 154-1105", "TSB 154-1106", "TSB 154-1107", "TSB 154-1108", "TSB 154-1112", "TSB 154-1113", "TSB 154-1114", "TSB 154-1141", "TSB 154-1142", "TSB 154-1143", "TSB 154-1144"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-        { "id": "volvo-v40-nesil-belirlenmedi-15", "slug": "15", "engineId": "volvo-15", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2019 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018, 2019], "trims": ["Cross Country T3 Advance Gartronic", "Cross Country T3 Premium", "Cross Country T3 Volvooceanrace Geart", "T3 Advance", "T3 Inscription", "T3 Momentum", "T3 Premium", "T3 R-DESIGN", "T3 R-DESIGN Plus Geartonic"], "bodyTypes": [], "sourceRefs": ["TSB 154-1101", "TSB 154-1102", "TSB 154-1103", "TSB 154-1109", "TSB 154-1110", "TSB 154-1111", "TSB 154-1138", "TSB 154-1139", "TSB 154-1140"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "volvo-v40-nesil-belirlenmedi-16", "slug": "16", "engineId": "volvo-16", "revisionMapping": "unknown", "transmissions": [{ "type": "dual-clutch", "name": "PowerShift" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015, 2016], "trims": ["Cross Counry D2 Volvo Ocean Race Pow", "Cross Country D2", "Cross Country D2 Advance", "Cross Country D2 Premium", "Cross Country T4", "Cross Country T4 Advance", "Cross Country T4 Premium", "T4 Advance"], "bodyTypes": [], "sourceRefs": ["TSB 154-1046", "TSB 154-1047", "TSB 154-1048", "TSB 154-1049", "TSB 154-1050", "TSB 154-1051", "TSB 154-1054", "TSB 154-1055", "TSB 154-1056", "TSB 154-1057", "TSB 154-1082"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "volvo-v40-nesil-belirlenmedi-20", "slug": "20", "engineId": "volvo-20", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2012 }, "end": { "year": 2016 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2012, 2013, 2014, 2015, 2016], "trims": ["Cross Country D4", "Cross Country D4 Advance", "Cross Country D4 Premium", "Cross Country T5 Advance G.TRONIC", "Cross Country T5 Premium G.TRONIC"], "bodyTypes": [], "sourceRefs": ["TSB 154-1052", "TSB 154-1053", "TSB 154-1112", "TSB 154-1113", "TSB 154-1114"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "volvo-v40-nesil-belirlenmedi-15", "slug": "15", "engineId": "volvo-15", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2015 }, "end": { "year": 2018 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2015, 2016, 2017, 2018], "trims": ["Cross Country T3 Advance Gartronic", "Cross Country T3 Premium", "Cross Country T3 Volvooceanrace Geart"], "bodyTypes": [], "sourceRefs": ["TSB 154-1109", "TSB 154-1110", "TSB 154-1111"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

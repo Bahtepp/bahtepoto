@@ -10,19 +10,31 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
-      "id": "bentley-mulsanne-nesil-belirlenmedi",
-      "slug": "nesil-belirlenmedi",
-      "name": "Mulsanne — nesli belirlenmemiş araçlar",
-      "kind": "unassigned",
-      "order": 999,
-      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2017 } },
-      "status": "unverified",
-      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "id": "bentley-mulsanne-uretim-1980",
+      "slug": "uretim-1980",
+      "name": "Mulsanne",
+      "order": 180,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1980 }, "end": { "year": 1992 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-2362428"],
       "updatedAt": "2026-10-17",
-      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Bentley Mulsanne (1980–1992)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "bentley-mulsanne-uretim-2010",
+      "slug": "uretim-2010",
+      "name": "Mulsanne",
+      "order": 210,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2010 }, "end": { "year": 2020 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-24007140"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Bentley Mulsanne (2010)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
       "revisions": [],
       "variants": [
-        { "id": "bentley-mulsanne-nesil-belirlenmedi-68", "slug": "68", "engineId": "bentley-68", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017], "trims": ["Speed"], "bodyTypes": [], "sourceRefs": ["TSB 558-1013"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+        { "id": "bentley-mulsanne-uretim-2010-68", "slug": "68", "engineId": "bentley-68", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2016 }, "end": { "year": 2017 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2016, 2017], "trims": ["Speed"], "bodyTypes": [], "sourceRefs": ["TSB 558-1013"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
   ]

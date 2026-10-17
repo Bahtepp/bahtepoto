@@ -1,0 +1,51 @@
+{
+  "id": "citroen-c5-aircross",
+  "brandId": "citroen",
+  "slug": "c5-aircross",
+  "name": "C5 Aircross",
+  "order": 999,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-17",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "citroen-c5-aircross-c84",
+      "slug": "c84",
+      "name": "C5 Aircross 1. nesil (C84)",
+      "code": "C84",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2017 }, "end": { "year": 2025 } },
+      "engineDisplacementsL": [1.2, 1.5, 1.6, 2],
+      "engineSignatures": ["1.2:?", "1.5:diesel", "1.6:?", "1.6:hybrid", "2.0:diesel"],
+      "status": "sourced",
+      "sourceIds": ["wpgen-55527133"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Citroën C5 Aircross\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": [
+        { "id": "citroen-c5-aircross-c84-15-bluehdi-130", "slug": "15-bluehdi-130", "engineId": "citroen-15-bluehdi-130", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2019 }, "end": { "year": 2024 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2019, 2020, 2021, 2022, 2023, 2024], "trims": ["C5 AC Feel Business", "C5 AC Shine Pack", "C5 AC Shine S", "C5AIRCROSS Feel Sedition", "C5AIRCROSS Feeladventure", "C5AIRCROSS Shinebold"], "bodyTypes": [], "sourceRefs": ["TSB 34-1173", "TSB 34-1184", "TSB 34-1206", "TSB 34-1232", "TSB 34-1280", "TSB 34-1281", "TSB 34-1282"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "citroen-c5-aircross-c84-16", "slug": "16", "engineId": "citroen-16", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021], "trims": ["C5 AC Shine Bold X Puretch 180", "C5AIRCROSS Shine Sedition P.TECH 180"], "bodyTypes": [], "sourceRefs": ["TSB 34-1203", "TSB 34-1284"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "citroen-c5-aircross-c84-130", "slug": "130", "engineId": "citroen-130", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020], "trims": ["C5AIRCROSS SELECTIONBUSIN.1.5BLUEHDI"], "bodyTypes": [], "sourceRefs": ["TSB 34-1223"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "citroen-c5-aircross-c84-16-puretech-180", "slug": "16-puretech-180", "engineId": "citroen-16-puretech-180", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2021 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020, 2021], "trims": ["C5 AC Shine S", "C5AIRCROSS Exclusive", "C5AIRCROSS Selection"], "bodyTypes": [], "sourceRefs": ["TSB 34-1224", "TSB 34-1228", "TSB 34-1283"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
+        { "id": "citroen-c5-aircross-c84-12-puretech-130", "slug": "12-puretech-130", "engineId": "citroen-12-puretech-130", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2020 }, "end": { "year": 2020 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2020], "trims": ["C5AIRCROSS Selection"], "bodyTypes": [], "sourceRefs": ["TSB 34-1239"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    },
+    {
+      "id": "citroen-c5-aircross-cr3",
+      "slug": "cr3",
+      "name": "C5 Aircross 2. nesil (CR3)",
+      "code": "CR3",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2025 }, "end": null },
+      "engineDisplacementsL": [1.2, 1.6],
+      "engineSignatures": ["1.2:?", "1.6:?"],
+      "status": "sourced",
+      "sourceIds": ["wpgen-55527133"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Citroën C5 Aircross\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    }
+  ]
+}

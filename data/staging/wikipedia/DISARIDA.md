@@ -14,6 +14,8 @@ Bu modellerin nesilleri kataloğa otomatik aktarılmadı (kaynakta çelişki vey
 - **audi/tts**: Wikipedia maddesi ("Audi TT") bu modelle açıkça eşleşmiyor
 - **bentley/continental-gtc**: Wikipedia maddesi ("Bentley Continental GT") bu modelle açıkça eşleşmiyor
 - **bmw/alpina**: Wikipedia maddesi ("Alpina") bu modelle açıkça eşleşmiyor
+- **bmw/i5**: Wikipedia maddesi ("BMW 5 Series (G60)") bu modelle açıkça eşleşmiyor
+- **bmw/i7**: Wikipedia maddesi ("BMW 7 Series (G70)") bu modelle açıkça eşleşmiyor
 - **bmw/z4**: Wikipedia maddesi ("BMW Z") bu modelle açıkça eşleşmiyor
 - **byd/seal-u**: Wikipedia maddesi ("BYD Song Plus") bu modelle açıkça eşleşmiyor
 - **chery/chance**: Wikipedia maddesi ("Chery A3") bu modelle açıkça eşleşmiyor
@@ -23,6 +25,7 @@ Bu modellerin nesilleri kataloğa otomatik aktarılmadı (kaynakta çelişki vey
 - **chevrolet/lacetti**: Wikipedia maddesi ("Daewoo Lacetti") bu modelle açıkça eşleşmiyor
 - **chrysler/grand-voyager**: Wikipedia maddesi ("Chrysler minivans (S)") bu modelle açıkça eşleşmiyor
 - **citroen/c8**: Wikipedia maddesi ("Eurovans") bu modelle açıkça eşleşmiyor
+- **citroen/ds3**: Wikipedia maddesi ("DS 3") bu modelle açıkça eşleşmiyor
 - **citroen/ds4**: Wikipedia maddesi ("DS 4") bu modelle açıkça eşleşmiyor
 - **citroen/spacetourer**: Wikipedia maddesi ("Citroën Jumpy") bu modelle açıkça eşleşmiyor
 - **cupra/ateca**: Wikipedia maddesi ("SEAT Ateca") bu modelle açıkça eşleşmiyor
@@ -32,6 +35,7 @@ Bu modellerin nesilleri kataloğa otomatik aktarılmadı (kaynakta çelişki vey
 - **fiat/freemont**: Wikipedia maddesi ("Dodge Journey") bu modelle açıkça eşleşmiyor
 - **fiat/scudo**: Wikipedia maddesi ("Citroën Jumpy") bu modelle açıkça eşleşmiyor
 - **fiat/ulysse**: Wikipedia maddesi ("Eurovans") bu modelle açıkça eşleşmiyor
+- **ford/f-150**: Wikipedia maddesi ("Ford F-Series") bu modelle açıkça eşleşmiyor
 - **ford/f150**: Wikipedia maddesi ("Ford F-Series") bu modelle açıkça eşleşmiyor
 - **ford/grand-c-max**: Wikipedia maddesi ("Ford C-Max") bu modelle açıkça eşleşmiyor
 - **ford/ranger-raptor**: Wikipedia maddesi ("Ford Ranger (T6)") bu modelle açıkça eşleşmiyor
@@ -67,7 +71,7 @@ Bu modellerin nesilleri kataloğa otomatik aktarılmadı (kaynakta çelişki vey
 - **mg/ehs**: Wikipedia maddesi ("MG HS") bu modelle açıkça eşleşmiyor
 - **mitsubishi/attrage**: Wikipedia maddesi ("Mitsubishi Mirage") bu modelle açıkça eşleşmiyor
 - **nissan/350**: Wikipedia maddesi ("Nissan 350Z") bu modelle açıkça eşleşmiyor
-- **opel/astra-gtc**: Wikipedia maddesi ("Opel Astra") bu modelle açıkça eşleşmiyor
+- **nissan/np-300**: Wikipedia maddesi ("Nissan Navara") bu modelle açıkça eşleşmiyor
 - **opel/combo-tour**: Wikipedia maddesi ("Opel Combo") bu modelle açıkça eşleşmiyor
 - **opel/zafira-life**: Wikipedia maddesi ("Citroën Jumpy") bu modelle açıkça eşleşmiyor
 - **peugeot/bipper**: Wikipedia maddesi ("Fiat Fiorino") bu modelle açıkça eşleşmiyor
@@ -100,7 +104,6 @@ Bu modellerin nesilleri kataloğa otomatik aktarılmadı (kaynakta çelişki vey
 - **toyota/proace-city**: Wikipedia maddesi ("Citroën Berlingo") bu modelle açıkça eşleşmiyor
 - **toyota/proace-max**: Wikipedia maddesi ("Fiat Ducato") bu modelle açıkça eşleşmiyor
 - **toyota/proace**: Wikipedia maddesi ("Citroën Jumpy") bu modelle açıkça eşleşmiyor
-- **toyota/rav**: Wikipedia maddesi ("Toyota RAV4") bu modelle açıkça eşleşmiyor
 - **volkswagen/cross-polo**: Wikipedia maddesi ("Volkswagen Polo") bu modelle açıkça eşleşmiyor
 - **volkswagen/multivan**: Wikipedia maddesi ("Volkswagen Transporter") bu modelle açıkça eşleşmiyor
 - **volkswagen/rabbit**: Wikipedia maddesi ("Volkswagen Golf") bu modelle açıkça eşleşmiyor

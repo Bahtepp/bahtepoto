@@ -10,6 +10,21 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "jeep-commander-uretim-2021",
+      "slug": "uretim-2021",
+      "name": "Commander",
+      "order": 221,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2021 }, "end": null },
+      "engineDisplacementsL": [1.3, 2],
+      "engineSignatures": ["1.3:?", "2.0:?", "2.0:diesel"],
+      "status": "sourced",
+      "sourceIds": ["wpgen-68577259"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Jeep Commander (2022)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
       "id": "jeep-commander-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
       "name": "Commander — nesli belirlenmemiş araçlar",

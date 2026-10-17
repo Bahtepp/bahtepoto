@@ -1,5 +1,5 @@
 [
-  { "id": "volvo-20", "brandId": "volvo", "slug": "20", "name": "2.0", "displacementL": 2, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"S80 2.0T OV\"); yakıt türü tip adında yazmıyor." },
+  { "id": "volvo-20", "brandId": "volvo", "slug": "20", "name": "2.0", "displacementL": 2, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"V 70 T 2.0\"); yakıt türü tip adında yazmıyor." },
   { "id": "volvo-29", "brandId": "volvo", "slug": "29", "name": "2.9", "displacementL": 2.9, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"S80 2.9 T6 GEARTRONIC\"); yakıt türü tip adında yazmıyor." },
   { "id": "volvo-24", "brandId": "volvo", "slug": "24", "name": "2.4", "displacementL": 2.4, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"S80 2.4 D5\"); yakıt türü tip adında yazmıyor." },
   { "id": "volvo-44", "brandId": "volvo", "slug": "44", "name": "4.4", "displacementL": 4.4, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"S80 4.4 V8 AWD GEARTRONIC\"); yakıt türü tip adında yazmıyor." },

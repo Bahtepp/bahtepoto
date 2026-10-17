@@ -3,10 +3,11 @@
   "brandId": "ford",
   "slug": "puma",
   "name": "Puma",
-  "order": 60,
+  "order": 999,
   "status": "sourced",
-  "updatedAt": "2026-10-15",
-  "notes": "Nesil, yıl ve motor verisi henüz girilmedi.",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-17",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
       "id": "ford-puma-nesil-belirlenmedi",
@@ -32,6 +33,5 @@
         { "id": "ford-puma-nesil-belirlenmedi-10-hibrit-ecoboost-160", "slug": "10-hibrit-ecoboost-160", "engineId": "ford-10-hibrit-ecoboost-160", "revisionMapping": "unknown", "transmissions": [{ "type": "automatic" }], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["ST"], "bodyTypes": [], "sourceRefs": ["TSB 53-2422"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
       ]
     }
-  ],
-  "sourceIds": ["tsb-kasko-deger-listesi"]
+  ]
 }

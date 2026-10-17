@@ -1,0 +1,70 @@
+{
+  "id": "volvo-v-70",
+  "brandId": "volvo",
+  "slug": "v-70",
+  "name": "V 70",
+  "order": 999,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-17",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "volvo-v-70-1-nesil",
+      "slug": "1-nesil",
+      "name": "V 70 1. nesil",
+      "order": 1,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 1996 }, "end": { "year": 2000 } },
+      "engineDisplacementsL": [2.4, 2.5],
+      "engineSignatures": ["2.4:diesel", "2.5:diesel"],
+      "status": "sourced",
+      "sourceIds": ["wpgen-1147701"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Volvo V70\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "volvo-v-70-2-nesil",
+      "slug": "2-nesil",
+      "name": "V 70 2. nesil",
+      "order": 2,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2000 }, "end": { "year": 2007 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1147701"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Volvo V70\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "volvo-v-70-3-nesil",
+      "slug": "3-nesil",
+      "name": "V 70 3. nesil",
+      "order": 3,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2006 }, "end": { "year": 2016 } },
+      "status": "sourced",
+      "sourceIds": ["wpgen-1147701"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Volvo V70\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
+      "id": "volvo-v-70-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "V 70 — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-17",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "volvo-v-70-nesil-belirlenmedi-20", "slug": "20", "engineId": "volvo-20", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2008 }, "end": { "year": 2008 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2008], "trims": ["T"], "bodyTypes": [], "sourceRefs": ["TSB 154-133"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
+      ]
+    }
+  ]
+}

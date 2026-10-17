@@ -65,7 +65,17 @@ Model yılı → Motor akışıyla seçilir. Neden belirsiz kaldığı `data/sta
 (`scripts/import/generations/wikidata.ts`) başlıkla bulunamayan modeller için etiketi/diğer adı birebir "<Marka> <Model>"
 olan otomobil modeli öğesini ve İngilizce Wikipedia bağlantısını bulur (yönlendirme, grup maddesi veya başka bir katalog
 modeline ait madde kabul edilmez). TSB tarafında Mercedes "C180" → C, BMW "M340d" → 3 Serisi, "X1 sDrive16d" → X1,
-Chrysler altındaki "JEEP COMPASS" → Jeep Compass. Çelişkili modellerde yalnızca çelişkili nesiller dışarıda kalır.
+Chrysler altındaki "JEEP COMPASS" → Jeep Compass, "MERCEDES-AMG C 43" → C ("MERCEDES-AMG 63 S" gibi sınıfı yazmayan
+adlar olduğu gibi kalır). Harf kodu + sayı ("XC 90", "RAV 4") yalnızca satırda motor hacmi/gücü varsa model adında
+birleşir; "RX 300", "FX 37", "DBS 770" gibi motor tanımları birleştirilmez. Yazım farkı birleştirmesi rakamları farklı
+adları (C3/C5, 208/308) asla birleştirmez.
+
+**Takma ad tablosu** (`scripts/import/tsb/aliases.ts`, elle düzenlenir): TSB'de model adına yapışmış gövde/donanım
+sözcüklerini ("CLIO GRAND TOUR", "I30 CW", "ACCENT ERA", "C5-AC") asıl modele bağlar; çıkarılan sözcük donanımda kalır.
+Performans versiyonları ve ayrı modeller (TTS, RS, AMG GT) tabloya girmez. `WIKIPEDIA_TITLES` kimliği kesin İngilizce
+başlığı verir (MINI → "Mini Hatch", Honda Jazz → "Honda Fit"). Anlam ayrımı veya bağlantı veren maddelerde yalnızca
+"<Başlık> (<yıl veya kasa kodu>)" biçimli bağlantılar nesil maddesi sayılır (`qualifiedLinks`).
+Çelişkili modellerde yalnızca çelişkili nesiller dışarıda kalır.
 Wikipedia ve Wikidata yanıtları başlık/sorgu bazında kalıcı önbellekte tutulur (`.cache/import/`); yalnızca yeni
 başlıklar indirilir (`--refresh` baştan indirir).
 

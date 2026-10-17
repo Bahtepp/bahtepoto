@@ -54,7 +54,8 @@ async function fetchFiles(): Promise<string[]> {
   const base = join(DEFAULT_DIRS.cacheDir, 'tsb');
   if (values.offline) {
     const dates = existsSync(base) ? readdirSync(base).filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d)).sort() : [];
-    const dir = dates.at(-1);
+    // Yarım kalmış (boş) indirme klasörü atlanır: yalnızca xlsx içeren en yeni klasör kullanılır.
+    const dir = dates.filter((d) => readdirSync(join(base, d)).some((f) => f.endsWith('.xlsx'))).at(-1);
     if (!dir) throw new Error('Önbellekte TSB dosyası yok; --offline olmadan çalıştırın.');
     return readdirSync(join(base, dir)).filter((f) => f.endsWith('.xlsx')).sort().map((f) => join(base, dir, f));
   }
@@ -216,6 +217,8 @@ const parsed = files.map((f) => {
   return rows;
 });
 const rows = mergeRows(parsed);
+// Boş veya okunamayan liste kataloğu silmesin: hiç satır yoksa hiçbir şey yazılmaz.
+if (rows.length === 0) throw new Error('TSB listesinde satır bulunamadı; katalog değiştirilmedi.');
 const raw = loadRawCatalog(DEFAULT_DIRS.catalogDir);
 const names = files.map((f) => f.split(/[\\/]/).pop()!.replace(/R\d*\.xlsx$/, '')).map((n) => `${n.slice(0, 4)}-${n.slice(4, 6)}`);
 

@@ -10,6 +10,20 @@
   "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
   "generations": [
     {
+      "id": "volvo-xc70-v446k",
+      "slug": "v446k",
+      "name": "XC70 (V446K)",
+      "code": "V446K",
+      "order": 225,
+      "labelPeriod": { "marketId": "global", "basis": "production", "start": { "year": 2025 }, "end": null },
+      "status": "sourced",
+      "sourceIds": ["wpgen-79901374"],
+      "updatedAt": "2026-10-17",
+      "notes": "Üretim yılları İngilizce Wikipedia \"Volvo XC70 (2025)\" bilgi kutusundan. Makyaj dönemleri girilmedi.",
+      "revisions": [],
+      "variants": []
+    },
+    {
       "id": "volvo-xc70-nesil-belirlenmedi",
       "slug": "nesil-belirlenmedi",
       "name": "XC70 — nesli belirlenmemiş araçlar",

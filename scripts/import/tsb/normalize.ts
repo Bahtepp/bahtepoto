@@ -298,7 +298,7 @@ export function nearlyEqual(a: string, b: string): boolean {
 /** Model adı olmayan baş sözcükler ("NEW GOLF", "THE BEETLE", "MY 2017 …"). */
 const LEADING_NOISE = new Set(['NEW', 'YENI', 'THE', 'ALL', 'MY', 'ALL-NEW']);
 /** Model adına birleşen ön sözcükler ("GRAND C-MAX", "GRAND SCENIC"). */
-const JOINING = new Set(['GRAND', 'CROSS', 'BIG']);
+const JOINING = new Set(['GRAND', 'CROSS', 'BIG', 'LAND']);
 /** Hiçbir zaman alt model sayılmayan sözcükler (makyaj / model yılı kısaltmaları). */
 const NEVER_SUBMODEL = new Set(['MCA', 'FL', 'MY', 'NEW', 'YENI', 'FACELIFT', 'MCA1', 'MCAI', 'ICA', 'ICA3']);
 
@@ -339,6 +339,13 @@ export function resolveModels(parsed: ParsedType[]): (p: ParsedType) => ModelRes
     if (!second) return { model: first, trimWords: [] };
     const S = up(second);
     if (JOINING.has(F)) return { model: `${first} ${second}`, trimWords: more };
+    // Harf kodu + numara aralıklı yazılmış model: "XC 90 2.0", "DS 3 1.6", "RAV 4 2.0". Yalnızca satırda motor bilgisi
+    // (hacim veya güç) AYRICA yazıyorsa: aksi hâlde numara motor tanımıdır ("RX 300", "FX 37", "LC 500").
+    // 3 harfli önekte 3 haneli numara özel versiyon tanımıdır ("DBS 770", "DBX 707"), birleştirilmez.
+    const hasEngine = p.displacementL !== undefined || p.powerPs !== undefined || p.powerKw !== undefined || p.powerHp !== undefined;
+    if (hasEngine && /^[A-Z]{1,3}$/.test(F) && /^\d{1,3}$/.test(S) && !(F.length === 3 && S.length === 3)) {
+      return { model: `${first} ${second}`, trimWords: more };
+    }
     // "FOCUS C-MAX": ikinci sözcük de markada başlı başına bir model → o model
     if (isHead(S) && isHead(F) && !trimLike(S)) return { model: second, trimWords: more };
     const sub = (followers.get(S)?.size ?? 0) === 1 && (pairs.get(`${F} ${S}`) ?? 0) >= 3 && !trimLike(S) && /[A-Z]/.test(S);
