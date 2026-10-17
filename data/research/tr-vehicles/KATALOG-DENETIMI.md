@@ -141,4 +141,15 @@ Komutlar bu dalda, yayın olmadan çalıştırıldı.
 - `npm run catalog:audit`: kesin hata 0.
 - `npm audit`: 0 açık.
 
-Eski model adresleri (`/arac/volvo/xc-90/…` gibi) bu katalogda artık üretilmiyor. Yönlendirme, yayın sırasında ayrıca bağlanmalı. Bu turda siteye sürüm çıkmadı.
+Eski model adresleri (`/arac/volvo/xc-90/…` gibi) bu katalogda artık üretilmiyor. Yönlendirme yayın sırasında ayrıca bağlanmalı. Bu turda siteye sürüm çıkmadı.
+
+## 12. Yerel commitler
+
+`katalog-turkiye` dalı `origin/main` önünde. Push yapılmadı.
+
+- `ce4e6a7` Parantezdeki cc, Porsche kasa kodu ve Audi 50 TDI etiketini motor gücü sanmama
+- `97e5069` Yinelenen yazı, yanlış marka ve donanım paketini içe aktarmada birleştirme
+- `58a106a` Togg ana listede; Nissan Rogue arşivde
+- `9a09e03` `npm run catalog:audit`
+- `3801724` Kataloğun yeniden yazılması
+- `4462db2` Bu rapor
