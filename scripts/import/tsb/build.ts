@@ -350,6 +350,18 @@ export function buildFromTsb(
           trimWords.unshift(model.replace(/^MERCEDES-?/i, ''));
           model = trimWords.splice(1, 1)[0]!;
         }
+        // "MERCEDES AMG E 63 …": MERCEDES model adı değildir.
+        if (fold(model) === 'MERCEDES') {
+          if (fold(trimWords[0] ?? '') === 'AMG') {
+            parsed.tech.push('AMG');
+            trimWords.shift();
+          }
+          const cls = trimWords[0] ?? '';
+          if (/^[A-Z]{1,3}$/i.test(cls)) {
+            model = cls;
+            trimWords.shift();
+          }
+        }
         const mb = /^([A-Z]{1,3})[- ]?(\d{2,3}[A-Z]{0,2})$/i.exec(model);
         if (mb) {
           model = mb[1]!.toUpperCase();
@@ -365,6 +377,7 @@ export function buildFromTsb(
         model = alias.model;
         if (extra) trimWords.unshift(extra);
         if (brand.id === 'honda' && folded === 'TYPE-R') trimWords.unshift('TYPE-R');
+        if (brand.id === 'mini' && folded === 'COOPER') trimWords.unshift('COOPER');
         if (alias.body) {
           if (alias.replaceBody) parsed.body = alias.body;
           else parsed.body ??= alias.body;
@@ -427,16 +440,71 @@ export function buildFromTsb(
       if (brand.modelPrefix) model = `${brand.modelPrefix} ${model}`.trim();
       // TSB'de Chrysler altında listelenen Jeep modelleri ("JEEP COMPASS", "JEEPRENEGADE") Jeep markasına.
       let rowBrand: BrandRule | undefined;
-      if (brand.id === 'chrysler' && /^JEEP/i.test(model)) {
-        // "JEEP COMPASS" (model JEEP, donanım COMPASS) veya bitişik "JEEPRENEGADE"
-        const glued = model.replace(/^JEEP\s?/i, '').trim();
-        const rest = glued || trimWords[0] || '';
-        // Kısaltmalı adlar ("G. CHEROKEE") tahminle açılmaz: satır eski yerinde (Chrysler › Jeep) kalır, kaybolmaz.
-        if (rest && !rest.includes('.')) {
-          if (!glued) trimWords.shift();
-          rowBrand = { id: 'jeep', name: 'Jeep' };
+      const jeepGlued = /^JEEPGRANDCHEROKEE/i.test(fold(model));
+      const jeepRenegade = /^JEEPRENEGADE/i.test(fold(model));
+      if (brand.id === 'chrysler' && (jeepGlued || jeepRenegade || /^JEEP\b/i.test(row.typeName) || /^(WRANGLER|GRANDCHEROKEE|CHEROKEE|COMPASS|RENEGADE|PATRIOT|GLADIATOR)$/i.test(fold(model)))) {
+        rowBrand = { id: 'jeep', name: 'Jeep' };
+        if (jeepRenegade) model = 'RENEGADE';
+        if (/^JEEP\s+/i.test(model)) model = model.replace(/^JEEP\s+/i, '');
+        if (jeepGlued || fold(model) === 'GRANDCHEROKEE' || (fold(model) === 'GRAND' && /^CHEROKEE/i.test(trimWords[0] ?? ''))) {
+          model = 'GRAND CHEROKEE';
+          if (fold(trimWords[0] ?? '') === 'CHEROKEE') trimWords.shift();
+        } else if (fold(model) === 'JEEP' || /^JEEP$/i.test(model)) {
+          const head = fold(trimWords[0] ?? '');
+          const next = fold(trimWords[1] ?? '');
+          const glued = model.replace(/^JEEP\s?/i, '').trim();
+          const rest = glued || trimWords[0] || '';
+          if (/^G\.?CHEROKEE$/.test(head) || head === 'G' || (head === 'G.' && next === 'CHEROKEE')) {
+            model = 'GRAND CHEROKEE';
+            trimWords = trimWords.filter((w) => !/^G\.?$|^G\.CHEROKEE$|^CHEROKEE$/i.test(fold(w)));
+          } else if (rest && !rest.includes('.')) {
+            if (!glued) trimWords.shift();
+            model = rest;
+          }
+        }
+      }
+      if ((brand.id === 'toyota' || brand.id === 'lexus') && fold(model) === 'LEXUS') {
+        const rest = trimWords[0] ?? '';
+        if (/^(RX|GX|LX|LS|ES|IS|NX|UX|LC|RC|GS|CT|LBX)$/i.test(rest)) {
+          trimWords.shift();
+          rowBrand = { id: 'lexus', name: 'Lexus' };
           model = rest;
         }
+      }
+      if (brand.id === 'nissan' && fold(model) === 'INFINITI') {
+        const rest = trimWords[0] ?? '';
+        if (rest && /^[A-Z]{1,3}$/i.test(rest)) {
+          trimWords.shift();
+          rowBrand = { id: 'infiniti', name: 'Infiniti' };
+          model = rest;
+        }
+      }
+      if (brand.id === 'nissan' && fold(model) === '350' && fold(trimWords[0] ?? '') === 'Z') {
+        model = '350Z';
+        trimWords.shift();
+      }
+      if (brand.id === 'lamborghini' && fold(model) === '140' && fold(trimWords[0] ?? '') === 'GALLARDO') {
+        model = 'GALLARDO';
+        trimWords.shift();
+      }
+      if (brand.id === 'audi' && fold(model) === 'RS' && /E-?TRON/i.test(row.typeName) && /\bGT\b/i.test(row.typeName)) {
+        model = 'E-TRON GT';
+        parsed.tech.unshift('RS');
+        trimWords = trimWords.filter((w) => !/^(E-TRON|ETRON|GT|RS)$/i.test(fold(w)));
+      }
+      if (brand.id === 'mini') {
+        const familyAt = [model, ...trimWords].findIndex((w) => /^(COUNTRYMAN|CLUBMAN|PACEMAN|ACEMAN)$/i.test(fold(w)));
+        if (familyAt === 0) {
+          /* model zaten aile */
+        } else if (familyAt > 0) {
+          model = trimWords[familyAt - 1]!;
+          trimWords.splice(familyAt - 1, 1);
+        }
+      }
+      const techBrand = (rowBrand ?? brand).id;
+      if (techBrand === 'ford') parsed.tech = parsed.tech.map((t) => (fold(t) === 'DCI' ? 'TDCI' : t));
+      if (techBrand === 'skoda' || techBrand === 'volkswagen' || techBrand === 'seat' || techBrand === 'cupra' || techBrand === 'audi') {
+        parsed.tech = parsed.tech.map((t) => (fold(t) === 'TDCI' ? 'TDI' : t));
       }
       pre.push({ row, parsed, model: fold(model), trims: trimWords, brand: rowBrand });
     }

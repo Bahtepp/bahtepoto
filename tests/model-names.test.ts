@@ -278,7 +278,7 @@ describe('yanlış birleşmeye karşı', () => {
   });
   test('"DBS 770" (3 harf + 3 rakam) birleştirilmez; "XC 90 2.0" birleşir', () => {
     const f = files([row('ASTON MARTIN', 'DBS 770 ULTIMATE 5.2 (770)'), row('VOLVO', 'XC 90 2.0 D5 (235) INSCRIPTION')]);
-    assert.deepEqual(f, ['models/aston-martin/dbs.json', 'models/volvo/xc-90.json']);
+    assert.deepEqual(f, ['models/aston-martin/dbs.json', 'models/volvo/xc90.json']);
   });
   test('"MERCEDES-AMG 63 S" kaybolmaz; "MERCEDES-AMG C 43" C sınıfına gider', () => {
     const rows = [row('MERCEDES', 'MERCEDES-AMG 63 S 4MATIC+ FL'), row('MERCEDES', 'MERCEDES-AMG C 43 4MATIC 3.0 (390)')];

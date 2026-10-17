@@ -71,6 +71,7 @@ export const MODEL_ALIASES: Record<string, Record<string, ModelAlias>> = {
   skoda: {
     'RAPID SPACEBACK': { model: 'RAPID', note: 'Rapid Spaceback hatchback gövdesi' },
     'YETI EXPERIENCE': { model: 'YETI', note: 'Experience donanım paketi' },
+    'YETI GREENLINE': { model: 'YETI', note: 'Greenline sürüm adıdır; ayrı model ailesi değil' },
   },
   fiat: {
     '500L LIVING': { model: '500L', note: '500L Living: uzun gövdeli 500L' },
@@ -108,9 +109,16 @@ export const MODEL_ALIASES: Record<string, Record<string, ModelAlias>> = {
     'MINI ONE': { model: 'MINI', note: 'One donanım seviyesi' },
     'MINI JOHN': { model: 'MINI', note: 'John Cooper Works donanım seviyesi' },
     'MINI COOPER': { model: 'MINI', note: 'Cooper donanım seviyesi' },
+    COOPER: { model: 'MINI', note: 'Cooper, Hatch ailesinin satış sürümüdür; ayrı model değil' },
   },
   ds: {
     DS7CROSSBACK: { model: 'DS7', note: 'DS 7 Crossback: bitişik yazılmış gövde adı, ayrı model değil' },
+    'DS 3': { model: 'DS3', note: 'Yazım: DS 3 = DS3' },
+    'DS-3': { model: 'DS3', note: 'Yazım: DS-3 = DS3' },
+    'DS 7': { model: 'DS7', note: 'Yazım: DS 7 = DS7' },
+    'DS-7': { model: 'DS7', note: 'Yazım: DS-7 = DS7' },
+    'DS 9': { model: 'DS9', note: 'Yazım: DS 9 = DS9' },
+    'DS-9': { model: 'DS9', note: 'Yazım: DS-9 = DS9' },
   },
   volkswagen: {
     ID4: { model: 'ID.4', note: 'Yazım farkı: ID4 = ID.4' },
@@ -144,6 +152,42 @@ export const MODEL_ALIASES: Record<string, Record<string, ModelAlias>> = {
   },
   audi: {
     TTR: { model: 'TT', body: 'cabrio', note: 'TT Roadster gövdesi (TTS ayrı performans versiyonudur)' },
+  },
+  ford: {
+    F150: { model: 'F-150', note: 'Yazım: F150 = F-150' },
+    TOURNEOCOURIER: { model: 'TOURNEO COURIER', note: 'Bitişik yazım: Tourneo Courier' },
+    TOURNEOCUSTOM: { model: 'TOURNEO CUSTOM', note: 'Bitişik yazım: Tourneo Custom' },
+    TOURNEOCONNECT: { model: 'TOURNEO CONNECT', note: 'Bitişik yazım: Tourneo Connect' },
+    'FOCUS WRC': { model: 'FOCUS', note: '2.0 136 PS PowerShift yol otomobili; WRC ralli aracı değil' },
+  },
+  mazda: {
+    MX5: { model: 'MX-5', note: 'Yazım: MX5 = MX-5' },
+  },
+  volvo: {
+    'XC 90': { model: 'XC90', note: 'Yazım: XC 90 = XC90' },
+    'XC-90': { model: 'XC90', note: 'Yazım: XC-90 = XC90' },
+    'S 80': { model: 'S80', note: 'Yazım: S 80 = S80' },
+    'S-80': { model: 'S80', note: 'Yazım: S-80 = S80' },
+    'V 70': { model: 'V70', note: 'Yazım: V 70 = V70' },
+    'V-70': { model: 'V70', note: 'Yazım: V-70 = V70' },
+    'XC 70': { model: 'XC70', note: 'Yazım: XC 70 = XC70' },
+    'XC-70': { model: 'XC70', note: 'Yazım: XC-70 = XC70' },
+    'XC40 T2': { model: 'XC40', note: 'T2 satış kademesidir; motor 1.5 129 PS olarak kalır' },
+  },
+  chrysler: {
+    '300 C': { model: '300C', note: 'Yazım: 300 C = 300C' },
+    '300-C': { model: '300C', note: 'Yazım: 300-C = 300C' },
+    PACIFICIA: { model: 'PACIFICA', note: 'Yazım: Pacificia = Pacifica' },
+  },
+  proton: {
+    'GEN 2': { model: 'GEN-2', note: 'Yazım: Gen 2 = Gen-2' },
+    GEN2: { model: 'GEN-2', note: 'Yazım: Gen2 = Gen-2' },
+  },
+  'alfa-romeo': {
+    'TONALE TRIBUTO': { model: 'TONALE', note: 'Tributo, Tonale sürüm adıdır' },
+  },
+  skywell: {
+    'ET5 PREMIUM': { model: 'ET5', note: 'Premium donanım paketidir' },
   },
   bentley: {
     FLYING: { model: 'FLYING SPUR', note: 'Model adı kesik yazılmış: Flying Spur' },
