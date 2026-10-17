@@ -3,7 +3,7 @@
 `npm run catalog:update` her çalıştığında yeniden üretilir. Katalogda model dosyasına kaynaklı nesil eklendikçe
 TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 
-## Nesli belirlenemeyen varyantlar (1924 varyant, 591 model)
+## Nesli belirlenemeyen varyantlar (1922 varyant, 590 model)
 
 | Marka | Model | Nesli belirlenemeyen varyant | Bilinen nesil |
 |---|---|---|---|
@@ -11,8 +11,8 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Opel | Astra | 34 | 5 |
 | Mercedes-Benz | C | 30 | 6 |
 | Renault | Clio | 25 | 5 |
+| Ford | Tourneo | 21 | 0 |
 | Citroen | C4 | 20 | 3 |
-| Ford | Tourneo | 20 | 0 |
 | BMW | 5 Serisi | 17 | 8 |
 | Citroen | C3 | 16 | 3 |
 | Mini | Mini | 16 | 3 |
@@ -105,6 +105,7 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Citroen | DS4 | 5 | 0 |
 | Fiat | Egea Cross | 5 | 0 |
 | Ford | Fusion | 5 | 0 |
+| Ford | Kuga | 5 | 3 |
 | Hyundai | Elantra | 5 | 8 |
 | Hyundai | Tucson | 5 | 5 |
 | Jaguar | XJ | 5 | 3 |
@@ -140,7 +141,6 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Fiat | Linea Via | 4 | 0 |
 | Fiat | Panda | 4 | 3 |
 | Ford | Grand C-MAX | 4 | 0 |
-| Ford | Kuga | 4 | 3 |
 | Ford | Mondeo | 4 | 4 |
 | Ford | Mustang | 4 | 7 |
 | GMC | Sierra | 4 | 0 |
@@ -167,7 +167,6 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Toyota | RAV4 | 4 | 6 |
 | Volkswagen | Grand California | 4 | 0 |
 | Alfa Romeo | Tonale Tributo | 3 | 0 |
-| Audi | RS | 3 | 0 |
 | Audi | RS5 | 3 | 0 |
 | Audi | RS7 | 3 | 0 |
 | Bentley | Continental Gtc | 3 | 0 |
@@ -191,7 +190,6 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Fiat | Ulysse | 3 | 0 |
 | Ford | Capri | 3 | 0 |
 | Ford | F 150 | 3 | 0 |
-| Ford | Fiesta Cool | 3 | 0 |
 | Ford | Focus Wrc | 3 | 0 |
 | Ford | Ranger Raptor | 3 | 0 |
 | Honda | Accord | 3 | 8 |
@@ -238,6 +236,7 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 | Audi | A1 | 2 | 2 |
 | Audi | E-TRON | 2 | 0 |
 | Audi | Q3 | 2 | 3 |
+| Audi | RS | 2 | 0 |
 | Audi | RS3 | 2 | 0 |
 | Audi | S7 | 2 | 0 |
 | Audi | SQ5 | 2 | 0 |
@@ -609,9 +608,9 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 
 ## Makyaj dönemi eşleşmesi bilinmeyen Türkiye motorları (3 nesil)
 
-- Ford Focus Mk2: 6 Türkiye motorunun makyaj dönemi bilinmiyor
-- Ford Focus Mk3: 10 Türkiye motorunun makyaj dönemi bilinmiyor
-- Ford Focus Mk4: 7 Türkiye motorunun makyaj dönemi bilinmiyor
+- Ford Focus Mk2: 7 Türkiye motorunun makyaj dönemi bilinmiyor
+- Ford Focus Mk3: 6 Türkiye motorunun makyaj dönemi bilinmiyor
+- Ford Focus Mk4: 8 Türkiye motorunun makyaj dönemi bilinmiyor
 
 ## Motor bilgisi eksik TSB motorları (tip adında yazmayan alanlar)
 
@@ -619,7 +618,7 @@ TSB satırları o nesillere kendiliğinden eşlenir ve bu liste kısalır.
 |---|---|---|---|---|
 | BMW | 270 | 87 | 135 | 138 |
 | Mercedes-Benz | 146 | 94 | 111 | 82 |
-| Ford | 122 | 44 | 42 | 23 |
+| Ford | 125 | 51 | 42 | 23 |
 | Toyota | 63 | 36 | 49 | 11 |
 | Opel | 116 | 55 | 26 | 15 |
 | Porsche | 80 | 62 | 14 | 24 |

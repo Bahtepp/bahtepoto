@@ -258,7 +258,7 @@ export function parseTypeName(typeName: string): ParsedType {
         const f = fuelOf(rest);
         if (f) {
           setFuel(f);
-          out.tech.push(rest);
+          out.tech.push(storedTech(rest));
         }
       }
       attr = true;
@@ -282,7 +282,7 @@ export function parseTypeName(typeName: string): ParsedType {
       const f = fuelOf(T);
       if (f) {
         setFuel(f);
-        out.tech.push(tok);
+        out.tech.push(storedTech(tok));
         attr = true;
       }
     }
@@ -295,7 +295,10 @@ export function parseTypeName(typeName: string): ParsedType {
     // Teknoloji sözcüğüne bitişik güç: "ECOBOOST 180", "MULTIAIR 170" (motor sözcüğünün hemen ardından)
     if (!attr && /^\d{2,3}$/.test(T) && seenAttr && out.powerPs === undefined && out.powerHp === undefined && out.powerKw === undefined) {
       const prev = up(raw[i - 1] ?? '');
-      if (fuelOf(prev) || /^\d[.,]\d/.test(prev) || NEUTRAL.has(prev)) {
+      const next = up(raw[i + 1] ?? '');
+      // "2.0 ST 250": ST/RS performans modelidir, sonraki sayı güçtür. "ST LINE" donanım paketidir.
+      const afterPerformance = /^(ST|RS|RS500)$/.test(prev) && next !== 'LINE';
+      if (fuelOf(prev) || /^\d[.,]\d/.test(prev) || NEUTRAL.has(prev) || afterPerformance) {
         const n = Number(T);
         if (n >= 50 && n <= 800) {
           out.powerPs = n;
@@ -387,8 +390,24 @@ export function nearlyEqual(a: string, b: string): boolean {
 const LEADING_NOISE = new Set(['NEW', 'YENI', 'THE', 'ALL', 'MY', 'ALL-NEW', 'MC']);
 /** Model adına birleşen ön sözcükler ("GRAND C-MAX", "GRAND SCENIC"). */
 const JOINING = new Set(['GRAND', 'CROSS', 'BIG', 'LAND']);
-/** Hiçbir zaman alt model sayılmayan sözcükler (makyaj / model yılı kısaltmaları). */
-const NEVER_SUBMODEL = new Set(['MCA', 'FL', 'MY', 'NEW', 'YENI', 'FACELIFT', 'MCA1', 'MCAI', 'ICA', 'ICA3']);
+/**
+ * Hiçbir zaman alt model sayılmayan sözcükler.
+ * Makyaj kısaltmaları, performans sürümleri (ST, RS — bunlar modelin motor varyantıdır)
+ * ve donanım paketleri (Cool, Trend, Titanium, ST-Line …).
+ */
+const NEVER_SUBMODEL = new Set([
+  'MCA', 'FL', 'MY', 'NEW', 'YENI', 'FACELIFT', 'MCA1', 'MCAI', 'ICA', 'ICA3',
+  'ST', 'RS', 'RS500', 'ST-LINE', 'STLINE',
+  'TREND', 'TITANIUM', 'GHIA', 'STYLE', 'COMFORTLINE', 'HIGHLINE', 'TEKNA', 'VISIA', 'ICON', 'JOY',
+  'AMBIENTE', 'COOL', 'COLLECTION', 'TRENDLINE', 'AMBITION', 'ALLURE', 'ELEGANCE',
+]);
+
+/** "EB" ve "E.BOOST", EcoBoost'un kısaltmasıdır; ayrı motor kimliği üretmez. */
+function storedTech(tok: string): string {
+  const t = up(tok).replace(/[.,]$/, '');
+  if (t === 'EB' || t === 'E.BOOST' || t === 'EBOOST' || t === 'E-BOOST') return 'ECOBOOST';
+  return tok.replace(/[.,]$/, '');
+}
 
 /**
  * Bir markanın bütün tipleri üzerinden model adlarını çözer.

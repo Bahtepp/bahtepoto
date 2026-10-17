@@ -56,6 +56,38 @@ describe('TSB tip adı ayrıştırma', () => {
     assert.equal(p.powerPs, 160);
   });
 
+  test('EB EcoBoost kısaltmasıdır; ST gücü okunur; Cool ve ST-Line ayrı model değildir', () => {
+    const eb = parseTypeName('FOCUS ST-LINE 1.0 MHEV EB 125 7AT');
+    assert.equal(eb.fuel, 'mild-hybrid');
+    assert.equal(eb.powerPs, 125);
+    assert.ok(eb.tech.includes('ECOBOOST'));
+    assert.equal(eb.tech.includes('EB'), false);
+
+    const st = parseTypeName('FOCUS III 2.0 ST 250 HB');
+    assert.equal(st.displacementL, 2);
+    assert.equal(st.powerPs, 250);
+    assert.equal(st.fuel, undefined);
+
+    const line = parseTypeName('FOCUS ST LINE 1.6 125 5K');
+    assert.equal(line.powerPs, 125);
+    assert.equal(line.fuel, undefined);
+
+    const names = [
+      'FIESTA COOL 1.4',
+      'FIESTA COOL 1.25',
+      'FIESTA COOL 1.6',
+      'FIESTA TREND 1.25i',
+      'FOCUS ST LINE 1.6 125',
+      'FOCUS ST LINE 1.0 ECOBOOST 125',
+      'FOCUS ST LINE 1.5 TDCI 120',
+    ];
+    const parsed = names.map(parseTypeName);
+    const resolve = resolveModels(parsed);
+    assert.equal(resolve(parsed[0]!).model, 'FIESTA');
+    assert.ok(resolve(parsed[0]!).trimWords.some((w) => w.toUpperCase() === 'COOL'));
+    assert.equal(resolve(parsed[4]!).model, 'FOCUS');
+  });
+
   test('donanım adı model sayılmaz, alt model sayılır', () => {
     const names = [
       'FOCUS TITANIUM 5K 1.6 TDCi (109)',
@@ -246,6 +278,44 @@ describe('TSB → katalog', () => {
     assert.equal(JSON.stringify([...again.merged.engines]), JSON.stringify([...r.merged.engines]));
   });
 
+  test('hp olarak tutulan aynı motor TSB PS satırına bağlanır; teknoloji farklıysa bağlanmaz', () => {
+    const catalog = miniCatalog();
+    const engines = catalog.engines.get('ford.json')!;
+    engines.push(
+      { id: 'ford-tdci-115hp', brandId: 'ford', slug: 'tdci-115hp', name: '1.6 TDCi (115 hp)', family: 'Duratorq TDCi', fuel: 'diesel', displacementL: 1.6, power: { hp: 115 }, status: 'sourced', sourceIds: ['wp'], updatedAt: '2026-10-15' },
+      { id: 'ford-ecoblue-120', brandId: 'ford', slug: 'ecoblue-120', name: '1.5 EcoBlue 120 PS', family: 'EcoBlue', fuel: 'diesel', displacementL: 1.5, power: { ps: 120 }, status: 'sourced', sourceIds: ['wp'], updatedAt: '2026-10-15' },
+    );
+    const mk3 = (catalog.models.get('models/ford/focus.json')!.generations as Json[])[1]!;
+    (mk3.variants as Json[]).push({
+      id: 'ford-focus-mk3-115hp', slug: 'tdci-115hp', engineId: 'ford-tdci-115hp', revisionMapping: 'unknown', marketIds: ['eu'], status: 'sourced', sourceIds: ['wp'], updatedAt: '2026-10-15',
+    });
+    const built = buildFromTsb(catalog, [
+      row('FORD', '3', 'FOCUS III TITANIUM 1.6 TDCi (115) 4K', [2012, 2013]),
+      row('FORD', '4', 'FOCUS III TREND 1.6 TDCi (115) 5K', [2012, 2013]),
+      row('FORD', '11', 'FOCUS 1.5 TDCi (120)', [2015, 2016]),
+    ], OPTS);
+    const gens = built.merged.models.get('models/ford/focus.json')!.generations as Json[];
+    const mk3v = gens.find((g) => g.slug === 'mk3')!.variants as Json[];
+    const linked = mk3v.find((x) => x.id === 'ford-focus-mk3-115hp')!;
+    assert.deepEqual((linked.marketAvailability as Json[])[0]!.modelYears, [2012, 2013]);
+    assert.equal(mk3v.some((x) => String(x.engineId).endsWith('16-tdci-115')), false);
+    const tdci120 = mk3v.find((x) => String(x.engineId).includes('tdci') && String(x.engineId).includes('120'));
+    assert.ok(tdci120);
+    assert.notEqual(tdci120!.engineId, 'ford-ecoblue-120');
+  });
+
+  test('yakıtı yazmayan ST-Line satırı performans motoruna bağlanmaz', () => {
+    const catalog = miniCatalog();
+    catalog.engines.get('ford.json')!.push({
+      id: 'ford-st25', brandId: 'ford', slug: 'st25', name: '2.5 Duratec ST', fuel: 'petrol', displacementL: 2.5, power: { ps: 225 }, status: 'sourced', sourceIds: ['wp'], updatedAt: '2026-10-15',
+    });
+    const built = buildFromTsb(catalog, [row('FORD', '20', 'KUGA ST-LINE 2.5 225 AT', [2020, 2021])], OPTS);
+    const kuga = built.merged.models.get('models/ford/kuga.json')!;
+    const v = ((kuga.generations as Json[])[0]!.variants as Json[])[0]!;
+    assert.notEqual(v.engineId, 'ford-st25');
+    assert.equal(v.trimName, undefined);
+  });
+
   test('temizleme elle girilmiş veriyi özgün hâline döndürür', () => {
     const stripped = stripTsb(r.merged);
     const original = miniCatalog();
@@ -407,6 +477,8 @@ describe('Türkiye pazar filtresi', () => {
     assert.equal(isPerformance({ marketIds: ['eu'], marketAvailability: [], trimName: 'ST' }), true);
     assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['RS'] }] }), true);
     assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['Titanium', 'ST'] }] }), false);
+    assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['ST Line'] }] }), false);
+    assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['ST-Line'] }] }), false);
   });
 
   test('gerçek katalog: TSB varyantlarının hepsinde Türkiye durumu ve model yılları var', () => {

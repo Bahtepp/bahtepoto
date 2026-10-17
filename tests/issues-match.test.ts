@@ -189,7 +189,8 @@ describe('pazar', () => {
 
   test('aynı pazar → uygulanır', () => {
     const eu = makeIssue({ appliesTo: [{ modelIds: ['ford-focus'], marketIds: ['eu'] }] });
-    assert.equal(verdict(eu, ctx('mk3', 'makyajli', 'rs')), 'applies');
+    // Mk3 benzinli ST yalnızca Avrupa kaydında. RS artık TSB ile Türkiye'de de listeli; o araçta Avrupa sorunu koşullu kalır.
+    assert.equal(verdict(eu, ctx('mk3', 'makyajli', 'st')), 'applies');
   });
 });
 

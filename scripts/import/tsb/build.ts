@@ -101,6 +101,30 @@ const TECH_DISPLAY: Record<string, string> = {
 };
 const techDisplay = (t: string) => TECH_DISPLAY[fold(t)] ?? t;
 
+/** Aynı gücü paylaşsalar da birbirine bağlanmayan motor aileleri. */
+const ENGINE_FAMILY_TOKENS = new Set([
+  'TDCI', 'TDDI', 'TDI', 'ECOBOOST', 'ECOBLUE', 'DCI', 'CDI', 'HDI', 'BLUEHDI', 'DURATEC', 'TIVCT', 'TI-VCT',
+  'PURETECH', 'TSI', 'TFSI', 'FSI', 'TCE', 'CDTI', 'CRDI', 'MULTIJET', 'DIG-T', 'IG-T',
+]);
+
+/**
+ * Satırların tamamı aynı performans modeliyse (ST, RS) varyant adı olur.
+ * ST-Line / ST Line donanım paketidir; performans modeli sayılmaz.
+ */
+function performanceTrim(items: { trims: string[] }[]): string | undefined {
+  const labels = items.map((it) => {
+    const words = it.trims.map((w) => fold(w));
+    if (words[0] === 'ST-LINE' || words[0] === 'STLINE' || (words[0] === 'ST' && words[1] === 'LINE')) return '';
+    const w0 = words[0] ?? '';
+    if (w0 === 'RS500') return 'RS500';
+    if (w0 === 'RS' || w0 === 'ST') return w0;
+    return '';
+  });
+  if (labels.length === 0 || labels.some((l) => !l)) return undefined;
+  const uniq = [...new Set(labels)];
+  return uniq.length === 1 ? uniq[0] : undefined;
+}
+
 /** 1.6 → "1.6", 6.75 → "6.75" (tek haneye yuvarlanmaz). */
 export function displacementLabel(n: number): string {
   const cents = Math.round(n * 100);
@@ -489,18 +513,53 @@ export function buildFromTsb(
       const disp = it.parsed.displacementL;
       const ps = it.parsed.powerPs;
       // Mevcut (elle girilmiş) motor: hacim, PS ve (biliniyorsa) yakıt aynı ve tek eşleşme
+      const nonTsb = (e: Json) => !(e.sourceIds as string[] | undefined)?.includes(TSB_SOURCE_ID);
+      // Yakıtı tip adında yazmayan satır, yakıtı belli bir motora bağlanmaz.
+      const fuelOk = (e: Json) => (e.fuel ? fuel === e.fuel : fuel === undefined);
+      const perfEngine = (e: Json) => /\b(ST|RS\d*|RS)\b/i.test(String(e.name ?? ''));
+      const rowsArePerformance = performanceTrim(list) !== undefined;
+      // Aynı hacim ve güçteki farklı motor aileleri (1.5 TDCi ile 1.5 EcoBlue) birleşmez.
+      // MHEV gibi ek teknoloji, aile adı kayıtta yoksa engel olmaz.
+      const familyTokens = it.techTokens.map(fold).filter((t) => ENGINE_FAMILY_TOKENS.has(t));
+      const familyOk = (e: Json) => {
+        if (familyTokens.length === 0) return true;
+        const hay = fold(`${e.name ?? ''} ${e.family ?? ''}`);
+        return familyTokens.every((t) => hay.includes(t));
+      };
       const existing = engines.filter(
         (e) =>
           disp !== undefined &&
           ps !== undefined &&
           e.displacementL === disp &&
           (e.power as Json | undefined)?.ps === ps &&
-          (fuel === undefined || e.fuel === fuel) &&
-          !(e.sourceIds as string[] | undefined)?.includes(TSB_SOURCE_ID),
+          fuelOk(e) &&
+          nonTsb(e) &&
+          familyOk(e) &&
+          (!perfEngine(e) || rowsArePerformance),
       );
       if (existing.length === 1) {
         engineByKey.set(it.engineKey, existing[0]!);
         return existing[0]!;
+      }
+      // Elle girilmiş kayıt gücü yalnızca hp olarak tutmuş olabilir (115 hp ↔ TSB "115").
+      // Birim çevrilmez; kaynakların yazdığı tam sayı ve motor ailesi aynıysa bağlanır.
+      // Aile adı yazmıyorsa hp kaydına zorlanmaz. Birden fazla aday varsa hiçbiri seçilmez.
+      const byHp = engines.filter(
+        (e) =>
+          disp !== undefined &&
+          ps !== undefined &&
+          e.displacementL === disp &&
+          (e.power as Json | undefined)?.ps === undefined &&
+          (e.power as Json | undefined)?.hp === ps &&
+          fuelOk(e) &&
+          nonTsb(e) &&
+          familyTokens.length > 0 &&
+          familyOk(e) &&
+          (!perfEngine(e) || rowsArePerformance),
+      );
+      if (byHp.length === 1) {
+        engineByKey.set(it.engineKey, byHp[0]!);
+        return byHp[0]!;
       }
       const slugPart = slugify([disp !== undefined ? displacementLabel(disp).replace('.', '') : '', ...it.techTokens, ps ?? (it.parsed.powerKw ? `${it.parsed.powerKw}kw` : it.parsed.powerHp ? `${it.parsed.powerHp}hp` : '')].filter(Boolean).join(' ')) || 'motor';
       const prior = engines.find((e) => e.slug === slugPart && (e.sourceIds as string[] | undefined)?.includes(TSB_SOURCE_ID));
@@ -738,6 +797,7 @@ export function buildFromTsb(
           }
         }
         const example = [...new Set(vItems.map((x) => x.row.typeName))].sort((a, b) => a.localeCompare(b, 'tr'))[0]!;
+        const trimName = performanceTrim(vItems);
         const variants = gen.variants as Json[];
         const existing = variants.find((v) => v.engineId === engine.id);
         if (existing) {
@@ -765,6 +825,7 @@ export function buildFromTsb(
           id: uniqueId(`${String(gen.id)}-${slug}`),
           slug: variants.some((v) => v.slug === slug) ? `${slug}-${variants.length + 1}` : slug,
           engineId: engine.id,
+          ...(trimName ? { trimName } : {}),
           revisionMapping: 'unknown',
           transmissions,
           ...(vItems.every((x) => x.parsed.awd) ? { drivetrain: 'awd' } : {}),

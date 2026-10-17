@@ -76,10 +76,20 @@ export function marketGroup(v: V, view: MarketView, markets: Pick<Market, 'id' |
 
 /** Özel performans modelleri (ST, RS, GTI, R, AMG …): normal motor listesinden ayrı başlıkta. */
 const PERFORMANCE = /^(ST|RS|RS\d+|GTI|GTD|R|R32|AMG|TYPE R|N|M\d?|CUPRA|SRT|NISMO|JCW|ABARTH|TRACKHAWK|RS500)$/i;
+
+/** ST-Line / ST Line donanım paketidir; Focus ST gibi performans modeli değildir. */
+function trimIsPerformance(trim: string): boolean {
+  const words = trim.trim().split(/\s+/);
+  const first = words[0] ?? '';
+  if (/^ST-LINE$/i.test(first) || /^STLINE$/i.test(first)) return false;
+  if (/^ST$/i.test(first) && /^LINE$/i.test(words[1] ?? '')) return false;
+  return PERFORMANCE.test(first);
+}
+
 export function isPerformance(v: V): boolean {
   if (v.trimName && PERFORMANCE.test(v.trimName.trim())) return true;
   const trims = availabilityFor(v, 'tr')?.trims ?? [];
-  return trims.length > 0 && trims.every((t) => PERFORMANCE.test(t.trim().split(' ')[0] ?? ''));
+  return trims.length > 0 && trims.every(trimIsPerformance);
 }
 
 export function marketCounts(variants: V[], markets: Pick<Market, 'id' | 'parentId'>[]): Record<MarketView, number> {

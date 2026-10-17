@@ -447,7 +447,6 @@ export function initCatalogExplorer(root: HTMLElement) {
         'dd',
         {},
         parts.join(' · '),
-        a.trims.length ? h('span', { class: 'spec-sub' }, `Donanım: ${a.trims.slice(0, 10).join(', ')}${a.trims.length > 10 ? ' …' : ''}`) : null,
         a.bodyTypes.length ? h('span', { class: 'spec-sub' }, `Gövde: ${a.bodyTypes.join(', ')}`) : null,
       ),
     );
@@ -562,8 +561,38 @@ export function initCatalogExplorer(root: HTMLElement) {
       ),
     ];
 
+    const familyLabel = (v: Variant) => {
+      const e = modelData!.engines[v.engineId]!;
+      return e.family || e.name.replace(/\s+\(?\d+\s*(?:ps|hp|kw|bhp|bg)\)?$/i, '').trim() || e.name;
+    };
+    const engineList = (list: Variant[], revisionId: (v: Variant) => string | undefined) => {
+      const groups: { label: string; items: Variant[] }[] = [];
+      for (const v of list) {
+        const label = familyLabel(v);
+        const last = groups[groups.length - 1];
+        if (last && last.label === label) last.items.push(v);
+        else groups.push({ label, items: [v] });
+      }
+      const nodes: Child[] = [];
+      for (const g of groups) {
+        const cards = g.items.map((v) => engineCard(v, modelData!.engines[v.engineId]!, gen, revisionId(v), rev));
+        if (g.items.length < 2) nodes.push(...cards);
+        else {
+          nodes.push(
+            h(
+              'li',
+              { class: 'engine-family' },
+              h('p', { class: 'engine-family-name' }, g.label),
+              h('ul', { class: 'engine-list engine-list-nested' }, ...cards),
+            ),
+          );
+        }
+      }
+      return h('ul', { class: 'engine-list' }, ...nodes);
+    };
+
     if (shownPrimary.length) {
-      children.push(h('ul', { class: 'engine-list' }, ...shownPrimary.map((v) => engineCard(v, modelData!.engines[v.engineId]!, gen, rev?.id, rev))));
+      children.push(engineList(shownPrimary, () => rev?.id));
     } else {
       children.push(
         h(
@@ -594,9 +623,7 @@ export function initCatalogExplorer(root: HTMLElement) {
             { class: 'unmapped-help' },
             `Bu motorlar ${gen.name} neslinde sunuldu, ancak hangi makyaj döneminde sunulduğu kaynaklarla henüz doğrulanmadı. Bu yüzden seçili dönemin altına otomatik olarak eklenmedi.`,
           ),
-          shownUnmapped.length
-            ? h('ul', { class: 'engine-list' }, ...shownUnmapped.map((v) => engineCard(v, modelData!.engines[v.engineId]!, gen, undefined, rev)))
-            : h('p', { class: 'empty' }, 'Filtreye uyan motor yok.'),
+          shownUnmapped.length ? engineList(shownUnmapped, () => undefined) : h('p', { class: 'empty' }, 'Filtreye uyan motor yok.'),
         ),
       );
     }
@@ -609,7 +636,7 @@ export function initCatalogExplorer(root: HTMLElement) {
         h('summary', {}, h('span', {}, title), h('span', { class: 'count' }, `${shown.length} / ${list.length}`)),
         h('p', { class: 'unmapped-help' }, help),
         shown.length
-          ? h('ul', { class: 'engine-list' }, ...shown.map((v) => engineCard(v, modelData!.engines[v.engineId]!, gen, rev && v.revisionIds.includes(rev.id) ? rev.id : undefined, rev)))
+          ? engineList(shown, (v) => (rev && v.revisionIds.includes(rev.id) ? rev.id : undefined))
           : h('p', { class: 'empty' }, 'Filtreye uyan motor yok.'),
       );
     };
