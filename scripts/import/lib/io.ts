@@ -70,8 +70,9 @@ export function loadStaging(stagingDir: string, only?: string): LoadedStagingFil
       } catch (e) {
         return { path, errors: [`${path}: JSON okunamadı (${(e as Error).message})`] };
       }
-      // Kayıt listesi biçimindeki raporlar (örn. tsb/belirsiz.json) aday dosyası değildir.
-      if (Array.isArray(raw)) return undefined;
+      // Aday dosyaları `schemaVersion` taşır. Raporlar ve toplayıcı verileri (örn. tsb/belirsiz.json,
+      // wikipedia/generations.json) aday dosyası değildir ve burada okunmaz.
+      if (Array.isArray(raw) || raw === null || typeof raw !== 'object' || !('schemaVersion' in raw)) return undefined;
       const parsed = stagingFileSchema.safeParse(raw);
       if (!parsed.success) {
         return { path, errors: parsed.error.issues.map((i) => `${path}: ${i.path.join('.') || '(kök)'}: ${i.message}`) };

@@ -36,6 +36,18 @@ eşleştir → kataloğa yaz → rapor). Yazmadan denemek için `npm run catalog
   olgusal araç tanımları ve model yılları kullanılıyor, değerler kullanılmıyor. Yayından önce TSB'nin bu kullanımı
   onaylaması önerilir.
 
+### Nesil adayları (Wikipedia)
+
+`npm run catalog:generations` (önbellekten: `-- --offline`) katalogdaki her model için İngilizce Wikipedia
+maddesini bulur (aday başlıklar + yönlendirmeler, 50 başlık/istek; ham yanıtlar `.cache/import/wikipedia/`).
+Nesil bölümlerindeki "Infobox automobile" kutularından ya da `{{Main|…}}` ile bağlanan nesil maddelerinden
+üretim yıllarını (Türkiye > Avrupa > açıklamasız satır; aksi hâlde en geniş aralık "yaklaşık"), yalnızca yazıyorsa
+kasa kodunu ve motor hacimlerini alır. Makyaj dönemi üretmez. Elle girilmiş nesli olan modeller atlanır.
+
+Çıktı yalnızca geçici alandadır: `data/staging/wikipedia/generations.json` ve `NESIL-RAPORU.md`. Rapor ayrıca
+adayların katalog kopyasına eklenip TSB içe aktarmasının yeniden çalıştırıldığı bir **eşleştirme denemesi** içerir
+(katalog yazılmaz). Adayların kataloğa aktarılması insan onayı bekler (`applyGenerations` hazır, bağlanmadı).
+
 ### Pazar görünümü
 
 Katalog Türkiye görünümüyle açılır (`?pazar=eu` Avrupa, `?pazar=world` tüm dünya). Türkiye görünümünde yalnızca
