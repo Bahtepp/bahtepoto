@@ -105,7 +105,7 @@ const techDisplay = (t: string) => TECH_DISPLAY[fold(t)] ?? t;
 const ENGINE_FAMILY_TOKENS = new Set([
   'TDCI', 'TDDI', 'TDI', 'ECOBOOST', 'ECOBLUE', 'DCI', 'CDI', 'HDI', 'BLUEHDI', 'DURATEC', 'TIVCT', 'TI-VCT',
   'PURETECH', 'TSI', 'TFSI', 'FSI', 'MPI', 'SDI', 'TGI', 'ETSI', 'E-TSI', 'GTE', 'TCE', 'CDTI', 'CRDI', 'MULTIJET', 'DIG-T', 'IG-T',
-  'FIRE', 'T-JET', 'FIREFLY', 'E-TORQ', 'D-4D', 'D-CAT',
+  'FIRE', 'T-JET', 'FIREFLY', 'E-TORQ', 'D-4D', 'D-CAT', 'T-GDI', 'GDI', 'CVVT', 'I-VTEC', 'I-DTEC',
 ]);
 
 /**
@@ -121,12 +121,16 @@ function performanceTrim(items: { trims: string[]; techTokens?: string[] }[]): s
     if (words[0] === 'RS-LINE' || words[0] === 'RSLINE' || (words[0] === 'RS' && words[1] === 'LINE')) return '';
     if (words[0] === 'R-LINE' || words[0] === 'RLINE' || (words[0] === 'R' && words[1] === 'LINE')) return '';
     if (words[0] === 'OPC-LINE' || words[0] === 'OPCLINE' || (words[0] === 'OPC' && words[1] === 'LINE')) return '';
+    if (words[0] === 'N-LINE' || words[0] === 'NLINE' || (words[0] === 'N' && words[1] === 'LINE')) return '';
     if (tech.includes('GTI') || words[0] === 'GTI') return 'GTI';
     if (tech.includes('GTD') || words[0] === 'GTD') return 'GTD';
     if (tech.includes('GTE') || words[0] === 'GTE') return 'GTE';
     if (words[0] === 'R') return 'R';
     const w0 = words[0] ?? '';
     if (w0 === 'RS500') return 'RS500';
+    if (w0 === 'TYPE-R' || w0 === 'TYPER' || (words[0] === 'TYPE' && words[1] === 'R')) return 'TYPE R';
+    if (words.includes('TYPE-R') || words.includes('TYPER')) return 'TYPE R';
+    if (w0 === 'N') return 'N';
     if (w0 === 'RS' || w0 === 'ST' || w0 === 'OPC' || w0 === 'GSI') return w0;
     if (words.includes('GSI')) return 'GSI';
     const opcAt = words.indexOf('OPC');
@@ -360,6 +364,7 @@ export function buildFromTsb(
         const extra = folded.startsWith(`${target} `) ? folded.slice(target.length).trim() : folded.startsWith(target) && folded.length > target.length && !target.includes(' ') ? folded.slice(target.length).trim() : '';
         model = alias.model;
         if (extra) trimWords.unshift(extra);
+        if (brand.id === 'honda' && folded === 'TYPE-R') trimWords.unshift('TYPE-R');
         if (alias.body) {
           if (alias.replaceBody) parsed.body = alias.body;
           else parsed.body ??= alias.body;
@@ -400,6 +405,25 @@ export function buildFromTsb(
       if (brand.id === 'opel' && /\b(?:CORSA|ASTRA|MOKKA|ZAFIRA|FRONTERA)-E\b/.test(fold(row.typeName)) && !parsed.fuel) parsed.fuel = 'electric';
       if ((brand.id === 'peugeot' || brand.id === 'citroen') && /\bE-\d{3,4}\b/.test(fold(row.typeName)) && !parsed.fuel) parsed.fuel = 'electric';
       if (brand.id === 'citroen' && /\bE-C\d\b/.test(fold(row.typeName)) && !parsed.fuel) parsed.fuel = 'electric';
+      if (brand.id === 'hyundai') {
+        const lead = fold(trimWords[0] ?? '');
+        if (fold(model) === 'IONIQ' && /^[3569]$/.test(lead)) {
+          model = `IONIQ ${trimWords.shift()}`;
+        }
+        // Accent Era ve Accent Blue, Accent'in donanım adı değildir.
+        if (fold(model) === 'ACCENT' && /^(ERA|BLUE)$/.test(lead)) {
+          model = `ACCENT ${trimWords.shift()}`;
+        }
+        // "1.0T" ve "1.0 T" Hyundai'de T-GDI'dir. "1.6 GDI" atmosferik kalır.
+        if (/(?:\d[.,]\dT|\d[.,]\d\s+T)\b/.test(fold(row.typeName)) && !parsed.tech.some((t) => /^(T-GDI|GDI)$/i.test(t))) {
+          parsed.tech.push('T-GDI');
+        }
+        // kW yazılıp hacim yazılmayan Ioniq / Inster elektriktir. EVO burada benzin ailesi değildir.
+        if (parsed.powerKw !== undefined && parsed.displacementL === undefined && parsed.tech.every((t) => /^(EVO|OBC)$/i.test(t))) {
+          parsed.tech = parsed.tech.filter((t) => !/^EVO$/i.test(t));
+          parsed.fuel = 'electric';
+        }
+      }
       if (brand.modelPrefix) model = `${brand.modelPrefix} ${model}`.trim();
       // TSB'de Chrysler altında listelenen Jeep modelleri ("JEEP COMPASS", "JEEPRENEGADE") Jeep markasına.
       let rowBrand: BrandRule | undefined;
@@ -702,7 +726,15 @@ export function buildFromTsb(
         // 1) Kesin kasa / model kodu: tip adında geçen kod, neslin kaynaktaki kod listesinde.
         //    "4K" (4 kapı) gibi gövde kısaltmalarıyla karışmasın diye yalnızca harfle başlayan veya 3+ karakterli kodlar.
         const tokens = new Set(fold(it.row.typeName).split(/[\s/(),]+/));
+        const periodOverlaps = (g: Json) => {
+          const lp = g.labelPeriod as { start?: { year: number }; end?: { year: number } | null } | undefined;
+          const s = lp?.start?.year;
+          if (s === undefined) return true;
+          return s <= b && (lp?.end?.year ?? 9999) >= a;
+        };
+        // Kasa kodu, model yılları o neslin dışında kalan satırı çekmez ("C5" kodu 2008 C5'i 2022 C5 X'e bağlayamaz).
         const byCode = real.filter((g) =>
+          periodOverlaps(g) &&
           String(g.code ?? '')
             .split('/')
             .map((c) => fold(c.trim()))

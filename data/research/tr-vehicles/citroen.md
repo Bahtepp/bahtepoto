@@ -16,7 +16,7 @@ DS3, DS4 ve DS5 eski Citroën kayıtları olarak Citroën’de kaldı. DS markas
 
 ## Çözülmeden bırakılanlar
 
-- C5 dosyasında Wikipedia kasa adı “C5 X” ve kasa kodu `C5`. İçindeki 2008–2015 C5 satırları C5 X modeline taşınmadı; tip adları C5.
+- C5 maddesindeki “Successor” başlığı C5 X’i nesil sanıyordu. Başlık nesil değilse `{{Main}}` hedefi artık nesil sayılmıyor. Kasa kodu da model yılları o neslin dışında kalan satırı çekmiyor. 2008–2015 C5 satırları C5 2. nesilde. C5 X etiketi C5 sayfasında yok. C5 X modeli ayrı duruyor.
 - `1.6 PUR.180` PureTech diye açılmadı.
 - Güç yazmayan 1.2 / 1.4 / 1.6 satırları tamamlanmadı.
 - C5 X için TSB’de yalnızca 1.6 PHEV 181 satırı var. Başka güç uydurulmadı.

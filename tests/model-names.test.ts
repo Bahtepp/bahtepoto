@@ -212,11 +212,36 @@ describe('takma ad tablosu (gövde/donanım varyantları)', () => {
       ['models/toyota/rav4.json'],
     );
   });
-  test('i30 CW ve Accent Era asıl modelde', () => {
-    assert.deepEqual(files([row('HYUNDAI', 'I30 1.6 CRDI STYLE'), row('HYUNDAI', 'I30 CW 1.6 CRDI STYLE'), row('HYUNDAI', 'ACCENT ERA 1.5 CRDI', [2010]), row('HYUNDAI', 'ACCENT 1.5 CRDI', [2010])]), [
-      'models/hyundai/accent.json',
-      'models/hyundai/i30.json',
+  test('i30 CW i30 gövdesidir; Accent, Era ve Blue ayrı kalır', () => {
+    assert.deepEqual(files([row('HYUNDAI', 'I30 1.6 CRDI STYLE'), row('HYUNDAI', 'I30 CW 1.6 CRDI STYLE')]), ['models/hyundai/i30.json']);
+    assert.deepEqual(
+      files([
+        row('HYUNDAI', 'ACCENT 1.5 CRDI', [2010]),
+        row('HYUNDAI', 'ACCENT ERA 1.5 CRDI', [2010]),
+        row('HYUNDAI', 'ACCENT BLUE 1.4 CVVT MODE', [2012]),
+      ]),
+      ['models/hyundai/accent-blue.json', 'models/hyundai/accent-era.json', 'models/hyundai/accent.json'],
+    );
+  });
+  test('Ioniq 5 ve Ioniq 6, Ioniq’ten ayrıdır; ix35 Tucson’a karışmaz', () => {
+    assert.deepEqual(
+      files([
+        row('HYUNDAI', 'IONIQ HYBRID 1.6 GDI HEV'),
+        row('HYUNDAI', 'IONIQ 5 PROGRESSIVE 125KW'),
+        row('HYUNDAI', 'IONIQ 6 PROGRESSIVE 111 KW'),
+      ]),
+      ['models/hyundai/ioniq-5.json', 'models/hyundai/ioniq-6.json', 'models/hyundai/ioniq.json'],
+    );
+    assert.deepEqual(files([row('HYUNDAI', 'TUCSON 1.6 T-GDI STYLE'), row('HYUNDAI', 'IX35 1.6 GDI STYLE')]), [
+      'models/hyundai/ix35.json',
+      'models/hyundai/tucson.json',
     ]);
+  });
+  test('Type R Civic’te kalır', () => {
+    assert.deepEqual(files([row('HONDA', 'CIVIC SEDAN 1.6 (125) DREAM'), row('HONDA', 'TYPE-R 2.0 TURBO i-VTEC')]), ['models/honda/civic.json']);
+    const civic = build([row('HONDA', 'TYPE-R 2.0 TURBO i-VTEC')]).merged.models.get('models/honda/civic.json');
+    const trimName = ((civic?.generations as { variants: { trimName?: string }[] }[]) ?? []).flatMap((g) => g.variants.map((v) => v.trimName)).find(Boolean);
+    assert.equal(trimName, 'TYPE R');
   });
   test('C5AIRCROSS / C5-AC → C5 Aircross; C3 Aircross ayrı kalır', () => {
     assert.deepEqual(files([row('CITROEN', 'C5AIRCROSS 1.5 BLUEHDI 130'), row('CITROEN', 'C5-AC 1.5 BLUEHDI 130'), row('CITROEN', 'C3AIRCROSS 1.2 PURETECH 110')]), [

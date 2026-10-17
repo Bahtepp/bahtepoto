@@ -98,6 +98,14 @@ describe('maddeden nesil çıkarımı', () => {
     assert.deepEqual(used.map((p) => p.title), ['BMW 3 Series (E46)'], 'türev model (M3) nesil sayılmaz');
   });
 
+  test('halef model nesil sayılmaz (Citroën C5 X)', () => {
+    const art = page('Citroën C5', ['== Second generation (RD/TD; 2008) ==', infobox('Citroën C5', '2008–2017'), '== Successor ==', '{{Main|Citroën C5 X}}'].join('\n'));
+    const linked = new Map([['Citroën C5 X', page('Citroën C5 X', infobox('Citroën C5 X', '2022–2026'), 2)]]);
+    const { gens } = generationsFromArticle(art, linked, 'Citroën', 'C5', 2026);
+    assert.equal(gens.some((g) => g.page === 'Citroën C5 X' || g.name === 'C5 X'), false);
+    assert.ok(gens.some((g) => g.start === 2008));
+  });
+
   test('model maddesinin başlığı kasa kodu sayılmaz ("Audi A5")', () => {
     const art = page('Audi A5', ['== First generation (8T/8F; 2007) ==', infobox('Audi A5', '2007–2016'), '== Second generation (F5; 2016) ==', infobox('Audi A5', '2016–2024')].join('\n'));
     const { gens } = generationsFromArticle(art, new Map(), 'Audi', 'A5', 2026);

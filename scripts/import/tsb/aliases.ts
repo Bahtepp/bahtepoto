@@ -44,7 +44,9 @@ export const MODEL_ALIASES: Record<string, Record<string, ModelAlias>> = {
     'I30 CW': { model: 'I30', body: 'wagon', note: 'i30 CW station wagon gövdesi' },
     'I20 TROY': { model: 'I20', note: 'i20 Troy: Türkiye donanım/versiyon adı' },
     'I20 ACTIVE': { model: 'I20', note: 'i20 Active: i20 crossover görünümlü versiyon (aynı nesil)' },
-    'ACCENT ERA': { model: 'ACCENT', note: "Accent Era: üçüncü nesil Accent'in Türkiye satış adı" },
+  },
+  honda: {
+    'TYPE-R': { model: 'CIVIC', note: 'Tip adında Civic yazmayan Type R, Civic performans sürümüdür' },
   },
   opel: {
     'INSIGNIA GRAND': { model: 'INSIGNIA', note: 'Insignia Grand Sport gövdesi' },

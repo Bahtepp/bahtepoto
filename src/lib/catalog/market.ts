@@ -81,8 +81,9 @@ const PERFORMANCE = /^(ST|RS|RS\d+|GTI|GTD|R|R32|AMG|TYPE R|N|M\d?|CUPRA|SRT|NIS
 function trimIsPerformance(trim: string): boolean {
   const words = trim.trim().split(/\s+/);
   const first = words[0] ?? '';
-  if (/^(ST-LINE|STLINE|GT-LINE|GTLINE|RS-LINE|RSLINE|R-LINE|RLINE|OPC-LINE|OPCLINE)$/i.test(first)) return false;
-  if (/^(ST|GT|RS|R|OPC)$/i.test(first) && /^LINE$/i.test(words[1] ?? '')) return false;
+  if (/^(ST-LINE|STLINE|GT-LINE|GTLINE|RS-LINE|RSLINE|R-LINE|RLINE|OPC-LINE|OPCLINE|N-LINE|NLINE)$/i.test(first)) return false;
+  if (/^(ST|GT|RS|R|OPC|N)$/i.test(first) && /^LINE$/i.test(words[1] ?? '')) return false;
+  if (/^TYPE-R$/i.test(first) || (/^TYPE$/i.test(first) && /^R$/i.test(words[1] ?? ''))) return true;
   return PERFORMANCE.test(first);
 }
 

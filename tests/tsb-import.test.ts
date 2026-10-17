@@ -162,6 +162,50 @@ describe('TSB tip adı ayrıştırma', () => {
     assert.equal(glued.fuel, 'diesel');
     assert.equal(glued.powerPs, 120);
     assert.equal(glued.displacementL, 1.5);
+    const motorKw = parseTypeName('INSTER ADVANCE 84.5KW');
+    assert.equal(motorKw.displacementL, undefined);
+    assert.equal(motorKw.powerKw, 84.5);
+    assert.equal(motorKw.fuel, 'electric');
+    assert.equal(motorKw.tech.includes('OBC'), false);
+  });
+
+  test('Hyundai T-GDI, GDI, MPI ve 48V mild hybrid ayrı kalır', () => {
+    const tgdi = parseTypeName('i20 FL 1.0 T-GDI 100 JUMP DCT');
+    const short = parseTypeName('i20 1.0T 100 STYLE 7DCT');
+    const spaced = parseTypeName('i20 FL 1.0 T 100 JUMP DCT');
+    const mhev = parseTypeName('i20 1.0T 48V STYLE PLUS 7DCT');
+    const gdi = parseTypeName('TUCSON 1.6 GDI STYLE');
+    const mpi = parseTypeName('i20 1.4 MPI 100 JUMP');
+    const crdi = parseTypeName('i20 1.4 CRDI JUMP');
+    assert.equal(tgdi.fuel, 'petrol');
+    assert.ok(tgdi.tech.includes('T-GDI'));
+    assert.equal(tgdi.powerPs, 100);
+    assert.equal(short.fuel, 'petrol');
+    assert.equal(short.powerPs, 100);
+    assert.ok(spaced.tech.includes('T-GDI') === false);
+    assert.equal(spaced.powerPs, 100);
+    assert.equal(spaced.fuel, 'petrol');
+    assert.equal(mhev.fuel, 'mild-hybrid');
+    assert.equal(gdi.fuel, 'petrol');
+    assert.ok(gdi.tech.includes('GDI'));
+    assert.equal(gdi.tech.includes('T-GDI'), false);
+    assert.equal(mpi.fuel, 'petrol');
+    assert.ok(mpi.tech.includes('MPI'));
+    assert.equal(crdi.fuel, 'diesel');
+  });
+
+  test('Honda i-VTEC ile i-DTEC ve e:HEV birleşmez', () => {
+    const vtec = parseTypeName('CIVIC HB 1.4 i-VTEC COMFORT');
+    const dtec = parseTypeName('CIVIC HB 1.6 i-DTEC COMFORT');
+    const ehev = parseTypeName('JAZZ 1.5 e:HEV EXECUTIVE');
+    const lpg = parseTypeName('CIVIC SEDAN 1.6 125 ELEGANCE LPG HAZIRLIK');
+    assert.equal(vtec.fuel, 'petrol');
+    assert.ok(vtec.tech.includes('i-VTEC'));
+    assert.equal(dtec.fuel, 'diesel');
+    assert.ok(dtec.tech.includes('i-DTEC'));
+    assert.equal(ehev.fuel, 'hybrid');
+    assert.equal(lpg.fuel, 'lpg');
+    assert.equal(lpg.powerPs, 125);
   });
 
   test('PureTech, VTi, THP, HDi ve BlueHDi aynı hacimde birleşmez', () => {
@@ -670,6 +714,10 @@ describe('Türkiye pazar filtresi', () => {
     assert.equal(isPerformance({ ...listed, trimName: 'R', marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['R'] }] }), true);
     assert.equal(isPerformance({ ...listed, trimName: 'OPC', marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['Sport'] }] }), true);
     assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['OPC Line'] }] }), false);
+    assert.equal(isPerformance({ ...listed, trimName: 'N', marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['Style'] }] }), true);
+    assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['N Line'] }] }), false);
+    assert.equal(isPerformance({ ...listed, marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['N'] }] }), true);
+    assert.equal(isPerformance({ ...listed, trimName: 'TYPE R', marketAvailability: [{ ...listed.marketAvailability[0]!, trims: ['Elegance'] }] }), true);
   });
 
   test('gerçek katalog: TSB varyantlarının hepsinde Türkiye durumu ve model yılları var', () => {

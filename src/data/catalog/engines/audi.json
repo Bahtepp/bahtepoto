@@ -1,6 +1,6 @@
 [
   { "id": "audi-16", "brandId": "audi", "slug": "16", "name": "1.6", "displacementL": 1.6, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
-  { "id": "audi-18", "brandId": "audi", "slug": "18", "name": "1.8", "displacementL": 1.8, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
+  { "id": "audi-18", "brandId": "audi", "slug": "18", "name": "1.8", "fuel": "petrol", "displacementL": 1.8, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
   { "id": "audi-19-tdi", "brandId": "audi", "slug": "19-tdi", "name": "1.9 TDI", "fuel": "diesel", "displacementL": 1.9, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
   { "id": "audi-20", "brandId": "audi", "slug": "20", "name": "2.0", "displacementL": 2, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
   { "id": "audi-20-fsi", "brandId": "audi", "slug": "20-fsi", "name": "2.0 FSI", "fuel": "petrol", "displacementL": 2, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },

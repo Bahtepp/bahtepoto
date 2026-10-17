@@ -1,5 +1,5 @@
 [
-  { "id": "dfsk-15", "brandId": "dfsk", "slug": "15", "name": "1.5", "displacementL": 1.5, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
+  { "id": "dfsk-15", "brandId": "dfsk", "slug": "15", "name": "1.5", "fuel": "petrol", "displacementL": 1.5, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
   { "id": "dfsk-elektrikli", "brandId": "dfsk", "slug": "elektrikli", "name": "ELEKTRIKLI", "fuel": "electric", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
   { "id": "dfsk-15-phev", "brandId": "dfsk", "slug": "15-phev", "name": "1.5 PHEV", "fuel": "plug-in-hybrid", "displacementL": 1.5, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
 ]

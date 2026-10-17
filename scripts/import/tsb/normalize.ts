@@ -38,8 +38,8 @@ export interface ParsedType {
 const up = (s: string) => s.toLocaleUpperCase('tr-TR').replace(/İ/g, 'I').replace(/Ş/g, 'S').replace(/Ğ/g, 'G').replace(/Ü/g, 'U').replace(/Ö/g, 'O').replace(/Ç/g, 'C');
 
 const DIESEL = new Set(['TDCI', 'TDI', 'DCI', 'CRDI', 'CRDİ', 'HDI', 'BLUEHDI', 'BLUHDI', 'E-HDI', 'JTD', 'JTDM', 'MULTIJET', 'MJET', 'MJT', 'M.JET', 'M-JET', 'CDTI', 'CTDI', 'CDI', 'D4D', 'D-4D', 'DIZEL', 'DIESEL', 'SDV6', 'TDV6', 'SD4', 'TD4', 'ED4', 'CRD', 'DTEC', 'I-DTEC', 'IDTEC', 'SKYACTIV-D', 'VCDI', 'D-CAT', 'BLUETEC', 'TDS', 'SDI', 'ECOBLUE', 'BLUEDCI', 'B.DCI', 'BDCI', 'CRDI4', 'DDIS', 'DDIS4', 'TDDI', 'TDCI4', 'D-4D4', 'XDI', 'CRTD', 'BITDI', 'BITURBODIESEL', 'TDCİ']);
-const PETROL = new Set(['EB', 'E.BOOST', 'TSI', 'TFSI', 'FSI', 'TCE', 'ECOBOOST', 'VVT', 'VVTI', 'VVT-I', 'DUAL-VVT', 'VTEC', 'I-VTEC', 'IVTEC', 'MPI', 'GDI', 'T-GDI', 'TGDI', 'PURETECH', 'PTECH', 'THP', 'VTI', 'E-VTI', 'TJET', 'T-JET', 'T.JET', 'MULTIAIR', 'FIRE', 'TB', 'TBI', 'BENZIN', 'BENZINLI', 'SCE', 'TI-VCT', 'TIVCT', 'DURATEC', 'ECOTEC', 'SIDI', 'TURBOJET', 'GTI', 'EVO', 'DIG-T', 'DIGT', 'IG-T', 'IGT', 'SKYACTIV-G', 'TSI-ACT', 'FIREFLY', 'E-TORQ', 'E.TORQ', 'ETORQ']);
-const HYBRID = new Set(['HYBRID', 'HIBRIT', 'HIBRID', 'HEV', 'FULL-HYBRID', 'F.HYBRID', 'F-HYBRID', 'E-TECH', 'ETECH', 'E-TECH-HYBRID', 'HYBRIT', 'SELF-CHARGING', 'E-POWER', 'EPOWER']);
+const PETROL = new Set(['EB', 'E.BOOST', 'TSI', 'TFSI', 'FSI', 'TCE', 'ECOBOOST', 'VVT', 'VVTI', 'VVT-I', 'DUAL-VVT', 'CVVT', 'VTEC', 'I-VTEC', 'IVTEC', 'V-TEC', 'MPI', 'GDI', 'T-GDI', 'TGDI', 'PURETECH', 'PTECH', 'THP', 'VTI', 'E-VTI', 'TJET', 'T-JET', 'T.JET', 'MULTIAIR', 'FIRE', 'TB', 'TBI', 'BENZIN', 'BENZINLI', 'SCE', 'TI-VCT', 'TIVCT', 'DURATEC', 'ECOTEC', 'SIDI', 'TURBOJET', 'GTI', 'EVO', 'DIG-T', 'DIGT', 'IG-T', 'IGT', 'SKYACTIV-G', 'TSI-ACT', 'FIREFLY', 'E-TORQ', 'E.TORQ', 'ETORQ']);
+const HYBRID = new Set(['HYBRID', 'HIBRIT', 'HIBRID', 'HEV', 'E:HEV', 'EHEV', 'FULL-HYBRID', 'F.HYBRID', 'F-HYBRID', 'E-TECH', 'ETECH', 'E-TECH-HYBRID', 'HYBRIT', 'SELF-CHARGING', 'E-POWER', 'EPOWER']);
 const PHEV = new Set(['PHEV', 'PLUG-IN', 'E-HYBRID', 'EHYBRID', 'PLUGIN', 'PLUG-IN-HYBRID', 'GTE', 'HYBRID4', 'E-TENSE', 'ETENSE']);
 const MHEV = new Set(['MHEV', 'ETSI', 'E-TSI', 'MILD-HYBRID', 'MILD', '48V', 'MHYBRID']);
 const ELECTRIC = new Set(['EV', 'BEV', 'ELEKTRIK', 'ELEKTRIKLI', 'ELECTRIC', 'E-TRON', 'KWH']);
@@ -154,8 +154,8 @@ const GLUED_TECH: { alias: string; canon: string }[] = [
   ['TFSI', 'TFSI'],
   ['CDTI', 'CDTI'],
   ['CRDI', 'CRDI'],
-  ['TGDI', 'TGDI'],
   ['T-GDI', 'T-GDI'],
+  ['TGDI', 'T-GDI'],
   ['TCE', 'TCE'],
   ['T-JET', 'T-JET'],
   ['TJET', 'T-JET'],
@@ -252,6 +252,19 @@ export function parseTypeName(typeName: string): ParsedType {
       else out.powerPs ??= n;
       attr = true;
     }
+    // "84.5KW", "226.1KW": motor gücü. "7.4KW" tek haneli olduğu için aşağıdaki şarj kuralında kalır.
+    const decKw = /^(\d{2,3}[.,]\d)KW$/.exec(T);
+    if (!attr && decKw) {
+      const kw = Number(decKw[1]!.replace(',', '.'));
+      if (kw <= 22) {
+        if (up(raw[i + 1] ?? '') === 'OBC') i++;
+        out.tech.push('OBC');
+      } else {
+        out.powerKw ??= kw;
+        if (!out.fuel) setFuel('electric');
+      }
+      attr = true;
+    }
     const kwh = /^(\d{2,3}(?:[.,]\d)?)KWH$/.exec(T);
     if (!attr && kwh) {
       out.batteryKwh = Number(kwh[1]!.replace(',', '.'));
@@ -288,6 +301,8 @@ export function parseTypeName(typeName: string): ParsedType {
       if (!attr) out.displacementL = Number(`${disp[1]}.${disp[2]}`);
       if (!attr && letter === 'I') setFuel('petrol');
       if (!attr && letter === 'D') setFuel('diesel');
+      // "1.0T" / "1.5T": turbo benzin. Dizel "1.6TDI" yapışık aile olarak yukarıda ayrılır.
+      if (!attr && letter === 'T') setFuel('petrol');
       if (glued) {
         const f = fuelOf(glued.canon);
         if (f) {
@@ -334,6 +349,11 @@ export function parseTypeName(typeName: string): ParsedType {
     }
     // Motor tanımının parçası olan ama donanım olmayan sözcükler: "1.2 TSI BMT 105", "1.5 DCI E6 110".
     // ACT (silindir devre dışı bırakma) ayrı bir motor sürümüdür; motor tanımına eklenir.
+    // "1.0 T 100" içindeki T donanım adı değildir; turbo benzin işaretidir.
+    if (!attr && T === 'T' && /^\d[.,]\d/.test(up(raw[i - 1] ?? ''))) {
+      setFuel('petrol');
+      attr = true;
+    }
     if (!attr && seenAttr && NEUTRAL.has(T)) {
       if (T === 'ACT' || T === 'TWINCHARGER' || T === 'BITURBO') out.tech.push(tok);
       attr = true;
@@ -351,7 +371,9 @@ export function parseTypeName(typeName: string): ParsedType {
       const prev2 = up(raw[i - 2] ?? '').replace(/\.$/, '');
       const afterEngineSeries = ROMAN.test(prev) && fuelOf(prev2) !== undefined;
       const afterEngineCode = /^B\d{2}X[A-Z]{2}$/.test(prev);
-      if (fuelOf(prev) || /^\d[.,]\d/.test(prev) || NEUTRAL.has(prev) || afterPerformance || afterTrans || afterEngineSeries || afterEngineCode || /^TIP/.test(prev) || /^EV\d+$/.test(prev)) {
+      // "1.0 T 100": T turbo işaretidir, sonraki sayı güçtür.
+      const afterTurboMark = prev === 'T' && /^\d[.,]\d/.test(up(raw[i - 2] ?? ''));
+      if (fuelOf(prev) || /^\d[.,]\d/.test(prev) || NEUTRAL.has(prev) || afterPerformance || afterTrans || afterEngineSeries || afterEngineCode || afterTurboMark || /^TIP/.test(prev) || /^EV\d+$/.test(prev)) {
         const n = Number(T);
         if (n >= 50 && n <= 800) {
           out.powerPs = n;
@@ -489,6 +511,9 @@ function storedTech(tok: string): string {
   if (t === 'PTECH') return 'PURETECH';
   if (t === 'BLUHDI') return 'BLUEHDI';
   if (t === 'ETENSE') return 'E-TENSE';
+  if (t === 'TGDI') return 'T-GDI';
+  if (t === 'HEV' || t === 'E:HEV' || t === 'EHEV') return 'HYBRID';
+  if (t === 'VTEC' || t === 'V-TEC' || t === 'IVTEC' || t === 'I-VTEC') return 'i-VTEC';
   return tok.replace(/[.,]$/, '');
 }
 

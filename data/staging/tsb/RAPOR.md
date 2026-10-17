@@ -6,15 +6,15 @@ Kaynak dosyalar: `202201R1.xlsx`, `202610R1.xlsx` (TSB Kasko Değer Listesi). Fi
 |---|---|
 | TSB satırı (tekil marka-tip kodu) | 32427 |
 | Kapsam dışı (ağır vasıta, otobüs, panelvan, karavan, motosiklet …) | 16136 |
-| Aktarılan satır | 15320 |
-| Aktarılamayan / belirsiz satır (`belirsiz.json`) | 841 |
+| Aktarılan satır | 15330 |
+| Aktarılamayan / belirsiz satır (`belirsiz.json`) | 831 |
 | Marka | 97 |
-| Yalnızca TSB kaynaklı model | 839 |
-| Yeni nesil grubu (ipucundan: 5, "nesil belirlenmedi": 564) | 569 |
-| Yeni motor (yakıt türü tip adında yazmayan: 1024) | 2449 |
-| Yeni varyant (nesil × motor) | 4968 |
-| — mevcut kataloğun nesillerine eşlenen | 3090 |
-| — nesli belirlenemeyen | 1873 |
+| Yalnızca TSB kaynaklı model | 846 |
+| Yeni nesil grubu (ipucundan: 5, "nesil belirlenmedi": 571) | 576 |
+| Yeni motor (yakıt türü tip adında yazmayan: 993) | 2456 |
+| Yeni varyant (nesil × motor) | 4979 |
+| — mevcut kataloğun nesillerine eşlenen | 3083 |
+| — nesli belirlenemeyen | 1891 |
 | Türkiye durumu eklenen mevcut (elle girilmiş) varyant | 12 |
 
 ## Kapsam dışı bırakılanlar
@@ -25,7 +25,7 @@ Kaynak dosyalar: `202201R1.xlsx`, `202610R1.xlsx` (TSB Kasko Değer Listesi). Fi
 
 ## Aktarılamayanlar (nedenleriyle `belirsiz.json` içinde)
 
-- motor bilgisi yok (hacim, güç ve motor tanımı yazmıyor): 741
+- motor bilgisi yok (hacim, güç ve motor tanımı yazmıyor): 731
 - model adı çözümlenemedi: 100
 
 ## Markalar
@@ -33,18 +33,18 @@ Kaynak dosyalar: `202201R1.xlsx`, `202610R1.xlsx` (TSB Kasko Değer Listesi). Fi
 | Marka | Model | Varyant |
 |---|---|---|
 | Mercedes-Benz | 40 | 417 |
-| BMW | 32 | 379 |
+| BMW | 32 | 378 |
 | Audi | 37 | 323 |
 | Volkswagen | 34 | 293 |
 | Ford | 34 | 264 |
 | Renault | 28 | 251 |
 | Peugeot | 22 | 247 |
 | Opel | 21 | 232 |
-| Hyundai | 26 | 180 |
+| Hyundai | 33 | 188 |
 | Fiat | 29 | 178 |
-| Citroen | 23 | 172 |
+| Citroen | 23 | 174 |
 | Skoda | 15 | 168 |
-| Kia | 25 | 151 |
+| Kia | 26 | 153 |
 | Toyota | 30 | 136 |
 | Seat | 12 | 128 |
 | Porsche | 9 | 115 |
@@ -54,7 +54,7 @@ Kaynak dosyalar: `202201R1.xlsx`, `202610R1.xlsx` (TSB Kasko Değer Listesi). Fi
 | Land Rover | 8 | 73 |
 | Chevrolet | 24 | 61 |
 | Alfa Romeo | 17 | 60 |
-| Honda | 14 | 60 |
+| Honda | 13 | 60 |
 | Jeep | 8 | 49 |
 | Jaguar | 13 | 47 |
 | Suzuki | 14 | 39 |
@@ -141,9 +141,9 @@ Katalog şemaları ve bütünlük denetimi geçti.
 | Eklenen nesil | 1261 |
 | Nesil eklenen model | 538 |
 | Çelişki veya belirsiz model kimliği nedeniyle dışarıda bırakılan model (`data/staging/wikipedia/DISARIDA.md`) | 105 |
-| Tip adındaki kasa koduyla eşlenen varyant | 16 |
-| Kaynaktaki motor (hacim + yakıt) bilgisiyle eşlenen varyant | 14 |
-| Bütün model yılları yalnızca tek neslin dönemine düşen varyant | 1231 |
+| Tip adındaki kasa koduyla eşlenen varyant | 4 |
+| Kaynaktaki motor (hacim + yakıt) bilgisiyle eşlenen varyant | 15 |
+| Bütün model yılları yalnızca tek neslin dönemine düşen varyant | 1234 |
 
 Not: Aynı motor birden çok nesilde satıldıysa her nesil için ayrı varyant oluşur (bir TSB satırı yalnızca bir
 varyanta girer). Nesil eklendikçe toplam varyant sayısının artması bu yüzdendir.
@@ -153,13 +153,13 @@ varyanta girer). Nesil eklendikçe toplam varyant sayısının artması bu yüzd
 | Neden | TSB satırı | Model |
 |---|---|---|
 | kaynaklı nesil yok — Wikipedia maddesi modelle eşleşmedi (adlandırma farkı / türev model) | 858 | 104 |
-| yıllar birden çok nesle uyuyor; kaynaktaki motor bilgisi tek nesli göstermiyor | 781 | 97 |
-| yıllar birden çok nesle uyuyor; motor hacmi veya yakıt türü bilinmiyor | 692 | 111 |
+| yıllar birden çok nesle uyuyor; kaynaktaki motor bilgisi tek nesli göstermiyor | 809 | 100 |
+| yıllar birden çok nesle uyuyor; motor hacmi veya yakıt türü bilinmiyor | 672 | 109 |
 | kaynaklı nesil yok — Wikipedia maddesi bulunamadı | 485 | 133 |
 | model yılları kaynakta çelişkili bir neslin dönemine düşüyor | 454 | 16 |
-| satırın model yılları iki neslin dönemine yayılıyor | 325 | 72 |
-| model yılları bilinen hiçbir neslin dönemine uymuyor | 314 | 45 |
-| alt model / farklı kasa (ör. VERSO, PLUS, SEDAN): yalnızca kasa kodu veya nesil ipucuyla eşlenir | 277 | 53 |
+| satırın model yılları iki neslin dönemine yayılıyor | 302 | 71 |
+| model yılları bilinen hiçbir neslin dönemine uymuyor | 300 | 44 |
+| alt model / farklı kasa (ör. VERSO, PLUS, SEDAN): yalnızca kasa kodu veya nesil ipucuyla eşlenir | 278 | 54 |
 | tek model yılı, komşu nesil sınırında | 240 | 72 |
-| kaynaklı nesil yok — madde var, nesil bilgi kutusu yok | 210 | 40 |
-| kaynaklı nesil yok — diğer | 92 | 12 |
+| kaynaklı nesil yok — madde var, nesil bilgi kutusu yok | 208 | 39 |
+| kaynaklı nesil yok — diğer | 182 | 20 |

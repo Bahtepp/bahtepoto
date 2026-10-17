@@ -169,6 +169,9 @@ export function generationsFromArticle(
   for (const s of sectionsWithMain(article.wikitext)) {
     const heading = cleanHeading(s.heading);
     if (sectioned.some((b) => cleanHeading(b.heading) === heading)) continue;
+    const headingIsGeneration = generationOrdinal(heading) !== undefined || /generation|\bmk\s?\d/i.test(heading) || chassisCodes(heading).length > 0;
+    // "Successor" / "Citroën C5 X" ayrı modeldir. Başlık nesil değilse {{Main}} hedefi nesil sayılmaz.
+    if (!headingIsGeneration) continue;
     for (const target of s.mains) {
       const page = linked.get(target);
       if (!page || !page.title.toLowerCase().startsWith(prefix)) continue;

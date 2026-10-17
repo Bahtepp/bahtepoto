@@ -5,7 +5,7 @@
   { "id": "ssangyong-20-xdi", "brandId": "ssangyong", "slug": "20-xdi", "name": "2.0 XDI", "fuel": "diesel", "displacementL": 2, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
   { "id": "ssangyong-27-xdi", "brandId": "ssangyong", "slug": "27-xdi", "name": "2.7 XDI", "fuel": "diesel", "displacementL": 2.7, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
   { "id": "ssangyong-16", "brandId": "ssangyong", "slug": "16", "name": "1.6", "displacementL": 1.6, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
-  { "id": "ssangyong-15", "brandId": "ssangyong", "slug": "15", "name": "1.5", "displacementL": 1.5, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
+  { "id": "ssangyong-15", "brandId": "ssangyong", "slug": "15", "name": "1.5", "fuel": "petrol", "displacementL": 1.5, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
   { "id": "ssangyong-22", "brandId": "ssangyong", "slug": "22", "name": "2.2", "displacementL": 2.2, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
   { "id": "ssangyong-15-gdi", "brandId": "ssangyong", "slug": "15-gdi", "name": "1.5 GDI", "fuel": "petrol", "displacementL": 1.5, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" }
 ]

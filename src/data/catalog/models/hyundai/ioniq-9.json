@@ -1,0 +1,30 @@
+{
+  "id": "hyundai-ioniq-9",
+  "brandId": "hyundai",
+  "slug": "ioniq-9",
+  "name": "Ioniq 9",
+  "order": 999,
+  "status": "sourced",
+  "sourceIds": ["tsb-kasko-deger-listesi"],
+  "updatedAt": "2026-10-17",
+  "notes": "Türkiye pazarı: TSB Kasko Değer Listesi'nden otomatik oluşturuldu. Nesil ve makyaj eşleşmesi kaynakta yoksa \"nesil belirlenmedi\" olarak gösterilir.",
+  "generations": [
+    {
+      "id": "hyundai-ioniq-9-nesil-belirlenmedi",
+      "slug": "nesil-belirlenmedi",
+      "name": "Ioniq 9 — nesli belirlenmemiş araçlar",
+      "kind": "unassigned",
+      "order": 999,
+      "labelPeriod": { "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } },
+      "status": "unverified",
+      "sourceIds": ["tsb-kasko-deger-listesi"],
+      "updatedAt": "2026-10-17",
+      "notes": "Bu tiplerin hangi nesle ait olduğu kaynakta yazmıyor veya model yılları birden fazla nesille örtüşüyor. Yıllar TSB listesinde yer aldıkları model yılları (Türkiye).",
+      "revisions": [],
+      "variants": [
+        { "id": "hyundai-ioniq-9-nesil-belirlenmedi-160kw", "slug": "160kw", "engineId": "hyundai-160kw", "revisionMapping": "unknown", "transmissions": [], "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["Progressive 4x2"], "bodyTypes": [], "sourceRefs": ["TSB 177-1395"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"IONIQ 9 PROGRESSIVE 160KW 4x2\")." },
+        { "id": "hyundai-ioniq-9-nesil-belirlenmedi-226-1kw", "slug": "226-1kw", "engineId": "hyundai-226-1kw", "revisionMapping": "unknown", "transmissions": [], "drivetrain": "awd", "marketIds": ["tr"], "periods": [{ "marketId": "tr", "basis": "model-year", "start": { "year": 2025 }, "end": { "year": 2026 } }], "marketAvailability": [{ "marketId": "tr", "status": "listed", "modelYears": [2025, 2026], "trims": ["Calligraphy"], "bodyTypes": [], "sourceRefs": ["TSB 177-1396"], "sourceIds": ["tsb-kasko-deger-listesi"] }], "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adından (örn. \"IONIQ 9 CALLIGRAPHY 226.1KW 4x4\")." }
+      ]
+    }
+  ]
+}
