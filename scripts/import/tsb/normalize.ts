@@ -39,7 +39,7 @@ const up = (s: string) => s.toLocaleUpperCase('tr-TR').replace(/İ/g, 'I').repla
 
 const DIESEL = new Set(['TDCI', 'TDI', 'DCI', 'CRDI', 'CRDİ', 'HDI', 'BLUEHDI', 'E-HDI', 'JTD', 'JTDM', 'MULTIJET', 'MJET', 'MJT', 'M.JET', 'M-JET', 'CDTI', 'CDI', 'D4D', 'D-4D', 'DIZEL', 'DIESEL', 'SDV6', 'TDV6', 'SD4', 'TD4', 'ED4', 'CRD', 'DTEC', 'I-DTEC', 'IDTEC', 'SKYACTIV-D', 'VCDI', 'D-CAT', 'BLUETEC', 'TDS', 'SDI', 'ECOBLUE', 'BLUEDCI', 'B.DCI', 'BDCI', 'CRDI4', 'DDIS', 'DDIS4', 'TDDI', 'TDCI4', 'D-4D4', 'XDI', 'CRTD', 'BITDI', 'BITURBODIESEL', 'TDCİ']);
 const PETROL = new Set(['EB', 'E.BOOST', 'TSI', 'TFSI', 'FSI', 'TCE', 'ECOBOOST', 'VVT', 'VVTI', 'VVT-I', 'DUAL-VVT', 'VTEC', 'I-VTEC', 'IVTEC', 'MPI', 'GDI', 'T-GDI', 'TGDI', 'PURETECH', 'THP', 'VTI', 'TJET', 'T-JET', 'T.JET', 'MULTIAIR', 'FIRE', 'TB', 'TBI', 'BENZIN', 'BENZINLI', 'SCE', 'TI-VCT', 'TIVCT', 'DURATEC', 'ECOTEC', 'SIDI', 'TURBOJET', 'GTI', 'EVO', 'DIG-T', 'DIGT', 'IG-T', 'IGT', 'SKYACTIV-G', 'TSI-ACT', 'FIREFLY', 'E-TORQ', 'E.TORQ', 'ETORQ']);
-const HYBRID = new Set(['HYBRID', 'HIBRIT', 'HEV', 'FULL-HYBRID', 'F.HYBRID', 'F-HYBRID', 'E-TECH', 'ETECH', 'E-TECH-HYBRID', 'HYBRIT', 'SELF-CHARGING', 'E-POWER', 'EPOWER']);
+const HYBRID = new Set(['HYBRID', 'HIBRIT', 'HIBRID', 'HEV', 'FULL-HYBRID', 'F.HYBRID', 'F-HYBRID', 'E-TECH', 'ETECH', 'E-TECH-HYBRID', 'HYBRIT', 'SELF-CHARGING', 'E-POWER', 'EPOWER']);
 const PHEV = new Set(['PHEV', 'PLUG-IN', 'E-HYBRID', 'EHYBRID', 'PLUGIN', 'PLUG-IN-HYBRID', 'GTE']);
 const MHEV = new Set(['MHEV', 'ETSI', 'E-TSI', 'MILD-HYBRID', 'MILD', '48V', 'MHYBRID']);
 const ELECTRIC = new Set(['EV', 'BEV', 'ELEKTRIK', 'ELEKTRIKLI', 'ELECTRIC', 'E-TRON', 'KWH']);
@@ -206,6 +206,10 @@ export function parseTypeName(typeName: string): ParsedType {
     .replace(/\bE\.TORQ/gi, 'E-TORQ')
     .replace(/\b(M-JET|T-JET)(\d{2,3})/gi, '$1 $2')
     .replace(/(\d{2,3})DCT/gi, '$1 DCT')
+    // "1.4 D 4D" dizel ailesidir. "HYB." ve "HIBRID" hibrittir; "M.HYB" mild hybrid.
+    .replace(/\bD\s+4D\b/gi, 'D-4D')
+    .replace(/\bM\.HYB\b/gi, 'MHEV')
+    .replace(/\bHYB\./gi, 'HYBRID ')
     .replace(/(\d)\s+(KAPI)\b/gi, '$1$2')
     .replace(/\s+/g, ' ')
     .trim()
@@ -463,6 +467,7 @@ function storedTech(tok: string): string {
   if (t === 'M-JET' || t === 'M.JET' || t === 'MJET' || t === 'MJT') return 'MULTIJET';
   if (t === 'T.JET' || t === 'TJET' || t === 'T-JET') return 'T-JET';
   if (t === 'E.TORQ' || t === 'ETORQ' || t === 'E-TORQ') return 'E-TORQ';
+  if (t === 'HIBRID') return 'HYBRID';
   return tok.replace(/[.,]$/, '');
 }
 
@@ -494,7 +499,12 @@ export function resolveModels(parsed: ParsedType[]): (p: ParsedType) => ModelRes
     }
   }
   // "X1 SDRIVE16D": sDrive/xDrive tanımı motor/çekiş bilgisidir, alt model değildir.
-  const trimLike = (W: string) => W.includes('.') || /^[SX]DRIVE/.test(W) || afterAttr.has(W) || NEVER_SUBMODEL.has(W) || [...afterAttr].some((t) => t.length >= 5 && nearlyEqual(t, W));
+  // CROSS / VERSO birden çok modelin gerçek gövde modelidir (Corolla Cross, Yaris Cross, Corolla Verso).
+  // Motorun ardında da geçebilirler ("CROSS SPORT"); bu, model adının yanındaki kullanımı donanım yapmaz.
+  const WITH_FIRST = new Set(['CROSS', 'VERSO']);
+  const trimLike = (W: string) =>
+    !WITH_FIRST.has(W) &&
+    (W.includes('.') || /^[SX]DRIVE/.test(W) || afterAttr.has(W) || NEVER_SUBMODEL.has(W) || [...afterAttr].some((t) => t.length >= 5 && nearlyEqual(t, W)));
   const isHead = (W: string) => (heads.get(W) ?? 0) >= 3;
   return (p) => {
     const [first, second, ...more] = strip(p.prefix);
@@ -511,8 +521,8 @@ export function resolveModels(parsed: ParsedType[]): (p: ParsedType) => ModelRes
       return { model: `${first} ${second}`, trimWords: more };
     }
     // "FOCUS C-MAX": ikinci sözcük de markada başlı başına bir model → o model
-    if (isHead(S) && isHead(F) && !trimLike(S)) return { model: second, trimWords: more };
-    const sub = (followers.get(S)?.size ?? 0) === 1 && (pairs.get(`${F} ${S}`) ?? 0) >= 3 && !trimLike(S) && /[A-Z]/.test(S);
+    if (isHead(S) && isHead(F) && !trimLike(S) && !WITH_FIRST.has(S)) return { model: second, trimWords: more };
+    const sub = (pairs.get(`${F} ${S}`) ?? 0) >= 3 && !trimLike(S) && /[A-Z]/.test(S) && ((followers.get(S)?.size ?? 0) === 1 || WITH_FIRST.has(S));
     if (sub) return { model: `${first} ${second}`, trimWords: more };
     return { model: first, trimWords: [second, ...more] };
   };

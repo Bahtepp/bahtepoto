@@ -105,7 +105,7 @@ const techDisplay = (t: string) => TECH_DISPLAY[fold(t)] ?? t;
 const ENGINE_FAMILY_TOKENS = new Set([
   'TDCI', 'TDDI', 'TDI', 'ECOBOOST', 'ECOBLUE', 'DCI', 'CDI', 'HDI', 'BLUEHDI', 'DURATEC', 'TIVCT', 'TI-VCT',
   'PURETECH', 'TSI', 'TFSI', 'FSI', 'MPI', 'SDI', 'TGI', 'ETSI', 'E-TSI', 'GTE', 'TCE', 'CDTI', 'CRDI', 'MULTIJET', 'DIG-T', 'IG-T',
-  'FIRE', 'T-JET', 'FIREFLY', 'E-TORQ',
+  'FIRE', 'T-JET', 'FIREFLY', 'E-TORQ', 'D-4D', 'D-CAT',
 ]);
 
 /**
@@ -361,6 +361,10 @@ export function buildFromTsb(
       if (brand.id === 'volkswagen' && /^ID([.\s-]|$)/.test(fold(model)) && !parsed.fuel) parsed.fuel = 'electric';
       // "PUNTO EVO" kasa adıdır. EVO, 1.4 FIRE ile aynı motora yapışık ayrı bir aile değildir.
       if (brand.id === 'fiat' && /\bPUNTO EVO\b/i.test(row.typeName)) parsed.tech = parsed.tech.filter((t) => fold(t) !== 'EVO');
+      if (brand.id === 'toyota' && fold(model) === 'URBAN' && fold(trimWords[0] ?? '') === 'CRUISER') {
+        model = 'URBAN CRUISER';
+        trimWords.shift();
+      }
       if (brand.modelPrefix) model = `${brand.modelPrefix} ${model}`.trim();
       // TSB'de Chrysler altında listelenen Jeep modelleri ("JEEP COMPASS", "JEEPRENEGADE") Jeep markasına.
       let rowBrand: BrandRule | undefined;

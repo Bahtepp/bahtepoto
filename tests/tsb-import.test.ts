@@ -126,6 +126,22 @@ describe('TSB tip adı ayrıştırma', () => {
     assert.equal(ev.powerKw, undefined);
   });
 
+  test('Toyota D-4D dizel, HIBRID ve HYB. hibrit; benzinli hibrite karışmaz', () => {
+    const d4d = parseTypeName('COROLLA 1.4 D 4D LINEA SEDAN');
+    assert.equal(d4d.fuel, 'diesel');
+    assert.ok(d4d.tech.includes('D-4D'));
+    assert.equal(d4d.body, 'sedan-4');
+    const hybrid = parseTypeName('PRIUS 1.8 VVT-i HIBRID CVT ELEGANT');
+    assert.equal(hybrid.fuel, 'hybrid');
+    assert.ok(hybrid.tech.includes('HYBRID'));
+    const hyb = parseTypeName('COROLLA CROSS 1.8 HYB.PASSIONX-PACK E-CVT FL');
+    assert.equal(hyb.fuel, 'hybrid');
+    assert.equal(hyb.displacementL, 1.8);
+    const petrol = parseTypeName('YARIS CROSS 1.5 DREAM MULTIDRIVE S');
+    assert.equal(petrol.fuel, undefined);
+    assert.equal(petrol.tech.includes('HYBRID'), false);
+  });
+
   test('ilk sözcük her zaman modeldir ("CC" gövde değil)', () => {
     const p = parseTypeName('CC 1.4 TSI 160 BMT TIPTRONIC DSG');
     assert.deepEqual(p.prefix, ['CC']);

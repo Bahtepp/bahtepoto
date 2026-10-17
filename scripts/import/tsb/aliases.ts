@@ -62,6 +62,10 @@ export const MODEL_ALIASES: Record<string, Record<string, ModelAlias>> = {
     'G.PUNTO': { model: 'PUNTO', note: 'G.Punto: Grande Punto yazımı' },
     ABART: { model: 'ABARTH', note: 'Yazım: Abart = Abarth' },
   },
+  toyota: {
+    'RAV 4': { model: 'RAV4', note: 'Yazım: RAV 4 = RAV4' },
+    HIGHLINDER: { model: 'HIGHLANDER', note: 'Yazım: Highlinder = Highlander' },
+  },
   peugeot: {
     'PARTNER TEEPE': { model: 'PARTNER', note: 'Partner Tepee: binek Partner' },
     'PARTNER ORIGIN': { model: 'PARTNER', note: 'Partner Origin: önceki nesil Partner satış adı' },

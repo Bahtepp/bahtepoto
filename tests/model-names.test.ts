@@ -104,6 +104,32 @@ describe('takma ad tablosu (gövde/donanım varyantları)', () => {
       ['models/fiat/500.json', 'models/fiat/500e.json', 'models/fiat/500l.json', 'models/fiat/500x.json'],
     );
   });
+  test('Corolla Cross ve Yaris Cross ayrı model; RAV 4, RAV4 ile aynı', () => {
+    const cross = (name: string) => row('TOYOTA', name);
+    assert.deepEqual(
+      files([
+        cross('COROLLA 1.6 ACTIVE'),
+        cross('COROLLA 1.8 HYBRID VISION E-CVT'),
+        cross('COROLLA CROSS 1.8 HYBRID FLAME E-CVT'),
+        cross('COROLLA CROSS 1.8 HYBRID PASSION E-CVT'),
+        cross('COROLLA CROSS 1.8 HYBRID DREAM E-CVT'),
+        cross('YARIS 1.5 HYBRID COOL'),
+        cross('YARIS CROSS 1.5 DREAM MULTIDRIVE S'),
+        cross('YARIS CROSS 1.5 HYBRID DREAM E-CVT'),
+        cross('YARIS CROSS 1.5 HYBRID FLAME E-CVT'),
+      ]),
+      ['models/toyota/corolla-cross.json', 'models/toyota/corolla.json', 'models/toyota/yaris-cross.json', 'models/toyota/yaris.json'],
+    );
+    assert.deepEqual(
+      files([
+        cross('RAV4 2.5 HYBRID PREMIUM 4x4'),
+        cross('RAV4 2.0 MULTIDRIVE S'),
+        cross('RAV4 2.2 D-4D PREMIUM'),
+        cross('RAV 4 2.0 VVT-I 5 KAPI'),
+      ]),
+      ['models/toyota/rav4.json'],
+    );
+  });
   test('i30 CW ve Accent Era asıl modelde', () => {
     assert.deepEqual(files([row('HYUNDAI', 'I30 1.6 CRDI STYLE'), row('HYUNDAI', 'I30 CW 1.6 CRDI STYLE'), row('HYUNDAI', 'ACCENT ERA 1.5 CRDI', [2010]), row('HYUNDAI', 'ACCENT 1.5 CRDI', [2010])]), [
       'models/hyundai/accent.json',
