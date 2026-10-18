@@ -1,0 +1,306 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "gpt-german",
+  "brands": [
+    "BMW"
+  ],
+  "models": [
+    "1 Serisi",
+    "3 Serisi"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "gpt-n13-differentcarreview-2023",
+      "title": "N13 Engine ALL Issues — Oil / coolant leaks",
+      "url": "https://differentcarreview.com/2023/12/19/n13-issues/2/",
+      "kind": "technical-publication",
+      "publisher": "Different Car Review",
+      "reviewed": true,
+      "reviewMethod": "Makale sayfası açılıp Oil / coolant leaks bölümü okundu. N13 plastik termostat gövdesi, turbo su hattı O-ringleri ve genleşme kabı olası kaçak noktaları ayrı ayrı belirtiliyor."
+    },
+    {
+      "id": "gpt-n13-techturkey-deneyim-2018",
+      "title": "BMW N13B16 1.6 Motor Hakkında Tecrübelerim",
+      "url": "https://www.techturkey.com/forum/genel_teknik/234855-bmw_n13b16_1_6_motor_hakkinda_tecrubelerim.html",
+      "kind": "user-report",
+      "publisher": "TechTurkey",
+      "reviewed": true,
+      "reviewMethod": "Sayfa 18 Ekim 2026'da açıldı. 2013 üretim 116i sahibinin yazısı ve yanıtlar okundu.",
+      "note": "Yazar N13'ü Türkiye'de F20 116i/118i ve F30 316i/320i ED ile, 136 ve 170 PS ile eşler. Genleşme kabının ömrünün dolduğu yazılır. Turbo emme hortumu ayrı bir parçadır; soğutma O-ringi bu başlıkta anlatılmaz."
+    },
+    {
+      "id": "gpt-n13-techturkey-sogutma-2019",
+      "title": "N13 Motor İçi Parçalar Hk.",
+      "url": "https://www.techturkey.com/forum/genel_teknik/236618-n13_motor_ici_parcalar_hk_.html",
+      "kind": "user-report",
+      "publisher": "TechTurkey",
+      "reviewed": true,
+      "reviewMethod": "Sayfa 18 Ekim 2026'da açıldı. Altı mesaj okundu.",
+      "note": "Bir kullanıcı rezervuarın kırıldığını, başka bir kullanıcı plastik termostat dağıtıcısı, ara su hortumu ve turbo soğutma O-ringlerinden su kaçırdığını yazıyor. Devirdaim pompası da anılır; elektrikli yardımcı pompa ile ayrılmadığı için ayrı kart açılmadı."
+    },
+    {
+      "id": "gpt-n13-techturkey-f30-2021",
+      "title": "F30 320i ED alınırken nelere dikkat edilmeli?",
+      "url": "https://www.techturkey.com/forum/arac_sorgulamalari/242613-f30_320ied_alinirken_nelere_dikkat_edilmeli_.html",
+      "kind": "user-report",
+      "publisher": "TechTurkey",
+      "reviewed": true,
+      "reviewMethod": "Sayfa 18 Ekim 2026'da açıldı. 2015 320i ED sahibi dahil mesajlar okundu.",
+      "note": "Genleşme kabının iki kez değiştiği ve suyun bir anda boşaldığı yazılır. Aynı iletideki turbo O-ringleri yağ kaçırıyor diye anlatılır; soğutma hattı kanıtı değildir. Şasi çıktısında motor N13 görünür."
+    },
+    {
+      "id": "gpt-n13-techturkey-esanjor-2020",
+      "title": "BMW N13 şanzıman soğutucu/ısı eşanjörü patlaması hk.",
+      "url": "https://www.techturkey.com/forum/genel_teknik/240220-bmw_n13_sanziman_sogutucu_isi_esanjoru_patlamasi_hk_.html",
+      "kind": "user-report",
+      "publisher": "TechTurkey",
+      "reviewed": true,
+      "reviewMethod": "Sayfa 18 Ekim 2026'da açıldı. Konu şanzıman ve yağ soğutucusunun suyla karışmasıdır.",
+      "note": "Bir sahip termostat plastiğinden sızıntıyı, ardından genleşme kabı çatlağını ayrı olaylar olarak anlatır. Eşanjör için tek forum başlığı yeterli görülmedi; eşanjör kartı açılmadı."
+    }
+  ],
+  "issues": [
+    {
+      "id": "gpt-bmw-n13-termostat-flans-kacagi",
+      "title": "Termostat ve su dağıtım gövdesinde kaçak",
+      "summary": "Plastik termostat veya su dağıtım gövdesi çatlayıp bu bağlantıdan su sızdırabiliyor. Kaçak genleşme kabında veya turbo hattında değil, gövdenin kendisindedir.",
+      "category": "cooling",
+      "frequency": "medium",
+      "frequencyRationale": "Teknik yazı plastiğin çatladığını, Türkiye forumunda da termostat dağıtıcısı ayrıca anılıyor. Sayılmış bir arıza oranı yok.",
+      "vehicles": [
+        {
+          "brand": "BMW",
+          "model": "1 Serisi",
+          "generation": "1 Serisi 2. nesil (F20/F21)",
+          "engines": [
+            {
+              "name": "116i",
+              "code": "N13B16"
+            }
+          ],
+          "years": {
+            "from": 2011,
+            "to": 2015
+          }
+        },
+        {
+          "brand": "BMW",
+          "model": "1 Serisi",
+          "generation": "1 Serisi 2. nesil (F20/F21)",
+          "engines": [
+            {
+              "name": "118i",
+              "code": "N13B16"
+            }
+          ],
+          "years": {
+            "from": 2012,
+            "to": 2014
+          }
+        },
+        {
+          "brand": "BMW",
+          "model": "3 Serisi",
+          "generation": "3 Serisi (F30)",
+          "engines": [
+            {
+              "name": "316i",
+              "code": "N13B16"
+            }
+          ],
+          "years": {
+            "from": 2014,
+            "to": 2015
+          }
+        },
+        {
+          "brand": "BMW",
+          "model": "3 Serisi",
+          "generation": "3 Serisi (F30)",
+          "engines": [
+            {
+              "name": "320i ED 170 PS",
+              "code": "N13B16"
+            },
+            {
+              "name": "1.6 320i ED 170 PS",
+              "code": "N13B16"
+            }
+          ],
+          "years": {
+            "from": 2013,
+            "to": 2016
+          }
+        }
+      ],
+      "sourceIds": [
+        "gpt-n13-differentcarreview-2023",
+        "gpt-n13-techturkey-sogutma-2019",
+        "gpt-n13-techturkey-esanjor-2020"
+      ],
+      "uncertainties": "116i ve 118i katalog satırları 2016'ya kadar uzanır; 2015'te 1.5 litrelik B38'e geçiş vardır. 118i 2014 model yılıyla sınırlandı. 1.5 118i, 1.6 118i 136 PS, 328i, 320i 184 PS, G20 1.6 320i 170 PS ve dizeller kapsama alınmadı. E87 116i ile E90 316i aynı satış adını taşır, nesil filtresiyle dışarıdadır."
+    },
+    {
+      "id": "gpt-bmw-n13-turbo-sogutma-oring-kacagi",
+      "title": "Turbo soğutma hattında O-ring kaçağı",
+      "summary": "Turbo soğutma borusunun bağlantı O-ringleri su kaçırabiliyor. Turbo yağ borusundaki yağ kaçağı bu kaydın konusu değildir.",
+      "category": "cooling",
+      "frequency": "medium",
+      "frequencyRationale": "Teknik yazı turbo yanındaki soğutma O-ringlerini yağ borusundan ayrı sayar. Türkiye'de bir kullanıcı turbo soğutma O-ringinden su kaçırdığını yazar. Sayılmış oran yok.",
+      "vehicles": [
+        {
+          "brand": "BMW",
+          "model": "1 Serisi",
+          "generation": "1 Serisi 2. nesil (F20/F21)",
+          "engines": [
+            {
+              "name": "116i",
+              "code": "N13B16"
+            }
+          ],
+          "years": {
+            "from": 2011,
+            "to": 2015
+          }
+        },
+        {
+          "brand": "BMW",
+          "model": "1 Serisi",
+          "generation": "1 Serisi 2. nesil (F20/F21)",
+          "engines": [
+            {
+              "name": "118i",
+              "code": "N13B16"
+            }
+          ],
+          "years": {
+            "from": 2012,
+            "to": 2014
+          }
+        },
+        {
+          "brand": "BMW",
+          "model": "3 Serisi",
+          "generation": "3 Serisi (F30)",
+          "engines": [
+            {
+              "name": "316i",
+              "code": "N13B16"
+            }
+          ],
+          "years": {
+            "from": 2014,
+            "to": 2015
+          }
+        },
+        {
+          "brand": "BMW",
+          "model": "3 Serisi",
+          "generation": "3 Serisi (F30)",
+          "engines": [
+            {
+              "name": "320i ED 170 PS",
+              "code": "N13B16"
+            },
+            {
+              "name": "1.6 320i ED 170 PS",
+              "code": "N13B16"
+            }
+          ],
+          "years": {
+            "from": 2013,
+            "to": 2016
+          }
+        }
+      ],
+      "sourceIds": [
+        "gpt-n13-differentcarreview-2023",
+        "gpt-n13-techturkey-sogutma-2019"
+      ],
+      "uncertainties": "320i ED forumundaki 'turbo O-ring yağ kaçırıyor' iletileri bu karta bağlanmadı. 2012 model olduğu sorgulanan su giriş O-ringi iletisi de N20 olabileceği için kullanılmadı. Motor kapsamı termostat kaydıyla aynıdır."
+    },
+    {
+      "id": "gpt-bmw-n13-genlesme-kabi-catlagi",
+      "title": "Genleşme kabında çatlama",
+      "summary": "Genleşme kabının kendisi çatlayabiliyor. Kapağın içindeki basınç valfi sıkışırsa sistem fazla basınçlanır; bu, kabın çatlağından ayrı kontrol edilir.",
+      "category": "cooling",
+      "frequency": "medium",
+      "frequencyRationale": "Teknik yazı kabın çatlamasını ve kapağın basınç valfini ayrı sayar. Türkiye’de 116i, 320i ED ve başka N13 sahipleri kabın değiştiğini veya çatladığını yazar. Sayılmış oran yok.",
+      "vehicles": [
+        {
+          "brand": "BMW",
+          "model": "1 Serisi",
+          "generation": "1 Serisi 2. nesil (F20/F21)",
+          "engines": [
+            {
+              "name": "116i",
+              "code": "N13B16"
+            }
+          ],
+          "years": {
+            "from": 2011,
+            "to": 2015
+          }
+        },
+        {
+          "brand": "BMW",
+          "model": "1 Serisi",
+          "generation": "1 Serisi 2. nesil (F20/F21)",
+          "engines": [
+            {
+              "name": "118i",
+              "code": "N13B16"
+            }
+          ],
+          "years": {
+            "from": 2012,
+            "to": 2014
+          }
+        },
+        {
+          "brand": "BMW",
+          "model": "3 Serisi",
+          "generation": "3 Serisi (F30)",
+          "engines": [
+            {
+              "name": "316i",
+              "code": "N13B16"
+            }
+          ],
+          "years": {
+            "from": 2014,
+            "to": 2015
+          }
+        },
+        {
+          "brand": "BMW",
+          "model": "3 Serisi",
+          "generation": "3 Serisi (F30)",
+          "engines": [
+            {
+              "name": "320i ED 170 PS",
+              "code": "N13B16"
+            },
+            {
+              "name": "1.6 320i ED 170 PS",
+              "code": "N13B16"
+            }
+          ],
+          "years": {
+            "from": 2013,
+            "to": 2016
+          }
+        }
+      ],
+      "sourceIds": [
+        "gpt-n13-differentcarreview-2023",
+        "gpt-n13-techturkey-deneyim-2018",
+        "gpt-n13-techturkey-sogutma-2019",
+        "gpt-n13-techturkey-f30-2021",
+        "gpt-n13-techturkey-esanjor-2020"
+      ],
+      "uncertainties": "Kapak valfi ile kabın çatlağı aynı parça grubundadır ama aynı arıza değildir. Devirdaim pompası ve şanzıman ısı eşanjörü bu kartta yoktur. Motor kapsamı termostat kaydıyla aynıdır."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "claude-hyundai",
+  "brands": ["Kia"],
+  "models": ["Niro", "Sportage", "Sorento"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "claude-t2-kia-cha084-cmdps",
+      "title": "C-MDPS motor, ECU, sonsuz dişli ve kolon gövdesi parçalı onarımı (CHA084)",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10202226-0001.pdf",
+      "kind": "manufacturer-bulletin",
+      "publisher": "Kia",
+      "publishedAt": "2021-10-05",
+      "reviewed": true,
+      "reviewMethod": "NHTSA kopyası indirildi; açıklama, DTC tablosu, sayfa 8 model tablosu ve sonsuz dişli kiti tablosu pdftotext ile okundu.",
+      "note": "CHA084 revizyon 8 (ilk yayın Kasım 2018). Direksiyon çevrilirken sonsuz dişli tertibatının alt rulmanından sürtünme sesi; direksiyon eforunu etkilemiyor. Sonsuz dişli onarımı yalnızca Mobis C-MDPS için. Mando kolonlu Rio (UB, SC), Sportage (SL, QL) ve Sorento (XMa) bültende yalnızca motor, ECU ve kolon gövdesi onarımı için anılıyor. Sonsuz dişli kiti satırları: 2017-2018 YD(m), 2018-2019 PS, JF/JFa, UMa, YG, 2017 ve 2018-2020 DE (Niro), 2019-2020 BD(m)."
+    },
+    {
+      "id": "claude-t2-kia-tsb047-awd-pdf",
+      "title": "AWD hidrolik aktüatör değişimi (CHA 047)",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2015/SB-10089950-5448.pdf",
+      "kind": "manufacturer-bulletin",
+      "publisher": "Kia",
+      "reviewed": true,
+      "reviewMethod": "Bültenin metin içeren NHTSA kopyası indirildi, pdftotext ile okundu. Önceki kopya (SB-10058121-5003) taranmış görüntü olduğu için okunamamıştı.",
+      "note": "Nisan 2015. Bazı dört çekerli 2011-2016 MY Sportage (SL), üretim 06.05.2010-19.02.2013, ve bazı dört çekerli 2011-2015 MY Sorento (XMa), üretim 24.10.2009-11.12.2014: dört çeker devre dışı, arıza lambası açık, P1820-P1824 (dört çeker pompa motoru aşırı akım, kısa devre, açık devre, ısıl aşırı yük). Onarım: yalnızca hidrolik aktüatör (47810-3B520), kavrama tertibatı değiştirilmez; erken SL'de aktüatör kablosu da (47891-3B310).",
+      "basedOn": "kia-tsb-047"
+    }
+  ],
+  "issues": [
+    {
+      "id": "claude-kia-t2-cmdps-alt-rulman-sesi",
+      "title": "Direksiyon çevrilirken sürtünme sesi",
+      "summary": "Direksiyon çevrilirken kolondaki sonsuz dişlinin alt rulmanından sürtünme sesi gelebiliyor. Üretici bu sesin direksiyon eforunu etkilemediğini belirtiyor.",
+      "category": "steering",
+      "frequency": "unknown",
+      "frequencyRationale": "Kaynak yalnızca onarım prosedürü veren bir üretici bültenidir; garanti uzatması, kullanıcı bildirimi veya sayım okunmadığı için yaygınlık değerlendirilemedi.",
+      "vehicles": [
+        {
+          "brand": "Kia",
+          "model": "Niro",
+          "generation": "Niro 1. nesil",
+          "years": { "from": 2017, "to": 2020 },
+          "engines": [{ "name": "Mobis C-MDPS kolonu" }]
+        }
+      ],
+      "sourceIds": ["claude-t2-kia-cha084-cmdps"],
+      "uncertainties": "İNCELEMEDE. Alt rulman onarımı yalnız Mobis kolon içindir. Katalog Niro'da Mobis ile Mando kolonunu ayıramaz; kayıt bütün Niro'lara yayılmasın diye motor alanına kolon şartı yazıldı ve eşleşme bilinçli olarak bırakıldı. Rio ve Sportage Mando olduğu için yok. Cerato nesli ayrılmıyor. Hyundai C-MDPS rulman kaydı ayrı markadadır."
+    },
+    {
+      "id": "claude-kia-t2-sportage3-awd-aktuator",
+      "title": "Dört çeker devre dışı, arıza lambası yanıyor",
+      "summary": "Dört çekerli bazı araçlarda hidrolik aktüatör arızası yüzünden dört çeker sistem devre dışı kalabiliyor ve arıza lambası yanıyor. Onarımda kavrama değil aktüatör değiştiriliyor.",
+      "category": "transmission",
+      "frequency": "unknown",
+      "frequencyRationale": "Kaynak üretici bültenidir; arıza ve onarım tanımlanıyor ama görülme sıklığına dair veri yok.",
+      "vehicles": [
+        {
+          "brand": "Kia",
+          "model": "Sportage",
+          "generation": "Sportage 3. nesil",
+          "years": { "from": 2010, "to": 2013 }
+        },
+        {
+          "brand": "Kia",
+          "model": "Sorento",
+          "generation": "Sorento 2. nesil",
+          "years": { "from": 2009, "to": 2014 }
+        }
+      ],
+      "sourceIds": ["claude-t2-kia-tsb047-awd-pdf"],
+      "uncertainties": "Yalnızca dört çekerli araçlar. Yıllar bültendeki üretim aralıklarıdır: Sportage 06.05.2010-19.02.2013, Sorento 24.10.2009-11.12.2014. Bülten ABD için yazılmıştır; Avrupa'ya giden Sportage'ların bir kısmı farklı fabrikada üretildi ve aynı aktüatörün kullanıldığı ayrıca doğrulanmadı. Önden çekişli sürümler kapsam dışı."
+    }
+  ]
+}

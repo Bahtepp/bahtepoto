@@ -22,6 +22,8 @@ export type EngineAlias = {
   code?: string;
   /** Araştırma adında hepsi bulunmalıdır. */
   nameIncludes?: string[];
+  /** Araştırma adı bu değerlerden birine birebir eşit olmalıdır. Alt dizgi eşleşmez. */
+  nameExact?: string[];
   /** Bu nesildeki katalog motor adları. Başka ada taşmaz. */
   catalogNames: string[];
 };
@@ -32,6 +34,34 @@ export const ENGINE_ALIASES: EngineAlias[] = [
     code: 'n13',
     nameIncludes: ['320i', 'efficient'],
     catalogNames: ['320i ED 170 PS', '1.6 320i ED 170 PS'],
+  },
+  {
+    brandId: 'bmw',
+    code: 'n13',
+    generationIncludes: 'f30',
+    nameIncludes: ['320i', 'ed'],
+    catalogNames: ['320i ED 170 PS', '1.6 320i ED 170 PS'],
+  },
+  {
+    brandId: 'bmw',
+    code: 'n13',
+    generationIncludes: 'f20',
+    nameExact: ['116i'],
+    catalogNames: ['116i'],
+  },
+  {
+    brandId: 'bmw',
+    code: 'n13',
+    generationIncludes: 'f20',
+    nameExact: ['118i'],
+    catalogNames: ['118i'],
+  },
+  {
+    brandId: 'bmw',
+    code: 'n13',
+    generationIncludes: 'f30',
+    nameExact: ['316i'],
+    catalogNames: ['316i'],
   },
   {
     brandId: 'bmw',
@@ -70,7 +100,8 @@ export function aliasCatalogNames(
       if (!(foldedCode === expected || foldedCode.startsWith(expected))) return false;
     } else if (foldedCode) return false;
     if (alias.nameIncludes && !alias.nameIncludes.every((part) => foldedName.includes(fold(part)))) return false;
-    return Boolean(alias.code || alias.nameIncludes?.length);
+    if (alias.nameExact && !alias.nameExact.some((part) => foldedName === fold(part))) return false;
+    return Boolean(alias.code || alias.nameIncludes?.length || alias.nameExact?.length);
   });
   if (hits.length !== 1) return undefined;
   return hits[0].catalogNames.map((item) => fold(item));

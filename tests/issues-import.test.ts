@@ -280,6 +280,30 @@ describe('araştırma içe aktarma', () => {
     assert.deepEqual(result[0].issue?.appliesTo[0].engineIds.slice().sort(), ['bmw-16-320i-ed-170', 'bmw-320i-ed-170']);
   });
 
+  test('N13 satış adları B38, N20 ve komşu kasalara taşınmaz', () => {
+    const bind = (model: string, generation: string, name: string) =>
+      german('BMW', model, {
+        vehicles: [{ brand: 'BMW', model, generation, engines: [{ name, code: 'N13B16' }] }],
+      })[0];
+    const f20_116 = bind('1 Serisi', '1 Serisi 2. nesil (F20/F21)', '116i');
+    const f20_118 = bind('1 Serisi', '1 Serisi 2. nesil (F20/F21)', '118i');
+    const f30_316 = bind('3 Serisi', '3 Serisi (F30)', '316i');
+    assert.equal(f20_116.decision, 'import', f20_116.reason);
+    assert.deepEqual(f20_116.issue?.appliesTo[0].engineIds, ['bmw-116i']);
+    assert.deepEqual(f20_118.issue?.appliesTo[0].engineIds, ['bmw-118i']);
+    assert.deepEqual(f30_316.issue?.appliesTo[0].engineIds, ['bmw-316i']);
+    for (const name of ['1.5 118i 136 PS', '1.6 118i 136 PS', '118i Efficient']) {
+      const row = bind('1 Serisi', '1 Serisi 2. nesil (F20/F21)', name);
+      assert.equal(row.decision, 'review', name);
+    }
+    for (const name of ['320i 184 PS', '328i', '1.5 318i 136 PS', '1.6 320i 170 PS']) {
+      const row = bind('3 Serisi', '3 Serisi (F30)', name);
+      assert.equal(row.decision, 'review', `${name} ${row.reason}`);
+    }
+    const e87 = bind('1 Serisi', '1 Serisi (E81/E82/E87/E88)', '116i');
+    assert.equal(e87.decision, 'review', e87.reason);
+  });
+
   test('N20 320i adı bütün 320i motorlarına yayılmaz', () => {
     const narrow = german('BMW', '3 Serisi', {
       vehicles: [

@@ -1590,5 +1590,256 @@
       "method": "Sayfa okundu. Önceki nesil PureTech 1.0 ve 1.2 için Mart 2024'ten beri, koşullu, 10 yıl veya 180.000 km'ye kadar parça ve işçilik uzatması yazıyor. 1 Ocak 2022 ile 31 Aralık 2024 arasındaki aşırı yağ tüketimi veya erken triger kayışı masrafı için Avrupa tazminat platformu var. Türkiye garantisi diye yazmıyor. Zincirli yeni nesli saymıyor."
     },
     "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-t2-nhtsa-pe23011-iccu",
+    "kind": "official-recall",
+    "title": "NHTSA PE23011 kapanış özeti: Ioniq 5 güç kaybı",
+    "url": "https://static.nhtsa.gov/odi/inv/2023/INCLA-PE23011-18973.pdf",
+    "publisher": "NHTSA Office of Defects Investigation",
+    "publishedAt": "2024-04-17",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "2022 Ioniq 5 için açılan ön inceleme. ICCU aşırı akım, şarj sonu gerilim tepesi ve ısıl yük nedeniyle hasar görüp sigortasını attırabiliyor; 12V akü şarj olmuyor, araç ilerleme gücünü kaybedebiliyor. İnceleme 24V-204 geri çağırmasıyla kapandı. Sayılar ABD içindir.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Belge indirildi, metni pdftotext ile okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-t2-nhtsa-24v868-ack",
+    "kind": "official-recall",
+    "title": "NHTSA 24V-868 geri çağırma onay yazısı",
+    "url": "https://static.nhtsa.gov/odi/rcl/2024/RCAK-24V868-3172.pdf",
+    "publisher": "NHTSA",
+    "publishedAt": "2024-11-21",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Kapsam: 2022-2024 Ioniq 5, 2023-2025 Ioniq 6 ve bazı Genesis EV'ler; ABD'de 145.235 araç. ICCU hasar görüp 12V aküyü şarj etmeyi bırakabiliyor ve sürüş gücü kaybolabiliyor. Onarım: ICCU ve sigortanın kontrolü, gerekirse değişimi ve yazılım güncellemesi. 24V-204'ü genişletip yeniler.",
+    "basedOn": "hma-iccu-24v868",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Belge indirildi, metni pdftotext ile okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-t2-nhtsa-api-ioniq5-iccu",
+    "kind": "official-recall",
+    "title": "NHTSA geri çağırma kayıtları 24V-204 ve 24V-868 (Hyundai ICCU)",
+    "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=HYUNDAI&model=IONIQ%205&modelYear=2023",
+    "publisher": "NHTSA",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "24V-204 (15.03.2024) ve onu genişletip yenileyen 24V-868 (18.11.2024).",
+    "basedOn": "hma-iccu-24v868",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "NHTSA resmi geri çağırma arayüzünün JSON yanıtı okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-t2-oeamtc-ioniq-iccu",
+    "kind": "technical-publication",
+    "title": "ÖAMTC: Hyundai Ioniq 5 ve Ioniq 6, ICCU geri çağırması (Avusturya)",
+    "url": "https://www.oeamtc.at/rueckrufaktionen/hyundai-ioniq-5-ioniq-6-probleme-mit-der-integrierten-ladeeinheit-iccu-73473294",
+    "publisher": "ÖAMTC",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Avusturya geri çağırması: Ioniq 5 üretim 13.01.2021-29.02.2024, Ioniq 6 üretim 28.09.2022-04.04.2024. Hyundai Österreich açıklamasına göre ICCU arızası sürüşte 12V akünün yetersiz şarjına ve en kötü durumda aracın aniden durmasına yol açabilir. Onarım: yazılım kontrolü, gerekirse ICCU değişimi ve güncelleme. Bu, Avrupa araçlarının da kapsamda olduğunu gösterir; Türkiye'de resmi geri çağırma yapıldığını göstermez.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa indirildi ve metni okundu (Almanca)."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-t2-kia-cha072-optima-kavrama",
+    "kind": "manufacturer-bulletin",
+    "title": "MDPS esnek kavrama değişimi, müşteri memnuniyeti programı CS1604 (CHA072)",
+    "url": "https://static.nhtsa.gov/odi/tsbs/2016/SB-10090941-5448.pdf",
+    "publisher": "Kia",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "CHA072 revizyon 1, Ağustos 2016. 2011-2014 MY Optima (QF, TF, TFH), üretim 12.08.2010-18.12.2013. Direksiyon özellikle araç dururken sağa sola çevrilince MDPS ünitesinden ses; neden esnek kavrama aşınması. Kia sorunu ağırlıklı olarak ABD'nin çok nemli, sıcak kıyı eyaletlerine bağlıyor; diğer eyaletlerde kavrama garantisi 10 yıla uzatıldı.",
+    "basedOn": "kia-cs1604",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "NHTSA kopyası indirildi, metni pdftotext ile okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-t2-kia-cs1604-soru-cevap",
+    "kind": "manufacturer-bulletin",
+    "title": "CS1604 / WTY006 Optima MDPS esnek kavrama soru-cevap",
+    "url": "https://static.nhtsa.gov/odi/tsbs/2016/MC-10090090-5448.pdf",
+    "publisher": "Kia",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Aynı programın bayi soru-cevap belgesi: bütün 2011-2013 ve bazı 2014 MY Optima'lar.",
+    "basedOn": "kia-cs1604",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "NHTSA kopyası indirildi, metni pdftotext ile okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-t2-kia-cs1604-sahip-mektubu",
+    "kind": "manufacturer-bulletin",
+    "title": "Kia Optima sahip mektubu: MDPS müşteri memnuniyeti / garanti uzatma programı",
+    "url": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10158144-0001.pdf",
+    "publisher": "Kia Motors America",
+    "publishedAt": "2019-03-21",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Aynı programın 21 Mart 2019 tarihli sahip mektubu; bütün 2011-2013 ve bazı 2014 MY Optima'lar. Nemli eyaletlerde kavrama değişimi, diğerlerinde kavrama garantisi 10 yıl / sınırsız km.",
+    "basedOn": "kia-cs1604",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "NHTSA kopyası indirildi, metni pdftotext ile okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-t2-nhtsa-24v867-rapor",
+    "kind": "official-recall",
+    "title": "Kia Part 573 geri çağırma raporu 24V-867 (SC327)",
+    "url": "https://static.nhtsa.gov/odi/rcl/2024/RCLRPT-24V867-8124.PDF",
+    "publisher": "Kia America",
+    "publishedAt": "2024-11-18",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Bütün 2022-2023 ve bazı 2024 MY EV6, üretim 17.11.2021-22.07.2024; araçlar şasi numarası sırasıyla üretilmemiş. ICCU geçici yüksek gerilim ve ısıl çevrimlerle hasar görebiliyor; 12V akü sürüşte boşalıyor, güç kademeli düşüyor, uyarılar yok sayılırsa tam güç kaybı. Parça ICCU ASSY 36400-1XFA0, tedarikçi Hyundai Mobis. Raporda ABD kapsamı için üreticinin küçük bir arıza oranı tahmini var.",
+    "basedOn": "kia-iccu-24v867",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Belge indirildi, metni pdftotext ile okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-t2-nhtsa-api-ev6-iccu",
+    "kind": "official-recall",
+    "title": "NHTSA geri çağırma kayıtları 24V-200 ve 24V-867 (Kia EV6 ICCU)",
+    "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=KIA&model=EV6&modelYear=2023",
+    "publisher": "NHTSA",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "24V-200 (14.03.2024) ve onu yenileyen 24V-867 (18.11.2024).",
+    "basedOn": "kia-iccu-24v867",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "NHTSA resmi geri çağırma arayüzünün JSON yanıtı okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-t2-ev6-forum-de-iccu",
+    "kind": "user-report",
+    "title": "EV6-Forum.de: ICCU Probleme Kia EV6 / Rückruf in Europa",
+    "url": "https://www.ev6-forum.de/forum/thread/1811-iccu-probleme-r%C3%BCckruf-auch-in-europa/",
+    "publisher": "EV6-Forum.de",
+    "publishedAt": "2023-08-08",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Ağustos 2023: Avrupa'daki sahipler ICCU ve sigortasının değiştirildiği birkaç vakadan ve wallbox'ta şarj kesintisinden sonra bayide ICCU yazılımının güncellendiğinden söz ediyor. Avrupa'da resmi bir geri çağırma numarası vermiyor.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Başlıktaki mesajlar okundu (Almanca)."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-n13-differentcarreview-2023",
+    "kind": "technical-publication",
+    "title": "N13 Engine ALL Issues — Oil / coolant leaks",
+    "url": "https://differentcarreview.com/2023/12/19/n13-issues/2/",
+    "publisher": "Different Car Review",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Makale sayfası açılıp Oil / coolant leaks bölümü okundu. N13 plastik termostat gövdesi, turbo su hattı O-ringleri ve genleşme kabı olası kaçak noktaları ayrı ayrı belirtiliyor."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-n13-techturkey-sogutma-2019",
+    "kind": "user-report",
+    "title": "N13 Motor İçi Parçalar Hk.",
+    "url": "https://www.techturkey.com/forum/genel_teknik/236618-n13_motor_ici_parcalar_hk_.html",
+    "publisher": "TechTurkey",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Bir kullanıcı rezervuarın kırıldığını, başka bir kullanıcı plastik termostat dağıtıcısı, ara su hortumu ve turbo soğutma O-ringlerinden su kaçırdığını yazıyor. Devirdaim pompası da anılır; elektrikli yardımcı pompa ile ayrılmadığı için ayrı kart açılmadı.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa 18 Ekim 2026'da açıldı. Altı mesaj okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-n13-techturkey-esanjor-2020",
+    "kind": "user-report",
+    "title": "BMW N13 şanzıman soğutucu/ısı eşanjörü patlaması hk.",
+    "url": "https://www.techturkey.com/forum/genel_teknik/240220-bmw_n13_sanziman_sogutucu_isi_esanjoru_patlamasi_hk_.html",
+    "publisher": "TechTurkey",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Bir sahip termostat plastiğinden sızıntıyı, ardından genleşme kabı çatlağını ayrı olaylar olarak anlatır. Eşanjör için tek forum başlığı yeterli görülmedi; eşanjör kartı açılmadı.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa 18 Ekim 2026'da açıldı. Konu şanzıman ve yağ soğutucusunun suyla karışmasıdır."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-n13-techturkey-deneyim-2018",
+    "kind": "user-report",
+    "title": "BMW N13B16 1.6 Motor Hakkında Tecrübelerim",
+    "url": "https://www.techturkey.com/forum/genel_teknik/234855-bmw_n13b16_1_6_motor_hakkinda_tecrubelerim.html",
+    "publisher": "TechTurkey",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Yazar N13'ü Türkiye'de F20 116i/118i ve F30 316i/320i ED ile, 136 ve 170 PS ile eşler. Genleşme kabının ömrünün dolduğu yazılır. Turbo emme hortumu ayrı bir parçadır; soğutma O-ringi bu başlıkta anlatılmaz.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa 18 Ekim 2026'da açıldı. 2013 üretim 116i sahibinin yazısı ve yanıtlar okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-n13-techturkey-f30-2021",
+    "kind": "user-report",
+    "title": "F30 320i ED alınırken nelere dikkat edilmeli?",
+    "url": "https://www.techturkey.com/forum/arac_sorgulamalari/242613-f30_320ied_alinirken_nelere_dikkat_edilmeli_.html",
+    "publisher": "TechTurkey",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Genleşme kabının iki kez değiştiği ve suyun bir anda boşaldığı yazılır. Aynı iletideki turbo O-ringleri yağ kaçırıyor diye anlatılır; soğutma hattı kanıtı değildir. Şasi çıktısında motor N13 görünür.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa 18 Ekim 2026'da açıldı. 2015 320i ED sahibi dahil mesajlar okundu."
+    },
+    "demo": false
   }
 ]

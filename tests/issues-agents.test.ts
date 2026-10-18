@@ -128,6 +128,9 @@ describe('ajan kayıtlarının kapsamı', () => {
     for (const id of ['gpt2-audi-a6-c7-mmi-ekran-acilma', 'gpt2-audi-q5-panorama-tavan-drenaj', 'gpt2-bmw-f10-kapi-ici-tutamac-yapisma', 'gpt2-bmw-e90-frm-modulu-islev-kaybi']) {
       assert.equal(live.issues.some((item) => item.researchRef?.id === id), false, id);
     }
+    for (const id of ['gpt-bmw-n13-termostat-flans-kacagi', 'gpt-bmw-n13-turbo-sogutma-oring-kacagi', 'gpt-bmw-n13-genlesme-kabi-catlagi']) {
+      assert.equal(gpt.find((item) => item.researchId === id)?.decision, 'duplicate', id);
+    }
     const claude = planResearchImport({
       files: files('data/research/agent-outputs/claude-hyundai').map((file) => readResearchJson(file)),
       catalog,
@@ -143,8 +146,23 @@ describe('ajan kayıtlarının kapsamı', () => {
     ]) {
       assert.equal(claude.find((item) => item.researchId === id)?.decision, 'duplicate', id);
     }
-    for (const row of claude.filter((item) => item.decision === 'import')) {
-      assert.equal(live.issues.some((item) => item.researchRef?.id === row.researchId), false, row.researchId);
+    assert.equal(claude.filter((item) => item.decision === 'import').length, 0);
+    for (const id of ['claude-hyundai-t2-iccu-12v-sarj', 'claude-kia-t2-optima-mdps-kavrama', 'claude-kia-t2-ev6-iccu-12v-sarj']) {
+      assert.equal(claude.find((item) => item.researchId === id)?.decision, 'duplicate', id);
+    }
+    for (const id of [
+      'claude-hyundai-t2-mdps-esnek-kavrama',
+      'claude-kia-t2-rio3-direksiyon-kaplama',
+      'claude-kia-t2-cmdps-alt-rulman-sesi',
+      'claude-kia-t2-rio3-debriyaj',
+      'claude-kia-t2-sportage3-awd-aktuator',
+      'claude-hyundai-t2-gamma-katalizor',
+      'claude-hyundai-t2-gamma-triger-zinciri',
+      'claude-kia-t2-gamma-katalizor',
+      'claude-kia-t2-gamma-triger-zinciri',
+    ]) {
+      assert.equal(claude.find((item) => item.researchId === id)?.decision, 'review', id);
+      assert.equal(live.issues.some((item) => item.researchRef?.id === id), false, id);
     }
     const astra = planResearchImport({
       files: files('data/research/agent-outputs/astra-renault').map((file) => readResearchJson(file)),
@@ -167,6 +185,46 @@ describe('ajan kayıtlarının kapsamı', () => {
       assert.ok(row, id);
       assert.equal(row.decision, 'review', `${id} ${row.reason}`);
     }
+  });
+
+  test('Claude ikinci tur yalnız doğrulanan araçlarda, N13 yalnız kendi motorlarında', () => {
+    const iccu = issue('claude-hyundai', 'claude-hyundai-t2-iccu-12v-sarj');
+    const optima = issue('claude-hyundai', 'claude-kia-t2-optima-mdps-kavrama');
+    const ev6 = issue('claude-hyundai', 'claude-kia-t2-ev6-iccu-12v-sarj');
+    const cooling = issue('gpt-german', 'gpt-bmw-n13-termostat-flans-kacagi');
+    assert.equal(iccu.frequencyRating, 'unknown');
+    assert.equal(ev6.frequencyRating, 'unknown');
+    assert.equal(matchIssue(iccu, context('hyundai-ioniq-5', 'hyundai-125kw', 'ioniq-5')).verdict === 'no', false);
+    assert.equal(matchIssue(iccu, context('hyundai-i30', 'hyundai-16-cvvt', 'fd')).verdict, 'no');
+    assert.equal(matchIssue(optima, context('kia-optima', 'kia-17-136', 'optima')).verdict === 'no', false);
+    assert.equal(matchIssue(optima, context('kia-optima', 'kia-16', 'optima')).verdict, 'no');
+    assert.equal(matchIssue(ev6, context('kia-ev6', 'kia-229', 'ev6')).verdict === 'no', false);
+    assert.equal(matchIssue(issue('claude-hyundai', 'claude-hyundai-i30-fd-direksiyon-sesi'), context('hyundai-elantra', 'hyundai-16', '5-nesil')).verdict, 'no');
+    for (const id of ['claude-hyundai-t2-mdps-esnek-kavrama', 'claude-kia-t2-rio3-direksiyon-kaplama', 'claude-kia-t2-cmdps-alt-rulman-sesi']) {
+      assert.equal(live.issues.some((item) => item.researchRef?.id === id), false, id);
+    }
+    assert.equal(matchIssue(cooling, context('bmw-1-serisi', 'bmw-116i', 'f20')).verdict === 'no', false);
+    assert.equal(matchIssue(cooling, context('bmw-1-serisi', 'bmw-118i', 'f20')).verdict === 'no', false);
+    assert.equal(matchIssue(cooling, context('bmw-3-serisi', 'bmw-316i', 'f30')).verdict === 'no', false);
+    assert.equal(matchIssue(cooling, context('bmw-3-serisi', 'bmw-320i-ed-170', 'f30')).verdict === 'no', false);
+    assert.equal(matchIssue(cooling, context('bmw-3-serisi', 'bmw-16-320i-ed-170', 'f30')).verdict === 'no', false);
+    for (const [model, engine, generation] of [
+      ['bmw-1-serisi', 'bmw-116i', 'e81'],
+      ['bmw-1-serisi', 'bmw-15-118i-136', 'f20'],
+      ['bmw-1-serisi', 'bmw-16-118i-136', 'f20'],
+      ['bmw-3-serisi', 'bmw-316i', 'e90'],
+      ['bmw-3-serisi', 'bmw-328i', 'f30'],
+      ['bmw-3-serisi', 'bmw-320i-184', 'nesil-belirlenmedi'],
+      ['bmw-3-serisi', 'bmw-15-318i-136', 'f30'],
+      ['bmw-3-serisi', 'bmw-320d-184', 'f30'],
+      ['bmw-3-serisi', 'bmw-16-320i-170', 'g20'],
+    ] as const) {
+      assert.equal(matchIssue(cooling, context(model, engine, generation)).verdict, 'no', `${model} ${engine}`);
+    }
+    const titles = ['gpt-bmw-n13-termostat-flans-kacagi', 'gpt-bmw-n13-turbo-sogutma-oring-kacagi', 'gpt-bmw-n13-genlesme-kabi-catlagi'].map(
+      (id) => issue('gpt-german', id).title,
+    );
+    assert.equal(new Set(titles).size, 3);
   });
 });
 
