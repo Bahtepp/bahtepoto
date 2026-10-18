@@ -1,0 +1,135 @@
+[
+  {
+    "id": "opel-claude-stellantis-opel-15-dizel-eksantrik-zinciri",
+    "slug": "opel-claude-stellantis-opel-15-dizel-eksantrik-zinciri",
+    "brandId": "opel",
+    "kind": "known-defect",
+    "category": "engine",
+    "title": "1.5 dizel (PSA BlueHDi): eksantrik zincirinde uzama ve kopma",
+    "summary": "PSA kökenli 1.5 dizel motorda eksantrik millerini süren 7 mm zincir uzayıp ses, güç kaybı ve yağ tüketimi yapabiliyor; koparsa motor bozuluyor. 1 Şubat 2023'ten sonra takılan 8 mm zincir bu kaydın dışındadır. Uzatılan özel kapsam Avrupa duyurusudur.",
+    "symptoms": [
+      "PSA kökenli 1.5 dizel motorda eksantrik millerini süren 7 mm zincir uzayıp ses, güç kaybı ve yağ tüketimi yapabiliyor; koparsa motor bozuluyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "opel-corsa"
+        ],
+        "generationIds": [
+          "opel-corsa-corsa-f"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "opel-15-dizel-102"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2019,
+          "to": 2023,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "opel-crossland"
+        ],
+        "generationIds": [
+          "opel-crossland-uretim-2017"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "opel-15-dizel-102",
+          "opel-15-dizel-120"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2018,
+          "to": 2023,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "opel-grandland"
+        ],
+        "generationIds": [
+          "opel-grandland-1-nesil"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "opel-15-dizel-130"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2018,
+          "to": 2023,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Üretici yüz binlerce araç için kontrol kampanyası başlattı ve kapsamı 10 yıla uzattı; tüketici örgütü sahip gruplarında yüzlerce dosya aktarıyor. Arıza oranı yayımlanmadığı için yüksek verilmedi.",
+      "sourceIds": [
+        "arastirma-claudestellantis-claude-st-largus-15bluehdi-chaine-c",
+        "arastirma-claudestellantis-claude-st-quechoisir-15bluehdi-c",
+        "arastirma-claudestellantis-claude-st-motorsactu-15bluehdi-c"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "claude-stellantis",
+      "id": "claude-stellantis-opel-15-dizel-eksantrik-zinciri"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-claudestellantis-claude-st-largus-15bluehdi-chaine-c",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-claudestellantis-claude-st-quechoisir-15bluehdi-c",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-claudestellantis-claude-st-motorsactu-15bluehdi-c",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "Üretici yüz binlerce araç için kontrol kampanyası başlattı ve kapsamı 10 yıla uzattı; tüketici örgütü sahip gruplarında yüzlerce dosya aktarıyor. Arıza oranı yayımlanmadığı için yüksek verilmedi. Yalnızca PSA kökenli 1.5 dizel (DV5). Astra K (2019 sonrası) ve Insignia B'deki 1.5 dizel GM motorudur, bu kayda girmez; katalogda iki motor da '1.5 DIZEL' adını taşıdığı için yalnızca PSA dönemi nesilleri ve güç değerli motor adları yazıldı. Astra L listede var ama katalogda motoru güç değeri olmadan tek '1.5 DIZEL' adıyla geçtiği için eklenmedi. Kapsam üretim tarihine bağlı (Ekim 2017 veya 2018 ile Ocak / Şubat 2023 arası). Listede Mokka, Combo, Zafira ve Vivaro da geçiyor; katalogda Mokka B'de dizel olmadığı ve diğerleri katalogda nesle ayrılmadığı için eklenmedi. Resmî şasi listesi okunmadı. Türkiye'de uzatılmış kapsamın uygulanıp uygulanmadığı okunmadı. Üç kaynak aynı olayı anlatır.",
+    "demo": false
+  }
+]

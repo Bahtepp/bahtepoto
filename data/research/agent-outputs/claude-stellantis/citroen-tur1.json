@@ -1,0 +1,69 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "claude-stellantis",
+  "brands": ["Citroën"],
+  "models": ["C4 Picasso", "Grand C4 Picasso"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "claude-st-fichesauto-c4picasso-1",
+      "title": "Tous les problèmes sur Citroen C4 PICASSO 2006-2013 (593 témoignages)",
+      "url": "https://www.fiches-auto.fr/rappels-citroen/r-189-rappels-citroen-c4-picasso.php",
+      "kind": "user-report",
+      "publisher": "Fiches-auto.fr",
+      "reviewed": true,
+      "reviewMethod": "Sayfa indirildi; editör metni ve sahip yorumlarının özetleri okundu.",
+      "note": "Yalnızca 2006-2013 C4 Picasso ve Grand C4 Picasso (1. nesil). Editör metni: BMP6 tek kavramalı robotize manuel kutu; hafif sarsıntılar normal çalışmanın parçası, ama kalkışta güçlü titreme, kayma, çok yavaş geçişler ve hata mesajları ciddiye alınmalı; adaptasyon aşınmış debriyajı düzeltmiyor. Havalı arka süspansiyonlu sürümlerde yaşla körükler gözenekli hale gelebiliyor, yükseklik sensörleri yorulabiliyor, kompresör daha sık çalışıyor. Sahip yorumlarında çok sayıda BMP6 debriyaj/pilotaj ünitesi ve arka hava körüğü/kompresör arızası var."
+    }
+  ],
+  "issues": [
+    {
+      "id": "claude-stellantis-citroen-c4p1-bmp6-debriyaj",
+      "title": "BMP6 robotize kutu: kalkışta titreme ve pilotaj arızası",
+      "summary": "BMP6 yarı otomatik kutuda kalkışta güçlü titreme, kayma, çok yavaş vites geçişi veya hata mesajı görülebiliyor. Neden çoğunlukla debriyaj aşınması, aktüatör veya kontrol ünitesi.",
+      "category": "transmission",
+      "frequency": "medium",
+      "frequencyRationale": "Yaklaşık altı yüz sahip yorumunun derlendiği sayfada BMP6 debriyaj ve pilotaj arızası tekrar tekrar geçiyor. Oran hesaplanmadı.",
+      "vehicles": [
+        {
+          "brand": "Citroën",
+          "model": "C4 Picasso",
+          "engines": [{ "name": "1.6 HDi 110 PS" }],
+          "years": { "from": 2006, "to": 2013 },
+          "transmission": { "type": "automated-manual", "name": "BMP6" }
+        },
+        {
+          "brand": "Citroën",
+          "model": "Grand C4 Picasso",
+          "engines": [{ "name": "1.6 HDi 110 PS" }],
+          "years": { "from": 2006, "to": 2013 },
+          "transmission": { "type": "automated-manual", "name": "BMP6" }
+        }
+      ],
+      "sourceIds": ["claude-st-fichesauto-c4picasso-1"],
+      "uncertainties": "Yalnızca 1. nesil (2006-2013). Katalogda C4 Picasso nesilleri ayrılmadığı için nesil boş; yıllar sınır olarak yazıldı. Vitesler arasındaki duraksama ve hafif sarsıntı bu kutunun normal karakteridir, arıza sayılmamalı. 2. nesil C4 Picasso'daki ETG6 kutu için okunmuş kaynak yok, eklenmedi. Katalogda bu motorun şanzıman bilgisi olmadığı için eşleşme incelemede kontrol edilmeli. Sahip yorumlarında 1.6 THP ve 2.0 HDi BMP6 de geçiyor ama Türkiye'de satılan sürüm doğrulanmadığı için yalnızca 1.6 HDi yazıldı."
+    },
+    {
+      "id": "claude-stellantis-citroen-c4p1-arka-hava-suspansiyonu",
+      "title": "Havalı arka süspansiyonda çökme (körük veya kompresör)",
+      "summary": "Havalı arka süspansiyonlu sürümlerde araç arkadan veya bir yandan çökebiliyor. Nedenler yaşla gözenekli hale gelen hava körükleri, yorulan yükseklik sensörleri ve aşırı çalışan kompresör.",
+      "category": "suspension",
+      "frequency": "medium",
+      "frequencyRationale": "Yaklaşık altı yüz sahip yorumunun derlendiği sayfada arka hava körüğü ve kompresör arızası tekrar tekrar geçiyor; editör metni de bunu bilinen bir kontrol noktası sayıyor. Oran yok.",
+      "vehicles": [
+        {
+          "brand": "Citroën",
+          "model": "C4 Picasso",
+          "years": { "from": 2006, "to": 2013 }
+        },
+        {
+          "brand": "Citroën",
+          "model": "Grand C4 Picasso",
+          "years": { "from": 2006, "to": 2013 }
+        }
+      ],
+      "sourceIds": ["claude-st-fichesauto-c4picasso-1"],
+      "uncertainties": "Yalnızca havalı arka süspansiyonla donatılmış 1. nesil araçlar; çelik yaylı araçlar kapsam dışı. Hangi donanımda havalı süspansiyon olduğu okunmadı; Türkiye'deki donanım paketleri ayrıca kontrol edilmeli. Katalogda C4 Picasso nesilleri ayrılmadığı için nesil boş ve chassisWide yazılmadı. Tek kaynak bir yorum derleme sayfasıdır."
+    }
+  ]
+}

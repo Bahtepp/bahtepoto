@@ -1,0 +1,371 @@
+[
+  {
+    "id": "peugeot-claude-stellantis-peugeot-16bluehdi-adblue-deposu",
+    "slug": "peugeot-claude-stellantis-peugeot-16bluehdi-adblue-deposu",
+    "brandId": "peugeot",
+    "kind": "known-defect",
+    "category": "emissions",
+    "title": "AdBlue deposu arızası: çalıştırma engeli uyarısı",
+    "summary": "AdBlue (üre) deposundaki pompa, sensör veya kontrol ünitesi arızalanınca uyarılar yanıyor ve belirli kilometre sonra çalıştırmanın engelleneceği bildiriliyor. Onarımda genellikle bütün depo değişiyor.",
+    "symptoms": [
+      "AdBlue (üre) deposundaki pompa, sensör veya kontrol ünitesi arızalanınca uyarılar yanıyor ve belirli kilometre sonra çalıştırmanın engelleneceği bildiriliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "peugeot-208"
+        ],
+        "generationIds": [
+          "peugeot-208-208-i"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "peugeot-16-bluehdi-100"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2014,
+          "to": 2019,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "peugeot-3008"
+        ],
+        "generationIds": [
+          "peugeot-3008-p84"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "peugeot-16-bluehdi-120"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2016,
+          "to": 2020,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Avrupa Komisyonu sorunun yüz binlerce sürücüye pahalı onarım çıkardığını ve Stellantis'in AB çapında tazminat taahhüt ettiğini duyurdu. Model ve motor bazında sayım yok.",
+      "sourceIds": [
+        "arastirma-claudestellantis-claude-st-ec-stellantis-adblue",
+        "arastirma-claudestellantis-claude-st-actuauto-adblue-indemnisation",
+        "arastirma-claudestellantis-claude-st-forumpeugeot-3008-adblue",
+        "arastirma-claudestellantis-claude-st-forumpeugeot-208-adblue"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "claude-stellantis",
+      "id": "claude-stellantis-peugeot-16bluehdi-adblue-deposu"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-claudestellantis-claude-st-ec-stellantis-adblue",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-claudestellantis-claude-st-actuauto-adblue-indemnisation",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-claudestellantis-claude-st-forumpeugeot-3008-adblue",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-claudestellantis-claude-st-forumpeugeot-208-adblue",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "Avrupa Komisyonu sorunun yüz binlerce sürücüye pahalı onarım çıkardığını ve Stellantis'in AB çapında tazminat taahhüt ettiğini duyurdu. Model ve motor bazında sayım yok. Resmi kapsam Ocak 2014 - Ağustos 2020 üretimi SCR'li dizellerdir ama model ve motor listesi okunmadı; araçlar yalnızca kullanıcı raporu okunan 1.6 BlueHDi modelleridir. 1.5 BlueHDi (2017 sonrası) aynı üretim aralığına girebilir ama ona ait rapor okunmadığı için eklenmedi. 2.0 BlueHDi, 308 II, 5008 II, 508, Partner ve Rifter de eklenmedi. Tazminat programı AB ve AEA içindir; Türkiye'de geçerli olduğu okunmadı. Komisyon sorunu yazılıma, haber ve kullanıcılar pompa, sensör ve kristalleşmeye bağlıyor. Komisyon ile haber aynı programı anlatır.",
+    "demo": false
+  },
+  {
+    "id": "peugeot-claude-stellantis-peugeot-15bluehdi-eksantrik-zinciri",
+    "slug": "peugeot-claude-stellantis-peugeot-15bluehdi-eksantrik-zinciri",
+    "brandId": "peugeot",
+    "kind": "known-defect",
+    "category": "engine",
+    "title": "1.5 BlueHDi: eksantrik zincirinde uzama ve kopma",
+    "summary": "1.5 BlueHDi dizel motorda eksantrik millerini süren 7 mm zincir uzayıp ses, güç kaybı ve yağ tüketimi yapabiliyor; koparsa motor bozuluyor. 1 Şubat 2023'ten sonra takılan 8 mm zincir bu kaydın dışındadır. Uzatılan özel kapsam Avrupa duyurusudur.",
+    "symptoms": [
+      "1.5 BlueHDi dizel motorda eksantrik millerini süren 7 mm zincir uzayıp ses, güç kaybı ve yağ tüketimi yapabiliyor; koparsa motor bozuluyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "peugeot-208"
+        ],
+        "generationIds": [
+          "peugeot-208-208-ii"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "peugeot-15-bluehdi-130",
+          "peugeot-15-bluehdi-100"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2019,
+          "to": 2023,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "peugeot-2008"
+        ],
+        "generationIds": [
+          "peugeot-2008-a94"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "peugeot-15-bluehdi-120"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2018,
+          "to": 2019,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "peugeot-2008"
+        ],
+        "generationIds": [
+          "peugeot-2008-p24"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "peugeot-15-bluehdi-100",
+          "peugeot-15-bluehdi-130",
+          "peugeot-15-bluehdi-110"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2019,
+          "to": 2023,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "peugeot-308"
+        ],
+        "generationIds": [
+          "peugeot-308-308-ii"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "peugeot-15-bluehdi-130"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2017,
+          "to": 2021,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "peugeot-3008"
+        ],
+        "generationIds": [
+          "peugeot-3008-p84"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "peugeot-15-bluehdi-130"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2017,
+          "to": 2023,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "peugeot-5008"
+        ],
+        "generationIds": [
+          "peugeot-5008-p87"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "peugeot-15-bluehdi-130"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2017,
+          "to": 2023,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "peugeot-508"
+        ],
+        "generationIds": [
+          "peugeot-508-r83"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "peugeot-15-bluehdi-130"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2018,
+          "to": 2023,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "peugeot-rifter"
+        ],
+        "generationIds": [
+          "peugeot-rifter-nesil-belirlenmedi"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "peugeot-15-bluehdi-130",
+          "peugeot-15-bluehdi-100"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2018,
+          "to": 2023,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Üretici yüz binlerce araç için kontrol kampanyası başlattı ve kapsamı 10 yıla uzattı; tüketici örgütü sahip gruplarında yüzlerce dosya aktarıyor. Arıza oranı yayımlanmadığı için yüksek verilmedi.",
+      "sourceIds": [
+        "arastirma-claudestellantis-claude-st-largus-15bluehdi-chaine-c",
+        "arastirma-claudestellantis-claude-st-quechoisir-15bluehdi-c",
+        "arastirma-claudestellantis-claude-st-motorsactu-15bluehdi-c"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "claude-stellantis",
+      "id": "claude-stellantis-peugeot-15bluehdi-eksantrik-zinciri"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-claudestellantis-claude-st-largus-15bluehdi-chaine-c",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-claudestellantis-claude-st-quechoisir-15bluehdi-c",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-claudestellantis-claude-st-motorsactu-15bluehdi-c",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "Üretici yüz binlerce araç için kontrol kampanyası başlattı ve kapsamı 10 yıla uzattı; tüketici örgütü sahip gruplarında yüzlerce dosya aktarıyor. Arıza oranı yayımlanmadığı için yüksek verilmedi. Üretim Ekim 2017-Ocak 2023. 1 Şubat 2023 sonrası 8 mm zincir kapsam dışı. 308 III Türkiye'de yalnızca 2026 satırıyla göründüğü için eklenmedi. 301, 1.6 BlueHDi ve 2.0 BlueHDi yok. Uzatılmış kapsam Avrupa duyurusudur, Türkiye garantisi değildir. Rifter nesli katalogda ayrılmamıştır; kart yalnız 1.5 BlueHDi satırına ve 2018-2023 model yılına bağlıdır.",
+    "demo": false
+  }
+]

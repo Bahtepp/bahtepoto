@@ -1841,5 +1841,195 @@
       "method": "Sayfa 18 Ekim 2026'da açıldı. 2015 320i ED sahibi dahil mesajlar okundu."
     },
     "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-largus-15bluehdi-chaine-c",
+    "kind": "technical-publication",
+    "title": "Casse chaîne 1.5 BlueHDi. Pas de plate-forme d'indemnisation... pour le moment",
+    "url": "https://www.largus.fr/actualite-automobile/casse-chaine-1-5-bluehdi-pas-de-plate-forme-d-indemnisation-pour-le-moment-30038450.html",
+    "publisher": "L'argus",
+    "publishedAt": "2025-01-26",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "1.5 BlueHDi (DV5) zinciri yetersiz boyutlu ve uzuyor; 2018 - Şubat 2023 üretimi motorlar. Şubat 2023'ten itibaren 8 mm zincir. Etkilenen markalar arasında Citroën var.",
+    "basedOn": "stellantis-15-bluehdi-zincir",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Makale metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-quechoisir-15bluehdi-c",
+    "kind": "technical-publication",
+    "title": "Moteur diesel 1.5 BlueHDi de Stellantis : la grogne monte",
+    "url": "https://www.quechoisir.org/actualite-moteur-diesel-1-5-bluehdi-de-stellantis-la-grogne-monte-n132914/",
+    "publisher": "UFC-Que Choisir",
+    "publishedAt": "2025-01-10",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Ekim 2017 - Ocak 2023 üretimi. Citroën için anılan modeller: C3, C3 Aircross, C4, C4 Cactus, C4 Picasso, C5 Aircross, Berlingo, SpaceTourer, Jumpy. Belirtiler: yağ tüketimi, güç kaybı, titreşim, takırtı.",
+    "basedOn": "stellantis-15-bluehdi-zincir",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Makale metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-motorsactu-15bluehdi-c",
+    "kind": "technical-publication",
+    "title": "Stellantis étend la couverture de ses anciens moteurs 1.5 BlueHDi et propose un remboursement aux clients concernés",
+    "url": "https://motorsactu.com/stellantis-etend-la-couverture-de-ses-anciens-moteurs-1-5-bluehdi-et-propose-un-remboursement-aux-clients-concernes/",
+    "publisher": "MotorsActu",
+    "publishedAt": "2025-07-03",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Ekim 2017 - Ocak 2023 üretimi 1.5 BlueHDi için kapsam 10 yıl / 240.000 km; geri ödeme platformu Citroën sitesinde de var.",
+    "basedOn": "stellantis-15-bluehdi-zincir",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Makale metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-s4s-fiat-dualogic",
+    "kind": "expert-service",
+    "title": "Fiat Gearbox Repair Specialists (Dualogic arızaları)",
+    "url": "https://www.service4service.co.uk/car-repairs/gearboxes/fiat-gearboxes",
+    "publisher": "Service4Service",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "İngiltere'de Fiat şanzıman onarımı yapan servis. Dualogic'i Fiat'ta en sık teşhis ettikleri şanzıman arızası olarak anıyor. En sık belirti sürüşte, dururken veya kalkışta kendiliğinden boşa düşme; ayrıca hidrolik pompa motorunun aşınması ve yavaş, tereddütlü vites geçişleri. Arıza kodlarının tek başına debriyaj aşınması kanıtı sayılmaması gerektiğini, aynı belirtinin basınç kaybı, aktüatör, pompa veya kablo arızasından da gelebileceğini yazıyor. Anılan modeller: 500, Panda, Tipo, 500X ve eski Punto.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfanın ilk yarısı okundu (Dualogic bölümü dahil)."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-fiatforum-dualogic-thread",
+    "kind": "user-report",
+    "title": "The one and only Dualogic failure thread (sayfa 21)",
+    "url": "https://www.fiatforum.com/500/425006-one-only-dualogic-failure-thread-21.html",
+    "publisher": "The FIAT Forum",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "51 sayfalık konu. Bu sayfada 500, 500C, Grande Punto ve Panda 1.2 sahipleri boşa düşme, tek viteste kalma (limp mode), vitesten çıkma ve yanık kokusu bildiriyor. Teşhisler: debriyaj aşınması, aktüatör (değişim teklifi yaklaşık 1200-1300 GBP), pompa motoru ve akümülatör, akü/şase bağlantısı. Bir bayi önce yazılım güncelledi, sonra aktüatör değiştirdi.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Konunun 21. sayfası okundu (Aralık 2017 - Mart 2018 mesajları)."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-ec-stellantis-adblue",
+    "kind": "technical-publication",
+    "title": "La Commission salue l'engagement pris par Stellantis d'indemniser les consommateurs pour les problèmes liés aux réservoirs AdBlue",
+    "url": "https://france.representation.ec.europa.eu/informations/la-commission-salue-lengagement-pris-par-stellantis-dindemniser-les-consommateurs-pour-les-problemes-2024-12-20_fr",
+    "publisher": "Avrupa Komisyonu Fransa Temsilciliği",
+    "publishedAt": "2024-12-20",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Resmî tüketici koruma duyurusu (geri çağırma değil; en yakın tür seçildi). Ocak 2014 - Ağustos 2020 arasında üretilen Peugeot, Citroën, DS ve Opel dizel araçlarda AdBlue depolarıyla ilgili yazılım sorunları yüz binlerce sürücüye pahalı onarım çıkardı. Stellantis, İtalya rekabet kurumunun Eylül 2023'te aldığı tazminat önlemlerini AB ve AEA'ya yaymayı taahhüt etti; CPC ağı uygulamayı izleyecek. Model veya motor adı vermiyor.",
+    "basedOn": "stellantis-adblue-cpc",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Duyuru metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-actuauto-adblue-indemnisation",
+    "kind": "technical-publication",
+    "title": "Problème de réservoirs AdBlue : Stellantis étend son programme d'indemnisation",
+    "url": "https://www.actu-automobile.com/2025/02/09/probleme-de-reservoirs-adblue-stellantis-etend-son-programme-dindemnisation",
+    "publisher": "Actu-Automobile",
+    "publishedAt": "2025-02-09",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Ocak 2014 - Ağustos 2020 arasında üretilen Euro 6 SCR dizel Peugeot, Citroën, DS ve Opel/Vauxhall. Sorunlar: AdBlue kristalleşmesiyle tıkanma, AdBlue pompası arızası, hatalı uyarı veya çalıştırmayı engelleyen sensörler. Parça maliyeti 5 yıl veya 150.000 km'ye kadar tamamen, 5-8 yaş arası kilometreye göre kısmen karşılanıyor; Ağustos 2028'e kadar. Motor adı vermiyor.",
+    "basedOn": "stellantis-adblue-cpc",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Haber metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-forumpeugeot-3008-adblue",
+    "kind": "user-report",
+    "title": "Reservoir Adblue Urée HS Pompe à changer defaut anti-pollution Demarrage impossible 1100 KMS",
+    "url": "https://www.forum-peugeot.com/Forum/threads/reservoir-adblue-ur%C3%A9e-hs-pompe-%C3%A0-changer-defaut-anti-pollution-demarrage-impossible-1100-kms.118145/",
+    "publisher": "Forum Peugeot",
+    "publishedAt": "2019-11-27",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Yaklaşık 3 yaşındaki 3008 II 1.6 BlueHDi 120 EAT6: AdBlue deposundaki pompa arızalı, bütün üre deposunun değişmesi gerekiyor (teklif yaklaşık 1150 EUR); 'çalıştırma 1100 km sonra engellenecek' uyarısı. Diğer üyeler de 3008 II'de benzer arızalar ve kısmi garanti dışı katkılar anlatıyor.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Konudaki mesajlar okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-forumpeugeot-208-adblue",
+    "kind": "user-report",
+    "title": "Réservoir adblue sur 208 HS deux fois en trois mois ?",
+    "url": "https://www.forum-peugeot.com/Forum/threads/r%C3%A9servoir-adblue-sur-208-hs-deux-fois-en-trois-mois.131738/",
+    "publisher": "Forum Peugeot",
+    "publishedAt": "2022-12-18",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "2016 model 208 1.6 BlueHDi: üre, motor ve servis uyarıları ile 'çalıştırma 1100 km sonra engellenecek' mesajı; AdBlue deposu ve enjektörü değişti, iki buçuk ay sonra aynı arıza; son teşhis depo kontrol ünitesi. Başka bir üye 3008'inde AdBlue kristalleşmesinin parçalara zarar verdiğini yazıyor.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Konudaki mesajlar okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-fichesauto-thp150",
+    "kind": "user-report",
+    "title": "Essai, avis et fiabilité des moteurs 1L6 THP 150 cv",
+    "url": "https://www.fiches-auto.fr/articles-auto/essai-moteur/1l6-thp-150-ch.php",
+    "publisher": "Fiches-auto.fr",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "91 yazılı yoruma dayanan sayfa. Editör metni: triger zinciri gergisinin kayması birkaç yıldır tekrarlayan bir sorun ve motor hasarına yol açabiliyor; turbo arızaları daha münferit. Sorunu belirli yıl veya sürüme bağlamıyor. Motorun kullanıldığı Peugeot modelleri: 207, 308, 508, RCZ.",
+    "basedOn": "fichesauto-thp",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfadaki editör metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-fichesauto-thp165",
+    "kind": "user-report",
+    "title": "Essai, avis et fiabilité des moteurs 1L6 THP 165 cv",
+    "url": "https://www.fiches-auto.fr/articles-auto/essai-moteur/1l6-thp-165-ch.php",
+    "publisher": "Fiches-auto.fr",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Editör metni zinciri motorun tek tekrarlayan sorunu sayıyor; zincir ekseninden kayıp güç kaybı veya kırılma yapabiliyor, kırılmalar daha çok 150 ve 175 PS sürümlerde ve gergiye bağlı. Bir 3008 sahibi her sabah soğuk çalıştırmada zincirden metalik ses geldiğini, aynı sorunu 308 THP 155'inde de yaşadığını yazıyor. Sayfa 112 yoruma dayanıyor.",
+    "basedOn": "fichesauto-thp",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Editör metni ve sahip yorumları okundu."
+    },
+    "demo": false
   }
 ]
