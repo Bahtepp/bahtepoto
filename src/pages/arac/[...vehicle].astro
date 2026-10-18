@@ -22,6 +22,7 @@ import { getIssueData } from '@/lib/issues';
 import { groupForDisplay } from '@/lib/issues/match';
 import '@/styles/vehicle.css';
 import { getCatalog } from '@/lib/catalog';
+import { brandTier, isHiddenModel } from '@/lib/catalog/visibility';
 import { getCatalogRedirects, getLabeler, getVehicleSelections, isPublicSelection, revisionsForVariant, toVehicleContext, type VehicleSelection } from '@/lib/vehicle';
 
 export async function getStaticPaths() {
@@ -86,6 +87,7 @@ const SECTIONS = [
 ];
 
 const description = `${brand.name} ${model.name} ${engineTitle}: motor ve kasa özeti.`;
+const outsideMainCatalog = brandTier(brand.slug) !== 'primary' || isHiddenModel(brand.slug, model.slug);
 ---
 
 <SiteLayout title={`${title} ${subtitle}`} description={description}>
@@ -95,6 +97,8 @@ const description = `${brand.name} ${model.name} ${engineTitle}: motor ve kasa �
       <span aria-hidden="true">·</span>
       <span>{brand.name} › {model.name} › {engineGroup.label} › {generation.kind === 'unassigned' ? 'Kasa bilgisi yok' : genLabel}</span>
     </nav>
+
+    {outsideMainCatalog && <p class="callout-info">Bu araç Türkiye ana kataloğunda yer almıyor.</p>}
 
     <header class="vehicle-head" id="kimlik">
       <div>

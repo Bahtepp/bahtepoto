@@ -87,7 +87,11 @@ export async function getCatalogRedirects(): Promise<CatalogRedirect[]> {
       continue;
     }
     if (marketGroup(sel.variant) === 'hidden' || marketGroup(sel.variant) === 'imported') {
-      add(selectionParam(sel), catalogPath({ brand: sel.brand.slug, model: sel.model.slug }));
+      const selector = catalogPath({ brand: sel.brand.slug, model: sel.model.slug });
+      add(selectionParam(sel), selector);
+      for (const alias of aliasesOnto(sel.brand.slug, sel.model.slug)) {
+        add(selectionParam(sel, alias.from), selector);
+      }
     }
   }
 

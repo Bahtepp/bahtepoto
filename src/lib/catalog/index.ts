@@ -8,7 +8,8 @@ import type { BrandPayload, BrandSummary, ModelPayload, ModelSummary } from './p
 import type { Brand, Engine, Market, Model, Source } from './schema';
 import { validateCatalog, type CatalogData } from './validate';
 import { aliasLabelsFor } from './aliases';
-import { isTurkeyPrimary, marketCounts } from './market';
+import { marketCounts } from './market';
+import { publicEngine, publicVariant } from './publish';
 import { engineGroupsForModel } from './selector';
 import type { SearchIndex } from './search';
 import { brandTier, isHiddenModel } from './visibility';
@@ -79,13 +80,14 @@ function summarizeModel(model: Model): ModelSummary {
         labelPeriod: g.labelPeriod,
         periods: g.periods,
         status: g.status,
-        variantCount: g.variants.length,
+        variantCount: marketCounts(g.variants).tr,
         marketCounts: marketCounts(g.variants),
         modelYears: [...new Set(g.variants.flatMap((v) => v.marketAvailability.flatMap((a) => (a.marketId === 'tr' ? a.modelYears : []))))].sort((x, y) => x - y),
         revisions: [...g.revisions]
           .sort((a, b) => a.order - b.order)
           .map(({ id, slug, name, kind, order, periods, status }) => ({ id, slug, name, kind, order, periods, status })),
-      })),
+      }))
+      .filter((g) => g.marketCounts.tr > 0),
   };
 }
 
@@ -146,7 +148,7 @@ export async function getBrandPayload(brandId: string): Promise<BrandPayload> {
   return {
     brand,
     models: catalog.models.filter((m) => m.brandId === brandId && (brand.tier !== 'primary' || !isHiddenModel(brand.slug, m.slug))).map((m) => summarizeModel(m)),
-    markets: catalog.markets,
+    markets: catalog.markets.filter((m) => m.id === 'tr'),
   };
 }
 
@@ -160,13 +162,17 @@ export async function getModelPayload(modelId: string): Promise<ModelPayload> {
   const variantsByGeneration: ModelPayload['variantsByGeneration'] = {};
   let updatedAt = model.updatedAt;
 
+  const trMarket = catalog.marketById.get('tr');
   for (const gen of model.generations) {
-    const visible = gen.variants.filter((v) => isTurkeyPrimary(v));
-    variantsByGeneration[gen.id] = visible.map((v) => ({ ...v, notes: undefined }));
+    const visible = gen.variants.flatMap((v) => {
+      const next = publicVariant(v);
+      return next ? [next] : [];
+    });
+    variantsByGeneration[gen.id] = visible;
     for (const v of visible) {
       const engine = catalog.engineById.get(v.engineId)!;
-      engines[engine.id] = { ...engine, notes: undefined };
-      for (const mid of v.marketIds) markets[mid] = catalog.marketById.get(mid)!;
+      engines[engine.id] = publicEngine(engine);
+      if (trMarket) markets.tr = trMarket;
       for (const d of [v.updatedAt, engine.updatedAt, gen.updatedAt]) if (d > updatedAt) updatedAt = d;
     }
   }

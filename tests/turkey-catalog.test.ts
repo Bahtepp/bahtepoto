@@ -7,9 +7,10 @@ import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { engineGroupsForModel, type EngineGroupView } from '../src/lib/catalog/selector.ts';
 import { marketGroup } from '../src/lib/catalog/market.ts';
+import { publicEngine, publicVariant } from '../src/lib/catalog/publish.ts';
 import { MODEL_SLUG_ALIASES, canonicalModelSlug } from '../src/lib/catalog/aliases.ts';
 import { isHiddenModel, isPrimaryBrand } from '../src/lib/catalog/visibility.ts';
-import { prefixBase } from '../src/lib/catalog/format.ts';
+import { catalogPath, prefixBase, vehiclePath } from '../src/lib/catalog/format.ts';
 import type { Engine, Variant } from '../src/lib/catalog/schema.ts';
 
 function walk(dir: string): string[] {
@@ -79,6 +80,11 @@ describe('Türkiye ana kataloğu', () => {
     assert.ok(civic.some((g) => /1\.6/.test(g.label) && g.chassis.length >= 1));
     const egea = groups('fiat', 'egea').find((g) => g.label === '1.3 MultiJet');
     assert.ok(egea && egea.chassis.length >= 1);
+    const xc90 = groups('volvo', 'xc90');
+    assert.ok(xc90.length >= 1 && xc90.every((g) => g.chassis.length >= 1));
+    const togg = groups('togg', 't10x');
+    assert.ok(togg.some((g) => g.label === '160 kW' && g.chassis.length >= 1));
+    assert.ok(togg.some((g) => g.label === '320 kW' && g.chassis.length >= 1));
 
     const focusFile = JSON.parse(readFileSync('src/data/catalog/models/ford/focus.json', 'utf8')) as {
       generations: { variants: Variant[] }[];
@@ -121,5 +127,91 @@ describe('Türkiye ana kataloğu', () => {
     assert.equal(prefixBase('/bahtepoto/', '/arac/volvo/xc90/'), '/bahtepoto/arac/volvo/xc90/');
     assert.match(readFileSync('src/scripts/catalog-explorer.ts', 'utf8'), /q\.delete\('market'\)/);
     assert.match(readFileSync('scripts/import/generations/build.ts', 'utf8'), /Motor varyantı bu aktarmayla üretilmez/);
+  });
+
+  test('yayımlanan katalog yabancı varyant ve kaynakça taşımaz', () => {
+    let hidden = 0;
+    let imported = 0;
+    let primary = 0;
+    const published = new Set<string>();
+    for (const path of walk('src/data/catalog/models')) {
+      const model = JSON.parse(readFileSync(path, 'utf8')) as { generations?: { variants?: Variant[] }[] };
+      for (const generation of model.generations ?? []) {
+        for (const variant of generation.variants ?? []) {
+          const group = marketGroup(variant);
+          const copy = publicVariant(variant);
+          if (group !== 'primary') {
+            if (group === 'hidden') hidden += 1;
+            if (group === 'imported') imported += 1;
+            assert.equal(copy, undefined, variant.id);
+            continue;
+          }
+          primary += 1;
+          assert.ok(copy);
+          published.add(copy.id);
+          assert.deepEqual(copy.marketIds, ['tr']);
+          assert.equal(copy.notes, undefined);
+          assert.deepEqual(copy.sourceIds, []);
+          const raw = JSON.stringify(copy);
+          assert.equal(raw.includes('TSB '), false, variant.id);
+          assert.equal(raw.includes('Wikipedia'), false, variant.id);
+          assert.equal(raw.includes('wp-en-'), false, variant.id);
+          for (const row of copy.marketAvailability) {
+            assert.equal(row.marketId, 'tr');
+            assert.deepEqual(row.sourceRefs, []);
+            assert.deepEqual(row.sourceIds, []);
+          }
+        }
+      }
+    }
+    assert.equal(hidden, 42);
+    assert.equal(imported, 68);
+    assert.equal(published.has('ford-focus-mk1-zetec-se-14-75'), false);
+    assert.equal(published.has('ford-focus-mk3-duratorq-20'), false);
+    assert.ok(primary > 4900);
+
+    const focus = readFileSync('src/data/catalog/models/ford/focus.json', 'utf8');
+    assert.ok(focus.includes('ford-focus-mk3-duratorq-20'));
+    const fordEngines = JSON.parse(readFileSync('src/data/catalog/engines/ford.json', 'utf8')) as Engine[];
+    const engineIds = new Set(fordEngines.map((e) => e.id));
+    assert.ok(engineIds.has('ford-duratorq-20-c346'));
+    const issues = JSON.parse(readFileSync('src/data/issues/records/ford/focus.json', 'utf8')) as unknown;
+    const referenced = new Set<string>();
+    const walkIssues = (node: unknown) => {
+      if (Array.isArray(node)) {
+        for (const item of node) walkIssues(item);
+        return;
+      }
+      if (!node || typeof node !== 'object') return;
+      const record = node as { engineIds?: string[] };
+      for (const id of record.engineIds ?? []) referenced.add(id);
+      for (const value of Object.values(record)) walkIssues(value);
+    };
+    walkIssues(issues);
+    assert.ok(referenced.has('ford-duratorq-20-c346'));
+    for (const id of referenced) assert.ok(engineIds.has(id), id);
+    const stripped = publicEngine(fordEngines.find((e) => e.id === 'ford-duratorq-20-c346')!);
+    assert.equal(stripped.notes, undefined);
+    assert.deepEqual(stripped.sourceIds, []);
+    assert.equal(stripped.id, 'ford-duratorq-20-c346');
+  });
+
+  test('eski adres yeni araca gider; kayıp motor başka araca bağlanmaz', () => {
+    const canonical = vehiclePath({ brand: 'volvo', model: 'xc90', generation: '1-nesil', variant: '24' });
+    assert.equal(canonical, '/arac/volvo/xc90/1-nesil/24/');
+    assert.notEqual('/arac/volvo/xc-90/1-nesil/24/', canonical);
+    assert.equal(prefixBase('/bahtepoto/', canonical), '/bahtepoto/arac/volvo/xc90/1-nesil/24/');
+    assert.equal(catalogPath({ brand: 'volvo', model: canonicalModelSlug('volvo', 'xc-90') }), '/?marka=volvo&model=xc90');
+    assert.equal(catalogPath({ brand: 'ds', model: canonicalModelSlug('ds', 'ds-7') }), '/?marka=ds&model=ds7');
+    assert.equal(catalogPath({ brand: 'ford', model: canonicalModelSlug('ford', 'f150') }), '/?marka=ford&model=f-150');
+    assert.equal(catalogPath({ brand: 'mazda', model: canonicalModelSlug('mazda', 'mx5') }), '/?marka=mazda&model=mx-5');
+    assert.equal(catalogPath({ brand: 'ford', model: 'focus' }), '/?marka=ford&model=focus');
+    const layout = readFileSync('src/layouts/SiteLayout.astro', 'utf8');
+    assert.equal(layout.includes('Wikipedia'), false);
+    assert.equal(layout.includes('CC BY-SA'), false);
+    const vehicle = readFileSync('src/pages/arac/[...vehicle].astro', 'utf8');
+    assert.match(vehicle, /Bu araç Türkiye ana kataloğunda yer almıyor/);
+    const config = readFileSync('astro.config.mjs', 'utf8');
+    assert.match(config, /bahtepoto/);
   });
 });

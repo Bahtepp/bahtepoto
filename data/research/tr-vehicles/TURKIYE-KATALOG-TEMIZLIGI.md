@@ -129,3 +129,40 @@ Bu turdan önce dal `origin/main` üzerinde 7 commit ilerideydi. Yeni kod commit
 `69b6141` Türkiye kataloğunu tek pazara indirir; eski model adreslerini yönlendirir.
 
 Bu rapor ayrı bir yerel commit’tedir. Uzak depoya gönderilmedi.
+
+## Yayın öncesi son kontrol
+
+Kaynak katalog aynı kaldı: 100 marka, 43 ana, 57 arşiv, 851 model, 2.518 motor, 5.042 varyant, 15.463 TSB satırı. `sold` 4, `listed` 4.928, `imported` 68. TSB satırı resmi satış yapılmadı.
+
+42 Ford Focus Wikipedia/Avrupa varyantı kaynak dosyada duruyor. Kamuya giden model JSON’undan çıkarıldı. `dist/data/models/ford/focus.json` bu 42 kaydı, `ford-duratorq-20-c346` motorunu, TSB satır kimliğini ve Wikipedia metnini içermiyor. Yayımlanan Türkiye varyantı 4.932. Yayımlanmayan kayıt 110: 42 Türkiye kaydı olmayan varyant ve 68 ithal varyant. Marka JSON’larında da kaynakça metni yok.
+
+`ford-duratorq-20-c346` kimliği değiştirilmedi. Motor dosyasında ve Focus kronik sorun kaydında duruyor. Sorun kaydının işaret ettiği motor kimliklerinin hepsi motor dosyasında bulunuyor. Kaynak varyant silinmediği için eşleştirme yetim değil. Bu motorun Türkiye sayfası yok; eski adresi Focus seçimine gider.
+
+Footer’daki Wikipedia CC BY-SA cümlesi kaldırıldı. Kullanıcıya gösterilenler üretim yılı, kasa kodu ve motor ölçüsü. `VehicleSources` sayfalara bağlı değil. TSB kimlikleri kaynak dosyada duruyor.
+
+Doğrudan arşiv adresi (`?marka=ferrari`) nadir marka arşivini açar ve bunun ana katalog olmadığını yazar. Rogue ana listede ve aramada yok; doğrudan adres “Bu model Türkiye ana kataloğunda yer almıyor” der. Araç sayfasında da aynı uyarı var.
+
+Eski adresler statik yenileme sayfasıdır, HTTP 301 değildir. Döngü yok.
+
+| Eski | Gittiği yer |
+|---|---|
+| `/arac/volvo/xc-90/1-nesil/24/` | `/arac/volvo/xc90/1-nesil/24/` |
+| `/arac/ds/ds-7/nesil-belirlenmedi/15-bluehdi-130/` | kanonik DS7 sayfası |
+| `/arac/mazda/mx5/uretim-1989/15/` | kanonik MX-5 sayfası |
+| `/arac/ford/f150/nesil-belirlenmedi/35/` | `/?marka=ford&model=f-150` |
+| `/arac/ford/focus/mk3/duratorq-20/` | `/?marka=ford&model=focus` |
+
+F-150 ithaldir; eski derin adres başka bir araca değil, model seçimine gider. GitHub Pages tabanı `prefixBase('/bahtepoto/', …)` ile sınandı. Bu üretim yerel kök dizinidir.
+
+Önizleme: `market=eu` düştü. BMW 320d E90 ve F30 kasasını açtı. Focus 1.6 TDCi Mk2 kasasını açtı. Togg T10X 160 kW ve 320 kW kasaya indi. Arama: Clio, Civic, Qashqai, Egea, 320d ve XC 90 doğru modele gitti. Rogue aramada yok. Ferrari yalnızca tam adıyla arşiv olarak çıktı. Pazar menüsü yok. Togg yakıtı tip adında yazmadığı için “elektrik” diye işaretlenmedi.
+
+| Komut | Sonuç |
+|---|---|
+| `npm test` | 253 geçti, 0 kaldı |
+| `npm run check` | 0 hata |
+| `npm run build` | 5239 sayfa |
+| `npm run import:check` | geçti |
+| `npm run catalog:audit` | kesin 0, yüksek 0, inceleme 42, istisna 3 |
+| `npm audit` | 0 açık |
+
+Uzak depoya gönderilmedi. Canlı site değişmedi.

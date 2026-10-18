@@ -228,7 +228,11 @@ export function initCatalogExplorer(root: HTMLElement) {
       modelList.replaceChildren(h('p', { class: 'empty' }, q ? 'Eşleşen model yok.' : 'Bu markada Türkiye kaydı olan model yok.'));
       return;
     }
+    const archiveNote = brandData.brand.tier === 'review'
+      ? h('p', { class: 'empty' }, 'Bu marka Türkiye ana kataloğunda değil. Nadir marka arşivindedir.')
+      : null;
     modelList.replaceChildren(
+      ...(archiveNote ? [archiveNote] : []),
       h(
         'ul',
         { class: 'list', 'data-roving': true },
@@ -261,16 +265,24 @@ export function initCatalogExplorer(root: HTMLElement) {
   };
 
   const renderDetail = () => {
+    const notice = brandData?.brand.tier === 'review'
+      ? h('p', { class: 'empty' }, 'Bu marka Türkiye ana kataloğunda değil. Nadir marka arşivindedir.')
+      : null;
+    const paint = (...nodes: (HTMLElement | string)[]) => detail.replaceChildren(...(notice ? [notice, ...nodes] : nodes));
     const model = currentModel();
     if (!brandData || !model) {
-      detail.replaceChildren(
+      if (brandData && sel.model) {
+        paint(h('h2', { class: 'detail-title' }, 'Ana katalogda değil'), h('p', { class: 'empty' }, 'Bu model Türkiye ana kataloğunda yer almıyor.'));
+        return;
+      }
+      paint(
         h('div', { class: 'empty-hero' }, h('p', { class: 'empty-title' }, 'Aracını motorundan bul'), h('p', { class: 'empty' }, 'Marka, model, sonra motor. Kasa, motoru seçtikten sonra gelir.')),
       );
       return;
     }
     const group = currentGroup();
     if (!group) {
-      detail.replaceChildren(
+      paint(
         h('p', { class: 'crumbs' }, `${brandData.brand.name} › ${model.name}`),
         h('h2', { class: 'detail-title', tabindex: '-1' }, `${brandData.brand.name} ${model.name}`),
         h('p', { class: 'engines-hint' }, 'Motoru seçin. Aynı motorun farklı kasaları bir sonraki adımda ayrılır.'),
@@ -298,7 +310,7 @@ export function initCatalogExplorer(root: HTMLElement) {
 
     const chassis = sel.gen ? group.chassis.find((c) => c.slug === sel.gen) : undefined;
     if (chassis && chassis.options.length > 1) {
-      detail.replaceChildren(
+      paint(
         h('button', { type: 'button', class: 'back', onclick: () => selectEngine(group.slug) }, '← Kasalar'),
         h('p', { class: 'crumbs' }, `${brandData.brand.name} › ${model.name} › ${group.label}`),
         h('h2', { class: 'detail-title', tabindex: '-1' }, `${chassis.label}${chassis.years ? ` (${chassis.years})` : ''}`),
@@ -323,7 +335,7 @@ export function initCatalogExplorer(root: HTMLElement) {
       return;
     }
 
-    detail.replaceChildren(
+    paint(
       h('button', { type: 'button', class: 'back', onclick: () => { sel = { brand: sel.brand, model: sel.model }; writeUrl(true); renderDetail(); } }, '← Motorlar'),
       h('p', { class: 'crumbs' }, `${brandData.brand.name} › ${model.name} › ${group.label}`),
       h('h2', { class: 'detail-title', tabindex: '-1' }, group.label),
@@ -367,6 +379,8 @@ export function initCatalogExplorer(root: HTMLElement) {
 
   async function selectBrand(slug: string, opts: { push?: boolean; moveStep?: boolean } = {}) {
     const { push = true, moveStep = true } = opts;
+    const known = brands.find((b) => b.slug === slug);
+    if (known) archive = known.tier === 'review';
     if (sel.brand !== slug) {
       sel = { brand: slug };
       brandData = undefined;
@@ -447,7 +461,7 @@ export function initCatalogExplorer(root: HTMLElement) {
               onclick: () => {
                 searchResults.replaceChildren();
                 globalSearch.value = '';
-                archive = false;
+                archive = brands.find((b) => b.slug === hit.brand)?.tier === 'review';
                 sel = { brand: hit.brand, model: hit.model, engine: hit.engine };
                 void selectBrand(hit.brand, { moveStep: !hit.model });
               },
