@@ -212,4 +212,216 @@ describe('araştırma içe aktarma', () => {
     assert.equal(again.length, 1);
     assert.equal(readdirSync(join(import.meta.dirname, '..', 'src', 'data', 'issues', 'records', 'volkswagen')).includes('golf.json'), true);
   });
+
+  function german(brand: string, model: string, issue: Record<string, unknown>) {
+    return planResearchImport({
+      files: [
+        {
+          file: 'test.json',
+          data: {
+            schema: 'bahtepoto-research-v1',
+            agent: 'alias-test',
+            brands: [brand],
+            models: [model],
+            researchedAt: '2026-10-18',
+            sources: [
+              {
+                id: 'a',
+                title: 'Birinci teknik metin',
+                url: 'https://example.com/alias-a',
+                kind: 'expert-service',
+                publisher: 'Servis A',
+                reviewed: true,
+                reviewMethod: 'test',
+              },
+              {
+                id: 'b',
+                title: 'İkinci teknik metin',
+                url: 'https://example.com/alias-b',
+                kind: 'technical-publication',
+                publisher: 'Yayın B',
+                reviewed: true,
+                reviewMethod: 'test',
+              },
+            ],
+            issues: [
+              {
+                id: 'alias-kaydi',
+                title: 'Alias kapsam testi',
+                summary: 'Bu cümle yalnızca motor eşleştirme testidir. Başka bir sorunu tekrar etmez.',
+                category: 'engine',
+                frequency: 'medium',
+                frequencyRationale: 'İki ayrı teknik kaynak aynı motoru anlatıyor; oran verilmedi.',
+                sourceIds: ['a', 'b'],
+                ...issue,
+              },
+            ],
+          },
+        },
+      ],
+      catalog,
+      issues: live.issues,
+      sources: live.sources,
+    });
+  }
+
+  test('N13 yalnız F30 320i ED satırlarına bağlanır', () => {
+    const result = german('BMW', '3 Serisi', {
+      vehicles: [
+        {
+          brand: 'BMW',
+          model: '3 Serisi',
+          generation: '3 Serisi (F30)',
+          engines: [{ name: '320i EfficientDynamics 1.6', code: 'N13B16' }],
+        },
+      ],
+    });
+    assert.equal(result[0].decision, 'import', result[0].reason);
+    assert.deepEqual(result[0].issue?.appliesTo[0].engineIds.slice().sort(), ['bmw-16-320i-ed-170', 'bmw-320i-ed-170']);
+  });
+
+  test('N20 320i adı bütün 320i motorlarına yayılmaz', () => {
+    const narrow = german('BMW', '3 Serisi', {
+      vehicles: [
+        {
+          brand: 'BMW',
+          model: '3 Serisi',
+          generation: '3 Serisi (F30)',
+          engines: [{ name: '328i 2.0 N20', code: 'N20B20' }],
+        },
+      ],
+    });
+    assert.equal(narrow[0].decision, 'import', narrow[0].reason);
+    assert.deepEqual(narrow[0].issue?.appliesTo[0].engineIds, ['bmw-328i']);
+    const wide = german('BMW', '3 Serisi', {
+      vehicles: [
+        {
+          brand: 'BMW',
+          model: '3 Serisi',
+          generation: '3 Serisi (F30)',
+          engines: [{ name: '320i 2.0 N20', code: 'N20B20' }],
+        },
+      ],
+    });
+    assert.equal(wide[0].decision, 'review');
+    assert.equal(wide[0].issue, undefined);
+  });
+
+  test('M271 yalnız W204 1.8 motorlarına bağlanır', () => {
+    const result = german('Mercedes-Benz', 'C', {
+      vehicles: [
+        {
+          brand: 'Mercedes-Benz',
+          model: 'C',
+          generation: 'C 3. nesil (W204)',
+          engines: [{ name: 'C 180 CGI 1.8', code: 'M271' }],
+        },
+      ],
+    });
+    assert.equal(result[0].decision, 'import', result[0].reason);
+    assert.deepEqual(result[0].issue?.appliesTo[0].engineIds.slice().sort(), [
+      'mercedes-benz-18-180',
+      'mercedes-benz-18-200',
+      'mercedes-benz-18-250',
+    ]);
+  });
+
+  test('A3 8V 1.4 TFSI DQ200 yalnız S tronic satırlarına bağlanır', () => {
+    const result = german('Audi', 'A3', {
+      category: 'transmission',
+      vehicles: [
+        {
+          brand: 'Audi',
+          model: 'A3',
+          generation: 'A3 3. nesil (8V)',
+          engines: [{ name: '1.4 TFSI' }],
+          transmission: { type: 'dual-clutch', name: 'DQ200' },
+        },
+      ],
+    });
+    assert.equal(result[0].decision, 'import', result[0].reason);
+    const ids = result[0].issue?.appliesTo[0].engineIds ?? [];
+    assert.ok(ids.length > 0);
+    assert.equal(ids.includes('audi-14-tfsi-122'), false);
+    assert.equal(result[0].issue?.appliesTo[0].transmissions[0].name, 'S tronic');
+    const other = german('Audi', 'A4', {
+      category: 'transmission',
+      vehicles: [
+        {
+          brand: 'Audi',
+          model: 'A4',
+          generation: 'A4 5. nesil (8W)',
+          engines: [{ name: '2.0 TFSI 252 PS' }],
+          transmission: { type: 'dual-clutch', name: 'DQ200' },
+        },
+      ],
+    });
+    assert.equal(other[0].decision, 'review', other[0].reason);
+  });
+
+  test('aynı motordaki farklı arıza ikinci kaydı tutmaz; benzer başlık tutulur', () => {
+    const data = {
+      schema: 'bahtepoto-research-v1',
+      agent: 'alias-test',
+      brands: ['BMW'],
+      models: ['3 Serisi'],
+      researchedAt: '2026-10-18',
+      sources: [
+        {
+          id: 'a',
+          title: 'Birinci teknik metin',
+          url: 'https://example.com/mekanizma-a',
+          kind: 'expert-service',
+          publisher: 'Servis A',
+          reviewed: true,
+          reviewMethod: 'test',
+        },
+      ],
+      issues: [
+        {
+          id: 'yag-testi',
+          title: 'Kapak contasından yağ kaçağı',
+          summary: 'Bu cümle yağ kaçağı mekanizmasını anlatan test kaydıdır. Başka sorunu tekrar etmez.',
+          category: 'engine',
+          frequency: 'medium',
+          frequencyRationale: 'Tek uzman servis aynı kaçağı gördüğünü yazıyor; oran verilmedi.',
+          vehicles: [{ brand: 'BMW', model: '3 Serisi', generation: '3 Serisi (F30)', engines: [{ name: '328i' }] }],
+          sourceIds: ['a'],
+        },
+        {
+          id: 'sogutma-testi',
+          title: 'Devirdaim gövdesinden su sızıntısı',
+          summary: 'Bu cümle soğutma kaçağını anlatan ayrı bir test kaydıdır. Yağ kaydıyla aynı mekanizma değildir.',
+          category: 'engine',
+          frequency: 'medium',
+          frequencyRationale: 'Tek uzman servis aynı kaçağı gördüğünü yazıyor; oran verilmedi.',
+          vehicles: [{ brand: 'BMW', model: '3 Serisi', generation: '3 Serisi (F30)', engines: [{ name: '328i' }] }],
+          sourceIds: ['a'],
+        },
+        {
+          id: 'yag-tekrari',
+          title: 'Üst kapaktan yağ kaçağı',
+          summary: 'Bu cümle aynı yağ kaçağını farklı başlıkla anlatan test kaydıdır. Yeni kart açmamalı.',
+          category: 'engine',
+          frequency: 'medium',
+          frequencyRationale: 'Tek uzman servis aynı kaçağı gördüğünü yazıyor; oran verilmedi.',
+          vehicles: [{ brand: 'BMW', model: '3 Serisi', generation: '3 Serisi (F30)', engines: [{ name: '328i' }] }],
+          sourceIds: ['a'],
+        },
+      ],
+    };
+    const result = planResearchImport({ files: [{ file: 'test.json', data }], catalog, issues: live.issues, sources: live.sources });
+    assert.equal(result[0].decision, 'import', result[0].reason);
+    assert.equal(result[1].decision, 'import', result[1].reason);
+    assert.equal(result[2].decision, 'review');
+  });
+
+  test('nesli ve yılı yazılmayan kayıt bütün üretime yayılmaz', () => {
+    const result = german('Dacia', 'Lodgy', {
+      category: 'electrical',
+      vehicles: [{ brand: 'Dacia', model: 'Lodgy' }],
+    });
+    assert.equal(result[0].decision, 'review');
+    assert.match(result[0].reason, /nesil ve yıl/);
+  });
 });

@@ -17,6 +17,7 @@ import {
   type ResearchIssue,
   type ResearchVehicle,
 } from './research-schema.ts';
+import { aliasCatalogNames, audiA3Dq200IsSTronic } from './research-aliases.ts';
 
 export type ImportDecision = 'import' | 'duplicate' | 'review' | 'invalid';
 
@@ -97,14 +98,27 @@ function enginesOn(model: Model, generationId: string, byId: Map<string, Engine>
   });
 }
 
+function transmissionNamesMatch(
+  brandId: string,
+  generationLabel: string,
+  engineName: string,
+  wantedName: string | undefined,
+  catalogName: string | undefined,
+): boolean {
+  if (wantedName === undefined) return true;
+  if (catalogName !== undefined && fold(catalogName) === fold(wantedName)) return true;
+  return audiA3Dq200IsSTronic(brandId, generationLabel, engineName, wantedName, catalogName);
+}
+
 function transmissionFits(
   model: Model,
   generationId: string,
-  engineId: string,
+  engine: Engine,
   wanted: NonNullable<ResearchVehicle['transmission']>,
+  generationLabel: string,
 ): 'match' | 'missing' | 'other' {
   const generation = model.generations.find((g) => g.id === generationId);
-  const variants = (generation?.variants ?? []).filter((v) => v.engineId === engineId);
+  const variants = (generation?.variants ?? []).filter((v) => v.engineId === engine.id);
   let sawMatch = false;
   let sawMissing = false;
   for (const variant of variants) {
@@ -116,7 +130,7 @@ function transmissionFits(
     const hit = options.some(
       (t) =>
         (wanted.type === undefined || t.type === wanted.type) &&
-        (wanted.name === undefined || (t.name !== undefined && fold(t.name) === fold(wanted.name))),
+        transmissionNamesMatch(model.brandId, generationLabel, engine.name, wanted.name, t.name),
     );
     if (hit) sawMatch = true;
   }
@@ -138,6 +152,9 @@ function resolveVehicle(
   if (vehicle.generation && generations.ambiguous) {
     return { reason: `nesil "${vehicle.generation}" tek kasaya bağlanamadı` };
   }
+  if (!vehicle.generation && !vehicle.years) {
+    return { reason: 'nesil ve yıl yazılmadı; sorun bütün üretime yayılmadı' };
+  }
   if (!vehicle.generation) {
     const withEngine = model.generations.filter((g) => g.variants.length > 0);
     if (withEngine.length !== 1) {
@@ -146,38 +163,65 @@ function resolveVehicle(
     generations.ids = [withEngine[0].id];
   }
   const generationId = generations.ids[0];
+  const generationLabel = vehicle.generation ?? model.generations.find((g) => g.id === generationId)?.name ?? '';
   const pool = enginesOn(model, generationId, byId);
   const engineIds: string[] = [];
   const skipped: string[] = [];
-  if (vehicle.engines.length === 0 && (vehicle.transmission || !['body', 'interior', 'electrical'].includes(category))) {
+  let catalogTransmissionName: string | undefined;
+  if (vehicle.engines.length === 0 && (vehicle.transmission || !['body', 'interior', 'electrical', 'steering'].includes(category))) {
     return { reason: `${model.name}: motor yazılmadı, kayıt bütün motorlara yayılmadı` };
   }
-  for (const wanted of vehicle.engines) {
+  const enginesFor = (wanted: ResearchVehicle['engines'][number]): { chosen?: Engine[]; reason?: string } => {
     const name = wanted.name ? fold(wanted.name) : '';
     const code = wanted.code ? fold(wanted.code) : '';
     const byName = name ? pool.filter((e) => fold(e.name) === name) : [];
     const byFamily = name ? pool.filter((e) => e.family && fold(e.family) === name) : [];
     const byCode = code ? pool.filter((e) => e.codes.some((item) => fold(item) === code)) : [];
-    let chosen: Engine[] = [];
+    const aliasedNames = aliasCatalogNames(brandId, generationLabel, wanted.name, wanted.code);
+    const fromAlias = () => {
+      if (!aliasedNames) return undefined;
+      const chosen = pool.filter((e) => aliasedNames.includes(fold(e.name)));
+      return chosen.length ? chosen : [];
+    };
     if (code && name) {
       const codes = new Set(byCode.map((e) => e.id));
-      chosen = [...byName, ...byFamily].filter((e) => codes.has(e.id));
-      if (chosen.length === 0) return { reason: `motor adı ve kodu aynı motorda buluşmadı (${wanted.name} / ${wanted.code})` };
-    } else if (byName.length && byFamily.length) {
+      const chosen = [...byName, ...byFamily].filter((e) => codes.has(e.id));
+      if (chosen.length) return { chosen };
+      const alias = fromAlias();
+      if (alias === undefined) return { reason: `motor adı ve kodu aynı motorda buluşmadı (${wanted.name} / ${wanted.code})` };
+      if (alias.length === 0) return { reason: `doğrulanmış motor karşılığı bu kasada yok (${wanted.name} / ${wanted.code})` };
+      return { chosen: alias };
+    }
+    if (byName.length && byFamily.length) {
       const names = new Set(byName.map((e) => e.id));
       const same = byFamily.every((e) => names.has(e.id)) && byName.every((e) => byFamily.some((f) => f.id === e.id));
-      if (!same) return { reason: `"${wanted.name}" hem motor adına hem motor ailesine karşılık geliyor` };
-      chosen = byName;
-    } else if (byName.length) chosen = byName;
-    else if (byFamily.length) chosen = byFamily;
-    else if (byCode.length) chosen = byCode;
-    else return { reason: `katalogda motor yok: ${wanted.name ?? wanted.code}` };
-    for (const engine of chosen) {
+      if (!same) {
+        const alias = fromAlias();
+        if (!alias?.length) return { reason: `"${wanted.name}" hem motor adına hem motor ailesine karşılık geliyor` };
+        return { chosen: alias };
+      }
+      return { chosen: byName };
+    }
+    if (byName.length) return { chosen: byName };
+    if (byFamily.length) return { chosen: byFamily };
+    if (byCode.length) return { chosen: byCode };
+    const alias = fromAlias();
+    if (alias?.length) return { chosen: alias };
+    if (alias) return { reason: `doğrulanmış motor karşılığı bu kasada yok: ${wanted.name ?? wanted.code}` };
+    return { reason: `katalogda motor yok: ${wanted.name ?? wanted.code}` };
+  };
+  for (const wanted of vehicle.engines) {
+    const resolved = enginesFor(wanted);
+    if (!resolved.chosen) return { reason: resolved.reason };
+    for (const engine of resolved.chosen) {
       if (vehicle.transmission) {
-        const fit = transmissionFits(model, generationId, engine.id, vehicle.transmission);
+        const fit = transmissionFits(model, generationId, engine, vehicle.transmission, generationLabel);
         if (fit !== 'match') {
           skipped.push(engine.name);
           continue;
+        }
+        if (vehicle.transmission.name && audiA3Dq200IsSTronic(brandId, generationLabel, engine.name, vehicle.transmission.name, 'S tronic')) {
+          catalogTransmissionName = 'S tronic';
         }
       }
       if (!engineIds.includes(engine.id)) engineIds.push(engine.id);
@@ -191,7 +235,9 @@ function resolveVehicle(
     generationIds: [generationId],
     engineIds,
   };
-  if (vehicle.transmission) selector.transmissions = [vehicle.transmission];
+  if (vehicle.transmission) {
+    selector.transmissions = [catalogTransmissionName ? { ...vehicle.transmission, name: catalogTransmissionName } : vehicle.transmission];
+  }
   if (vehicle.years) selector.years = { ...vehicle.years, basis: 'model-year' };
   return { selector, skipped };
 }
@@ -227,6 +273,18 @@ function engineTokens(issue: Issue, byId: Map<string, Engine>): Set<string> {
     }
   }
   return tokens;
+}
+
+function subjectTokens(title: string): Set<string> {
+  const stop = new Set(['icin', 'veya', 'ile', 'bir', 'olan', 'eden', 'neden', 'ariza', 'sorun', 'sorunu', 'motorda', 'motor', 'bazi', 'arac']);
+  return new Set(tokens(title).filter((token) => token.length > 3 && !stop.has(token)));
+}
+
+function sameSubject(a: string, b: string): boolean {
+  if (fold(a) === fold(b)) return true;
+  const left = subjectTokens(a);
+  for (const token of subjectTokens(b)) if (left.has(token)) return true;
+  return false;
 }
 
 function overlaps(a: Issue, b: Issue, byId: Map<string, Engine>): boolean {
@@ -302,7 +360,12 @@ function buildIssue(bundle: ResearchBundle, research: ResearchIssue, catalog: Ca
   const userOnly = linked.every((source) => source.kind === 'user-report');
   const publishers = new Set(
     linked
-      .filter((source) => source.kind === 'technical-publication' || source.kind === 'reliability-survey' || source.kind === 'expert-service')
+      .filter((source) =>
+        source.kind === 'technical-publication' ||
+        source.kind === 'reliability-survey' ||
+        source.kind === 'expert-service' ||
+        source.kind === 'manufacturer-bulletin',
+      )
       .map((source) => source.basedOn ?? source.publisher ?? source.id),
   );
   let status: Issue['status'] = 'supported';
@@ -405,7 +468,7 @@ export function planResearchImport(input: {
         });
         continue;
       }
-      const clash = accepted.find((issue) => overlaps(issue, built.issue!, byId));
+      const clash = accepted.find((issue) => overlaps(issue, built.issue!, byId) && sameSubject(issue.title, built.issue!.title));
       if (clash) {
         plans.push({
           ...base,
