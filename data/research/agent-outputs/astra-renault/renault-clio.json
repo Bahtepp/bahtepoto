@@ -1,0 +1,183 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-renault",
+  "brands": [
+    "Renault"
+  ],
+  "models": [
+    "Clio",
+    "Kangoo",
+    "Megane",
+    "Modus",
+    "Scenic",
+    "Symbol"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "ecu-clio-throttle",
+      "title": "Clio 1.2 16V gaz kelebeği arızası",
+      "url": "https://www.ecutesting.com/product-catalogue/renault/clio/throttle-body/tby067219/",
+      "kind": "expert-service",
+      "publisher": "ECU Testing",
+      "reviewed": true,
+      "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu.",
+      "note": "Ticari onarım hizmetinin teknik açıklaması; bağımsız arıza oranı araştırması değildir."
+    },
+    {
+      "id": "actronics-renault-abs-relay",
+      "title": "Renault ABS valf rölesi: DF017 / 20675 / 50C3 / C10C3",
+      "url": "https://www.actronics.co.uk/news/diagnostic-help/renault-with-dtc-error-codes-20675-50c3-c10c3-df017",
+      "kind": "expert-service",
+      "publisher": "ACTRONICS",
+      "reviewed": true,
+      "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu."
+    },
+    {
+      "id": "gates-k9k-tensioner-013",
+      "title": "Gates Technical Bulletin 013: Renault 1.5 dCi accessory belt",
+      "url": "https://www.techtips.ie/Gates/renault-15-dci-engines-accessory-belt.pdf",
+      "kind": "technical-publication",
+      "publisher": "Gates",
+      "reviewed": true,
+      "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu.",
+      "publishedAt": "2006-04-21",
+      "note": "Kayış üreticisinin teknik bülteni; Renault servis kampanyası olarak sınıflandırılmadı."
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-renault-clio-12-16v-throttle",
+      "title": "Gaz kelebeği kaynaklı düzensiz rölanti",
+      "summary": "Belirli 1.2 16V motorlarda gaz kelebeği arızası düzensiz rölanti ve çekiş kaybına yol açabiliyor. Aynı belirtiler farklı nedenlerden de kaynaklanabileceği için parça teşhisi gerekiyor.",
+      "category": "engine",
+      "frequency": "unknown",
+      "frequencyRationale": "Teknik kaynak arıza mekanizmasını açıklıyor; Türkiye araç parkındaki görülme sıklığını ölçen veri sunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Renault",
+          "model": "Clio",
+          "years": {
+            "from": 2001,
+            "to": 2008
+          },
+          "engines": [
+            {
+              "name": "1.2 16V"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "ecu-clio-throttle"
+      ],
+      "uncertainties": "Kaynak 2001–2008 ve H8200067219, 8200166059, 8200166869 parçalarını belirtiyor. Nesil açık olmadığı için yalnızca yıldan Clio II/III ataması yapılmadı. Atmosferik 1.2 16V kaydıdır; 1.2 TCe ile ilişkilendirilmemeli. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir."
+    },
+    {
+      "id": "astra-renault-renault-bosch-abs-valve-relay",
+      "title": "ABS ünitesinde valf rölesi arızası",
+      "summary": "Bazı ABS ünitelerinde iç valf rölesi arızası uyarı lambasına, fren hidroliği akışında soruna veya pompanın sürekli çalışmasına neden olabiliyor. Ünite ve hata kodu birlikte kontrol edilmeli.",
+      "category": "brakes",
+      "frequency": "unknown",
+      "frequencyRationale": "Teknik kaynak arıza mekanizmasını açıklıyor; Türkiye araç parkındaki görülme sıklığını ölçen veri sunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Renault",
+          "model": "Clio",
+          "generation": "Clio III"
+        },
+        {
+          "brand": "Renault",
+          "model": "Megane",
+          "generation": "Megane II"
+        },
+        {
+          "brand": "Renault",
+          "model": "Scenic",
+          "generation": "Scenic II"
+        },
+        {
+          "brand": "Renault",
+          "model": "Modus"
+        }
+      ],
+      "sourceIds": [
+        "actronics-renault-abs-relay"
+      ],
+      "uncertainties": "Yalnızca kaynaktaki Bosch 8 ESP modülleri: Clio III 0265950377; Megane II 0265950563; Scenic II 0265950770; Modus 0265950787. DF017/20675/50C3/C10C3 kodları tanı ipucudur, tek başına arıza kanıtı değildir. Motor/yıl kapsamı verilmedi; bütün ABS ünitelerine uygulanmamalı. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir."
+    },
+    {
+      "id": "astra-renault-early-k9k-accessory-tensioner",
+      "title": "Erken 1.5 dCi motorlarda yardımcı kayış gergisi",
+      "summary": "Belirli erken üretim klimasız 1.5 dCi araçlarda gergi tabanının deformasyonu kayışı hizadan çıkarabiliyor. Kayış bölgesinde ses ve erken kayış hasarı görülebiliyor.",
+      "category": "engine",
+      "frequency": "unknown",
+      "frequencyRationale": "Teknik kaynak arıza mekanizmasını açıklıyor; Türkiye araç parkındaki görülme sıklığını ölçen veri sunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Renault",
+          "model": "Clio",
+          "generation": "Clio II",
+          "years": {
+            "from": 2001,
+            "to": 2002
+          },
+          "engines": [
+            {
+              "name": "1.5 dCi",
+              "code": "K9K 700"
+            },
+            {
+              "name": "1.5 dCi",
+              "code": "K9K 702"
+            }
+          ]
+        },
+        {
+          "brand": "Renault",
+          "model": "Symbol",
+          "years": {
+            "from": 2001,
+            "to": 2002
+          },
+          "engines": [
+            {
+              "name": "1.5 dCi",
+              "code": "K9K 700"
+            },
+            {
+              "name": "1.5 dCi",
+              "code": "K9K 702"
+            }
+          ]
+        },
+        {
+          "brand": "Renault",
+          "model": "Kangoo",
+          "years": {
+            "from": 2001,
+            "to": 2002
+          },
+          "engines": [
+            {
+              "name": "1.5 dCi",
+              "code": "K9K 700"
+            },
+            {
+              "name": "1.5 dCi",
+              "code": "K9K 702"
+            },
+            {
+              "name": "1.5 dCi",
+              "code": "K9K 710"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "gates-k9k-tensioner-013"
+      ],
+      "uncertainties": "Zorunlu kapsam: Haziran 2001–Haziran 2002 üretimi ve KLİMASIZ araçlar. Şema ay/donanım filtresi taşımadığından years tek başına eşleştirme için yeterli değildir. Kaynaktaki Clio/Symbol tipleri BB07/BB08/CB07/CB08/LB07/SB07/SB08; Kangoo tipleri FC07/FC08/KC07/KC09. Tüm K9K motorlarına aktarılamaz. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir."
+    }
+  ]
+}

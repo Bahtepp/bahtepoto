@@ -1,0 +1,95 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-renault",
+  "brands": [
+    "Renault"
+  ],
+  "models": [
+    "Megane",
+    "Scenic"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "hella-f9q-egr",
+      "title": "Megane II / Scenic II 1.9 dCi: düzensiz rölanti ve EGR",
+      "url": "https://www.techtips.ie/Hella-Ireland/renault-mgane-ii-scenic-ii---rough-idling-loss-of-power-engine-light-on.pdf",
+      "kind": "technical-publication",
+      "publisher": "HELLA",
+      "reviewed": true,
+      "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu.",
+      "publishedAt": "2007-08-02"
+    },
+    {
+      "id": "hella-megane-recirculation",
+      "title": "Megane I: iç hava dolaşımında ses",
+      "url": "https://www.techtips.ie/Hella-Ireland/renault-megane-i---noises-in-recirculation-mode.pdf",
+      "kind": "technical-publication",
+      "publisher": "Behr Hella Service",
+      "reviewed": true,
+      "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu.",
+      "publishedAt": "2005-10-01"
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-renault-f9q-egr-sticking",
+      "title": "EGR valfinde takılma ve çekiş kaybı",
+      "summary": "Bazı 1.9 dCi motorlarda EGR valfindeki yağlı birikintiler valfin hareketini kısıtlayabiliyor. Düzensiz rölanti, çekiş kaybı ve motor arıza lambası görülebiliyor.",
+      "category": "emissions",
+      "frequency": "unknown",
+      "frequencyRationale": "Teknik kaynak arıza mekanizmasını açıklıyor; Türkiye araç parkındaki görülme sıklığını ölçen veri sunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Renault",
+          "model": "Megane",
+          "generation": "Megane II",
+          "engines": [
+            {
+              "name": "1.9 dCi",
+              "code": "F9Q"
+            }
+          ]
+        },
+        {
+          "brand": "Renault",
+          "model": "Scenic",
+          "generation": "Scenic II",
+          "engines": [
+            {
+              "name": "1.9 dCi",
+              "code": "F9Q"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "hella-f9q-egr"
+      ],
+      "uncertainties": "Bülten kesin üretim yılı ve F9Q alt kodu vermiyor. P0172/P0400/P0401 tanıda anılıyor; aşırı yağın nedeni ayrıca araştırılmalı. Her EGR kirlenmesi üretim kusuru değildir. Diğer dCi aileleri kapsam dışı. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir."
+    },
+    {
+      "id": "astra-renault-megane-i-hvac-flap",
+      "title": "İç hava klapesinden tıklama sesi",
+      "summary": "Klimalı Megane I araçlarda iç hava klapesinin mekanik dayanağı kırılınca dişli zarar görebiliyor. İç dolaşım açıldığında ön konsoldan tekrarlayan ses gelebiliyor.",
+      "category": "hvac",
+      "frequency": "unknown",
+      "frequencyRationale": "Teknik kaynak arıza mekanizmasını açıklıyor; Türkiye araç parkındaki görülme sıklığını ölçen veri sunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Renault",
+          "model": "Megane",
+          "generation": "Megane I",
+          "years": {
+            "from": 1996,
+            "to": 2002
+          }
+        }
+      ],
+      "sourceIds": [
+        "hella-megane-recirculation"
+      ],
+      "uncertainties": "Kaynak yalnızca klimalı araçları kapsıyor; motor bağımsız bir klima mekanizması sorunu. Donanım/parça doğrulaması olmadan aynı yıllardaki bütün araçlara bağlanmamalı. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir."
+    }
+  ]
+}

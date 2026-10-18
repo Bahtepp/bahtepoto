@@ -1,1 +1,1 @@
-Claude'un Hyundai ve Kia araştırma dosyaları bu klasöre konur. Henüz teslim alınmadı.
+Hyundai ve Kia araştırma dosyaları bu klasördedir. `bahtepoto-research-v1`, ajan `claude-hyundai`. Özet: `RAPOR.md`. Canlı kataloğa henüz aktarılmadı.

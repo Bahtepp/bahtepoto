@@ -1,0 +1,81 @@
+[
+  {
+    "id": "audi-gpt-audi-a3-8v-dq200-kavrama",
+    "slug": "audi-gpt-audi-a3-8v-dq200-kavrama",
+    "brandId": "audi",
+    "kind": "chronic",
+    "category": "transmission",
+    "title": "S tronic kuru kavrama titremesi",
+    "summary": "DQ200 kuru kavramalı 7 ileri S tronic şanzımanda kalkış ve düşük hızlı geçişlerde titreme veya sarsıntı bildiriliyor.",
+    "symptoms": [
+      "DQ200 kuru kavramalı 7 ileri S tronic şanzımanda kalkış ve düşük hızlı geçişlerde titreme veya sarsıntı bildiriliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "audi-a3"
+        ],
+        "generationIds": [
+          "audi-a3-8v"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "audi-14-tfsi-140",
+          "audi-14-tfsi-150",
+          "audi-14-tfsi-125"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [
+          {
+            "type": "dual-clutch",
+            "name": "S tronic"
+          }
+        ],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "expert-observed",
+      "note": "A3 8V sahibinin detaylı deneyimi ve DQ200 uzman onarım kaynağı bulunuyor; tüm S tronic kutularına genellenemez.",
+      "sourceIds": [
+        "arastirma-gptgerman-gpt-audi-a3-dq200-expert",
+        "arastirma-gptgerman-gpt-audi-a3-dq200-owner"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "gpt-german",
+      "id": "gpt-audi-a3-8v-dq200-kavrama"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-gptgerman-gpt-audi-a3-dq200-expert",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-gptgerman-gpt-audi-a3-dq200-owner",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "A3 8V sahibinin detaylı deneyimi ve DQ200 uzman onarım kaynağı bulunuyor; tüm S tronic kutularına genellenemez. Yalnız doğrulanmış DQ200 kurulu A3 8V için. Katalog yalnız \"S tronic\" yazıp DQ200 ayrımı yapmıyorsa Cursor otomatik apply yerine beklemeye almalı. VAG ajanının DSG kaydıyla semantik tekrar kontrolü yap. Şanzımanı doğrulanamayan motorlar alınmadı: 1.4 TFSI 122 PS",
+    "demo": false
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "claude-hyundai",
+  "brands": ["Hyundai"],
+  "models": ["Elantra", "i30", "Kona", "Ioniq"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "claude-hma-20-st-003h-mdps",
+      "title": "C-MDPS sonsuz mil rulman sesi",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10179246-0001.pdf",
+      "kind": "manufacturer-bulletin",
+      "publisher": "Hyundai Motor America",
+      "reviewed": true,
+      "reviewMethod": "NHTSA kopyasındaki araç listesi ve konu metni okundu.",
+      "note": "20-ST-003H. Direksiyon çevrilirken rulman sesi. Elantra AD, Elantra GT PD, Ioniq, Kona OS ve bültendeki diğer modeller. Onarım adımı kullanıcıya yazılmaz."
+    }
+  ],
+  "issues": [
+    {
+      "id": "claude-hyundai-cmdps-rulman-sesi",
+      "title": "Direksiyonda rulman sesi",
+      "summary": "Bazı araçlarda direksiyon çevrilirken kolondan ses geldiği bir servis bülteninde anlatılıyor. Ses, elektrikli direksiyon milindeki rulmanla ilişkilendiriliyor.",
+      "category": "steering",
+      "frequency": "medium",
+      "frequencyRationale": "Üretici bülteni aynı sesi birkaç modelde tarif ediyor. Görülme oranı yazılmadığı için yüksek denmedi.",
+      "vehicles": [
+        {
+          "brand": "Hyundai",
+          "model": "Elantra",
+          "generation": "Elantra 6. nesil",
+          "years": { "from": 2017, "to": 2020 }
+        },
+        {
+          "brand": "Hyundai",
+          "model": "i30",
+          "generation": "i30 (PD)",
+          "years": { "from": 2018, "to": 2019 }
+        },
+        {
+          "brand": "Hyundai",
+          "model": "Kona",
+          "generation": "Kona 1. nesil",
+          "years": { "from": 2018, "to": 2020 }
+        },
+        {
+          "brand": "Hyundai",
+          "model": "Ioniq",
+          "generation": "Ioniq",
+          "years": { "from": 2017, "to": 2020 }
+        }
+      ],
+      "sourceIds": ["claude-hma-20-st-003h-mdps"],
+      "uncertainties": "Bülten ayrıca Santa Fe, Sonata, Palisade ve Veloster sayıyor; bu dosyada katalog nesli net ayrılmayanlar konmadı. Kona 2. nesil ve i30 FD bu listenin dışında. Yıllar ABD bültenindeki model yıllarıdır."
+    }
+  ]
+}

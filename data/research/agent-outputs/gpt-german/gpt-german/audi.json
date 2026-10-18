@@ -1,0 +1,201 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "gpt-german",
+  "brands": [
+    "Audi"
+  ],
+  "models": [
+    "A3",
+    "A4"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "gpt-audi-a4-b8-oil-tsb",
+      "title": "Audi Technical Service Bulletin on 2.0 TFSI oil consumption",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2013/MC-10121301-9999.pdf",
+      "kind": "manufacturer-bulletin",
+      "publisher": "Audi of America / NHTSA host",
+      "reviewed": true,
+      "reviewMethod": "PDF teknik bültende 2.0 TFSI CAEB yağ tüketimi incelemesi okundu.",
+      "note": "ABD teknik servis bülteni; Türkiye motor kodlarına otomatik uygulanmaz."
+    },
+    {
+      "id": "gpt-audi-a4-b8-oil-independent",
+      "title": "Audi 2.0 TFSI oil consumption: who pays for it?",
+      "url": "https://faultycar.co.uk/faults/audi-2-0-tfsi-oil-consumption",
+      "kind": "technical-publication",
+      "publisher": "FaultyCar",
+      "reviewed": true,
+      "reviewMethod": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    {
+      "id": "gpt-audi-b8-timing-expert",
+      "title": "Audi A4 B8 timing chain tensioner early failure",
+      "url": "https://stargaragemansfield.co.uk/audi-timing-chain-problems-2-0-tfsi/",
+      "kind": "expert-service",
+      "publisher": "Star Garage Mansfield",
+      "reviewed": true,
+      "reviewMethod": "Tam sayfa açılarak iddiayı destekleyen ilgili metin ve araç kapsamı okundu."
+    },
+    {
+      "id": "gpt-audi-b8-timing-owner",
+      "title": "2009-2012 Audi A4 timing chain tensioner owner experience",
+      "url": "https://www.reddit.com/r/Audi/comments/yznxis/20092012_audi_a4_or_any_vw_20_tfsi_timing_chain/",
+      "kind": "user-report",
+      "publisher": "Reddit / r/Audi",
+      "reviewed": true,
+      "reviewMethod": "Tam sayfa açılarak iddiayı destekleyen ilgili metin ve araç kapsamı okundu."
+    },
+    {
+      "id": "gpt-audi-b9-pump-expert",
+      "title": "EA888 Gen 3 Thermostat and Water Pump Housing Leak",
+      "url": "https://vagmanchester.com/article/common-faults-vag-ea888-gen-3-engine-thermostat-and-water-pump-housing-leak/",
+      "kind": "expert-service",
+      "publisher": "VAG Manchester",
+      "reviewed": true,
+      "reviewMethod": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    {
+      "id": "gpt-audi-b9-pump-owners",
+      "title": "Lets talk waterpump Audi B9 forum",
+      "url": "https://www.audizine.com/threads/lets-talk-waterpump.986892/",
+      "kind": "user-report",
+      "publisher": "Audizine",
+      "reviewed": true,
+      "reviewMethod": "Forumdaki B9 EA888 soğutma modülü ve servis deneyimleri okundu."
+    },
+    {
+      "id": "gpt-audi-a3-dq200-expert",
+      "title": "DQ200 DSG 7 Mechatronic Repair",
+      "url": "https://www.ecutesting.com/common-faults/volkswagen/volkswagen-golf-audi-a3-dsg-7-gearbox-problem/",
+      "kind": "expert-service",
+      "publisher": "ECU Testing",
+      "reviewed": true,
+      "reviewMethod": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    {
+      "id": "gpt-audi-a3-dq200-owner",
+      "title": "S-Tronic 7 Gang rutscht, vibriert beim Schalten",
+      "url": "https://www.motor-talk.de/forum/s-tronic-7-gang-rutscht-vibriert-beim-schalten-t6305578.html",
+      "kind": "user-report",
+      "publisher": "Motor-Talk",
+      "reviewed": true,
+      "reviewMethod": "Audi A3 8V 1.4 TFSI DQ200 sahibi 7 ileri S tronic titreşim tecrübesi okundu."
+    }
+  ],
+  "issues": [
+    {
+      "id": "gpt-audi-b8-20-tfsi-yag-tuketimi",
+      "title": "2.0 TFSI motorda yağ tüketimi",
+      "summary": "Erken A4 B8 2.0 TFSI motorlarında piston segmanlarıyla ilişkili yüksek yağ tüketimi ve sık yağ ekleme ihtiyacı bildiriliyor.",
+      "category": "engine",
+      "frequency": "high",
+      "frequencyRationale": "Audi teknik servis bülteni yağ tüketimini doğrudan ele alıyor; bağımsız vaka derlemesi erken EA888 motorlardaki raporları destekliyor.",
+      "vehicles": [
+        {
+          "brand": "Audi",
+          "model": "A4",
+          "generation": "A4 4. nesil (8K)",
+          "engines": [
+            {
+              "name": "2.0 TFSI 211 PS"
+            }
+          ],
+          "years": {
+            "from": 2008,
+            "to": 2011
+          }
+        }
+      ],
+      "sourceIds": [
+        "gpt-audi-a4-b8-oil-tsb",
+        "gpt-audi-a4-b8-oil-independent"
+      ],
+      "uncertainties": "ABD bülteninin CAEB kodu Türkiye A4 motorlarının tamamını kapsamayabilir. Aynı yıllardaki CDNB/CDNC ve diğer kodlar ayrıca teyit edilmelidir."
+    },
+    {
+      "id": "gpt-audi-b8-20-tfsi-zincir-gergisi",
+      "title": "Triger zinciri gergisinde aşınma",
+      "summary": "Erken A4 B8 2.0 TFSI motorlarında zincir gergisinin zayıflaması soğuk çalıştırmada şakırtıya ve zamanlama sorunlarına neden olabiliyor.",
+      "category": "engine",
+      "frequency": "high",
+      "frequencyRationale": "EA888 motoruna odaklanan bağımsız uzman servis rehberi ve tecrübe paylaşımı aynı erken gergi problemini anlatıyor; Türkiye oranı bilinmiyor.",
+      "vehicles": [
+        {
+          "brand": "Audi",
+          "model": "A4",
+          "generation": "A4 4. nesil (8K)",
+          "engines": [
+            {
+              "name": "2.0 TFSI 211 PS"
+            }
+          ],
+          "years": {
+            "from": 2008,
+            "to": 2012
+          }
+        }
+      ],
+      "sourceIds": [
+        "gpt-audi-b8-timing-expert",
+        "gpt-audi-b8-timing-owner"
+      ],
+      "uncertainties": "Erken nesil EA888 ve revize edilmemiş zincir gergisi hedefidir; bütün 2012 araçları aynı olmayabilir. Üretim tarihi ve motor kodu Cursor tarafından netleştirilmeli."
+    },
+    {
+      "id": "gpt-audi-b9-devirdaim-termostat-kacagi",
+      "title": "Devirdaim ve termostat gövdesinden kaçak",
+      "summary": "B9 kasanın EA888 2.0 TFSI motorunda devirdaim/termostat modülünden soğutma sıvısı sızıntısı ve antifriz eksilmesi görülebiliyor.",
+      "category": "cooling",
+      "frequency": "medium",
+      "frequencyRationale": "EA888 Gen3 konusunda VAG uzman servisi yazısı ve Audi B9 kullanıcı/usta tartışmaları aynı soğutma modülünü işaret ediyor; Türkiye sıklığı bilinmiyor.",
+      "vehicles": [
+        {
+          "brand": "Audi",
+          "model": "A4",
+          "generation": "A4 5. nesil (8W)",
+          "engines": [
+            {
+              "name": "2.0 TFSI 252 PS"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "gpt-audi-b9-pump-expert",
+        "gpt-audi-b9-pump-owners"
+      ],
+      "uncertainties": "Yalnız katalogdaki 2.0 TFSI 252 PS (2015-2018) bağlandı. Aynı ailedeki 245 PS, adsız 2.0 TFSI ve sonraki TFSI satırları ayrı güç/dönem olduğu için alınmadı."
+    },
+    {
+      "id": "gpt-audi-a3-8v-dq200-kavrama",
+      "title": "S tronic kuru kavrama titremesi",
+      "summary": "DQ200 kuru kavramalı 7 ileri S tronic şanzımanda kalkış ve düşük hızlı geçişlerde titreme veya sarsıntı bildiriliyor.",
+      "category": "transmission",
+      "frequency": "medium",
+      "frequencyRationale": "A3 8V sahibinin detaylı deneyimi ve DQ200 uzman onarım kaynağı bulunuyor; tüm S tronic kutularına genellenemez.",
+      "vehicles": [
+        {
+          "brand": "Audi",
+          "model": "A3",
+          "generation": "A3 3. nesil (8V)",
+          "engines": [
+            {
+              "name": "1.4 TFSI"
+            }
+          ],
+          "transmission": {
+            "type": "dual-clutch",
+            "name": "DQ200"
+          }
+        }
+      ],
+      "sourceIds": [
+        "gpt-audi-a3-dq200-expert",
+        "gpt-audi-a3-dq200-owner"
+      ],
+      "uncertainties": "Yalnız doğrulanmış DQ200 kurulu A3 8V için. Katalog yalnız \"S tronic\" yazıp DQ200 ayrımı yapmıyorsa Cursor otomatik apply yerine beklemeye almalı. VAG ajanının DSG kaydıyla semantik tekrar kontrolü yap."
+    }
+  ]
+}

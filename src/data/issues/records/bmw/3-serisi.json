@@ -40,5 +40,304 @@
     "status": "supported",
     "updatedAt": "2026-10-18",
     "notes": "G20 ve 190 PS 320d bu kayda bağlanmadı. M47 dönemi katalogda ayrı motor kimliğiyle yok; E90 yılları 2008 ve sonrası."
+  },
+  {
+    "id": "bmw-gpt-bmw-f30-kapi-kolu-yapisiyor",
+    "slug": "bmw-gpt-bmw-f30-kapi-kolu-yapisiyor",
+    "brandId": "bmw",
+    "kind": "known-defect",
+    "category": "interior",
+    "title": "İç kapı tutamacında yapışma",
+    "summary": "F30 kasada iç kapı tutamaklarının yumuşak kaplaması zamanla yapışkan hale gelip ele siyah iz bırakabiliyor.",
+    "symptoms": [
+      "F30 kasada iç kapı tutamaklarının yumuşak kaplaması zamanla yapışkan hale gelip ele siyah iz bırakabiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "bmw-3-serisi"
+        ],
+        "generationIds": [
+          "bmw-3-serisi-f30-f31-f34-f35"
+        ],
+        "revisionIds": [],
+        "engineIds": [],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Türkiye şikâyeti ve yurt dışı forumdaki ayrı sahipler aynı kaplama bozulmasını anlatıyor. Servis bülteni veya ölçülmüş oran olmadığı için yüksek denmedi.",
+      "sourceIds": [
+        "arastirma-gptgerman-gpt-bmw-f30-handle-tr",
+        "arastirma-gptgerman-gpt-bmw-f30-handle-forum"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "gpt-german",
+      "id": "gpt-bmw-f30-kapi-kolu-yapisiyor"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-gptgerman-gpt-bmw-f30-handle-tr",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-gptgerman-gpt-bmw-f30-handle-forum",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "researching",
+    "updatedAt": "2026-10-18",
+    "notes": "Türkiye şikâyeti ve yurt dışı forumdaki ayrı sahipler aynı kaplama bozulmasını anlatıyor. Servis bülteni veya ölçülmüş oran olmadığı için yüksek denmedi. Gövde tasarımı F30; bazı F31/F34 varyantları benzer parça taşıyabilir ancak burada otomatik genişletilmedi.",
+    "demo": false
+  },
+  {
+    "id": "bmw-gpt-bmw-n13-wastegate-sesi",
+    "slug": "bmw-gpt-bmw-n13-wastegate-sesi",
+    "brandId": "bmw",
+    "kind": "known-defect",
+    "category": "engine",
+    "title": "Turbo wastegate mekanizmasından ses",
+    "summary": "Bazı N13 motorlarda soğuk çalıştırmada veya hafif gazda metalik tıkırtı duyulabiliyor. Bu ses her zaman turbo arızası anlamına gelmiyor.",
+    "symptoms": [
+      "Bazı N13 motorlarda soğuk çalıştırmada veya hafif gazda metalik tıkırtı duyulabiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "bmw-3-serisi"
+        ],
+        "generationIds": [
+          "bmw-3-serisi-f30-f31-f34-f35"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "bmw-320i-ed-170",
+          "bmw-16-320i-ed-170"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "N13 kullanıcılarının bağımsız forumlarda aynı wastegate sesi bildirimleri var; doğrulanmış arıza yüzdesi yok.",
+      "sourceIds": [
+        "arastirma-gptgerman-gpt-bmw-n13-wastegate-tr",
+        "arastirma-gptgerman-gpt-bmw-n13-wastegate-eu"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "gpt-german",
+      "id": "gpt-bmw-n13-wastegate-sesi"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-gptgerman-gpt-bmw-n13-wastegate-tr",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-gptgerman-gpt-bmw-n13-wastegate-eu",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "researching",
+    "updatedAt": "2026-10-18",
+    "notes": "N13 kullanıcılarının bağımsız forumlarda aynı wastegate sesi bildirimleri var; doğrulanmış arıza yüzdesi yok. N13 motorunun diğer güç sürümlerine otomatik aktarılmamalı. Sesin normal mekanik çalışma mı arıza mı olduğu her araçta ayrıca kontrol edilmeli.",
+    "demo": false
+  },
+  {
+    "id": "bmw-gpt-bmw-n20-zincir-kilavuzu",
+    "slug": "bmw-gpt-bmw-n20-zincir-kilavuzu",
+    "brandId": "bmw",
+    "kind": "chronic",
+    "category": "engine",
+    "title": "Triger zinciri kılavuzunda aşınma",
+    "summary": "Erken N20 motorlarda plastik zincir kılavuzunun aşınması veya kırılması, zincirde boşluk ve ciddi motor hasarı riski oluşturabiliyor.",
+    "symptoms": [
+      "Erken N20 motorlarda plastik zincir kılavuzunun aşınması veya kırılması, zincirde boşluk ve ciddi motor hasarı riski oluşturabiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "bmw-3-serisi"
+        ],
+        "generationIds": [
+          "bmw-3-serisi-f30-f31-f34-f35"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "bmw-328i"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2012,
+          "to": 2015,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "repeated-reports",
+      "note": "Farklı BMW uzman servisleri ve belirli N20/N26 araçlarına ilişkin mahkeme uzlaşması bu sorunu destekliyor; Türkiye sıklığı bilinmiyor.",
+      "sourceIds": [
+        "arastirma-gptgerman-gpt-bmw-n20-chain-shop",
+        "arastirma-gptgerman-gpt-bmw-n20-f30-shop",
+        "arastirma-gptgerman-gpt-bmw-n20-chain-settlement"
+      ]
+    },
+    "frequencyRating": "high",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "gpt-german",
+      "id": "gpt-bmw-n20-zincir-kilavuzu"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-gptgerman-gpt-bmw-n20-chain-shop",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-gptgerman-gpt-bmw-n20-f30-shop",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-gptgerman-gpt-bmw-n20-chain-settlement",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-18",
+    "notes": "Farklı BMW uzman servisleri ve belirli N20/N26 araçlarına ilişkin mahkeme uzlaşması bu sorunu destekliyor; Türkiye sıklığı bilinmiyor. F30 kataloğunda N20 karşılığı olarak yalnız 2012-2016 328i var. 320i ED 170 PS ve 1.6 320i ED 170 PS N13’tür, bağlanmadı. 320i 184 PS nesli belirlenmemiş kayıttadır; F30 320i diye bütün 320i motorlarına yayılmadı.",
+    "demo": false
+  },
+  {
+    "id": "bmw-gpt-bmw-n13-pcv-diyaframi",
+    "slug": "bmw-gpt-bmw-n13-pcv-diyaframi",
+    "brandId": "bmw",
+    "kind": "known-defect",
+    "category": "engine",
+    "title": "PCV diyaframında kaçak",
+    "summary": "Bazı 320i ED araçlarda PCV diyaframı bozulduğunda düzensiz rölanti ve hızlanmada isteksizlik bildiriliyor.",
+    "symptoms": [
+      "Bazı 320i ED araçlarda PCV diyaframı bozulduğunda düzensiz rölanti ve hızlanmada isteksizlik bildiriliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "bmw-3-serisi"
+        ],
+        "generationIds": [
+          "bmw-3-serisi-f30-f31-f34-f35"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "bmw-320i-ed-170",
+          "bmw-16-320i-ed-170"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Türkiye forumunda teşhis sonrası giderilmiş bir örnek var; genel BMW F-serisi servis yazısında da PCV arızaları anlatılıyor fakat N13 sıklığı ölçülemiyor.",
+      "sourceIds": []
+    },
+    "frequencyRating": "unknown",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "gpt-german",
+      "id": "gpt-bmw-n13-pcv-diyaframi"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-gptgerman-gpt-bmw-n13-pcv-tr",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-gptgerman-gpt-bmw-n20-f30-shop",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "researching",
+    "updatedAt": "2026-10-18",
+    "notes": "Türkiye forumunda teşhis sonrası giderilmiş bir örnek var; genel BMW F-serisi servis yazısında da PCV arızaları anlatılıyor fakat N13 sıklığı ölçülemiyor. PCV arızası olası nedenlerden biridir; tüm rölanti düzensizlikleri PCV kaynaklı değildir.",
+    "demo": false
   }
 ]

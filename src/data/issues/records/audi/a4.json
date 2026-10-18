@@ -1,0 +1,228 @@
+[
+  {
+    "id": "audi-gpt-audi-b8-20-tfsi-yag-tuketimi",
+    "slug": "audi-gpt-audi-b8-20-tfsi-yag-tuketimi",
+    "brandId": "audi",
+    "kind": "chronic",
+    "category": "engine",
+    "title": "2.0 TFSI motorda yağ tüketimi",
+    "summary": "Erken A4 B8 2.0 TFSI motorlarında piston segmanlarıyla ilişkili yüksek yağ tüketimi ve sık yağ ekleme ihtiyacı bildiriliyor.",
+    "symptoms": [
+      "Erken A4 B8 2.0 TFSI motorlarında piston segmanlarıyla ilişkili yüksek yağ tüketimi ve sık yağ ekleme ihtiyacı bildiriliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "audi-a4"
+        ],
+        "generationIds": [
+          "audi-a4-8k"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "audi-20-tfsi-211"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2008,
+          "to": 2011,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "repeated-reports",
+      "note": "Audi teknik servis bülteni yağ tüketimini doğrudan ele alıyor; bağımsız vaka derlemesi erken EA888 motorlardaki raporları destekliyor.",
+      "sourceIds": [
+        "arastirma-gptgerman-gpt-audi-a4-b8-oil-tsb",
+        "arastirma-gptgerman-gpt-audi-a4-b8-oil-independent"
+      ]
+    },
+    "frequencyRating": "high",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "gpt-german",
+      "id": "gpt-audi-b8-20-tfsi-yag-tuketimi"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-gptgerman-gpt-audi-a4-b8-oil-tsb",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-gptgerman-gpt-audi-a4-b8-oil-independent",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-18",
+    "notes": "Audi teknik servis bülteni yağ tüketimini doğrudan ele alıyor; bağımsız vaka derlemesi erken EA888 motorlardaki raporları destekliyor. ABD bülteninin CAEB kodu Türkiye A4 motorlarının tamamını kapsamayabilir. Aynı yıllardaki CDNB/CDNC ve diğer kodlar ayrıca teyit edilmelidir.",
+    "demo": false
+  },
+  {
+    "id": "audi-gpt-audi-b8-20-tfsi-zincir-gergisi",
+    "slug": "audi-gpt-audi-b8-20-tfsi-zincir-gergisi",
+    "brandId": "audi",
+    "kind": "chronic",
+    "category": "engine",
+    "title": "Triger zinciri gergisinde aşınma",
+    "summary": "Erken A4 B8 2.0 TFSI motorlarında zincir gergisinin zayıflaması soğuk çalıştırmada şakırtıya ve zamanlama sorunlarına neden olabiliyor.",
+    "symptoms": [
+      "Erken A4 B8 2.0 TFSI motorlarında zincir gergisinin zayıflaması soğuk çalıştırmada şakırtıya ve zamanlama sorunlarına neden olabiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "audi-a4"
+        ],
+        "generationIds": [
+          "audi-a4-8k"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "audi-20-tfsi-211"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2008,
+          "to": 2012,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "expert-observed",
+      "note": "EA888 motoruna odaklanan bağımsız uzman servis rehberi ve tecrübe paylaşımı aynı erken gergi problemini anlatıyor; Türkiye oranı bilinmiyor.",
+      "sourceIds": [
+        "arastirma-gptgerman-gpt-audi-b8-timing-expert",
+        "arastirma-gptgerman-gpt-audi-b8-timing-owner"
+      ]
+    },
+    "frequencyRating": "high",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "gpt-german",
+      "id": "gpt-audi-b8-20-tfsi-zincir-gergisi"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-gptgerman-gpt-audi-b8-timing-expert",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-gptgerman-gpt-audi-b8-timing-owner",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "EA888 motoruna odaklanan bağımsız uzman servis rehberi ve tecrübe paylaşımı aynı erken gergi problemini anlatıyor; Türkiye oranı bilinmiyor. Erken nesil EA888 ve revize edilmemiş zincir gergisi hedefidir; bütün 2012 araçları aynı olmayabilir. Üretim tarihi ve motor kodu Cursor tarafından netleştirilmeli.",
+    "demo": false
+  },
+  {
+    "id": "audi-gpt-audi-b9-devirdaim-termostat-kacagi",
+    "slug": "audi-gpt-audi-b9-devirdaim-termostat-kacagi",
+    "brandId": "audi",
+    "kind": "chronic",
+    "category": "cooling",
+    "title": "Devirdaim ve termostat gövdesinden kaçak",
+    "summary": "B9 kasanın EA888 2.0 TFSI motorunda devirdaim/termostat modülünden soğutma sıvısı sızıntısı ve antifriz eksilmesi görülebiliyor.",
+    "symptoms": [
+      "B9 kasanın EA888 2.0 TFSI motorunda devirdaim/termostat modülünden soğutma sıvısı sızıntısı ve antifriz eksilmesi görülebiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "audi-a4"
+        ],
+        "generationIds": [
+          "audi-a4-8w"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "audi-20-tfsi-252"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "expert-observed",
+      "note": "EA888 Gen3 konusunda VAG uzman servisi yazısı ve Audi B9 kullanıcı/usta tartışmaları aynı soğutma modülünü işaret ediyor; Türkiye sıklığı bilinmiyor.",
+      "sourceIds": [
+        "arastirma-gptgerman-gpt-audi-b9-pump-expert",
+        "arastirma-gptgerman-gpt-audi-b9-pump-owners"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "gpt-german",
+      "id": "gpt-audi-b9-devirdaim-termostat-kacagi"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-gptgerman-gpt-audi-b9-pump-expert",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-gptgerman-gpt-audi-b9-pump-owners",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "EA888 Gen3 konusunda VAG uzman servisi yazısı ve Audi B9 kullanıcı/usta tartışmaları aynı soğutma modülünü işaret ediyor; Türkiye sıklığı bilinmiyor. Yalnız katalogdaki 2.0 TFSI 252 PS (2015-2018) bağlandı. Aynı ailedeki 245 PS, adsız 2.0 TFSI ve sonraki TFSI satırları ayrı güç/dönem olduğu için alınmadı.",
+    "demo": false
+  }
+]

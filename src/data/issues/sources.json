@@ -958,5 +958,448 @@
       "method": "Sayfa metni okundu."
     },
     "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-audi-a4-b8-oil-tsb",
+    "kind": "manufacturer-bulletin",
+    "title": "Audi Technical Service Bulletin on 2.0 TFSI oil consumption",
+    "url": "https://static.nhtsa.gov/odi/tsbs/2013/MC-10121301-9999.pdf",
+    "publisher": "Audi of America / NHTSA host",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "ABD teknik servis bülteni; Türkiye motor kodlarına otomatik uygulanmaz.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "PDF teknik bültende 2.0 TFSI CAEB yağ tüketimi incelemesi okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-audi-a4-b8-oil-independent",
+    "kind": "technical-publication",
+    "title": "Audi 2.0 TFSI oil consumption: who pays for it?",
+    "url": "https://faultycar.co.uk/faults/audi-2-0-tfsi-oil-consumption",
+    "publisher": "FaultyCar",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-audi-b8-timing-expert",
+    "kind": "expert-service",
+    "title": "Audi A4 B8 timing chain tensioner early failure",
+    "url": "https://stargaragemansfield.co.uk/audi-timing-chain-problems-2-0-tfsi/",
+    "publisher": "Star Garage Mansfield",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Tam sayfa açılarak iddiayı destekleyen ilgili metin ve araç kapsamı okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-audi-b8-timing-owner",
+    "kind": "user-report",
+    "title": "2009-2012 Audi A4 timing chain tensioner owner experience",
+    "url": "https://www.reddit.com/r/Audi/comments/yznxis/20092012_audi_a4_or_any_vw_20_tfsi_timing_chain/",
+    "publisher": "Reddit / r/Audi",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Tam sayfa açılarak iddiayı destekleyen ilgili metin ve araç kapsamı okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-audi-b9-pump-expert",
+    "kind": "expert-service",
+    "title": "EA888 Gen 3 Thermostat and Water Pump Housing Leak",
+    "url": "https://vagmanchester.com/article/common-faults-vag-ea888-gen-3-engine-thermostat-and-water-pump-housing-leak/",
+    "publisher": "VAG Manchester",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-audi-b9-pump-owners",
+    "kind": "user-report",
+    "title": "Lets talk waterpump Audi B9 forum",
+    "url": "https://www.audizine.com/threads/lets-talk-waterpump.986892/",
+    "publisher": "Audizine",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Forumdaki B9 EA888 soğutma modülü ve servis deneyimleri okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-audi-a3-dq200-expert",
+    "kind": "expert-service",
+    "title": "DQ200 DSG 7 Mechatronic Repair",
+    "url": "https://www.ecutesting.com/common-faults/volkswagen/volkswagen-golf-audi-a3-dsg-7-gearbox-problem/",
+    "publisher": "ECU Testing",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-audi-a3-dq200-owner",
+    "kind": "user-report",
+    "title": "S-Tronic 7 Gang rutscht, vibriert beim Schalten",
+    "url": "https://www.motor-talk.de/forum/s-tronic-7-gang-rutscht-vibriert-beim-schalten-t6305578.html",
+    "publisher": "Motor-Talk",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Audi A3 8V 1.4 TFSI DQ200 sahibi 7 ileri S tronic titreşim tecrübesi okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-bmw-f30-handle-tr",
+    "kind": "user-report",
+    "title": "BMW F30 Door Handle Melting Problem Despite Full Service History",
+    "url": "https://www.sikayetvar.com/en/bmw-us/bmw-f30-door-handle-melting-problem-despite-full-service-history",
+    "publisher": "Şikayetvar / Xolvie",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Kullanıcı bildiriminin metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-bmw-f30-handle-forum",
+    "kind": "user-report",
+    "title": "F30 Interior door handle rubber melted",
+    "url": "https://bmw-sg.com/forums/threads/advice-needed-f30-interior-door-handle-rubber-melted.75471/",
+    "publisher": "BMW.SG",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Tartışmadaki farklı sahiplerin deneyimleri okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-bmw-n13-wastegate-tr",
+    "kind": "user-report",
+    "title": "Bmw N13 Cold Start Wastegate Rattle",
+    "url": "https://forum.donanimhaber.com/bmw-n13-cold-start-wastegate-rattle-kismi-cozum--140407526",
+    "publisher": "DonanımHaber",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Kullanıcının N13 wastegate sesi ve normal çalışma notları okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-bmw-n13-wastegate-eu",
+    "kind": "user-report",
+    "title": "Ratelend geluid F30 320i EDE 2013",
+    "url": "https://www.bmwdriversforum.nl/viewtopic.php?t=20183",
+    "publisher": "BMWDriversForum",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "N13 ve wastegate sesini tartışan kullanıcı yorumları okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-bmw-n20-chain-shop",
+    "kind": "expert-service",
+    "title": "BMW N20 Timing Chain Repair Guide",
+    "url": "https://motronix.net/blog/bmw-n20-timing-chain-failure/",
+    "publisher": "Motronix",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-bmw-n20-f30-shop",
+    "kind": "expert-service",
+    "title": "5 Most Common BMW F30 Problems in the Workshop",
+    "url": "https://eurowerke.com.au/the-5-most-common-bmw-f30-problems-we-see-in-the-workshop/",
+    "publisher": "EuroWerke",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-bmw-n20-chain-settlement",
+    "kind": "technical-publication",
+    "title": "BMW N20/N26 timing chain/oil pump drive chain settlement notice",
+    "url": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10201140-9999.pdf",
+    "publisher": "US District Court / NHTSA host",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "ABD sınıf davası uzlaşmasıdır; resmi geri çağırma veya Türkiye satış kanıtı değildir.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Mahkeme uzlaşması bildiriminin ilgili kapsam satırları okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-bmw-n13-pcv-tr",
+    "kind": "user-report",
+    "title": "BMW F30 320i ED PCV valfi sorunu tecrübesi",
+    "url": "https://otopark.com/forum/threads/bmw-f30-3-20ied-vuruntu-ve-ust-devirlerde-isteksizlik.14139/",
+    "publisher": "Otopark.com Forum",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "N13 PCV diyaframı teşhis ve sorun giderme mesajları okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-mer-w204-chain-tr",
+    "kind": "user-report",
+    "title": "W204 C180 1.8 CGI M271 EVO zincir sesi deneyimleri",
+    "url": "https://www.mbclubtr.com/index.php?threads%2Fw204-c180-1-8cgi-m271-evo-motor-eksantrik-zincir-sesi-problemi.36866%2Fpage-2=",
+    "publisher": "Mercedes Benz Club Türkiye",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Birden fazla C180 sahibinin zincir/eksantrik dişlisi deneyimi okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-mer-w204-chain-uk",
+    "kind": "user-report",
+    "title": "W204 timing chain stretch",
+    "url": "https://forums.mbclub.co.uk/threads/w204-timing-chain-stretch.279288/",
+    "publisher": "MBClub UK",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-mer-w204-esl-expert",
+    "kind": "expert-service",
+    "title": "Mercedes Steering Lock ESL ELV Failure",
+    "url": "https://motronix.net/blog/mercedes-steering-lock-esl-elv-failure/",
+    "publisher": "Motronix",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-mer-w204-esl-tr",
+    "kind": "user-report",
+    "title": "W204 kolon kilidi arızası",
+    "url": "https://mbclubtr.com/index.php?threads%2Fw204-kolon-kilidi-arizasi.53845%2F=",
+    "publisher": "Mercedes Benz Club Türkiye",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-mer-w205-nox-uk",
+    "kind": "user-report",
+    "title": "2017 W205 C220d AdBlue Problem",
+    "url": "https://mbworld.org/forums/c-class-w205/920327-help-2017-w205-c220d-adblue-problem.html",
+    "publisher": "MBWorld",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-mer-w205-nox-another",
+    "kind": "user-report",
+    "title": "NOx sensor shortage and poor MB service",
+    "url": "https://mbworld.org/forums/c-class-w205/818778-nox-sensor-shortage-courtesy-car-issues-poor-mb-service.html",
+    "publisher": "MBWorld",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "C220d sahibinin yetkili servisçe NOx sensör arızası teşhisinin mesajı okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-mer-w205-nox-mbclub",
+    "kind": "user-report",
+    "title": "C220d DPF Regen Issue",
+    "url": "https://forums.mbclub.co.uk/threads/c220d-dpf-regen-issue.304703/",
+    "publisher": "MBClub UK",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "C220d kullanıcısının NOx/AdBlue ve DPF sorunlarını ayıran mesajları okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-mer-w205-chrome-repair",
+    "kind": "technical-publication",
+    "title": "Mercedes C-Class GLC console trim faults",
+    "url": "https://www.go-parts.com/garage/console-compartment-mercedes-benz-cclass-mercedes-benz-glc-class-2015-2026",
+    "publisher": "Go-Parts",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Tam sayfa açılarak iddiayı destekleyen ilgili metin ve araç kapsamı okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-hma-20-st-003h-mdps",
+    "kind": "manufacturer-bulletin",
+    "title": "C-MDPS sonsuz mil rulman sesi",
+    "url": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10179246-0001.pdf",
+    "publisher": "Hyundai Motor America",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "20-ST-003H. Direksiyon çevrilirken rulman sesi. Elantra AD, Elantra GT PD, Ioniq, Kona OS ve bültendeki diğer modeller. Onarım adımı kullanıcıya yazılmaz.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "NHTSA kopyasındaki araç listesi ve konu metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-i30-fd-mdps-kaplin",
+    "kind": "manufacturer-bulletin",
+    "title": "i30 FD elektrikli direksiyon esnek kavrama",
+    "url": "https://www.scribd.com/document/75211612/MDPS-I30",
+    "publisher": "Hyundai",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "i30 FD ve Elantra HD. Üretim JOB#1 ile 14 Nisan 2008 arası. Belirti 20-60 km/s bozuk yolda kolon tıkırtısı. Orijinal PDF barındırıcısı bu kopya değil.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Yayımlanan servis prosedürü metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-reddit-i30-gd-kapi-trim",
+    "kind": "user-report",
+    "title": "i30 GD kapı iç kaplamasında soyulma",
+    "url": "https://www.reddit.com/r/CarTalkUK/comments/1ejxgsm/door_trim_paint_peeling_off_hyundai_i30_20122016/",
+    "publisher": "Reddit",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "2012-2016 i30. Sürücü kapısı başta olmak üzere iç kapı kaplamasının soyulması. Bir yorum aynı aracı doğruluyor. i20 PB tutamacı değil.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Gönderi ve yorumlar okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-hma-22-at-007h-dct",
+    "kind": "manufacturer-bulletin",
+    "title": "7 ileri DCT kalkış sarsıntısı servis bülteni",
+    "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10213721-0001.pdf",
+    "publisher": "Hyundai Motor America",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "22-AT-007H. Yalnızca 1.6 turbo ve 7 ileri çift kavrama. Tucson TL 2016-2018, Kona OS 2018-2021. Geleneksel otomatik kutu yazılmıyor.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "NHTSA kopyasındaki bülten metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-kia-eng222-yag",
+    "kind": "manufacturer-bulletin",
+    "title": "Nu, Gamma ve Theta motorlarda yağ tüketimi",
+    "url": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10205426-0001.pdf",
+    "publisher": "Kia",
+    "publishedAt": "2021-12-21",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "ENG 222 revizyon 4. Uzun blok tablosu Sportage ve Sorento için Theta 2.0 T-GDI ile 2.4 GDI diyor, 2011-2020. Gamma 1.6 GDI satırı Soul ile sınırlı.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "NHTSA kopyasındaki bülten ve model tablosu okundu."
+    },
+    "demo": false
   }
 ]
