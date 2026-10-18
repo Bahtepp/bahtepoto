@@ -85,6 +85,19 @@ describe('Türkiye ana kataloğu', () => {
     const togg = groups('togg', 't10x');
     assert.ok(togg.some((g) => g.label === '160 kW' && g.chassis.length >= 1));
     assert.ok(togg.some((g) => g.label === '320 kW' && g.chassis.length >= 1));
+    const toggEngines = JSON.parse(readFileSync('src/data/catalog/engines/togg.json', 'utf8')) as {
+      id: string;
+      fuel?: string;
+      power?: { kw?: number };
+      batteryKwh?: number;
+    }[];
+    const t160 = toggEngines.find((e) => e.id === 'togg-160kw');
+    const t320 = toggEngines.find((e) => e.id === 'togg-320kw');
+    assert.equal(t160?.fuel, 'electric');
+    assert.equal(t320?.fuel, 'electric');
+    assert.equal(t160?.power?.kw, 160);
+    assert.equal(t320?.power?.kw, 320);
+    assert.equal(t160?.batteryKwh, undefined);
 
     const focusFile = JSON.parse(readFileSync('src/data/catalog/models/ford/focus.json', 'utf8')) as {
       generations: { variants: Variant[] }[];

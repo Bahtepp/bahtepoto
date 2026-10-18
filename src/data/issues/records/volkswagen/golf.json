@@ -1,0 +1,40 @@
+[
+  {
+    "id": "volkswagen-dq200-kavrama-sarsintisi",
+    "slug": "dq200-kavrama-sarsintisi",
+    "brandId": "volkswagen",
+    "kind": "chronic",
+    "category": "transmission",
+    "title": "DSG kavrama sarsıntısı",
+    "summary": "Bazı kuru kavramalı DSG kutularında sarsıntı ve vites sorunları bildiriliyor. Yüksek torklu ıslak DSG kutuları bu kaydın dışında.",
+    "symptoms": ["Kalkışta sarsıntı bildiriliyor."],
+    "appliesTo": [
+      {
+        "modelIds": ["volkswagen-golf", "volkswagen-passat"],
+        "generationIds": [
+          "volkswagen-golf-golf-vi",
+          "volkswagen-golf-golf-vii",
+          "volkswagen-golf-golf-8",
+          "volkswagen-passat-b7",
+          "volkswagen-passat-b8"
+        ],
+        "engineFamilies": ["1.0 TSI", "1.2 TSI", "1.4 TSI", "1.4 TSI ACT", "1.6 TDI"],
+        "transmissions": [{ "type": "dual-clutch", "name": "DSG" }],
+        "note": "Katalogda DSG yazan düşük torklu motorlar. 2.0 TSI, 2.0 TDI ve manuel dahil değil."
+      }
+    ],
+    "prevalence": {
+      "evidence": "repeated-reports",
+      "note": "İki alım rehberi aynı DQ200 ayrımını anlatıyor; ikinci bağımsız laboratuvar kanıtı sayılmadı.",
+      "sourceIds": ["yayin-smartcarcheck-golf-dsg", "yayin-autoza-golf-dsg"]
+    },
+    "frequencyRating": "high",
+    "claims": [
+      { "sourceId": "yayin-smartcarcheck-golf-dsg", "aspects": ["existence", "scope"], "stance": "supports" },
+      { "sourceId": "yayin-autoza-golf-dsg", "aspects": ["scope"], "stance": "supports", "note": "Aynı ayrımın tekrarı." }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "Passat B7/B8 üzerindeki aynı DSG seçeneği bu kayda bağlandı. Şanzımanı katalogda boş olan varyantlar koşullu eşleşir; yalnızca manuel yazılanlar eşleşmez."
+  }
+]

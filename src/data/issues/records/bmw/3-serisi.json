@@ -1,0 +1,44 @@
+[
+  {
+    "id": "bmw-n47-triger-zinciri",
+    "slug": "n47-triger-zinciri",
+    "brandId": "bmw",
+    "kind": "chronic",
+    "category": "engine",
+    "title": "Triger zincirinde uzama",
+    "summary": "Bazı 320d ve 318d motorlarda triger zincirinden ses geldiği bildiriliyor. Zincir uzaması zamanla motor arızasına yol açabiliyor.",
+    "symptoms": ["Soğukta zincir sesi bildiriliyor."],
+    "appliesTo": [
+      {
+        "modelIds": ["bmw-3-serisi"],
+        "generationIds": ["bmw-3-serisi-e90-e91-e92-e93"],
+        "engineIds": ["bmw-320d", "bmw-318d"],
+        "note": "E90 dönemi 320d ve 318d. Benzinli motorlar dahil değil."
+      },
+      {
+        "modelIds": ["bmw-3-serisi"],
+        "generationIds": ["bmw-3-serisi-f30-f31-f34-f35", "bmw-3-serisi-nesil-belirlenmedi"],
+        "engineIds": ["bmw-320d-184"],
+        "note": "184 PS N47. 190 PS B47 dahil değil."
+      }
+    ],
+    "severity": {
+      "level": "high",
+      "rationale": "Zincirin atlaması motor hasarına yol açabiliyor. Bu, yaygınlık etiketinden ayrıdır.",
+      "sourceIds": ["yayin-c4r-bmw-n47"]
+    },
+    "prevalence": {
+      "evidence": "repeated-reports",
+      "note": "Erken üretim daha çok anılıyor. Yüzde iddiası kullanılmadı. Tam geri çağırma olarak yazılmadı.",
+      "sourceIds": ["yayin-c4r-bmw-n47", "yayin-mtak-bmw-n47"]
+    },
+    "frequencyRating": "high",
+    "claims": [
+      { "sourceId": "yayin-c4r-bmw-n47", "aspects": ["existence", "scope", "severity"], "stance": "supports" },
+      { "sourceId": "yayin-mtak-bmw-n47", "aspects": ["existence", "scope"], "stance": "supports" }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "G20 ve 190 PS 320d bu kayda bağlanmadı. M47 dönemi katalogda ayrı motor kimliğiyle yok; E90 yılları 2008 ve sonrası."
+  }
+]

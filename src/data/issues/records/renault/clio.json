@@ -1,0 +1,64 @@
+[
+  {
+    "id": "renault-13-tce-termostat-govdesi",
+    "slug": "13-tce-termostat-govdesi",
+    "brandId": "renault",
+    "kind": "chronic",
+    "category": "cooling",
+    "title": "Termostat gövdesinde su kaçağı",
+    "summary": "Plastik termostat gövdesinin birleşim yerinden soğutma sıvısı sızdığı bildiriliyor. Antifriz eksilmesi ve hararet görülebiliyor.",
+    "symptoms": ["Soğutma sıvısı eksilmesi görülebiliyor."],
+    "appliesTo": [
+      {
+        "modelIds": ["renault-clio", "renault-megane"],
+        "engineFamilies": ["1.3 TCe"],
+        "note": "Yalnızca 1.3 TCe. 1.0 TCe, 1.2 TCe ve dizel motorlar dahil değil."
+      }
+    ],
+    "prevalence": {
+      "evidence": "expert-observed",
+      "note": "Atölye gözlemi özellikle 2018–2019 Renault ve Dacia için. Sonraki gövdelerde azaldığı söyleniyor; hibrit sürüm için ayrı veri yok.",
+      "sourceIds": ["uzman-hr13-termostat-video"]
+    },
+    "frequencyRating": "high",
+    "claims": [
+      { "sourceId": "uzman-hr13-termostat-video", "aspects": ["existence", "symptoms", "prevalence"], "stance": "supports" },
+      { "sourceId": "kullanici-renault-termostat-forum", "aspects": ["existence"], "stance": "supports" }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "Mercedes M282 aynı ailede anılıyor; kaçak gözlemi Mercedes için kurulmadı, kayıt açılmadı. Parça kodu kullanıcıya gösterilmez."
+  },
+  {
+    "id": "renault-12-tce-yag-tuketimi",
+    "slug": "12-tce-yag-tuketimi",
+    "brandId": "renault",
+    "kind": "chronic",
+    "category": "engine",
+    "title": "1.2 TCe yağ tüketimi",
+    "summary": "2012–2016 üretimi belirli 1.2 TCe motorlarda yağ eksiltme bildiriliyor. Üretici her aracı kapsamadığını söylemiş, tam geri çağırma yayımlamamış.",
+    "symptoms": ["Yağ seviyesinin düşmesi bildiriliyor."],
+    "appliesTo": [
+      {
+        "modelIds": ["renault-clio"],
+        "generationIds": ["renault-clio-clio-iv", "renault-clio-nesil-belirlenmedi"],
+        "engineIds": ["renault-12-120", "renault-12-tce-115"],
+        "years": { "from": 2012, "to": 2016, "basis": "model-year" },
+        "note": "Euro 5 1.2 TCe üretim aralığı. 1.0 TCe, 1.3 TCe ve 1.2 75 PS dahil değil."
+      }
+    ],
+    "prevalence": {
+      "evidence": "repeated-reports",
+      "note": "Auto-Moto, Que Choisir haberini aktarır; ikinci bağımsız kanıt sayılmaz. Kapsam bu üretim penceresiyle sınırlı.",
+      "sourceIds": ["yayin-quechoisir-h5ft", "yayin-auto-moto-h5ft"]
+    },
+    "frequencyRating": "high",
+    "claims": [
+      { "sourceId": "yayin-quechoisir-h5ft", "aspects": ["existence", "scope"], "stance": "supports" },
+      { "sourceId": "yayin-auto-moto-h5ft", "aspects": ["scope"], "stance": "supports", "note": "Aynı araştırmanın aktarımı." }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "Mégane IV 1.2 TCe 130 bu üretim penceresinin dışında bırakıldı. Clio IV kayıtları 2019'a uzandığı için eşleşme koşullu olabilir."
+  }
+]

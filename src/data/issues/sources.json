@@ -737,5 +737,130 @@
       "checkedAt": "2026-10-15",
       "method": "Sayfa metni tarayıcıyla okundu (otomatik indirme 402/403 ile engellendi)"
     }
+  },
+  {
+    "id": "uzman-hr13-termostat-video",
+    "kind": "expert-service",
+    "title": "HR13 / 1.3 TCe termostat gövdesi kaçağı — atölye anlatımı",
+    "url": "https://www.youtube.com/watch?v=8kXcrkCVaAs",
+    "publisher": "Bağımsız atölye (YouTube)",
+    "accessedAt": "2026-10-18",
+    "language": "es",
+    "notes": "Konuşma metninde iki parçalı plastik termostat gövdesinin kaynak yerinden kaçırdığı, soğutma sıvısı kaybı ve hararet riski anlatılıyor. Gözlem özellikle 2018–2019 Renault ve Dacia için söyleniyor. Motorun Nissan ve Mercedes'te de kullanıldığı belirtiliyor; Mercedes'te aynı gövdenin aynı biçimde kaçırdığı doğrulanmıyor. Sonraki gövdelerde kaçağın azaldığı söyleniyor, bittiği söylenmiyor.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Video konuşma metni okundu" }
+  },
+  {
+    "id": "kullanici-renault-termostat-forum",
+    "kind": "user-report",
+    "title": "Renault 1.3 TCe termostat kaçağı kullanıcı tartışması",
+    "url": "https://www.reddit.com/r/Renault/comments/1nnmd7c/",
+    "publisher": "Reddit r/Renault",
+    "accessedAt": "2026-10-18",
+    "language": "en",
+    "notes": "Kullanıcılar soğutma sıvısı kaçağını tekrarlıyor. Mercedes gövdesinin farklı olduğu iddiası bu kaydı Mercedes'e taşımak için kullanılmadı.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Konu metni okundu" }
+  },
+  {
+    "id": "yayin-quechoisir-h5ft",
+    "kind": "technical-publication",
+    "title": "Renault 1.2 TCe yağ tüketimi — Que Choisir",
+    "url": "https://www.quechoisir.org/actualite-moteur-1-2-renault-les-constructeurs-minimisent-n69379/",
+    "publisher": "UFC-Que Choisir",
+    "accessedAt": "2026-10-18",
+    "language": "fr",
+    "basedOn": "quechoisir-h5ft",
+    "notes": "Ekim 2012–Mayıs 2016 arasında Valladolid'de üretilen Euro 5 1.2 TCe için yağ tüketimi. Üreticilerin tam geri çağırma yapmadığı ve her aracın etkilenmediği aktarılıyor.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Haber metni okundu" }
+  },
+  {
+    "id": "yayin-auto-moto-h5ft",
+    "kind": "technical-publication",
+    "title": "Renault 1.2 TCe etkilenen modeller — Auto-Moto",
+    "url": "https://www.auto-moto.com/electrique/moteurs-renault-defectueux-liste-modeles-concernes-renault-dacia-nissan-7120",
+    "publisher": "Auto-Moto",
+    "accessedAt": "2026-10-18",
+    "language": "fr",
+    "basedOn": "quechoisir-h5ft",
+    "notes": "Aynı Que Choisir / Le Monde araştırmasını aktarır; bağımsız ikinci kanıt sayılmaz. Clio 4, Mégane 3 ve belirli 1.2 TCe güçleri listeleniyor. 1.0 ve 1.3 TCe bu listenin dışında.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Haber metni okundu" }
+  },
+  {
+    "id": "yayin-c4r-bmw-n47",
+    "kind": "technical-publication",
+    "title": "BMW 3 Serisi N47 triger zinciri — C4R",
+    "url": "https://c4r.co.uk/guides/bmw-3-series",
+    "publisher": "C4R",
+    "accessedAt": "2026-10-18",
+    "language": "en",
+    "notes": "318d/320d N47, yaklaşık 2007–2014, E90 ve erken F30. B47 (yaklaşık 2015 sonrası, 190 PS) bu konunun dışında tutuluyor.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Rehber bölümü okundu" }
+  },
+  {
+    "id": "yayin-mtak-bmw-n47",
+    "kind": "technical-publication",
+    "title": "BMW N47 triger zinciri teknik notu",
+    "url": "https://real.mtak.hu/153629/1/Fekete_02_uj.pdf",
+    "publisher": "MTAK / akademik yayın",
+    "accessedAt": "2026-10-18",
+    "language": "en",
+    "notes": "Mart 2007–Ocak 2009 üretiminin en çok etkilendiği, şikayetlerin daha sonra da sürdüğü ve BMW'nin kalite iyileştirmesinin tam geri çağırma olmadığı aktarılıyor. Ticari kaynaklardaki yüzde iddiaları kullanılmadı.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Makale bölümü okundu" }
+  },
+  {
+    "id": "yayin-c4r-qashqai-12",
+    "kind": "technical-publication",
+    "title": "Nissan Qashqai 1.2 DIG-T zincir — C4R",
+    "url": "https://c4r.co.uk/guides/nissan-qashqai",
+    "publisher": "C4R",
+    "accessedAt": "2026-10-18",
+    "language": "en",
+    "notes": "J11 1.2 DIG-T için zincir uzaması ve yağ tüketimi, yaklaşık 2014–2018. 1.3 DIG-T bu kaydın konusu değil.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Rehber bölümü okundu" }
+  },
+  {
+    "id": "yayin-carhealth-qashqai-12",
+    "kind": "technical-publication",
+    "title": "Nissan Qashqai alım notu — 1.2 DIG-T",
+    "url": "https://carhealth.co.uk/blog/nissan-qashqai-buyers-guide-uk-2026",
+    "publisher": "CarHealth",
+    "accessedAt": "2026-10-18",
+    "language": "en",
+    "notes": "1.2 DIG-T zincir sesi ve yağ eksiltmesi. Dizel DPF/EGR için genel kısa mesafe kullanımı ayrı bir kronik sorun olarak eklenmedi.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Sayfa metni okundu" }
+  },
+  {
+    "id": "yayin-smartcarcheck-golf-dsg",
+    "kind": "technical-publication",
+    "title": "Volkswagen Golf DSG DQ200 — Smart Car Check",
+    "url": "https://smartcarcheck.co.uk/guides/volkswagen/golf-mk7",
+    "publisher": "Smart Car Check",
+    "accessedAt": "2026-10-18",
+    "language": "en",
+    "basedOn": "vw-dq200-buyer-guides",
+    "notes": "Düşük torklu benzin ve 1.6 TDI üzerindeki 7 ileri kuru kavramalı DQ200 için sarsıntı ve mekatronik. GTI ve 2.0 TDI'daki ıslak kavrama bu kayda alınmadı.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Rehber bölümü okundu" }
+  },
+  {
+    "id": "yayin-autoza-golf-dsg",
+    "kind": "technical-publication",
+    "title": "Golf DQ200 karşılaştırması — Autoza",
+    "url": "https://autoza.co.uk/compare/toyota-corolla-vs-volkswagen-golf",
+    "publisher": "Autoza",
+    "accessedAt": "2026-10-18",
+    "language": "en",
+    "basedOn": "vw-dq200-buyer-guides",
+    "notes": "Aynı DQ200 ayrımını tekrarlar; bağımsız ikinci kanıt sayılmaz. Tamir fiyatı kayda alınmadı.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Karşılaştırma metni okundu" }
+  },
+  {
+    "id": "forum-hyundaiclub-i20-kapi",
+    "kind": "user-report",
+    "title": "Hyundai i20 iç kapı tutamacı boyası — Hyundai Club TR",
+    "url": "https://www.hyundaiclubtr.com/tags/boya/",
+    "publisher": "Hyundai Club TR",
+    "accessedAt": "2026-10-18",
+    "language": "tr",
+    "notes": "PB/PBT (2008–2014) i20 için iç kapı tutamacı boyasının soyulmasının forumda bilinen bir konu olduğu yazılmış. Tek topluluk; resmi üretici kusuru olarak kaydedilmedi. Sonraki i20 nesillerine taşınmadı.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Forum etiket sayfasındaki konu özeti okundu" }
   }
 ]
