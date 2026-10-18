@@ -76,6 +76,10 @@
             "type": { "enum": ["manual", "automatic", "dual-clutch", "cvt", "single-speed", "automated-manual"] },
             "name": { "type": "string" }
           }
+        },
+        "chassisWide": {
+          "type": "boolean",
+          "description": "Yalnızca süspansiyon ve hvac. Nesilde motor ve donanımdan bağımsız olduğu okunduysa true. Şanzımanlı, nesilsiz veya okunmamış kayıt aktarılmaz."
         }
       }
     },

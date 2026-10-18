@@ -50,6 +50,11 @@ export const researchVehicleSchema = z.object({
       name: z.string().min(1).optional(),
     })
     .optional(),
+  /**
+   * Yalnızca süspansiyon ve hvac için. Sorun o nesilde motor ve donanımdan bağımsızsa true.
+   * Şanzıman, nesli belirsiz kayıt ve okunmamış kaynak bu alanla aktarılmaz.
+   */
+  chassisWide: z.boolean().optional(),
 });
 
 export const researchIssueSchema = z.object({

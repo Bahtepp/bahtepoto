@@ -424,4 +424,88 @@ describe('araştırma içe aktarma', () => {
     assert.equal(result[0].decision, 'review');
     assert.match(result[0].reason, /nesil ve yıl/);
   });
+
+  test('kasa geneli klima ve süspansiyon yalnızca işaretli ve nesilli kaydı geçer', () => {
+    const base = {
+      id: 'corsa-d-kasa-testi',
+      title: 'Kalorifer klape testi',
+      summary: 'Bu cümle yalnızca kasa geneli klima eşleşmesini sınar. Canlı bir sorunu tekrar etmez.',
+      category: 'hvac',
+      vehicles: [{ brand: 'Opel', model: 'Corsa', generation: 'Corsa D', chassisWide: true }],
+    };
+    const scope = { brands: ['Opel'], models: ['Corsa'], agent: 'test-kasa' };
+    const ok = plan(bundle(base, scope));
+    assert.equal(ok[0].decision, 'import', ok[0].reason);
+    assert.equal(ok[0].issue?.appliesTo[0].engineIds.length, 0);
+
+    const unmarked = plan(bundle({ ...base, vehicles: [{ brand: 'Opel', model: 'Corsa', generation: 'Corsa D' }] }, scope));
+    assert.equal(unmarked[0].decision, 'review');
+    assert.match(unmarked[0].reason, /motor yazılmadı/);
+
+    const gearbox = plan(
+      bundle(
+        {
+          ...base,
+          category: 'suspension',
+          title: 'Arka dingil sesi testi',
+          summary: 'Bu cümle şanzıman koşulunun kasa geneli kaydı durdurduğunu sınar. Canlı sorunu tekrar etmez.',
+          vehicles: [{ brand: 'Opel', model: 'Corsa', generation: 'Corsa D', chassisWide: true, transmission: { type: 'manual' } }],
+        },
+        scope,
+      ),
+    );
+    assert.equal(gearbox[0].decision, 'review');
+    assert.match(gearbox[0].reason, /motor yazılmadı/);
+
+    const noGeneration = plan(
+      bundle(
+        {
+          ...base,
+          category: 'suspension',
+          title: 'Nesilsiz dingil sesi testi',
+          summary: 'Bu cümle nesli yazılmayan süspansiyon kaydının modele yayılmadığını sınar. Canlı sorunu tekrar etmez.',
+          vehicles: [{ brand: 'Opel', model: 'Corsa', chassisWide: true }],
+        },
+        scope,
+      ),
+    );
+    assert.equal(noGeneration[0].decision, 'review');
+    assert.match(noGeneration[0].reason, /nesil/);
+
+    const engineClaim = plan(
+      bundle(
+        {
+          ...base,
+          category: 'engine',
+          title: 'Motorsuz motor kaydı testi',
+          summary: 'Bu cümle motor kategorisinin kasa geneli işaretle bütün motorlara açılmadığını sınar. Canlı sorunu tekrar etmez.',
+          vehicles: [{ brand: 'Opel', model: 'Corsa', generation: 'Corsa D', chassisWide: true }],
+        },
+        scope,
+      ),
+    );
+    assert.equal(engineClaim[0].decision, 'review');
+    assert.match(engineClaim[0].reason, /motor yazılmadı/);
+
+    const unread = plan(
+      bundle(
+        { ...base, sourceIds: ['kaynak-a'] },
+        {
+          ...scope,
+          sources: [
+            {
+              id: 'kaynak-a',
+              title: 'Okunmamış klima notu',
+              url: 'https://example.com/okunmamis-klima',
+              kind: 'technical-publication',
+              publisher: 'Kaynak A',
+              reviewed: false,
+            },
+          ],
+        },
+      ),
+    );
+    assert.equal(unread[0].decision, 'review');
+    assert.match(unread[0].reason, /okunmadan/);
+  });
 });

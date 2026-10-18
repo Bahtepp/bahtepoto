@@ -134,8 +134,18 @@ describe('ajan kayıtlarının kapsamı', () => {
       issues: live.issues,
       sources: live.sources,
     });
-    assert.equal(claude.filter((item) => item.decision === 'import').length, 0);
-    assert.equal(claude.filter((item) => item.decision === 'duplicate').length, 5);
+    for (const id of [
+      'claude-hyundai-cmdps-rulman-sesi',
+      'claude-hyundai-i30-fd-direksiyon-sesi',
+      'claude-hyundai-i30-gd-kapi-trim',
+      'claude-hyundai-16t-dct-sarsinti',
+      'claude-kia-theta-24-gdi-yag',
+    ]) {
+      assert.equal(claude.find((item) => item.researchId === id)?.decision, 'duplicate', id);
+    }
+    for (const row of claude.filter((item) => item.decision === 'import')) {
+      assert.equal(live.issues.some((item) => item.researchRef?.id === row.researchId), false, row.researchId);
+    }
     const astra = planResearchImport({
       files: files('data/research/agent-outputs/astra-renault').map((file) => readResearchJson(file)),
       catalog,

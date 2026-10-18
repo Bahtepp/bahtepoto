@@ -4,7 +4,7 @@ Gemini tarayıcıda çalışır. Bu klasöre, katalog dosyalarına ve Git deposu
 
 Araştırma bittiğinde kullanıcı JSON dosyasını veya ZIP arşivini indirip bu klasöre koyar. Entegrasyon burada yapılır. Gemini’nin kendisi dosya yazmaz, kod değiştirmez ve Git işlemi yapmaz.
 
-Şimdilik bu klasörde sorun kaydı yoktur. Dosya gelmeden aktarım yapılmış sayılmaz.
+İlk teslim `gemini-stellantis/` altındadır. Okunmamış kaynak ve daraltılamayan kayıt aktarılmaz.
 
 ## Teslim biçimi
 

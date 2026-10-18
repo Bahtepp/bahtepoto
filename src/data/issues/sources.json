@@ -1515,5 +1515,80 @@
       "method": "İkinci turda birincil yazı veya kullanıcı mesajı açılıp okundu."
     },
     "demo": false
+  },
+  {
+    "id": "arastirma-geministellantis-fiat-linea-airbag-sv",
+    "kind": "user-report",
+    "title": "Fiat Linea yolcu hava yastığı kapağında çatlak şikayetleri",
+    "url": "https://www.sikayetvar.com/fiat/linea/airbag",
+    "publisher": "Şikayetvar",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açıldı. Birçok Linea sahibi yolcu hava yastığının üstündeki kapakta darbe olmadan çatlak tarif ediyor. Punto yazmıyor. Oran yok."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-geministellantis-fiat-egea-direksiyon-sv",
+    "kind": "user-report",
+    "title": "Fiat Egea direksiyondan ses gelmesi",
+    "url": "https://www.sikayetvar.com/fiat/egea/direksiyondan-ses-gelmesi",
+    "publisher": "Şikayetvar",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açıldı. Birkaç Egea sahibi tıkırtı yazıyor. Birinde servis önce takoz, sonra direksiyon kutusu demiş. Başka kayıtta direksiyon mili geçiyor. Tek parça değil."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-geministellantis-opel-astra-j-14t-pcv",
+    "kind": "technical-publication",
+    "title": "Astra J 1.4 Turbo PCV diyaframı",
+    "url": "https://stillrunningstrong.com/car-specs-problems/opel-vauxhall/astra-j/",
+    "publisher": "Still Running Strong",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa okundu. 140 PS 1.4 Turbo kodunu A14NET ve B14NET olarak yazıyor. Külbütör kapağı diyaframı ve emme manifoldu PCV valfinin arızasını, ıslık, düzensiz rölanti ve yağ tüketimi belirtileriyle anlatıyor. 120 PS aynı gövdenin A14NEL haritası. Astra K ve Insignia bu sayfada yok."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-geministellantis-opel-astra-h-cim-2262",
+    "kind": "manufacturer-bulletin",
+    "title": "Field Remedy 2262: Astra H korna, CIM",
+    "url": "https://workshop-manuals.com/vauxhall/astra-h/n__electrical_equipment_and_instruments/technical_service_bulletins/poor_operation_incorrect_operation/horn_intermittent_malfunction/",
+    "publisher": "Vauxhall Field Remedy 2262",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Saha notu okundu. Astra H 2004-2011, bütün motorlar, korna aralıklı çalışmıyor. Neden CIM içindeki temas. Yalnızca Antwerp, Ellesmere Port, Bochum ve Gliwice için yazılı şasi aralıkları. Çözüm 10-R-036 kampanyası. Direksiyon tuşlarının tamamı bu metinde yok."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-geministellantis-peugeot-stellantis-puretech",
+    "kind": "manufacturer-bulletin",
+    "title": "Stellantis PureTech tazminat sayfası",
+    "url": "https://www.stellantis.com/en/contacts/puretech-compensation-platform",
+    "publisher": "Stellantis",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa okundu. Önceki nesil PureTech 1.0 ve 1.2 için Mart 2024'ten beri, koşullu, 10 yıl veya 180.000 km'ye kadar parça ve işçilik uzatması yazıyor. 1 Ocak 2022 ile 31 Aralık 2024 arasındaki aşırı yağ tüketimi veya erken triger kayışı masrafı için Avrupa tazminat platformu var. Türkiye garantisi diye yazmıyor. Zincirli yeni nesli saymıyor."
+    },
+    "demo": false
   }
 ]

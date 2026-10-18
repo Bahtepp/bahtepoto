@@ -1,0 +1,126 @@
+[
+  {
+    "id": "opel-gemini-opel-14t-pcv-valfi",
+    "slug": "opel-gemini-opel-14t-pcv-valfi",
+    "brandId": "opel",
+    "kind": "known-defect",
+    "category": "engine",
+    "title": "1.4 turbo motorda PCV diyaframı",
+    "summary": "Astra J'deki 140 PS'lik 1.4 turbo motorda külbütör kapağındaki karter havalandırma diyaframı yırtılabiliyor. Belirti ıslık, düzensiz rölanti veya yağ buharı olabilir.",
+    "symptoms": [
+      "Astra J'deki 140 PS'lik 1.4 turbo motorda külbütör kapağındaki karter havalandırma diyaframı yırtılabiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "opel-astra"
+        ],
+        "generationIds": [
+          "opel-astra-astra-j"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "opel-14-140"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Teknik yayın bu diyafram arızasını 140 PS 1.4 turbo için anlatıyor. Görülme oranı yazılmadığı için yüksek denmedi.",
+      "sourceIds": [
+        "arastirma-geministellantis-opel-astra-j-14t-pcv"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "gemini-stellantis",
+      "id": "gemini-opel-14t-pcv-valfi"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-geministellantis-opel-astra-j-14t-pcv",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "Teknik yayın bu diyafram arızasını 140 PS 1.4 turbo için anlatıyor. Görülme oranı yazılmadığı için yüksek denmedi. Katalog adı turbo yazmıyor; okunan sayfa 140 PS 1.4 Turbo kodunu A14NET/B14NET olarak veriyor. 100 PS atmosferik ve 120 PS satırı bu nesilde yok. Insignia A'daki 1.4 140 PS okunamadığı için alias açılmadı. Astra K aynı motor kimliğini taşısa da nesli farklı olduğu için seçilmedi.",
+    "demo": false
+  },
+  {
+    "id": "opel-gemini-opel-cim-modulu-arizasi",
+    "slug": "opel-gemini-opel-cim-modulu-arizasi",
+    "brandId": "opel",
+    "kind": "known-defect",
+    "category": "electrical",
+    "title": "Kornanın aralıklı çalışmaması (CIM)",
+    "summary": "Bazı Astra H araçlarda korna aralıklı çalmayabiliyor. Üretici saha notu bunu CIM modülündeki temas zayıflığına bağlıyor ve belirli üretim aralıklarını sayıyor.",
+    "symptoms": [
+      "Bazı Astra H araçlarda korna aralıklı çalmayabiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "opel-astra"
+        ],
+        "generationIds": [
+          "opel-astra-astra-h"
+        ],
+        "revisionIds": [],
+        "engineIds": [],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Saha notu bir müşteri memnuniyet programı tanımlıyor ama bütün Astra H'leri saymıyor. Oran yok; yüksek denmedi.",
+      "sourceIds": [
+        "arastirma-geministellantis-opel-astra-h-cim-2262"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "gemini-stellantis",
+      "id": "gemini-opel-cim-modulu-arizasi"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-geministellantis-opel-astra-h-cim-2262",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "Saha notu bir müşteri memnuniyet programı tanımlıyor ama bütün Astra H'leri saymıyor. Oran yok; yüksek denmedi. İlk dry-run özeti bunu Corsa D diye yazmıştı; JSON Astra H. Direksiyon tuşları bu saha notunun konusu değil. Şasi aralığı katalogda ayrılmıyor. Zafira B aynı notta ama katalogda B nesli yok.",
+    "demo": false
+  }
+]

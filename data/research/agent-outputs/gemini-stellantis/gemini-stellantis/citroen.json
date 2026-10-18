@@ -1,0 +1,77 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "gemini-stellantis",
+  "brands": ["Citroën"],
+  "models": ["C4 Picasso", "C-Elysée", "C3", "C5 Aircross"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "citroen-mcp-sanziman-dh",
+      "title": "Citroen MCP / ETG Şanzıman Sarsıntı ve Baskı Balata",
+      "url": "https://forum.donanimhaber.com/citroen-mcp-etg-sanziman-sarsinti-sorunu--120000000",
+      "kind": "user-report",
+      "publisher": "DonanımHaber Forum",
+      "reviewed": false,
+      "reviewMethod": "Konu numarası 120000000. Adres 404 döndü. Aynı numara başka bir uydurma Opel konusunda da kullanılmıştı.",
+      "note": "ETG5, ETG6, MCP ve klasik otomatik aynı kabul edilmedi. Katalogda bu şanzıman adları yok."
+    },
+    {
+      "id": "citroen-c4-picasso-koruk-sv",
+      "title": "Citroen C4 Picasso Havalı Süspansiyon Arızası",
+      "url": "https://www.sikayetvar.com/citroen/c4-picasso/suspansiyon",
+      "kind": "user-report",
+      "publisher": "Şikayetvar",
+      "reviewed": false,
+      "reviewMethod": "Sayfa açıldı. Görünen şikayetler ön cam, ekran, fitil ve partikül filtresi. Körük patlaması veya Suspension Fault yok. Neredeyse kaçınılmaz iddiası yok.",
+      "note": "Donanım kataloğu Exclusive havalı süspansiyonu ayıramıyor."
+    },
+    {
+      "id": "citroen-celysee-ruzgar-sv",
+      "title": "Citroen C-Elysee Yalıtım ve Rüzgar Sesi Şikayetleri",
+      "url": "https://www.sikayetvar.com/citroen/ruzgar-sesi",
+      "kind": "user-report",
+      "publisher": "Şikayetvar",
+      "reviewed": false,
+      "reviewMethod": "Adres 404 döndü.",
+      "note": "Yalıtımın beklentinin altında olması fitil arızası diye kayda alınmadı."
+    }
+  ],
+  "issues": [
+    {
+      "id": "gemini-citroen-mcp-etg6-sarsinti",
+      "title": "MCP / ETG serisi şanzımanlarda kararsız ve sarsıntılı vites geçişleri",
+      "summary": "Tek kavramalı robotize şanzımanlarda (MCP ve ETG), özellikle düşük hızlarda ve dur-kalk trafikte vites geçişlerinin sarsıntılı, yığılmalı ve kararsız olabildiği bildirilmektedir.",
+      "category": "transmission",
+      "frequency": "high",
+      "frequencyRationale": "Bu şanzıman tipinin yapısal bir karakteristiği olmakla birlikte, kullanıcı deneyimini doğrudan etkilediği için şikayet platformlarında çok sık gündeme gelen bir kronik konfor problemidir.",
+      "vehicles": [
+        { "brand": "Citroën", "model": "C4 Picasso", "generation": "C4 Picasso II", "transmission": { "type": "automated-manual", "name": "ETG6" } },
+        { "brand": "Citroën", "model": "C-Elysée", "generation": "C-Elysée", "transmission": { "type": "automated-manual", "name": "ETG5" } }
+      ],
+      "sourceIds": ["citroen-mcp-sanziman-dh"],
+      "uncertainties": "Kaynak 404. Katalogda C4 Picasso nesli ayrılmamış. C-ELYSEE (2012) satırlarında ETG yazmıyor; 1.6 VTI otomatik görünüyor. Normal robotize vites hissi ile aktüatör arızası ayrılmadı."
+    },
+    {
+      "id": "gemini-citroen-c4-picasso-havali-suspansiyon",
+      "title": "Havalı arka süspansiyon sisteminde körük patlaması",
+      "summary": "C4 Picasso'nun arka havalı süspansiyon sisteminde (genellikle Exclusive donanım), kauçuk körüklerin zamanla hava kaçırması veya patlaması sonucu aracın arkasının tamamen çöktüğü rapor edilmektedir.",
+      "category": "suspension",
+      "frequency": "high",
+      "frequencyRationale": "Belli bir kullanım ömründen sonra neredeyse kaçınılmaz olarak karşılaşılan, kompresör arızasına da yol açabilen oldukça meşhur bir süspansiyon sorunudur.",
+      "vehicles": [{ "brand": "Citroën", "model": "C4 Picasso", "generation": "C4 Picasso I" }],
+      "sourceIds": ["citroen-c4-picasso-koruk-sv"],
+      "uncertainties": "Katalogda tek satır var: nesli belirlenmemiş. Motorlar I ve II diye dağıtılmadı. Havalı süspansiyon donanımı ayrılmıyor. Yüksek ve neredeyse kaçınılmaz iddiası okunan sayfada yok."
+    },
+    {
+      "id": "gemini-citroen-ruzgar-sesi",
+      "title": "Kabin içine erken hızlarda rüzgar sesi alınması",
+      "summary": "Özellikle C-Elysée modellerinde, izolasyon yapısı ve kapı fitillerinin yalıtım seviyesi nedeniyle otoyol hızlarında kabin içine belirgin düzeyde rüzgar ve yol sesi alındığı belirtilmektedir.",
+      "category": "body",
+      "frequency": "medium",
+      "frequencyRationale": "Giriş seviyesi sedanlarda genel bir durum olsa da, Citroen kullanıcıları tarafından beklentinin altında bir izolasyon olarak sıklıkla eleştirilmektedir.",
+      "vehicles": [{ "brand": "Citroën", "model": "C-Elysée", "generation": "C-Elysée" }],
+      "sourceIds": ["citroen-celysee-ruzgar-sv"],
+      "uncertainties": "Kaynak 404. Katalog nesil adı C-ELYSEE (2012). Fitil arızası ile yalıtım karakteri ayrılmadı; kronik teknik arıza diye aktarılmadı."
+    }
+  ]
+}

@@ -168,7 +168,9 @@ function resolveVehicle(
   const engineIds: string[] = [];
   const skipped: string[] = [];
   let catalogTransmissionName: string | undefined;
-  if (vehicle.engines.length === 0 && (vehicle.transmission || !['body', 'interior', 'electrical', 'steering'].includes(category))) {
+  const engineOptional = ['body', 'interior', 'electrical', 'steering'].includes(category);
+  const chassisOptional = vehicle.chassisWide === true && ['suspension', 'hvac'].includes(category);
+  if (vehicle.engines.length === 0 && (vehicle.transmission || !(engineOptional || chassisOptional))) {
     return { reason: `${model.name}: motor yazılmadı, kayıt bütün motorlara yayılmadı` };
   }
   const enginesFor = (wanted: ResearchVehicle['engines'][number]): { chosen?: Engine[]; reason?: string } => {
