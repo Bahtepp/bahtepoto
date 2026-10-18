@@ -8,10 +8,11 @@
  * Böylece ileride dış kaynaklardan toplanan sorunlar mevcut katalogla otomatik eşleştirilebilir.
  *
  * Kavramsal ayrımlar:
- * - `severity`   (ciddiyet)              — sorun ortaya çıktığında sonucu ne kadar ağır?
- * - `prevalence` (görülme sıklığı kanıtı) — ne kadar sık görüldüğüne dair hangi düzeyde kanıt var?
- *   Bu ikisi ayrı tutulur; ikisi de kaynak gerektirir. Kanıt yoksa alan boş/`unknown` kalır.
- * - `status`     (doğrulama durumu)      — sorunun varlığı ne kadar sağlam destekleniyor?
+ * - `severity`         (ciddiyet)              — sorun ortaya çıktığında sonucu ne kadar ağır?
+ * - `prevalence`       (görülme sıklığı kanıtı) — ne kadar sık görüldüğüne dair hangi düzeyde kanıt var?
+ * - `frequencyRating`  (yaygınlık etiketi)     — araştırmacının nitel değerlendirmesi. Yüzde değildir.
+ *   Ciddiyet, kanıt düzeyi ve yaygınlık etiketi birbirinin yerine geçmez.
+ * - `status`           (doğrulama durumu)      — sorunun varlığı ne kadar sağlam destekleniyor?
  */
 import { z } from 'astro/zod';
 // `.ts` uzantısı: testlerin bu dosyayı Node ile doğrudan çalıştırabilmesi için.
@@ -235,6 +236,12 @@ export const issueSchema = z.object({
   prevalence: z
     .object({ evidence: prevalenceEvidenceSchema, note: z.string().optional(), sourceIds: z.array(idSchema).default([]) })
     .default({ evidence: 'unknown', sourceIds: [] }),
+  /**
+   * Kullanıcının gördüğü yaygınlık: Yüksek / Orta / Düşük / Belirsiz.
+   * Araştırmacının nitel yargısıdır; istatistiksel oran değildir.
+   * Az kaynak otomatik olarak Düşük demek değildir. Eski kayıtlarda alan yoktur.
+   */
+  frequencyRating: z.enum(['high', 'medium', 'low', 'unknown']).optional(),
   claims: z.array(claimSchema).min(1),
   status: issueStatusSchema,
   updatedAt: isoDateSchema,

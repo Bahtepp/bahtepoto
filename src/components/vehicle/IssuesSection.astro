@@ -1,89 +1,84 @@
 ---
 /**
- * Bir araç için sorun kayıtları — üç grup (yayın politikası, bkz. docs/KRONIK-SORUNLAR.md):
- *   1. Bilinen / sık bildirilen sorunlar
- *   2. Olası sorunlar (araştırılan, tekil bildirim veya kaynakları çelişen)
- *   3. Resmi geri çağırmalar
- * Kayıt yoksa "sorun yok" DEMEZ; verinin henüz bulunmadığını söyler.
+ * Kronik ve bilinen sorunlar, ardından resmî geri çağırmalar.
+ * Kayıt yoksa "sorun yok" denmez.
  */
 import IssueItem from './IssueItem.astro';
 import type { DisplayGroups } from '@/lib/issues/match';
-import type { IssueSource } from '@/lib/issues/schema';
 
 interface Props {
   groups: DisplayGroups;
-  sourceById: Map<string, IssueSource>;
-  label: (id: string) => string;
-  /** Motor-makyaj dönemi eşleşmesi doğrulanmadıysa uyarı gösterilir. */
   engineMappingUncertain?: boolean;
   headingId?: string;
 }
 
-const { groups, sourceById, label, engineMappingUncertain = false, headingId = 'kronik-sorunlar' } = Astro.props;
+const { groups, engineMappingUncertain = false, headingId = 'kronik-sorunlar' } = Astro.props;
 
 const SECTIONS = [
   {
     key: 'known' as const,
     id: `${headingId}-bilinen`,
-    title: 'Bilinen / sık bildirilen sorunlar',
-    help: 'Kaynaklarda bu araç için bildirilen sorunlar. "Kasa / model geneli" kayıtlar model düzeyindeki istatistiklere dayanır; belirli bir motorun arıza oranı değildir.',
-    empty: 'Bu araç için kaynaklarda bulunan bilinen sorun kaydı henüz yok. Bu, aracın sorunsuz olduğu anlamına gelmez.',
+    title: '',
+    empty: 'Bu araç için derlenmiş bilinen sorun kaydı henüz yok. Bu, aracın sorunsuz olduğu anlamına gelmez.',
   },
   {
     key: 'possible' as const,
     id: `${headingId}-olasi`,
-    title: 'Olası sorunlar',
-    help: 'Henüz kesinleşmemiş kayıtlar: tek bir bildirime dayanan, araştırılan veya kaynakları birbiriyle çelişen iddialar. Yaygın sorun olarak değerlendirilmemelidir.',
+    title: 'Bildirilmiş olası sorunlar',
     empty: undefined,
   },
   {
     key: 'recalls' as const,
     id: `${headingId}-geri-cagirma`,
-    title: 'Resmi geri çağırmalar',
-    help: undefined,
+    title: 'Resmî geri çağırmalar',
     empty: 'Bu araç seçimiyle eşleşen geri çağırma kaydı veritabanımızda yok. Bu, aracınız için geri çağırma olmadığı anlamına gelmez.',
   },
 ];
 ---
 
 <section class="issues-section" aria-labelledby={headingId}>
-  <h2 id={headingId}>Bilinen sorunlar ve geri çağırmalar</h2>
+  <h2 id={headingId}>Kronik ve bilinen sorunlar</h2>
 
   {
     engineMappingUncertain && (
       <p class="callout-warn">
-        Bu motorun seçilen makyaj döneminde sunulduğu henüz doğrulanmadı. Motora özgü kayıtlar bu yüzden "Koşullu
-        eşleşme" olarak gösterilir; kasa ve model genelindeki kayıtlar etkilenmez.
+        Bu motorun seçilen makyaj döneminde sunulduğu henüz doğrulanmadı. Motora özgü kayıtlar bu yüzden koşullu
+        eşleşme olarak gösterilir.
       </p>
     )
   }
 
   {
     SECTIONS.filter((s) => s.key !== 'possible' || groups.possible.length > 0).map((s) => (
-      <section class="issue-kind" aria-labelledby={s.id}>
-        <h3 id={s.id} class="issue-kind-title">
-          {s.title} {groups[s.key].length > 0 && <span class="count">{groups[s.key].length}</span>}
-        </h3>
-        {s.help && <p class="issue-kind-help">{s.help}</p>}
+      <section class="issue-kind" aria-labelledby={s.title ? s.id : undefined}>
+        {s.title && (
+          <h3 id={s.id} class="issue-kind-title">
+            {s.title} {groups[s.key].length > 0 && <span class="count">{groups[s.key].length}</span>}
+          </h3>
+        )}
         {s.key === 'recalls' && (
           <p class="callout-info">
-            Geri çağırma belirli bir üretim aralığındaki <strong>bazı</strong> araçları kapsar; tek başına yaygın bir arıza
-            anlamına gelmez. Aracınızın kapsamda olup olmadığı ve onarımın yapılıp yapılmadığı ancak{' '}
-            <strong>şasi numarasıyla resmi sorgu</strong> sonucunda kesinleşir.
+            Geri çağırma belirli bir üretim aralığındaki bazı araçları kapsar. Aracınızın kapsamda olup olmadığı şasi
+            numarasıyla resmi sorguda kesinleşir.
           </p>
         )}
-        {groups[s.key].length === 0 && s.empty ? (
+        {groups[s.key].length === 0 && s.empty && !(s.key === 'known' && groups.possible.length > 0) ? (
           <div class="issues-empty">
             <p>{s.empty}</p>
           </div>
         ) : (
           <ul class="issue-list">
             {groups[s.key].map(({ issue, match, scope }) => (
-              <IssueItem issue={issue} match={match} scope={scope} sourceById={sourceById} label={label} anchorPrefix={s.id} />
+              <IssueItem issue={issue} match={match} scope={scope} anchorPrefix={s.id} />
             ))}
           </ul>
         )}
       </section>
     ))
   }
+
+  <p class="issue-disclaimer">
+    Bu bilgiler kullanıcı deneyimleri ve erişilebilir teknik kaynaklardan derlenmiştir. Her araçta görülmeyebilir; kesin
+    arıza teşhisi veya ekspertiz yerine geçmez.
+  </p>
 </section>
