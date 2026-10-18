@@ -4,8 +4,8 @@
  * Katalog ve kronik sorun verileri burada yalnızca "okunarak" birleştirilir; birbirine yazılmaz.
  */
 import { getCatalog } from '@/lib/catalog';
-import { MODEL_SLUG_ALIASES, aliasesOnto } from '@/lib/catalog/aliases';
-import { catalogPath, formatYearRange, generationLabel, vehiclePath } from '@/lib/catalog/format';
+import { LEGACY_PATHS, MODEL_SLUG_ALIASES, aliasesOnto } from '@/lib/catalog/aliases';
+import { catalogPath, formatYearRange, generationLabel, prefixBase, vehiclePath } from '@/lib/catalog/format';
 import { isTurkeyPrimary, marketGroup } from '@/lib/catalog/market';
 import type { Brand, Engine, Generation, Model, Revision, Variant } from '@/lib/catalog/schema';
 import type { VehicleContext } from '@/lib/issues/match';
@@ -51,8 +51,14 @@ function selectionParam(sel: VehicleSelection, modelSlug = sel.model.slug): stri
 export interface CatalogRedirect {
   /** `[...vehicle]` parametresi, başında `/arac` yok. */
   param: string;
-  /** Site köküne göre hedef. `base` Astro tarafından eklenir. */
+  /** Yayımlanan adres. GitHub Pages `base` önekini içerir. */
   to: string;
+}
+
+/** Statik yönlendirme hedefi. Astro bu adrese `base` eklemez. */
+function publishedPath(path: string): string {
+  const env = import.meta.env as { BASE_URL?: string } | undefined;
+  return prefixBase(env?.BASE_URL ?? '/', path);
 }
 
 /**
@@ -69,7 +75,7 @@ export async function getCatalogRedirects(): Promise<CatalogRedirect[]> {
   const add = (param: string, to: string) => {
     if (!param || param === to.replace(/^\/arac\/|\/$/g, '') || publicParams.has(param) || seen.has(param)) return;
     seen.add(param);
-    out.push({ param, to });
+    out.push({ param, to: publishedPath(to) });
   };
 
   for (const sel of all) {
@@ -100,6 +106,7 @@ export async function getCatalogRedirects(): Promise<CatalogRedirect[]> {
     if (!target) continue;
     add(`${alias.brand}/${alias.from}`, catalogPath({ brand: alias.brand, model: alias.to }));
   }
+  for (const legacy of LEGACY_PATHS) add(legacy.param, legacy.to);
   return out;
 }
 

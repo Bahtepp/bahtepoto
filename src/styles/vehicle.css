@@ -31,6 +31,7 @@
 .vehicle-head h1 {
   font-size: 1.75rem;
   letter-spacing: -0.015em;
+  overflow-wrap: anywhere;
 }
 
 .vehicle-sub {
@@ -198,6 +199,7 @@
 .issue-title {
   font-size: 1.0625rem;
   font-weight: 650;
+  overflow-wrap: anywhere;
 }
 
 .issue-tags {
@@ -216,6 +218,7 @@
 
 .issue-summary {
   margin: 0.35rem 0 0;
+  overflow-wrap: anywhere;
 }
 
 .issue-line {

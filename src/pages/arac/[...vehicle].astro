@@ -69,7 +69,7 @@ const title = `${brand.name} ${model.name} ${engineTitle}`;
 const subtitle = generation.kind === 'unassigned' ? 'Kasa bilgisi yok' : genLabel;
 const back = withBase(catalogPath({ brand: brand.slug, model: model.slug, engine: engineGroup.slug }));
 const pathFor = (revSlug: string | undefined, variantSlug: string) =>
-  vehiclePath({ brand: brand.slug, model: model.slug, generation: generation.slug, revision: revSlug, variant: variantSlug });
+  withBase(vehiclePath({ brand: brand.slug, model: model.slug, generation: generation.slug, revision: revSlug, variant: variantSlug }));
 
 // Aynı motorun diğer makyaj dönemleri ve aynı dönemdeki diğer motorlar (yeniden seçim gerektirmeden geçiş).
 const otherRevisions = revisionsForVariant(generation, variant).filter((r) => r && r.id !== revision?.id);

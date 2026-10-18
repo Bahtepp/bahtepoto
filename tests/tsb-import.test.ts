@@ -774,6 +774,14 @@ describe('güç ayrıştırma: hacim, kasa kodu ve satış etiketi PS değildir'
     assert.equal(p.powerPs, 286);
   });
 
+  test('Audi E-TRON 50 satış kademesi 50 PS olmaz', () => {
+    const p = parseTypeName('Q8 E-TRON 50 QUATTRO');
+    assert.equal(p.powerPs, undefined);
+    assert.equal(p.fuel, 'electric');
+    const real = parseTypeName('RS E-TRON GT (590)');
+    assert.equal(real.powerPs, 590);
+  });
+
   test('Porsche 991 ve 992 güç değildir', () => {
     const turbo = parseTypeName('911 TURBO (991)3.8 (520)');
     assert.equal(turbo.powerPs, 520);

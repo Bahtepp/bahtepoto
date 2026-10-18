@@ -388,6 +388,9 @@ export function parseTypeName(typeName: string): ParsedType {
       // "3.0 50 TDI": 50, Audi'nin satış kademesidir. Güç olarak yazılmaz.
       if (AUDI_BADGE.has(T) && /^(TDI|TFSI|TSI|FSI|ETRON|E-TRON)$/.test(next)) {
         attr = true;
+      } else if (AUDI_BADGE.has(T) && /^(ETRON|E-TRON)$/.test(prev)) {
+        // "Q8 E-TRON 50 QUATTRO": 50 satış kademesidir, 50 PS değildir.
+        attr = true;
       } else {
       // "2.0 ST 250": ST/RS performans modelidir, sonraki sayı güçtür. "ST LINE" donanım paketidir.
       const afterPerformance = /^(ST|RS|RS500)$/.test(prev) && next !== 'LINE';
