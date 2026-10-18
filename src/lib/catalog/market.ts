@@ -1,23 +1,24 @@
 /**
- * Pazar görünümü: katalogda hangi motorların hangi pazar seçiminde gösterileceği.
+ * Kullanıcı kataloğu yalnızca Türkiye.
  * Saf TypeScript (tarayıcı betiği, Astro ve `node --test` ortak kullanır).
  *
- * - Türkiye (varsayılan): yalnızca Türkiye'de satışı doğrulanan (`sold`) veya Türkiye resmi
- *   değer listesinde yer alan (`listed`) motorlar ana listede. İthal (`imported`) ayrı grupta.
- *   Avrupa'da bulunması Türkiye'de satıldığını kanıtlamaz; Türkiye bilgisi olmayan motor
- *   Türkiye listesinde GÖSTERİLMEZ (ama "sunulmadı" da sayılmaz).
- * - Avrupa: pazarları Avrupa veya Avrupa'nın alt pazarı olan motorlar.
- * - Tüm dünya: hepsi.
+ * Ana liste: Türkiye'de satışı doğrulanan (`sold`) veya Türkiye değer listesinde yer alan (`listed`)
+ * motorlar. İthal (`imported`) ana listede değildir. Avrupa veya başka bir pazarda bulunmak
+ * Türkiye'de satıldığını kanıtlamaz; Türkiye kaydı olmayan motor gösterilmez.
+ *
+ * `markets.json` içindeki bölge kimlikleri kasa yılı ve kronik sorun kapsamı için durur.
+ * Kullanıcıya pazar seçtirilmez.
  */
-import type { Market, MarketAvailability, Variant } from './schema';
+import type { MarketAvailability, Variant } from './schema';
 
-export type MarketView = 'tr' | 'eu' | 'world';
-export const MARKET_VIEWS: { id: MarketView; label: string }[] = [
-  { id: 'tr', label: 'Türkiye' },
-  { id: 'eu', label: 'Avrupa' },
-  { id: 'world', label: 'Tüm dünya' },
-];
+/** Tek desteklenen kullanıcı pazarı. */
+export type MarketView = 'tr';
 export const DEFAULT_MARKET_VIEW: MarketView = 'tr';
+
+/** Eski adreslerdeki `market` / `pazar` değeri. Türkiye dışı seçenek artık yok. */
+export function obsoleteMarketParam(value: string | null | undefined): boolean {
+  return value != null && value !== '' && value !== 'tr';
+}
 
 export type MarketGroup = 'primary' | 'imported' | 'hidden';
 
@@ -54,24 +55,16 @@ export function availabilityFor(v: Pick<Variant, 'marketAvailability'>, marketId
 /** Bir pazarın bütün kayıtları (örn. broşürle "sold" ve TSB "listed"); model yılları ve donanımlar birleşik gösterilebilir. */
 export const availabilitiesFor = (v: Pick<Variant, 'marketAvailability'>, marketId: string) => (v.marketAvailability ?? []).filter((a) => a.marketId === marketId);
 
-function inRegion(marketId: string, region: string, markets: Pick<Market, 'id' | 'parentId'>[]): boolean {
-  let cur: string | undefined = marketId;
-  const seen = new Set<string>();
-  while (cur && !seen.has(cur)) {
-    if (cur === region) return true;
-    seen.add(cur);
-    cur = markets.find((m) => m.id === cur)?.parentId;
-  }
-  return false;
-}
-
-export function marketGroup(v: V, view: MarketView, markets: Pick<Market, 'id' | 'parentId'>[]): MarketGroup {
-  if (view === 'world') return 'primary';
-  if (view === 'eu') return v.marketIds.some((m) => inRegion(m, 'eu', markets)) ? 'primary' : 'hidden';
+/** Türkiye ana listesi (`primary`), ithal arşiv (`imported`) veya gösterilmez (`hidden`). */
+export function marketGroup(v: V): MarketGroup {
   const tr = availabilityFor(v, 'tr');
   if (tr?.status === 'sold' || tr?.status === 'listed') return 'primary';
   if (tr?.status === 'imported') return 'imported';
   return 'hidden';
+}
+
+export function isTurkeyPrimary(v: V): boolean {
+  return marketGroup(v) === 'primary';
 }
 
 /** Özel performans modelleri (ST, RS, GTI, R, AMG …): normal motor listesinden ayrı başlıkta. */
@@ -99,12 +92,8 @@ export function performanceBadge(v: Pick<Variant, 'trimName'>): string | undefin
   return name && trimIsPerformance(name) ? name : undefined;
 }
 
-export function marketCounts(variants: V[], markets: Pick<Market, 'id' | 'parentId'>[]): Record<MarketView, number> {
-  return {
-    tr: variants.filter((v) => marketGroup(v, 'tr', markets) === 'primary').length,
-    eu: variants.filter((v) => marketGroup(v, 'eu', markets) === 'primary').length,
-    world: variants.length,
-  };
+export function marketCounts(variants: V[]): { tr: number } {
+  return { tr: variants.filter((v) => marketGroup(v) === 'primary').length };
 }
 
 /** "2011–2017" / "2011, 2013" (model yılları ardışık değilse). */

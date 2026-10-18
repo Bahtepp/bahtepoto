@@ -679,7 +679,6 @@ describe('paylaşılan motor notu, yaklaşık nesil ve BMW ED', () => {
 });
 
 describe('Türkiye pazar filtresi', () => {
-  const markets = [{ id: 'eu' }, { id: 'gb', parentId: 'eu' }, { id: 'tr' }, { id: 'na' }];
   const listed = { marketIds: ['tr'], marketAvailability: [{ marketId: 'tr', status: 'listed' as const, modelYears: [], trims: [], bodyTypes: [], sourceRefs: [], sourceIds: ['x'] }] };
   const euOnly = { marketIds: ['eu'], marketAvailability: [] };
   const gbOnly = { marketIds: ['gb'], marketAvailability: [] };
@@ -687,17 +686,12 @@ describe('Türkiye pazar filtresi', () => {
   const unverifiedTr = { marketIds: ['eu'], marketAvailability: [{ ...listed.marketAvailability[0]!, status: 'unverified' as const }] };
 
   test('Türkiye: yalnızca Türkiye kaydı olan motorlar ana listede', () => {
-    assert.equal(marketGroup(listed, 'tr', markets), 'primary');
-    assert.equal(marketGroup(euOnly, 'tr', markets), 'hidden', 'Avrupa\'da bulunması Türkiye\'de satıldığını kanıtlamaz');
-    assert.equal(marketGroup(unverifiedTr, 'tr', markets), 'hidden');
-    assert.equal(marketGroup(imported, 'tr', markets), 'imported');
-  });
-
-  test('Avrupa: alt pazarlar dahil; Tüm dünya: hepsi', () => {
-    assert.equal(marketGroup(gbOnly, 'eu', markets), 'primary');
-    assert.equal(marketGroup(listed, 'eu', markets), 'hidden');
-    for (const v of [listed, euOnly, imported]) assert.equal(marketGroup(v, 'world', markets), 'primary');
-    assert.deepEqual(marketCounts([listed, euOnly, gbOnly, imported], markets), { tr: 1, eu: 2, world: 4 });
+    assert.equal(marketGroup(listed), 'primary');
+    assert.equal(marketGroup(euOnly), 'hidden', 'Avrupa\'da bulunması Türkiye\'de satıldığını kanıtlamaz');
+    assert.equal(marketGroup(gbOnly), 'hidden');
+    assert.equal(marketGroup(unverifiedTr), 'hidden');
+    assert.equal(marketGroup(imported), 'imported');
+    assert.deepEqual(marketCounts([listed, euOnly, gbOnly, imported]), { tr: 1 });
   });
 
   test('performans modelleri ayrı gruplanır, silinmez', () => {

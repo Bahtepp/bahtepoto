@@ -4,7 +4,9 @@
  * Katalog ve kronik sorun verileri burada yalnızca "okunarak" birleştirilir; birbirine yazılmaz.
  */
 import { getCatalog } from '@/lib/catalog';
-import { formatYearRange, generationLabel } from '@/lib/catalog/format';
+import { MODEL_SLUG_ALIASES, aliasesOnto } from '@/lib/catalog/aliases';
+import { catalogPath, formatYearRange, generationLabel, vehiclePath } from '@/lib/catalog/format';
+import { isTurkeyPrimary, marketGroup } from '@/lib/catalog/market';
 import type { Brand, Engine, Generation, Model, Revision, Variant } from '@/lib/catalog/schema';
 import type { VehicleContext } from '@/lib/issues/match';
 
@@ -29,6 +31,72 @@ export function revisionsForVariant(gen: Generation, v: Variant): (Revision | un
   if (gen.revisions.length === 0) return [undefined];
   if (v.revisionMapping === 'confirmed') return gen.revisions.filter((r) => v.revisionIds.includes(r.id));
   return [...gen.revisions];
+}
+
+/** Kullanıcıya açılan sayfalar: Türkiye ana listesi (satış veya değer listesi). */
+export function isPublicSelection(sel: VehicleSelection): boolean {
+  return isTurkeyPrimary(sel.variant);
+}
+
+function selectionParam(sel: VehicleSelection, modelSlug = sel.model.slug): string {
+  return vehiclePath({
+    brand: sel.brand.slug,
+    model: modelSlug,
+    generation: sel.generation.slug,
+    revision: sel.revision?.slug,
+    variant: sel.variant.slug,
+  }).replace(/^\/arac\/|\/$/g, '');
+}
+
+export interface CatalogRedirect {
+  /** `[...vehicle]` parametresi, başında `/arac` yok. */
+  param: string;
+  /** Site köküne göre hedef. `base` Astro tarafından eklenir. */
+  to: string;
+}
+
+/**
+ * Eski model slug'ları kanonik araca gider.
+ * Türkiye ana listesinde olmayan eski varyant adresi, o modelin seçim ekranına gider.
+ * Hedef kendisi olan veya hâlâ yayımlanan bir sayfayla çakışan kayıt üretilmez.
+ */
+export async function getCatalogRedirects(): Promise<CatalogRedirect[]> {
+  const catalog = await getCatalog();
+  const all = await getVehicleSelections();
+  const publicParams = new Set(all.filter((s) => isPublicSelection(s)).map((s) => selectionParam(s)));
+  const out: CatalogRedirect[] = [];
+  const seen = new Set<string>();
+  const add = (param: string, to: string) => {
+    if (!param || param === to.replace(/^\/arac\/|\/$/g, '') || publicParams.has(param) || seen.has(param)) return;
+    seen.add(param);
+    out.push({ param, to });
+  };
+
+  for (const sel of all) {
+    if (isPublicSelection(sel)) {
+      const canonical = vehiclePath({
+        brand: sel.brand.slug,
+        model: sel.model.slug,
+        generation: sel.generation.slug,
+        revision: sel.revision?.slug,
+        variant: sel.variant.slug,
+      });
+      for (const alias of aliasesOnto(sel.brand.slug, sel.model.slug)) {
+        add(selectionParam(sel, alias.from), canonical);
+      }
+      continue;
+    }
+    if (marketGroup(sel.variant) === 'hidden' || marketGroup(sel.variant) === 'imported') {
+      add(selectionParam(sel), catalogPath({ brand: sel.brand.slug, model: sel.model.slug }));
+    }
+  }
+
+  for (const alias of MODEL_SLUG_ALIASES) {
+    const target = catalog.models.find((m) => m.slug === alias.to && catalog.brandById.get(m.brandId)?.slug === alias.brand);
+    if (!target) continue;
+    add(`${alias.brand}/${alias.from}`, catalogPath({ brand: alias.brand, model: alias.to }));
+  }
+  return out;
 }
 
 export async function getVehicleSelections(): Promise<VehicleSelection[]> {

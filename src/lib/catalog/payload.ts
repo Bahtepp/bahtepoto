@@ -18,7 +18,6 @@ import type {
   Source,
   Variant,
 } from './schema';
-import type { MarketView } from './market';
 
 export type BrandSummary = Pick<Brand, 'id' | 'slug' | 'name' | 'status' | 'generationNaming'> & {
   /** Türkiye'de kaydı olan model sayısı. */
@@ -35,8 +34,8 @@ export type GenerationSummary = Pick<
 > & {
   revisions: RevisionSummary[];
   variantCount: number;
-  /** Pazar görünümüne göre listelenen motor sayısı (bkz. market.ts). */
-  marketCounts: Record<MarketView, number>;
+  /** Türkiye ana listesindeki varyant sayısı. */
+  marketCounts: { tr: number };
   /** Varyantların Türkiye listesindeki model yılları (nesli belirlenmemiş araçlarda yıl seçimi için). */
   modelYears: number[];
 };

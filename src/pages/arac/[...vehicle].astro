@@ -16,35 +16,45 @@ import {
   vehiclePath,
   withBase,
 } from '@/lib/catalog/format';
-import { performanceBadge } from '@/lib/catalog/market';
+import { isTurkeyPrimary, performanceBadge } from '@/lib/catalog/market';
 import { engineGroupIdentity } from '@/lib/catalog/selector';
 import { getIssueData } from '@/lib/issues';
 import { groupForDisplay } from '@/lib/issues/match';
 import '@/styles/vehicle.css';
 import { getCatalog } from '@/lib/catalog';
-import { getLabeler, getVehicleSelections, revisionsForVariant, toVehicleContext, type VehicleSelection } from '@/lib/vehicle';
+import { getCatalogRedirects, getLabeler, getVehicleSelections, isPublicSelection, revisionsForVariant, toVehicleContext, type VehicleSelection } from '@/lib/vehicle';
 
 export async function getStaticPaths() {
-  const selections = await getVehicleSelections();
-  return selections.map((sel) => ({
-    params: {
-      vehicle: vehiclePath({
-        brand: sel.brand.slug,
-        model: sel.model.slug,
-        generation: sel.generation.slug,
-        revision: sel.revision?.slug,
-        variant: sel.variant.slug,
-      }).replace(/^\/arac\/|\/$/g, ''),
-    },
-    props: { sel },
-  }));
+  const selections = (await getVehicleSelections()).filter((sel) => isPublicSelection(sel));
+  const redirects = await getCatalogRedirects();
+  return [
+    ...selections.map((sel) => ({
+      params: {
+        vehicle: vehiclePath({
+          brand: sel.brand.slug,
+          model: sel.model.slug,
+          generation: sel.generation.slug,
+          revision: sel.revision?.slug,
+          variant: sel.variant.slug,
+        }).replace(/^\/arac\/|\/$/g, ''),
+      },
+      props: { sel },
+    })),
+    ...redirects.map((r) => ({
+      params: { vehicle: r.param },
+      props: { redirectTo: r.to },
+    })),
+  ];
 }
 
 interface Props {
-  sel: VehicleSelection;
+  sel?: VehicleSelection;
+  redirectTo?: string;
 }
 
-const { sel } = Astro.props;
+const { sel, redirectTo } = Astro.props;
+if (redirectTo) return Astro.redirect(redirectTo);
+if (!sel) throw new Error('Araç sayfası verisi yok');
 const { brand, model, generation, revision, variant, engine, revisionMappingVerified } = sel;
 const catalog = await getCatalog();
 const label = await getLabeler();
@@ -64,7 +74,7 @@ const pathFor = (revSlug: string | undefined, variantSlug: string) =>
 // Aynı motorun diğer makyaj dönemleri ve aynı dönemdeki diğer motorlar (yeniden seçim gerektirmeden geçiş).
 const otherRevisions = revisionsForVariant(generation, variant).filter((r) => r && r.id !== revision?.id);
 const siblings = generation.variants
-  .filter((v) => v.id !== variant.id && revisionsForVariant(generation, v).some((r) => r?.id === revision?.id))
+  .filter((v) => v.id !== variant.id && isTurkeyPrimary(v) && revisionsForVariant(generation, v).some((r) => r?.id === revision?.id))
   .map((v) => ({ v, e: catalog.engineById.get(v.engineId)! }))
   .sort((a, b) => a.e.name.localeCompare(b.e.name, 'tr', { numeric: true }));
 

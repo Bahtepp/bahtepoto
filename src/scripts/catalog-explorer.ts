@@ -5,6 +5,7 @@
  */
 import type { BrandPayload, BrandSummary, ModelPayload, ModelSummary } from '@/lib/catalog/payload';
 import type { FuelType } from '@/lib/catalog/schema';
+import { canonicalModelSlug } from '@/lib/catalog/aliases';
 import { FUEL_LABELS, vehiclePath, withBase, normalizeSearch } from '@/lib/catalog/format';
 import { engineGroupsForModel, type ChassisOption, type EngineGroupView } from '@/lib/catalog/selector';
 import { searchCatalog, type SearchHit, type SearchIndex } from '@/lib/catalog/search';
@@ -104,12 +105,36 @@ export function initCatalogExplorer(root: HTMLElement) {
 
   const readUrl = (): Selection => {
     const q = new URLSearchParams(location.search);
+    const brand = q.get('marka') ?? undefined;
+    const rawModel = q.get('model') ?? undefined;
     return {
-      brand: q.get('marka') ?? undefined,
-      model: q.get('model') ?? undefined,
+      brand,
+      model: brand && rawModel ? canonicalModelSlug(brand, rawModel) : rawModel,
       engine: q.get('motor') ?? undefined,
       gen: q.get('nesil') ?? undefined,
     };
+  };
+
+  const stripObsoleteQuery = () => {
+    const q = new URLSearchParams(location.search);
+    let changed = false;
+    if (q.has('market') || q.has('pazar')) {
+      q.delete('market');
+      q.delete('pazar');
+      changed = true;
+    }
+    const brand = q.get('marka');
+    const model = q.get('model');
+    if (brand && model) {
+      const canon = canonicalModelSlug(brand, model);
+      if (canon !== model) {
+        q.set('model', canon);
+        changed = true;
+      }
+    }
+    if (!changed) return;
+    const url = `${location.pathname}${q.size ? `?${q}` : ''}`;
+    history.replaceState(null, '', url);
   };
 
   const writeUrl = (push: boolean) => {
@@ -337,7 +362,7 @@ export function initCatalogExplorer(root: HTMLElement) {
       groups = [];
       return;
     }
-    groups = engineGroupsForModel(model.generations, modelData.variantsByGeneration, modelData.engines, brandData.markets, 'tr');
+    groups = engineGroupsForModel(model.generations, modelData.variantsByGeneration, modelData.engines);
   }
 
   async function selectBrand(slug: string, opts: { push?: boolean; moveStep?: boolean } = {}) {
@@ -463,5 +488,6 @@ export function initCatalogExplorer(root: HTMLElement) {
   };
 
   window.addEventListener('popstate', () => void restore());
+  stripObsoleteQuery();
   void restore();
 }

@@ -6,7 +6,9 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { searchCatalog, type SearchIndex } from '../src/lib/catalog/search.ts';
 import { normalizeSearch } from '../src/lib/catalog/format.ts';
-import { brandTier, isPrimaryBrand } from '../src/lib/catalog/visibility.ts';
+import { brandTier, isHiddenModel, isPrimaryBrand } from '../src/lib/catalog/visibility.ts';
+import { prefixBase } from '../src/lib/catalog/format.ts';
+import { canonicalModelSlug } from '../src/lib/catalog/aliases.ts';
 import { performanceBadge } from '../src/lib/catalog/market.ts';
 
 const index: SearchIndex = {
@@ -21,6 +23,7 @@ const index: SearchIndex = {
     { brand: 'fiat', brandName: 'Fiat', slug: 'egea', name: 'Egea' },
     { brand: 'honda', brandName: 'Honda', slug: 'civic', name: 'Civic' },
     { brand: 'nissan', brandName: 'Nissan', slug: 'qashqai', name: 'Qashqai' },
+    { brand: 'volvo', brandName: 'Volvo', slug: 'xc90', name: 'XC90', aliases: ['XC-90', 'XC 90'] },
   ],
   engines: [
     { brand: 'bmw', brandName: 'BMW', model: '3-serisi', modelName: '3 Serisi', slug: '320d-diesel', label: '320d' },
@@ -40,6 +43,8 @@ describe('global arama', () => {
     assert.equal(searchCatalog(index, 'qashqai')[0]?.title, 'Nissan Qashqai');
     assert.equal(searchCatalog(index, 'egea')[0]?.title, 'Fiat Egea');
     assert.equal(searchCatalog(index, 'civic')[0]?.title, 'Honda Civic');
+    assert.equal(searchCatalog(index, 'XC 90')[0]?.model, 'xc90');
+    assert.equal(searchCatalog(index, 'xc-90')[0]?.model, 'xc90');
   });
 
   test('Türkçe karakter, büyük harf ve tire farkı', () => {
@@ -68,6 +73,10 @@ describe('global arama', () => {
     const review = brands.filter((b) => brandTier(b.slug) === 'review');
     assert.ok(review.length > 0);
     assert.ok(brands.some((b) => b.slug === review[0]!.slug));
+    assert.equal(isHiddenModel('nissan', 'rogue'), true);
+    assert.equal(canonicalModelSlug('volvo', 'xc-90'), 'xc90');
+    assert.equal(prefixBase('/bahtepoto/', '/?marka=volvo&model=xc90'), '/bahtepoto/?marka=volvo&model=xc90');
+    assert.equal(prefixBase('/', '/arac/volvo/xc90/'), '/arac/volvo/xc90/');
   });
 
   test('motor kartı kaynak metni göstermez; kronik motor kimlikleri durur', () => {

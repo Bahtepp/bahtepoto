@@ -115,11 +115,18 @@ export function catalogPath(p: { brand: string; model?: string; generation?: str
   return `/?${q}`;
 }
 
+/** `base` önekini yola ekler. GitHub Pages `/bahtepoto/` alt dizinini buradan alır. */
+export function prefixBase(base: string, path: string): string {
+  const prefix = base.endsWith('/') ? base.slice(0, -1) : base;
+  const normalized = path.startsWith('/') ? path : `/${path}`;
+  if (prefix === '' || prefix === '/') return normalized;
+  return `${prefix}${normalized}`;
+}
+
 /** GitHub Pages alt dizini dahil mutlak site yolu. */
 export function withBase(path: string): string {
   const base = import.meta.env.BASE_URL ?? '/';
-  const prefix = base.endsWith('/') ? base.slice(0, -1) : base;
-  return `${prefix}${path.startsWith('/') ? path : `/${path}`}`;
+  return prefixBase(base, path);
 }
 
 /** Türkçe büyük/küçük harf duyarsız arama için normalleştirme. */

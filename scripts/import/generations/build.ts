@@ -7,6 +7,8 @@
  *   açıklamasız satır(lar), o da yoksa bütün satırların en geniş aralığı ("yaklaşık", dünya geneli).
  * - Kasa kodu yalnızca başlıkta veya bilgi kutusunda yazıyorsa girilir; makyaj dönemi üretilmez.
  * - Elle girilmiş (TSB ve Wikipedia dışı kaynaklı) nesli olan modellere dokunulmaz.
+ * - Bu aktarma yalnızca kasa yılı ve kodu yazar. Motor varyantı üretmez.
+ *   Türkiye motoru TSB veya elle kayıttan gelir; yabancı pazar motoru buradan eklenmez.
  * - Yeniden çalıştırma: önceki Wikipedia nesilleri (kaynağı yalnızca `wpgen-…`) temizlenip yeniden kurulur.
  */
 import type { Json, RawCatalog } from '../lib/io.ts';
@@ -339,7 +341,7 @@ export function applyGenerations(cat: RawCatalog, staged: ModelGenerations[], to
         updatedAt: today,
         notes: `Üretim yılları İngilizce Wikipedia "${g.page}" bilgi kutusundan${g.productionNote ? ` (${g.productionNote})` : ''}${g.approximate ? '; satırlar farklı pazarlara ait, en geniş aralık gösteriliyor' : ''}. Makyaj dönemleri girilmedi.`,
         revisions: [],
-        variants: [],
+        variants: [], // Kasa kaydı. Motor varyantı bu aktarmayla üretilmez.
       });
       added++;
       any = true;
