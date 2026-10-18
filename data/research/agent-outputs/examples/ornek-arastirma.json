@@ -1,0 +1,40 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "ornek",
+  "brands": ["Volkswagen"],
+  "models": ["Golf"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "ornek-teknik-metin",
+      "title": "Örnek teknik metin",
+      "url": "https://example.com/bahtepoto-ornek-kronik",
+      "kind": "technical-publication",
+      "publisher": "Örnek Yayın",
+      "reviewed": true,
+      "reviewMethod": "Bu dosya biçim örneğidir; gerçek bir arıza anlatmaz.",
+      "note": "Canlı kataloğa aktarılmaz."
+    }
+  ],
+  "issues": [
+    {
+      "id": "ornek-golf-kaydi",
+      "example": true,
+      "title": "Örnek sorun başlığı",
+      "summary": "Bu cümle yalnızca JSON biçimini gösterir. Gerçek bir araç sorununu anlatmaz.",
+      "category": "cooling",
+      "frequency": "unknown",
+      "frequencyRationale": "Örnek dosyada yaygınlık değerlendirilmedi.",
+      "vehicles": [
+        {
+          "brand": "Volkswagen",
+          "model": "Golf",
+          "generation": "Golf VII",
+          "engines": [{ "name": "1.4 TSI 122 PS" }]
+        }
+      ],
+      "sourceIds": ["ornek-teknik-metin"],
+      "uncertainties": "Katalog kimliği yazılmaz. Nesil bilinmiyorsa generation boş bırakılır."
+    }
+  ]
+}

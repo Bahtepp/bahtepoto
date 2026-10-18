@@ -242,6 +242,17 @@ export const issueSchema = z.object({
    * Az kaynak otomatik olarak Düşük demek değildir. Eski kayıtlarda alan yoktur.
    */
   frequencyRating: z.enum(['high', 'medium', 'low', 'unknown']).optional(),
+  /**
+   * Araştırmacı JSON'undan aktarıldıysa kaynak izi. Aynı dosya yeniden aktarılınca
+   * ikinci kayıt açılmaz. Eski kayıtlarda alan yoktur.
+   */
+  researchRef: z
+    .object({
+      schema: z.literal('bahtepoto-research-v1'),
+      agent: z.string().min(1),
+      id: idSchema,
+    })
+    .optional(),
   claims: z.array(claimSchema).min(1),
   status: issueStatusSchema,
   updatedAt: isoDateSchema,
