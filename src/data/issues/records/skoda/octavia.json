@@ -1,0 +1,406 @@
+[
+  {
+    "id": "skoda-ea111-triger-zinciri",
+    "slug": "skoda-ea111-triger-zinciri",
+    "brandId": "skoda",
+    "kind": "chronic",
+    "category": "engine",
+    "title": "Triger zincirinde uzama",
+    "summary": "Bazı erken 1.4 TSI motorlarda triger zincirinin uzadığı ve soğukta tıkırtı yaptığı bildiriliyor. Kayışlı sonraki 1.4 TSI motorlar bu kaydın dışındadır.",
+    "symptoms": [
+      "Bazı erken 1.4 TSI motorlarda triger zincirinin uzadığı ve soğukta tıkırtı yaptığı bildiriliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "skoda-octavia"
+        ],
+        "generationIds": [
+          "skoda-octavia-1z"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "skoda-14-tsi-122"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "skoda-fabia"
+        ],
+        "generationIds": [
+          "skoda-fabia-5j"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "skoda-14-tsi-180"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "repeated-reports",
+      "note": "Aynı EA111 zincir notları Škoda'nın bu nesildeki 1.4 TSI motorlarını da kapsıyor. Ayrı marka kaydı açıldı çünkü katalog sorunları markaya göre süzülüyor.",
+      "sourceIds": [
+        "arastirma-cursor-bilstein-ea111-zincir",
+        "arastirma-cursor-autobild-ea111-zincir"
+      ]
+    },
+    "frequencyRating": "high",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "cursor",
+      "id": "skoda-ea111-triger-zinciri"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-cursor-bilstein-ea111-zincir",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-cursor-autobild-ea111-zincir",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-18",
+    "notes": "Aynı EA111 zincir notları Škoda'nın bu nesildeki 1.4 TSI motorlarını da kapsıyor. Ayrı marka kaydı açıldı çünkü katalog sorunları markaya göre süzülüyor. Fabia'da yalnızca 180 PS erken motor alındı. Octavia Mk3 kayışlı motordur.",
+    "demo": false
+  },
+  {
+    "id": "skoda-ea211-devirdaim-govdesi",
+    "slug": "skoda-ea211-devirdaim-govdesi",
+    "brandId": "skoda",
+    "kind": "chronic",
+    "category": "cooling",
+    "title": "Devirdaim gövdesinden su kaçağı",
+    "summary": "Bazı 1.4 TSI motorlarda plastik devirdaim ve termostat gövdesinden su kaçırdığı bildiriliyor. Kaçak her araçta görülmeyebilir.",
+    "symptoms": [
+      "Bazı 1.4 TSI motorlarda plastik devirdaim ve termostat gövdesinden su kaçırdığı bildiriliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "skoda-octavia"
+        ],
+        "generationIds": [
+          "skoda-octavia-5e"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "skoda-14-tsi-140",
+          "skoda-14-tsi-150"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "skoda-superb"
+        ],
+        "generationIds": [
+          "skoda-superb-b8-3v"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "skoda-14-tsi-125",
+          "skoda-14-tsi-act-150"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "repeated-reports",
+      "note": "EA211 gövde notları Octavia Mk3 ve Superb'in bu 1.4 motorlarına uygulanabildi. Sıklık sayılmadığı için orta bırakıldı.",
+      "sourceIds": [
+        "arastirma-cursor-importcar-ea211-pompa",
+        "arastirma-cursor-seatcupra-ea211-pompa"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "cursor",
+      "id": "skoda-ea211-devirdaim-govdesi"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-cursor-importcar-ea211-pompa",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-cursor-seatcupra-ea211-pompa",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-18",
+    "notes": "EA211 gövde notları Octavia Mk3 ve Superb'in bu 1.4 motorlarına uygulanabildi. Sıklık sayılmadığı için orta bırakıldı. Octavia Mk2 zincirli motordur. Octavia Mk4 eHybrid alınmadı.",
+    "demo": false
+  },
+  {
+    "id": "skoda-dq200-kavrama",
+    "slug": "skoda-dq200-kavrama",
+    "brandId": "skoda",
+    "kind": "chronic",
+    "category": "transmission",
+    "title": "DSG kavrama sarsıntısı",
+    "summary": "Bazı kuru kavramalı 7 ileri DSG kutularında kalkışta sarsıntı bildiriliyor. Islak kavramalı DSG kutuları bu kaydın dışındadır.",
+    "symptoms": [
+      "Bazı kuru kavramalı 7 ileri DSG kutularında kalkışta sarsıntı bildiriliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "skoda-octavia"
+        ],
+        "generationIds": [
+          "skoda-octavia-1z"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "skoda-14-tsi-122"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [
+          {
+            "type": "dual-clutch",
+            "name": "DSG"
+          }
+        ],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "skoda-octavia"
+        ],
+        "generationIds": [
+          "skoda-octavia-5e"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "skoda-10-tsi-115",
+          "skoda-12-tsi-105",
+          "skoda-12-tsi-110",
+          "skoda-14-tsi-140",
+          "skoda-14-tsi-150"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [
+          {
+            "type": "dual-clutch",
+            "name": "DSG"
+          }
+        ],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "skoda-octavia"
+        ],
+        "generationIds": [
+          "skoda-octavia-4-nesil"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "skoda-10-tsi"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [
+          {
+            "type": "dual-clutch",
+            "name": "DSG"
+          }
+        ],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "skoda-fabia"
+        ],
+        "generationIds": [
+          "skoda-fabia-5j"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "skoda-12-tsi-105"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [
+          {
+            "type": "dual-clutch",
+            "name": "DSG"
+          }
+        ],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "skoda-fabia"
+        ],
+        "generationIds": [
+          "skoda-fabia-3-nesil"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "skoda-10-tsi-95",
+          "skoda-10-tsi-110",
+          "skoda-12-tsi-110"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [
+          {
+            "type": "dual-clutch",
+            "name": "DSG"
+          }
+        ],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "skoda-fabia"
+        ],
+        "generationIds": [
+          "skoda-fabia-4-nesil"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "skoda-10-tsi-110",
+          "skoda-10-tsi-115"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [
+          {
+            "type": "dual-clutch",
+            "name": "DSG"
+          }
+        ],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "skoda-superb"
+        ],
+        "generationIds": [
+          "skoda-superb-b8-3v"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "skoda-14-tsi-act-150"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [
+          {
+            "type": "dual-clutch",
+            "name": "DSG"
+          }
+        ],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "repeated-reports",
+      "note": "İki teknik rehber kuru 7 ileri DQ200 sarsıntısını Octavia ve Fabia dahil küçük motorlu araçlarda anlatıyor. Katalogda DSG adı olmayan satırlar alınmadı.",
+      "sourceIds": [
+        "arastirma-cursor-vagpulse-dq200",
+        "arastirma-cursor-findservice-dq200"
+      ]
+    },
+    "frequencyRating": "high",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "cursor",
+      "id": "skoda-dq200-kavrama"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-cursor-vagpulse-dq200",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-cursor-findservice-dq200",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-18",
+    "notes": "İki teknik rehber kuru 7 ileri DQ200 sarsıntısını Octavia ve Fabia dahil küçük motorlu araçlarda anlatıyor. Katalogda DSG adı olmayan satırlar alınmadı. 180 PS Fabia ve eHybrid kutuları alınmadı. Adı yalnızca 1.6 TDI olan satır, aynı addaki motor ailesiyle çakıştığı için alınmadı. 1.5 TSI ayrılmadığı için yok. Mevcut Volkswagen Golf ve Passat kaydı yeniden açılmadı.",
+    "demo": false
+  }
+]

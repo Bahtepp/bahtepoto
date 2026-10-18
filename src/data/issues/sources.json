@@ -862,5 +862,101 @@
     "language": "tr",
     "notes": "PB/PBT (2008–2014) i20 için iç kapı tutamacı boyasının soyulmasının forumda bilinen bir konu olduğu yazılmış. Tek topluluk; resmi üretici kusuru olarak kaydedilmedi. Sonraki i20 nesillerine taşınmadı.",
     "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Forum etiket sayfasındaki konu özeti okundu" }
+  },
+  {
+    "id": "arastirma-cursor-bilstein-ea111-zincir",
+    "kind": "technical-publication",
+    "title": "EA111 1.4 TSI triger zinciri",
+    "url": "https://cdn.partsfinder.bilsteingroup.com/pf-document/FTEC138_GB.PDF",
+    "publisher": "Bilstein Group",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "1.4 TSI EA111 zincirinin uzamasını anlatır. 2015 sonrası kayışlı EA211 motoru bu metnin konusu değildir.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "PDF metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-cursor-autobild-ea111-zincir",
+    "kind": "technical-publication",
+    "title": "Auto Bild: 1.4 TSI zincir notu",
+    "url": "https://www.motor-talk.de/forum/aktion/Attachment.html?attachmentId=741443",
+    "publisher": "Auto Bild",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "VW'nin zincir üretim hatasını teknik ürün bilgisiyle ele aldığını aktarır. TPI belgesinin kendisi okunmadı.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Forum ekindeki Auto Bild metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-cursor-importcar-ea211-pompa",
+    "kind": "technical-publication",
+    "title": "EA211 1.4 TSI devirdaim ve termostat",
+    "url": "https://www.import-car.com/volkswagen-1-4l-tsi-maintenance-and-inspection-tips/",
+    "publisher": "ImportCar",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Plastik termostat gövdesinin yağla temas edince kaçırabildiğini anlatır.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Makale metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-cursor-seatcupra-ea211-pompa",
+    "kind": "expert-service",
+    "title": "EA211 soğutma pompası contası",
+    "url": "https://www.seatcupra.net/forums/attachments/1-4-tsi-ea211-coolant-pump-pdf.19689/",
+    "publisher": "SEAT Cupra teknik ek",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Pompa contasının kaçırmasının oldukça görüldüğünü ve gövdenin eğilebildiğini yazar. Onarım adımları kullanıcıya aktarılmaz.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Ekli soğutma sistemi metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-cursor-vagpulse-dq200",
+    "kind": "technical-publication",
+    "title": "DQ200 kuru kavrama DSG",
+    "url": "https://vagpulse.com/guides/dq200-7-speed-dry-dsg-problems",
+    "publisher": "VAG Pulse",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "DQ200'ü 6 ileri ıslak DQ250 ve sonradan gelen ıslak 7 ileri kutulardan ayırır. 1.5 TSI ve dört çeker kutuları kesin DQ200 saymaz.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Rehber metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-cursor-findservice-dq200",
+    "kind": "technical-publication",
+    "title": "DQ200 ve diğer DSG kutuları",
+    "url": "https://www.findservicehistory.com/common-faults-check/dsg-gearbox-problems",
+    "publisher": "Find Service History",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Kuru 7 ileri kutuyu Golf, Polo, Ibiza, Leon, Fabia ve Octavia ile anar. 6 ileri ve ıslak kutuları hariç tutar.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa metni okundu."
+    },
+    "demo": false
   }
 ]
