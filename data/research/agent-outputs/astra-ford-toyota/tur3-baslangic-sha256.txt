@@ -1,0 +1,15 @@
+{
+  "ford-diger.json": "bd7a60c06e48a56bf4477c490858ea25a4251cd235a13b0c581b1fb1aac4bd00",
+  "ford-fiesta.json": "b9d228ccdea0bb9cf4bfffbfe19ff3366d97e7a3b4fe36058740661078ca83a3",
+  "ford-focus-fiesta-tur2.json": "e2aa4ae2ef6d7e9645045b758982f496af2ff076a7402cbde87ca854acbbd7b1",
+  "ford-focus.json": "5692092dd4278183c3ea7fbb868d97a99901e6aac6f951e2bbb5273a72cb49e6",
+  "ford-kuga-mondeo-tur2.json": "63bf63faf64fde11d160189b5f732c375357040d4ec020eaf9c04260f78532fc",
+  "ford-kuga-mondeo.json": "7e6f7318554ca5c1c8066d76942e7a1df6aabd123e3f7d743cf8d45f45a19c5d",
+  "ford-ticari-modeller.json": "a2d07a00b5ceffb022013071d693ba323bbd2aaf507de0a49910f5e76dc4f7d4",
+  "toyota-corolla-auris.json": "5ae7e72f917ac4e5fce56452cb2a3c08c93490da1fa671724a545b02e9e6ea4b",
+  "toyota-diger-tur2.json": "20ee941c4aec571008b532ed6dc3937c2f2778bfa2889c39c3bf8f588e5a261f",
+  "toyota-diger.json": "82375130109adba2f2f5dffe5c5789b21f7a6ca291e2f0dc9e072ee71cdc8bef",
+  "toyota-rav4-tur2.json": "59f992e60314e8c94e52e391812c791ce0bdc853e5a21190529512c7b98d2405",
+  "toyota-rav4.json": "6ee523fa98f66a3cd9f30ac8c3fb30e858ff4d4073c0947068079df3ceb9358c",
+  "toyota-yaris-chr.json": "2f716b671801d3e5bc08b9fddda488a727c406a130a2ccd7818204a98d0fd131"
+}

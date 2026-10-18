@@ -1,0 +1,99 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-ford-toyota",
+  "brands": [
+    "Ford"
+  ],
+  "models": [
+    "Focus",
+    "Fiesta"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "ecu-focus-panel-tur2",
+      "title": "Focus gösterge paneli arızaları",
+      "url": "https://www.ecutesting.com/common-faults/ford/focus-dashdashboard-instrument-cluster/",
+      "publisher": "ECU Testing",
+      "kind": "expert-service",
+      "reviewed": true,
+      "reviewMethod": "18.10.2026: sayfanın ilgili arıza ve araç kapsamı metni açılarak okundu."
+    },
+    {
+      "id": "ecu-sim22-tur2",
+      "title": "SIM22 EAC Fail arızası",
+      "url": "https://ecu.eu/eac-fail-at-sim22-engine-control-units-2s6a-12a650-se-110.htm",
+      "publisher": "ecu.eu",
+      "kind": "expert-service",
+      "reviewed": true,
+      "reviewMethod": "18.10.2026: sayfanın ilgili arıza ve araç kapsamı metni açılarak okundu."
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-ft2-focus-gosterge",
+      "title": "Gösterge panelinde kesinti ve ekran kaybı",
+      "summary": "Gösterge paneli arızası ibrelerin veya ekranın çalışmamasına yol açabilir. Bazı panel tiplerinde araç çalışmayabilir veya seyir sırasında stop edebilir.",
+      "category": "electrical",
+      "frequency": "unknown",
+      "frequencyRationale": "Teknik kaynak arızayı tanımlar; Türkiye araç parkında sıklık ve bağımsız tekrar ölçümü bulunmadığından yaygınlık belirlenmedi.",
+      "vehicles": [
+        {
+          "brand": "Ford",
+          "model": "Focus",
+          "generation": "Focus Mk1",
+          "years": {
+            "from": 1998,
+            "to": 2004
+          }
+        },
+        {
+          "brand": "Ford",
+          "model": "Focus",
+          "generation": "Focus Mk2",
+          "years": {
+            "from": 2004,
+            "to": 2010
+          }
+        }
+      ],
+      "sourceIds": [
+        "ecu-focus-panel-tur2"
+      ],
+      "uncertainties": "Panel parça numarası ve Türkiye donanımı doğrulanmadan otomatik aktarılmaz. Mk2 kaynaktaki parça listesi 2010'da biter; 2011 zorla eklenmedi. Motor bağımsızlığı doğrulanmadı. Hella'nın 1.6i 2006–2010 belgesindeki A sütunu tesisatı farklı olası nedendir; panel teşhisi için tesisat dışlanmalıdır. Mevcut marş/akü kayıtlarından mekanizma farklıdır; bütün motorlara veya 42 gizli Focus varyantına eşleştirilmedi."
+    },
+    {
+      "id": "astra-ft2-fiesta-sim22",
+      "title": "EAC Fail uyarısı ve gaz tepkisinin kaybı",
+      "summary": "Motor kontrol ünitesindeki arıza EAC Fail uyarısıyla gücün kısıtlanmasına yol açabilir. Kontağı yeniden açınca geçen sorun tekrar ortaya çıkabilir.",
+      "category": "electrical",
+      "frequency": "unknown",
+      "frequencyRationale": "Teknik kaynak arızayı tanımlar; Türkiye araç parkında sıklık ve bağımsız tekrar ölçümü bulunmadığından yaygınlık belirlenmedi.",
+      "vehicles": [
+        {
+          "brand": "Ford",
+          "model": "Fiesta",
+          "years": {
+            "from": 2002,
+            "to": 2004
+          },
+          "engines": [
+            {
+              "name": "1.25 Duratec-16V"
+            },
+            {
+              "name": "1.4 Duratec-16V"
+            },
+            {
+              "name": "1.6 Duratec-16V"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "ecu-sim22-tur2"
+      ],
+      "uncertainties": "Yalnız SIM22 ve uyumlu ünite, örnek 2S6A-12A650-SE/S118107002F. Kaynak 2001–2004 ortasını verir; 2002–2004 Fiesta araştırma kesişimi seçildi. Kesin üretim ayı/parça doğrulanmalı. Gaz kelebeği, pedal sensörü ve tesisat elenmeden ECU teşhisi konmaz. Kaynağın atıf yaptığı Ford 76/2003 ve 75/2007 belgeleri bağımsız okunmadı. Nesil numaralandırması farklı olduğundan generation girilmedi."
+    }
+  ]
+}

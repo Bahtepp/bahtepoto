@@ -1,0 +1,85 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-ford-toyota",
+  "brands": [
+    "Toyota"
+  ],
+  "models": [
+    "Yaris",
+    "C-HR"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "toyota-yaris-eps-2013",
+      "title": "Yaris / Verso-S elektrikli direksiyon geri çağırması",
+      "url": "https://media.toyota.co.uk/toyota-announces-recall-of-some-yaris-and-verso-s-models-for-power-steering-correction/",
+      "kind": "official-recall",
+      "publisher": "Toyota GB",
+      "reviewed": true,
+      "reviewMethod": "2026-10-18: bağlantı açılarak ilgili arıza metni, kapsam ve kısıtlar okundu."
+    },
+    {
+      "id": "toyota-hv-harness-2018",
+      "title": "Prius ve C-HR HV motor kablo demeti yabancı kampanya raporu",
+      "url": "https://static.nhtsa.gov/odi/frcl/2018/FRCL-18F156-2391.pdf",
+      "kind": "official-recall",
+      "publisher": "Toyota Motor Corporation",
+      "reviewed": true,
+      "reviewMethod": "2026-10-18: bağlantı açılarak ilgili arıza metni, kapsam ve kısıtlar okundu."
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-ft-yaris-eps-role",
+      "title": "Elektrikli direksiyon desteğinin kesilmesi",
+      "summary": "Direksiyon kontrol ünitesindeki röle kısa devresi elektrikli desteği kesebilir. Direksiyon özellikle düşük hızda ağırlaşabilir; sesli ve ışıklı uyarı oluşabilir.",
+      "category": "steering",
+      "frequency": "unknown",
+      "frequencyRationale": "Kaynak arızayı destekliyor; Türkiye araç parkında oran ve teknik alt sürümlere göre karşılaştırılabilir sıklık verisi bulunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Toyota",
+          "model": "Yaris",
+          "generation": "Yaris XP130",
+          "years": {
+            "from": 2011,
+            "to": 2012
+          }
+        }
+      ],
+      "sourceIds": [
+        "toyota-yaris-eps-2013"
+      ],
+      "uncertainties": "Toyota GB üçüncü nesli ve Kasım 2010–Mart 2012 üretimini belirtir; yerel nesil kesişimi 2011–2012 tutuldu. Bütün bu yıllar etkilenmiş değildir: VIN ve EPS ECU parçası doğrulanmalıdır. Türkiye kampanyası veya tüm motorları kapsama kanıtı değildir. Verso-S, Verso ile aynı model sayılmadı."
+    },
+    {
+      "id": "astra-ft-chr-hv-kablo",
+      "title": "Hibrit kontrol ünitesi kablosunda aşınma",
+      "summary": "Hibrit kontrol ünitesine bağlı kablonun yalıtımı kapakla sürtünerek aşınabilir. Kısa devre, aşırı ısınma ve yangın riski oluşabilir.",
+      "category": "electrical",
+      "frequency": "unknown",
+      "frequencyRationale": "Kaynak arızayı destekliyor; Türkiye araç parkında oran ve teknik alt sürümlere göre karşılaştırılabilir sıklık verisi bulunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Toyota",
+          "model": "C-HR",
+          "generation": "C-HR 1. nesil (AX10/AX50)",
+          "years": {
+            "from": 2016,
+            "to": 2018
+          },
+          "engines": [
+            {
+              "name": "1.8 Hybrid"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "toyota-hv-harness-2018"
+      ],
+      "uncertainties": "Belge Haziran 2015–Mayıs 2018 aralığını üç modelin ortak dönemi olarak verir; C-HR'ye 2015 atanmamıştır. 2016–2018 araştırma aralığı yerel nesille kesişimdir, kesin C-HR üretim aralığı/VIN değildir. Türkiye kablo parçası ve kampanya uygunluğu kontrol edilmeden uygulanamaz. Benzinli 1.2 kapsam dışı. Belge ABD benzinli C-HR'yi açıkça dışlar; Prius kaydı bu dosyada çoğaltılmadı."
+    }
+  ]
+}

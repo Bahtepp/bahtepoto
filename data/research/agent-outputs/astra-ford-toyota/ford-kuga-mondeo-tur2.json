@@ -1,0 +1,47 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-ford-toyota",
+  "brands": [
+    "Ford"
+  ],
+  "models": [
+    "Mondeo"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "hella-mondeo-klima-tur2",
+      "title": "Mondeo klima devreye girmemesi",
+      "url": "https://www.hella.com/techworld/uk/bi/pdf/Ford-Mondeo-Failure-of-the-air-conditioning-system/Ford-Mondeo-Failure-of-the-air-conditioning-system.pdf",
+      "publisher": "HELLA",
+      "kind": "technical-publication",
+      "reviewed": true,
+      "reviewMethod": "18.10.2026: sayfanın ilgili arıza ve araç kapsamı metni açılarak okundu."
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-ft2-mondeo-klima-fan",
+      "title": "Fan arızası nedeniyle klimanın devreye girmemesi",
+      "summary": "Radyatör/kondenser fanındaki arıza klima kompresörünün devreye girmesini engelleyebilir. Klima soğutmayabilir ve kontrol ünitesinde hata kodu bulunmayabilir.",
+      "category": "hvac",
+      "frequency": "unknown",
+      "frequencyRationale": "Teknik kaynak arızayı tanımlar; Türkiye araç parkında sıklık ve bağımsız tekrar ölçümü bulunmadığından yaygınlık belirlenmedi.",
+      "vehicles": [
+        {
+          "brand": "Ford",
+          "model": "Mondeo",
+          "generation": "Mondeo Mk4",
+          "years": {
+            "from": 2011,
+            "to": 2014
+          }
+        }
+      ],
+      "sourceIds": [
+        "hella-mondeo-klima-tur2"
+      ],
+      "uncertainties": "Kaynak yalnız 2011 ve sonrası der; nesil geçişine yaymamak için Mk4 2011–2014 araştırma aralığı tutuldu. Motor ve fan modülü numarası kaynakta yok; Türkiye eşitliği bekler. chassisWide kullanılmadı, bütün motorlara hazır değildir. Fanın kesin arızası teşhis edilmelidir."
+    }
+  ]
+}

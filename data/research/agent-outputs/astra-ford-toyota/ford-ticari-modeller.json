@@ -1,0 +1,107 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-ford-toyota",
+  "brands": [
+    "Ford"
+  ],
+  "models": [
+    "Fiesta",
+    "B-Max",
+    "Tourneo Connect",
+    "Transit Connect",
+    "Ranger"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "ecu-ford-mk100",
+      "title": "Fiesta, B-Max ve Transit Connect: frenlerin bırakmaması",
+      "url": "https://www.ecutesting.com/common-faults/ford/brakes-locking-fiesta-b-max-and-transit/",
+      "kind": "expert-service",
+      "publisher": "ECU Testing",
+      "reviewed": true,
+      "reviewMethod": "2026-10-18: sayfa açılarak arıza, araç kapsamı ve kısıtlar okundu."
+    },
+    {
+      "id": "ecu-ranger-abs",
+      "title": "Ranger ABS arızası ve frenlerin bırakmaması",
+      "url": "https://www.ecutesting.com/common-faults/ford/ford-ranger-abs-failure/",
+      "kind": "expert-service",
+      "publisher": "ECU Testing",
+      "reviewed": true,
+      "reviewMethod": "2026-10-18: sayfa açılarak arıza, araç kapsamı ve kısıtlar okundu."
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-ft-ford-mk100-basinc",
+      "title": "ABS hidrolik ünitesinde fren basıncının kalması",
+      "summary": "Fren pedalı bırakıldığında bir veya birden fazla tekerlekte frenleme sürebilir. Araç zor hareket edebilir ve frenler aşırı ısınabilir.",
+      "category": "brakes",
+      "frequency": "unknown",
+      "frequencyRationale": "Kaynak arızanın varlığını destekliyor; Türkiye araç parkında karşılaştırılabilir arıza oranı veya yeterli bağımsız tekrar ölçümü yok.",
+      "vehicles": [
+        {
+          "brand": "Ford",
+          "model": "Fiesta",
+          "years": {
+            "to": 2017,
+            "from": 2013
+          }
+        },
+        {
+          "brand": "Ford",
+          "model": "B-Max",
+          "generation": "B-Max (B232)",
+          "years": {
+            "to": 2017,
+            "from": 2014
+          }
+        },
+        {
+          "brand": "Ford",
+          "model": "Tourneo Connect",
+          "years": {
+            "to": 2018,
+            "from": 2015
+          }
+        },
+        {
+          "brand": "Ford",
+          "model": "Transit Connect",
+          "years": {
+            "to": 2019,
+            "from": 2015
+          }
+        }
+      ],
+      "sourceIds": [
+        "ecu-ford-mk100"
+      ],
+      "uncertainties": "Yalnız ATE MK100 ve kaynakta listelenen uyumlu ünite numaraları, ör. 10091501083/10091501753. Fiesta kaynakta 2013–2019 listelense de iki nesle yaymamak için 2013–2017 tutuldu. Transit Courier adı Tourneo Courier kanıtı değildir; Courier eklenmedi. Transit Connect yerel bağımsız model dosyasında bulunmadı; katalog entegrasyonu öncesi model/sınıf eşleştirmesi gerekir. Motor belirtilmemesi bütün motorlara onay değildir."
+    },
+    {
+      "id": "astra-ft-ranger-abs",
+      "title": "ABS ünitesi arızası ve düzensiz frenleme",
+      "summary": "ABS ünitesi arızasında frenler bırakmayabilir veya dengesiz frenleme hissedilebilir. ABS uyarısı yanabilir ve teşhis cihazı üniteyle iletişim kuramayabilir.",
+      "category": "brakes",
+      "frequency": "unknown",
+      "frequencyRationale": "Kaynak arızanın varlığını destekliyor; Türkiye araç parkında karşılaştırılabilir arıza oranı veya yeterli bağımsız tekrar ölçümü yok.",
+      "vehicles": [
+        {
+          "brand": "Ford",
+          "model": "Ranger",
+          "generation": "Ranger (T6)",
+          "years": {
+            "to": 2022,
+            "from": 2012
+          }
+        }
+      ],
+      "sourceIds": [
+        "ecu-ranger-abs"
+      ],
+      "uncertainties": "Kaynak 2010–2023 gibi birden fazla nesli kapsayan parça satış aralığı veriyor. Türkiye T6 dönemiyle sınırlı adaydır; Bosch 0265956179/0265956421/0265951501/0265956008 gibi ünite numarası eşleşmesi şart. Her T6 veya bütün motor/çekiş kombinasyonlarına genellenemez. MK100 kaydıyla aynı araç-parça eşleşmesi oluşursa tekilleştirilmelidir."
+    }
+  ]
+}

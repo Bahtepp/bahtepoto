@@ -1,0 +1,57 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-ford-toyota",
+  "brands": [
+    "Ford"
+  ],
+  "models": [
+    "Focus",
+    "C-Max"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "ecu-ford-mk60-c1288",
+      "title": "Focus ve C-Max ABS basınç sensörü C1288",
+      "url": "https://www.ecutesting.com/common-faults/ford/focus-c-max-abs-pump-fault/",
+      "kind": "expert-service",
+      "publisher": "ECU Testing",
+      "reviewed": true,
+      "reviewMethod": "2026-10-18: sayfa açılarak arıza, araç kapsamı ve kısıtlar okundu."
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-ft-ford-mk60-c1288",
+      "title": "ABS basınç sensörü arızası",
+      "summary": "ABS ünitesindeki basınç sensörü arızası ESP/çekiş kontrolü uyarısının sürekli yanmasına neden olabilir. C1288 kodu kaydedilebilir.",
+      "category": "brakes",
+      "frequency": "unknown",
+      "frequencyRationale": "Kaynak arızanın varlığını destekliyor; Türkiye araç parkında karşılaştırılabilir arıza oranı veya yeterli bağımsız tekrar ölçümü yok.",
+      "vehicles": [
+        {
+          "brand": "Ford",
+          "model": "Focus",
+          "generation": "Focus Mk2",
+          "years": {
+            "to": 2011,
+            "from": 2004
+          }
+        },
+        {
+          "brand": "Ford",
+          "model": "C-Max",
+          "generation": "C-Max I",
+          "years": {
+            "to": 2010,
+            "from": 2005
+          }
+        }
+      ],
+      "sourceIds": [
+        "ecu-ford-mk60-c1288"
+      ],
+      "uncertainties": "Yalnız ATE MK60 ABS/ASC ünitesi ve uyumlu parça numarası: ör. 6M5Y-2C405-AC/AD, 8M51-2C405-AA. Motor kapsamı verilmediğinden bütün motorlara otomatik dağıtılmaz. Mevcut 32 Focus sorununda aynı C1288 konusu bulunmadı. 42 gizli araştırma varyantına Türkiye eşleşmesi yapılmadı."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-ford-toyota",
+  "brands": [
+    "Toyota"
+  ],
+  "models": [
+    "RAV4"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "toyota-22te05-tur2",
+      "title": "22TE05 tavan rayı su sızıntısı",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10236192-9999.pdf",
+      "publisher": "Toyota Motor Sales USA",
+      "kind": "manufacturer-bulletin",
+      "reviewed": true,
+      "reviewMethod": "18.10.2026: arıza açıklaması, kapsam ve kısıtlar kaynak metninden okundu."
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-ft2-rav4-tavan-su",
+      "title": "Tavan rayı bağlantılarından su sızıntısı",
+      "summary": "Tavan rayı klipslerinin contaları sızdırmazlığını kaybedebilir. İçeri giren su tavan döşemesinde ve çevredeki parçalarda hasara neden olabilir.",
+      "category": "body",
+      "frequency": "unknown",
+      "frequencyRationale": "Türkiye için sıklık verisi bulunmuyor. Kaynak olayın varlığını destekler; kapsam içindeki bütün araçların arızalanacağı anlamına gelmez.",
+      "vehicles": [
+        {
+          "brand": "Toyota",
+          "model": "RAV4",
+          "generation": "RAV4 5. nesil (XA50)",
+          "years": {
+            "from": 2019,
+            "to": 2021
+          },
+          "engines": [
+            {
+              "name": "2.5 Hybrid"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "toyota-22te05-tur2"
+      ],
+      "uncertainties": "ABD 22TE05 müşteri destek programıdır, Türkiye geri çağırması değildir. Hibrit üretim aralığı Ağustos 2018 sonu–Temmuz 2021 sonudur; JSON model yılını tutar. Tavan rayı, klips/conta numarası ve üretim tesisi Türkiye aracıyla doğrulanmalı. Ray bulunmayan veya sonradan ray takılmış araçlar dahil edilmez. RAV4 Prime ve benzinli kayıtlar Türkiye kapsamı doğrulanmadığından eklenmedi; otomatik yayıma hazır değil."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-ford-toyota",
+  "brands": [
+    "Ford"
+  ],
+  "models": [
+    "Puma"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "puma-direksiyon-kullanici",
+      "title": "2021 Puma hibrit: direksiyon bağlantısında vuruntu",
+      "url": "https://www.fordownersclub.com/forums/topic/167039-clunky-steering/",
+      "kind": "user-report",
+      "publisher": "Ford Owners Club",
+      "reviewed": true,
+      "reviewMethod": "2026-10-18: sayfa açılarak arıza, araç kapsamı ve kısıtlar okundu."
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-ft-puma-direksiyon-vuruntu",
+      "title": "Direksiyon bağlantısında vuruntu",
+      "summary": "Direksiyon çevrilirken bağlantı bölgesinden vuruntu duyulabilir. Mafsal veya bağlantı parçalarında boşluk kontrolü gerekebilir.",
+      "category": "steering",
+      "frequency": "unknown",
+      "frequencyRationale": "Kaynak arızanın varlığını destekliyor; Türkiye araç parkında karşılaştırılabilir arıza oranı veya yeterli bağımsız tekrar ölçümü yok.",
+      "vehicles": [
+        {
+          "brand": "Ford",
+          "model": "Puma",
+          "generation": "Puma crossover",
+          "years": {
+            "to": 2021,
+            "from": 2021
+          },
+          "engines": [
+            {
+              "name": "1.0 EcoBoost Hybrid"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "puma-direksiyon-kullanici"
+      ],
+      "uncertainties": "Tek bir 2021 araç sahibinin muayene notu ve forum yanıtı; kroniklik ve kesin arızalı parça henüz doğrulanmış değil. Kullanıcı profilinde Focus 2020 yazmasına rağmen mesajda aracın Puma 2021 olduğu açık. Yalnız inceleme adayıdır; 2020–2026 bütün Puma araçlarına genişletilmez."
+    }
+  ]
+}

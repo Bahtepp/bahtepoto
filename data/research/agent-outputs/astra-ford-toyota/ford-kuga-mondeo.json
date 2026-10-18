@@ -1,0 +1,132 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-ford-toyota",
+  "brands": [
+    "Ford"
+  ],
+  "models": [
+    "Mondeo",
+    "Kuga",
+    "S-Max",
+    "Galaxy"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "ecu-ford-dcm35",
+      "title": "Mondeo ve Kuga DCM3.5: motor çalışmaması",
+      "url": "https://www.ecutesting.com/common-faults/ford/ford-mondeo-kuga-ecu-causing-no-start/",
+      "kind": "expert-service",
+      "publisher": "ECU Testing",
+      "reviewed": true,
+      "reviewMethod": "2026-10-18: sayfa açılarak arıza, araç kapsamı ve kısıtlar okundu."
+    },
+    {
+      "id": "ford-17s09-parlamento",
+      "title": "Ford: 1.0 Fox ve 1.6 Sigma soğutma incelemesi",
+      "url": "https://www.parliament.uk/globalassets/documents/commons-committees/transport/Andy-Barratt-Ford-Ecoboost-131110_Redacted.pdf",
+      "kind": "manufacturer-bulletin",
+      "publisher": "Ford Motor Company / UK Parliament",
+      "reviewed": true,
+      "reviewMethod": "2026-10-18: sayfa açılarak arıza, araç kapsamı ve kısıtlar okundu."
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-ft-ford-dcm35",
+      "title": "Motor kontrol ünitesinde iletişim ve çalıştırma arızası",
+      "summary": "Motor kontrol ünitesi arızasında araç stop edebilir veya yeniden çalışmayabilir. Motor arıza uyarısı, güç kısıtlaması ve üniteyle iletişim kaybı görülebilir.",
+      "category": "electrical",
+      "frequency": "unknown",
+      "frequencyRationale": "Kaynak arızanın varlığını destekliyor; Türkiye araç parkında karşılaştırılabilir arıza oranı veya yeterli bağımsız tekrar ölçümü yok.",
+      "vehicles": [
+        {
+          "brand": "Ford",
+          "model": "Mondeo",
+          "generation": "Mondeo Mk4",
+          "years": {
+            "to": 2014,
+            "from": 2007
+          },
+          "engines": [
+            {
+              "name": "TDCi"
+            }
+          ]
+        },
+        {
+          "brand": "Ford",
+          "model": "Kuga",
+          "generation": "Kuga Mk2",
+          "years": {
+            "to": 2015,
+            "from": 2013
+          },
+          "engines": [
+            {
+              "name": "TDCi"
+            }
+          ]
+        },
+        {
+          "brand": "Ford",
+          "model": "S-Max",
+          "years": {
+            "to": 2015,
+            "from": 2010
+          },
+          "engines": [
+            {
+              "name": "TDCi"
+            }
+          ]
+        },
+        {
+          "brand": "Ford",
+          "model": "Galaxy",
+          "years": {
+            "to": 2015,
+            "from": 2010
+          },
+          "engines": [
+            {
+              "name": "TDCi"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "ecu-ford-dcm35"
+      ],
+      "uncertainties": "Sadece Delphi DCM3.5 ECU takılı araçlar; ECU etiketi ve OEM numarası doğrulanmadan motor ailesine otomatik aktarım yapılmaz. Kaynağın Kuga Mk II 2010 başlangıcı nesille çeliştiğinden 2013–2015 kesişimi tutuldu. 2015 Mondeo ve S-Max/Galaxy nesil geçişleri otomatik atanmadı. Kaynak motor hacmini açıkça sınırlamadığı için 1.6/2.0 varsayılmadı."
+    },
+    {
+      "id": "astra-ft-kuga-16-sigma-17s09",
+      "title": "Düşük soğutma sıvısıyla silindir kapağı hasarı",
+      "summary": "Soğutma sıvısı yetersizken oluşan aşırı ısınma silindir kapağını çatlatabilir. Basınçlı yağ kaçağı motor bölümünde yangın riskine yol açabilir.",
+      "category": "cooling",
+      "frequency": "unknown",
+      "frequencyRationale": "Kaynak arızanın varlığını destekliyor; Türkiye araç parkında karşılaştırılabilir arıza oranı veya yeterli bağımsız tekrar ölçümü yok.",
+      "vehicles": [
+        {
+          "brand": "Ford",
+          "model": "Kuga",
+          "generation": "Kuga Mk2",
+          "years": {
+            "to": 2014,
+            "from": 2012
+          },
+          "engines": [
+            {
+              "name": "1.6 EcoBoost"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "ford-17s09-parlamento"
+      ],
+      "uncertainties": "Ford 17S09 İngiltere açıklaması: Kuga üretimi 08.05.2012–21.11.2014. Bu bir Türkiye kampanya ilanı değildir; VIN/üretim tarihi ve silindir kapağı sistemi doğrulanmalı. Yerel katalogda 1.6 EcoBoost 180 PS TSB 53-2061 mevcut. 1.5 EcoBoost ve 1.6 atmosferik kapsanmaz. Yıl sınırları tam ay/gün koşulunun yerini tutmaz."
+    }
+  ]
+}
