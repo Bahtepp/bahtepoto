@@ -296,5 +296,105 @@
     "updatedAt": "2026-10-18",
     "notes": "Bir teknik bakım yazısı ve bir servis notu aynı gövdeyi işaret ediyor. Kaç araçta görüldüğü sayılmadığı için yüksek denmedi. Golf VI, Passat B6 ve B7'deki 1.4 TSI bu gövdeyi kullanmaz. GTE ve eHybrid alınmadı. Golf 8 kataloğunda 1.4 TSI yok.",
     "demo": false
+  },
+  {
+    "id": "volkswagen-vw-15-tsi-soguk-titreme",
+    "slug": "volkswagen-vw-15-tsi-soguk-titreme",
+    "brandId": "volkswagen",
+    "kind": "chronic",
+    "category": "engine",
+    "title": "Soğuk 1.5 TSI motorunda titreme",
+    "summary": "Bazı erken 1.5 TSI Evo motorlar soğukken düşük devirde düzensiz çekiş ve titreme yapabiliyor. Üretici bunu az görülen bir durum sayıyor; yazılım güncellemesi her araçta sorunu tamamen kaldırmıyor.",
+    "symptoms": [
+      "Bazı erken 1.5 TSI Evo motorlar soğukken düşük devirde düzensiz çekiş ve titreme yapabiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "volkswagen-golf"
+        ],
+        "generationIds": [
+          "volkswagen-golf-golf-vii"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "volkswagen-15-tsi-act-150"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2017,
+          "to": 2020,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "volkswagen-t-roc"
+        ],
+        "generationIds": [
+          "volkswagen-t-roc-a11-d11-ac7-ac8"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "volkswagen-15-tsi-act-150"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2017,
+          "to": 2020,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "repeated-reports",
+      "note": "Auto Express çok sayıda sahip bildirimi aktarıyor. Volkswagen etkilenen sayıyı küçük buluyor. Yüksek denmedi.",
+      "sourceIds": [
+        "arastirma-cursor-cursor-autoexpress-15tsi-2019",
+        "arastirma-cursor-cursor-seisenlinea-15tsi"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "cursor",
+      "id": "vw-15-tsi-soguk-titreme"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-cursor-cursor-autoexpress-15tsi-2019",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-cursor-cursor-seisenlinea-15tsi",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-18",
+    "notes": "Auto Express çok sayıda sahip bildirimi aktarıyor. Volkswagen etkilenen sayıyı küçük buluyor. Yüksek denmedi. Golf 8, eTSI, Taigo, T-Roc 2 ve 2022 sonrası 1.5 TSI 150 PS satırı bağlanmadı. Katalog yalnızca DSG yazan araçlara ayrı bir şanzıman sorunu yüklenmedi.",
+    "demo": false
   }
 ]

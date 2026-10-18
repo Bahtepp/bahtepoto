@@ -1,5 +1,7 @@
 # Renault ve Dacia araştırma teslimi
 
+**İkinci tur güncellemesi:** Güncel teslim 7 JSON, 20 sorun ve 30 kaynak içerir. İlk 14 kayıt aynı kimliklerle güncellendi; 6 yeni kayıt `tur2-*.json` dosyalarındadır. Güncel kapsam, inceleme kararları ve doğrulama sonuçları için [TUR2-RAPOR.md](TUR2-RAPOR.md) dosyasını okuyun. Aşağıdaki sayısal özet birinci turun tarihçesidir.
+
 Araştırma tarihi: 2026-10-18. Agent: `astra-renault`. Format: `bahtepoto-research-v1`.
 
 Bu teslim yalnızca araştırmadır. Katalog, kaynak havuzu, mevcut sorun kayıtları ve site kodu değiştirilmedi. İçe aktarma veya yayın yapılmadı. JSON içindeki `uncertainties` koşulları çözülmeden otomatik geniş kapsamlı eşleştirme yapılmamalı.

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "renault-astra-renault-megane-ii-window-intermittent",
+    "slug": "renault-astra-renault-megane-ii-window-intermittent",
+    "brandId": "renault",
+    "kind": "known-defect",
+    "category": "body",
+    "title": "Elektrikli camın aralıklı çalışmaması",
+    "summary": "Bazı Megane II sahipleri camların açılmaması, kapanmaması veya kesik kesik hareket etmesini bildiriyor. Kumanda modülü, bağlantılar ve cam mekanizması ayrı ayrı kontrol edilmeli.",
+    "symptoms": [
+      "Bazı Megane II sahipleri camların açılmaması, kapanmaması veya kesik kesik hareket etmesini bildiriyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "renault-megane"
+        ],
+        "generationIds": [
+          "renault-megane-megane-ii"
+        ],
+        "revisionIds": [],
+        "engineIds": [],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2005,
+          "to": 2005,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "renault-megane"
+        ],
+        "generationIds": [
+          "renault-megane-megane-ii"
+        ],
+        "revisionIds": [],
+        "engineIds": [],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2008,
+          "to": 2008,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "İki ayrı toplulukta benzer belirtiler bildirilmiş. Kesin ortak kök neden ve görülme oranı bilinmiyor; high kullanılmadı.",
+      "sourceIds": [
+        "arastirma-astrarenault-megane-window-owner-2005",
+        "arastirma-astrarenault-megane-window-owner-2008"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "astra-renault",
+      "id": "astra-renault-megane-ii-window-intermittent"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-astrarenault-megane-window-owner-2005",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-astrarenault-megane-window-owner-2008",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "researching",
+    "updatedAt": "2026-10-18",
+    "notes": "İki ayrı toplulukta benzer belirtiler bildirilmiş. Kesin ortak kök neden ve görülme oranı bilinmiyor; high kullanılmadı. 2005 ve 2008 örnek yıllarıdır; aradaki bütün araçlara yayılmadı. Yabancı kullanıcı bildirimleri; Türkiye parça eşleşmesi yok. TEMIC modülü tek kesin neden sayılmadı: 2005 vakasında yeni modül yalnızca kısmi düzelme sağlamış, oksitli bağlantı görülmüş. Motor ve parça numarası bilinmediğinden eklenmedi.",
+    "demo": false
+  }
+]

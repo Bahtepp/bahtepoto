@@ -1,0 +1,101 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "cursor",
+  "brands": ["Volkswagen", "Skoda", "Seat"],
+  "models": ["Golf", "T-ROC", "Karoq", "Leon", "Ateca"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "cursor-autoexpress-15tsi-2019",
+      "title": "Juddering VW Group cars: no end in sight for owners",
+      "url": "https://www.autoexpress.co.uk/car-news/107558/juddering-vw-group-cars-no-end-in-sight-for-owners",
+      "kind": "technical-publication",
+      "publisher": "Auto Express",
+      "publishedAt": "2019-07-31",
+      "reviewed": true,
+      "reviewMethod": "31 Temmuz 2019 tarihli haberin tamamı okundu. Volkswagen’in açıklaması ve Golf, T-Roc, Leon, Karoq örnekleri metindedir."
+    },
+    {
+      "id": "cursor-seisenlinea-15tsi",
+      "title": "Efecto canguro de los motores 1.5 TSI",
+      "url": "https://www.seisenlinea.com/problema-tirones-en-frio-motores-1-5-tsi-vag/",
+      "kind": "technical-publication",
+      "publisher": "Seis en Línea",
+      "reviewed": true,
+      "reviewMethod": "Makale ve altındaki sahip yorumları okundu. Motor kodları, yazılım güncellemesi ve model listesinin her aracı kapsamadığı notu alındı."
+    }
+  ],
+  "issues": [
+    {
+      "id": "vw-15-tsi-soguk-titreme",
+      "title": "Soğuk 1.5 TSI motorunda titreme",
+      "summary": "Bazı erken 1.5 TSI Evo motorlar soğukken düşük devirde düzensiz çekiş ve titreme yapabiliyor. Üretici bunu az görülen bir durum sayıyor; yazılım güncellemesi her araçta sorunu tamamen kaldırmıyor.",
+      "category": "engine",
+      "frequency": "medium",
+      "frequencyRationale": "Auto Express çok sayıda sahip bildirimi aktarıyor. Volkswagen etkilenen sayıyı küçük buluyor. Yüksek denmedi.",
+      "vehicles": [
+        {
+          "brand": "Volkswagen",
+          "model": "Golf",
+          "generation": "Golf VII",
+          "engines": [{ "name": "1.5 TSI ACT 150 PS" }],
+          "years": { "from": 2017, "to": 2020 }
+        },
+        {
+          "brand": "Volkswagen",
+          "model": "T-ROC",
+          "generation": "T-ROC 1. nesil",
+          "engines": [{ "name": "1.5 TSI ACT 150 PS" }],
+          "years": { "from": 2017, "to": 2020 }
+        }
+      ],
+      "sourceIds": ["cursor-autoexpress-15tsi-2019", "cursor-seisenlinea-15tsi"],
+      "uncertainties": "Golf 8, eTSI, Taigo, T-Roc 2 ve 2022 sonrası 1.5 TSI 150 PS satırı bağlanmadı. Katalog yalnızca DSG yazan araçlara ayrı bir şanzıman sorunu yüklenmedi."
+    },
+    {
+      "id": "skoda-15-tsi-soguk-titreme",
+      "title": "Soğuk 1.5 TSI motorunda titreme",
+      "summary": "Bazı erken Karoq 1.5 TSI Evo motorlar soğukken düşük devirde düzensiz çekiş ve titreme yapabiliyor. Üretici bunu az görülen bir durum sayıyor; yazılım güncellemesi her araçta sorunu tamamen kaldırmıyor.",
+      "category": "engine",
+      "frequency": "medium",
+      "frequencyRationale": "Karoq sahibi haberde örnekleniyor. Volkswagen etkilenen sayıyı küçük buluyor. Octavia ve diğer Skoda modellerine yayılmadı.",
+      "vehicles": [
+        {
+          "brand": "Skoda",
+          "model": "Karoq",
+          "generation": "Karoq (NU7)",
+          "engines": [{ "name": "1.5 TSI ACT 150 PS" }],
+          "years": { "from": 2017, "to": 2020 }
+        }
+      ],
+      "sourceIds": ["cursor-autoexpress-15tsi-2019", "cursor-seisenlinea-15tsi"],
+      "uncertainties": "Karoq katalog satırı 2017-2026’yı tek varyantta tutuyor. 2020 sonrası araçlar bu kaydın yılı dışında kalır. Octavia, Kamiq, Scala, Kodiaq, Superb ve Fabia bağlanmadı."
+    },
+    {
+      "id": "seat-15-tsi-soguk-titreme",
+      "title": "Soğuk 1.5 TSI motorunda titreme",
+      "summary": "Bazı erken Leon ve Ateca 1.5 TSI Evo motorlar soğukken düşük devirde düzensiz çekiş ve titreme yapabiliyor. Yazılım güncellemesi her araçta sorunu tamamen kaldırmıyor.",
+      "category": "engine",
+      "frequency": "medium",
+      "frequencyRationale": "Leon ve Ateca için hem haberde hem sonraki sahip yorumlarında aynı soğuk titreme anlatılıyor. Oran ölçülmediği için yüksek denmedi.",
+      "vehicles": [
+        {
+          "brand": "Seat",
+          "model": "Leon",
+          "generation": "Leon 3. nesil (5F)",
+          "engines": [{ "name": "1.5 ACT 150 PS" }],
+          "years": { "from": 2017, "to": 2020 }
+        },
+        {
+          "brand": "Seat",
+          "model": "Ateca",
+          "generation": "Ateca (KH7)",
+          "engines": [{ "name": "1.5 ACT 150 PS" }],
+          "years": { "from": 2017, "to": 2020 }
+        }
+      ],
+      "sourceIds": ["cursor-autoexpress-15tsi-2019", "cursor-seisenlinea-15tsi"],
+      "uncertainties": "Leon 4, Ibiza, Arona ve 2026 Ateca 1.5 TSI ACT satırı bağlanmadı. Adsız 1.5 satırı alınmadı."
+    }
+  ]
+}

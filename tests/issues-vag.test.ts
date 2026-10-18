@@ -83,4 +83,16 @@ describe('Volkswagen Grubu kronik kayıtları', () => {
     assert.ok(cupra);
     assert.equal(live.issues.some((issue) => issue.brandId === 'cupra'), false);
   });
+
+  test('1.5 TSI titremesi erken satırda kalır, sonraki 1.5 ve DSG kaydına karışmaz', () => {
+    const golf = vehicle('volkswagen-golf', 'golf-vii', '1.5 TSI ACT 150 PS');
+    assert.equal(shows('volkswagen-vw-15-tsi-soguk-titreme', golf), true);
+    assert.equal(shows('volkswagen-ea211-devirdaim-govdesi', golf), false);
+    assert.equal(shows('volkswagen-vw-15-tsi-soguk-titreme', vehicle('volkswagen-golf', 'golf-8', '1.5 TSI ACT 150 PS')), false);
+    assert.equal(shows('volkswagen-vw-15-tsi-soguk-titreme', vehicle('volkswagen-t-roc', 'a11-d11-ac7-ac8', '1.5 TSI 150 PS')), false);
+    assert.equal(matchIssue(byId.get('skoda-15-tsi-soguk-titreme')!, vehicle('skoda-karoq', 'nu7', '1.0 TSI 115 PS')).verdict, 'no');
+    assert.equal(shows('seat-15-tsi-soguk-titreme', vehicle('seat-leon', '5f', '1.5 ACT 150 PS')), true);
+    assert.equal(shows('seat-15-tsi-soguk-titreme', vehicle('seat-ateca', 'kh7', '1.4 ACT 150 PS')), false);
+    assert.equal(live.issues.some((issue) => issue.brandId === 'cupra'), false);
+  });
 });

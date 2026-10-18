@@ -61,6 +61,16 @@
       "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu.",
       "publishedAt": "2023-11-01",
       "note": "2016 model araç; teşhis ve özel servis görüşü kullanıcının aktarımıdır."
+    },
+    {
+      "id": "renault-fluence-tr-technical-brochure",
+      "title": "Renault Fluence Türkiye kataloğu: 1.5 dCi 110 bg EDC",
+      "url": "https://dosya.epey.com/38627/2016-renault-fluence-1-5-dci-90-hp-edc-touch-urun-katalogu.pdf",
+      "publisher": "Renault (Epey üzerinde barındırılan katalog)",
+      "kind": "technical-publication",
+      "reviewed": true,
+      "reviewMethod": "İkinci turda bağlantı açıldı; ilgili kapsam ve içerik okundu.",
+      "note": "Üretici belgesinin teknik sayfaları 22 ve 42 okundu. URL metnindeki 90 hp yerine belgenin içindeki 110 bg / 81 kW ve altı ileri çift kavramalı EDC bilgisi esas alındı. Arıza kanıtı değil, teknik kimlik kaynağıdır."
     }
   ],
   "issues": [
@@ -155,12 +165,12 @@
           },
           "engines": [
             {
-              "name": "1.5 dCi"
+              "name": "1.5 dCi 110 bg"
             }
           ],
           "transmission": {
             "type": "dual-clutch",
-            "name": "EDC"
+            "name": "EDC (6 ileri)"
           }
         },
         {
@@ -177,15 +187,16 @@
           ],
           "transmission": {
             "type": "dual-clutch",
-            "name": "EDC"
+            "name": "EDC (6 ileri)"
           }
         }
       ],
       "sourceIds": [
         "fluence-edc-owner-2012",
-        "fluence-edc-owner-2016"
+        "fluence-edc-owner-2016",
+        "renault-fluence-tr-technical-brochure"
       ],
-      "uncertainties": "İki bağımsız Türkiye araç sahibinin anlatımıdır; kontrol ünitesi teşhisi teknik raporla doğrulanmadı. 2012 ve 2016 örnek yıllarıdır, aradaki bütün yılların etkilendiği çıkarılmadı. DC4 alt tipi/parça numarası ve nesil kodu ayrıca doğrulanmalı. Manuel, CVT ve başka EDC ailelerine uygulanmamalı."
+      "uncertainties": "2012 sahibinin asıl metni 1.5 dCi 110 bg EDC diyor; bu güç yalnızca o örneğe kesin olarak yazıldı. Türkiye kataloğu 110 bg / 81 kW dizel ile altı ileri çift kavramalı EDC eşleşmesini, benzinlide ise ayrı CVT seçeneğini doğruluyor. 2016 sahibi gücü açık yazmadığından o araca 110 bg tahmini eklenmedi. Katalog bu uyumluluğu desteklese de araç özelinde VIN/ruhsat gerekiyor. İki örnek yıl arasında tüm yıllar kapsanmadı. DC4 alt tipi, ECU parçası ve kök neden servis belgesiyle doğrulanmadı; bütün Fluence otomatiklerine aktarılmamalı."
     }
   ]
 }

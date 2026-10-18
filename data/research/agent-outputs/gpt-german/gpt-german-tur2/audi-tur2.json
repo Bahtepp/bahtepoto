@@ -1,0 +1,147 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "gpt-german",
+  "brands": [
+    "Audi"
+  ],
+  "models": [
+    "A6",
+    "Q5",
+    "A3"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "gpt2-audi-a6-mmi-audizine",
+      "title": "Audi A6 C7 MMI ekran kaldırma ipi kopması kullanıcı anlatımı",
+      "url": "https://www.audizine.com/threads/new-mmi-screen-not-folding-all-the-way-in.990907/",
+      "kind": "user-report",
+      "reviewed": true,
+      "publisher": "Audizine",
+      "reviewMethod": "2012 A6 kullanıcı başlığı ve mesajları okundu"
+    },
+    {
+      "id": "gpt2-audi-a6-mmi-goparts",
+      "title": "Audi A6 C7 açılır MMI ekran hareketi ve kablo yorgunluğu teknik rehberi",
+      "url": "https://www.go-parts.com/garage/infotainment-display-audi-a6-audi-a7-audi-rs7-2012-2018",
+      "kind": "technical-publication",
+      "reviewed": true,
+      "publisher": "Go-Parts",
+      "reviewMethod": "Arıza mekanizması açıklaması okundu"
+    },
+    {
+      "id": "gpt2-audi-q5-drains-tsb",
+      "title": "Audi Q5 panoramik tavan tahliyesi su girişine ilişkin üretici bülteni 2075969/2",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2025/MC-11012496-0001.pdf",
+      "kind": "manufacturer-bulletin",
+      "reviewed": true,
+      "publisher": "Audi of America",
+      "publishedAt": "2024-12-16",
+      "reviewMethod": "NHTSA kayıtlı PDF üzerinden etkilenen 2018-2023 Q5 ve panoramik tavan koşulu okundu",
+      "note": "Türkiye geri çağırması değildir; sadece panoramik tavan donanımlı araçlarla sınırlı."
+    },
+    {
+      "id": "gpt2-audi-q5-drains-reddit",
+      "title": "Audi Q5 tavan tahliyesi su girişi kullanıcı deneyimleri",
+      "url": "https://www.reddit.com/r/Audi/comments/1chcvat/q5_sunroof_worries/",
+      "kind": "user-report",
+      "reviewed": true,
+      "publisher": "Reddit r/Audi",
+      "reviewMethod": "Yorumlarda 2018 Q5 pano drenaj ve elektrik bölmesi ıslanması vakaları okundu"
+    },
+    {
+      "id": "gpt2-audi-a3-abs-giant",
+      "title": "Audi A3 8P ABS modülü arızası teknik/parça rehberi",
+      "url": "https://giantparts.eu/audi-a3-8p-abs-control-module-failure-symptoms-and-repair-guide-2/",
+      "kind": "technical-publication",
+      "reviewed": true,
+      "publisher": "GiantParts",
+      "publishedAt": "2026-07-14",
+      "reviewMethod": "Tam teknik rehber ve parça numarası/kapsam açıklaması okundu",
+      "note": "Ticari parça tedarikçisinin rehberi olduğundan sıklık iddiası bağımsız ölçüm değildir."
+    },
+    {
+      "id": "gpt2-audi-a3-abs-sport",
+      "title": "Audi A3 8P MK60 ABS kumanda modülü kullanıcı arızası",
+      "url": "https://www.audi-sport.net/xf/threads/379936/",
+      "kind": "user-report",
+      "reviewed": false,
+      "publisher": "Audi-Sport.net",
+      "note": "Arama sonucu içerik özeti görüldü ancak tam sayfa okunmadı."
+    }
+  ],
+  "issues": [
+    {
+      "id": "gpt2-audi-a6-c7-mmi-ekran-acilma",
+      "title": "MMI ekranı açılıp kapanmıyor",
+      "summary": "Motorlu MMI ekranının açılıp kapanma mekanizmasında takılma veya kablo yıpranması yaşanabildiği, ekranın bazen siyah kaldığı bildiriliyor.",
+      "category": "electrical",
+      "frequency": "medium",
+      "frequencyRationale": "C7 kullanıcı deneyimi ve teknik rehber birbirini destekliyor; ölçülmüş görülme sıklığı yok.",
+      "vehicles": [
+        {
+          "brand": "Audi",
+          "model": "A6",
+          "generation": "A6 4. nesil (4G)",
+          "years": {
+            "from": 2012,
+            "to": 2018
+          }
+        }
+      ],
+      "sourceIds": [
+        "gpt2-audi-a6-mmi-audizine",
+        "gpt2-audi-a6-mmi-goparts"
+      ],
+      "uncertainties": "Yalnızca motorlu açılır-kapanır MMI ekranı bulunan sürümler. Ekran donanımı katalogda ayrışmıyorsa genel A6 kaydı olarak otomatik yayımlama."
+    },
+    {
+      "id": "gpt2-audi-q5-panorama-tavan-drenaj",
+      "title": "Panoramik tavan tahliyesinden su girmesi",
+      "summary": "Panoramik tavanın tahliye hortumları tıkanır veya kıvrılırsa kabine su sızabildiği ve elektrik aksamının etkilenebildiği bildiriliyor.",
+      "category": "body",
+      "frequency": "unknown",
+      "frequencyRationale": "Üretici bülteni sorunun varlığını destekler; tek başına ne sıklıkla yaşandığını göstermez. Kullanıcı deneyimleri var.",
+      "vehicles": [
+        {
+          "brand": "Audi",
+          "model": "Q5",
+          "generation": "Q5 2. nesil",
+          "years": {
+            "from": 2018,
+            "to": 2023
+          }
+        }
+      ],
+      "sourceIds": [
+        "gpt2-audi-q5-drains-tsb",
+        "gpt2-audi-q5-drains-reddit"
+      ],
+      "uncertainties": "SADECE panoramik açılır tavanlı 2018–2023 Q5; düz tavanlı Q5 dahil edilemez. Tavan opsiyonu importer tarafından filtrelenemiyorsa incelemede beklet."
+    },
+    {
+      "id": "gpt2-audi-a3-8p-abs-esp-modulu",
+      "title": "ABS/ESP kontrol modülü uyarısı",
+      "summary": "Bazı A3 8P araçlarda ABS/ESP kontrol modülü arızası nedeniyle gösterge uyarıları ve fren destek işlevlerinde kesinti bildiriliyor.",
+      "category": "brakes",
+      "frequency": "unknown",
+      "frequencyRationale": "Ticari teknik rehber ve sınırlı kullanıcı bildirimi var; somut arıza yüzdesi veya bağımsız güvenilirlik araştırması yok.",
+      "vehicles": [
+        {
+          "brand": "Audi",
+          "model": "A3",
+          "generation": "A3 2. nesil (8P)",
+          "years": {
+            "from": 2004,
+            "to": 2012
+          }
+        }
+      ],
+      "sourceIds": [
+        "gpt2-audi-a3-abs-giant",
+        "gpt2-audi-a3-abs-sport"
+      ],
+      "uncertainties": "Sorun özellikle belirli MK60/Bosch/Teves kontrol üniteleriyle ilişkili olabilir. ABS parça numarası doğrulanmadan bütün A3 8P varyantlarına mutlak olarak bağlama."
+    }
+  ]
+}

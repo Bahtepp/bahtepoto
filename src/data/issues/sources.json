@@ -1401,5 +1401,119 @@
       "method": "NHTSA kopyasındaki bülten ve model tablosu okundu."
     },
     "demo": false
+  },
+  {
+    "id": "arastirma-cursor-cursor-autoexpress-15tsi-2019",
+    "kind": "technical-publication",
+    "title": "Juddering VW Group cars: no end in sight for owners",
+    "url": "https://www.autoexpress.co.uk/car-news/107558/juddering-vw-group-cars-no-end-in-sight-for-owners",
+    "publisher": "Auto Express",
+    "publishedAt": "2019-07-31",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "31 Temmuz 2019 tarihli haberin tamamı okundu. Volkswagen’in açıklaması ve Golf, T-Roc, Leon, Karoq örnekleri metindedir."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-cursor-cursor-seisenlinea-15tsi",
+    "kind": "technical-publication",
+    "title": "Efecto canguro de los motores 1.5 TSI",
+    "url": "https://www.seisenlinea.com/problema-tirones-en-frio-motores-1-5-tsi-vag/",
+    "publisher": "Seis en Línea",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Makale ve altındaki sahip yorumları okundu. Motor kodları, yazılım güncellemesi ve model listesinin her aracı kapsamadığı notu alındı."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-astrarenault-lodgy-light-stalk-2019",
+    "kind": "user-report",
+    "title": "Lodgy: sağ sinyal kullanıldığında farların sönmesi",
+    "url": "https://communaute.dacia.fr/forum/DACIA/DACIA-LODGY/LES-FEUX-DE-ROUTE-S-ETEIGNENT-LORSQUE-J-ACTIVE-LE-CLIGNOTANT-DROIT/4006787/263244",
+    "publisher": "Dacia kullanıcı topluluğu",
+    "publishedAt": "2019-12-28",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Üretici alan adında barınan kullanıcı tartışmasıdır; resmî teknik bülten değildir.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-astrarenault-lodgy-light-stalk-2025",
+    "kind": "user-report",
+    "title": "Lodgy: kısa far arızası ve kumanda kolu deneyimleri",
+    "url": "https://communaute.dacia.fr/forum/DACIA/LODGY/PANNE-FEUX-DE-CROISEMENT/5472252/263244",
+    "publisher": "Dacia kullanıcı topluluğu",
+    "publishedAt": "2025-08-28",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "İlk mesaj ve devamındaki kullanıcı deneyimleri okundu. Araç yaşından üretim yılı hesaplanmadı.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-astrarenault-lodgy-2016-tr-light-stalk",
+    "kind": "user-report",
+    "title": "2016 Dacia Lodgy: sinyal verince farların sönmesi",
+    "url": "https://www.sikayetvar.com/dacia/dacia-lodgy-far-arizasi",
+    "publisher": "Şikayetvar",
+    "publishedAt": "2024-01-20",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "İkinci turda bağlantı açıldı; ilgili kapsam ve içerik okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-astrarenault-megane-window-owner-2005",
+    "kind": "user-report",
+    "title": "2005 Megane yolcu elektrikli cam sorunu",
+    "url": "https://www.pistonheads.com/gassing/topic.asp?f=220&h=0&t=1736227",
+    "publisher": "PistonHeads",
+    "publishedAt": "2018-04-11",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Asıl mesaj ve sonraki kısmi onarım sonucu okundu. Modül değişimi tam çözüm sağlamamış.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "İkinci turda birincil yazı veya kullanıcı mesajı açılıp okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-astrarenault-megane-window-owner-2008",
+    "kind": "user-report",
+    "title": "Megane II sürücü camının aralıklı çalışmaması",
+    "url": "https://www.reddit.com/r/Renault/comments/18ww1sx/driver_side_window_megane_2/",
+    "publisher": "Reddit r/Renault",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Asıl mesaj ve sahibinin 2008 üretim bilgisi okundu; diğer kullanıcıların tahminleri kesin tanı sayılmadı.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "İkinci turda birincil yazı veya kullanıcı mesajı açılıp okundu."
+    },
+    "demo": false
   }
 ]

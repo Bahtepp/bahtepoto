@@ -50,7 +50,7 @@
       "sourceIds": [
         "hella-duster-ignition"
       ],
-      "uncertainties": "Kaynak HJD, 2017–2021 ve tüm motorlar diyor; anahtarlı kontak sistemi/parça revizyonu doğrulanmalı. Anahtarsız çalıştırmaya otomatik uygulanmamalı. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir."
+      "uncertainties": "Kaynak HJD, 2017–2021 ve tüm motorlar diyor; anahtarlı kontak sistemi/parça revizyonu doğrulanmalı. Anahtarsız çalıştırmaya otomatik uygulanmamalı. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir. İkinci turda HJD ve üretim aralığı tekrar doğrulandı. Bülten değiştirilmiş kontak kilidi öneriyor ancak eski/yeni OE numarası veya VIN sınırı vermiyor. Duster I ve III kapsam dışıdır; HJD içindeki bütün parçaların aynı olduğu kabul edilmedi."
     },
     {
       "id": "astra-renault-duster-side-indicator-wire",

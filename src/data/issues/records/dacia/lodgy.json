@@ -1,0 +1,86 @@
+[
+  {
+    "id": "dacia-astra-renault-lodgy-light-stalk-intermittent",
+    "slug": "dacia-astra-renault-lodgy-light-stalk-intermittent",
+    "brandId": "dacia",
+    "kind": "known-defect",
+    "category": "electrical",
+    "title": "Far kumandasında aralıklı kesilme",
+    "summary": "Bazı Lodgy sahipleri sinyal kolunu kullanırken farların sönmesini veya kısa farların çalışmamasını bildiriyor. Kumanda kolundaki temas sorunu olası neden olarak aktarılıyor.",
+    "symptoms": [
+      "Bazı Lodgy sahipleri sinyal kolunu kullanırken farların sönmesini veya kısa farların çalışmamasını bildiriyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "dacia-lodgy"
+        ],
+        "generationIds": [
+          "dacia-lodgy-uretim-2012"
+        ],
+        "revisionIds": [],
+        "engineIds": [],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2016,
+          "to": 2016,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "İki Fransa tartışmasına ek olarak 2016 model bir Türkiye aracında aynı belirti bildiriliyor. Bağımsız kullanıcı deneyimleri var; ortak parça kusuru ve arıza oranı kesin değil.",
+      "sourceIds": [
+        "arastirma-astrarenault-lodgy-light-stalk-2019",
+        "arastirma-astrarenault-lodgy-light-stalk-2025",
+        "arastirma-astrarenault-lodgy-2016-tr-light-stalk"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "astra-renault",
+      "id": "astra-renault-lodgy-light-stalk-intermittent"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-astrarenault-lodgy-light-stalk-2019",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-astrarenault-lodgy-light-stalk-2025",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-astrarenault-lodgy-2016-tr-light-stalk",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "researching",
+    "updatedAt": "2026-10-18",
+    "notes": "İki Fransa tartışmasına ek olarak 2016 model bir Türkiye aracında aynı belirti bildiriliyor. Bağımsız kullanıcı deneyimleri var; ortak parça kusuru ve arıza oranı kesin değil. İkinci turda Türkiye için çalışma kapsamı, doğrudan 2016 Lodgy araç sahibi bildiriminin yılına daraltıldı. Fransa raporları belirtiyi destekler; üretim yılı vermedikleri için Türkiye yıl aralığını genişletmez. 2016 yalnızca doğrulanan örnek model yılıdır, bütün etkilenen üretim dönemi değildir. Motor, kumanda parça numarası ve kesin mekanizma hâlâ bilinmiyor; tasarım kusuru iddiası kabul edilmedi. Diğer Lodgy yıllarına otomatik uygulanmamalı.",
+    "demo": false
+  }
+]

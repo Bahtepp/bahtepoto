@@ -61,6 +61,27 @@
       "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu.",
       "publishedAt": "2025-08-28",
       "note": "İlk mesaj ve devamındaki kullanıcı deneyimleri okundu. Araç yaşından üretim yılı hesaplanmadı."
+    },
+    {
+      "id": "dacia-easyr-2015-identity",
+      "title": "Dacia Easy-R: TCe 90 ile otomatikleştirilmiş manuel şanzıman",
+      "url": "https://presse.dacia.de/dacia-prasentiert-automatisiertes-schaltgetriebe-easy-r/?lang=deu",
+      "publisher": "Dacia Deutschland",
+      "kind": "technical-publication",
+      "reviewed": true,
+      "reviewMethod": "İkinci turda bağlantı açıldı; ilgili kapsam ve içerik okundu.",
+      "publishedAt": "2015-09-07",
+      "note": "Üretici basın açıklaması; arıza kanıtı değil şanzıman/motor eşleşmesi. Sayfanın tarihçe bağlantısında Sandero II 2012–2020 olarak tanımlanıyor."
+    },
+    {
+      "id": "lodgy-2016-tr-light-stalk",
+      "title": "2016 Dacia Lodgy: sinyal verince farların sönmesi",
+      "url": "https://www.sikayetvar.com/dacia/dacia-lodgy-far-arizasi",
+      "publisher": "Şikayetvar",
+      "kind": "user-report",
+      "reviewed": true,
+      "reviewMethod": "İkinci turda bağlantı açıldı; ilgili kapsam ve içerik okundu.",
+      "publishedAt": "2024-01-20"
     }
   ],
   "issues": [
@@ -84,7 +105,7 @@
       "sourceIds": [
         "hella-sandero-ignition"
       ],
-      "uncertainties": "Kaynak VIN aralığı UU15SDKJ558926581–UU1HSDM9G60030836. 2013–2021 geniş tarih aralığı tek başına yeterli değildir; VIN ve kontak tipi doğrulanmalı. Nesil belirtilmediği için tahmin edilmedi. Duster kaydıyla benzer belirti, ayrı model/parça kapsamı vardır. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir."
+      "uncertainties": "Kaynak VIN aralığı UU15SDKJ558926581–UU1HSDM9G60030836. 2013–2021 geniş tarih aralığı tek başına yeterli değildir; VIN ve kontak tipi doğrulanmalı. Nesil belirtilmediği için tahmin edilmedi. Duster kaydıyla benzer belirti, ayrı model/parça kapsamı vardır. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir. İkinci turda VIN sınırı ve 2013–2021 üretim aralığı tekrar okundu; OE kontak numarası yayımlanmamış. Bu iki VIN farklı tip önekleri içerdiğinden basit alfabetik VIN aralığı filtresi gibi uygulanamaz. Üretici parça/VIN kontrolü gerekli; bütün Sandero II/III araçlarına yayılmamalı."
     },
     {
       "id": "astra-renault-sandero-easyr-judder",
@@ -103,20 +124,22 @@
           },
           "engines": [
             {
-              "name": "0.9 TCe"
+              "name": "0.9 TCe (TCe 90)"
             }
           ],
           "transmission": {
             "type": "automated-manual",
             "name": "Easy-R"
-          }
+          },
+          "generation": "Sandero II"
         }
       ],
       "sourceIds": [
         "sandero-easyr-owner-2020",
-        "sandero-easyr-owner-2019"
+        "sandero-easyr-owner-2019",
+        "dacia-easyr-2015-identity"
       ],
-      "uncertainties": "Kaynaklar 2019 ve 2020 araçlarını anlatıyor; aynı sorun için iki bağımsız bildirim var. Volan/kavrama kök nedeni bağımsız teşhis raporuyla doğrulanmadı. Nesil kodu ve parça sürümü ayrıca eşleştirilmeli. Easy-R robotize manuel sistemdir; EDC ve CVT kapsam dışı."
+      "uncertainties": "2019 ve 2020 Türkiye araç bildirimleri korunuyor. Üretici Easy-R açıklaması ve Sandero II tarihçesiyle nesil ve TCe 90/robotize manuel ayrımı desteklendi; bu tüm 2012–2020 araçların etkilendiği anlamına gelmez. Dizel Easy-R, EDC ve yeni nesil CVT kapsam dışıdır. Motor alt kodu, kavrama/volan parça sürümü ve ortak kök neden doğrulanmadı. Kayıt belirti düzeyindedir; kesin üretim kusuru olarak aktarılmamalı."
     },
     {
       "id": "astra-renault-lodgy-light-stalk-intermittent",
@@ -124,18 +147,23 @@
       "summary": "Bazı Lodgy sahipleri sinyal kolunu kullanırken farların sönmesini veya kısa farların çalışmamasını bildiriyor. Kumanda kolundaki temas sorunu olası neden olarak aktarılıyor.",
       "category": "electrical",
       "frequency": "medium",
-      "frequencyRationale": "İki ayrı tartışmada birden fazla kullanıcı benzer far/kol sorununu kendi aracında bildiriyor. Teknik inceleme ve araç parkına göre sıklık ölçümü yok.",
+      "frequencyRationale": "İki Fransa tartışmasına ek olarak 2016 model bir Türkiye aracında aynı belirti bildiriliyor. Bağımsız kullanıcı deneyimleri var; ortak parça kusuru ve arıza oranı kesin değil.",
       "vehicles": [
         {
           "brand": "Dacia",
-          "model": "Lodgy"
+          "model": "Lodgy",
+          "years": {
+            "from": 2016,
+            "to": 2016
+          }
         }
       ],
       "sourceIds": [
         "lodgy-light-stalk-2019",
-        "lodgy-light-stalk-2025"
+        "lodgy-light-stalk-2025",
+        "lodgy-2016-tr-light-stalk"
       ],
-      "uncertainties": "Fransa kullanıcı topluluğunda tekrar eden bildirimlerdir; Türkiye araçlarında aynı kumanda parçası doğrulanmadı. Motor, kesin model yılı ve nesil verilmediğinden otomatik tüm araç eşleştirmesi yapılmamalı. Kullanıcıların tasarım kusuru iddiası kesin kabul edilmedi."
+      "uncertainties": "İkinci turda Türkiye için çalışma kapsamı, doğrudan 2016 Lodgy araç sahibi bildiriminin yılına daraltıldı. Fransa raporları belirtiyi destekler; üretim yılı vermedikleri için Türkiye yıl aralığını genişletmez. 2016 yalnızca doğrulanan örnek model yılıdır, bütün etkilenen üretim dönemi değildir. Motor, kumanda parça numarası ve kesin mekanizma hâlâ bilinmiyor; tasarım kusuru iddiası kabul edilmedi. Diğer Lodgy yıllarına otomatik uygulanmamalı."
     }
   ]
 }

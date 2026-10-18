@@ -1,0 +1,102 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "gpt-german",
+  "brands": [
+    "BMW"
+  ],
+  "models": [
+    "5 Serisi",
+    "3 Serisi"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "gpt2-bmw-f10-handle-teambhp",
+      "title": "BMW F10 iç kapı tutamaçlarında yapışma kullanıcı tartışması",
+      "url": "https://www.team-bhp.com/forum/technical-stuff/234478-sticky-interior-door-handles-older-bmws.html",
+      "kind": "user-report",
+      "reviewed": true,
+      "publisher": "Team-BHP",
+      "reviewMethod": "Forum mesajlarının içeriği okundu",
+      "note": "F10 520d ve başka 5 Serisi sahibi deneyimleri; farklı kullanıcı ifadeleri aynı forumda."
+    },
+    {
+      "id": "gpt2-bmw-f10-handle-mycarforum",
+      "title": "BMW F10 kapı iç tutamacı problemi kullanıcı tartışması",
+      "url": "https://www.mycarforum.com/forums/topic/2706731-bmw-f10-door-inner-handles-sticky-problem/",
+      "kind": "user-report",
+      "reviewed": true,
+      "publisher": "Mycarforum",
+      "reviewMethod": "Forum sayfasının içeriği okundu"
+    },
+    {
+      "id": "gpt2-bmw-e90-frm-specialist",
+      "title": "BMW E90 FRM modülü onarımı uzman servis örneği",
+      "url": "https://www.moksauto.com/frm-1/",
+      "kind": "expert-service",
+      "reviewed": true,
+      "publisher": "Moks Auto",
+      "reviewMethod": "Uzman servis onarım anlatımı okundu",
+      "note": "E90 ve güç kesilmesi sonrası FRM çalışmama örneği, bildirilen vakalar."
+    },
+    {
+      "id": "gpt2-bmw-e90-frm-motortalk",
+      "title": "BMW E90 footwell modülü kullanıcı tartışması",
+      "url": "https://www.motor-talk.de/forum/fussraummodul-defekt-t6050062.html",
+      "kind": "user-report",
+      "reviewed": true,
+      "publisher": "MOTOR-TALK",
+      "reviewMethod": "Forum metni okundu"
+    }
+  ],
+  "issues": [
+    {
+      "id": "gpt2-bmw-f10-kapi-ici-tutamac-yapisma",
+      "title": "İç kapı tutamacında yapışma",
+      "summary": "İç kapı tutamaçlarının kaplaması zamanla yumuşayıp yapışkan hale gelebiliyor; ele boya veya plastik kalıntısı bulaşabildiği bildiriliyor.",
+      "category": "interior",
+      "frequency": "medium",
+      "frequencyRationale": "F10 sahiplerinden birden fazla bağımsız toplulukta tekrarlayan bildirim var; ölçülmüş arıza oranı yok.",
+      "vehicles": [
+        {
+          "brand": "BMW",
+          "model": "5 Serisi",
+          "generation": "5 Serisi (F10/F11/F07/F18)",
+          "years": {
+            "from": 2011,
+            "to": 2016
+          }
+        }
+      ],
+      "sourceIds": [
+        "gpt2-bmw-f10-handle-teambhp",
+        "gpt2-bmw-f10-handle-mycarforum"
+      ],
+      "uncertainties": "Belirgin kullanıcı örnekleri F10/F11 ile ilgilidir. F07/F18 gövde alt varyantlarının aynı iç tutamaç kaplamasına sahip olduğu ayrı doğrulanmadan kapsamı genişletmeyin."
+    },
+    {
+      "id": "gpt2-bmw-e90-frm-modulu-islev-kaybi",
+      "title": "FRM modülünde elektrik işlev kaybı",
+      "summary": "Bazı E90 araçlarda FRM kontrol modülünün arızalanmasıyla camlar, sinyaller veya aydınlatma işlevleri devre dışı kalabiliyor.",
+      "category": "electrical",
+      "frequency": "medium",
+      "frequencyRationale": "Hem elektronik onarım uzmanı örneği hem kullanıcı topluluğu bildirimleri var; yaygınlık oranı bilinmiyor.",
+      "vehicles": [
+        {
+          "brand": "BMW",
+          "model": "3 Serisi",
+          "generation": "3 Serisi (E90)",
+          "years": {
+            "from": 2005,
+            "to": 2012
+          }
+        }
+      ],
+      "sourceIds": [
+        "gpt2-bmw-e90-frm-specialist",
+        "gpt2-bmw-e90-frm-motortalk"
+      ],
+      "uncertainties": "FRM yazılım/nesil farkları vardır; tüm E90 araçlarda aynı modül revizyonu ya da aynı tetikleyici bulunmayabilir. E91/E92/E93 katalogda aynı nesile bağlı olsa da kaynak ayrımı doğrulanmalı."
+    }
+  ]
+}

@@ -43,6 +43,16 @@
       "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu.",
       "publishedAt": "2006-04-21",
       "note": "Kayış üreticisinin teknik bülteni; Renault servis kampanyası olarak sınıflandırılmadı."
+    },
+    {
+      "id": "renbreakers-clio-d4f712",
+      "title": "Clio II D4F 712 gaz kelebeği parça eşleştirmesi",
+      "url": "https://www.renaultbreakers.co.uk/store/Renault-Clio-MK2-2001-2006-12-16v-D4F-712-Throttle-Body-8200067219/00015007/",
+      "publisher": "RENBreakers",
+      "kind": "technical-publication",
+      "reviewed": true,
+      "reviewMethod": "İkinci turda bağlantı açıldı; ilgili kapsam ve içerik okundu.",
+      "note": "Bağımsız parça tedarikçisinin birincil ürün kaydı; sadece parça/araç uyumluluğu için kullanıldı. Arıza sıklığı veya Renault onayı kanıtı değildir."
     }
   ],
   "issues": [
@@ -59,19 +69,22 @@
           "model": "Clio",
           "years": {
             "from": 2001,
-            "to": 2008
+            "to": 2006
           },
           "engines": [
             {
-              "name": "1.2 16V"
+              "name": "1.2 16V",
+              "code": "D4F 712"
             }
-          ]
+          ],
+          "generation": "Clio II"
         }
       ],
       "sourceIds": [
-        "ecu-clio-throttle"
+        "ecu-clio-throttle",
+        "renbreakers-clio-d4f712"
       ],
-      "uncertainties": "Kaynak 2001–2008 ve H8200067219, 8200166059, 8200166869 parçalarını belirtiyor. Nesil açık olmadığı için yalnızca yıldan Clio II/III ataması yapılmadı. Atmosferik 1.2 16V kaydıdır; 1.2 TCe ile ilişkilendirilmemeli. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir."
+      "uncertainties": "İkinci turda çalışma kapsamı, ECU Testing arıza açıklaması ile RENBreakers parça eşleştirmesinin kesişimine daraltıldı: Clio II, 2001–2006, D4F 712, 8200067219 / 8200166869. Parça satıcısı eşleştirmesi üretici VIN doğrulamasının yerini tutmaz. D4F 722 ve diğer alt kodlar, Clio III ve 2007–2008 kapsamı kanıtlanmadığından çıkarıldı; bu araçların sorunsuz olduğu iddia edilmiyor. Atmosferik motor; 1.2 TCe hariç. Araç üzerindeki motor kodu ve kelebeğin numarası doğrulanmadan aktarılmamalı."
     },
     {
       "id": "astra-renault-renault-bosch-abs-valve-relay",
@@ -104,7 +117,7 @@
       "sourceIds": [
         "actronics-renault-abs-relay"
       ],
-      "uncertainties": "Yalnızca kaynaktaki Bosch 8 ESP modülleri: Clio III 0265950377; Megane II 0265950563; Scenic II 0265950770; Modus 0265950787. DF017/20675/50C3/C10C3 kodları tanı ipucudur, tek başına arıza kanıtı değildir. Motor/yıl kapsamı verilmedi; bütün ABS ünitelerine uygulanmamalı. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir."
+      "uncertainties": "Yalnızca kaynaktaki Bosch 8 ESP modülleri: Clio III 0265950377; Megane II 0265950563; Scenic II 0265950770; Modus 0265950787. DF017/20675/50C3/C10C3 kodları tanı ipucudur, tek başına arıza kanıtı değildir. Motor/yıl kapsamı verilmedi; bütün ABS ünitelerine uygulanmamalı. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir. İkinci tur: ACTRONICS tablosu tekrar okundu; dört modelin numaraları ayrı ayrı doğrulandı. Kaynak ATE MK60 arızalarından da bahsediyor ancak bu kaydın kapsamı yalnızca listelenen Bosch numaralarıdır. Parça bazlı üretim başlangıç/bitiş tarihleri verilmedi; neslin bütün yılları eklenmedi. Parça numarası şemada yapısal koşul olmadığından otomatik aktarım için incelemede kalmalı."
     },
     {
       "id": "astra-renault-early-k9k-accessory-tensioner",
@@ -177,7 +190,7 @@
       "sourceIds": [
         "gates-k9k-tensioner-013"
       ],
-      "uncertainties": "Zorunlu kapsam: Haziran 2001–Haziran 2002 üretimi ve KLİMASIZ araçlar. Şema ay/donanım filtresi taşımadığından years tek başına eşleştirme için yeterli değildir. Kaynaktaki Clio/Symbol tipleri BB07/BB08/CB07/CB08/LB07/SB07/SB08; Kangoo tipleri FC07/FC08/KC07/KC09. Tüm K9K motorlarına aktarılamaz. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir."
+      "uncertainties": "Zorunlu kapsam: Haziran 2001–Haziran 2002 üretimi ve KLİMASIZ araçlar. Şema ay/donanım filtresi taşımadığından years tek başına eşleştirme için yeterli değildir. Kaynaktaki Clio/Symbol tipleri BB07/BB08/CB07/CB08/LB07/SB07/SB08; Kangoo tipleri FC07/FC08/KC07/KC09. Tüm K9K motorlarına aktarılamaz. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir. İkinci tur: bültendeki eski gergiler 8200262773 / 8200292784, değiştirilmiş gergi 8200328372 olarak doğrulandı. Klima bulunan araçlar kapsam dışıdır. Değiştirilmiş parça takılmış araç eski arıza kapsamına otomatik dahil edilemez. Ay, klima ve parça koşulları şemada ifade edilemediği için inceleme devam eder."
     }
   ]
 }

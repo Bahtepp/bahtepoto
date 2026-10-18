@@ -66,7 +66,7 @@
       "sourceIds": [
         "hella-f9q-egr"
       ],
-      "uncertainties": "Bülten kesin üretim yılı ve F9Q alt kodu vermiyor. P0172/P0400/P0401 tanıda anılıyor; aşırı yağın nedeni ayrıca araştırılmalı. Her EGR kirlenmesi üretim kusuru değildir. Diğer dCi aileleri kapsam dışı. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir."
+      "uncertainties": "Bülten kesin üretim yılı ve F9Q alt kodu vermiyor. P0172/P0400/P0401 tanıda anılıyor; aşırı yağın nedeni ayrıca araştırılmalı. Her EGR kirlenmesi üretim kusuru değildir. Diğer dCi aileleri kapsam dışı. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir. İkinci turda kaynak yeniden kontrol edildi: kod yalnızca F9Q... biçiminde; 800/804/812 gibi alt kod veya güç listesi yok. Genel uyumluluk kataloğundan bu alt kodlara arıza taşımak mümkün değil. Megane II ve Scenic II korunuyor; motor alt kodu kesinleştirilmedi."
     },
     {
       "id": "astra-renault-megane-i-hvac-flap",

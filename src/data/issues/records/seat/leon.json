@@ -376,5 +376,105 @@
     "updatedAt": "2026-10-18",
     "notes": "Rehberler kuru 7 ileri kutuyu Ibiza, Leon ve Arona ile anıyor. Yüksek torklu 150 ve 180 PS Ibiza satırları ıslak kutu olabileceği için alınmadı. Ateca 1.4 ACT büyük gövdeyle ıslak kutu kullanabildiği için alınmadı. CUPRA 1.5 ve 2.0 motorları bu kayda konmadı.",
     "demo": false
+  },
+  {
+    "id": "seat-15-tsi-soguk-titreme",
+    "slug": "seat-15-tsi-soguk-titreme",
+    "brandId": "seat",
+    "kind": "chronic",
+    "category": "engine",
+    "title": "Soğuk 1.5 TSI motorunda titreme",
+    "summary": "Bazı erken Leon ve Ateca 1.5 TSI Evo motorlar soğukken düşük devirde düzensiz çekiş ve titreme yapabiliyor. Yazılım güncellemesi her araçta sorunu tamamen kaldırmıyor.",
+    "symptoms": [
+      "Bazı erken Leon ve Ateca 1.5 TSI Evo motorlar soğukken düşük devirde düzensiz çekiş ve titreme yapabiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "seat-leon"
+        ],
+        "generationIds": [
+          "seat-leon-5f"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "seat-15-act-150"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2017,
+          "to": 2020,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "seat-ateca"
+        ],
+        "generationIds": [
+          "seat-ateca-kh7"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "seat-15-act-150"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2017,
+          "to": 2020,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "repeated-reports",
+      "note": "Leon ve Ateca için hem haberde hem sonraki sahip yorumlarında aynı soğuk titreme anlatılıyor. Oran ölçülmediği için yüksek denmedi.",
+      "sourceIds": [
+        "arastirma-cursor-cursor-autoexpress-15tsi-2019",
+        "arastirma-cursor-cursor-seisenlinea-15tsi"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "cursor",
+      "id": "seat-15-tsi-soguk-titreme"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-cursor-cursor-autoexpress-15tsi-2019",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-cursor-cursor-seisenlinea-15tsi",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-18",
+    "notes": "Leon ve Ateca için hem haberde hem sonraki sahip yorumlarında aynı soğuk titreme anlatılıyor. Oran ölçülmediği için yüksek denmedi. Leon 4, Ibiza, Arona ve 2026 Ateca 1.5 TSI ACT satırı bağlanmadı. Adsız 1.5 satırı alınmadı.",
+    "demo": false
   }
 ]

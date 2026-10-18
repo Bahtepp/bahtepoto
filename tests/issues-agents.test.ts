@@ -122,7 +122,12 @@ describe('ajan kayıtlarının kapsamı', () => {
       issues: live.issues,
       sources: live.sources,
     });
-    assert.equal(gpt.every((item) => item.decision === 'duplicate'), true);
+    for (const id of ['gpt-audi-b8-20-tfsi-yag-tuketimi', 'gpt-bmw-n20-zincir-kilavuzu', 'gpt-mer-w205-c220d-nox-sensoru']) {
+      assert.equal(gpt.find((item) => item.researchId === id)?.decision, 'duplicate', id);
+    }
+    for (const id of ['gpt2-audi-a6-c7-mmi-ekran-acilma', 'gpt2-audi-q5-panorama-tavan-drenaj', 'gpt2-bmw-f10-kapi-ici-tutamac-yapisma', 'gpt2-bmw-e90-frm-modulu-islev-kaybi']) {
+      assert.equal(live.issues.some((item) => item.researchRef?.id === id), false, id);
+    }
     const claude = planResearchImport({
       files: files('data/research/agent-outputs/claude-hyundai').map((file) => readResearchJson(file)),
       catalog,
@@ -137,8 +142,21 @@ describe('ajan kayıtlarının kapsamı', () => {
       issues: live.issues,
       sources: live.sources,
     });
-    assert.equal(astra.length, 14);
-    assert.equal(astra.every((item) => item.decision === 'review'), true);
+    const stillHeld = [
+      'astra-renault-early-k9k-accessory-tensioner',
+      'astra-renault-renault-bosch-abs-valve-relay',
+      'astra-renault-clio-12-16v-throttle',
+      'astra-renault-fluence-edc-control-loss',
+      'astra-renault-sandero-easyr-judder',
+      'astra-renault-duster-hjd-ignition',
+      'astra-renault-sandero-ignition-stuck',
+    ];
+    assert.equal(live.issues.some((item) => item.researchRef?.id === 'astra-renault-clio-iv-airbag-ecu'), false);
+    for (const id of stillHeld) {
+      const row = astra.find((item) => item.researchId === id);
+      assert.ok(row, id);
+      assert.equal(row.decision, 'review', `${id} ${row.reason}`);
+    }
   });
 });
 
