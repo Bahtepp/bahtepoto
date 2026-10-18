@@ -1,0 +1,69 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "claude-stellantis",
+  "brands": ["Opel"],
+  "models": ["Astra", "Insignia", "Mokka"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "claude-st-febi-181945-protips",
+      "title": "febi ProTips 181945: Gasket for Timing Chain Tensioner (Opel/Vauxhall 1.6 CDTi)",
+      "url": "https://www.techtips.ie/febi/opelvauxhaul-timing-chain-tensioner-gasket.pdf",
+      "kind": "technical-publication",
+      "publisher": "Ferdinand Bilstein GmbH + Co. KG (febi)",
+      "reviewed": true,
+      "reviewMethod": "Tek sayfalık PDF indirildi, metni pdftotext ile okundu.",
+      "note": "Belirti: soğuk çalıştırmada veya uzun süre bekledikten sonra triger zinciri bölgesinden takırtı. Neden: orijinal gergi tasarımı motor durunca yağın kartere geri akmasına izin veriyor; ilk çalıştırmada gergi basınç kazanana kadar zincir fazla oynuyor. Çözüm: gergi ile blok arasına yağ haznesi oluşturan conta (febi 181945); eksantrik milleri, yağ pompası ve zincir parçaları da kontrol edilmeli. Uygulama: Astra J (P10), Astra J GTC, Astra K (B16), Insignia A (G09), Insignia B (Z18), Meriva B (S10), Mokka / Mokka X (J13), Zafira C Tourer (P12), 1.6 CDTi. Listedeki LVK, LVL, LVM, LWQ, LWV GM'nin RPO kodlarıdır, Opel motor kodu değildir.",
+      "basedOn": "febi-181945"
+    },
+    {
+      "id": "claude-st-autobiz-febi-opel-rattle",
+      "title": "febi solves Opel engine rattle issue",
+      "url": "https://www.autobiz.ie/garage/febi-solves-opel-engine-rattle-issue",
+      "kind": "technical-publication",
+      "publisher": "Autobiz",
+      "reviewed": true,
+      "reviewMethod": "Haber metni okundu.",
+      "note": "Aynı febi teknik notunun haber hâli; içerik ve uygulama listesi aynı.",
+      "basedOn": "febi-181945"
+    }
+  ],
+  "issues": [
+    {
+      "id": "claude-stellantis-opel-16cdti-soguk-zincir-sesi",
+      "title": "1.6 CDTI: soğuk çalıştırmada triger zinciri takırtısı",
+      "summary": "1.6 CDTI dizel motorda soğuk çalıştırmada veya uzun beklemeden sonra zincir bölgesinden takırtı gelebiliyor. Gerginin yağı kartere geri boşaltması, ilk saniyelerde zincirin fazla oynamasına yol açıyor.",
+      "category": "engine",
+      "frequency": "unknown",
+      "frequencyRationale": "Tek kaynak bir parça üreticisinin teknik notudur; sorun ve çözüm tanımlanıyor ama görülme sıklığına dair veri yok.",
+      "vehicles": [
+        {
+          "brand": "Opel",
+          "model": "Astra",
+          "generation": "Astra K",
+          "engines": [{ "name": "1.6 DIZEL" }]
+        },
+        {
+          "brand": "Opel",
+          "model": "Insignia",
+          "generation": "Insignia A (G09)",
+          "engines": [{ "name": "1.6 DIZEL 136 PS" }]
+        },
+        {
+          "brand": "Opel",
+          "model": "Insignia",
+          "generation": "Insignia B (Z18)",
+          "engines": [{ "name": "1.6 DIZEL 136 PS" }]
+        },
+        {
+          "brand": "Opel",
+          "model": "Mokka",
+          "generation": "Mokka A (J13)",
+          "engines": [{ "name": "1.6 DIZEL 136 PS" }]
+        }
+      ],
+      "sourceIds": ["claude-st-febi-181945-protips", "claude-st-autobiz-febi-opel-rattle"],
+      "uncertainties": "Yalnızca GM dönemi 1.6 CDTI (Whisper dizel) içindir. Grandland ve Crossland'deki PSA kökenli 1.6 dizel (BlueHDi) bu kayda girmez. Kaynak Opel motor kodu vermiyor; B16DTH, B16DTL gibi kodlar okunmadığı için yazılmadı. Katalogda Astra K neslinde 1.6 dizel yok; Türkiye'de satılan 1.6 dizel Astra'lar 'nesli belirlenmemiş' grubunda (110 ve 136 PS) görünüyor, eşleşme incelemede kontrol edilmeli. Opel'in kendi teknik bülteni bulunamadı. İki kaynak aynı febi notudur."
+    }
+  ]
+}

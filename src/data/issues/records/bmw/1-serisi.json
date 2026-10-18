@@ -1,0 +1,479 @@
+[
+  {
+    "id": "bmw-gpt-bmw-n13-termostat-flans-kacagi",
+    "slug": "bmw-gpt-bmw-n13-termostat-flans-kacagi",
+    "brandId": "bmw",
+    "kind": "known-defect",
+    "category": "cooling",
+    "title": "Termostat ve su dağıtım gövdesinde kaçak",
+    "summary": "Plastik termostat veya su dağıtım gövdesi çatlayıp bu bağlantıdan su sızdırabiliyor. Kaçak genleşme kabında veya turbo hattında değil, gövdenin kendisindedir.",
+    "symptoms": [
+      "Plastik termostat veya su dağıtım gövdesi çatlayıp bu bağlantıdan su sızdırabiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "bmw-1-serisi"
+        ],
+        "generationIds": [
+          "bmw-1-serisi-f20-f21"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "bmw-116i"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2011,
+          "to": 2015,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "bmw-1-serisi"
+        ],
+        "generationIds": [
+          "bmw-1-serisi-f20-f21"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "bmw-118i"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2012,
+          "to": 2014,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "bmw-3-serisi"
+        ],
+        "generationIds": [
+          "bmw-3-serisi-f30-f31-f34-f35"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "bmw-316i"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2014,
+          "to": 2015,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "bmw-3-serisi"
+        ],
+        "generationIds": [
+          "bmw-3-serisi-f30-f31-f34-f35"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "bmw-320i-ed-170",
+          "bmw-16-320i-ed-170"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2013,
+          "to": 2016,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Teknik yazı plastiğin çatladığını, Türkiye forumunda da termostat dağıtıcısı ayrıca anılıyor. Sayılmış bir arıza oranı yok.",
+      "sourceIds": [
+        "arastirma-gptgerman-gpt-n13-differentcarreview-2023",
+        "arastirma-gptgerman-gpt-n13-techturkey-sogutma-2019",
+        "arastirma-gptgerman-gpt-n13-techturkey-esanjor-2020"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "gpt-german",
+      "id": "gpt-bmw-n13-termostat-flans-kacagi"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-gptgerman-gpt-n13-differentcarreview-2023",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-gptgerman-gpt-n13-techturkey-sogutma-2019",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-gptgerman-gpt-n13-techturkey-esanjor-2020",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "Teknik yazı plastiğin çatladığını, Türkiye forumunda da termostat dağıtıcısı ayrıca anılıyor. Sayılmış bir arıza oranı yok. 116i ve 118i katalog satırları 2016'ya kadar uzanır; 2015'te 1.5 litrelik B38'e geçiş vardır. 118i 2014 model yılıyla sınırlandı. 1.5 118i, 1.6 118i 136 PS, 328i, 320i 184 PS, G20 1.6 320i 170 PS ve dizeller kapsama alınmadı. E87 116i ile E90 316i aynı satış adını taşır, nesil filtresiyle dışarıdadır.",
+    "demo": false
+  },
+  {
+    "id": "bmw-gpt-bmw-n13-turbo-sogutma-oring-kacagi",
+    "slug": "bmw-gpt-bmw-n13-turbo-sogutma-oring-kacagi",
+    "brandId": "bmw",
+    "kind": "known-defect",
+    "category": "cooling",
+    "title": "Turbo soğutma hattında O-ring kaçağı",
+    "summary": "Turbo soğutma borusunun bağlantı O-ringleri su kaçırabiliyor. Turbo yağ borusundaki yağ kaçağı bu kaydın konusu değildir.",
+    "symptoms": [
+      "Turbo soğutma borusunun bağlantı O-ringleri su kaçırabiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "bmw-1-serisi"
+        ],
+        "generationIds": [
+          "bmw-1-serisi-f20-f21"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "bmw-116i"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2011,
+          "to": 2015,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "bmw-1-serisi"
+        ],
+        "generationIds": [
+          "bmw-1-serisi-f20-f21"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "bmw-118i"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2012,
+          "to": 2014,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "bmw-3-serisi"
+        ],
+        "generationIds": [
+          "bmw-3-serisi-f30-f31-f34-f35"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "bmw-316i"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2014,
+          "to": 2015,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "bmw-3-serisi"
+        ],
+        "generationIds": [
+          "bmw-3-serisi-f30-f31-f34-f35"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "bmw-320i-ed-170",
+          "bmw-16-320i-ed-170"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2013,
+          "to": 2016,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Teknik yazı turbo yanındaki soğutma O-ringlerini yağ borusundan ayrı sayar. Türkiye'de bir kullanıcı turbo soğutma O-ringinden su kaçırdığını yazar. Sayılmış oran yok.",
+      "sourceIds": [
+        "arastirma-gptgerman-gpt-n13-differentcarreview-2023",
+        "arastirma-gptgerman-gpt-n13-techturkey-sogutma-2019"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "gpt-german",
+      "id": "gpt-bmw-n13-turbo-sogutma-oring-kacagi"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-gptgerman-gpt-n13-differentcarreview-2023",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-gptgerman-gpt-n13-techturkey-sogutma-2019",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "Teknik yazı turbo yanındaki soğutma O-ringlerini yağ borusundan ayrı sayar. Türkiye'de bir kullanıcı turbo soğutma O-ringinden su kaçırdığını yazar. Sayılmış oran yok. 320i ED forumundaki 'turbo O-ring yağ kaçırıyor' iletileri bu karta bağlanmadı. 2012 model olduğu sorgulanan su giriş O-ringi iletisi de N20 olabileceği için kullanılmadı. Motor kapsamı termostat kaydıyla aynıdır.",
+    "demo": false
+  },
+  {
+    "id": "bmw-gpt-bmw-n13-genlesme-kabi-catlagi",
+    "slug": "bmw-gpt-bmw-n13-genlesme-kabi-catlagi",
+    "brandId": "bmw",
+    "kind": "known-defect",
+    "category": "cooling",
+    "title": "Genleşme kabında çatlama",
+    "summary": "Genleşme kabının kendisi çatlayabiliyor. Kapağın içindeki basınç valfi sıkışırsa sistem fazla basınçlanır; bu, kabın çatlağından ayrı kontrol edilir.",
+    "symptoms": [
+      "Genleşme kabının kendisi çatlayabiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "bmw-1-serisi"
+        ],
+        "generationIds": [
+          "bmw-1-serisi-f20-f21"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "bmw-116i"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2011,
+          "to": 2015,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "bmw-1-serisi"
+        ],
+        "generationIds": [
+          "bmw-1-serisi-f20-f21"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "bmw-118i"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2012,
+          "to": 2014,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "bmw-3-serisi"
+        ],
+        "generationIds": [
+          "bmw-3-serisi-f30-f31-f34-f35"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "bmw-316i"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2014,
+          "to": 2015,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "bmw-3-serisi"
+        ],
+        "generationIds": [
+          "bmw-3-serisi-f30-f31-f34-f35"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "bmw-320i-ed-170",
+          "bmw-16-320i-ed-170"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2013,
+          "to": 2016,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Teknik yazı kabın çatlamasını ve kapağın basınç valfini ayrı sayar. Türkiye’de 116i, 320i ED ve başka N13 sahipleri kabın değiştiğini veya çatladığını yazar. Sayılmış oran yok.",
+      "sourceIds": [
+        "arastirma-gptgerman-gpt-n13-differentcarreview-2023",
+        "arastirma-gptgerman-gpt-n13-techturkey-deneyim-2018",
+        "arastirma-gptgerman-gpt-n13-techturkey-sogutma-2019",
+        "arastirma-gptgerman-gpt-n13-techturkey-f30-2021",
+        "arastirma-gptgerman-gpt-n13-techturkey-esanjor-2020"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "gpt-german",
+      "id": "gpt-bmw-n13-genlesme-kabi-catlagi"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-gptgerman-gpt-n13-differentcarreview-2023",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-gptgerman-gpt-n13-techturkey-deneyim-2018",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-gptgerman-gpt-n13-techturkey-sogutma-2019",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-gptgerman-gpt-n13-techturkey-f30-2021",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-gptgerman-gpt-n13-techturkey-esanjor-2020",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "Teknik yazı kabın çatlamasını ve kapağın basınç valfini ayrı sayar. Türkiye’de 116i, 320i ED ve başka N13 sahipleri kabın değiştiğini veya çatladığını yazar. Sayılmış oran yok. Kapak valfi ile kabın çatlağı aynı parça grubundadır ama aynı arıza değildir. Devirdaim pompası ve şanzıman ısı eşanjörü bu kartta yoktur. Motor kapsamı termostat kaydıyla aynıdır.",
+    "demo": false
+  }
+]

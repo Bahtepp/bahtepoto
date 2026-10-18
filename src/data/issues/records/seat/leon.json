@@ -1,0 +1,480 @@
+[
+  {
+    "id": "seat-ea111-triger-zinciri",
+    "slug": "seat-ea111-triger-zinciri",
+    "brandId": "seat",
+    "kind": "chronic",
+    "category": "engine",
+    "title": "Triger zincirinde uzama",
+    "summary": "Bazı erken 1.4 TSI motorlarda triger zincirinin uzadığı ve soğukta tıkırtı yaptığı bildiriliyor. Kayışlı sonraki 1.4 TSI motorlar bu kaydın dışındadır.",
+    "symptoms": [
+      "Bazı erken 1.4 TSI motorlarda triger zincirinin uzadığı ve soğukta tıkırtı yaptığı bildiriliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "seat-leon"
+        ],
+        "generationIds": [
+          "seat-leon-1p"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "seat-14-tsi-125"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "seat-ibiza"
+        ],
+        "generationIds": [
+          "seat-ibiza-6j-6p"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "seat-14-tsi-180"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "seat-toledo"
+        ],
+        "generationIds": [
+          "seat-toledo-4-nesil"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "seat-14-tsi-122"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "repeated-reports",
+      "note": "Bilstein notu SEAT uygulamalarını da sayıyor. 150 PS Ibiza motoru aynı nesilde yeni motorla karışabildiği için alınmadı.",
+      "sourceIds": [
+        "arastirma-cursor-bilstein-ea111-zincir",
+        "arastirma-cursor-autobild-ea111-zincir"
+      ]
+    },
+    "frequencyRating": "high",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "cursor",
+      "id": "seat-ea111-triger-zinciri"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-cursor-bilstein-ea111-zincir",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-cursor-autobild-ea111-zincir",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-18",
+    "notes": "Bilstein notu SEAT uygulamalarını da sayıyor. 150 PS Ibiza motoru aynı nesilde yeni motorla karışabildiği için alınmadı. Toledo 125 PS ve Leon'un sonraki nesli bu zincir kaydına konmadı.",
+    "demo": false
+  },
+  {
+    "id": "seat-ea211-devirdaim-govdesi",
+    "slug": "seat-ea211-devirdaim-govdesi",
+    "brandId": "seat",
+    "kind": "chronic",
+    "category": "cooling",
+    "title": "Devirdaim gövdesinden su kaçağı",
+    "summary": "Bazı 1.4 TSI motorlarda plastik devirdaim ve termostat gövdesinden su kaçırdığı bildiriliyor. Kaçak her araçta görülmeyebilir.",
+    "symptoms": [
+      "Bazı 1.4 TSI motorlarda plastik devirdaim ve termostat gövdesinden su kaçırdığı bildiriliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "seat-leon"
+        ],
+        "generationIds": [
+          "seat-leon-5f"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "seat-14-tsi-125",
+          "seat-14-tsi-140",
+          "seat-14-tsi-150",
+          "seat-14-tsi-act-150"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "seat-toledo"
+        ],
+        "generationIds": [
+          "seat-toledo-4-nesil"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "seat-14-tsi-125"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "repeated-reports",
+      "note": "Servis notu Leon'daki EA211 1.2 ve 1.4 motorlarını anıyor. Katalogda 1.2 ile 1.4 aynı gövde diye birleşmedi; yalnızca adı doğrulanan 1.4 sürümleri alındı.",
+      "sourceIds": [
+        "arastirma-cursor-importcar-ea211-pompa",
+        "arastirma-cursor-seatcupra-ea211-pompa"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "cursor",
+      "id": "seat-ea211-devirdaim-govdesi"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-cursor-importcar-ea211-pompa",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-cursor-seatcupra-ea211-pompa",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-18",
+    "notes": "Servis notu Leon'daki EA211 1.2 ve 1.4 motorlarını anıyor. Katalogda 1.2 ile 1.4 aynı gövde diye birleşmedi; yalnızca adı doğrulanan 1.4 sürümleri alındı. Leon'da ailesi yazılmamış düz 1.4 TSI satırı bağlanmadı. Toledo 122 PS zincir kaydındadır.",
+    "demo": false
+  },
+  {
+    "id": "seat-dq200-kavrama",
+    "slug": "seat-dq200-kavrama",
+    "brandId": "seat",
+    "kind": "chronic",
+    "category": "transmission",
+    "title": "DSG kavrama sarsıntısı",
+    "summary": "Bazı kuru kavramalı 7 ileri DSG kutularında kalkışta sarsıntı bildiriliyor. Islak kavramalı DSG kutuları bu kaydın dışındadır.",
+    "symptoms": [
+      "Bazı kuru kavramalı 7 ileri DSG kutularında kalkışta sarsıntı bildiriliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "seat-leon"
+        ],
+        "generationIds": [
+          "seat-leon-5f"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "seat-12-tsi-105",
+          "seat-12-tsi-110",
+          "seat-14-tsi-150",
+          "seat-14-tsi-act-150",
+          "seat-16-tdi-105",
+          "seat-16-tdi-110",
+          "seat-16-tdi-115"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [
+          {
+            "type": "dual-clutch",
+            "name": "DSG"
+          }
+        ],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "seat-ibiza"
+        ],
+        "generationIds": [
+          "seat-ibiza-6j-6p"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "seat-10-tsi-110",
+          "seat-12-tsi-105"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [
+          {
+            "type": "dual-clutch",
+            "name": "DSG"
+          }
+        ],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "seat-ibiza"
+        ],
+        "generationIds": [
+          "seat-ibiza-6f-kj1"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "seat-10-tsi-116"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [
+          {
+            "type": "dual-clutch",
+            "name": "DSG"
+          }
+        ],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "seat-arona"
+        ],
+        "generationIds": [
+          "seat-arona-kj7"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "seat-10-tsi-116"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [
+          {
+            "type": "dual-clutch",
+            "name": "DSG"
+          }
+        ],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "seat-toledo"
+        ],
+        "generationIds": [
+          "seat-toledo-4-nesil"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "seat-14-tsi-122",
+          "seat-14-tsi-125"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [
+          {
+            "type": "dual-clutch",
+            "name": "DSG"
+          }
+        ],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "repeated-reports",
+      "note": "Rehberler kuru 7 ileri kutuyu Ibiza, Leon ve Arona ile anıyor. Yüksek torklu 150 ve 180 PS Ibiza satırları ıslak kutu olabileceği için alınmadı.",
+      "sourceIds": [
+        "arastirma-cursor-vagpulse-dq200",
+        "arastirma-cursor-findservice-dq200"
+      ]
+    },
+    "frequencyRating": "high",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "cursor",
+      "id": "seat-dq200-kavrama"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-cursor-vagpulse-dq200",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-cursor-findservice-dq200",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-18",
+    "notes": "Rehberler kuru 7 ileri kutuyu Ibiza, Leon ve Arona ile anıyor. Yüksek torklu 150 ve 180 PS Ibiza satırları ıslak kutu olabileceği için alınmadı. Ateca 1.4 ACT büyük gövdeyle ıslak kutu kullanabildiği için alınmadı. CUPRA 1.5 ve 2.0 motorları bu kayda konmadı.",
+    "demo": false
+  },
+  {
+    "id": "seat-15-tsi-soguk-titreme",
+    "slug": "seat-15-tsi-soguk-titreme",
+    "brandId": "seat",
+    "kind": "chronic",
+    "category": "engine",
+    "title": "Soğuk 1.5 TSI motorunda titreme",
+    "summary": "Bazı erken Leon ve Ateca 1.5 TSI Evo motorlar soğukken düşük devirde düzensiz çekiş ve titreme yapabiliyor. Yazılım güncellemesi her araçta sorunu tamamen kaldırmıyor.",
+    "symptoms": [
+      "Bazı erken Leon ve Ateca 1.5 TSI Evo motorlar soğukken düşük devirde düzensiz çekiş ve titreme yapabiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "seat-leon"
+        ],
+        "generationIds": [
+          "seat-leon-5f"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "seat-15-act-150"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2017,
+          "to": 2020,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "seat-ateca"
+        ],
+        "generationIds": [
+          "seat-ateca-kh7"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "seat-15-act-150"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2017,
+          "to": 2020,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "repeated-reports",
+      "note": "Leon ve Ateca için hem haberde hem sonraki sahip yorumlarında aynı soğuk titreme anlatılıyor. Oran ölçülmediği için yüksek denmedi.",
+      "sourceIds": [
+        "arastirma-cursor-cursor-autoexpress-15tsi-2019",
+        "arastirma-cursor-cursor-seisenlinea-15tsi"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "cursor",
+      "id": "seat-15-tsi-soguk-titreme"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-cursor-cursor-autoexpress-15tsi-2019",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-cursor-cursor-seisenlinea-15tsi",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-18",
+    "notes": "Leon ve Ateca için hem haberde hem sonraki sahip yorumlarında aynı soğuk titreme anlatılıyor. Oran ölçülmediği için yüksek denmedi. Leon 4, Ibiza, Arona ve 2026 Ateca 1.5 TSI ACT satırı bağlanmadı. Adsız 1.5 satırı alınmadı.",
+    "demo": false
+  }
+]

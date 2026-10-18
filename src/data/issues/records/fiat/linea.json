@@ -1,0 +1,63 @@
+[
+  {
+    "id": "fiat-gemini-fiat-linea-punto-gogus-catlamasi",
+    "slug": "fiat-gemini-fiat-linea-punto-gogus-catlamasi",
+    "brandId": "fiat",
+    "kind": "known-defect",
+    "category": "interior",
+    "title": "Yolcu hava yastığı kapağında çatlak",
+    "summary": "Linea'da yolcu hava yastığının üstündeki ön göğüs plastiğinde, darbe olmaksızın çatlak oluştuğu birçok kullanıcı şikayetinde yazılıyor.",
+    "symptoms": [
+      "Linea'da yolcu hava yastığının üstündeki ön göğüs plastiğinde, darbe olmaksızın çatlak oluştuğu birçok kullanıcı şikayetinde yazılıyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "fiat-linea"
+        ],
+        "generationIds": [
+          "fiat-linea-linea"
+        ],
+        "revisionIds": [],
+        "engineIds": [],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Şikayetvar'da çok sayıda Linea sahibi aynı kapak çatlağını anlatıyor. Şikayet sitesi oran vermez; yüksek denmedi.",
+      "sourceIds": [
+        "arastirma-geministellantis-fiat-linea-airbag-sv"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "gemini-stellantis",
+      "id": "gemini-fiat-linea-punto-gogus-catlamasi"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-geministellantis-fiat-linea-airbag-sv",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "researching",
+    "updatedAt": "2026-10-18",
+    "notes": "Şikayetvar'da çok sayıda Linea sahibi aynı kapak çatlağını anlatıyor. Şikayet sitesi oran vermez; yüksek denmedi. İlk metin yüksek diyordu; oran olmadığı için orta bırakıldı. Punto 3. nesil aynı kapak için okunmadı ve eklenmedi.",
+    "demo": false
+  }
+]

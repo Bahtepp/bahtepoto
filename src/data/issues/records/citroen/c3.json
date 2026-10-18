@@ -1,0 +1,229 @@
+[
+  {
+    "id": "citroen-claude-stellantis-citroen-15bluehdi-eksantrik-zinciri",
+    "slug": "citroen-claude-stellantis-citroen-15bluehdi-eksantrik-zinciri",
+    "brandId": "citroen",
+    "kind": "known-defect",
+    "category": "engine",
+    "title": "1.5 BlueHDi: eksantrik zincirinde uzama ve kopma",
+    "summary": "1.5 BlueHDi dizel motorda eksantrik millerini süren 7 mm zincir uzayıp ses, güç kaybı ve yağ tüketimi yapabiliyor; koparsa motor bozuluyor. 1 Şubat 2023'ten sonra takılan 8 mm zincir bu kaydın dışındadır. Uzatılan özel kapsam Avrupa duyurusudur.",
+    "symptoms": [
+      "1.5 BlueHDi dizel motorda eksantrik millerini süren 7 mm zincir uzayıp ses, güç kaybı ve yağ tüketimi yapabiliyor; koparsa motor bozuluyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "citroen-c3"
+        ],
+        "generationIds": [
+          "citroen-c3-nesil-belirlenmedi"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "citroen-15-bluehdi-100"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2018,
+          "to": 2023,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "citroen-c3-aircross"
+        ],
+        "generationIds": [
+          "citroen-c3-aircross-nesil-belirlenmedi"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "citroen-15-bluehdi-100",
+          "citroen-15-bluehdi-120"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2018,
+          "to": 2023,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "citroen-c4"
+        ],
+        "generationIds": [
+          "citroen-c4-nesil-belirlenmedi"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "citroen-15-bluehdi-130"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2018,
+          "to": 2023,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "citroen-c4-cactus"
+        ],
+        "generationIds": [
+          "citroen-c4-cactus-uretim-2014"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "citroen-15-bluehdi-100",
+          "citroen-15-bluehdi-120"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2018,
+          "to": 2020,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "citroen-c5-aircross"
+        ],
+        "generationIds": [
+          "citroen-c5-aircross-c84"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "citroen-15-bluehdi-130"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2018,
+          "to": 2023,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "citroen-berlingo"
+        ],
+        "generationIds": [
+          "citroen-berlingo-k9"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "citroen-15-bluehdi-100",
+          "citroen-15-bluehdi-130"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2018,
+          "to": 2023,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "citroen-grand-c4-picasso"
+        ],
+        "generationIds": [
+          "citroen-grand-c4-picasso-nesil-belirlenmedi"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "citroen-15-bluehdi-130"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2018,
+          "to": 2018,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Üretici yüz binlerce araç için kontrol kampanyası başlattı ve kapsamı 10 yıla uzattı; tüketici örgütü sahip gruplarında yüzlerce dosya aktarıyor. Arıza oranı yayımlanmadığı için yüksek verilmedi.",
+      "sourceIds": [
+        "arastirma-claudestellantis-claude-st-largus-15bluehdi-chaine-c",
+        "arastirma-claudestellantis-claude-st-quechoisir-15bluehdi-c",
+        "arastirma-claudestellantis-claude-st-motorsactu-15bluehdi-c"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "claude-stellantis",
+      "id": "claude-stellantis-citroen-15bluehdi-eksantrik-zinciri"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-claudestellantis-claude-st-largus-15bluehdi-chaine-c",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-claudestellantis-claude-st-quechoisir-15bluehdi-c",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-claudestellantis-claude-st-motorsactu-15bluehdi-c",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "Üretici yüz binlerce araç için kontrol kampanyası başlattı ve kapsamı 10 yıla uzattı; tüketici örgütü sahip gruplarında yüzlerce dosya aktarıyor. Arıza oranı yayımlanmadığı için yüksek verilmedi. Üretim Ekim 2017-Ocak 2023. 8 mm zincir 1 Şubat 2023 sonrası kapsam dışı. C3, C4 ve Grand C4 Picasso'da 1.5 satırı nesli ayrılmamış grupta; kart yalnız güç değeri yazılı 1.5 BlueHDi adına bağlandı, etiketsiz 1.5 BlueHDi ve 1.6 motorlara yayılmadı. C-Elysée eklenmedi. Uzatılmış kapsam Avrupa duyurusudur.",
+    "demo": false
+  }
+]

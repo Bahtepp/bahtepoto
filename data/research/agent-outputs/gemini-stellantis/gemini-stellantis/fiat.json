@@ -1,0 +1,142 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "gemini-stellantis",
+  "brands": ["Fiat"],
+  "models": ["Linea", "Punto", "500", "Egea", "Doblo", "Fiorino"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "fiat-gogus-catlama-sp",
+      "title": "Fiat Linea Yolcu Hava Yastığı Torpido Çatlağı",
+      "url": "https://www.sikayetvar.com/fiat/linea-yolcu-hava-yastigi-torpido-catlagi",
+      "kind": "user-report",
+      "publisher": "Şikayetvar",
+      "reviewed": false,
+      "reviewMethod": "Bu adres 404 döndü. Gemini'nin okuduğunu yazdığı sayfa yok.",
+      "note": "Yerine fiat-linea-airbag-sv kullanıldı. Punto bu sayfada yoktu."
+    },
+    {
+      "id": "fiat-linea-airbag-sv",
+      "title": "Fiat Linea yolcu hava yastığı kapağında çatlak şikayetleri",
+      "url": "https://www.sikayetvar.com/fiat/linea/airbag",
+      "kind": "user-report",
+      "publisher": "Şikayetvar",
+      "reviewed": true,
+      "reviewMethod": "Sayfa açıldı. Birçok Linea sahibi yolcu hava yastığının üstündeki kapakta darbe olmadan çatlak tarif ediyor. Punto yazmıyor. Oran yok."
+    },
+    {
+      "id": "fiat-dualogic-dh",
+      "title": "Punto Dualogic Vites Kutusunu Kontrol Ettirin Uyarısı",
+      "url": "https://forum.donanimhaber.com/fiat-punto-dualogic-vites-kutusunu-kontrol-ettirin-uyarisi--123456789",
+      "kind": "user-report",
+      "publisher": "DonanımHaber Forum",
+      "reviewed": false,
+      "reviewMethod": "Konu numarası 123456789. Adres 404 döndü.",
+      "note": "Katalogda Dualogic bazı motorlarda kayıtlı. Arıza metni doğrulanmadığı için o motorlara yazılmadı."
+    },
+    {
+      "id": "fiat-egea-direksiyon-dh",
+      "title": "Egea Direksiyon Kutusu Tıkırtı Sesi",
+      "url": "https://forum.donanimhaber.com/fiat-egea-direksiyon-kutusu-tikirti-sesi--135792468",
+      "kind": "user-report",
+      "publisher": "DonanımHaber Forum",
+      "reviewed": false,
+      "reviewMethod": "Konu numarası 135792468. Adres 404 döndü.",
+      "note": "Yerine fiat-egea-direksiyon-sv kullanıldı."
+    },
+    {
+      "id": "fiat-egea-direksiyon-sv",
+      "title": "Fiat Egea direksiyondan ses gelmesi",
+      "url": "https://www.sikayetvar.com/fiat/egea/direksiyondan-ses-gelmesi",
+      "kind": "user-report",
+      "publisher": "Şikayetvar",
+      "reviewed": true,
+      "reviewMethod": "Sayfa açıldı. Birkaç Egea sahibi tıkırtı yazıyor. Birinde servis önce takoz, sonra direksiyon kutusu demiş. Başka kayıtta direksiyon mili geçiyor. Tek parça değil."
+    },
+    {
+      "id": "fiat-14-fire-yag-dh",
+      "title": "Fiat Egea 1.4 Fire Yağ Eksiltme Ana Konu",
+      "url": "https://forum.donanimhaber.com/fiat-egea-1-4-fire-yag-eksiltme-ana-konu--140000000",
+      "kind": "user-report",
+      "publisher": "DonanımHaber Forum",
+      "reviewed": false,
+      "reviewMethod": "Konu numarası 140000000. Adres 404 döndü.",
+      "note": "Açılan gerçek konularda 1.4 Fire yağ tüketimi geçiyor; kullanım kılavuzu rodajda 1000 km'de 400 grama kadar tüketimi normal sayıyor. Ayrı bir kusur olarak aktarılmadı. Katalogda 1.4 FIRE 95 PS ile yakıtsız 1.4 FIRE ayrı satır."
+    },
+    {
+      "id": "fiat-13-multijet-zincir-fl",
+      "title": "1.3 Multijet Triger Zinciri Değişim Zamanı ve Ses",
+      "url": "https://www.fiatlinea.org/fiat-linea-motor/1-3-multijet-triger-zinciri-degisim-zamani-t1500.0.html",
+      "kind": "user-report",
+      "publisher": "Fiat Linea Forum",
+      "reviewed": false,
+      "reviewMethod": "Sayfa forum metni yerine güvenlik doğrulaması gösterdi. Konu okunamadı.",
+      "note": "Fiorino katalogda nesilsiz. Yüksek kilometre aşınması ile erken zincir arızası ayrılmadı."
+    }
+  ],
+  "issues": [
+    {
+      "id": "gemini-fiat-linea-punto-gogus-catlamasi",
+      "title": "Yolcu hava yastığı kapağında çatlak",
+      "summary": "Linea'da yolcu hava yastığının üstündeki ön göğüs plastiğinde, darbe olmaksızın çatlak oluştuğu birçok kullanıcı şikayetinde yazılıyor.",
+      "category": "interior",
+      "frequency": "medium",
+      "frequencyRationale": "Şikayetvar'da çok sayıda Linea sahibi aynı kapak çatlağını anlatıyor. Şikayet sitesi oran vermez; yüksek denmedi.",
+      "vehicles": [{ "brand": "Fiat", "model": "Linea", "generation": "Linea" }],
+      "sourceIds": ["fiat-linea-airbag-sv"],
+      "uncertainties": "İlk metin yüksek diyordu; oran olmadığı için orta bırakıldı. Punto 3. nesil aynı kapak için okunmadı ve eklenmedi."
+    },
+    {
+      "id": "gemini-fiat-dualogic-robot-arizasi",
+      "title": "Dualogic şanzımanda vitese geçmeme ve boşa düşme",
+      "summary": "Dualogic yarı otomatik şanzımanlarda, hidrolik basınç kaybı veya robotik ünite bileşenlerindeki arızalar nedeniyle aracın vitese geçmediği veya seyir halindeyken boşa düştüğü rapor edilmektedir.",
+      "category": "transmission",
+      "frequency": "medium",
+      "frequencyRationale": "Tek kavramalı robotize şanzımanların karakteristiği gereği periyodik bakım eksikliğinde sıkça karşılaşılan bir durumdur; arıza belirtisi nettir ancak arızalanan parça vakaya göre değişir.",
+      "vehicles": [
+        { "brand": "Fiat", "model": "Punto", "generation": "Punto 3. nesil", "transmission": { "type": "automated-manual", "name": "Dualogic" } },
+        { "brand": "Fiat", "model": "500", "generation": "500 (312)", "transmission": { "type": "automated-manual", "name": "Dualogic" } }
+      ],
+      "sourceIds": ["fiat-dualogic-dh"],
+      "uncertainties": "Kaynak 404. Katalogda Punto 3. nesilde 1.4 FIRE 77 PS ve 1.3 Multijet 95 PS, 500 (312)'de 1.2 69 PS, 1.4 100 PS, 1.3 Multijet 75 PS ve 0.9 satırlarında Dualogic yazıyor. Arıza bu satırlara doğrulanmadan bağlanmadı. Manuel araçlara yazılmadı."
+    },
+    {
+      "id": "gemini-fiat-egea-direksiyon-kutusu",
+      "title": "Direksiyonda veya bozuk yolda tıkırtı",
+      "summary": "Bazı Egea sahipleri bozuk yolda veya direksiyonu çevirirken tıkırtı duyduğunu yazıyor. Servis yorumlarında takoz, direksiyon mili ve direksiyon kutusu ayrı ayrı geçiyor; her ses aynı arıza değildir.",
+      "category": "steering",
+      "frequency": "medium",
+      "frequencyRationale": "Birkaç Egea şikayeti aynı belirtiyi anlatıyor. Tek parça ve oran gösterilmediği için orta bırakıldı.",
+      "vehicles": [{ "brand": "Fiat", "model": "Egea", "generation": "Egea (356)" }],
+      "sourceIds": ["fiat-egea-direksiyon-sv"],
+      "uncertainties": "Motor yazılmadı. Okunan şikayetler kasa genelinde belirti tarif ediyor ve parçayı ayırmıyor."
+    },
+    {
+      "id": "gemini-fiat-14-fire-yag-eksiltme",
+      "title": "1.4 Fire motorlarda yağ eksiltme eğilimi",
+      "summary": "1.4 Fire 95 HP motorlarda, kullanım tarzına ve rodaj sürecine bağlı olarak periyodik bakım aralığı dolmadan yağ seviyesinde belirgin düşüş yaşanabildiği rapor edilmektedir.",
+      "category": "engine",
+      "frequency": "medium",
+      "frequencyRationale": "Kullanıcı platformlarında bu motorla ilgili en çok tartışılan konudur; ancak sürüş dinamiğine bağlı olarak eksilen miktar araçtan araca büyük farklılık gösterdiği için frekans medium olarak bırakılmıştır.",
+      "vehicles": [
+        { "brand": "Fiat", "model": "Egea", "generation": "Egea (356)", "engines": [{ "name": "1.4 FIRE 95 PS" }] }
+      ],
+      "sourceIds": ["fiat-14-fire-yag-dh"],
+      "uncertainties": "Ad 95 PS satırına daraltıldı. Yakıtsız 1.4 FIRE satırı ve 1.4 FIRE ailesi bilinçli olarak dışarıda. Kaynak 404 olduğu için aktarılmadı. Kılavuzun normal saydığı tüketim ile arıza ayrılmadı."
+    },
+    {
+      "id": "gemini-fiat-13-multijet-zincir",
+      "title": "1.3 MultiJet triger zincirinde ses ve uzama",
+      "summary": "1.3 MultiJet dizel motorlarda ilk çalıştırmada veya rölantide şıngırtı sesi duyulabildiği ve triger zincirinde uzama meydana gelebildiği bildirilmektedir.",
+      "category": "engine",
+      "frequency": "medium",
+      "frequencyRationale": "Bu motorun yoğun kullanıldığı ticari/filo araçlarında yüksek kilometreye bağlı doğal bir aşınma payı da bulunmakla birlikte, erken kilometrelerde ses şikâyeti bildiren kullanıcılar da mevcuttur.",
+      "vehicles": [
+        { "brand": "Fiat", "model": "Linea", "generation": "Linea", "engines": [{ "name": "1.3 Multijet 90 PS" }] },
+        { "brand": "Fiat", "model": "Doblo", "generation": "Doblò (263)", "engines": [{ "name": "1.3 Multijet 90 PS" }] }
+      ],
+      "sourceIds": ["fiat-13-multijet-zincir-fl"],
+      "uncertainties": "Fiorino çıkarıldı; katalogda nesli yok. Kaynak okunamadı. 95 PS ve diğer 1.3 satırlarına yayılmadı. Erken arıza ile yüksek kilometre aşınması ayrılmadı."
+    }
+  ]
+}

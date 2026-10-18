@@ -1,0 +1,79 @@
+[
+  {
+    "id": "skoda-15-tsi-soguk-titreme",
+    "slug": "skoda-15-tsi-soguk-titreme",
+    "brandId": "skoda",
+    "kind": "chronic",
+    "category": "engine",
+    "title": "Soğuk 1.5 TSI motorunda titreme",
+    "summary": "Bazı erken Karoq 1.5 TSI Evo motorlar soğukken düşük devirde düzensiz çekiş ve titreme yapabiliyor. Üretici bunu az görülen bir durum sayıyor; yazılım güncellemesi her araçta sorunu tamamen kaldırmıyor.",
+    "symptoms": [
+      "Bazı erken Karoq 1.5 TSI Evo motorlar soğukken düşük devirde düzensiz çekiş ve titreme yapabiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "skoda-karoq"
+        ],
+        "generationIds": [
+          "skoda-karoq-nu7"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "skoda-15-tsi-act-150"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2017,
+          "to": 2020,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "repeated-reports",
+      "note": "Karoq sahibi haberde örnekleniyor. Volkswagen etkilenen sayıyı küçük buluyor. Octavia ve diğer Skoda modellerine yayılmadı.",
+      "sourceIds": [
+        "arastirma-cursor-cursor-autoexpress-15tsi-2019",
+        "arastirma-cursor-cursor-seisenlinea-15tsi"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "cursor",
+      "id": "skoda-15-tsi-soguk-titreme"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-cursor-cursor-autoexpress-15tsi-2019",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-cursor-cursor-seisenlinea-15tsi",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-18",
+    "notes": "Karoq sahibi haberde örnekleniyor. Volkswagen etkilenen sayıyı küçük buluyor. Octavia ve diğer Skoda modellerine yayılmadı. Karoq katalog satırı 2017-2026’yı tek varyantta tutuyor. 2020 sonrası araçlar bu kaydın yılı dışında kalır. Octavia, Kamiq, Scala, Kodiaq, Superb ve Fabia bağlanmadı.",
+    "demo": false
+  }
+]

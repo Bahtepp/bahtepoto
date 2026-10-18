@@ -1,0 +1,147 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "claude-stellantis",
+  "brands": ["Fiat"],
+  "models": ["500", "Punto", "Egea", "Doblo", "Panda"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "claude-st-s4s-fiat-dualogic",
+      "title": "Fiat Gearbox Repair Specialists (Dualogic arızaları)",
+      "url": "https://www.service4service.co.uk/car-repairs/gearboxes/fiat-gearboxes",
+      "kind": "expert-service",
+      "publisher": "Service4Service",
+      "reviewed": true,
+      "reviewMethod": "Sayfanın ilk yarısı okundu (Dualogic bölümü dahil).",
+      "note": "İngiltere'de Fiat şanzıman onarımı yapan servis. Dualogic'i Fiat'ta en sık teşhis ettikleri şanzıman arızası olarak anıyor. En sık belirti sürüşte, dururken veya kalkışta kendiliğinden boşa düşme; ayrıca hidrolik pompa motorunun aşınması ve yavaş, tereddütlü vites geçişleri. Arıza kodlarının tek başına debriyaj aşınması kanıtı sayılmaması gerektiğini, aynı belirtinin basınç kaybı, aktüatör, pompa veya kablo arızasından da gelebileceğini yazıyor. Anılan modeller: 500, Panda, Tipo, 500X ve eski Punto."
+    },
+    {
+      "id": "claude-st-fiatforum-dualogic-thread",
+      "title": "The one and only Dualogic failure thread (sayfa 21)",
+      "url": "https://www.fiatforum.com/500/425006-one-only-dualogic-failure-thread-21.html",
+      "kind": "user-report",
+      "publisher": "The FIAT Forum",
+      "reviewed": true,
+      "reviewMethod": "Konunun 21. sayfası okundu (Aralık 2017 - Mart 2018 mesajları).",
+      "note": "51 sayfalık konu. Bu sayfada 500, 500C, Grande Punto ve Panda 1.2 sahipleri boşa düşme, tek viteste kalma (limp mode), vitesten çıkma ve yanık kokusu bildiriyor. Teşhisler: debriyaj aşınması, aktüatör (değişim teklifi yaklaşık 1200-1300 GBP), pompa motoru ve akümülatör, akü/şase bağlantısı. Bir bayi önce yazılım güncelledi, sonra aktüatör değiştirdi."
+    },
+    {
+      "id": "claude-st-sikayetvar-egea-yag",
+      "title": "Egea yağ eksiltme şikâyetleri",
+      "url": "https://www.sikayetvar.com/fiat/egea/egea-yag-eksiltme",
+      "kind": "user-report",
+      "publisher": "Şikayetvar",
+      "reviewed": true,
+      "reviewMethod": "Etiket sayfasındaki şikâyet özetleri okundu (sayfada 24 kayıt; başlıkta 60 şikâyet).",
+      "note": "Okunan özetlerin çoğu yağ eksiltmeyle ilgili; motor yazılanların hepsi 1.4 (bir kısmı 1.4 Fire). Kullanıcılar bakım aralarında yağ eklendiğini, seviyenin minimumun altına düştüğünü yazıyor. Hiçbir özette 1000 km başına ölçülmüş tüketim yok. Servis yanıtları: seviyenin normal olduğu, yalnızca yağ ekleme, yağ ölçümü başlatma; bir kayıtta sekman değişimi önerilmiş. Tamamlanmış bir onarım okunmadı."
+    },
+    {
+      "id": "claude-st-fiatforum-egea-14fire",
+      "title": "Fiat Tipo/Egea engine 1.4 fire",
+      "url": "https://www.fiatforum.com/threads/fiat-tipo-egea-engine-1-4-fire.512156/",
+      "kind": "user-report",
+      "publisher": "The FIAT Forum",
+      "publishedAt": "2024-10-21",
+      "reviewed": true,
+      "reviewMethod": "Konunun tamamı (dört mesaj) okundu.",
+      "note": "Bir servis işletmesinin mesajı 1.4 Fire (95 PS) yağ tüketiminin özellikle ilk 10-15 bin km ve yoğun trafikte arıza değil motorun karakteri olduğunu yazıyor; kaynak göstermeden 1000 km'de 400 g sınırı veriyor. Başka bir kullanıcı küçük karteri ve buji kuyularına yağ kaçıran külbütör kapağı contasını olası nedenler olarak anıyor."
+    },
+    {
+      "id": "claude-st-pmm-fai-13jtd-zincir",
+      "title": "Timing Chain Tips (FAI Auto Parts, Fiat 1.3 JTD örneği)",
+      "url": "https://pmmonline.co.uk/technical/timing-chain-tips/",
+      "kind": "technical-publication",
+      "publisher": "Professional Motor Mechanic",
+      "publishedAt": "2017-10-26",
+      "reviewed": true,
+      "reviewMethod": "Makale okundu.",
+      "note": "Parça üreticisi FAI'nin yazısı. Fiat'ın İngiltere'deki müşterilerine yazdığı mektuptan aktarıyor: 1.3 JTD motorlarda triger zinciri yaklaşık 70.000 milde kopabiliyor; Fiat bunu yağ kirlenmesine bağlıyor. FAI nedeni partikül filtresi rejenerasyonunda egzoz zamanında yapılan yakıt püskürtmesine, yağın seyrelmesine ve gergi basıncının düşmesine bağlıyor. FAI kendi gözlemi olarak orijinal zincirin yaklaşık 30.000 milde koptuğu vakaları anıyor. Model adı vermiyor."
+    },
+    {
+      "id": "claude-st-fiatforum-mj-zincir",
+      "title": "Multijet timing chain failure! (sayfa 2)",
+      "url": "https://www.fiatforum.com/threads/multijet-timing-chain-failure.355160/page-2",
+      "kind": "user-report",
+      "publisher": "The FIAT Forum",
+      "publishedAt": "2014-08-24",
+      "reviewed": true,
+      "reviewMethod": "Konunun 2. sayfası okundu; 1. ve 3. sayfalar okunmadı.",
+      "note": "Panda 3. nesil bölümündeki konu. Bir filo sahibi aynı motorlu Doblo'larının hepsinde 100.000 milden önce zincir sorunu olduğunu, birinde zincirin koptuğunu yazıyor. Bir Grande Punto'da zincir yaklaşık 75.000 milde önleyici olarak değiştirilmiş; 130.000 milin üzerinde orijinal zinciriyle sessiz çalışan bir araç da anılıyor. Kopmada en az zarar olarak kırık ve eğilmiş külbütörler sayılıyor."
+    }
+  ],
+  "issues": [
+    {
+      "id": "claude-stellantis-fiat-dualogic-bosa-dusme",
+      "title": "Dualogic: boşa düşme, vites geçmeme ve aktüatör arızası",
+      "summary": "Yarı otomatik Dualogic şanzımanda araç sürüşte veya kalkışta kendiliğinden boşa düşebiliyor, tek viteste kalabiliyor. Nedenler debriyaj aşınması, hidrolik pompa motoru, akümülatör veya aktüatör olabiliyor.",
+      "category": "transmission",
+      "frequency": "medium",
+      "frequencyRationale": "Kimliği belli bir şanzıman servisi Dualogic'i Fiat'ta en sık teşhis ettiği şanzıman arızası olarak anıyor ve sahip forumunda uzun bir arıza konusu var. Sayım veya oran yok.",
+      "vehicles": [
+        {
+          "brand": "Fiat",
+          "model": "500",
+          "generation": "500 (312)",
+          "engines": [{ "name": "1.2 69 PS" }, { "name": "1.2 FIRE 69 PS" }, { "name": "1.4 100 PS" }],
+          "transmission": { "type": "automated-manual", "name": "Dualogic" }
+        },
+        {
+          "brand": "Fiat",
+          "model": "Punto",
+          "generation": "Punto 3. nesil",
+          "engines": [{ "name": "1.4 FIRE 77 PS" }, { "name": "1.3 Multijet 95 PS" }],
+          "transmission": { "type": "automated-manual", "name": "Dualogic" }
+        }
+      ],
+      "sourceIds": ["claude-st-s4s-fiat-dualogic", "claude-st-fiatforum-dualogic-thread"],
+      "uncertainties": "Tek kavramalı robotize kutuda vites geçişlerindeki hafif duraksama ve sarsıntı normal karakterdir; bu kayıt boşa düşme, vites geçmeme, arıza uyarısı ve kaçak gibi belirtiler içindir. Kaynaklar İngiltere'den; Türkiye'den okunmuş kaynak yok. Linea 1.3 Multijet Dualogic ve Bravo 1.6 Multijet Dualogic aynı sistemi kullanıyor olabilir ama okunan kaynaklarda anılmadığı için eklenmedi. Panda 2. nesil 1.2 forumda anılıyor ama tek mesaj olduğu için eklenmedi. Belirti tek başına bir parçayı göstermiyor; teşhis basınç, kaçak ve debriyaj ölçümüyle yapılmalı."
+    },
+    {
+      "id": "claude-stellantis-fiat-egea-14fire-yag-eksiltme",
+      "title": "1.4 Fire: bakım arasında yağ eksiltme şikâyeti",
+      "summary": "Egea 1.4 Fire sahipleri bakım aralarında yağ eklemek zorunda kaldıklarını bildiriyor. Servisler çoğunlukla ölçüm başlatıyor veya seviyeyi normal buluyor; tüketimin üretici sınırını aştığı okunan kaynaklarda gösterilmedi.",
+      "category": "engine",
+      "frequency": "unknown",
+      "frequencyRationale": "Bir şikâyet sitesinde onlarca yağ eksiltme şikâyeti var, ama ölçülmüş tüketim değeri yok. Normal tüketimle arızayı ayıracak veri olmadığı için yaygınlık belirlenemedi.",
+      "vehicles": [
+        {
+          "brand": "Fiat",
+          "model": "Egea",
+          "generation": "Egea (356)"
+        }
+      ],
+      "sourceIds": ["claude-st-sikayetvar-egea-yag", "claude-st-fiatforum-egea-14fire"],
+      "uncertainties": "İNCELEMEDE. Katalogdaki aday motor 1.4 FIRE 95 PS'tir ama okunan kaynaklar tüketimin üretici sınırını aştığını göstermiyor; servisler çoğu zaman seviyeyi normal buluyor. Normal eksiltme ile arıza ayrılmadan kart açılmadı. Linea ve Punto 1.4 Fire 77 PS desteklenmedi."
+    },
+    {
+      "id": "claude-stellantis-fiat-13mj-triger-zinciri",
+      "title": "1.3 Multijet: triger zincirinde uzama ve kopma",
+      "summary": "1.3 Multijet dizel motorda triger zinciri uzayıp ses yapabiliyor, ilerlerse kopup motora zarar verebiliyor. Fiat yağ kirlenmesini, parça üreticisi ise partikül filtresi rejenerasyonunda yağın seyrelmesini neden gösteriyor.",
+      "category": "engine",
+      "frequency": "medium",
+      "frequencyRationale": "Parça üreticisi Fiat'ın zincir kopabileceğini kabul eden müşteri mektubunu aktarıyor; sahip forumunda filo araçlarında tekrarlayan zincir sorunu anlatılıyor. Sayım yok.",
+      "vehicles": [
+        {
+          "brand": "Fiat",
+          "model": "Punto",
+          "generation": "Punto 3. nesil",
+          "engines": [{ "name": "1.3 Multijet DPF nesli ayrılmadı" }]
+        },
+        {
+          "brand": "Fiat",
+          "model": "Doblo",
+          "generation": "Doblò (263)",
+          "engines": [{ "name": "1.3 Multijet DPF nesli ayrılmadı" }]
+        },
+        {
+          "brand": "Fiat",
+          "model": "Panda",
+          "generation": "Panda 3. nesil",
+          "engines": [{ "name": "1.3 Multijet DPF nesli ayrılmadı" }]
+        }
+      ],
+      "sourceIds": ["claude-st-pmm-fai-13jtd-zincir", "claude-st-fiatforum-mj-zincir"],
+      "uncertainties": "İNCELEMEDE. Kaynak yalnızca 1.3 JTD diyor ve nedeni partikül filtreli sürümlere bağlıyor; Euro neslini ve üretim tarihini vermiyor. Katalog Punto, Doblo ve Panda'da 75, 80, 90 ve 95 PS satırlarını ayıramıyor. Bu yüzden bütün 1.3 Multijet satırlarına yayılmadı. Linea, Fiorino, Egea ve Opel 1.3 CDTI eklenmedi."
+    }
+  ]
+}

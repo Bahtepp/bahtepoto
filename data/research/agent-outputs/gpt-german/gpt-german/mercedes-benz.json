@@ -1,0 +1,186 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "gpt-german",
+  "brands": [
+    "Mercedes-Benz"
+  ],
+  "models": [
+    "C"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "gpt-mer-w204-chain-tr",
+      "title": "W204 C180 1.8 CGI M271 EVO zincir sesi deneyimleri",
+      "url": "https://www.mbclubtr.com/index.php?threads%2Fw204-c180-1-8cgi-m271-evo-motor-eksantrik-zincir-sesi-problemi.36866%2Fpage-2=",
+      "kind": "user-report",
+      "publisher": "Mercedes Benz Club Türkiye",
+      "reviewed": true,
+      "reviewMethod": "Birden fazla C180 sahibinin zincir/eksantrik dişlisi deneyimi okundu."
+    },
+    {
+      "id": "gpt-mer-w204-chain-uk",
+      "title": "W204 timing chain stretch",
+      "url": "https://forums.mbclub.co.uk/threads/w204-timing-chain-stretch.279288/",
+      "kind": "user-report",
+      "publisher": "MBClub UK",
+      "reviewed": true,
+      "reviewMethod": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    {
+      "id": "gpt-mer-w204-esl-expert",
+      "title": "Mercedes Steering Lock ESL ELV Failure",
+      "url": "https://motronix.net/blog/mercedes-steering-lock-esl-elv-failure/",
+      "kind": "expert-service",
+      "publisher": "Motronix",
+      "reviewed": true,
+      "reviewMethod": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    {
+      "id": "gpt-mer-w204-esl-tr",
+      "title": "W204 kolon kilidi arızası",
+      "url": "https://mbclubtr.com/index.php?threads%2Fw204-kolon-kilidi-arizasi.53845%2F=",
+      "kind": "user-report",
+      "publisher": "Mercedes Benz Club Türkiye",
+      "reviewed": true,
+      "reviewMethod": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    {
+      "id": "gpt-mer-w205-nox-uk",
+      "title": "2017 W205 C220d AdBlue Problem",
+      "url": "https://mbworld.org/forums/c-class-w205/920327-help-2017-w205-c220d-adblue-problem.html",
+      "kind": "user-report",
+      "publisher": "MBWorld",
+      "reviewed": true,
+      "reviewMethod": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    {
+      "id": "gpt-mer-w205-nox-another",
+      "title": "NOx sensor shortage and poor MB service",
+      "url": "https://mbworld.org/forums/c-class-w205/818778-nox-sensor-shortage-courtesy-car-issues-poor-mb-service.html",
+      "kind": "user-report",
+      "publisher": "MBWorld",
+      "reviewed": true,
+      "reviewMethod": "C220d sahibinin yetkili servisçe NOx sensör arızası teşhisinin mesajı okundu."
+    },
+    {
+      "id": "gpt-mer-w205-nox-mbclub",
+      "title": "C220d DPF Regen Issue",
+      "url": "https://forums.mbclub.co.uk/threads/c220d-dpf-regen-issue.304703/",
+      "kind": "user-report",
+      "publisher": "MBClub UK",
+      "reviewed": true,
+      "reviewMethod": "C220d kullanıcısının NOx/AdBlue ve DPF sorunlarını ayıran mesajları okundu."
+    },
+    {
+      "id": "gpt-mer-w205-chrome-repair",
+      "title": "Mercedes C-Class GLC console trim faults",
+      "url": "https://www.go-parts.com/garage/console-compartment-mercedes-benz-cclass-mercedes-benz-glc-class-2015-2026",
+      "kind": "technical-publication",
+      "publisher": "Go-Parts",
+      "reviewed": true,
+      "reviewMethod": "Tam sayfa açılarak iddiayı destekleyen ilgili metin ve araç kapsamı okundu."
+    }
+  ],
+  "issues": [
+    {
+      "id": "gpt-mer-w204-m271-zincir-dislisi",
+      "title": "Triger zinciri ve eksantrik dişlisi",
+      "summary": "W204 1.8 CGI M271 motorlarda zincir uzaması ve eksantrik dişlisi aşınması nedeniyle ilk çalıştırmada metalik ses bildiriliyor.",
+      "category": "engine",
+      "frequency": "medium",
+      "frequencyRationale": "Türkiye ve İngiltere forumlarında birden fazla sahip benzer zincir sesini anlatıyor. Okunmuş servis bülteni veya ölçülmüş oran olmadığı için yüksek denmedi.",
+      "vehicles": [
+        {
+          "brand": "Mercedes-Benz",
+          "model": "C",
+          "generation": "C 3. nesil (W204)",
+          "engines": [
+            {
+              "name": "C 180 CGI 1.8",
+              "code": "M271"
+            }
+          ],
+          "years": {
+            "from": 2010,
+            "to": 2013
+          }
+        }
+      ],
+      "sourceIds": [
+        "gpt-mer-w204-chain-tr",
+        "gpt-mer-w204-chain-uk"
+      ],
+      "uncertainties": "W204 kataloğundaki 1.8 180, 1.8 200 ve 1.8 250 M271 CGI seçenekleridir. 1.6 180 ve 1.6 180K (M274 / Kompressor) bağlanmadı."
+    },
+    {
+      "id": "gpt-mer-w204-esl-direksiyon-kilidi",
+      "title": "Elektronik direksiyon kilidi arızası",
+      "summary": "W204 kasada elektronik direksiyon kilidi bazen açılmayabiliyor; anahtar tanınsa bile araç marş izni vermeyebiliyor.",
+      "category": "electrical",
+      "frequency": "medium",
+      "frequencyRationale": "W204 ESL üzerinde çalışan uzman servis açıklaması ve Türkiye C-Serisi sahiplerinin kolon kilidi deneyimleri var; model genelinde oran bilinmiyor.",
+      "vehicles": [
+        {
+          "brand": "Mercedes-Benz",
+          "model": "C",
+          "generation": "C 3. nesil (W204)"
+        }
+      ],
+      "sourceIds": [
+        "gpt-mer-w204-esl-expert",
+        "gpt-mer-w204-esl-tr"
+      ],
+      "uncertainties": "Düşük akü voltajı veya anahtar arızası benzer belirti verebilir; kesin teşhis değildir."
+    },
+    {
+      "id": "gpt-mer-w205-c220d-nox-sensoru",
+      "title": "NOx sensörü ve AdBlue uyarısı",
+      "summary": "Bazı W205 C 220 d araçlarda NOx sensörü arızası motor uyarısına ve AdBlue sistemiyle ilgili hata mesajlarına yol açabiliyor.",
+      "category": "emissions",
+      "frequency": "medium",
+      "frequencyRationale": "Birden fazla bağımsız C220d kullanıcı deneyimi var; sensör, AdBlue seviye ve DPF arızaları birbirine karıştırılmamalı.",
+      "vehicles": [
+        {
+          "brand": "Mercedes-Benz",
+          "model": "C",
+          "generation": "C 4. nesil (W205)",
+          "engines": [
+            {
+              "name": "C 220 d BlueTEC"
+            }
+          ],
+          "years": {
+            "from": 2014,
+            "to": 2018
+          }
+        }
+      ],
+      "sourceIds": [
+        "gpt-mer-w205-nox-uk",
+        "gpt-mer-w205-nox-another",
+        "gpt-mer-w205-nox-mbclub"
+      ],
+      "uncertainties": "W205’te 2016-2017 2.2 220 satırı erken C 220 d BlueTEC karşılığıdır. 2018 220d ve nesli belirsiz 220 BlueTEC bağlanmadı."
+    },
+    {
+      "id": "gpt-mer-w205-krom-trim-soyulmasi",
+      "title": "Orta konsol krom kaplama soyulması",
+      "summary": "Bazı W205 araçlarda bardaklık çevresindeki ince krom kaplamanın kenarlardan soyulabildiği bildiriliyor.",
+      "category": "interior",
+      "frequency": "unknown",
+      "frequencyRationale": "W205 iç konsol trimlerine ilişkin servis/parça rehberi ve kullanıcı şikâyeti bulunuyor; şikâyet sayısından sıklık hesaplanamıyor.",
+      "vehicles": [
+        {
+          "brand": "Mercedes-Benz",
+          "model": "C",
+          "generation": "C 4. nesil (W205)"
+        }
+      ],
+      "sourceIds": [
+        "gpt-mer-w205-chrome-repair"
+      ],
+      "uncertainties": "Bardaklık çevresinde ilgili krom trim gerçekten bulunan araçlara uygulanmalı. Bazı kullanıcı kaynakları yalnız arama sonucu üzerinden incelendi."
+    }
+  ]
+}

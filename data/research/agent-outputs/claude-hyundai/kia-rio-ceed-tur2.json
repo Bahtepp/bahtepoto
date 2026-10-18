@@ -1,0 +1,187 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "claude-hyundai",
+  "brands": ["Kia"],
+  "models": ["Rio", "Ceed", "Venga"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "claude-t2-fiches-rio-2011-2016",
+      "title": "Fiabilité Kia Rio (2011-2016): 174 sahip yorumu",
+      "url": "https://www.fiches-auto.fr/fiabilite-kia/fiabilite-344-pannes-kia-rio.php",
+      "kind": "user-report",
+      "publisher": "Fiches-auto.fr",
+      "reviewed": true,
+      "reviewMethod": "Sayfa indirildi; site özeti ve tek tek sahip yorumları okundu.",
+      "note": "Site özeti debriyajı Rio'nun en belirgin kusuru olarak yazıyor ve debriyajı özellikle 1.2 85 ch ile 1.4 CRDI 90 ch için anıyor. Yorumlarda 15.000-90.000 km arasında debriyaj değişimi, kalkışta titreme ve pedalda boşluk kalmaması tekrar ediyor. Ayrıca direksiyon simidi vernik/kaplamasının bozulması ve garantide değişim bildiriliyor. Fransa pazarı.",
+      "basedOn": "fiches-auto-rio-2011-2016"
+    },
+    {
+      "id": "claude-t2-fiches-rio-14crdi-debriyaj",
+      "title": "Kia Rio 1.4 CRDI 90 ch: 80.000 km'de debriyaj",
+      "url": "https://www.fiches-auto.fr/avis-kia/avis-unique-344-79011-kia-rio-14-crdi-90-ch-embrayage-deficient-des-80000km-presque-aucune-garde-sur-la-pedale-d-embrayage-n.php",
+      "kind": "user-report",
+      "publisher": "Fiches-auto.fr",
+      "reviewed": true,
+      "reviewMethod": "Yorum ve altındaki cevaplar okundu.",
+      "note": "Sahip 80.000 km'de debriyajın bittiğini ve pedalda boşluk kalmadığını yazıyor; altındaki üç ayrı kullanıcı aynı sorunu 80.000-88.000 km'de yaşadığını bildiriyor. Aynı sitenin yorumu olduğu için bağımsız ikinci yayıncı sayılmaz.",
+      "basedOn": "fiches-auto-rio-2011-2016"
+    },
+    {
+      "id": "claude-t2-kiaclubtr-deri-direksiyon",
+      "title": "KiaClubTr: Deri Direksiyon Soyulması",
+      "url": "https://www.kiaclubtr.com/threads/deri-direksiyon-soyulmasi.2137/",
+      "kind": "user-report",
+      "publisher": "KiaClubTr.com",
+      "reviewed": true,
+      "reviewMethod": "Başlığın ilk sayfası okundu (13 sayfanın 1'i).",
+      "note": "Konuyu açan kullanıcı Ocak 2012'de aldığı yeni kasa Rio'nun deri direksiyonunun 6,5 ayda parça atmaya başladığını yazıyor. Sayfadaki diğer yorumların bir kısmı Cerato (2005-2010) ile ilgili; onlar bu kayda katılmadı."
+    },
+    {
+      "id": "claude-t2-kiaclubtr-rio-2012-direksiyon",
+      "title": "KiaClubTr: KIA RIO Yeni kasa (2012-..) DIREKSIYON DERISI HATASI",
+      "url": "https://www.kiaclubtr.com/threads/kia-rio-yeni-kasa-2012-direksiyon-derisi-hatasi.4544/",
+      "kind": "user-report",
+      "publisher": "KiaClubTr.com",
+      "reviewed": true,
+      "reviewMethod": "Başlıktaki mesajlar okundu.",
+      "note": "Ekim 2012'de alınan Rio Sedan 1.4 CVVT otomatik: bir yıl içinde direksiyon kaplaması pul pul kalkmış, servis fotoğraflayıp fabrikaya iletmiş ve simit garantiden değiştirilmiş. 2013 Rio 1.4 CRDi hatchback sahibi aynı soyulmayı yaşadığını ve yeni simidin Kore'den sipariş edildiğini yazıyor."
+    },
+    {
+      "id": "claude-t2-wiki-kia-rio",
+      "title": "Kia Rio, üçüncü nesil (UB): Avrupa motor ve şanzıman seçenekleri",
+      "url": "https://en.wikipedia.org/wiki/Kia_Rio",
+      "kind": "technical-publication",
+      "publisher": "Wikipedia",
+      "reviewed": true,
+      "reviewMethod": "Sayfanın wikitext'i Wikipedia API ile alınıp üçüncü nesil bölümü okundu.",
+      "note": "Avrupa pazarı: 1.25 benzinli için 5 ileri manuel; 1.4 benzinli, 1.1 ve 1.4 dizeller için 6 ileri manuel; 4 ileri otomatik yalnızca 1.4 benzinlide."
+    },
+    {
+      "id": "claude-t2-zr-gamma-kia",
+      "title": "6 слабых мест моторов Hyundai и Kia (Gamma ailesi, Kia modelleri)",
+      "url": "https://www.zr.ru/content/articles/928517-dvigateli-hyundai-i-kia-6-tip/",
+      "kind": "technical-publication",
+      "publisher": "Za Rulem (zr.ru)",
+      "publishedAt": "2021-04-15",
+      "reviewed": true,
+      "reviewMethod": "Makale metni okundu (Rusça).",
+      "note": "Hyundai dosyasındaki kaynakla aynı makale. G4FA: Kia Rio ve Ceed; G4FC: aynı modeller ile Venga, Cerato, ProCeed ve Soul. Rusya pazarı model listesi.",
+      "basedOn": "zr-928517"
+    },
+    {
+      "id": "claude-t2-wiki-gamma-kia",
+      "title": "Hyundai Gamma engine: G4FA ve G4FC uygulama listeleri (Kia satırları)",
+      "url": "https://en.wikipedia.org/wiki/Hyundai_Gamma_engine",
+      "kind": "technical-publication",
+      "publisher": "Wikipedia",
+      "reviewed": true,
+      "reviewMethod": "Sayfanın wikitext'i Wikipedia API ile alınıp G4FA ve G4FC bölümleri okundu.",
+      "note": "Yalnızca motor-model eşlemesi için; liste 'eksik' işaretli ve kendi içinde çelişkili. Kia satırları: G4FA Cee'd (ED) 2006-2012, Cee'd (JD) 2012-2018, Rio (QB ve UB) 2011-2017, Venga (YN) 2009-2019; G4FC Cee'd (ED) 2006-2012, Forte/Cerato (TD) 2008-2012, Venga (YN) 2009-2019.",
+      "basedOn": "wiki-gamma"
+    }
+  ],
+  "issues": [
+    {
+      "id": "claude-kia-t2-rio3-debriyaj",
+      "title": "Debriyajda erken aşınma ve kalkışta titreme",
+      "summary": "Manuel şanzımanlı Rio'larda debriyajın erken aşındığı ve kalkışta titrediği çok sayıda sahip tarafından bildiriliyor. Değişim kilometreleri araçtan araca çok farklı.",
+      "category": "clutch",
+      "frequency": "medium",
+      "frequencyRationale": "Birbirinden bağımsız çok sayıda sahip yorumu aynı belirtiyi anlatıyor ve site bunu modelin en belirgin kusuru olarak özetliyor. Hepsi tek sitede, şikâyet odaklı ve oran içermediği için yüksek denmedi.",
+      "vehicles": [
+        {
+          "brand": "Kia",
+          "model": "Rio",
+          "generation": "Rio 3. nesil",
+          "engines": [{ "name": "1.25 85 PS" }],
+          "years": { "from": 2011, "to": 2016 },
+          "transmission": { "type": "manual", "name": "5 ileri manuel" }
+        },
+        {
+          "brand": "Kia",
+          "model": "Rio",
+          "generation": "Rio 3. nesil",
+          "engines": [{ "name": "1.4 CRDi 90 PS" }],
+          "years": { "from": 2011, "to": 2016 },
+          "transmission": { "type": "manual", "name": "6 ileri manuel" }
+        }
+      ],
+      "sourceIds": ["claude-t2-fiches-rio-2011-2016", "claude-t2-fiches-rio-14crdi-debriyaj", "claude-t2-wiki-kia-rio"],
+      "uncertainties": "Yorumlar Fransa pazarındandır; Türkiye'den debriyaj bildirimi okunmadı. Fransa'daki '1.2 85 ch' adı katalogdaki 1.25 85 PS motordur. Wikipedia'ya göre Avrupa'da bu iki motor yalnızca manuel şanzımanla sunuldu; Türkiye'de otomatik seçenek olup olmadığı doğrulanmadı, otomatikler kapsam dışıdır. 1.4 benzinli motor için debriyaj ayrıca bildirilmediği için eklenmedi. Katalogda bu varyantların şanzıman bilgisi yoksa içe aktarma incelemede kalabilir."
+    },
+    {
+      "id": "claude-kia-t2-rio3-direksiyon-kaplama",
+      "title": "Direksiyon simidi kaplamasında soyulma",
+      "summary": "Bazı Rio'larda direksiyon simidinin kaplaması bir yıl dolmadan soyulmaya başlıyor. Servisin simidi garantiden değiştirdiği örnekler var.",
+      "category": "interior",
+      "frequency": "medium",
+      "frequencyRationale": "Türkiye ve Fransa'dan birbirinden bağımsız birkaç sahip aynı soyulmayı anlatıyor ve servisin garantiden değişim yaptığı bildiriliyor. Sayım olmadığı için yüksek denmedi.",
+      "vehicles": [
+        {
+          "brand": "Kia",
+          "model": "Rio",
+          "generation": "Rio 3. nesil",
+          "years": { "from": 2011, "to": 2016 },
+          "engines": [{ "name": "kaplamalı direksiyon simidi" }]
+        }
+      ],
+      "sourceIds": ["claude-t2-kiaclubtr-rio-2012-direksiyon", "claude-t2-kiaclubtr-deri-direksiyon", "claude-t2-fiches-rio-2011-2016"],
+      "uncertainties": "İNCELEMEDE. Bildirimler kaplamalı veya deri simidi anlatır. Katalog donanımları Fancy, Natty, Sporty, Comfort gibi adlar taşır; kaplamalı simit ayrılmaz. Bütün Rio 3'lere yaymamak için donanım şartı eşleşmeden bırakıldı. Cerato yorumları alınmadı."
+    },
+    {
+      "id": "claude-kia-t2-gamma-katalizor",
+      "title": "Katalizör dağılması ve silindir çizilmesi",
+      "summary": "Gamma 1.4 ve 1.6 MPI motorlarda katalizör seramiği dağılıp silindirlere girebiliyor. Bu, silindirde çizik ve yağ eksilmesine yol açabiliyor.",
+      "category": "engine",
+      "frequency": "unknown",
+      "frequencyRationale": "Yalnızca tek bir yabancı uzman dergisi bunu bilinen zayıf nokta olarak yazıyor ve 'bazen' diyor. Bağımsız ikinci kaynak veya sayım bulunamadı.",
+      "vehicles": [
+        {
+          "brand": "Kia",
+          "model": "Rio",
+          "engines": [{ "name": "1.4 CVVT", "code": "G4FA" }]
+        },
+        {
+          "brand": "Kia",
+          "model": "Ceed",
+          "engines": [{ "name": "1.4 CVVT", "code": "G4FA" }, { "name": "1.6 CVVT", "code": "G4FC" }]
+        },
+        {
+          "brand": "Kia",
+          "model": "Venga",
+          "engines": [{ "name": "1.4 CVVT", "code": "G4FA" }, { "name": "1.6 CVVT", "code": "G4FC" }]
+        }
+      ],
+      "sourceIds": ["claude-t2-zr-gamma-kia", "claude-t2-wiki-gamma-kia"],
+      "uncertainties": "İNCELEMEDE KALMALI. Kaynak sorunu 'erken motorlar' ile sınırlıyor ama tarih vermiyor. Ansiklopedideki aday eşleşme: G4FA Ceed 1. nesil (ED) 2006-2012, Ceed 2. nesil (JD) 2012-2018, Rio 3. nesil (UB) 2011-2017, Venga 2009-2019; G4FC Ceed 1. nesil (ED) 2006-2012, Venga. Cerato, katalogda nesil ayrılmadığı için çıkarıldı. Katalogdaki motor kayıtlarında G4FA/G4FC kodu yok. Rusya pazarı model listesi; Hyundai dosyasındaki kayıtla aynı tek kaynağa dayanır."
+    },
+    {
+      "id": "claude-kia-t2-gamma-triger-zinciri",
+      "title": "Triger zincirinde erken uzama",
+      "summary": "Gamma 1.4 ve 1.6 MPI motorlarda triger zinciri erken uzayabiliyor. Uzayan zincir dişlileri ve değişken supap zamanlama ünitesini aşındırabiliyor.",
+      "category": "engine",
+      "frequency": "unknown",
+      "frequencyRationale": "Tek bir yabancı uzman dergisi birçok motorda 80.000 km civarında belirgin aşınma görüldüğünü yazıyor; bağımsız ikinci kaynak, servis bülteni veya sayım bulunamadı.",
+      "vehicles": [
+        {
+          "brand": "Kia",
+          "model": "Rio",
+          "engines": [{ "name": "1.4 CVVT", "code": "G4FA" }]
+        },
+        {
+          "brand": "Kia",
+          "model": "Ceed",
+          "engines": [{ "name": "1.4 CVVT", "code": "G4FA" }, { "name": "1.6 CVVT", "code": "G4FC" }]
+        },
+        {
+          "brand": "Kia",
+          "model": "Venga",
+          "engines": [{ "name": "1.4 CVVT", "code": "G4FA" }, { "name": "1.6 CVVT", "code": "G4FC" }]
+        }
+      ],
+      "sourceIds": ["claude-t2-zr-gamma-kia", "claude-t2-wiki-gamma-kia"],
+      "uncertainties": "İNCELEMEDE KALMALI. Tek yayıncı ve yabancı pazar; Türkiye için doğrulayan servis veya kullanıcı kaynağı okunmadı. Ansiklopedideki aday eşleşme Ceed 1. ve 2. nesil, Rio 3. nesil ve Venga (yukarıdaki katalizör kaydıyla aynı). Katalogdaki motor kayıtlarında G4FA/G4FC kodu yok. Çift zamanlamalı (G4FG), GDI ve turbo sürümler kapsam dışı."
+    }
+  ]
+}

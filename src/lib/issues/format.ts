@@ -6,6 +6,7 @@
 import type {
   Applicability,
   Claim,
+  Issue,
   IssueCategory,
   IssueKind,
   IssueSourceKind,
@@ -13,7 +14,7 @@ import type {
   PrevalenceEvidence,
   SeverityLevel,
 } from './schema';
-import { FUEL_LABELS } from '../catalog/format';
+import { FUEL_LABELS } from '../catalog/format.ts';
 
 export const ISSUE_STATUS_LABELS: Record<IssueStatus, string> = {
   verified: 'Doğrulandı',
@@ -42,6 +43,20 @@ export const SEVERITY_LABELS: Record<SeverityLevel, string> = {
   high: 'Yüksek',
   safety: 'Güvenlikle ilgili',
 };
+
+/** Kullanıcıya gösterilen yaygınlık. Kanıt düzeyi ve ciddiyetten ayrı, nitel bir yargıdır. */
+export const FREQUENCY_LABELS = {
+  high: 'Yüksek',
+  medium: 'Orta',
+  low: 'Düşük',
+  unknown: 'Belirsiz',
+} as const;
+
+/** Geri çağırmada yaygınlık etiketi yoktur. Eski kayıtlarda alan boşsa Belirsiz gösterilir. */
+export function frequencyLabel(issue: Pick<Issue, 'kind' | 'frequencyRating'>): string | undefined {
+  if (issue.kind === 'recall' || issue.kind === 'service-campaign') return undefined;
+  return FREQUENCY_LABELS[issue.frequencyRating ?? 'unknown'];
+}
 
 /** Kanıt düzeyi — sıklık iddiası değildir. */
 export const PREVALENCE_LABELS: Record<PrevalenceEvidence, string> = {

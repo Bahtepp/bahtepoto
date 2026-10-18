@@ -3,7 +3,6 @@
 Bu modellerin nesilleri kataloğa otomatik aktarılmadı (kaynakta çelişki veya model kimliği açık değil).
 
 - **audi/a8l**: Wikipedia maddesi ("Audi A8") bu modelle açıkça eşleşmiyor
-- **audi/rs**: Wikipedia maddesi ("Audi S and RS models") bu modelle açıkça eşleşmiyor
 - **audi/rs3**: Wikipedia maddesi ("Audi A3") bu modelle açıkça eşleşmiyor
 - **audi/rs5**: Wikipedia maddesi ("Audi A5") bu modelle açıkça eşleşmiyor
 - **audi/rs7**: Wikipedia maddesi ("Audi A7") bu modelle açıkça eşleşmiyor
@@ -36,7 +35,6 @@ Bu modellerin nesilleri kataloğa otomatik aktarılmadı (kaynakta çelişki vey
 - **fiat/scudo**: Wikipedia maddesi ("Citroën Jumpy") bu modelle açıkça eşleşmiyor
 - **fiat/ulysse**: Wikipedia maddesi ("Eurovans") bu modelle açıkça eşleşmiyor
 - **ford/f-150**: Wikipedia maddesi ("Ford F-Series") bu modelle açıkça eşleşmiyor
-- **ford/f150**: Wikipedia maddesi ("Ford F-Series") bu modelle açıkça eşleşmiyor
 - **ford/grand-c-max**: Wikipedia maddesi ("Ford C-Max") bu modelle açıkça eşleşmiyor
 - **ford/ranger-raptor**: Wikipedia maddesi ("Ford Ranger (T6)") bu modelle açıkça eşleşmiyor
 - **ford/tourneo**: Wikipedia maddesi ("Ford Transit") bu modelle açıkça eşleşmiyor
@@ -70,7 +68,6 @@ Bu modellerin nesilleri kataloğa otomatik aktarılmadı (kaynakta çelişki vey
 - **mercedes-benz/viano**: Wikipedia maddesi ("Mercedes-Benz Vito") bu modelle açıkça eşleşmiyor
 - **mg/ehs**: Wikipedia maddesi ("MG HS") bu modelle açıkça eşleşmiyor
 - **mitsubishi/attrage**: Wikipedia maddesi ("Mitsubishi Mirage") bu modelle açıkça eşleşmiyor
-- **nissan/350**: Wikipedia maddesi ("Nissan 350Z") bu modelle açıkça eşleşmiyor
 - **nissan/np-300**: Wikipedia maddesi ("Nissan Navara") bu modelle açıkça eşleşmiyor
 - **opel/zafira-life**: Wikipedia maddesi ("Citroën Jumpy") bu modelle açıkça eşleşmiyor
 - **peugeot/bipper**: Wikipedia maddesi ("Fiat Fiorino") bu modelle açıkça eşleşmiyor

@@ -31,6 +31,7 @@
 .vehicle-head h1 {
   font-size: 1.75rem;
   letter-spacing: -0.015em;
+  overflow-wrap: anywhere;
 }
 
 .vehicle-sub {
@@ -198,10 +199,26 @@
 .issue-title {
   font-size: 1.0625rem;
   font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
+.issue-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  margin: 0.35rem 0 0;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.issue-frequency {
+  font-weight: 650;
+  color: var(--text);
 }
 
 .issue-summary {
-  margin: 0.25rem 0 0;
+  margin: 0.35rem 0 0;
+  overflow-wrap: anywhere;
 }
 
 .issue-line {

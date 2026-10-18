@@ -1,0 +1,117 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "gemini-stellantis",
+  "brands": ["Opel"],
+  "models": ["Astra", "Corsa", "Insignia"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "opel-14t-pcv-dh",
+      "title": "Opel 1.4 Turbo Külbütör Kapağı ve PCV Valfi Sorunu",
+      "url": "https://forum.donanimhaber.com/opel-1-4-turbo-kulbutor-kapagi-pcv-valfi-arizasi--120000000",
+      "kind": "user-report",
+      "publisher": "DonanımHaber Forum",
+      "reviewed": false,
+      "reviewMethod": "Konu numarası 120000000. Adres 404 döndü.",
+      "note": "Yerine opel-astra-j-14t-pcv kullanıldı. Insignia sayfası okunamadığı için alias açılmadı."
+    },
+    {
+      "id": "opel-astra-j-14t-pcv",
+      "title": "Astra J 1.4 Turbo PCV diyaframı",
+      "url": "https://stillrunningstrong.com/car-specs-problems/opel-vauxhall/astra-j/",
+      "kind": "technical-publication",
+      "publisher": "Still Running Strong",
+      "reviewed": true,
+      "reviewMethod": "Sayfa okundu. 140 PS 1.4 Turbo kodunu A14NET ve B14NET olarak yazıyor. Külbütör kapağı diyaframı ve emme manifoldu PCV valfinin arızasını, ıslık, düzensiz rölanti ve yağ tüketimi belirtileriyle anlatıyor. 120 PS aynı gövdenin A14NEL haritası. Astra K ve Insignia bu sayfada yok."
+    },
+    {
+      "id": "opel-astra-k-zincir-sv",
+      "title": "Opel Astra 1.6 CDTI Zincir Sesi Şikayetleri",
+      "url": "https://www.sikayetvar.com/opel/astra/zincir-sesi",
+      "kind": "user-report",
+      "publisher": "Şikayetvar",
+      "reviewed": true,
+      "reviewMethod": "Sayfa açıldı. 2016 Astra Sedan ve 1.6 CDTI için ilk çalıştırmada zincir sesi yazan şikayetler var. Insignia B yok. Katalogda Astra K neslinde 1.6 CDTI satırı yok."
+    },
+    {
+      "id": "opel-cim-modulu-opelim",
+      "title": "Astra H ve Vectra C Korna Çalmama CIM Modülü Arızası",
+      "url": "https://www.opelim.net/threads/astra-h-korna-calmiyor-cim-modulu.10000/",
+      "kind": "user-report",
+      "publisher": "Opelim.Net Forum",
+      "reviewed": false,
+      "reviewMethod": "Konu numarası 10000. Sayfa güvenlik duvarında kaldı; konu metni okunamadı.",
+      "note": "Yerine opel-astra-h-cim-2262 kullanıldı. Kayıt Corsa D değildir."
+    },
+    {
+      "id": "opel-astra-h-cim-2262",
+      "title": "Field Remedy 2262: Astra H korna, CIM",
+      "url": "https://workshop-manuals.com/vauxhall/astra-h/n__electrical_equipment_and_instruments/technical_service_bulletins/poor_operation_incorrect_operation/horn_intermittent_malfunction/",
+      "kind": "manufacturer-bulletin",
+      "publisher": "Vauxhall Field Remedy 2262",
+      "reviewed": true,
+      "reviewMethod": "Saha notu okundu. Astra H 2004-2011, bütün motorlar, korna aralıklı çalışmıyor. Neden CIM içindeki temas. Yalnızca Antwerp, Ellesmere Port, Bochum ve Gliwice için yazılı şasi aralıkları. Çözüm 10-R-036 kampanyası. Direksiyon tuşlarının tamamı bu metinde yok."
+    },
+    {
+      "id": "opel-corsa-d-klape-dh",
+      "title": "Corsa D Kalorifer Yönlendirme Sorunu",
+      "url": "https://forum.donanimhaber.com/opel-corsa-d-kalorifer-yonlendirme-sorunu--125000000",
+      "kind": "user-report",
+      "publisher": "DonanımHaber Forum",
+      "reviewed": false,
+      "reviewMethod": "Konu numarası 125000000. Adres 404 döndü.",
+      "note": "Ayrı bir saha notu (2627) klape kırığını yalnızca 2007-2008 Corsa D ve elektronik klima için yazıyor. Katalog donanımı ayıramadığı için neslin tamamına açılmadı."
+    }
+  ],
+  "issues": [
+    {
+      "id": "gemini-opel-14t-pcv-valfi",
+      "title": "1.4 turbo motorda PCV diyaframı",
+      "summary": "Astra J'deki 140 PS'lik 1.4 turbo motorda külbütör kapağındaki karter havalandırma diyaframı yırtılabiliyor. Belirti ıslık, düzensiz rölanti veya yağ buharı olabilir.",
+      "category": "engine",
+      "frequency": "medium",
+      "frequencyRationale": "Teknik yayın bu diyafram arızasını 140 PS 1.4 turbo için anlatıyor. Görülme oranı yazılmadığı için yüksek denmedi.",
+      "vehicles": [
+        { "brand": "Opel", "model": "Astra", "generation": "Astra J", "engines": [{ "name": "1.4 140 PS" }] }
+      ],
+      "sourceIds": ["opel-astra-j-14t-pcv"],
+      "uncertainties": "Katalog adı turbo yazmıyor; okunan sayfa 140 PS 1.4 Turbo kodunu A14NET/B14NET olarak veriyor. 100 PS atmosferik ve 120 PS satırı bu nesilde yok. Insignia A'daki 1.4 140 PS okunamadığı için alias açılmadı. Astra K aynı motor kimliğini taşısa da nesli farklı olduğu için seçilmedi."
+    },
+    {
+      "id": "gemini-opel-astra-k-16cdti-zincir",
+      "title": "1.6 CDTI motorlarda ilk çalıştırmada triger zinciri sesi",
+      "summary": "1.6 CDTI dizel motorlarda, özellikle motor soğukken ilk çalıştırma sırasında triger zincirinden kısa süreli metalik şıngırtı sesi gelebildiği rapor edilmektedir.",
+      "category": "engine",
+      "frequency": "medium",
+      "frequencyRationale": "Zincir gergisinin yağ basıncı dolana kadar geçen sürede ses yapması birçok kullanıcı tarafından bildirilmektedir; ancak her araçta ani kopmaya yol açmadığı için orta sıklık olarak değerlendirilmiştir.",
+      "vehicles": [
+        { "brand": "Opel", "model": "Astra", "generation": "Astra K", "engines": [{ "name": "1.6 CDTI" }] },
+        { "brand": "Opel", "model": "Insignia", "generation": "Insignia B", "engines": [{ "name": "1.6 CDTI" }] }
+      ],
+      "sourceIds": ["opel-astra-k-zincir-sv"],
+      "uncertainties": "Astra K kataloğunda 1.6 CDTI yok. Nesli yazılmamış 1.6 dizel satırları var; tip adı nesil söylemediği için Astra K'ya taşınmadı. Insignia B'de 1.6 dizel 136 PS var, adında CDTI yok. Motor uydurulmadı."
+    },
+    {
+      "id": "gemini-opel-cim-modulu-arizasi",
+      "title": "Kornanın aralıklı çalışmaması (CIM)",
+      "summary": "Bazı Astra H araçlarda korna aralıklı çalmayabiliyor. Üretici saha notu bunu CIM modülündeki temas zayıflığına bağlıyor ve belirli üretim aralıklarını sayıyor.",
+      "category": "electrical",
+      "frequency": "medium",
+      "frequencyRationale": "Saha notu bir müşteri memnuniyet programı tanımlıyor ama bütün Astra H'leri saymıyor. Oran yok; yüksek denmedi.",
+      "vehicles": [{ "brand": "Opel", "model": "Astra", "generation": "Astra H" }],
+      "sourceIds": ["opel-astra-h-cim-2262"],
+      "uncertainties": "İlk dry-run özeti bunu Corsa D diye yazmıştı; JSON Astra H. Direksiyon tuşları bu saha notunun konusu değil. Şasi aralığı katalogda ayrılmıyor. Zafira B aynı notta ama katalogda B nesli yok."
+    },
+    {
+      "id": "gemini-opel-corsa-d-klape-dislisi",
+      "title": "Kalorifer hava yönlendirme klape dişlisinin kırılması",
+      "summary": "Klima veya kaloriferin hava akışını yönlendiren plastik klape dişlisinin kırılarak sistemin tek bir yönde takılı kalması bilinen bir sorundur.",
+      "category": "hvac",
+      "frequency": "medium",
+      "frequencyRationale": "Corsa D modellerinde malzemenin zamanla yorulması sonucu karşılaşılan, onarımı için ön göğsün sökülmesi gerekebilen yapısal bir zayıflıktır.",
+      "vehicles": [{ "brand": "Opel", "model": "Corsa", "generation": "Corsa D" }],
+      "sourceIds": ["opel-corsa-d-klape-dh"],
+      "uncertainties": "Gemini'nin adresi 404. Okunan Field Remedy 2627 yalnızca 2007-2008 ve elektronik klimalı Corsa D için ısıtma klape tahrikini yazıyor. Donanım katalogda ayrılmadığı için chassisWide açılmadı."
+    }
+  ]
+}

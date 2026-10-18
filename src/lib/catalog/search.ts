@@ -1,12 +1,13 @@
 /**
  * Hafif katalog araması. Marka, model ve motor satış adı.
- * Dünya pazarına özel modeller indekse girmez.
+ * İndeks yalnızca Türkiye ana kataloğundaki araçları taşır.
+ * Eski model yazımları `aliases` ile aynı kanonik modele gider.
  */
 import { normalizeSearch } from './format.ts';
 
 export interface SearchIndex {
   brands: { slug: string; name: string; tier: 'primary' | 'review' }[];
-  models: { brand: string; brandName: string; slug: string; name: string }[];
+  models: { brand: string; brandName: string; slug: string; name: string; aliases?: string[] }[];
   engines: { brand: string; brandName: string; model: string; modelName: string; slug: string; label: string }[];
 }
 
@@ -57,7 +58,8 @@ export function searchCatalog(index: SearchIndex, raw: string): SearchHit[] {
   }
 
   for (const m of index.models) {
-    const s = Math.max(score(query, queryCompact, m.name), score(query, queryCompact, `${m.brandName} ${m.name}`));
+    const texts = [m.name, `${m.brandName} ${m.name}`, ...(m.aliases ?? [])];
+    const s = Math.max(...texts.map((text) => score(query, queryCompact, text)));
     if (s === 0) continue;
     hits.push({
       score: s + 3,

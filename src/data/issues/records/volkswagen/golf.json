@@ -1,0 +1,400 @@
+[
+  {
+    "id": "volkswagen-dq200-kavrama-sarsintisi",
+    "slug": "dq200-kavrama-sarsintisi",
+    "brandId": "volkswagen",
+    "kind": "chronic",
+    "category": "transmission",
+    "title": "DSG kavrama sarsıntısı",
+    "summary": "Bazı kuru kavramalı DSG kutularında sarsıntı ve vites sorunları bildiriliyor. Yüksek torklu ıslak DSG kutuları bu kaydın dışında.",
+    "symptoms": ["Kalkışta sarsıntı bildiriliyor."],
+    "appliesTo": [
+      {
+        "modelIds": ["volkswagen-golf", "volkswagen-passat"],
+        "generationIds": [
+          "volkswagen-golf-golf-vi",
+          "volkswagen-golf-golf-vii",
+          "volkswagen-golf-golf-8",
+          "volkswagen-passat-b7",
+          "volkswagen-passat-b8"
+        ],
+        "engineFamilies": ["1.0 TSI", "1.2 TSI", "1.4 TSI", "1.4 TSI ACT", "1.6 TDI"],
+        "transmissions": [{ "type": "dual-clutch", "name": "DSG" }],
+        "note": "Katalogda DSG yazan düşük torklu motorlar. 2.0 TSI, 2.0 TDI ve manuel dahil değil."
+      }
+    ],
+    "prevalence": {
+      "evidence": "repeated-reports",
+      "note": "İki alım rehberi aynı DQ200 ayrımını anlatıyor; ikinci bağımsız laboratuvar kanıtı sayılmadı.",
+      "sourceIds": ["yayin-smartcarcheck-golf-dsg", "yayin-autoza-golf-dsg"]
+    },
+    "frequencyRating": "high",
+    "claims": [
+      { "sourceId": "yayin-smartcarcheck-golf-dsg", "aspects": ["existence", "scope"], "stance": "supports" },
+      { "sourceId": "yayin-autoza-golf-dsg", "aspects": ["scope"], "stance": "supports", "note": "Aynı ayrımın tekrarı." }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "Passat B7/B8 üzerindeki aynı DSG seçeneği bu kayda bağlandı. Şanzımanı katalogda boş olan varyantlar koşullu eşleşir; yalnızca manuel yazılanlar eşleşmez."
+  },
+  {
+    "id": "volkswagen-ea111-triger-zinciri",
+    "slug": "volkswagen-ea111-triger-zinciri",
+    "brandId": "volkswagen",
+    "kind": "chronic",
+    "category": "engine",
+    "title": "Triger zincirinde uzama",
+    "summary": "Bazı erken 1.4 TSI motorlarda triger zincirinin uzadığı ve soğukta tıkırtı yaptığı bildiriliyor. Kayışlı sonraki 1.4 TSI motorlar bu kaydın dışındadır.",
+    "symptoms": [
+      "Bazı erken 1.4 TSI motorlarda triger zincirinin uzadığı ve soğukta tıkırtı yaptığı bildiriliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "volkswagen-golf"
+        ],
+        "generationIds": [
+          "volkswagen-golf-golf-vi"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "volkswagen-14-tsi-122",
+          "volkswagen-14-tsi-160"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "volkswagen-passat"
+        ],
+        "generationIds": [
+          "volkswagen-passat-b6"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "volkswagen-14-tsi-122"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "volkswagen-passat"
+        ],
+        "generationIds": [
+          "volkswagen-passat-b7"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "volkswagen-14-tsi-122",
+          "volkswagen-14-tsi-160"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "volkswagen-tiguan"
+        ],
+        "generationIds": [
+          "volkswagen-tiguan-5n"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "volkswagen-14-tsi-122",
+          "volkswagen-14-tsi-160"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "repeated-reports",
+      "note": "Parça üreticisinin teknik notu ve Auto Bild'in aktardığı üretici ürün bilgisi aynı zincir kusurunu anlatıyor. Oran yazılmadı.",
+      "sourceIds": [
+        "arastirma-cursor-bilstein-ea111-zincir",
+        "arastirma-cursor-autobild-ea111-zincir"
+      ]
+    },
+    "frequencyRating": "high",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "cursor",
+      "id": "ea111-triger-zinciri"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-cursor-bilstein-ea111-zincir",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-cursor-autobild-ea111-zincir",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-18",
+    "notes": "Parça üreticisinin teknik notu ve Auto Bild'in aktardığı üretici ürün bilgisi aynı zincir kusurunu anlatıyor. Oran yazılmadı. Tiguan'ın aynı neslindeki 125 ve 150 PS motorlar sonraki kayışlı motordur; zincir kaydına alınmadı. Polo V hem eski hem yeni 1.2 TSI barındırdığı için bağlanmadı.",
+    "demo": false
+  },
+  {
+    "id": "volkswagen-ea211-devirdaim-govdesi",
+    "slug": "volkswagen-ea211-devirdaim-govdesi",
+    "brandId": "volkswagen",
+    "kind": "chronic",
+    "category": "cooling",
+    "title": "Devirdaim gövdesinden su kaçağı",
+    "summary": "Bazı 1.4 TSI motorlarda plastik devirdaim ve termostat gövdesinden su kaçırdığı bildiriliyor. Kaçak her araçta görülmeyebilir.",
+    "symptoms": [
+      "Bazı 1.4 TSI motorlarda plastik devirdaim ve termostat gövdesinden su kaçırdığı bildiriliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "volkswagen-golf"
+        ],
+        "generationIds": [
+          "volkswagen-golf-golf-vii"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "volkswagen-14-tsi-122",
+          "volkswagen-14-tsi-125",
+          "volkswagen-14-tsi-act-140",
+          "volkswagen-14-tsi-act-150"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "volkswagen-passat"
+        ],
+        "generationIds": [
+          "volkswagen-passat-b8"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "volkswagen-14-tsi-125",
+          "volkswagen-14-tsi-act-150"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "volkswagen-polo"
+        ],
+        "generationIds": [
+          "volkswagen-polo-polo-v"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "volkswagen-14-tsi-act-150"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "volkswagen-tiguan"
+        ],
+        "generationIds": [
+          "volkswagen-tiguan-5n"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "volkswagen-14-tsi-125",
+          "volkswagen-14-tsi-150"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "repeated-reports",
+      "note": "Bir teknik bakım yazısı ve bir servis notu aynı gövdeyi işaret ediyor. Kaç araçta görüldüğü sayılmadığı için yüksek denmedi.",
+      "sourceIds": [
+        "arastirma-cursor-importcar-ea211-pompa",
+        "arastirma-cursor-seatcupra-ea211-pompa"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "cursor",
+      "id": "ea211-devirdaim-govdesi"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-cursor-importcar-ea211-pompa",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-cursor-seatcupra-ea211-pompa",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-18",
+    "notes": "Bir teknik bakım yazısı ve bir servis notu aynı gövdeyi işaret ediyor. Kaç araçta görüldüğü sayılmadığı için yüksek denmedi. Golf VI, Passat B6 ve B7'deki 1.4 TSI bu gövdeyi kullanmaz. GTE ve eHybrid alınmadı. Golf 8 kataloğunda 1.4 TSI yok.",
+    "demo": false
+  },
+  {
+    "id": "volkswagen-vw-15-tsi-soguk-titreme",
+    "slug": "volkswagen-vw-15-tsi-soguk-titreme",
+    "brandId": "volkswagen",
+    "kind": "chronic",
+    "category": "engine",
+    "title": "Soğuk 1.5 TSI motorunda titreme",
+    "summary": "Bazı erken 1.5 TSI Evo motorlar soğukken düşük devirde düzensiz çekiş ve titreme yapabiliyor. Üretici bunu az görülen bir durum sayıyor; yazılım güncellemesi her araçta sorunu tamamen kaldırmıyor.",
+    "symptoms": [
+      "Bazı erken 1.5 TSI Evo motorlar soğukken düşük devirde düzensiz çekiş ve titreme yapabiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "volkswagen-golf"
+        ],
+        "generationIds": [
+          "volkswagen-golf-golf-vii"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "volkswagen-15-tsi-act-150"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2017,
+          "to": 2020,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "volkswagen-t-roc"
+        ],
+        "generationIds": [
+          "volkswagen-t-roc-a11-d11-ac7-ac8"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "volkswagen-15-tsi-act-150"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2017,
+          "to": 2020,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "repeated-reports",
+      "note": "Auto Express çok sayıda sahip bildirimi aktarıyor. Volkswagen etkilenen sayıyı küçük buluyor. Yüksek denmedi.",
+      "sourceIds": [
+        "arastirma-cursor-cursor-autoexpress-15tsi-2019",
+        "arastirma-cursor-cursor-seisenlinea-15tsi"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "cursor",
+      "id": "vw-15-tsi-soguk-titreme"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-cursor-cursor-autoexpress-15tsi-2019",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-cursor-cursor-seisenlinea-15tsi",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "verified",
+    "updatedAt": "2026-10-18",
+    "notes": "Auto Express çok sayıda sahip bildirimi aktarıyor. Volkswagen etkilenen sayıyı küçük buluyor. Yüksek denmedi. Golf 8, eTSI, Taigo, T-Roc 2 ve 2022 sonrası 1.5 TSI 150 PS satırı bağlanmadı. Katalog yalnızca DSG yazan araçlara ayrı bir şanzıman sorunu yüklenmedi.",
+    "demo": false
+  }
+]

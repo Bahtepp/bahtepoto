@@ -1,0 +1,99 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "gpt-german",
+  "brands": [
+    "Mercedes-Benz"
+  ],
+  "models": [
+    "C"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "gpt2-mer-w204-drains-autogmt",
+      "title": "Mercedes W204 tavan tahliyesi tıkanması ve kabinde su",
+      "url": "https://autogmt.com/threads/w204-rear-sam-problem.1554/",
+      "kind": "user-report",
+      "reviewed": true,
+      "publisher": "AutoGMT",
+      "reviewMethod": "Forum mesajları ve yanıtları okundu"
+    },
+    {
+      "id": "gpt2-mer-w204-drains-mbworld",
+      "title": "Mercedes W204 tavan tahliyesi ve döşeme su alma kullanıcı bildirimi",
+      "url": "https://mbworld.org/forums/c-class-w204/767368-water-leaks-into-car.html",
+      "kind": "user-report",
+      "reviewed": false,
+      "publisher": "MBWorld",
+      "note": "Web arama özeti görüldü fakat sayfa içeriği doğrudan açılamadı; reviewed=false."
+    },
+    {
+      "id": "gpt2-mer-w205-arm-club",
+      "title": "Mercedes W205 ön aks salıncak burçlarından gıcırtı tartışması",
+      "url": "https://forums.mercedesclub.org.uk/index.php?threads/mercedes-w205-front-left-suspension-squeak.197447/",
+      "kind": "user-report",
+      "reviewed": true,
+      "publisher": "Mercedes-Benz Owners Club",
+      "reviewMethod": "Forum sayfası açıldı ve içerik incelendi"
+    },
+    {
+      "id": "gpt2-mer-w205-arm-mbworld",
+      "title": "Mercedes W205 ön salıncak gıcırtısı kullanıcı deneyimi",
+      "url": "https://mbworld.org/forums/c-class-w205/877549-control-arm-base-rwd-w205.html",
+      "kind": "user-report",
+      "reviewed": false,
+      "publisher": "MBWorld",
+      "note": "Arama içerik özeti görüldü, doğrudan sayfa açılamadı."
+    }
+  ],
+  "issues": [
+    {
+      "id": "gpt2-mer-w204-sunroof-tahliye-tikanma",
+      "title": "Açılır tavan tahliyesinden su sızması",
+      "summary": "Açılır tavanın su tahliye kanalları tıkandığında bazı araçlarda taban döşemesine su dolduğu ve elektrik bağlantılarının etkilenebildiği bildiriliyor.",
+      "category": "body",
+      "frequency": "unknown",
+      "frequencyRationale": "W204 forumunda ilgili kullanıcı ve uzman yanıtı var, fakat donanım alt grubu ve gerçek sıklık net değil.",
+      "vehicles": [
+        {
+          "brand": "Mercedes-Benz",
+          "model": "C",
+          "generation": "C 3. nesil (W204)",
+          "years": {
+            "from": 2008,
+            "to": 2014
+          }
+        }
+      ],
+      "sourceIds": [
+        "gpt2-mer-w204-drains-autogmt",
+        "gpt2-mer-w204-drains-mbworld"
+      ],
+      "uncertainties": "YALNIZCA açılır/panoramik tavanlı araçlarda düşünülebilir. Araştırma JSON v1 tavan donanım koşulunu ifade etmiyor; uygulayıcı bu koşulu çözemiyorsa yayınlamamalı."
+    },
+    {
+      "id": "gpt2-mer-w205-on-salincak-gicirti",
+      "title": "Ön salıncak burcunda gıcırtı",
+      "summary": "Bazı W205 sahipleri özellikle düşük hızda dönüşte veya kasis geçişinde ön salıncak ve burç bölgesinden gıcırtı geldiğini bildiriyor.",
+      "category": "suspension",
+      "frequency": "unknown",
+      "frequencyRationale": "Birden fazla kullanıcı anlatımı mevcut fakat farklı kök nedenler de raporlanıyor; yaygınlık güvenilir biçimde ayrılamadı.",
+      "vehicles": [
+        {
+          "brand": "Mercedes-Benz",
+          "model": "C",
+          "generation": "C 4. nesil (W205)",
+          "years": {
+            "from": 2014,
+            "to": 2021
+          }
+        }
+      ],
+      "sourceIds": [
+        "gpt2-mer-w205-arm-club",
+        "gpt2-mer-w205-arm-mbworld"
+      ],
+      "uncertainties": "Sesin kesin kaynağı her W205 aracında aynı değildir; amortisör, salıncak ve bağlantı elemanı ayrımı teşhisle yapılmalıdır."
+    }
+  ]
+}

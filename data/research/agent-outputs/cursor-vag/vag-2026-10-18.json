@@ -1,0 +1,317 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "cursor",
+  "brands": ["Volkswagen", "Skoda", "Seat"],
+  "models": ["Golf", "Passat", "Tiguan", "Polo", "Octavia", "Fabia", "Superb", "Leon", "Ibiza", "Toledo", "Arona"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "bilstein-ea111-zincir",
+      "title": "EA111 1.4 TSI triger zinciri",
+      "url": "https://cdn.partsfinder.bilsteingroup.com/pf-document/FTEC138_GB.PDF",
+      "kind": "technical-publication",
+      "publisher": "Bilstein Group",
+      "reviewed": true,
+      "reviewMethod": "PDF metni okundu.",
+      "note": "1.4 TSI EA111 zincirinin uzamasını anlatır. 2015 sonrası kayışlı EA211 motoru bu metnin konusu değildir."
+    },
+    {
+      "id": "autobild-ea111-zincir",
+      "title": "Auto Bild: 1.4 TSI zincir notu",
+      "url": "https://www.motor-talk.de/forum/aktion/Attachment.html?attachmentId=741443",
+      "kind": "technical-publication",
+      "publisher": "Auto Bild",
+      "reviewed": true,
+      "reviewMethod": "Forum ekindeki Auto Bild metni okundu.",
+      "note": "VW'nin zincir üretim hatasını teknik ürün bilgisiyle ele aldığını aktarır. TPI belgesinin kendisi okunmadı."
+    },
+    {
+      "id": "importcar-ea211-pompa",
+      "title": "EA211 1.4 TSI devirdaim ve termostat",
+      "url": "https://www.import-car.com/volkswagen-1-4l-tsi-maintenance-and-inspection-tips/",
+      "kind": "technical-publication",
+      "publisher": "ImportCar",
+      "reviewed": true,
+      "reviewMethod": "Makale metni okundu.",
+      "note": "Plastik termostat gövdesinin yağla temas edince kaçırabildiğini anlatır."
+    },
+    {
+      "id": "seatcupra-ea211-pompa",
+      "title": "EA211 soğutma pompası contası",
+      "url": "https://www.seatcupra.net/forums/attachments/1-4-tsi-ea211-coolant-pump-pdf.19689/",
+      "kind": "expert-service",
+      "publisher": "SEAT Cupra teknik ek",
+      "reviewed": true,
+      "reviewMethod": "Ekli soğutma sistemi metni okundu.",
+      "note": "Pompa contasının kaçırmasının oldukça görüldüğünü ve gövdenin eğilebildiğini yazar. Onarım adımları kullanıcıya aktarılmaz."
+    },
+    {
+      "id": "vagpulse-dq200",
+      "title": "DQ200 kuru kavrama DSG",
+      "url": "https://vagpulse.com/guides/dq200-7-speed-dry-dsg-problems",
+      "kind": "technical-publication",
+      "publisher": "VAG Pulse",
+      "reviewed": true,
+      "reviewMethod": "Rehber metni okundu.",
+      "note": "DQ200'ü 6 ileri ıslak DQ250 ve sonradan gelen ıslak 7 ileri kutulardan ayırır. 1.5 TSI ve dört çeker kutuları kesin DQ200 saymaz."
+    },
+    {
+      "id": "findservice-dq200",
+      "title": "DQ200 ve diğer DSG kutuları",
+      "url": "https://www.findservicehistory.com/common-faults-check/dsg-gearbox-problems",
+      "kind": "technical-publication",
+      "publisher": "Find Service History",
+      "reviewed": true,
+      "reviewMethod": "Sayfa metni okundu.",
+      "note": "Kuru 7 ileri kutuyu Golf, Polo, Ibiza, Leon, Fabia ve Octavia ile anar. 6 ileri ve ıslak kutuları hariç tutar."
+    }
+  ],
+  "issues": [
+    {
+      "id": "ea111-triger-zinciri",
+      "title": "Triger zincirinde uzama",
+      "summary": "Bazı erken 1.4 TSI motorlarda triger zincirinin uzadığı ve soğukta tıkırtı yaptığı bildiriliyor. Kayışlı sonraki 1.4 TSI motorlar bu kaydın dışındadır.",
+      "category": "engine",
+      "frequency": "high",
+      "frequencyRationale": "Parça üreticisinin teknik notu ve Auto Bild'in aktardığı üretici ürün bilgisi aynı zincir kusurunu anlatıyor. Oran yazılmadı.",
+      "vehicles": [
+        { "brand": "Volkswagen", "model": "Golf", "generation": "Golf VI", "engines": [{ "name": "1.4 TSI" }] },
+        { "brand": "Volkswagen", "model": "Passat", "generation": "Passat B6", "engines": [{ "name": "1.4 TSI" }] },
+        { "brand": "Volkswagen", "model": "Passat", "generation": "Passat B7", "engines": [{ "name": "1.4 TSI" }] },
+        {
+          "brand": "Volkswagen",
+          "model": "Tiguan",
+          "generation": "Tiguan 1. nesil (5N)",
+          "engines": [{ "name": "1.4 TSI 122 PS" }, { "name": "1.4 TSI 160 PS" }]
+        }
+      ],
+      "sourceIds": ["bilstein-ea111-zincir", "autobild-ea111-zincir"],
+      "uncertainties": "Tiguan'ın aynı neslindeki 125 ve 150 PS motorlar sonraki kayışlı motordur; zincir kaydına alınmadı. Polo V hem eski hem yeni 1.2 TSI barındırdığı için bağlanmadı."
+    },
+    {
+      "id": "skoda-ea111-triger-zinciri",
+      "title": "Triger zincirinde uzama",
+      "summary": "Bazı erken 1.4 TSI motorlarda triger zincirinin uzadığı ve soğukta tıkırtı yaptığı bildiriliyor. Kayışlı sonraki 1.4 TSI motorlar bu kaydın dışındadır.",
+      "category": "engine",
+      "frequency": "high",
+      "frequencyRationale": "Aynı EA111 zincir notları Škoda'nın bu nesildeki 1.4 TSI motorlarını da kapsıyor. Ayrı marka kaydı açıldı çünkü katalog sorunları markaya göre süzülüyor.",
+      "vehicles": [
+        { "brand": "Skoda", "model": "Octavia", "generation": "Octavia Mk2 (1Z)", "engines": [{ "name": "1.4 TSI" }] },
+        { "brand": "Skoda", "model": "Fabia", "generation": "Fabia Mk2 (5J)", "engines": [{ "name": "1.4 TSI 180 PS" }] }
+      ],
+      "sourceIds": ["bilstein-ea111-zincir", "autobild-ea111-zincir"],
+      "uncertainties": "Fabia'da yalnızca 180 PS erken motor alındı. Octavia Mk3 kayışlı motordur."
+    },
+    {
+      "id": "seat-ea111-triger-zinciri",
+      "title": "Triger zincirinde uzama",
+      "summary": "Bazı erken 1.4 TSI motorlarda triger zincirinin uzadığı ve soğukta tıkırtı yaptığı bildiriliyor. Kayışlı sonraki 1.4 TSI motorlar bu kaydın dışındadır.",
+      "category": "engine",
+      "frequency": "high",
+      "frequencyRationale": "Bilstein notu SEAT uygulamalarını da sayıyor. 150 PS Ibiza motoru aynı nesilde yeni motorla karışabildiği için alınmadı.",
+      "vehicles": [
+        { "brand": "Seat", "model": "Leon", "generation": "Leon 2. nesil (1P)", "engines": [{ "name": "1.4 TSI" }] },
+        { "brand": "Seat", "model": "Ibiza", "generation": "Ibiza Mk4 (6J/6P)", "engines": [{ "name": "1.4 TSI 180 PS" }] },
+        { "brand": "Seat", "model": "Toledo", "generation": "Toledo 4. nesil", "engines": [{ "name": "1.4 TSI 122 PS" }] }
+      ],
+      "sourceIds": ["bilstein-ea111-zincir", "autobild-ea111-zincir"],
+      "uncertainties": "Toledo 125 PS ve Leon'un sonraki nesli bu zincir kaydına konmadı."
+    },
+    {
+      "id": "ea211-devirdaim-govdesi",
+      "title": "Devirdaim gövdesinden su kaçağı",
+      "summary": "Bazı 1.4 TSI motorlarda plastik devirdaim ve termostat gövdesinden su kaçırdığı bildiriliyor. Kaçak her araçta görülmeyebilir.",
+      "category": "cooling",
+      "frequency": "medium",
+      "frequencyRationale": "Bir teknik bakım yazısı ve bir servis notu aynı gövdeyi işaret ediyor. Kaç araçta görüldüğü sayılmadığı için yüksek denmedi.",
+      "vehicles": [
+        {
+          "brand": "Volkswagen",
+          "model": "Golf",
+          "generation": "Golf VII",
+          "engines": [{ "name": "1.4 TSI" }, { "name": "1.4 TSI ACT" }]
+        },
+        {
+          "brand": "Volkswagen",
+          "model": "Passat",
+          "generation": "Passat B8",
+          "engines": [{ "name": "1.4 TSI" }, { "name": "1.4 TSI ACT" }]
+        },
+        { "brand": "Volkswagen", "model": "Polo", "generation": "Polo V", "engines": [{ "name": "1.4 TSI ACT" }] },
+        {
+          "brand": "Volkswagen",
+          "model": "Tiguan",
+          "generation": "Tiguan 1. nesil (5N)",
+          "engines": [{ "name": "1.4 TSI 125 PS" }, { "name": "1.4 TSI 150 PS" }]
+        }
+      ],
+      "sourceIds": ["importcar-ea211-pompa", "seatcupra-ea211-pompa"],
+      "uncertainties": "Golf VI, Passat B6 ve B7'deki 1.4 TSI bu gövdeyi kullanmaz. GTE ve eHybrid alınmadı. Golf 8 kataloğunda 1.4 TSI yok."
+    },
+    {
+      "id": "skoda-ea211-devirdaim-govdesi",
+      "title": "Devirdaim gövdesinden su kaçağı",
+      "summary": "Bazı 1.4 TSI motorlarda plastik devirdaim ve termostat gövdesinden su kaçırdığı bildiriliyor. Kaçak her araçta görülmeyebilir.",
+      "category": "cooling",
+      "frequency": "medium",
+      "frequencyRationale": "EA211 gövde notları Octavia Mk3 ve Superb'in bu 1.4 motorlarına uygulanabildi. Sıklık sayılmadığı için orta bırakıldı.",
+      "vehicles": [
+        { "brand": "Skoda", "model": "Octavia", "generation": "Octavia Mk3 (5E)", "engines": [{ "name": "1.4 TSI" }] },
+        {
+          "brand": "Skoda",
+          "model": "Superb",
+          "generation": "Superb 3. nesil (B8/3V)",
+          "engines": [{ "name": "1.4 TSI" }, { "name": "1.4 TSI ACT" }]
+        }
+      ],
+      "sourceIds": ["importcar-ea211-pompa", "seatcupra-ea211-pompa"],
+      "uncertainties": "Octavia Mk2 zincirli motordur. Octavia Mk4 eHybrid alınmadı."
+    },
+    {
+      "id": "seat-ea211-devirdaim-govdesi",
+      "title": "Devirdaim gövdesinden su kaçağı",
+      "summary": "Bazı 1.4 TSI motorlarda plastik devirdaim ve termostat gövdesinden su kaçırdığı bildiriliyor. Kaçak her araçta görülmeyebilir.",
+      "category": "cooling",
+      "frequency": "medium",
+      "frequencyRationale": "Servis notu Leon'daki EA211 1.2 ve 1.4 motorlarını anıyor. Katalogda 1.2 ile 1.4 aynı gövde diye birleşmedi; yalnızca adı doğrulanan 1.4 sürümleri alındı.",
+      "vehicles": [
+        {
+          "brand": "Seat",
+          "model": "Leon",
+          "generation": "Leon 3. nesil (5F)",
+          "engines": [
+            { "name": "1.4 TSI 125 PS" },
+            { "name": "1.4 TSI 140 PS" },
+            { "name": "1.4 TSI 150 PS" },
+            { "name": "1.4 TSI ACT 150 PS" }
+          ]
+        },
+        { "brand": "Seat", "model": "Toledo", "generation": "Toledo 4. nesil", "engines": [{ "name": "1.4 TSI 125 PS" }] }
+      ],
+      "sourceIds": ["importcar-ea211-pompa", "seatcupra-ea211-pompa"],
+      "uncertainties": "Leon'da ailesi yazılmamış düz 1.4 TSI satırı bağlanmadı. Toledo 122 PS zincir kaydındadır."
+    },
+    {
+      "id": "skoda-dq200-kavrama",
+      "title": "DSG kavrama sarsıntısı",
+      "summary": "Bazı kuru kavramalı 7 ileri DSG kutularında kalkışta sarsıntı bildiriliyor. Islak kavramalı DSG kutuları bu kaydın dışındadır.",
+      "category": "transmission",
+      "frequency": "high",
+      "frequencyRationale": "İki teknik rehber kuru 7 ileri DQ200 sarsıntısını Octavia ve Fabia dahil küçük motorlu araçlarda anlatıyor. Katalogda DSG adı olmayan satırlar alınmadı.",
+      "vehicles": [
+        {
+          "brand": "Skoda",
+          "model": "Octavia",
+          "generation": "Octavia Mk2 (1Z)",
+          "engines": [{ "name": "1.4 TSI 122 PS" }],
+          "transmission": { "type": "dual-clutch", "name": "DSG" }
+        },
+        {
+          "brand": "Skoda",
+          "model": "Octavia",
+          "generation": "Octavia Mk3 (5E)",
+          "engines": [
+            { "name": "1.0 TSI 115 PS" },
+            { "name": "1.2 TSI 105 PS" },
+            { "name": "1.2 TSI 110 PS" },
+            { "name": "1.4 TSI 140 PS" },
+            { "name": "1.4 TSI 150 PS" }
+          ],
+          "transmission": { "type": "dual-clutch", "name": "DSG" }
+        },
+        {
+          "brand": "Skoda",
+          "model": "Octavia",
+          "generation": "Octavia Mk4",
+          "engines": [{ "name": "1.0 TSI" }],
+          "transmission": { "type": "dual-clutch", "name": "DSG" }
+        },
+        {
+          "brand": "Skoda",
+          "model": "Fabia",
+          "generation": "Fabia Mk2 (5J)",
+          "engines": [{ "name": "1.2 TSI 105 PS" }],
+          "transmission": { "type": "dual-clutch", "name": "DSG" }
+        },
+        {
+          "brand": "Skoda",
+          "model": "Fabia",
+          "generation": "Fabia Mk3 (NJ)",
+          "engines": [{ "name": "1.0 TSI 95 PS" }, { "name": "1.0 TSI 110 PS" }, { "name": "1.2 TSI 110 PS" }],
+          "transmission": { "type": "dual-clutch", "name": "DSG" }
+        },
+        {
+          "brand": "Skoda",
+          "model": "Fabia",
+          "generation": "Fabia Mk4",
+          "engines": [{ "name": "1.0 TSI 110 PS" }, { "name": "1.0 TSI 115 PS" }],
+          "transmission": { "type": "dual-clutch", "name": "DSG" }
+        },
+        {
+          "brand": "Skoda",
+          "model": "Superb",
+          "generation": "Superb 3. nesil (B8/3V)",
+          "engines": [{ "name": "1.4 TSI ACT 150 PS" }],
+          "transmission": { "type": "dual-clutch", "name": "DSG" }
+        }
+      ],
+      "sourceIds": ["vagpulse-dq200", "findservice-dq200"],
+      "uncertainties": "180 PS Fabia ve eHybrid kutuları alınmadı. Adı yalnızca 1.6 TDI olan satır, aynı addaki motor ailesiyle çakıştığı için alınmadı. 1.5 TSI ayrılmadığı için yok. Mevcut Volkswagen Golf ve Passat kaydı yeniden açılmadı."
+    },
+    {
+      "id": "seat-dq200-kavrama",
+      "title": "DSG kavrama sarsıntısı",
+      "summary": "Bazı kuru kavramalı 7 ileri DSG kutularında kalkışta sarsıntı bildiriliyor. Islak kavramalı DSG kutuları bu kaydın dışındadır.",
+      "category": "transmission",
+      "frequency": "high",
+      "frequencyRationale": "Rehberler kuru 7 ileri kutuyu Ibiza, Leon ve Arona ile anıyor. Yüksek torklu 150 ve 180 PS Ibiza satırları ıslak kutu olabileceği için alınmadı.",
+      "vehicles": [
+        {
+          "brand": "Seat",
+          "model": "Leon",
+          "generation": "Leon 3. nesil (5F)",
+          "engines": [
+            { "name": "1.2 TSI 105 PS" },
+            { "name": "1.2 TSI 110 PS" },
+            { "name": "1.4 TSI 150 PS" },
+            { "name": "1.4 TSI ACT 150 PS" },
+            { "name": "1.6 TDI 105 PS" },
+            { "name": "1.6 TDI 110 PS" },
+            { "name": "1.6 TDI 115 PS" }
+          ],
+          "transmission": { "type": "dual-clutch", "name": "DSG" }
+        },
+        {
+          "brand": "Seat",
+          "model": "Ibiza",
+          "generation": "Ibiza Mk4 (6J/6P)",
+          "engines": [{ "name": "1.0 TSI 110 PS" }, { "name": "1.2 TSI 105 PS" }],
+          "transmission": { "type": "dual-clutch", "name": "DSG" }
+        },
+        {
+          "brand": "Seat",
+          "model": "Ibiza",
+          "generation": "Ibiza Mk5 (6F/KJ1)",
+          "engines": [{ "name": "1.0 TSI 116 PS" }],
+          "transmission": { "type": "dual-clutch", "name": "DSG" }
+        },
+        {
+          "brand": "Seat",
+          "model": "Arona",
+          "generation": "Arona (KJ7)",
+          "engines": [{ "name": "1.0 TSI 116 PS" }],
+          "transmission": { "type": "dual-clutch", "name": "DSG" }
+        },
+        {
+          "brand": "Seat",
+          "model": "Toledo",
+          "generation": "Toledo 4. nesil",
+          "engines": [{ "name": "1.4 TSI 122 PS" }, { "name": "1.4 TSI 125 PS" }],
+          "transmission": { "type": "dual-clutch", "name": "DSG" }
+        }
+      ],
+      "sourceIds": ["vagpulse-dq200", "findservice-dq200"],
+      "uncertainties": "Ateca 1.4 ACT büyük gövdeyle ıslak kutu kullanabildiği için alınmadı. CUPRA 1.5 ve 2.0 motorları bu kayda konmadı."
+    }
+  ]
+}

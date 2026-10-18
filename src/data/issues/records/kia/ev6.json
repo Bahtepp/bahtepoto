@@ -1,0 +1,82 @@
+[
+  {
+    "id": "kia-claude-kia-t2-ev6-iccu-12v-sarj",
+    "slug": "kia-claude-kia-t2-ev6-iccu-12v-sarj",
+    "brandId": "kia",
+    "kind": "known-defect",
+    "category": "electrical",
+    "title": "12V akü şarj olmuyor (ICCU arızası)",
+    "summary": "Şarj kontrol ünitesi (ICCU) hasar görünce 12V akü şarj edilmiyor. Uyarılar yanıyor, güç kademeli düşüyor ve araç sonunda durabiliyor.",
+    "symptoms": [
+      "Şarj kontrol ünitesi (ICCU) hasar görünce 12V akü şarj edilmiyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "kia-ev6"
+        ],
+        "generationIds": [
+          "kia-ev6-uretim-2021"
+        ],
+        "revisionIds": [],
+        "engineIds": [],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2021,
+          "to": 2024,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "Üreticinin ABD raporu için verdiği tahmin ve Avrupa kullanıcı iletileri Türkiye sıklığı değildir. Arıza tanımlanmıştır; buradaki oran bilinmiyor.",
+      "sourceIds": []
+    },
+    "frequencyRating": "unknown",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "claude-hyundai",
+      "id": "claude-kia-t2-ev6-iccu-12v-sarj"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-claudehyundai-claude-t2-nhtsa-24v867-rapor",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-claudehyundai-claude-t2-nhtsa-api-ev6-iccu",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-claudehyundai-claude-t2-ev6-forum-de-iccu",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "researching",
+    "updatedAt": "2026-10-18",
+    "notes": "Üreticinin ABD raporu için verdiği tahmin ve Avrupa kullanıcı iletileri Türkiye sıklığı değildir. Arıza tanımlanmıştır; buradaki oran bilinmiyor. Yıllar ABD raporundaki üretim aralığıdır: 17.11.2021-22.07.2024; Avrupa üretim aralığı okunmadı. Avrupa'da kullanıcı bildirimleri var ama Avrupa veya Türkiye için resmi bir geri çağırma numarası okunmadı; Türkiye'de resmi geri çağırma yapıldığı varsayılmamalıdır. Kapsam şasi numarasıyla yetkili serviste sorulmalıdır. Hyundai Ioniq 5 ve 6 ayrı kayıttadır; diğer Kia elektrikli modellerine yayılmadı.",
+    "demo": false
+  }
+]

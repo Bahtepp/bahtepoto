@@ -1,0 +1,48 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "claude-hyundai",
+  "brands": ["Kia"],
+  "models": ["Sportage", "Sorento"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "claude-kia-eng222-yag",
+      "title": "Nu, Gamma ve Theta motorlarda yağ tüketimi",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10205426-0001.pdf",
+      "kind": "manufacturer-bulletin",
+      "publisher": "Kia",
+      "publishedAt": "2021-12-21",
+      "reviewed": true,
+      "reviewMethod": "NHTSA kopyasındaki bülten ve model tablosu okundu.",
+      "note": "ENG 222 revizyon 4. Uzun blok tablosu Sportage ve Sorento için Theta 2.0 T-GDI ile 2.4 GDI diyor, 2011-2020. Gamma 1.6 GDI satırı Soul ile sınırlı."
+    }
+  ],
+  "issues": [
+    {
+      "id": "claude-kia-theta-24-gdi-yag",
+      "title": "Motorda yağ eksilmesi",
+      "summary": "Bazı 2.4 GDI motorlarda yağ seviyesinin beklenenden hızlı düşebildiği bir servis bülteninde anlatılıyor. Her araçta görülmeyebilir.",
+      "category": "engine",
+      "frequency": "medium",
+      "frequencyRationale": "Bülten bu motorlar için yağ tüketimi ölçümü ve gerekirse motor onarımını tarif ediyor. Oran verilmediği için yüksek denmedi.",
+      "vehicles": [
+        {
+          "brand": "Kia",
+          "model": "Sportage",
+          "generation": "Sportage 4. nesil",
+          "engines": [{ "name": "2.4 GDI 181 PS" }],
+          "years": { "from": 2015, "to": 2020 }
+        },
+        {
+          "brand": "Kia",
+          "model": "Sorento",
+          "generation": "Sorento 3. nesil",
+          "engines": [{ "name": "2.4 GDI" }],
+          "years": { "from": 2014, "to": 2020 }
+        }
+      ],
+      "sourceIds": ["claude-kia-eng222-yag"],
+      "uncertainties": "Aynı bültendeki 2.0 T-GDI bu iki neslin katalog adlarında ayrı bir satır olarak doğrulanmadı. Gamma 1.6 GDI uzun blok listesi Soul içindir. 1.6 GDI, dizel ve hibrit sürümler alınmadı. Yıllar bülten aralığı ile neslin bilinen döneminin kesişimidir."
+    }
+  ]
+}

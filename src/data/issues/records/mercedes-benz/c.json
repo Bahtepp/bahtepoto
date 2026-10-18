@@ -1,0 +1,296 @@
+[
+  {
+    "id": "mercedes-benz-gpt-mer-w204-m271-zincir-dislisi",
+    "slug": "mercedes-benz-gpt-mer-w204-m271-zincir-dislisi",
+    "brandId": "mercedes-benz",
+    "kind": "known-defect",
+    "category": "engine",
+    "title": "Triger zinciri ve eksantrik dişlisi",
+    "summary": "W204 1.8 CGI M271 motorlarda zincir uzaması ve eksantrik dişlisi aşınması nedeniyle ilk çalıştırmada metalik ses bildiriliyor.",
+    "symptoms": [
+      "W204 1.8 CGI M271 motorlarda zincir uzaması ve eksantrik dişlisi aşınması nedeniyle ilk çalıştırmada metalik ses bildiriliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "mercedes-benz-c"
+        ],
+        "generationIds": [
+          "mercedes-benz-c-w204"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "mercedes-benz-18-250",
+          "mercedes-benz-18-200",
+          "mercedes-benz-18-180"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2010,
+          "to": 2013,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Türkiye ve İngiltere forumlarında birden fazla sahip benzer zincir sesini anlatıyor. Okunmuş servis bülteni veya ölçülmüş oran olmadığı için yüksek denmedi.",
+      "sourceIds": [
+        "arastirma-gptgerman-gpt-mer-w204-chain-tr",
+        "arastirma-gptgerman-gpt-mer-w204-chain-uk"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "gpt-german",
+      "id": "gpt-mer-w204-m271-zincir-dislisi"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-gptgerman-gpt-mer-w204-chain-tr",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-gptgerman-gpt-mer-w204-chain-uk",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "researching",
+    "updatedAt": "2026-10-18",
+    "notes": "Türkiye ve İngiltere forumlarında birden fazla sahip benzer zincir sesini anlatıyor. Okunmuş servis bülteni veya ölçülmüş oran olmadığı için yüksek denmedi. W204 kataloğundaki 1.8 180, 1.8 200 ve 1.8 250 M271 CGI seçenekleridir. 1.6 180 ve 1.6 180K (M274 / Kompressor) bağlanmadı.",
+    "demo": false
+  },
+  {
+    "id": "mercedes-benz-gpt-mer-w204-esl-direksiyon-kilidi",
+    "slug": "mercedes-benz-gpt-mer-w204-esl-direksiyon-kilidi",
+    "brandId": "mercedes-benz",
+    "kind": "chronic",
+    "category": "electrical",
+    "title": "Elektronik direksiyon kilidi arızası",
+    "summary": "W204 kasada elektronik direksiyon kilidi bazen açılmayabiliyor; anahtar tanınsa bile araç marş izni vermeyebiliyor.",
+    "symptoms": [
+      "W204 kasada elektronik direksiyon kilidi bazen açılmayabiliyor; anahtar tanınsa bile araç marş izni vermeyebiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "mercedes-benz-c"
+        ],
+        "generationIds": [
+          "mercedes-benz-c-w204"
+        ],
+        "revisionIds": [],
+        "engineIds": [],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "expert-observed",
+      "note": "W204 ESL üzerinde çalışan uzman servis açıklaması ve Türkiye C-Serisi sahiplerinin kolon kilidi deneyimleri var; model genelinde oran bilinmiyor.",
+      "sourceIds": [
+        "arastirma-gptgerman-gpt-mer-w204-esl-expert",
+        "arastirma-gptgerman-gpt-mer-w204-esl-tr"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "gpt-german",
+      "id": "gpt-mer-w204-esl-direksiyon-kilidi"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-gptgerman-gpt-mer-w204-esl-expert",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-gptgerman-gpt-mer-w204-esl-tr",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "W204 ESL üzerinde çalışan uzman servis açıklaması ve Türkiye C-Serisi sahiplerinin kolon kilidi deneyimleri var; model genelinde oran bilinmiyor. Düşük akü voltajı veya anahtar arızası benzer belirti verebilir; kesin teşhis değildir.",
+    "demo": false
+  },
+  {
+    "id": "mercedes-benz-gpt-mer-w205-c220d-nox-sensoru",
+    "slug": "mercedes-benz-gpt-mer-w205-c220d-nox-sensoru",
+    "brandId": "mercedes-benz",
+    "kind": "known-defect",
+    "category": "emissions",
+    "title": "NOx sensörü ve AdBlue uyarısı",
+    "summary": "Bazı W205 C 220 d araçlarda NOx sensörü arızası motor uyarısına ve AdBlue sistemiyle ilgili hata mesajlarına yol açabiliyor.",
+    "symptoms": [
+      "Bazı W205 C 220 d araçlarda NOx sensörü arızası motor uyarısına ve AdBlue sistemiyle ilgili hata mesajlarına yol açabiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "mercedes-benz-c"
+        ],
+        "generationIds": [
+          "mercedes-benz-c-w205"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "mercedes-benz-22-220"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2014,
+          "to": 2018,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Birden fazla bağımsız C220d kullanıcı deneyimi var; sensör, AdBlue seviye ve DPF arızaları birbirine karıştırılmamalı.",
+      "sourceIds": [
+        "arastirma-gptgerman-gpt-mer-w205-nox-uk",
+        "arastirma-gptgerman-gpt-mer-w205-nox-another",
+        "arastirma-gptgerman-gpt-mer-w205-nox-mbclub"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "gpt-german",
+      "id": "gpt-mer-w205-c220d-nox-sensoru"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-gptgerman-gpt-mer-w205-nox-uk",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-gptgerman-gpt-mer-w205-nox-another",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-gptgerman-gpt-mer-w205-nox-mbclub",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "researching",
+    "updatedAt": "2026-10-18",
+    "notes": "Birden fazla bağımsız C220d kullanıcı deneyimi var; sensör, AdBlue seviye ve DPF arızaları birbirine karıştırılmamalı. W205’te 2016-2017 2.2 220 satırı erken C 220 d BlueTEC karşılığıdır. 2018 220d ve nesli belirsiz 220 BlueTEC bağlanmadı.",
+    "demo": false
+  },
+  {
+    "id": "mercedes-benz-gpt-mer-w205-krom-trim-soyulmasi",
+    "slug": "mercedes-benz-gpt-mer-w205-krom-trim-soyulmasi",
+    "brandId": "mercedes-benz",
+    "kind": "known-defect",
+    "category": "interior",
+    "title": "Orta konsol krom kaplama soyulması",
+    "summary": "Bazı W205 araçlarda bardaklık çevresindeki ince krom kaplamanın kenarlardan soyulabildiği bildiriliyor.",
+    "symptoms": [
+      "Bazı W205 araçlarda bardaklık çevresindeki ince krom kaplamanın kenarlardan soyulabildiği bildiriliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "mercedes-benz-c"
+        ],
+        "generationIds": [
+          "mercedes-benz-c-w205"
+        ],
+        "revisionIds": [],
+        "engineIds": [],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "W205 iç konsol trimlerine ilişkin servis/parça rehberi ve kullanıcı şikâyeti bulunuyor; şikâyet sayısından sıklık hesaplanamıyor.",
+      "sourceIds": []
+    },
+    "frequencyRating": "unknown",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "gpt-german",
+      "id": "gpt-mer-w205-krom-trim-soyulmasi"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-gptgerman-gpt-mer-w205-chrome-repair",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "researching",
+    "updatedAt": "2026-10-18",
+    "notes": "W205 iç konsol trimlerine ilişkin servis/parça rehberi ve kullanıcı şikâyeti bulunuyor; şikâyet sayısından sıklık hesaplanamıyor. Bardaklık çevresinde ilgili krom trim gerçekten bulunan araçlara uygulanmalı. Bazı kullanıcı kaynakları yalnız arama sonucu üzerinden incelendi.",
+    "demo": false
+  }
+]

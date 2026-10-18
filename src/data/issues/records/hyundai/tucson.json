@@ -1,0 +1,103 @@
+[
+  {
+    "id": "hyundai-claude-hyundai-16t-dct-sarsinti",
+    "slug": "hyundai-claude-hyundai-16t-dct-sarsinti",
+    "brandId": "hyundai",
+    "kind": "known-defect",
+    "category": "transmission",
+    "title": "Çift kavramada kalkış sarsıntısı",
+    "summary": "Bazı 1.6 T-GDI ve 7 ileri çift kavramalı araçlarda kalkışta sarsıntı bildiriliyor. Geleneksel otomatik şanzımanlar bu kaydın dışındadır.",
+    "symptoms": [
+      "Bazı 1.6 T-GDI ve 7 ileri çift kavramalı araçlarda kalkışta sarsıntı bildiriliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "hyundai-tucson"
+        ],
+        "generationIds": [
+          "hyundai-tucson-3-nesil"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "hyundai-16-t-gdi"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [
+          {
+            "type": "dual-clutch",
+            "name": "DCT"
+          }
+        ],
+        "years": {
+          "from": 2016,
+          "to": 2018,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "hyundai-kona"
+        ],
+        "generationIds": [
+          "hyundai-kona-1-nesil"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "hyundai-16-t-gdi"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [
+          {
+            "type": "dual-clutch",
+            "name": "DCT"
+          }
+        ],
+        "years": {
+          "from": 2018,
+          "to": 2021,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Üretici bülteni düşük hızda titreşimi tanımlıyor ve kavramayı değiştirmeyi de içeriyor. Kaç araçta görüldüğü yazılmadığı için yüksek denmedi.",
+      "sourceIds": [
+        "arastirma-claudehyundai-claude-hma-22-at-007h-dct"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "claude-hyundai",
+      "id": "claude-hyundai-16t-dct-sarsinti"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-claudehyundai-claude-hma-22-at-007h-dct",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "Üretici bülteni düşük hızda titreşimi tanımlıyor ve kavramayı değiştirmeyi de içeriyor. Kaç araçta görüldüğü yazılmadığı için yüksek denmedi. Bülten ABD model yıllarını sayıyor. Tucson 4. nesil, Kona 2. nesil ve 1.0 T-GDI çift kavramaları listede yok. Kia Optima, Soul ve Forte ayrı bir Kia bülteninde; Türkiye katalog eşlemesi bu dosyada yapılmadı.",
+    "demo": false
+  }
+]

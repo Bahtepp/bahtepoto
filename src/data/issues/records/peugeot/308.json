@@ -1,0 +1,201 @@
+[
+  {
+    "id": "peugeot-gemini-peugeot-12-puretech-triger",
+    "slug": "peugeot-gemini-peugeot-12-puretech-triger",
+    "brandId": "peugeot",
+    "kind": "known-defect",
+    "category": "engine",
+    "title": "1.2 PureTech'te erken triger kayışı aşınması",
+    "summary": "Önceki nesil 1.2 PureTech motorlarda yağ içindeki triger kayışı erken aşınabiliyor. Stellantis bunu Avrupa'da belirli koşullarla tazmin ediyor; bu Türkiye garantisi değildir. Zincirli yeni nesil bu kayda bağlanmadı.",
+    "symptoms": [
+      "Önceki nesil 1.2 PureTech motorlarda yağ içindeki triger kayışı erken aşınabiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "peugeot-308"
+        ],
+        "generationIds": [
+          "peugeot-308-308-ii"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "peugeot-12-puretech-82",
+          "peugeot-12-puretech-110",
+          "peugeot-12-puretech-130"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "peugeot-2008"
+        ],
+        "generationIds": [
+          "peugeot-2008-p24"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "peugeot-12-puretech-100",
+          "peugeot-12-puretech-155"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2020,
+          "to": 2022,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Üretici sayfası önceki nesil 1.0 ve 1.2 PureTech için erken kayış bozulmasını kabul ediyor. Oran yazılmadığı için yüksek denmedi.",
+      "sourceIds": [
+        "arastirma-geministellantis-peugeot-stellantis-puretech"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "gemini-stellantis",
+      "id": "gemini-peugeot-12-puretech-triger"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-geministellantis-peugeot-stellantis-puretech",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "Üretici sayfası önceki nesil 1.0 ve 1.2 PureTech için erken kayış bozulmasını kabul ediyor. Oran yazılmadığı için yüksek denmedi. 3008 II 1.2 PureTech 130 PS kataloğu 2024'e kadar uzanıyor; zincirli nesille aynı satırda kalabileceği için bağlanmadı. 2008 II 130 PS satırı 2025'e kadar uzanıyor, o da bağlanmadı. Yakıtsız 1.2 PureTech, 1.2 Hybrid ve 1.2 VTi yazılmadı.",
+    "demo": false
+  },
+  {
+    "id": "peugeot-claude-stellantis-peugeot-16thp-zincir-gergisi",
+    "slug": "peugeot-claude-stellantis-peugeot-16thp-zincir-gergisi",
+    "brandId": "peugeot",
+    "kind": "known-defect",
+    "category": "engine",
+    "title": "1.6 THP: triger zinciri gergisi kayması ve soğukta takırtı",
+    "summary": "1.6 THP benzinli turbo motorda triger zinciri gergisi zinciri yeterince tutamayınca soğuk çalıştırmada metalik ses geliyor; zincir kayarsa güç kaybı ve motor hasarı olabiliyor.",
+    "symptoms": [
+      "1.6 THP benzinli turbo motorda triger zinciri gergisi zinciri yeterince tutamayınca soğuk çalıştırmada metalik ses geliyor; zincir kayarsa güç kaybı ve motor hasarı olabiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "peugeot-308"
+        ],
+        "generationIds": [
+          "peugeot-308-308-i"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "peugeot-16-thp-150",
+          "peugeot-16-thp-156"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "peugeot-3008"
+        ],
+        "generationIds": [
+          "peugeot-3008-t84"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "peugeot-16-thp-156"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "peugeot-508"
+        ],
+        "generationIds": [
+          "peugeot-508-w23"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "peugeot-16-thp-156",
+          "peugeot-16-thp-165"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Yaklaşık yüz sahip yorumuna dayanan iki sayfanın editör metni zinciri motorun tekrarlayan tek sorunu olarak anıyor ve sahip yorumlarında aynı belirti geçiyor. Oran yok.",
+      "sourceIds": [
+        "arastirma-claudestellantis-claude-st-fichesauto-thp150",
+        "arastirma-claudestellantis-claude-st-fichesauto-thp165"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "claude-stellantis",
+      "id": "claude-stellantis-peugeot-16thp-zincir-gergisi"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-claudestellantis-claude-st-fichesauto-thp150",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-claudestellantis-claude-st-fichesauto-thp165",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "researching",
+    "updatedAt": "2026-10-18",
+    "notes": "Yaklaşık yüz sahip yorumuna dayanan iki sayfanın editör metni zinciri motorun tekrarlayan tek sorunu olarak anıyor ve sahip yorumlarında aynı belirti geçiyor. Oran yok. Kırılmalar kaynakta daha çok 150 ve 175 PS sürümlerde. Katalogdaki 150, 156 ve 165 PS satırları alındı; 140 PS ve GTI alınmadı. Gergi revizyonunun tarihi okunmadığı için yıl yazılmadı. 207, RCZ, 208, 308 II ve 1.6 PureTech eklenmedi. BMW ve Mini'ye yayılmadı.",
+    "demo": false
+  }
+]

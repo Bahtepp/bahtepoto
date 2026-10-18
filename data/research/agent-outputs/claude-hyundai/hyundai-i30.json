@@ -1,0 +1,67 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "claude-hyundai",
+  "brands": ["Hyundai"],
+  "models": ["i30"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "claude-i30-fd-mdps-kaplin",
+      "title": "i30 FD elektrikli direksiyon esnek kavrama",
+      "url": "https://www.scribd.com/document/75211612/MDPS-I30",
+      "kind": "manufacturer-bulletin",
+      "publisher": "Hyundai",
+      "reviewed": true,
+      "reviewMethod": "Yayımlanan servis prosedürü metni okundu.",
+      "note": "i30 FD ve Elantra HD. Üretim JOB#1 ile 14 Nisan 2008 arası. Belirti 20-60 km/s bozuk yolda kolon tıkırtısı. Orijinal PDF barındırıcısı bu kopya değil."
+    },
+    {
+      "id": "claude-reddit-i30-gd-kapi-trim",
+      "title": "i30 GD kapı iç kaplamasında soyulma",
+      "url": "https://www.reddit.com/r/CarTalkUK/comments/1ejxgsm/door_trim_paint_peeling_off_hyundai_i30_20122016/",
+      "kind": "user-report",
+      "publisher": "Reddit",
+      "reviewed": true,
+      "reviewMethod": "Gönderi ve yorumlar okundu.",
+      "note": "2012-2016 i30. Sürücü kapısı başta olmak üzere iç kapı kaplamasının soyulması. Bir yorum aynı aracı doğruluyor. i20 PB tutamacı değil."
+    }
+  ],
+  "issues": [
+    {
+      "id": "claude-hyundai-i30-fd-direksiyon-sesi",
+      "title": "Direksiyon kolonunda tıkırtı",
+      "summary": "Bazı erken i30 araçlarda bozuk yolda direksiyon kolonundan tıkırtı duyulabildiği anlatılıyor. Not, sonsuz dişlideki boşluğa bağlanan esnek kavramayı tarif ediyor.",
+      "category": "steering",
+      "frequency": "medium",
+      "frequencyRationale": "Üretici prosedürü belirli bir sesi ve parça değişimini yazıyor. Kısa bir üretim aralığı var; oran verilmediği için yüksek denmedi.",
+      "vehicles": [
+        {
+          "brand": "Hyundai",
+          "model": "i30",
+          "generation": "i30 (FD)",
+          "years": { "from": 2007, "to": 2008 }
+        }
+      ],
+      "sourceIds": ["claude-i30-fd-mdps-kaplin"],
+      "uncertainties": "Metin 14 Nisan 2008'e kadar üretilen i30 FD ve Elantra HD diyor. Elantra HD Türkiye'deki 4. nesille ayrıca doğrulanmadığı için bu kayda konmadı. i30 GD ve PD başka kayıtlardadır."
+    },
+    {
+      "id": "claude-hyundai-i30-gd-kapi-trim",
+      "title": "Kapı iç kaplamasında soyulma",
+      "summary": "Bazı 2012-2016 i30 araçlarda kapı içindeki parlak kaplamanın soyulduğu bildiriliyor. Önce sürücü kapısında fark edildiği anlatılıyor.",
+      "category": "interior",
+      "frequency": "low",
+      "frequencyRationale": "Tek bir alıcı başlığında gözlem var ve bir kullanıcı aynı modeli doğruluyor. Üretici kaydı veya sayım yok.",
+      "vehicles": [
+        {
+          "brand": "Hyundai",
+          "model": "i30",
+          "generation": "i30 (GD)",
+          "years": { "from": 2012, "to": 2016 }
+        }
+      ],
+      "sourceIds": ["claude-reddit-i30-gd-kapi-trim"],
+      "uncertainties": "i20 PB iç kapı tutamacı kaydı bu değildir ve GB veya BC3 nesline yayılmaz. i30 FD ve PD için aynı soyulma okunmadı."
+    }
+  ]
+}

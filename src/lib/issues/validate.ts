@@ -189,6 +189,11 @@ export function validateIssues(issues: Issue[], sources: IssueSource[], catalog:
       err(w, '"manufacturer-acknowledged" üretici teknik bülteni gerektirir (geri çağırma yeterli değildir)');
     }
 
+    // Yüksek yaygınlık, tekil veya belirsiz kanıtla yazılamaz. Düşük yaygınlık ciddiyeti düşürmez.
+    if (issue.frequencyRating === 'high' && (ev === 'unknown' || ev === 'isolated-reports')) {
+      err(w, 'frequencyRating "high" tekil veya belirsiz görülme kanıtıyla kullanılamaz');
+    }
+
     // "Kronik" iddiası tekrar kanıtı ister
     if (issue.kind === 'chronic' && (issue.status === 'verified' || issue.status === 'supported')) {
       if (ev === 'unknown' || ev === 'isolated-reports') {

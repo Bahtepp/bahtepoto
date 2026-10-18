@@ -7,8 +7,6 @@ import { readFileSync } from 'node:fs';
 import { engineGroupsForModel, type EngineGroupView } from '../src/lib/catalog/selector.ts';
 import type { Engine, Variant } from '../src/lib/catalog/schema.ts';
 
-const MARKETS = [{ id: 'tr' }, { id: 'eu', parentId: 'global' }, { id: 'global' }];
-
 function groups(brand: string, model: string): EngineGroupView[] {
   const file = JSON.parse(readFileSync(`src/data/catalog/models/${brand}/${model}.json`, 'utf8')) as {
     generations: {
@@ -27,7 +25,7 @@ function groups(brand: string, model: string): EngineGroupView[] {
   );
   const variants: Record<string, Variant[]> = {};
   for (const g of file.generations) variants[g.id] = g.variants;
-  return engineGroupsForModel(file.generations, variants, engines, MARKETS, 'tr');
+  return engineGroupsForModel(file.generations, variants, engines);
 }
 
 function one(list: EngineGroupView[], label: string): EngineGroupView {
@@ -112,14 +110,12 @@ describe('motor öncelikli seçim', () => {
       sourceIds: [],
       updatedAt: '2026-10-17',
     };
-    const unknown = engineGroupsForModel([gen], { g: [variant] }, { e: engine }, MARKETS, 'tr');
+    const unknown = engineGroupsForModel([gen], { g: [variant] }, { e: engine });
     assert.equal(unknown[0]?.chassis[0]?.options[0]?.revisionSlug, undefined);
     const confirmed = engineGroupsForModel(
       [gen],
       { g: [{ ...variant, revisionMapping: 'confirmed', revisionIds: ['r2'] }] },
       { e: engine },
-      MARKETS,
-      'tr',
     );
     assert.equal(confirmed[0]?.chassis[0]?.options[0]?.revisionSlug, 'makyajli');
   });

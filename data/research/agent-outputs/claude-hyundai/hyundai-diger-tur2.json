@@ -1,0 +1,199 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "claude-hyundai",
+  "brands": ["Hyundai"],
+  "models": ["Elantra", "Ioniq 5", "Ioniq 6", "Accent Blue", "i20", "i30"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "claude-t2-hma-17-st-002-kavrama",
+      "title": "MDPS esnek kavrama garanti uzatması (17-ST-002)",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10110922-9999.pdf",
+      "kind": "manufacturer-bulletin",
+      "publisher": "Hyundai Motor America",
+      "reviewed": true,
+      "reviewMethod": "NHTSA kopyası indirildi; metin pdftotext ile hem sütunlu hem okuma sırasıyla çıkarılıp okundu.",
+      "note": "Şubat 2017. Kauçuk esnek kavrama aşınınca direksiyon çevrilirken hafif tıkırtı veya vuruntu; güvenlik sorunu değil. Kavrama garantisi 10 yıl / 100.000 mil. Kapsam: 2007-2010 Elantra (HD) bütün üretim; 2009-2012 Elantra Touring (FD) bütün üretim; 2011-2015 Elantra (MD) üretim 13.08.2010-19.02.2014; 2011-2015 Elantra (UD, ABD üretimi) üretim 03.11.2010-19.05.2014; Sonata YF. Parça 56315-2K000-FFF.",
+      "basedOn": "hma-mdps-kavrama-2017"
+    },
+    {
+      "id": "claude-t2-hma-17-st-001-kavrama",
+      "title": "MDPS esnek kavrama değişimi (17-ST-001)",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10110921-9999.pdf",
+      "kind": "manufacturer-bulletin",
+      "publisher": "Hyundai Motor America",
+      "reviewed": true,
+      "reviewMethod": "NHTSA kopyası indirildi, metni pdftotext ile okundu.",
+      "note": "Şubat 2017. 14-ST-002-1'i günceller; aynı parça ve aynı ses. Kapsam: Elantra GT (GD), Elantra Coupe (JK), Santa Fe (NC, ABD'deki uzun şaseli Santa Fe), Azera, Veloster. Bu kayıtta yalnızca parça ve mekanizma doğrulaması için kullanıldı; listedeki araçlar Türkiye kataloğuna eklenmedi.",
+      "basedOn": "hma-mdps-kavrama-2017"
+    },
+    {
+      "id": "claude-t2-nhtsa-pe23011-iccu",
+      "title": "NHTSA PE23011 kapanış özeti: Ioniq 5 güç kaybı",
+      "url": "https://static.nhtsa.gov/odi/inv/2023/INCLA-PE23011-18973.pdf",
+      "kind": "official-recall",
+      "publisher": "NHTSA Office of Defects Investigation",
+      "publishedAt": "2024-04-17",
+      "reviewed": true,
+      "reviewMethod": "Belge indirildi, metni pdftotext ile okundu.",
+      "note": "2022 Ioniq 5 için açılan ön inceleme. ICCU aşırı akım, şarj sonu gerilim tepesi ve ısıl yük nedeniyle hasar görüp sigortasını attırabiliyor; 12V akü şarj olmuyor, araç ilerleme gücünü kaybedebiliyor. İnceleme 24V-204 geri çağırmasıyla kapandı. Sayılar ABD içindir."
+    },
+    {
+      "id": "claude-t2-nhtsa-api-ioniq5-iccu",
+      "title": "NHTSA geri çağırma kayıtları 24V-204 ve 24V-868 (Hyundai ICCU)",
+      "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=HYUNDAI&model=IONIQ%205&modelYear=2023",
+      "kind": "official-recall",
+      "publisher": "NHTSA",
+      "reviewed": true,
+      "reviewMethod": "NHTSA resmi geri çağırma arayüzünün JSON yanıtı okundu.",
+      "note": "24V-204 (15.03.2024) ve onu genişletip yenileyen 24V-868 (18.11.2024).",
+      "basedOn": "hma-iccu-24v868"
+    },
+    {
+      "id": "claude-t2-nhtsa-24v868-ack",
+      "title": "NHTSA 24V-868 geri çağırma onay yazısı",
+      "url": "https://static.nhtsa.gov/odi/rcl/2024/RCAK-24V868-3172.pdf",
+      "kind": "official-recall",
+      "publisher": "NHTSA",
+      "publishedAt": "2024-11-21",
+      "reviewed": true,
+      "reviewMethod": "Belge indirildi, metni pdftotext ile okundu.",
+      "note": "Kapsam: 2022-2024 Ioniq 5, 2023-2025 Ioniq 6 ve bazı Genesis EV'ler; ABD'de 145.235 araç. ICCU hasar görüp 12V aküyü şarj etmeyi bırakabiliyor ve sürüş gücü kaybolabiliyor. Onarım: ICCU ve sigortanın kontrolü, gerekirse değişimi ve yazılım güncellemesi. 24V-204'ü genişletip yeniler.",
+      "basedOn": "hma-iccu-24v868"
+    },
+    {
+      "id": "claude-t2-oeamtc-ioniq-iccu",
+      "title": "ÖAMTC: Hyundai Ioniq 5 ve Ioniq 6, ICCU geri çağırması (Avusturya)",
+      "url": "https://www.oeamtc.at/rueckrufaktionen/hyundai-ioniq-5-ioniq-6-probleme-mit-der-integrierten-ladeeinheit-iccu-73473294",
+      "kind": "technical-publication",
+      "publisher": "ÖAMTC",
+      "reviewed": true,
+      "reviewMethod": "Sayfa indirildi ve metni okundu (Almanca).",
+      "note": "Avusturya geri çağırması: Ioniq 5 üretim 13.01.2021-29.02.2024, Ioniq 6 üretim 28.09.2022-04.04.2024. Hyundai Österreich açıklamasına göre ICCU arızası sürüşte 12V akünün yetersiz şarjına ve en kötü durumda aracın aniden durmasına yol açabilir. Onarım: yazılım kontrolü, gerekirse ICCU değişimi ve güncelleme. Bu, Avrupa araçlarının da kapsamda olduğunu gösterir; Türkiye'de resmi geri çağırma yapıldığını göstermez."
+    },
+    {
+      "id": "claude-t2-zr-gamma-zayif-noktalar",
+      "title": "6 слабых мест моторов Hyundai и Kia (Gamma ailesi)",
+      "url": "https://www.zr.ru/content/articles/928517-dvigateli-hyundai-i-kia-6-tip/",
+      "kind": "technical-publication",
+      "publisher": "Za Rulem (zr.ru)",
+      "publishedAt": "2021-04-15",
+      "reviewed": true,
+      "reviewMethod": "Makale metni okundu (Rusça).",
+      "note": "Yazar Aleksey Revin. Gamma 1.4 (G4FA) ve 1.6 (G4FC) motorların zayıf noktaları: erken motorlarda katalizör seramiğinin dağılması ve parçaların silindirleri çizmesi; plaka tipi triger zincirinin çoğunlukla 80.000-150.000 km arasında belirgin aşınması. Model listesi Rusya pazarıdır. İstatistik yok.",
+      "basedOn": "zr-928517"
+    },
+    {
+      "id": "claude-t2-wiki-gamma",
+      "title": "Hyundai Gamma engine: G4FA ve G4FC uygulama listeleri",
+      "url": "https://en.wikipedia.org/wiki/Hyundai_Gamma_engine",
+      "kind": "technical-publication",
+      "publisher": "Wikipedia",
+      "reviewed": true,
+      "reviewMethod": "Sayfanın wikitext'i Wikipedia API ile alınıp G4FA ve G4FC bölümleri okundu.",
+      "note": "Yalnızca motor-model eşlemesi için. Liste 'eksik' olarak işaretli ve kendi içinde çelişkili: G4FC'nin 2010'da G4FG ile değiştirildiğini yazarken 2017-2020'ye uzanan uygulamalar sayıyor. Çelişkisiz satırlar: G4FA i20 (PB) 2008-2014, i30 (FD) 2007-2012, Accent (RB) 2011-2017; G4FC i20 (PB) 2008-2011, i30 (FD) 2007-2012."
+    }
+  ],
+  "issues": [
+    {
+      "id": "claude-hyundai-t2-mdps-esnek-kavrama",
+      "title": "Direksiyonda tıkırtı (esnek kavrama)",
+      "summary": "Direksiyon çevrilirken hafif tıkırtı veya vuruntu sesi duyulabiliyor. Ses, direksiyon motorundaki kauçuk esnek kavramanın aşınmasına bağlanıyor.",
+      "category": "steering",
+      "frequency": "medium",
+      "frequencyRationale": "Üretici yalnızca bülten yayımlamakla kalmayıp bu parçanın garantisini 10 yıla uzattı; bu, tekrarlayan bir sorun olduğunu gösterir. Görülme oranı verilmediği için yüksek denmedi.",
+      "vehicles": [
+        {
+          "brand": "Hyundai",
+          "model": "Elantra",
+          "generation": "Elantra HD",
+          "years": { "from": 2007, "to": 2010 }
+        },
+        {
+          "brand": "Hyundai",
+          "model": "Elantra",
+          "generation": "Elantra MD Kore",
+          "years": { "from": 2010, "to": 2014 }
+        }
+      ],
+      "sourceIds": ["claude-t2-hma-17-st-002-kavrama", "claude-t2-hma-17-st-001-kavrama"],
+      "uncertainties": "İNCELEMEDE. Katalogdaki Elantra 4. nesil Türkiye satırı 2014-2018 model yılıdır; bültendeki HD 2007-2010 üretimini temsil etmez. Elantra 5. nesil satırı 2015 model yılına kadar uzanır, bülten Kore MD üretimini 19.02.2014'te keser. Avrupa parça numarası okunmadı. i30 FD aynı esnek kavrama ailesindedir ve ilk tur kaydında durur; bu kayıt ona eklenmedi, çift kart oluşmasın diye Elantra satırları da yayına alınmadı. Santa Fe çıkarıldı."
+    },
+    {
+      "id": "claude-hyundai-t2-iccu-12v-sarj",
+      "title": "12V akü şarj olmuyor (ICCU arızası)",
+      "summary": "Şarj kontrol ünitesi (ICCU) hasar görünce 12V akü şarj edilmiyor. Uyarı lambaları yanabiliyor ve araç ilerleme gücünü kaybedebiliyor.",
+      "category": "electrical",
+      "frequency": "unknown",
+      "frequencyRationale": "ABD bildirim sayısı ve Avrupa geri çağırma araç adedi Türkiye için sıklık kanıtı sayılmadı. Arıza resmi belgelerde tanımlı, Türkiye'deki oranı bilinmiyor.",
+      "vehicles": [
+        {
+          "brand": "Hyundai",
+          "model": "Ioniq 5",
+          "years": { "from": 2021, "to": 2024 }
+        },
+        {
+          "brand": "Hyundai",
+          "model": "Ioniq 6",
+          "years": { "from": 2022, "to": 2024 }
+        }
+      ],
+      "sourceIds": ["claude-t2-nhtsa-pe23011-iccu", "claude-t2-nhtsa-24v868-ack", "claude-t2-nhtsa-api-ioniq5-iccu", "claude-t2-oeamtc-ioniq-iccu"],
+      "uncertainties": "Yıllar Avusturya geri çağırmasındaki Avrupa üretim aralıklarıdır (Ioniq 5: 13.01.2021-29.02.2024; Ioniq 6: 28.09.2022-04.04.2024). ABD kapsamı model yılı olarak Ioniq 5 2022-2024, Ioniq 6 2023-2025. Türkiye'de resmi bir geri çağırma kaydı bulunamadı; aracın bir kampanya kapsamında olup olmadığı şasi numarasıyla yetkili serviste sorulmalıdır. Nesil katalogda ayrılmadığı için boş bırakıldı. Diğer Hyundai elektrikli modellerine yayılmadı."
+    },
+    {
+      "id": "claude-hyundai-t2-gamma-katalizor",
+      "title": "Katalizör dağılması ve silindir çizilmesi",
+      "summary": "Gamma 1.4 ve 1.6 MPI motorlarda katalizör seramiği dağılıp silindirlere girebiliyor. Bu, silindirde çizik ve yağ eksilmesine yol açabiliyor.",
+      "category": "engine",
+      "frequency": "unknown",
+      "frequencyRationale": "Yalnızca tek bir yabancı uzman dergisi bunu bilinen zayıf nokta olarak yazıyor ve 'bazen' diyor. Bağımsız ikinci kaynak veya sayım bulunamadı.",
+      "vehicles": [
+        {
+          "brand": "Hyundai",
+          "model": "i20",
+          "engines": [{ "name": "1.4 CVVT", "code": "G4FA" }, { "name": "1.6 CVVT", "code": "G4FC" }]
+        },
+        {
+          "brand": "Hyundai",
+          "model": "i30",
+          "engines": [{ "name": "1.4 CVVT", "code": "G4FA" }, { "name": "1.6 CVVT", "code": "G4FC" }]
+        },
+        {
+          "brand": "Hyundai",
+          "model": "Accent Blue",
+          "engines": [{ "name": "1.4 CVVT", "code": "G4FA" }]
+        }
+      ],
+      "sourceIds": ["claude-t2-zr-gamma-zayif-noktalar", "claude-t2-wiki-gamma"],
+      "uncertainties": "İNCELEMEDE KALMALI. Kaynak sorunu 'erken motorlar' ile sınırlıyor ama tarih vermiyor; bu yüzden bütün neslin üretimine yaymak doğru olmaz. Ansiklopedideki aday eşleşme: G4FA i20 (PB) 2008-2014, i30 (FD) 2007-2012, Accent (RB) 2011-2017; G4FC i20 (PB) 2008-2011, i30 (FD) 2007-2012. Elantra listesi tutarsız olduğu için çıkarıldı. Katalogdaki motor kayıtlarında G4FA/G4FC kodu yok. Rusya pazarı model listesi."
+    },
+    {
+      "id": "claude-hyundai-t2-gamma-triger-zinciri",
+      "title": "Triger zincirinde erken uzama",
+      "summary": "Gamma 1.4 ve 1.6 MPI motorlarda triger zinciri erken uzayabiliyor. Uzayan zincir dişlileri ve değişken supap zamanlama ünitesini aşındırabiliyor.",
+      "category": "engine",
+      "frequency": "unknown",
+      "frequencyRationale": "Tek bir yabancı uzman dergisi birçok motorda 80.000 km civarında belirgin aşınma görüldüğünü yazıyor; bağımsız ikinci kaynak, servis bülteni veya sayım bulunamadı.",
+      "vehicles": [
+        {
+          "brand": "Hyundai",
+          "model": "i20",
+          "engines": [{ "name": "1.4 CVVT", "code": "G4FA" }, { "name": "1.6 CVVT", "code": "G4FC" }]
+        },
+        {
+          "brand": "Hyundai",
+          "model": "i30",
+          "engines": [{ "name": "1.4 CVVT", "code": "G4FA" }, { "name": "1.6 CVVT", "code": "G4FC" }]
+        },
+        {
+          "brand": "Hyundai",
+          "model": "Accent Blue",
+          "engines": [{ "name": "1.4 CVVT", "code": "G4FA" }]
+        }
+      ],
+      "sourceIds": ["claude-t2-zr-gamma-zayif-noktalar", "claude-t2-wiki-gamma"],
+      "uncertainties": "İNCELEMEDE KALMALI. Tek yayıncı ve yabancı pazar; Türkiye için doğrulayan servis veya kullanıcı kaynağı okunmadı. Ansiklopedideki aday eşleşme: G4FA i20 (PB) 2008-2014, i30 (FD) 2007-2012, Accent (RB) 2011-2017; G4FC i20 (PB) 2008-2011, i30 (FD) 2007-2012. Accent Blue katalogda nesle ayrılmadığı için nesil yazılmadı. Katalogdaki motor kayıtlarında G4FA/G4FC kodu yok. Çift zamanlamalı (G4FG), GDI ve turbo sürümler kapsam dışı."
+    }
+  ]
+}

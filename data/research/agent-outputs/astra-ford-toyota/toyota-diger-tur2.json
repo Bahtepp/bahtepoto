@@ -1,0 +1,90 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-ford-toyota",
+  "brands": [
+    "Toyota"
+  ],
+  "models": [
+    "Prius",
+    "Avensis"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "toyota-zf3-tur2",
+      "title": "ZF3 EGR valfi garanti genişletmesi",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2016/MC-10134089-9999.pdf",
+      "publisher": "Toyota Motor Sales USA",
+      "kind": "manufacturer-bulletin",
+      "reviewed": true,
+      "reviewMethod": "18.10.2026: arıza açıklaması, kapsam ve kısıtlar kaynak metninden okundu."
+    },
+    {
+      "id": "tct-avensis-valvematic-tur2",
+      "title": "Avensis T27 Valvematic arıza deneyimi",
+      "url": "https://www.toyotaclubtr.com/index.php?topic=93827.0",
+      "publisher": "Toyota Club Türkiye",
+      "kind": "user-report",
+      "reviewed": true,
+      "reviewMethod": "18.10.2026: arıza açıklaması, kapsam ve kısıtlar kaynak metninden okundu."
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-ft2-prius-egr-yapisma",
+      "title": "EGR valfinin yapışması",
+      "summary": "EGR valfinin kurum nedeniyle takılması soğuk ilk çalıştırmada düzensiz rölanti ve vuruntuya yol açabilir. Motor arıza lambası ve P0401 kodu görülebilir.",
+      "category": "emissions",
+      "frequency": "unknown",
+      "frequencyRationale": "Türkiye için sıklık verisi bulunmuyor. Kaynak olayın varlığını destekler; kapsam içindeki bütün araçların arızalanacağı anlamına gelmez.",
+      "vehicles": [
+        {
+          "brand": "Toyota",
+          "model": "Prius",
+          "generation": "Prius (XW30)",
+          "years": {
+            "from": 2010,
+            "to": 2012
+          },
+          "engines": [
+            {
+              "name": "1.8 VVT-i Hybrid"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "toyota-zf3-tur2"
+      ],
+      "uncertainties": "ABD ZF3 garanti genişletmesidir; Türkiye garanti veya kampanya iddiası değildir. EGR parça revizyonu, ECU kalibrasyonu ve VIN eşitliği doğrulanmalı; otomatik yayıma hazır değil. Sesin hibrit aktarma çevresinden duyulması e-CVT mekanik arızası kanıtı değildir. İlk tur J0V inverter/koruma modu kaydından farklı mekanizma. Auris/Corolla hibritlerine taşınmaz. Üretim tarihi ile model yılı farklıdır."
+    },
+    {
+      "id": "astra-ft2-avensis-valvematic",
+      "title": "Valvematic kontrol arızası ve güç kısıtlaması",
+      "summary": "Valvematic kontrol arızasında motor uyarısı yanabilir ve motor devri kısıtlanabilir. P1047 kodu kaydedilebilir.",
+      "category": "engine",
+      "frequency": "unknown",
+      "frequencyRationale": "Türkiye için sıklık verisi bulunmuyor. Kaynak olayın varlığını destekler; kapsam içindeki bütün araçların arızalanacağı anlamına gelmez.",
+      "vehicles": [
+        {
+          "brand": "Toyota",
+          "model": "Avensis",
+          "generation": "Avensis T27",
+          "years": {
+            "from": 2011,
+            "to": 2011
+          },
+          "engines": [
+            {
+              "name": "1.6 Valvematic"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "tct-avensis-valvematic-tur2"
+      ],
+      "uncertainties": "2011 yılı konu sahibinin profilinde, 1.6 ve T27 metin/başlıkta. Türkiye birinci el anlatısında parça değişimi sonrası P1047 tekrarlamamış; ayrıca LPG enjektörü/karışım şikâyeti sürmüş. Bunlar tek kök neden sayılmadı. Tek vaka kroniklik kanıtı değildir; inceleme adayı, yayına hazır değil. 2017 Corolla'dan alındığı söylenen parça bütün Corolla'ların sorunlu olduğunu kanıtlamaz. Kesin arıza teşhisi ve parça kodu eksik; diğer yıllara genişletilmedi."
+    }
+  ]
+}

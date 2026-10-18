@@ -1,0 +1,63 @@
+[
+  {
+    "id": "fiat-gemini-fiat-egea-direksiyon-kutusu",
+    "slug": "fiat-gemini-fiat-egea-direksiyon-kutusu",
+    "brandId": "fiat",
+    "kind": "known-defect",
+    "category": "steering",
+    "title": "Direksiyonda veya bozuk yolda tıkırtı",
+    "summary": "Bazı Egea sahipleri bozuk yolda veya direksiyonu çevirirken tıkırtı duyduğunu yazıyor. Servis yorumlarında takoz, direksiyon mili ve direksiyon kutusu ayrı ayrı geçiyor; her ses aynı arıza değildir.",
+    "symptoms": [
+      "Bazı Egea sahipleri bozuk yolda veya direksiyonu çevirirken tıkırtı duyduğunu yazıyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "fiat-egea"
+        ],
+        "generationIds": [
+          "fiat-egea-egea"
+        ],
+        "revisionIds": [],
+        "engineIds": [],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Birkaç Egea şikayeti aynı belirtiyi anlatıyor. Tek parça ve oran gösterilmediği için orta bırakıldı.",
+      "sourceIds": [
+        "arastirma-geministellantis-fiat-egea-direksiyon-sv"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "gemini-stellantis",
+      "id": "gemini-fiat-egea-direksiyon-kutusu"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-geministellantis-fiat-egea-direksiyon-sv",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "researching",
+    "updatedAt": "2026-10-18",
+    "notes": "Birkaç Egea şikayeti aynı belirtiyi anlatıyor. Tek parça ve oran gösterilmediği için orta bırakıldı. Motor yazılmadı. Okunan şikayetler kasa genelinde belirti tarif ediyor ve parçayı ayırmıyor.",
+    "demo": false
+  }
+]

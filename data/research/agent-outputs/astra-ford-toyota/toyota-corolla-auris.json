@@ -1,0 +1,130 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-ford-toyota",
+  "brands": [
+    "Toyota"
+  ],
+  "models": [
+    "Corolla",
+    "Auris",
+    "Yaris",
+    "Aygo"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "ecu-toyota-mmt",
+      "title": "Toyota MMT clutch actuator / gearbox malfunction",
+      "url": "https://www.ecutesting.com/common-faults/toyota/toyota-mmt-clutch-actuator-fault/",
+      "kind": "expert-service",
+      "publisher": "ECU Testing",
+      "reviewed": true,
+      "reviewMethod": "2026-10-18: bağlantı açılarak ilgili arıza metni, kapsam ve kısıtlar okundu."
+    },
+    {
+      "id": "tct-corolla-yag-47739",
+      "title": "D4D dizel Corolla yağ eksiltme ve revizyon deneyimleri",
+      "url": "https://www.toyotaclubtr.com/index.php?topic=47739.0",
+      "kind": "user-report",
+      "publisher": "Toyota Club Türkiye",
+      "reviewed": true,
+      "reviewMethod": "2026-10-18: bağlantı açılarak ilgili arıza metni, kapsam ve kısıtlar okundu."
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-ft-toyota-mmt-aktuator",
+      "title": "MMT vites seçememe ve boşa geçme",
+      "summary": "MMT aktüatör arızası vitesin seçilememesine veya sürüşte boşa geçmesine yol açabilir. N göstergesi yanıp sönebilir ve araç hareket etmeyebilir.",
+      "category": "transmission",
+      "frequency": "unknown",
+      "frequencyRationale": "Kaynak arızayı destekliyor; Türkiye araç parkında oran ve teknik alt sürümlere göre karşılaştırılabilir sıklık verisi bulunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Toyota",
+          "model": "Corolla",
+          "generation": "Corolla E140/E150",
+          "years": {
+            "from": 2007,
+            "to": 2009
+          },
+          "transmission": {
+            "type": "automated-manual",
+            "name": "MMT"
+          }
+        },
+        {
+          "brand": "Toyota",
+          "model": "Auris",
+          "generation": "Auris E150",
+          "years": {
+            "from": 2007,
+            "to": 2012
+          },
+          "transmission": {
+            "type": "automated-manual",
+            "name": "MMT"
+          }
+        },
+        {
+          "brand": "Toyota",
+          "model": "Yaris",
+          "generation": "Yaris XP90",
+          "years": {
+            "from": 2006,
+            "to": 2011
+          },
+          "transmission": {
+            "type": "automated-manual",
+            "name": "MMT"
+          }
+        },
+        {
+          "brand": "Toyota",
+          "model": "Aygo",
+          "generation": "Aygo I",
+          "years": {
+            "from": 2005,
+            "to": 2012
+          },
+          "transmission": {
+            "type": "automated-manual",
+            "name": "MMT"
+          }
+        }
+      ],
+      "sourceIds": [
+        "ecu-toyota-mmt"
+      ],
+      "uncertainties": "Yalnız MMT ve doğrulanmış aktüatör parçası; örnek 31360-52020, 31360-12010/12030. Motor kapsamı kaynaktan belirlenemedi. P0810/P0900 tek başına parça teşhisi değildir. Kaynaktaki geniş yıl listeleri nesil kesişimine daraltıldı; dışarıda kalan yıllar sorunsuz sayılmadı. Corolla Verso ifadesi sonraki Verso'ya taşınmadı. Aygo yerel model dosyası bulunamadı; yalnız araştırma adayıdır. Manuel, tork konvertörlü otomatik, kayışlı CVT ve hibrit e-CVT kapsam dışıdır."
+    },
+    {
+      "id": "astra-ft-corolla-d4d-yag",
+      "title": "D-4D motorunda yağ eksiltme",
+      "summary": "Motor yağı bakım aralığı dolmadan azalabilir ve düşük yağ seviyesi uyarısı görülebilir. Yağ tüketimine egzozdan mavimsi duman eşlik edebilir.",
+      "category": "engine",
+      "frequency": "unknown",
+      "frequencyRationale": "Kaynak arızayı destekliyor; Türkiye araç parkında oran ve teknik alt sürümlere göre karşılaştırılabilir sıklık verisi bulunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Toyota",
+          "model": "Corolla",
+          "generation": "Corolla E140/E150",
+          "years": {
+            "from": 2010,
+            "to": 2012
+          },
+          "engines": [
+            {
+              "name": "1.4 D-4D"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "tct-corolla-yag-47739"
+      ],
+      "uncertainties": "Türkiye kullanıcıları piston/segman işlemleri bildiriyor; paylaşılan servis bülteninin aslı okunmadı. 2010 araç doğrudan imzada, 2010–2012 aralığı konu sahibinin ifadesinde; kesin üretim/seri sınırı değil. Farklı kullanıcı mesajları bağımsız teknik teşhis sayılmadı. Auris yanıtlarında motor/yıl yeterince açık olmadığı için Auris'e yağ tüketimi kaydı eklenmedi. Revizyonun tüm araçlarda kalıcı çözüm sağladığı ileri sürülmez."
+    }
+  ]
+}

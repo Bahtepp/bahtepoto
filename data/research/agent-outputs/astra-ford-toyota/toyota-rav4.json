@@ -1,0 +1,47 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-ford-toyota",
+  "brands": [
+    "Toyota"
+  ],
+  "models": [
+    "RAV4"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "toyota-rav4-g0v",
+      "title": "RAV4 G0V arka alt süspansiyon kolu açıklaması",
+      "url": "https://techinfo.toyota.com/techInfoPortal/staticcontent/en/techinfo/html/prelogin/docs/cp/g0vtofaq.pdf",
+      "kind": "official-recall",
+      "publisher": "Toyota Motor Sales USA",
+      "reviewed": true,
+      "reviewMethod": "2026-10-18: bağlantı açılarak ilgili arıza metni, kapsam ve kısıtlar okundu."
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-ft-rav4-arka-kol",
+      "title": "Arka süspansiyon kolunda korozyon ve gevşeme",
+      "summary": "Arka süspansiyon kolunun ayar bağlantısı korozyonla zayıflayabilir. Arkadan ses, kararsız yönlenme ve ilerleyen durumda bağlantının ayrılması görülebilir.",
+      "category": "suspension",
+      "frequency": "unknown",
+      "frequencyRationale": "Kaynak arızayı destekliyor; Türkiye araç parkında oran ve teknik alt sürümlere göre karşılaştırılabilir sıklık verisi bulunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Toyota",
+          "model": "RAV4",
+          "generation": "RAV4 3. nesil (XA30)",
+          "years": {
+            "from": 2006,
+            "to": 2011
+          }
+        }
+      ],
+      "sourceIds": [
+        "toyota-rav4-g0v"
+      ],
+      "uncertainties": "ABD G0V kampanyası: model yılı 2006–2011, üretim Ekim 2005–Eylül 2010; ikisi aynı değildir. Hatalı rot ayarı sıkma işlemi ve önceki kampanyada değiştirilmemiş kollar koşuldur. Türkiye kol parça numarası/VIN ve onarım geçmişi doğrulanmadı. chassisWide işaretlenmedi; tüm motor/çekişlere otomatik aktarım yapılamaz."
+    }
+  ]
+}

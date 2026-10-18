@@ -1,0 +1,114 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "claude-stellantis",
+  "brands": [
+    "Opel"
+  ],
+  "models": [
+    "Corsa",
+    "Crossland",
+    "Grandland"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "claude-st-largus-15bluehdi-chaine-o",
+      "title": "Casse chaîne 1.5 BlueHDi. Pas de plate-forme d'indemnisation... pour le moment",
+      "url": "https://www.largus.fr/actualite-automobile/casse-chaine-1-5-bluehdi-pas-de-plate-forme-d-indemnisation-pour-le-moment-30038450.html",
+      "kind": "technical-publication",
+      "publisher": "L'argus",
+      "publishedAt": "2025-01-26",
+      "reviewed": true,
+      "reviewMethod": "Makale metni okundu.",
+      "note": "1.5 BlueHDi (DV5) zinciri yetersiz boyutlu ve uzuyor; 2018 - Şubat 2023 üretimi motorlar. Etkilenen markalar arasında Opel var.",
+      "basedOn": "stellantis-15-bluehdi-zincir"
+    },
+    {
+      "id": "claude-st-quechoisir-15bluehdi-o",
+      "title": "Moteur diesel 1.5 BlueHDi de Stellantis : la grogne monte",
+      "url": "https://www.quechoisir.org/actualite-moteur-diesel-1-5-bluehdi-de-stellantis-la-grogne-monte-n132914/",
+      "kind": "technical-publication",
+      "publisher": "UFC-Que Choisir",
+      "publishedAt": "2025-01-10",
+      "reviewed": true,
+      "reviewMethod": "Makale metni okundu.",
+      "note": "Ekim 2017 - Ocak 2023 üretimi. Opel için anılan modeller: Corsa, Astra, Mokka, Crossland, Crossland X, Grandland, Grandland X, Combo, Zafira, Vivaro.",
+      "basedOn": "stellantis-15-bluehdi-zincir"
+    },
+    {
+      "id": "claude-st-motorsactu-15bluehdi-o",
+      "title": "Stellantis étend la couverture de ses anciens moteurs 1.5 BlueHDi et propose un remboursement aux clients concernés",
+      "url": "https://motorsactu.com/stellantis-etend-la-couverture-de-ses-anciens-moteurs-1-5-bluehdi-et-propose-un-remboursement-aux-clients-concernes/",
+      "kind": "technical-publication",
+      "publisher": "MotorsActu",
+      "publishedAt": "2025-07-03",
+      "reviewed": true,
+      "reviewMethod": "Makale metni okundu.",
+      "note": "Ekim 2017 - Ocak 2023 üretimi 1.5 BlueHDi için kapsam 10 yıl / 240.000 km; geri ödeme platformu Opel sitesinde de var.",
+      "basedOn": "stellantis-15-bluehdi-zincir"
+    }
+  ],
+  "issues": [
+    {
+      "id": "claude-stellantis-opel-15-dizel-eksantrik-zinciri",
+      "title": "1.5 dizel (PSA BlueHDi): eksantrik zincirinde uzama ve kopma",
+      "summary": "PSA kökenli 1.5 dizel motorda eksantrik millerini süren 7 mm zincir uzayıp ses, güç kaybı ve yağ tüketimi yapabiliyor; koparsa motor bozuluyor. 1 Şubat 2023'ten sonra takılan 8 mm zincir bu kaydın dışındadır. Uzatılan özel kapsam Avrupa duyurusudur.",
+      "category": "engine",
+      "frequency": "medium",
+      "frequencyRationale": "Üretici yüz binlerce araç için kontrol kampanyası başlattı ve kapsamı 10 yıla uzattı; tüketici örgütü sahip gruplarında yüzlerce dosya aktarıyor. Arıza oranı yayımlanmadığı için yüksek verilmedi.",
+      "vehicles": [
+        {
+          "brand": "Opel",
+          "model": "Corsa",
+          "generation": "Corsa F",
+          "engines": [
+            {
+              "name": "1.5 DIZEL 102 PS"
+            }
+          ],
+          "years": {
+            "from": 2019,
+            "to": 2023
+          }
+        },
+        {
+          "brand": "Opel",
+          "model": "Crossland",
+          "generation": "Crossland",
+          "engines": [
+            {
+              "name": "1.5 DIZEL 102 PS"
+            },
+            {
+              "name": "1.5 DIZEL 120 PS"
+            }
+          ],
+          "years": {
+            "from": 2018,
+            "to": 2023
+          }
+        },
+        {
+          "brand": "Opel",
+          "model": "Grandland",
+          "generation": "Grandland 1. nesil",
+          "engines": [
+            {
+              "name": "1.5 DIZEL 130 PS"
+            }
+          ],
+          "years": {
+            "from": 2018,
+            "to": 2023
+          }
+        }
+      ],
+      "sourceIds": [
+        "claude-st-largus-15bluehdi-chaine-o",
+        "claude-st-quechoisir-15bluehdi-o",
+        "claude-st-motorsactu-15bluehdi-o"
+      ],
+      "uncertainties": "Yalnızca PSA kökenli 1.5 dizel (DV5). Astra K (2019 sonrası) ve Insignia B'deki 1.5 dizel GM motorudur, bu kayda girmez; katalogda iki motor da '1.5 DIZEL' adını taşıdığı için yalnızca PSA dönemi nesilleri ve güç değerli motor adları yazıldı. Astra L listede var ama katalogda motoru güç değeri olmadan tek '1.5 DIZEL' adıyla geçtiği için eklenmedi. Kapsam üretim tarihine bağlı (Ekim 2017 veya 2018 ile Ocak / Şubat 2023 arası). Listede Mokka, Combo, Zafira ve Vivaro da geçiyor; katalogda Mokka B'de dizel olmadığı ve diğerleri katalogda nesle ayrılmadığı için eklenmedi. Resmî şasi listesi okunmadı. Türkiye'de uzatılmış kapsamın uygulanıp uygulanmadığı okunmadı. Üç kaynak aynı olayı anlatır."
+    }
+  ]
+}

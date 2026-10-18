@@ -1,0 +1,105 @@
+[
+  {
+    "id": "fiat-claude-stellantis-fiat-dualogic-bosa-dusme",
+    "slug": "fiat-claude-stellantis-fiat-dualogic-bosa-dusme",
+    "brandId": "fiat",
+    "kind": "chronic",
+    "category": "transmission",
+    "title": "Dualogic: boşa düşme, vites geçmeme ve aktüatör arızası",
+    "summary": "Yarı otomatik Dualogic şanzımanda araç sürüşte veya kalkışta kendiliğinden boşa düşebiliyor, tek viteste kalabiliyor. Nedenler debriyaj aşınması, hidrolik pompa motoru, akümülatör veya aktüatör olabiliyor.",
+    "symptoms": [
+      "Yarı otomatik Dualogic şanzımanda araç sürüşte veya kalkışta kendiliğinden boşa düşebiliyor, tek viteste kalabiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "fiat-500"
+        ],
+        "generationIds": [
+          "fiat-500-uretim-2007"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "fiat-12-69",
+          "fiat-12-fire-69",
+          "fiat-14-100"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [
+          {
+            "type": "automated-manual",
+            "name": "Dualogic"
+          }
+        ],
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "fiat-punto"
+        ],
+        "generationIds": [
+          "fiat-punto-3-nesil"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "fiat-14-fire-77",
+          "fiat-13-multijet-95"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [
+          {
+            "type": "automated-manual",
+            "name": "Dualogic"
+          }
+        ],
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "expert-observed",
+      "note": "Kimliği belli bir şanzıman servisi Dualogic'i Fiat'ta en sık teşhis ettiği şanzıman arızası olarak anıyor ve sahip forumunda uzun bir arıza konusu var. Sayım veya oran yok.",
+      "sourceIds": [
+        "arastirma-claudestellantis-claude-st-s4s-fiat-dualogic",
+        "arastirma-claudestellantis-claude-st-fiatforum-dualogic-thread"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "claude-stellantis",
+      "id": "claude-stellantis-fiat-dualogic-bosa-dusme"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-claudestellantis-claude-st-s4s-fiat-dualogic",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-claudestellantis-claude-st-fiatforum-dualogic-thread",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "Kimliği belli bir şanzıman servisi Dualogic'i Fiat'ta en sık teşhis ettiği şanzıman arızası olarak anıyor ve sahip forumunda uzun bir arıza konusu var. Sayım veya oran yok. Tek kavramalı robotize kutuda vites geçişlerindeki hafif duraksama ve sarsıntı normal karakterdir; bu kayıt boşa düşme, vites geçmeme, arıza uyarısı ve kaçak gibi belirtiler içindir. Kaynaklar İngiltere'den; Türkiye'den okunmuş kaynak yok. Linea 1.3 Multijet Dualogic ve Bravo 1.6 Multijet Dualogic aynı sistemi kullanıyor olabilir ama okunan kaynaklarda anılmadığı için eklenmedi. Panda 2. nesil 1.2 forumda anılıyor ama tek mesaj olduğu için eklenmedi. Belirti tek başına bir parçayı göstermiyor; teşhis basınç, kaçak ve debriyaj ölçümüyle yapılmalı.",
+    "demo": false
+  }
+]

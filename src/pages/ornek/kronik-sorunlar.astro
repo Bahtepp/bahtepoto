@@ -9,11 +9,10 @@ import IssuesSection from '@/components/vehicle/IssuesSection.astro';
 import { generationLabel } from '@/lib/catalog/format';
 import { getIssueData } from '@/lib/issues';
 import { groupForDisplay } from '@/lib/issues/match';
-import { getLabeler, getVehicleSelections, toVehicleContext } from '@/lib/vehicle';
+import { getVehicleSelections, toVehicleContext } from '@/lib/vehicle';
 import '@/styles/vehicle.css';
 
 const demo = await getIssueData('demo');
-const label = await getLabeler();
 const all = await getVehicleSelections();
 
 /** Gösterilecek senaryolar: [nesil, dönem, varyant, açıklama] */
@@ -52,8 +51,6 @@ const scenarios = await Promise.all(
           <p class="issue-group-help">{note}</p>
           <IssuesSection
             groups={groups}
-            sourceById={demo.sourceById}
-            label={label}
             engineMappingUncertain={!sel.revisionMappingVerified}
             headingId={`senaryo-${i + 1}-sorunlar`}
           />

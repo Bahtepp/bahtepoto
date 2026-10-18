@@ -1,0 +1,110 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "gemini-stellantis",
+  "brands": ["Peugeot"],
+  "models": ["308", "3008", "2008", "508"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "peugeot-puretech-triger-sv",
+      "title": "Peugeot 1.2 PureTech Motor Yağ Basıncı ve Triger",
+      "url": "https://www.sikayetvar.com/peugeot/triger",
+      "kind": "user-report",
+      "publisher": "Şikayetvar",
+      "reviewed": false,
+      "reviewMethod": "Sayfa açıldı. 1.2 PureTech kayış şikayetleri ile 1.5 BlueHDi zincir şikayetleri aynı listede. Bu kayıt için kullanılmadı.",
+      "note": "Yerine peugeot-stellantis-puretech kullanıldı."
+    },
+    {
+      "id": "peugeot-stellantis-puretech",
+      "title": "Stellantis PureTech tazminat sayfası",
+      "url": "https://www.stellantis.com/en/contacts/puretech-compensation-platform",
+      "kind": "manufacturer-bulletin",
+      "publisher": "Stellantis",
+      "reviewed": true,
+      "reviewMethod": "Sayfa okundu. Önceki nesil PureTech 1.0 ve 1.2 için Mart 2024'ten beri, koşullu, 10 yıl veya 180.000 km'ye kadar parça ve işçilik uzatması yazıyor. 1 Ocak 2022 ile 31 Aralık 2024 arasındaki aşırı yağ tüketimi veya erken triger kayışı masrafı için Avrupa tazminat platformu var. Türkiye garantisi diye yazmıyor. Zincirli yeni nesli saymıyor."
+    },
+    {
+      "id": "peugeot-bluehdi-adblue-dh",
+      "title": "Peugeot AdBlue Deposu Arızası Ana Konu",
+      "url": "https://forum.donanimhaber.com/peugeot-adblue-deposu-arizasi-ana-konu--145000000",
+      "kind": "user-report",
+      "publisher": "DonanımHaber Forum",
+      "reviewed": false,
+      "reviewMethod": "Konu numarası 145000000. Adres 404 döndü.",
+      "note": "1.5 ve 1.6 BlueHDi ayrılmadan ve bütün dizellere yayılmadan bekletildi."
+    },
+    {
+      "id": "peugeot-308-torsiyon-pt",
+      "title": "Peugeot 308 Arka Torsiyon Sesi Çözümü",
+      "url": "https://forum.peugeotturkey.com/308-arka-torsiyon-lokurtu-sesi",
+      "kind": "user-report",
+      "publisher": "Peugeot Turkey Forum",
+      "reviewed": false,
+      "reviewMethod": "Adres 404 döndü.",
+      "note": "Yerine peugeot-308-travers-largus okundu. O kaynak da neslin tamamını kapsamıyor."
+    },
+    {
+      "id": "peugeot-308-travers-largus",
+      "title": "Peugeot 308 II arka travers gıcırtısı",
+      "url": "https://www.largus.fr/actualite-automobile/peugeot-308-ii-problemes-de-bruit-de-la-traverse-arriere-8600390.html",
+      "kind": "technical-publication",
+      "publisher": "L'Argus",
+      "publishedAt": "2017-06-26",
+      "reviewed": true,
+      "reviewMethod": "26 Haziran 2017 tarihli yazı okundu. Gıcırtı, 10 Aralık 2015'e kadar 25.000 Nm/rad ve 20 Haziran 2016'ya kadar 30.000 Nm/rad arka viraj demirli 308 II ile sınırlı. Egzoz askısı ayrı bir ses. Katalog bu donanımı ayıramıyor."
+    }
+  ],
+  "issues": [
+    {
+      "id": "gemini-peugeot-12-puretech-triger",
+      "title": "1.2 PureTech'te erken triger kayışı aşınması",
+      "summary": "Önceki nesil 1.2 PureTech motorlarda yağ içindeki triger kayışı erken aşınabiliyor. Stellantis bunu Avrupa'da belirli koşullarla tazmin ediyor; bu Türkiye garantisi değildir. Zincirli yeni nesil bu kayda bağlanmadı.",
+      "category": "engine",
+      "frequency": "medium",
+      "frequencyRationale": "Üretici sayfası önceki nesil 1.0 ve 1.2 PureTech için erken kayış bozulmasını kabul ediyor. Oran yazılmadığı için yüksek denmedi.",
+      "vehicles": [
+        {
+          "brand": "Peugeot",
+          "model": "308",
+          "generation": "308 II",
+          "engines": [{ "name": "1.2 PureTech 82 PS" }, { "name": "1.2 PureTech 110 PS" }, { "name": "1.2 PureTech 130 PS" }]
+        },
+        {
+          "brand": "Peugeot",
+          "model": "2008",
+          "generation": "2008 II",
+          "years": { "from": 2020, "to": 2022 },
+          "engines": [{ "name": "1.2 PureTech 100 PS" }, { "name": "1.2 PureTech 155 PS" }]
+        }
+      ],
+      "sourceIds": ["peugeot-stellantis-puretech"],
+      "uncertainties": "3008 II 1.2 PureTech 130 PS kataloğu 2024'e kadar uzanıyor; zincirli nesille aynı satırda kalabileceği için bağlanmadı. 2008 II 130 PS satırı 2025'e kadar uzanıyor, o da bağlanmadı. Yakıtsız 1.2 PureTech, 1.2 Hybrid ve 1.2 VTi yazılmadı."
+    },
+    {
+      "id": "gemini-peugeot-bluehdi-adblue",
+      "title": "BlueHDi motorlarda AdBlue pompası ve depo arızası",
+      "summary": "1.5 ve 1.6 BlueHDi dizel motorlu araçlarda, AdBlue sıvısının kristalleşmesi veya pompa arızası nedeniyle sistemin hata verdiği ve genellikle deponun komple değişimi gerektiği rapor edilmektedir.",
+      "category": "emissions",
+      "frequency": "high",
+      "frequencyRationale": "PSA grubu araç sahiplerinin en yoğun şikayet ettiği ve maliyeti nedeniyle forumlarda en çok tartışılan emisyon sistemi arızasıdır.",
+      "vehicles": [
+        { "brand": "Peugeot", "model": "3008", "generation": "3008 II", "engines": [{ "name": "1.5 BlueHDi" }, { "name": "1.6 BlueHDi" }] },
+        { "brand": "Peugeot", "model": "508", "generation": "508 II", "engines": [{ "name": "1.5 BlueHDi" }] }
+      ],
+      "sourceIds": ["peugeot-bluehdi-adblue-dh"],
+      "uncertainties": "Kaynak 404. 1.5 ile 1.6 ayrılmadı. Yüksek yaygınlık kanıtsız. Bütün dizellere açılmadı."
+    },
+    {
+      "id": "gemini-peugeot-308-torsiyon",
+      "title": "Arka torsiyon dingilinden gelen vuruntu ve lokurtu sesi",
+      "summary": "Özellikle 308 modellerinde, kasislerden veya bozuk yollardan geçerken arka torsiyon dingilinden metalik bir vuruntu veya lokurtu sesi gelebildiği belirtilmektedir.",
+      "category": "suspension",
+      "frequency": "medium",
+      "frequencyRationale": "L'Argus belirli üretim ve viraj demiri sertlikleriyle sınırlı tekrarlayan bir gıcırtı yazıyor. Neslin tamamı için oran yok.",
+      "vehicles": [{ "brand": "Peugeot", "model": "308", "generation": "308 II" }],
+      "sourceIds": ["peugeot-308-travers-largus"],
+      "uncertainties": "Motor değil, arka travers. 2016 ortasından sonraki 308 II yazıda yok. Katalog viraj demiri sertliğini ayıramadığı için chassisWide açılmadı ve aktarılmadı."
+    }
+  ]
+}

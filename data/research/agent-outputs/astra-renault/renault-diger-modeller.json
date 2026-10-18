@@ -1,0 +1,202 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-renault",
+  "brands": [
+    "Renault"
+  ],
+  "models": [
+    "Fluence",
+    "Kangoo",
+    "Laguna",
+    "Scenic"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "hella-laguna-ac-pressure",
+      "title": "Laguna II: klima kompresörünün devreye girmemesi",
+      "url": "https://www.techtips.ie/Hella-Ireland/renault-laguna-ii---compressor-does-not-switch-on.pdf",
+      "kind": "technical-publication",
+      "publisher": "Behr Hella Service",
+      "reviewed": true,
+      "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu.",
+      "publishedAt": "2006-02-24"
+    },
+    {
+      "id": "hella-kangoo-door",
+      "title": "Kangoo I: merkezi kilidin sol sürgülü kapıyı açmaması",
+      "url": "https://www.hella.com/techworld/au/bi/renault-kangoo-1-central-locking-system-fails-to-unlock/",
+      "kind": "technical-publication",
+      "publisher": "HELLA",
+      "reviewed": true,
+      "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu."
+    },
+    {
+      "id": "ecu-scenic-cluster",
+      "title": "Scenic I ve II gösterge paneli arızaları",
+      "url": "https://www.ecutesting.com/common-faults/renault/renault-megane-scenic-instrument-cluster-dash-dashboard/",
+      "kind": "expert-service",
+      "publisher": "ECU Testing",
+      "reviewed": true,
+      "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu."
+    },
+    {
+      "id": "fluence-edc-owner-2012",
+      "title": "Fluence 1.5 dCi EDC şanzıman beyni arızası bildirimi",
+      "url": "https://www.sikayetvar.com/renault/renault-fluence-sanziman-beyni-arizasi-15-110bg-dci-edc-sanziman",
+      "kind": "user-report",
+      "publisher": "Şikayetvar",
+      "reviewed": true,
+      "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu.",
+      "publishedAt": "2023-09-29",
+      "note": "2012 model araç sahibi anlatımı; bağımsız servis raporu yayımlanmamış."
+    },
+    {
+      "id": "fluence-edc-owner-2016",
+      "title": "Fluence 1.5 dizel otomatik şanzıman beyni arızası bildirimi",
+      "url": "https://www.sikayetvar.com/renault/renault-fluence-15-dizel-otomatik-arac-sanziman-beyni-arizasi",
+      "kind": "user-report",
+      "publisher": "Şikayetvar",
+      "reviewed": true,
+      "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu.",
+      "publishedAt": "2023-11-01",
+      "note": "2016 model araç; teşhis ve özel servis görüşü kullanıcının aktarımıdır."
+    },
+    {
+      "id": "renault-fluence-tr-technical-brochure",
+      "title": "Renault Fluence Türkiye kataloğu: 1.5 dCi 110 bg EDC",
+      "url": "https://dosya.epey.com/38627/2016-renault-fluence-1-5-dci-90-hp-edc-touch-urun-katalogu.pdf",
+      "publisher": "Renault (Epey üzerinde barındırılan katalog)",
+      "kind": "technical-publication",
+      "reviewed": true,
+      "reviewMethod": "İkinci turda bağlantı açıldı; ilgili kapsam ve içerik okundu.",
+      "note": "Üretici belgesinin teknik sayfaları 22 ve 42 okundu. URL metnindeki 90 hp yerine belgenin içindeki 110 bg / 81 kW ve altı ileri çift kavramalı EDC bilgisi esas alındı. Arıza kanıtı değil, teknik kimlik kaynağıdır."
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-renault-laguna-ii-ac-pressure-contact",
+      "title": "Klima basınç bağlantısında oksitlenme",
+      "summary": "Laguna II’de klima basınç anahtarının elektrik bağlantısı oksitlendiğinde kompresör devreye girmeyebiliyor. Gaz miktarı yeterli olsa da düşük basınç arızası görülebiliyor.",
+      "category": "hvac",
+      "frequency": "unknown",
+      "frequencyRationale": "Teknik kaynak arıza mekanizmasını açıklıyor; Türkiye araç parkındaki görülme sıklığını ölçen veri sunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Renault",
+          "model": "Laguna",
+          "generation": "Laguna II (B74/BG0)"
+        }
+      ],
+      "sourceIds": [
+        "hella-laguna-ac-pressure"
+      ],
+      "uncertainties": "Kaynak kesin üretim yılı ve motor sınırlaması vermiyor. Klima gazı eksikliğiyle aynı arıza sayılmamalı; bağlantı kontrolü gerekli. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir."
+    },
+    {
+      "id": "astra-renault-kangoo-i-sliding-door-lock",
+      "title": "Sol sürgülü kapının kilitli kalması",
+      "summary": "Bazı Kangoo I araçlarda yakıt dolum ağzı sensörü hatalı bilgi verince sol sürgülü kapı açılmayabiliyor. Yanlış yakıt kapağı da benzer belirti oluşturabiliyor.",
+      "category": "body",
+      "frequency": "unknown",
+      "frequencyRationale": "Teknik kaynak arıza mekanizmasını açıklıyor; Türkiye araç parkındaki görülme sıklığını ölçen veri sunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Renault",
+          "model": "Kangoo",
+          "generation": "Kangoo I",
+          "years": {
+            "from": 2003,
+            "to": 2006
+          }
+        }
+      ],
+      "sourceIds": [
+        "hella-kangoo-door"
+      ],
+      "uncertainties": "Kaynak Phase 2, merkezi kilit ve sol sürgülü kapı bulunan araçları kapsıyor. Yakıt kapağı açıkken kapının engellenmesi normal güvenlik işlevidir; arıza olarak sunulmadı. Yanlış kapak kullanımı üretim kusuru değildir. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir."
+    },
+    {
+      "id": "astra-renault-scenic-instrument-cluster",
+      "title": "Gösterge panelinin kesilmesi ve sıfırlanması",
+      "summary": "Bazı Scenic gösterge panellerinde aydınlatma kesilmesi veya ekranın tamamen kapanması görülebiliyor. Saat ve yol bilgisayarı verileri sıfırlanabiliyor; kilometre göstergesi de hatalı davranabiliyor.",
+      "category": "electrical",
+      "frequency": "unknown",
+      "frequencyRationale": "Teknik kaynak arıza mekanizmasını açıklıyor; Türkiye araç parkındaki görülme sıklığını ölçen veri sunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Renault",
+          "model": "Scenic",
+          "generation": "Scenic I",
+          "years": {
+            "from": 1996,
+            "to": 2003
+          }
+        },
+        {
+          "brand": "Renault",
+          "model": "Scenic",
+          "generation": "Scenic II",
+          "years": {
+            "from": 2003,
+            "to": 2009
+          }
+        }
+      ],
+      "sourceIds": [
+        "ecu-scenic-cluster"
+      ],
+      "uncertainties": "Uzman onarım firmasının parça gözlemidir, Türkiye sıklık ölçümü değildir. Kaynaktaki Megane Scenic adı Scenic ailesidir; Megane hatchback/sedana aktarılmamalı. Gösterge parça numarası ayrıca eşleştirilmeli. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir."
+    },
+    {
+      "id": "astra-renault-fluence-edc-control-loss",
+      "title": "EDC’de vites uyarısı ve hareket kesilmesi",
+      "summary": "Bazı Fluence 1.5 dCi EDC sahipleri vites uyarıları, vitese geçememe veya devir yükselirken aracın ilerlememesi bildiriyor. Kontrol ünitesi şüphesi aktarılıyor; kesin neden araç üzerinde doğrulanmalı.",
+      "category": "transmission",
+      "frequency": "medium",
+      "frequencyRationale": "İki ayrı araç sahibi benzer kontrol ve hareket kaybı belirtileri bildiriyor. Gerçek arıza oranı ve ortak kök neden kesin değil; high kullanılmadı.",
+      "vehicles": [
+        {
+          "brand": "Renault",
+          "model": "Fluence",
+          "years": {
+            "from": 2012,
+            "to": 2012
+          },
+          "engines": [
+            {
+              "name": "1.5 dCi 110 bg"
+            }
+          ],
+          "transmission": {
+            "type": "dual-clutch",
+            "name": "EDC (6 ileri)"
+          }
+        },
+        {
+          "brand": "Renault",
+          "model": "Fluence",
+          "years": {
+            "from": 2016,
+            "to": 2016
+          },
+          "engines": [
+            {
+              "name": "1.5 dCi"
+            }
+          ],
+          "transmission": {
+            "type": "dual-clutch",
+            "name": "EDC (6 ileri)"
+          }
+        }
+      ],
+      "sourceIds": [
+        "fluence-edc-owner-2012",
+        "fluence-edc-owner-2016",
+        "renault-fluence-tr-technical-brochure"
+      ],
+      "uncertainties": "2012 sahibinin asıl metni 1.5 dCi 110 bg EDC diyor; bu güç yalnızca o örneğe kesin olarak yazıldı. Türkiye kataloğu 110 bg / 81 kW dizel ile altı ileri çift kavramalı EDC eşleşmesini, benzinlide ise ayrı CVT seçeneğini doğruluyor. 2016 sahibi gücü açık yazmadığından o araca 110 bg tahmini eklenmedi. Katalog bu uyumluluğu desteklese de araç özelinde VIN/ruhsat gerekiyor. İki örnek yıl arasında tüm yıllar kapsanmadı. DC4 alt tipi, ECU parçası ve kök neden servis belgesiyle doğrulanmadı; bütün Fluence otomatiklerine aktarılmamalı."
+    }
+  ]
+}

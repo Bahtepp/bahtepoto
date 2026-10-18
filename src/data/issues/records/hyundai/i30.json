@@ -1,0 +1,134 @@
+[
+  {
+    "id": "hyundai-claude-hyundai-i30-fd-direksiyon-sesi",
+    "slug": "hyundai-claude-hyundai-i30-fd-direksiyon-sesi",
+    "brandId": "hyundai",
+    "kind": "known-defect",
+    "category": "steering",
+    "title": "Direksiyon kolonunda tıkırtı",
+    "summary": "Bazı erken i30 araçlarda bozuk yolda direksiyon kolonundan tıkırtı duyulabildiği anlatılıyor. Not, sonsuz dişlideki boşluğa bağlanan esnek kavramayı tarif ediyor.",
+    "symptoms": [
+      "Bazı erken i30 araçlarda bozuk yolda direksiyon kolonundan tıkırtı duyulabildiği anlatılıyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "hyundai-i30"
+        ],
+        "generationIds": [
+          "hyundai-i30-fd"
+        ],
+        "revisionIds": [],
+        "engineIds": [],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2007,
+          "to": 2008,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Üretici prosedürü belirli bir sesi ve parça değişimini yazıyor. Kısa bir üretim aralığı var; oran verilmediği için yüksek denmedi.",
+      "sourceIds": [
+        "arastirma-claudehyundai-claude-i30-fd-mdps-kaplin"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "claude-hyundai",
+      "id": "claude-hyundai-i30-fd-direksiyon-sesi"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-claudehyundai-claude-i30-fd-mdps-kaplin",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "Üretici prosedürü belirli bir sesi ve parça değişimini yazıyor. Kısa bir üretim aralığı var; oran verilmediği için yüksek denmedi. Metin 14 Nisan 2008'e kadar üretilen i30 FD ve Elantra HD diyor. Elantra HD Türkiye'deki 4. nesille ayrıca doğrulanmadığı için bu kayda konmadı. i30 GD ve PD başka kayıtlardadır.",
+    "demo": false
+  },
+  {
+    "id": "hyundai-claude-hyundai-i30-gd-kapi-trim",
+    "slug": "hyundai-claude-hyundai-i30-gd-kapi-trim",
+    "brandId": "hyundai",
+    "kind": "known-defect",
+    "category": "interior",
+    "title": "Kapı iç kaplamasında soyulma",
+    "summary": "Bazı 2012-2016 i30 araçlarda kapı içindeki parlak kaplamanın soyulduğu bildiriliyor. Önce sürücü kapısında fark edildiği anlatılıyor.",
+    "symptoms": [
+      "Bazı 2012-2016 i30 araçlarda kapı içindeki parlak kaplamanın soyulduğu bildiriliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "hyundai-i30"
+        ],
+        "generationIds": [
+          "hyundai-i30-gd"
+        ],
+        "revisionIds": [],
+        "engineIds": [],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2012,
+          "to": 2016,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Tek bir alıcı başlığında gözlem var ve bir kullanıcı aynı modeli doğruluyor. Üretici kaydı veya sayım yok.",
+      "sourceIds": [
+        "arastirma-claudehyundai-claude-reddit-i30-gd-kapi-trim"
+      ]
+    },
+    "frequencyRating": "low",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "claude-hyundai",
+      "id": "claude-hyundai-i30-gd-kapi-trim"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-claudehyundai-claude-reddit-i30-gd-kapi-trim",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "researching",
+    "updatedAt": "2026-10-18",
+    "notes": "Tek bir alıcı başlığında gözlem var ve bir kullanıcı aynı modeli doğruluyor. Üretici kaydı veya sayım yok. i20 PB iç kapı tutamacı kaydı bu değildir ve GB veya BC3 nesline yayılmaz. i30 FD ve PD için aynı soyulma okunmadı.",
+    "demo": false
+  }
+]

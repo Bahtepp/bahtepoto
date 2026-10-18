@@ -1,13 +1,15 @@
 [
+  { "id": "infiniti-35", "brandId": "infiniti", "slug": "35", "name": "35", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
+  { "id": "infiniti-45", "brandId": "infiniti", "slug": "45", "name": "45", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
   { "id": "infiniti-37", "brandId": "infiniti", "slug": "37", "name": "37", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
   { "id": "infiniti-30d", "brandId": "infiniti", "slug": "30d", "name": "30d", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
   { "id": "infiniti-50", "brandId": "infiniti", "slug": "50", "name": "50", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
+  { "id": "infiniti-56", "brandId": "infiniti", "slug": "56", "name": "56", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
   { "id": "infiniti-37d", "brandId": "infiniti", "slug": "37d", "name": "37d", "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
   { "id": "infiniti-30", "brandId": "infiniti", "slug": "30", "name": "3.0", "fuel": "diesel", "displacementL": 3, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
   { "id": "infiniti-20", "brandId": "infiniti", "slug": "20", "name": "2.0", "fuel": "petrol", "displacementL": 2, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
   { "id": "infiniti-22", "brandId": "infiniti", "slug": "22", "name": "2.2", "fuel": "diesel", "displacementL": 2.2, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
   { "id": "infiniti-35-hybrid", "brandId": "infiniti", "slug": "35-hybrid", "name": "3.5 Hybrid", "fuel": "hybrid", "displacementL": 3.5, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
   { "id": "infiniti-15", "brandId": "infiniti", "slug": "15", "name": "1.5", "fuel": "diesel", "displacementL": 1.5, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17" },
-  { "id": "infiniti-16", "brandId": "infiniti", "slug": "16", "name": "1.6", "displacementL": 1.6, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." },
-  { "id": "infiniti-56", "brandId": "infiniti", "slug": "56", "name": "5.6", "displacementL": 5.6, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." }
+  { "id": "infiniti-16", "brandId": "infiniti", "slug": "16", "name": "1.6", "displacementL": 1.6, "status": "sourced", "sourceIds": ["tsb-kasko-deger-listesi"], "updatedAt": "2026-10-17", "notes": "TSB tip adlarından türetildi; yakıt türü tip adında yazmıyor." }
 ]

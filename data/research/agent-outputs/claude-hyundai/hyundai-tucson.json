@@ -1,0 +1,49 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "claude-hyundai",
+  "brands": ["Hyundai"],
+  "models": ["Tucson", "Kona"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "claude-hma-22-at-007h-dct",
+      "title": "7 ileri DCT kalkış sarsıntısı servis bülteni",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10213721-0001.pdf",
+      "kind": "manufacturer-bulletin",
+      "publisher": "Hyundai Motor America",
+      "reviewed": true,
+      "reviewMethod": "NHTSA kopyasındaki bülten metni okundu.",
+      "note": "22-AT-007H. Yalnızca 1.6 turbo ve 7 ileri çift kavrama. Tucson TL 2016-2018, Kona OS 2018-2021. Geleneksel otomatik kutu yazılmıyor."
+    }
+  ],
+  "issues": [
+    {
+      "id": "claude-hyundai-16t-dct-sarsinti",
+      "title": "Çift kavramada kalkış sarsıntısı",
+      "summary": "Bazı 1.6 T-GDI ve 7 ileri çift kavramalı araçlarda kalkışta sarsıntı bildiriliyor. Geleneksel otomatik şanzımanlar bu kaydın dışındadır.",
+      "category": "transmission",
+      "frequency": "medium",
+      "frequencyRationale": "Üretici bülteni düşük hızda titreşimi tanımlıyor ve kavramayı değiştirmeyi de içeriyor. Kaç araçta görüldüğü yazılmadığı için yüksek denmedi.",
+      "vehicles": [
+        {
+          "brand": "Hyundai",
+          "model": "Tucson",
+          "generation": "Tucson 3. nesil",
+          "engines": [{ "name": "1.6 T-GDI" }],
+          "years": { "from": 2016, "to": 2018 },
+          "transmission": { "type": "dual-clutch", "name": "DCT" }
+        },
+        {
+          "brand": "Hyundai",
+          "model": "Kona",
+          "generation": "Kona 1. nesil",
+          "engines": [{ "name": "1.6 T-GDI" }],
+          "years": { "from": 2018, "to": 2021 },
+          "transmission": { "type": "dual-clutch", "name": "DCT" }
+        }
+      ],
+      "sourceIds": ["claude-hma-22-at-007h-dct"],
+      "uncertainties": "Bülten ABD model yıllarını sayıyor. Tucson 4. nesil, Kona 2. nesil ve 1.0 T-GDI çift kavramaları listede yok. Kia Optima, Soul ve Forte ayrı bir Kia bülteninde; Türkiye katalog eşlemesi bu dosyada yapılmadı."
+    }
+  ]
+}

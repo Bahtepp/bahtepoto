@@ -1,0 +1,30 @@
+[
+  {
+    "id": "hyundai-i20-pb-kapi-tutamaci",
+    "slug": "pb-kapi-tutamaci",
+    "brandId": "hyundai",
+    "kind": "known-defect",
+    "category": "interior",
+    "title": "İç kapı tutamacı boyası",
+    "summary": "Bazı kullanıcılar iç kapı tutamacındaki boyanın zamanla soyulduğunu bildiriyor.",
+    "symptoms": ["Tutamak boyasında soyulma bildiriliyor."],
+    "appliesTo": [
+      {
+        "modelIds": ["hyundai-i20"],
+        "generationIds": ["hyundai-i20-pb"],
+        "note": "Yalnızca PB nesli. Sonraki i20 nesilleri dahil değil."
+      }
+    ],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "sourceIds": ["forum-hyundaiclub-i20-kapi"]
+    },
+    "frequencyRating": "low",
+    "claims": [
+      { "sourceId": "forum-hyundaiclub-i20-kapi", "aspects": ["existence"], "stance": "supports", "note": "Tek forum. Resmi üretici açıklaması değil." }
+    ],
+    "status": "researching",
+    "updatedAt": "2026-10-18",
+    "notes": "Kullanıcı bildirimi. Üretici kusuru veya geri çağırma olarak sunulmaz. Düşük yaygınlık, sorunun önemsiz olduğu anlamına gelmez; burada sonuç kozmetiktir."
+  }
+]

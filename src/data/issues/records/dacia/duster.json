@@ -1,0 +1,31 @@
+[
+  {
+    "id": "dacia-13-tce-termostat-govdesi",
+    "slug": "13-tce-termostat-govdesi",
+    "brandId": "dacia",
+    "kind": "chronic",
+    "category": "cooling",
+    "title": "Termostat gövdesinde su kaçağı",
+    "summary": "Plastik termostat gövdesinin birleşim yerinden soğutma sıvısı sızdığı bildiriliyor. Antifriz eksilmesi ve hararet görülebiliyor.",
+    "symptoms": ["Soğutma sıvısı eksilmesi görülebiliyor."],
+    "appliesTo": [
+      {
+        "modelIds": ["dacia-duster"],
+        "generationIds": ["dacia-duster-duster-ii"],
+        "engineFamilies": ["1.3 TCe"],
+        "note": "Yalnızca Duster II 1.3 TCe. 1.0 TCe dahil değil."
+      }
+    ],
+    "prevalence": {
+      "evidence": "expert-observed",
+      "sourceIds": ["uzman-hr13-termostat-video"]
+    },
+    "frequencyRating": "high",
+    "claims": [
+      { "sourceId": "uzman-hr13-termostat-video", "aspects": ["existence", "symptoms"], "stance": "supports" }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "Aynı HR13 gövde gözlemi Renault kaydıyla ortaktır; metin kopyası değil, aynı parçaya bağlanmış kısa kayıttır. Sandero'da 1.3 TCe katalog kaydı yok."
+  }
+]

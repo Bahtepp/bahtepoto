@@ -1,0 +1,196 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-renault",
+  "brands": [
+    "Renault"
+  ],
+  "models": [
+    "Clio",
+    "Kangoo",
+    "Megane",
+    "Modus",
+    "Scenic",
+    "Symbol"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "ecu-clio-throttle",
+      "title": "Clio 1.2 16V gaz kelebeği arızası",
+      "url": "https://www.ecutesting.com/product-catalogue/renault/clio/throttle-body/tby067219/",
+      "kind": "expert-service",
+      "publisher": "ECU Testing",
+      "reviewed": true,
+      "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu.",
+      "note": "Ticari onarım hizmetinin teknik açıklaması; bağımsız arıza oranı araştırması değildir."
+    },
+    {
+      "id": "actronics-renault-abs-relay",
+      "title": "Renault ABS valf rölesi: DF017 / 20675 / 50C3 / C10C3",
+      "url": "https://www.actronics.co.uk/news/diagnostic-help/renault-with-dtc-error-codes-20675-50c3-c10c3-df017",
+      "kind": "expert-service",
+      "publisher": "ACTRONICS",
+      "reviewed": true,
+      "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu."
+    },
+    {
+      "id": "gates-k9k-tensioner-013",
+      "title": "Gates Technical Bulletin 013: Renault 1.5 dCi accessory belt",
+      "url": "https://www.techtips.ie/Gates/renault-15-dci-engines-accessory-belt.pdf",
+      "kind": "technical-publication",
+      "publisher": "Gates",
+      "reviewed": true,
+      "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu.",
+      "publishedAt": "2006-04-21",
+      "note": "Kayış üreticisinin teknik bülteni; Renault servis kampanyası olarak sınıflandırılmadı."
+    },
+    {
+      "id": "renbreakers-clio-d4f712",
+      "title": "Clio II D4F 712 gaz kelebeği parça eşleştirmesi",
+      "url": "https://www.renaultbreakers.co.uk/store/Renault-Clio-MK2-2001-2006-12-16v-D4F-712-Throttle-Body-8200067219/00015007/",
+      "publisher": "RENBreakers",
+      "kind": "technical-publication",
+      "reviewed": true,
+      "reviewMethod": "İkinci turda bağlantı açıldı; ilgili kapsam ve içerik okundu.",
+      "note": "Bağımsız parça tedarikçisinin birincil ürün kaydı; sadece parça/araç uyumluluğu için kullanıldı. Arıza sıklığı veya Renault onayı kanıtı değildir."
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-renault-clio-12-16v-throttle",
+      "title": "Gaz kelebeği kaynaklı düzensiz rölanti",
+      "summary": "Belirli 1.2 16V motorlarda gaz kelebeği arızası düzensiz rölanti ve çekiş kaybına yol açabiliyor. Aynı belirtiler farklı nedenlerden de kaynaklanabileceği için parça teşhisi gerekiyor.",
+      "category": "engine",
+      "frequency": "unknown",
+      "frequencyRationale": "Teknik kaynak arıza mekanizmasını açıklıyor; Türkiye araç parkındaki görülme sıklığını ölçen veri sunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Renault",
+          "model": "Clio",
+          "years": {
+            "from": 2001,
+            "to": 2006
+          },
+          "engines": [
+            {
+              "name": "1.2 16V",
+              "code": "D4F 712"
+            }
+          ],
+          "generation": "Clio II"
+        }
+      ],
+      "sourceIds": [
+        "ecu-clio-throttle",
+        "renbreakers-clio-d4f712"
+      ],
+      "uncertainties": "İkinci turda çalışma kapsamı, ECU Testing arıza açıklaması ile RENBreakers parça eşleştirmesinin kesişimine daraltıldı: Clio II, 2001–2006, D4F 712, 8200067219 / 8200166869. Parça satıcısı eşleştirmesi üretici VIN doğrulamasının yerini tutmaz. D4F 722 ve diğer alt kodlar, Clio III ve 2007–2008 kapsamı kanıtlanmadığından çıkarıldı; bu araçların sorunsuz olduğu iddia edilmiyor. Atmosferik motor; 1.2 TCe hariç. Araç üzerindeki motor kodu ve kelebeğin numarası doğrulanmadan aktarılmamalı."
+    },
+    {
+      "id": "astra-renault-renault-bosch-abs-valve-relay",
+      "title": "ABS ünitesinde valf rölesi arızası",
+      "summary": "Bazı ABS ünitelerinde iç valf rölesi arızası uyarı lambasına, fren hidroliği akışında soruna veya pompanın sürekli çalışmasına neden olabiliyor. Ünite ve hata kodu birlikte kontrol edilmeli.",
+      "category": "brakes",
+      "frequency": "unknown",
+      "frequencyRationale": "Teknik kaynak arıza mekanizmasını açıklıyor; Türkiye araç parkındaki görülme sıklığını ölçen veri sunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Renault",
+          "model": "Clio",
+          "generation": "Clio III"
+        },
+        {
+          "brand": "Renault",
+          "model": "Megane",
+          "generation": "Megane II"
+        },
+        {
+          "brand": "Renault",
+          "model": "Scenic",
+          "generation": "Scenic II"
+        },
+        {
+          "brand": "Renault",
+          "model": "Modus"
+        }
+      ],
+      "sourceIds": [
+        "actronics-renault-abs-relay"
+      ],
+      "uncertainties": "Yalnızca kaynaktaki Bosch 8 ESP modülleri: Clio III 0265950377; Megane II 0265950563; Scenic II 0265950770; Modus 0265950787. DF017/20675/50C3/C10C3 kodları tanı ipucudur, tek başına arıza kanıtı değildir. Motor/yıl kapsamı verilmedi; bütün ABS ünitelerine uygulanmamalı. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir. İkinci tur: ACTRONICS tablosu tekrar okundu; dört modelin numaraları ayrı ayrı doğrulandı. Kaynak ATE MK60 arızalarından da bahsediyor ancak bu kaydın kapsamı yalnızca listelenen Bosch numaralarıdır. Parça bazlı üretim başlangıç/bitiş tarihleri verilmedi; neslin bütün yılları eklenmedi. Parça numarası şemada yapısal koşul olmadığından otomatik aktarım için incelemede kalmalı."
+    },
+    {
+      "id": "astra-renault-early-k9k-accessory-tensioner",
+      "title": "Erken 1.5 dCi motorlarda yardımcı kayış gergisi",
+      "summary": "Belirli erken üretim klimasız 1.5 dCi araçlarda gergi tabanının deformasyonu kayışı hizadan çıkarabiliyor. Kayış bölgesinde ses ve erken kayış hasarı görülebiliyor.",
+      "category": "engine",
+      "frequency": "unknown",
+      "frequencyRationale": "Teknik kaynak arıza mekanizmasını açıklıyor; Türkiye araç parkındaki görülme sıklığını ölçen veri sunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Renault",
+          "model": "Clio",
+          "generation": "Clio II",
+          "years": {
+            "from": 2001,
+            "to": 2002
+          },
+          "engines": [
+            {
+              "name": "1.5 dCi",
+              "code": "K9K 700"
+            },
+            {
+              "name": "1.5 dCi",
+              "code": "K9K 702"
+            }
+          ]
+        },
+        {
+          "brand": "Renault",
+          "model": "Symbol",
+          "years": {
+            "from": 2001,
+            "to": 2002
+          },
+          "engines": [
+            {
+              "name": "1.5 dCi",
+              "code": "K9K 700"
+            },
+            {
+              "name": "1.5 dCi",
+              "code": "K9K 702"
+            }
+          ]
+        },
+        {
+          "brand": "Renault",
+          "model": "Kangoo",
+          "years": {
+            "from": 2001,
+            "to": 2002
+          },
+          "engines": [
+            {
+              "name": "1.5 dCi",
+              "code": "K9K 700"
+            },
+            {
+              "name": "1.5 dCi",
+              "code": "K9K 702"
+            },
+            {
+              "name": "1.5 dCi",
+              "code": "K9K 710"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "gates-k9k-tensioner-013"
+      ],
+      "uncertainties": "Zorunlu kapsam: Haziran 2001–Haziran 2002 üretimi ve KLİMASIZ araçlar. Şema ay/donanım filtresi taşımadığından years tek başına eşleştirme için yeterli değildir. Kaynaktaki Clio/Symbol tipleri BB07/BB08/CB07/CB08/LB07/SB07/SB08; Kangoo tipleri FC07/FC08/KC07/KC09. Tüm K9K motorlarına aktarılamaz. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir. İkinci tur: bültendeki eski gergiler 8200262773 / 8200292784, değiştirilmiş gergi 8200328372 olarak doğrulandı. Klima bulunan araçlar kapsam dışıdır. Değiştirilmiş parça takılmış araç eski arıza kapsamına otomatik dahil edilemez. Ay, klima ve parça koşulları şemada ifade edilemediği için inceleme devam eder."
+    }
+  ]
+}

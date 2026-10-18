@@ -1,0 +1,86 @@
+[
+  {
+    "id": "kia-claude-kia-t2-optima-mdps-kavrama",
+    "slug": "kia-claude-kia-t2-optima-mdps-kavrama",
+    "brandId": "kia",
+    "kind": "known-defect",
+    "category": "steering",
+    "title": "Direksiyonda ses (esnek kavrama)",
+    "summary": "Direksiyon özellikle araç dururken sağa sola çevrilince ses gelebiliyor. Kia sesi direksiyon motorundaki esnek kavramanın aşınmasına bağlıyor.",
+    "symptoms": [
+      "Direksiyon özellikle araç dururken sağa sola çevrilince ses gelebiliyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "kia-optima"
+        ],
+        "generationIds": [
+          "kia-optima-nesil-belirlenmedi"
+        ],
+        "revisionIds": [],
+        "engineIds": [],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2010,
+          "to": 2013,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Kia kavrama garantisini 10 yıla uzattı ama sorunu ağırlıklı olarak çok nemli, sıcak kıyı bölgelerine bağlıyor. Başka iklimler için sayı olmadığı için düşük bırakıldı.",
+      "sourceIds": [
+        "arastirma-claudehyundai-claude-t2-kia-cha072-optima-kavrama",
+        "arastirma-claudehyundai-claude-t2-kia-cs1604-soru-cevap",
+        "arastirma-claudehyundai-claude-t2-kia-cs1604-sahip-mektubu"
+      ]
+    },
+    "frequencyRating": "low",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "claude-hyundai",
+      "id": "claude-kia-t2-optima-mdps-kavrama"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-claudehyundai-claude-t2-kia-cha072-optima-kavrama",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-claudehyundai-claude-t2-kia-cs1604-soru-cevap",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-claudehyundai-claude-t2-kia-cs1604-sahip-mektubu",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "Kia kavrama garantisini 10 yıla uzattı ama sorunu ağırlıklı olarak çok nemli, sıcak kıyı bölgelerine bağlıyor. Başka iklimler için sayı olmadığı için düşük bırakıldı. Yıllar bültendeki üretim aralığıdır: 12.08.2010-18.12.2013 (2011-2014 MY). Bültene göre Optima QF/TF Mobis kolon tipi elektrikli direksiyon kullanıyor. Katalogda Optima nesilleri ayrılmadığı için nesil boş bırakıldı. Türkiye'deki Optima'nın aynı kavramayı kullandığı doğrulanmadı. Üç kaynak aynı programın belgeleridir. Hyundai'nin Elantra kavrama bülteni ayrı bir kayıttır.",
+    "demo": false
+  }
+]

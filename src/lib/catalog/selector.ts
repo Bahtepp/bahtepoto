@@ -4,9 +4,7 @@
  */
 import type { Engine, FuelType, Variant } from './schema.ts';
 import { formatYearRange, generationLabel, normalizeSearch } from './format.ts';
-import { isPerformance, marketGroup, type MarketView } from './market.ts';
-
-type MarketRef = { id: string; parentId?: string };
+import { isPerformance, marketGroup } from './market.ts';
 
 export interface ChassisOption {
   generationId: string;
@@ -96,22 +94,21 @@ function chassisYears(gen: GenLike): string {
 }
 
 /**
- * Türkiye (veya seçilen pazar) kaydı olan varyantları motor grubuna, sonra kasaya ayırır.
+ * Türkiye ana listesindeki varyantları motor grubuna, sonra kasaya ayırır.
  * Aynı motorun şanzıman ve donanım kopyaları tek seçenekte birleşir.
+ * Türkiye kaydı olmayan motor gruba girmez.
  */
 export function engineGroupsForModel(
   generations: GenLike[],
   variantsByGeneration: Record<string, Variant[]>,
   engines: Record<string, Engine>,
-  markets: MarketRef[],
-  view: MarketView = 'tr',
 ): EngineGroupView[] {
   const groups = new Map<string, EngineGroupView>();
 
   for (const gen of generations) {
     const seenEngine = new Set<string>();
     for (const variant of variantsByGeneration[gen.id] ?? []) {
-      if (marketGroup(variant, view, markets) !== 'primary') continue;
+      if (marketGroup(variant) !== 'primary') continue;
       const engine = engines[variant.engineId];
       if (!engine) continue;
       const id = engineGroupIdentity(engine, variant);

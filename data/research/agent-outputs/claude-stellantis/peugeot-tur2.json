@@ -1,0 +1,104 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "claude-stellantis",
+  "brands": ["Peugeot"],
+  "models": ["208", "2008", "308", "3008", "5008", "508", "Rifter"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "claude-st-largus-15bluehdi-chaine-p",
+      "title": "Casse chaîne 1.5 BlueHDi. Pas de plate-forme d'indemnisation... pour le moment",
+      "url": "https://www.largus.fr/actualite-automobile/casse-chaine-1-5-bluehdi-pas-de-plate-forme-d-indemnisation-pour-le-moment-30038450.html",
+      "kind": "technical-publication",
+      "publisher": "L'argus",
+      "publishedAt": "2025-01-26",
+      "reviewed": true,
+      "reviewMethod": "Makale metni okundu.",
+      "note": "1.5 BlueHDi (DV5): eksantrik millerini süren zincir yetersiz boyutlu ve uzuyor; kopması motoru bozuyor. Etkilenen motorlar 2018 - Şubat 2023 üretimi (araca ve fabrikaya göre değişiyor). 27 Eylül 2024 kampanyası 01.01.2018-31.12.2021 üretimi 761.807 araç sahibine gönderildi. Şubat 2023'ten itibaren 7 mm zincir yerine 8 mm zincir, emme supapları, gergi ve üst kapakta değişiklik. Ocak 2025'te kapsam 7 yıl / 180.000 km'ye çıkarıldı; son üç bakım faturası isteniyor. Model listesi bu makalede yok.",
+      "basedOn": "stellantis-15-bluehdi-zincir"
+    },
+    {
+      "id": "claude-st-quechoisir-15bluehdi-p",
+      "title": "Moteur diesel 1.5 BlueHDi de Stellantis : la grogne monte",
+      "url": "https://www.quechoisir.org/actualite-moteur-diesel-1-5-bluehdi-de-stellantis-la-grogne-monte-n132914/",
+      "kind": "technical-publication",
+      "publisher": "UFC-Que Choisir",
+      "publishedAt": "2025-01-10",
+      "reviewed": true,
+      "reviewMethod": "Makale metni okundu.",
+      "note": "Belirtiler: anormal yağ tüketimi, güç kaybı, titreşim, metalik takırtı. Neden: iki eksantrik milini bağlayan zincirin yetersiz boyutu; aşınıyor, gerginliğini kaybediyor ve kopabiliyor. Ekim 2017 - Ocak 2023 arasında fabrikadan çıkan araçlar; zincir 1 Şubat 2023'te 7 mm'den 8 mm'ye genişletildi. Peugeot için anılan modeller: 208, 2008, 308, 3008, 508, 5008, Expert, Rifter, Partner. Sahip gruplarında binlerce üye ve yüzlerce dosya anılıyor.",
+      "basedOn": "stellantis-15-bluehdi-zincir"
+    },
+    {
+      "id": "claude-st-motorsactu-15bluehdi-p",
+      "title": "Stellantis étend la couverture de ses anciens moteurs 1.5 BlueHDi et propose un remboursement aux clients concernés",
+      "url": "https://motorsactu.com/stellantis-etend-la-couverture-de-ses-anciens-moteurs-1-5-bluehdi-et-propose-un-remboursement-aux-clients-concernes/",
+      "kind": "technical-publication",
+      "publisher": "MotorsActu",
+      "publishedAt": "2025-07-03",
+      "reviewed": true,
+      "reviewMethod": "Makale metni okundu.",
+      "note": "Ekim 2017 - Ocak 2023 üretimi 1.5 BlueHDi motorlar için özel kapsam 10 yıl veya 240.000 km'ye uzatıldı; parça ve işçilik tamamen karşılanıyor, üreticinin bakım önerilerine uyulmuş ve onarım yetkili ağda yapılmış olmalı. 01.01.2023-30.06.2025 arasında zincir onarımını ödemiş sahipler Temmuz 2025 ortasından itibaren geri ödeme isteyebiliyor. Model listesi vermiyor.",
+      "basedOn": "stellantis-15-bluehdi-zincir"
+    },
+    {
+      "id": "claude-st-fichesauto-thp150",
+      "title": "Essai, avis et fiabilité des moteurs 1L6 THP 150 cv",
+      "url": "https://www.fiches-auto.fr/articles-auto/essai-moteur/1l6-thp-150-ch.php",
+      "kind": "user-report",
+      "publisher": "Fiches-auto.fr",
+      "reviewed": true,
+      "reviewMethod": "Sayfadaki editör metni okundu.",
+      "note": "91 yazılı yoruma dayanan sayfa. Editör metni: triger zinciri gergisinin kayması birkaç yıldır tekrarlayan bir sorun ve motor hasarına yol açabiliyor; turbo arızaları daha münferit. Sorunu belirli yıl veya sürüme bağlamıyor. Motorun kullanıldığı Peugeot modelleri: 207, 308, 508, RCZ.",
+      "basedOn": "fichesauto-thp"
+    },
+    {
+      "id": "claude-st-fichesauto-thp165",
+      "title": "Essai, avis et fiabilité des moteurs 1L6 THP 165 cv",
+      "url": "https://www.fiches-auto.fr/articles-auto/essai-moteur/1l6-thp-165-ch.php",
+      "kind": "user-report",
+      "publisher": "Fiches-auto.fr",
+      "reviewed": true,
+      "reviewMethod": "Editör metni ve sahip yorumları okundu.",
+      "note": "Editör metni zinciri motorun tek tekrarlayan sorunu sayıyor; zincir ekseninden kayıp güç kaybı veya kırılma yapabiliyor, kırılmalar daha çok 150 ve 175 PS sürümlerde ve gergiye bağlı. Bir 3008 sahibi her sabah soğuk çalıştırmada zincirden metalik ses geldiğini, aynı sorunu 308 THP 155'inde de yaşadığını yazıyor. Sayfa 112 yoruma dayanıyor.",
+      "basedOn": "fichesauto-thp"
+    }
+  ],
+  "issues": [
+    {
+      "id": "claude-stellantis-peugeot-15bluehdi-eksantrik-zinciri",
+      "title": "1.5 BlueHDi: eksantrik zincirinde uzama ve kopma",
+      "summary": "1.5 BlueHDi dizel motorda eksantrik millerini süren 7 mm zincir uzayıp ses, güç kaybı ve yağ tüketimi yapabiliyor; koparsa motor bozuluyor. 1 Şubat 2023'ten sonra takılan 8 mm zincir bu kaydın dışındadır. Uzatılan özel kapsam Avrupa duyurusudur.",
+      "category": "engine",
+      "frequency": "medium",
+      "frequencyRationale": "Üretici yüz binlerce araç için kontrol kampanyası başlattı ve kapsamı 10 yıla uzattı; tüketici örgütü sahip gruplarında yüzlerce dosya aktarıyor. Arıza oranı yayımlanmadığı için yüksek verilmedi.",
+      "vehicles": [
+        { "brand": "Peugeot", "model": "208", "generation": "208 II", "engines": [{ "name": "1.5 BlueHDi" }], "years": { "from": 2019, "to": 2023 } },
+        { "brand": "Peugeot", "model": "2008", "generation": "2008 1. nesil (A94)", "engines": [{ "name": "1.5 BlueHDi" }], "years": { "from": 2018, "to": 2019 } },
+        { "brand": "Peugeot", "model": "2008", "generation": "2008 2. nesil (P24)", "engines": [{ "name": "1.5 BlueHDi" }], "years": { "from": 2019, "to": 2023 } },
+        { "brand": "Peugeot", "model": "308", "generation": "308 II", "engines": [{ "name": "1.5 BlueHDi" }], "years": { "from": 2017, "to": 2021 } },
+        { "brand": "Peugeot", "model": "3008", "generation": "3008 2. nesil (P84)", "engines": [{ "name": "1.5 BlueHDi" }], "years": { "from": 2017, "to": 2023 } },
+        { "brand": "Peugeot", "model": "5008", "generation": "5008 2. nesil (P87)", "engines": [{ "name": "1.5 BlueHDi" }], "years": { "from": 2017, "to": 2023 } },
+        { "brand": "Peugeot", "model": "508", "generation": "508 2. nesil (R83)", "engines": [{ "name": "1.5 BlueHDi" }], "years": { "from": 2018, "to": 2023 } },
+        { "brand": "Peugeot", "model": "Rifter", "engines": [{ "name": "1.5 BlueHDi" }], "years": { "from": 2018, "to": 2023 } }
+      ],
+      "sourceIds": ["claude-st-largus-15bluehdi-chaine-p", "claude-st-quechoisir-15bluehdi-p", "claude-st-motorsactu-15bluehdi-p"],
+      "uncertainties": "Üretim Ekim 2017-Ocak 2023. 1 Şubat 2023 sonrası 8 mm zincir kapsam dışı. 308 III Türkiye'de yalnızca 2026 satırıyla göründüğü için eklenmedi. 301, 1.6 BlueHDi ve 2.0 BlueHDi yok. Uzatılmış kapsam Avrupa duyurusudur, Türkiye garantisi değildir. Rifter nesli katalogda ayrılmamıştır; kart yalnız 1.5 BlueHDi satırına ve 2018-2023 model yılına bağlıdır."
+    },
+    {
+      "id": "claude-stellantis-peugeot-16thp-zincir-gergisi",
+      "title": "1.6 THP: triger zinciri gergisi kayması ve soğukta takırtı",
+      "summary": "1.6 THP benzinli turbo motorda triger zinciri gergisi zinciri yeterince tutamayınca soğuk çalıştırmada metalik ses geliyor; zincir kayarsa güç kaybı ve motor hasarı olabiliyor.",
+      "category": "engine",
+      "frequency": "medium",
+      "frequencyRationale": "Yaklaşık yüz sahip yorumuna dayanan iki sayfanın editör metni zinciri motorun tekrarlayan tek sorunu olarak anıyor ve sahip yorumlarında aynı belirti geçiyor. Oran yok.",
+      "vehicles": [
+        { "brand": "Peugeot", "model": "308", "generation": "308 I", "engines": [{ "name": "1.6 THP 150 PS" }, { "name": "1.6 THP 156 PS" }] },
+        { "brand": "Peugeot", "model": "3008", "generation": "3008 1. nesil (T84)", "engines": [{ "name": "1.6 THP 156 PS" }] },
+        { "brand": "Peugeot", "model": "508", "generation": "508 1. nesil (W23)", "engines": [{ "name": "1.6 THP 156 PS" }, { "name": "1.6 THP 165 PS" }] }
+      ],
+      "sourceIds": ["claude-st-fichesauto-thp150", "claude-st-fichesauto-thp165"],
+      "uncertainties": "Kırılmalar kaynakta daha çok 150 ve 175 PS sürümlerde. Katalogdaki 150, 156 ve 165 PS satırları alındı; 140 PS ve GTI alınmadı. Gergi revizyonunun tarihi okunmadığı için yıl yazılmadı. 207, RCZ, 208, 308 II ve 1.6 PureTech eklenmedi. BMW ve Mini'ye yayılmadı."
+    }
+  ]
+}

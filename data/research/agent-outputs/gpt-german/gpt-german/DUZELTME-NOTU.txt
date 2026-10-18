@@ -1,0 +1,1 @@
+Bu sürümde üst seviye models alanları katalog model adlarıyla eşleşecek şekilde düzeltildi: BMW 3 Serisi, Mercedes-Benz C, Audi A3/A4. Nesil alanları katalogdaki tam etiketlerle yazıldı. Erişilmeyen Mercedes krom forum kaynağı çıkarıldı, doğrulanmış Go-Parts teknik makalesi korundu. Katalog motor/şanzıman eşleştirmeleri için yine önce dry-run yapın.

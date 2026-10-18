@@ -1,0 +1,100 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-ford-toyota",
+  "brands": [
+    "Ford"
+  ],
+  "models": [
+    "Fiesta"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "ecu-fiesta-durashift",
+      "title": "Fiesta Durashift EST debriyaj aktüatörü",
+      "url": "https://www.ecutesting.com/common-faults/ford/fiesta-clutch-actuator-fault/",
+      "kind": "expert-service",
+      "publisher": "ECU Testing",
+      "reviewed": true,
+      "reviewMethod": "2026-10-18: sayfa açılarak arıza, araç kapsamı ve kısıtlar okundu."
+    },
+    {
+      "id": "fiesta-tr-powershift-2013",
+      "title": "2013 Fiesta 1.6 PowerShift: vites geçişinin kaybı",
+      "url": "https://www.otoclubturkiye.com/forum/topic/307897-fiesta-16-powershift-motor-ar%C4%B1zas%C4%B1/",
+      "kind": "user-report",
+      "publisher": "Oto Club Türkiye",
+      "reviewed": true,
+      "reviewMethod": "Araç sahibinin model, belirti ve teşhis tartışması okundu."
+    },
+    {
+      "id": "ford-dps6-14m02",
+      "title": "Ford 14M02-S4 DPS6 kontrol ünitesi kapsamı",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10164606-0001.pdf",
+      "kind": "manufacturer-bulletin",
+      "publisher": "Ford Motor Company / NHTSA",
+      "reviewed": true,
+      "reviewMethod": "1–2. sayfalardaki ABD araç kapsamı ve TCM arıza nedeni okundu."
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-ft-fiesta-durashift",
+      "title": "Durashift debriyaj aktüatörü arızası",
+      "summary": "Şanzıman viteste takılı kalabilir; boş konuma geçemediği için motor çalışmayabilir. Vites göstergesinde yanıp sönen N ve P0810 kodu görülebilir.",
+      "category": "transmission",
+      "frequency": "unknown",
+      "frequencyRationale": "Kaynak arızanın varlığını destekliyor; Türkiye araç parkında karşılaştırılabilir arıza oranı veya yeterli bağımsız tekrar ölçümü yok.",
+      "vehicles": [
+        {
+          "brand": "Ford",
+          "model": "Fiesta",
+          "years": {
+            "to": 2008,
+            "from": 2002
+          },
+          "transmission": {
+            "type": "automated-manual",
+            "name": "Durashift EST"
+          }
+        }
+      ],
+      "sourceIds": [
+        "ecu-fiesta-durashift"
+      ],
+      "uncertainties": "Tek kavramalı robotize Durashift EST; PowerShift veya tork konvertörlü otomatiğe uygulanmaz. Kaynak Mk VI derken 2002–2008 aracını kastediyor; yerel nesil adlandırmasıyla çelişmemesi için nesil boş bırakıldı. 2N1R-7M168-BE/BG veya 2S6R-7M168-GC/GF aktüatör ailesi doğrulanmalı. Kaynaktaki hatalı Focus 2002–2011 satırı aktarılmadı."
+    },
+    {
+      "id": "astra-ft-fiesta-dps6-vites-kaybi",
+      "title": "PowerShift vites geçişinin devre dışı kalması",
+      "summary": "Vites geçişi kesilebilir ve geri vites seçilemeyebilir. Şanzıman veya motor arıza uyarısı eşliğinde araç hareket edemeyebilir.",
+      "category": "transmission",
+      "frequency": "unknown",
+      "frequencyRationale": "Türkiye birinci el bildirimi ve ABD teknik bülteni var; yerel arıza oranı ve aynı kök nedenin tekrarı ölçülmedi.",
+      "vehicles": [
+        {
+          "brand": "Ford",
+          "model": "Fiesta",
+          "years": {
+            "from": 2013,
+            "to": 2013
+          },
+          "engines": [
+            {
+              "name": "1.6 benzinli"
+            }
+          ],
+          "transmission": {
+            "type": "dual-clutch",
+            "name": "PowerShift DPS6 (kuru kavrama)"
+          }
+        }
+      ],
+      "sourceIds": [
+        "fiesta-tr-powershift-2013",
+        "ford-dps6-14m02"
+      ],
+      "uncertainties": "2013 Türkiye kullanıcı kaydı semptomu doğruluyor; P0902 kesin TCM teşhisi değildir, akü/tesisat/aktüatör de araştırılmalı. ABD 14M02 belirli Cuautitlan/Michigan araçlarına aittir; Türkiye garanti veya geri çağırma kapsamı değildir. TCM parça revizyonu doğrulanmadan ABD arıza nedeni bu araca kesin atanmaz. Islak PowerShift, manuel ve Durashift EST hariç; bu dosyada diğer yıllara genişletilmedi."
+    }
+  ]
+}

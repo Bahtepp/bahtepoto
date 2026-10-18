@@ -1,0 +1,66 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "claude-stellantis",
+  "brands": ["Citroën"],
+  "models": ["C3", "C3 Aircross", "C4", "C4 Cactus", "C5 Aircross", "Berlingo", "Grand C4 Picasso"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "claude-st-largus-15bluehdi-chaine-c",
+      "title": "Casse chaîne 1.5 BlueHDi. Pas de plate-forme d'indemnisation... pour le moment",
+      "url": "https://www.largus.fr/actualite-automobile/casse-chaine-1-5-bluehdi-pas-de-plate-forme-d-indemnisation-pour-le-moment-30038450.html",
+      "kind": "technical-publication",
+      "publisher": "L'argus",
+      "publishedAt": "2025-01-26",
+      "reviewed": true,
+      "reviewMethod": "Makale metni okundu.",
+      "note": "1.5 BlueHDi (DV5) zinciri yetersiz boyutlu ve uzuyor; 2018 - Şubat 2023 üretimi motorlar. Şubat 2023'ten itibaren 8 mm zincir. Etkilenen markalar arasında Citroën var.",
+      "basedOn": "stellantis-15-bluehdi-zincir"
+    },
+    {
+      "id": "claude-st-quechoisir-15bluehdi-c",
+      "title": "Moteur diesel 1.5 BlueHDi de Stellantis : la grogne monte",
+      "url": "https://www.quechoisir.org/actualite-moteur-diesel-1-5-bluehdi-de-stellantis-la-grogne-monte-n132914/",
+      "kind": "technical-publication",
+      "publisher": "UFC-Que Choisir",
+      "publishedAt": "2025-01-10",
+      "reviewed": true,
+      "reviewMethod": "Makale metni okundu.",
+      "note": "Ekim 2017 - Ocak 2023 üretimi. Citroën için anılan modeller: C3, C3 Aircross, C4, C4 Cactus, C4 Picasso, C5 Aircross, Berlingo, SpaceTourer, Jumpy. Belirtiler: yağ tüketimi, güç kaybı, titreşim, takırtı.",
+      "basedOn": "stellantis-15-bluehdi-zincir"
+    },
+    {
+      "id": "claude-st-motorsactu-15bluehdi-c",
+      "title": "Stellantis étend la couverture de ses anciens moteurs 1.5 BlueHDi et propose un remboursement aux clients concernés",
+      "url": "https://motorsactu.com/stellantis-etend-la-couverture-de-ses-anciens-moteurs-1-5-bluehdi-et-propose-un-remboursement-aux-clients-concernes/",
+      "kind": "technical-publication",
+      "publisher": "MotorsActu",
+      "publishedAt": "2025-07-03",
+      "reviewed": true,
+      "reviewMethod": "Makale metni okundu.",
+      "note": "Ekim 2017 - Ocak 2023 üretimi 1.5 BlueHDi için kapsam 10 yıl / 240.000 km; geri ödeme platformu Citroën sitesinde de var.",
+      "basedOn": "stellantis-15-bluehdi-zincir"
+    }
+  ],
+  "issues": [
+    {
+      "id": "claude-stellantis-citroen-15bluehdi-eksantrik-zinciri",
+      "title": "1.5 BlueHDi: eksantrik zincirinde uzama ve kopma",
+      "summary": "1.5 BlueHDi dizel motorda eksantrik millerini süren 7 mm zincir uzayıp ses, güç kaybı ve yağ tüketimi yapabiliyor; koparsa motor bozuluyor. 1 Şubat 2023'ten sonra takılan 8 mm zincir bu kaydın dışındadır. Uzatılan özel kapsam Avrupa duyurusudur.",
+      "category": "engine",
+      "frequency": "medium",
+      "frequencyRationale": "Üretici yüz binlerce araç için kontrol kampanyası başlattı ve kapsamı 10 yıla uzattı; tüketici örgütü sahip gruplarında yüzlerce dosya aktarıyor. Arıza oranı yayımlanmadığı için yüksek verilmedi.",
+      "vehicles": [
+        { "brand": "Citroën", "model": "C3", "generation": "nesli belirlenmemiş", "engines": [{ "name": "1.5 BlueHDi 100 PS" }], "years": { "from": 2018, "to": 2023 } },
+        { "brand": "Citroën", "model": "C3 Aircross", "generation": "nesli belirlenmemiş", "engines": [{ "name": "1.5 BlueHDi 100 PS" }, { "name": "1.5 BlueHDi 120 PS" }], "years": { "from": 2018, "to": 2023 } },
+        { "brand": "Citroën", "model": "C4", "generation": "nesli belirlenmemiş", "engines": [{ "name": "1.5 BlueHDi 130 PS" }], "years": { "from": 2018, "to": 2023 } },
+        { "brand": "Citroën", "model": "C4 Cactus", "generation": "C4 Cactus", "engines": [{ "name": "1.5 BlueHDi 100 PS" }, { "name": "1.5 BlueHDi 120 PS" }], "years": { "from": 2018, "to": 2020 } },
+        { "brand": "Citroën", "model": "C5 Aircross", "generation": "C5 Aircross 1. nesil (C84)", "engines": [{ "name": "1.5 BlueHDi 130 PS" }], "years": { "from": 2018, "to": 2023 } },
+        { "brand": "Citroën", "model": "Berlingo", "generation": "Berlingo 3. nesil (K9)", "engines": [{ "name": "1.5 BlueHDi 100 PS" }, { "name": "1.5 BlueHDi 130 PS" }], "years": { "from": 2018, "to": 2023 } },
+        { "brand": "Citroën", "model": "Grand C4 Picasso", "generation": "nesli belirlenmemiş", "engines": [{ "name": "1.5 BlueHDi 130 PS" }], "years": { "from": 2018, "to": 2018 } }
+      ],
+      "sourceIds": ["claude-st-largus-15bluehdi-chaine-c", "claude-st-quechoisir-15bluehdi-c", "claude-st-motorsactu-15bluehdi-c"],
+      "uncertainties": "Üretim Ekim 2017-Ocak 2023. 8 mm zincir 1 Şubat 2023 sonrası kapsam dışı. C3, C4 ve Grand C4 Picasso'da 1.5 satırı nesli ayrılmamış grupta; kart yalnız güç değeri yazılı 1.5 BlueHDi adına bağlandı, etiketsiz 1.5 BlueHDi ve 1.6 motorlara yayılmadı. C-Elysée eklenmedi. Uzatılmış kapsam Avrupa duyurusudur."
+    }
+  ]
+}

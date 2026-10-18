@@ -1,0 +1,90 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-ford-toyota",
+  "brands": [
+    "Toyota"
+  ],
+  "models": [
+    "Avensis",
+    "Prius"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "toyota-avensis-yakit-2011",
+      "title": "Avensis benzinli yakıt sistemi gönüllü geri çağırması",
+      "url": "https://media.toyota.co.uk/toyota-announces-voluntary-recalls/",
+      "kind": "official-recall",
+      "publisher": "Toyota GB",
+      "reviewed": true,
+      "reviewMethod": "2026-10-18: bağlantı açılarak ilgili arıza metni, kapsam ve kısıtlar okundu."
+    },
+    {
+      "id": "toyota-prius-j0v",
+      "title": "Prius J0V hibrit kontrol yazılımı açıklaması",
+      "url": "https://techinfo.toyota.com/techInfoPortal/staticcontent/en/techinfo/html/prelogin/docs/cp/j0vtofaq.pdf",
+      "kind": "official-recall",
+      "publisher": "Toyota Motor Sales USA",
+      "reviewed": true,
+      "reviewMethod": "2026-10-18: bağlantı açılarak ilgili arıza metni, kapsam ve kısıtlar okundu."
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-ft-avensis-yakit-kacagi",
+      "title": "Yakıt borusu ve pompa bağlantısında kaçak",
+      "summary": "Yakıt borusunda çatlak veya pompa çekvalfinin yetersiz sıkılması yakıt sızıntısına yol açabilir.",
+      "category": "fuel-system",
+      "frequency": "unknown",
+      "frequencyRationale": "Kaynak arızayı destekliyor; Türkiye araç parkında oran ve teknik alt sürümlere göre karşılaştırılabilir sıklık verisi bulunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Toyota",
+          "model": "Avensis",
+          "generation": "Avensis 2. nesil (T250)",
+          "years": {
+            "from": 2003,
+            "to": 2008
+          },
+          "engines": [
+            {
+              "name": "2.0 benzinli"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "toyota-avensis-yakit-2011"
+      ],
+      "uncertainties": "Kaynak Temmuz 2000–Eylül 2008 üretilen 2.0/2.4 benzinlileri kapsar. Yerel katalogda 2.0 mevcut; bu aday yalnız T250 2.0'a daraltıldı. Türkiye VIN/parça ve üretim ayı doğrulanmalı. TSB 144-610/611/612 model yılları kampanya uygunluğu kanıtı değildir. Dizel 2.0 D-4D, 1.6 benzinli ve 2009 sonrası kapsam dışıdır; 2.4 ve T220 ayrıca doğrulanmayı bekler."
+    },
+    {
+      "id": "astra-ft-prius-j0v-guc-kaybi",
+      "title": "Hibrit sisteminde koruma moduna geçememe",
+      "summary": "Hibrit sistemindeki belirli arızalarda koruma modu devreye girmeyebilir. Araç çekiş gücünü kaybederek sürüş sırasında durabilir.",
+      "category": "electrical",
+      "frequency": "unknown",
+      "frequencyRationale": "Kaynak arızayı destekliyor; Türkiye araç parkında oran ve teknik alt sürümlere göre karşılaştırılabilir sıklık verisi bulunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Toyota",
+          "model": "Prius",
+          "generation": "Prius (XW30)",
+          "years": {
+            "from": 2010,
+            "to": 2014
+          },
+          "engines": [
+            {
+              "name": "1.8 VVT-i Hybrid"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "toyota-prius-j0v"
+      ],
+      "uncertainties": "ABD J0V / 18V684, model yılı 2010–2014; üretim Mart 2009 sonu–Şubat 2014 başı. Türkiye ECU/yazılım ve VIN eşitliği doğrulanmadı; otomatik yayınlanamaz. E0E/F0R ile aynı kayıt gibi çoğaltılmaz, yeni koruma modu koşuludur. Diğer Toyota hibritlerine ve e-CVT mekanik arızasına genellenmez; batarya ömrü iddiası değildir."
+    }
+  ]
+}

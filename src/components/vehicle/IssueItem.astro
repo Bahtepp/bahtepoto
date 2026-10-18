@@ -1,31 +1,20 @@
 ---
 /**
- * Tek bir sorun kaydı — sade görünüm.
- * İlk bakışta: başlık, eşleşme türü (motora özgü / kasa geneli / koşullu), kısa açıklama,
- * belirtiler, etkilediği araçlar ve kaynağın türü.
- * Açılınca: satın alırken kontrol edilecekler, çözüm, kaynak bağlantıları.
- * Teknik doğrulama ayrıntıları (kanıt düzeyi, kaynakların neyi desteklediği, denetim notları)
- * ayrı bir açılır alandadır.
+ * Kısa sorun kartı: başlık, yaygınlık, bir-iki cümle.
+ * Kaynak listesi, araştırma notu ve doğrulama ayrıntısı gösterilmez.
  */
 import type { MatchResult, MatchScope } from '@/lib/issues/match';
-import type { Issue, IssueSource } from '@/lib/issues/schema';
-import {
-  ISSUE_STATUS_DESCRIPTIONS,
-  ISSUE_STATUS_LABELS,
-  describeScope,
-} from '@/lib/issues/format';
+import type { Issue } from '@/lib/issues/schema';
+import { CATEGORY_LABELS, frequencyLabel } from '@/lib/issues/format';
 
 interface Props {
   issue: Issue;
   match: MatchResult;
   scope: MatchScope;
-  sourceById: Map<string, IssueSource>;
-  label: (id: string) => string;
-  /** Sayfada benzersiz bağlantı kimliği için önek. */
   anchorPrefix: string;
 }
 
-const { issue, match, scope, label, anchorPrefix } = Astro.props;
+const { issue, match, scope, anchorPrefix } = Astro.props;
 
 const SCOPE_TEXT: Record<MatchScope, string> = {
   engine: 'Bu motora özgü',
@@ -33,14 +22,11 @@ const SCOPE_TEXT: Record<MatchScope, string> = {
   conditional: 'Koşullu eşleşme',
 };
 
-const isRecall = issue.kind === 'recall' || issue.kind === 'service-campaign';
-// Kapsam notu "Etkilediği" satırında zaten görünür; koşul satırında tekrarlanmaz.
 const selectorNotes = new Set([...issue.appliesTo, ...issue.excludes].map((s) => s.note).filter(Boolean));
 const reasons = match.reasons.filter((x) => !selectorNotes.has(x));
-const headSymptoms = issue.symptoms.slice(0, 3);
-const allSymptoms = [...issue.symptoms, ...issue.symptomDetails];
-const fmtDate = (d?: string) => (d ? new Date(d).toLocaleDateString('tr-TR') : undefined);
+const frequency = frequencyLabel(issue);
 const r = issue.recall;
+const fmtDate = (d?: string) => (d ? new Date(d).toLocaleDateString('tr-TR') : undefined);
 const recallLine = r
   ? [
       r.campaignCode && `Kampanya: ${r.campaignCode}`,
@@ -50,72 +36,18 @@ const recallLine = r
       .filter(Boolean)
       .join(' · ')
   : undefined;
-const statusText = isRecall && issue.status === 'verified' ? 'Resmi kayıt' : ISSUE_STATUS_LABELS[issue.status];
-const statusTitle = isRecall && issue.status === 'verified'
-  ? 'Resmi geri çağırma kaydının içeriği kaynaktan okundu. Aracınızın kapsamda olup olmadığı şasi numarasıyla kesinleşir.'
-  : ISSUE_STATUS_DESCRIPTIONS[issue.status];
 ---
 
 <li class="issue" id={`${anchorPrefix}-${issue.slug}`}>
-  <details>
-    <summary>
-      {issue.demo && <p class="issue-demo">Örnek veri — doğrulanmış bilgi değildir</p>}
-      <h4 class="issue-title">{issue.title}</h4>
-      <p class={`issue-scope issue-scope-${scope}`}>
-        {SCOPE_TEXT[scope]}{scope === 'conditional' && reasons.length > 0 && `: ${reasons.join('; ')}`}
-      </p>
-      <p class="issue-summary">{issue.summary}</p>
-      <p class="issue-line"><span class="issue-key">Belirtiler:</span> {headSymptoms.join(' · ')}</p>
-      <p class="issue-line"><span class="issue-key">{isRecall ? 'Kapsam:' : 'Etkilediği:'}</span> {describeScope(issue.appliesTo, label)}</p>
-      {recallLine && <p class="issue-line">{recallLine}</p>}
-      <p class="issue-meta">
-        <span class={`issue-status issue-status-${issue.status}`} title={statusTitle}>{statusText}</span>
-        <span class="issue-more" aria-hidden="true">Ayrıntılar</span>
-      </p>
-    </summary>
-
-    <div class="issue-body">
-      {
-        allSymptoms.length > headSymptoms.length && (
-          <section>
-            <h5>Belirtiler</h5>
-            <ul>{allSymptoms.map((s) => <li>{s}</li>)}</ul>
-          </section>
-        )
-      }
-
-      {
-        issue.checks.length > 0 && (
-          <section>
-            <h5>Satın alırken kontrol edin</h5>
-            <ul>{issue.checks.map((c) => <li>{c}</li>)}</ul>
-          </section>
-        )
-      }
-
-      {
-        issue.remedies.length > 0 && (
-          <section>
-            <h5>Çözüm ve bakım</h5>
-            <ul>{issue.remedies.map((x) => <li>{x.text}</li>)}</ul>
-          </section>
-        )
-      }
-
-      {
-        isRecall && (
-          <section>
-            <h5>Aracım kapsamda mı?</h5>
-            <p>
-              {r?.vinRangePublished
-                ? 'Kampanyanın şasi numarası aralığı yayımlanmış; yine de aracınızın kapsamını ve onarımın yapılıp yapılmadığını resmi sorguyla doğrulayın.'
-                : 'Şasi numarası (VIN) aralığı yayımlanmadı. Aracınızın kapsamda olup olmadığını ve onarımın yapılıp yapılmadığını şasi numaranızla Ford yetkili servisine veya resmi geri çağırma sorgusuna danışarak öğrenin.'}
-              {r && r.otherModels.length > 0 && ` Aynı kampanya şu modelleri de kapsıyor: ${r.otherModels.join(', ')}.`}
-            </p>
-          </section>
-        )
-      }
-
-    </div>
-  </details>
+  {issue.demo && <p class="issue-demo">Örnek veri — doğrulanmış bilgi değildir</p>}
+  <h4 class="issue-title">{issue.title}</h4>
+  <p class="issue-tags">
+    {frequency && <span class={`issue-frequency issue-frequency-${issue.frequencyRating ?? 'unknown'}`}>Yaygınlık: {frequency}</span>}
+    <span class="issue-category">{CATEGORY_LABELS[issue.category]}</span>
+    <span class={`issue-scope issue-scope-${scope}`}>
+      {SCOPE_TEXT[scope]}{scope === 'conditional' && reasons.length > 0 && `: ${reasons.join('; ')}`}
+    </span>
+  </p>
+  <p class="issue-summary">{issue.summary}</p>
+  {recallLine && <p class="issue-line">{recallLine}</p>}
 </li>

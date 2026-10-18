@@ -1,0 +1,123 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "claude-stellantis",
+  "brands": ["Peugeot"],
+  "models": ["308", "208", "3008"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "claude-st-largus-308-traverse",
+      "title": "Peugeot 308 II. Problèmes de bruit de la traverse arrière",
+      "url": "https://www.largus.fr/actualite-automobile/peugeot-308-ii-problemes-de-bruit-de-la-traverse-arriere-8600390.html",
+      "kind": "technical-publication",
+      "publisher": "L'argus",
+      "publishedAt": "2017-06-26",
+      "reviewed": true,
+      "reviewMethod": "Sayfa indirildi, makale metni okundu.",
+      "note": "308 II'de arka akstan gıcırtı tekrarlayan bir anomali. Neden traversin preslenmiş alt parçası ile yuvarlak üst parçası arasındaki sürtünme; bozuk yolda ve yük aktarımında duyuluyor. İlk olarak 10 Aralık 2015'e kadar üretilen, 25.000 Nm/rad viraj demirli araçlar; Ocak 2017 tarihli gizli teknik nota göre 20 Haziran 2016'ya kadar üretilen 30.000 Nm/rad demirli araçlar da etkileniyor. İlk durumda servis traversi değiştiriyor, ikincisinde yalnızca bazı parçaları. Arkadan gelen vuruntu 9 Ekim 2016'ya kadar üretilen araçlarda susturucu elastik askısından da gelebiliyor. Tehlikeli değil."
+    },
+    {
+      "id": "claude-st-forumpeugeot-308-train",
+      "title": "Train arrière bruyant",
+      "url": "https://www.forum-peugeot.com/Forum/threads/train-arri%C3%A8re-bruyant.28855/",
+      "kind": "user-report",
+      "publisher": "Forum Peugeot",
+      "publishedAt": "2016-08-07",
+      "reviewed": true,
+      "reviewMethod": "Konudaki mesajlar okundu.",
+      "note": "308 sahipleri bozuk yolda arkadan gelen sesleri tartışıyor. Konuyu açan kullanıcı forumda traverse sesine ayrı bir konu açıldığını ve Mart 2016 sonunda üretilen aracında bu sorunun çözülmüş olduğunu anladığını yazıyor. Diğer sesler traversten farklı ve teşhis edilmemiş."
+    },
+    {
+      "id": "claude-st-ec-stellantis-adblue",
+      "title": "La Commission salue l'engagement pris par Stellantis d'indemniser les consommateurs pour les problèmes liés aux réservoirs AdBlue",
+      "url": "https://france.representation.ec.europa.eu/informations/la-commission-salue-lengagement-pris-par-stellantis-dindemniser-les-consommateurs-pour-les-problemes-2024-12-20_fr",
+      "kind": "technical-publication",
+      "publisher": "Avrupa Komisyonu Fransa Temsilciliği",
+      "publishedAt": "2024-12-20",
+      "reviewed": true,
+      "reviewMethod": "Duyuru metni okundu.",
+      "note": "Resmî tüketici koruma duyurusu (geri çağırma değil; en yakın tür seçildi). Ocak 2014 - Ağustos 2020 arasında üretilen Peugeot, Citroën, DS ve Opel dizel araçlarda AdBlue depolarıyla ilgili yazılım sorunları yüz binlerce sürücüye pahalı onarım çıkardı. Stellantis, İtalya rekabet kurumunun Eylül 2023'te aldığı tazminat önlemlerini AB ve AEA'ya yaymayı taahhüt etti; CPC ağı uygulamayı izleyecek. Model veya motor adı vermiyor.",
+      "basedOn": "stellantis-adblue-cpc"
+    },
+    {
+      "id": "claude-st-actuauto-adblue-indemnisation",
+      "title": "Problème de réservoirs AdBlue : Stellantis étend son programme d'indemnisation",
+      "url": "https://www.actu-automobile.com/2025/02/09/probleme-de-reservoirs-adblue-stellantis-etend-son-programme-dindemnisation",
+      "kind": "technical-publication",
+      "publisher": "Actu-Automobile",
+      "publishedAt": "2025-02-09",
+      "reviewed": true,
+      "reviewMethod": "Haber metni okundu.",
+      "note": "Ocak 2014 - Ağustos 2020 arasında üretilen Euro 6 SCR dizel Peugeot, Citroën, DS ve Opel/Vauxhall. Sorunlar: AdBlue kristalleşmesiyle tıkanma, AdBlue pompası arızası, hatalı uyarı veya çalıştırmayı engelleyen sensörler. Parça maliyeti 5 yıl veya 150.000 km'ye kadar tamamen, 5-8 yaş arası kilometreye göre kısmen karşılanıyor; Ağustos 2028'e kadar. Motor adı vermiyor.",
+      "basedOn": "stellantis-adblue-cpc"
+    },
+    {
+      "id": "claude-st-forumpeugeot-3008-adblue",
+      "title": "Reservoir Adblue Urée HS Pompe à changer defaut anti-pollution Demarrage impossible 1100 KMS",
+      "url": "https://www.forum-peugeot.com/Forum/threads/reservoir-adblue-ur%C3%A9e-hs-pompe-%C3%A0-changer-defaut-anti-pollution-demarrage-impossible-1100-kms.118145/",
+      "kind": "user-report",
+      "publisher": "Forum Peugeot",
+      "publishedAt": "2019-11-27",
+      "reviewed": true,
+      "reviewMethod": "Konudaki mesajlar okundu.",
+      "note": "Yaklaşık 3 yaşındaki 3008 II 1.6 BlueHDi 120 EAT6: AdBlue deposundaki pompa arızalı, bütün üre deposunun değişmesi gerekiyor (teklif yaklaşık 1150 EUR); 'çalıştırma 1100 km sonra engellenecek' uyarısı. Diğer üyeler de 3008 II'de benzer arızalar ve kısmi garanti dışı katkılar anlatıyor."
+    },
+    {
+      "id": "claude-st-forumpeugeot-208-adblue",
+      "title": "Réservoir adblue sur 208 HS deux fois en trois mois ?",
+      "url": "https://www.forum-peugeot.com/Forum/threads/r%C3%A9servoir-adblue-sur-208-hs-deux-fois-en-trois-mois.131738/",
+      "kind": "user-report",
+      "publisher": "Forum Peugeot",
+      "publishedAt": "2022-12-18",
+      "reviewed": true,
+      "reviewMethod": "Konudaki mesajlar okundu.",
+      "note": "2016 model 208 1.6 BlueHDi: üre, motor ve servis uyarıları ile 'çalıştırma 1100 km sonra engellenecek' mesajı; AdBlue deposu ve enjektörü değişti, iki buçuk ay sonra aynı arıza; son teşhis depo kontrol ünitesi. Başka bir üye 3008'inde AdBlue kristalleşmesinin parçalara zarar verdiğini yazıyor."
+    }
+  ],
+  "issues": [
+    {
+      "id": "claude-stellantis-peugeot-308ii-arka-travers-gicirtisi",
+      "title": "Arka traversten gıcırtı (bozuk yolda)",
+      "summary": "Bozuk yolda veya yük aktarımında arka akstan gıcırtı gelebiliyor. Neden traversin alt ve üst parçaları arasındaki sürtünme; servis bir durumda traversi, diğerinde bazı parçaları değiştiriyor.",
+      "category": "suspension",
+      "frequency": "medium",
+      "frequencyRationale": "Teknik yayın sorunu tekrarlayan bir anomali olarak tanımlıyor ve üreticinin teknik notuyla kapsamın genişlediğini aktarıyor. Sahip forumunda ayrı bir konusu var. Sayım yok.",
+      "vehicles": [
+        {
+          "brand": "Peugeot",
+          "model": "308",
+          "generation": "308 II",
+          "years": { "from": 2013, "to": 2016 }
+        }
+      ],
+      "sourceIds": ["claude-st-largus-308-traverse", "claude-st-forumpeugeot-308-train"],
+      "uncertainties": "Kapsam üretim tarihine ve viraj demirinin sertliğine bağlı: 25.000 Nm/rad demirliler 10 Aralık 2015'e kadar, 30.000 Nm/rad demirliler 20 Haziran 2016'ya kadar. Hangi motor ve donanımın hangi demiri kullandığı okunmadığı için motor yazılmadı. Teknik notun kendisi okunmadı; L'argus aktarımıdır. Arkadan gelen vuruntu 9 Ekim 2016'ya kadar üretilen araçlarda susturucu askısından da gelebiliyor; o ayrı bir arızadır. Türkiye araçlarının aynı parça referansını kullandığı doğrulanmadı."
+    },
+    {
+      "id": "claude-stellantis-peugeot-16bluehdi-adblue-deposu",
+      "title": "AdBlue deposu arızası: çalıştırma engeli uyarısı",
+      "summary": "AdBlue (üre) deposundaki pompa, sensör veya kontrol ünitesi arızalanınca uyarılar yanıyor ve belirli kilometre sonra çalıştırmanın engelleneceği bildiriliyor. Onarımda genellikle bütün depo değişiyor.",
+      "category": "emissions",
+      "frequency": "medium",
+      "frequencyRationale": "Avrupa Komisyonu sorunun yüz binlerce sürücüye pahalı onarım çıkardığını ve Stellantis'in AB çapında tazminat taahhüt ettiğini duyurdu. Model ve motor bazında sayım yok.",
+      "vehicles": [
+        {
+          "brand": "Peugeot",
+          "model": "208",
+          "generation": "208 I",
+          "engines": [{ "name": "1.6 BlueHDi 100 PS" }],
+          "years": { "from": 2014, "to": 2019 }
+        },
+        {
+          "brand": "Peugeot",
+          "model": "3008",
+          "generation": "3008 2. nesil (P84)",
+          "engines": [{ "name": "1.6 BlueHDi 120 PS" }],
+          "years": { "from": 2016, "to": 2020 }
+        }
+      ],
+      "sourceIds": ["claude-st-ec-stellantis-adblue", "claude-st-actuauto-adblue-indemnisation", "claude-st-forumpeugeot-3008-adblue", "claude-st-forumpeugeot-208-adblue"],
+      "uncertainties": "Resmi kapsam Ocak 2014 - Ağustos 2020 üretimi SCR'li dizellerdir ama model ve motor listesi okunmadı; araçlar yalnızca kullanıcı raporu okunan 1.6 BlueHDi modelleridir. 1.5 BlueHDi (2017 sonrası) aynı üretim aralığına girebilir ama ona ait rapor okunmadığı için eklenmedi. 2.0 BlueHDi, 308 II, 5008 II, 508, Partner ve Rifter de eklenmedi. Tazminat programı AB ve AEA içindir; Türkiye'de geçerli olduğu okunmadı. Komisyon sorunu yazılıma, haber ve kullanıcılar pompa, sensör ve kristalleşmeye bağlıyor. Komisyon ile haber aynı programı anlatır."
+    }
+  ]
+}

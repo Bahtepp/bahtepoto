@@ -7,10 +7,12 @@ import { getCollection } from 'astro:content';
 import type { BrandPayload, BrandSummary, ModelPayload, ModelSummary } from './payload';
 import type { Brand, Engine, Market, Model, Source } from './schema';
 import { validateCatalog, type CatalogData } from './validate';
+import { aliasLabelsFor } from './aliases';
 import { marketCounts } from './market';
+import { publicEngine, publicVariant } from './publish';
 import { engineGroupsForModel } from './selector';
 import type { SearchIndex } from './search';
-import { brandTier } from './visibility';
+import { brandTier, isHiddenModel } from './visibility';
 
 interface Catalog extends CatalogData {
   brandById: Map<string, Brand>;
@@ -60,7 +62,7 @@ export function getCatalog(): Promise<Catalog> {
   return cache;
 }
 
-function summarizeModel(model: Model, markets: Market[]): ModelSummary {
+function summarizeModel(model: Model): ModelSummary {
   return {
     id: model.id,
     slug: model.slug,
@@ -78,18 +80,19 @@ function summarizeModel(model: Model, markets: Market[]): ModelSummary {
         labelPeriod: g.labelPeriod,
         periods: g.periods,
         status: g.status,
-        variantCount: g.variants.length,
-        marketCounts: marketCounts(g.variants, markets),
+        variantCount: marketCounts(g.variants).tr,
+        marketCounts: marketCounts(g.variants),
         modelYears: [...new Set(g.variants.flatMap((v) => v.marketAvailability.flatMap((a) => (a.marketId === 'tr' ? a.modelYears : []))))].sort((x, y) => x - y),
         revisions: [...g.revisions]
           .sort((a, b) => a.order - b.order)
           .map(({ id, slug, name, kind, order, periods, status }) => ({ id, slug, name, kind, order, periods, status })),
-      })),
+      }))
+      .filter((g) => g.marketCounts.tr > 0),
   };
 }
 
 export async function getBrandSummaries(): Promise<BrandSummary[]> {
-  const { brands, models, markets } = await getCatalog();
+  const { brands, models } = await getCatalog();
   return brands.map((b) => ({
     id: b.id,
     slug: b.slug,
@@ -97,7 +100,7 @@ export async function getBrandSummaries(): Promise<BrandSummary[]> {
     status: b.status,
     generationNaming: b.generationNaming,
     tier: brandTier(b.slug),
-    modelCount: models.filter((m) => m.brandId === b.id && summarizeModel(m, markets).generations.some((g) => g.marketCounts.tr > 0)).length,
+    modelCount: models.filter((m) => m.brandId === b.id && !isHiddenModel(b.slug, m.slug) && summarizeModel(m).generations.some((g) => g.marketCounts.tr > 0)).length,
   }));
 }
 
@@ -111,11 +114,12 @@ export async function getSearchIndex(): Promise<SearchIndex> {
   const engines: SearchIndex['engines'] = [];
   for (const model of catalog.models) {
     if (!brandIds.has(model.brandId)) continue;
-    const summary = summarizeModel(model, catalog.markets);
+    const summary = summarizeModel(model);
     if (!summary.generations.some((g) => g.marketCounts.tr > 0)) continue;
     const brand = catalog.brandById.get(model.brandId)!;
-    if (brandTier(brand.slug) !== 'primary') continue;
-    models.push({ brand: brand.slug, brandName: brand.name, slug: model.slug, name: model.name });
+    if (brandTier(brand.slug) !== 'primary' || isHiddenModel(brand.slug, model.slug)) continue;
+    const aliases = aliasLabelsFor(brand.slug, model.slug);
+    models.push({ brand: brand.slug, brandName: brand.name, slug: model.slug, name: model.name, ...(aliases.length ? { aliases } : {}) });
     const engineMap: Record<string, (typeof catalog.engines)[number]> = {};
     const variantsByGeneration: Record<string, (typeof model.generations)[number]['variants']> = {};
     for (const gen of model.generations) {
@@ -125,7 +129,7 @@ export async function getSearchIndex(): Promise<SearchIndex> {
         if (engine) engineMap[engine.id] = engine;
       }
     }
-    for (const group of engineGroupsForModel(summary.generations, variantsByGeneration, engineMap, catalog.markets, 'tr')) {
+    for (const group of engineGroupsForModel(summary.generations, variantsByGeneration, engineMap)) {
       if (group.chassis.length === 0) continue;
       engines.push({ brand: brand.slug, brandName: brand.name, model: model.slug, modelName: model.name, slug: group.slug, label: group.label });
     }
@@ -143,8 +147,8 @@ export async function getBrandPayload(brandId: string): Promise<BrandPayload> {
   if (!brand) throw new Error(`Bilinmeyen marka: ${brandId}`);
   return {
     brand,
-    models: catalog.models.filter((m) => m.brandId === brandId).map((m) => summarizeModel(m, catalog.markets)),
-    markets: catalog.markets,
+    models: catalog.models.filter((m) => m.brandId === brandId && (brand.tier !== 'primary' || !isHiddenModel(brand.slug, m.slug))).map((m) => summarizeModel(m)),
+    markets: catalog.markets.filter((m) => m.id === 'tr'),
   };
 }
 
@@ -158,12 +162,17 @@ export async function getModelPayload(modelId: string): Promise<ModelPayload> {
   const variantsByGeneration: ModelPayload['variantsByGeneration'] = {};
   let updatedAt = model.updatedAt;
 
+  const trMarket = catalog.marketById.get('tr');
   for (const gen of model.generations) {
-    variantsByGeneration[gen.id] = gen.variants.map((v) => ({ ...v, notes: undefined }));
-    for (const v of gen.variants) {
+    const visible = gen.variants.flatMap((v) => {
+      const next = publicVariant(v);
+      return next ? [next] : [];
+    });
+    variantsByGeneration[gen.id] = visible;
+    for (const v of visible) {
       const engine = catalog.engineById.get(v.engineId)!;
-      engines[engine.id] = { ...engine, notes: undefined };
-      for (const mid of v.marketIds) markets[mid] = catalog.marketById.get(mid)!;
+      engines[engine.id] = publicEngine(engine);
+      if (trMarket) markets.tr = trMarket;
       for (const d of [v.updatedAt, engine.updatedAt, gen.updatedAt]) if (d > updatedAt) updatedAt = d;
     }
   }

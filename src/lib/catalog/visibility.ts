@@ -12,11 +12,24 @@ const PRIMARY = new Set([
   'ds', 'fiat', 'ford', 'honda', 'hyundai', 'jaecoo', 'jaguar', 'jeep', 'kgm',
   'kia', 'land-rover', 'leapmotor', 'lexus', 'mazda', 'mercedes-benz', 'mg', 'mini', 'mitsubishi',
   'nissan', 'opel', 'peugeot', 'porsche', 'renault', 'seat', 'skoda', 'skywell', 'ssangyong',
-  'subaru', 'suzuki', 'tesla', 'toyota', 'volkswagen', 'volvo',
+  'subaru', 'suzuki', 'tesla', 'togg', 'toyota', 'volkswagen', 'volvo',
+]);
+
+/**
+ * Ana markanın altında olsa da varsayılan Türkiye listesinden çıkarılan modeller.
+ * Dosya silinmez; doğrudan adres açılır. İlan sayısı yoktur.
+ * Anahtar: `marka-slug/model-slug`.
+ */
+const HIDDEN_MODELS = new Set([
+  'nissan/rogue',
 ]);
 
 export function brandTier(slug: string): BrandTier {
   return PRIMARY.has(slug) ? 'primary' : 'review';
+}
+
+export function isHiddenModel(brandSlug: string, modelSlug: string): boolean {
+  return HIDDEN_MODELS.has(`${brandSlug}/${modelSlug}`);
 }
 
 export function isPrimaryBrand(slug: string): boolean {

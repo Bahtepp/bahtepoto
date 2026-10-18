@@ -737,5 +737,1299 @@
       "checkedAt": "2026-10-15",
       "method": "Sayfa metni tarayıcıyla okundu (otomatik indirme 402/403 ile engellendi)"
     }
+  },
+  {
+    "id": "uzman-hr13-termostat-video",
+    "kind": "expert-service",
+    "title": "HR13 / 1.3 TCe termostat gövdesi kaçağı — atölye anlatımı",
+    "url": "https://www.youtube.com/watch?v=8kXcrkCVaAs",
+    "publisher": "Bağımsız atölye (YouTube)",
+    "accessedAt": "2026-10-18",
+    "language": "es",
+    "notes": "Konuşma metninde iki parçalı plastik termostat gövdesinin kaynak yerinden kaçırdığı, soğutma sıvısı kaybı ve hararet riski anlatılıyor. Gözlem özellikle 2018–2019 Renault ve Dacia için söyleniyor. Motorun Nissan ve Mercedes'te de kullanıldığı belirtiliyor; Mercedes'te aynı gövdenin aynı biçimde kaçırdığı doğrulanmıyor. Sonraki gövdelerde kaçağın azaldığı söyleniyor, bittiği söylenmiyor.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Video konuşma metni okundu" }
+  },
+  {
+    "id": "kullanici-renault-termostat-forum",
+    "kind": "user-report",
+    "title": "Renault 1.3 TCe termostat kaçağı kullanıcı tartışması",
+    "url": "https://www.reddit.com/r/Renault/comments/1nnmd7c/",
+    "publisher": "Reddit r/Renault",
+    "accessedAt": "2026-10-18",
+    "language": "en",
+    "notes": "Kullanıcılar soğutma sıvısı kaçağını tekrarlıyor. Mercedes gövdesinin farklı olduğu iddiası bu kaydı Mercedes'e taşımak için kullanılmadı.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Konu metni okundu" }
+  },
+  {
+    "id": "yayin-quechoisir-h5ft",
+    "kind": "technical-publication",
+    "title": "Renault 1.2 TCe yağ tüketimi — Que Choisir",
+    "url": "https://www.quechoisir.org/actualite-moteur-1-2-renault-les-constructeurs-minimisent-n69379/",
+    "publisher": "UFC-Que Choisir",
+    "accessedAt": "2026-10-18",
+    "language": "fr",
+    "basedOn": "quechoisir-h5ft",
+    "notes": "Ekim 2012–Mayıs 2016 arasında Valladolid'de üretilen Euro 5 1.2 TCe için yağ tüketimi. Üreticilerin tam geri çağırma yapmadığı ve her aracın etkilenmediği aktarılıyor.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Haber metni okundu" }
+  },
+  {
+    "id": "yayin-auto-moto-h5ft",
+    "kind": "technical-publication",
+    "title": "Renault 1.2 TCe etkilenen modeller — Auto-Moto",
+    "url": "https://www.auto-moto.com/electrique/moteurs-renault-defectueux-liste-modeles-concernes-renault-dacia-nissan-7120",
+    "publisher": "Auto-Moto",
+    "accessedAt": "2026-10-18",
+    "language": "fr",
+    "basedOn": "quechoisir-h5ft",
+    "notes": "Aynı Que Choisir / Le Monde araştırmasını aktarır; bağımsız ikinci kanıt sayılmaz. Clio 4, Mégane 3 ve belirli 1.2 TCe güçleri listeleniyor. 1.0 ve 1.3 TCe bu listenin dışında.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Haber metni okundu" }
+  },
+  {
+    "id": "yayin-c4r-bmw-n47",
+    "kind": "technical-publication",
+    "title": "BMW 3 Serisi N47 triger zinciri — C4R",
+    "url": "https://c4r.co.uk/guides/bmw-3-series",
+    "publisher": "C4R",
+    "accessedAt": "2026-10-18",
+    "language": "en",
+    "notes": "318d/320d N47, yaklaşık 2007–2014, E90 ve erken F30. B47 (yaklaşık 2015 sonrası, 190 PS) bu konunun dışında tutuluyor.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Rehber bölümü okundu" }
+  },
+  {
+    "id": "yayin-mtak-bmw-n47",
+    "kind": "technical-publication",
+    "title": "BMW N47 triger zinciri teknik notu",
+    "url": "https://real.mtak.hu/153629/1/Fekete_02_uj.pdf",
+    "publisher": "MTAK / akademik yayın",
+    "accessedAt": "2026-10-18",
+    "language": "en",
+    "notes": "Mart 2007–Ocak 2009 üretiminin en çok etkilendiği, şikayetlerin daha sonra da sürdüğü ve BMW'nin kalite iyileştirmesinin tam geri çağırma olmadığı aktarılıyor. Ticari kaynaklardaki yüzde iddiaları kullanılmadı.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Makale bölümü okundu" }
+  },
+  {
+    "id": "yayin-c4r-qashqai-12",
+    "kind": "technical-publication",
+    "title": "Nissan Qashqai 1.2 DIG-T zincir — C4R",
+    "url": "https://c4r.co.uk/guides/nissan-qashqai",
+    "publisher": "C4R",
+    "accessedAt": "2026-10-18",
+    "language": "en",
+    "notes": "J11 1.2 DIG-T için zincir uzaması ve yağ tüketimi, yaklaşık 2014–2018. 1.3 DIG-T bu kaydın konusu değil.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Rehber bölümü okundu" }
+  },
+  {
+    "id": "yayin-carhealth-qashqai-12",
+    "kind": "technical-publication",
+    "title": "Nissan Qashqai alım notu — 1.2 DIG-T",
+    "url": "https://carhealth.co.uk/blog/nissan-qashqai-buyers-guide-uk-2026",
+    "publisher": "CarHealth",
+    "accessedAt": "2026-10-18",
+    "language": "en",
+    "notes": "1.2 DIG-T zincir sesi ve yağ eksiltmesi. Dizel DPF/EGR için genel kısa mesafe kullanımı ayrı bir kronik sorun olarak eklenmedi.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Sayfa metni okundu" }
+  },
+  {
+    "id": "yayin-smartcarcheck-golf-dsg",
+    "kind": "technical-publication",
+    "title": "Volkswagen Golf DSG DQ200 — Smart Car Check",
+    "url": "https://smartcarcheck.co.uk/guides/volkswagen/golf-mk7",
+    "publisher": "Smart Car Check",
+    "accessedAt": "2026-10-18",
+    "language": "en",
+    "basedOn": "vw-dq200-buyer-guides",
+    "notes": "Düşük torklu benzin ve 1.6 TDI üzerindeki 7 ileri kuru kavramalı DQ200 için sarsıntı ve mekatronik. GTI ve 2.0 TDI'daki ıslak kavrama bu kayda alınmadı.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Rehber bölümü okundu" }
+  },
+  {
+    "id": "yayin-autoza-golf-dsg",
+    "kind": "technical-publication",
+    "title": "Golf DQ200 karşılaştırması — Autoza",
+    "url": "https://autoza.co.uk/compare/toyota-corolla-vs-volkswagen-golf",
+    "publisher": "Autoza",
+    "accessedAt": "2026-10-18",
+    "language": "en",
+    "basedOn": "vw-dq200-buyer-guides",
+    "notes": "Aynı DQ200 ayrımını tekrarlar; bağımsız ikinci kanıt sayılmaz. Tamir fiyatı kayda alınmadı.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Karşılaştırma metni okundu" }
+  },
+  {
+    "id": "forum-hyundaiclub-i20-kapi",
+    "kind": "user-report",
+    "title": "Hyundai i20 iç kapı tutamacı boyası — Hyundai Club TR",
+    "url": "https://www.hyundaiclubtr.com/tags/boya/",
+    "publisher": "Hyundai Club TR",
+    "accessedAt": "2026-10-18",
+    "language": "tr",
+    "notes": "PB/PBT (2008–2014) i20 için iç kapı tutamacı boyasının soyulmasının forumda bilinen bir konu olduğu yazılmış. Tek topluluk; resmi üretici kusuru olarak kaydedilmedi. Sonraki i20 nesillerine taşınmadı.",
+    "review": { "status": "content-checked", "checkedAt": "2026-10-18", "method": "Forum etiket sayfasındaki konu özeti okundu" }
+  },
+  {
+    "id": "arastirma-cursor-bilstein-ea111-zincir",
+    "kind": "technical-publication",
+    "title": "EA111 1.4 TSI triger zinciri",
+    "url": "https://cdn.partsfinder.bilsteingroup.com/pf-document/FTEC138_GB.PDF",
+    "publisher": "Bilstein Group",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "1.4 TSI EA111 zincirinin uzamasını anlatır. 2015 sonrası kayışlı EA211 motoru bu metnin konusu değildir.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "PDF metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-cursor-autobild-ea111-zincir",
+    "kind": "technical-publication",
+    "title": "Auto Bild: 1.4 TSI zincir notu",
+    "url": "https://www.motor-talk.de/forum/aktion/Attachment.html?attachmentId=741443",
+    "publisher": "Auto Bild",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "VW'nin zincir üretim hatasını teknik ürün bilgisiyle ele aldığını aktarır. TPI belgesinin kendisi okunmadı.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Forum ekindeki Auto Bild metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-cursor-importcar-ea211-pompa",
+    "kind": "technical-publication",
+    "title": "EA211 1.4 TSI devirdaim ve termostat",
+    "url": "https://www.import-car.com/volkswagen-1-4l-tsi-maintenance-and-inspection-tips/",
+    "publisher": "ImportCar",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Plastik termostat gövdesinin yağla temas edince kaçırabildiğini anlatır.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Makale metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-cursor-seatcupra-ea211-pompa",
+    "kind": "expert-service",
+    "title": "EA211 soğutma pompası contası",
+    "url": "https://www.seatcupra.net/forums/attachments/1-4-tsi-ea211-coolant-pump-pdf.19689/",
+    "publisher": "SEAT Cupra teknik ek",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Pompa contasının kaçırmasının oldukça görüldüğünü ve gövdenin eğilebildiğini yazar. Onarım adımları kullanıcıya aktarılmaz.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Ekli soğutma sistemi metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-cursor-vagpulse-dq200",
+    "kind": "technical-publication",
+    "title": "DQ200 kuru kavrama DSG",
+    "url": "https://vagpulse.com/guides/dq200-7-speed-dry-dsg-problems",
+    "publisher": "VAG Pulse",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "DQ200'ü 6 ileri ıslak DQ250 ve sonradan gelen ıslak 7 ileri kutulardan ayırır. 1.5 TSI ve dört çeker kutuları kesin DQ200 saymaz.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Rehber metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-cursor-findservice-dq200",
+    "kind": "technical-publication",
+    "title": "DQ200 ve diğer DSG kutuları",
+    "url": "https://www.findservicehistory.com/common-faults-check/dsg-gearbox-problems",
+    "publisher": "Find Service History",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Kuru 7 ileri kutuyu Golf, Polo, Ibiza, Leon, Fabia ve Octavia ile anar. 6 ileri ve ıslak kutuları hariç tutar.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-audi-a4-b8-oil-tsb",
+    "kind": "manufacturer-bulletin",
+    "title": "Audi Technical Service Bulletin on 2.0 TFSI oil consumption",
+    "url": "https://static.nhtsa.gov/odi/tsbs/2013/MC-10121301-9999.pdf",
+    "publisher": "Audi of America / NHTSA host",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "ABD teknik servis bülteni; Türkiye motor kodlarına otomatik uygulanmaz.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "PDF teknik bültende 2.0 TFSI CAEB yağ tüketimi incelemesi okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-audi-a4-b8-oil-independent",
+    "kind": "technical-publication",
+    "title": "Audi 2.0 TFSI oil consumption: who pays for it?",
+    "url": "https://faultycar.co.uk/faults/audi-2-0-tfsi-oil-consumption",
+    "publisher": "FaultyCar",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-audi-b8-timing-expert",
+    "kind": "expert-service",
+    "title": "Audi A4 B8 timing chain tensioner early failure",
+    "url": "https://stargaragemansfield.co.uk/audi-timing-chain-problems-2-0-tfsi/",
+    "publisher": "Star Garage Mansfield",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Tam sayfa açılarak iddiayı destekleyen ilgili metin ve araç kapsamı okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-audi-b8-timing-owner",
+    "kind": "user-report",
+    "title": "2009-2012 Audi A4 timing chain tensioner owner experience",
+    "url": "https://www.reddit.com/r/Audi/comments/yznxis/20092012_audi_a4_or_any_vw_20_tfsi_timing_chain/",
+    "publisher": "Reddit / r/Audi",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Tam sayfa açılarak iddiayı destekleyen ilgili metin ve araç kapsamı okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-audi-b9-pump-expert",
+    "kind": "expert-service",
+    "title": "EA888 Gen 3 Thermostat and Water Pump Housing Leak",
+    "url": "https://vagmanchester.com/article/common-faults-vag-ea888-gen-3-engine-thermostat-and-water-pump-housing-leak/",
+    "publisher": "VAG Manchester",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-audi-b9-pump-owners",
+    "kind": "user-report",
+    "title": "Lets talk waterpump Audi B9 forum",
+    "url": "https://www.audizine.com/threads/lets-talk-waterpump.986892/",
+    "publisher": "Audizine",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Forumdaki B9 EA888 soğutma modülü ve servis deneyimleri okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-audi-a3-dq200-expert",
+    "kind": "expert-service",
+    "title": "DQ200 DSG 7 Mechatronic Repair",
+    "url": "https://www.ecutesting.com/common-faults/volkswagen/volkswagen-golf-audi-a3-dsg-7-gearbox-problem/",
+    "publisher": "ECU Testing",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-audi-a3-dq200-owner",
+    "kind": "user-report",
+    "title": "S-Tronic 7 Gang rutscht, vibriert beim Schalten",
+    "url": "https://www.motor-talk.de/forum/s-tronic-7-gang-rutscht-vibriert-beim-schalten-t6305578.html",
+    "publisher": "Motor-Talk",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Audi A3 8V 1.4 TFSI DQ200 sahibi 7 ileri S tronic titreşim tecrübesi okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-bmw-f30-handle-tr",
+    "kind": "user-report",
+    "title": "BMW F30 Door Handle Melting Problem Despite Full Service History",
+    "url": "https://www.sikayetvar.com/en/bmw-us/bmw-f30-door-handle-melting-problem-despite-full-service-history",
+    "publisher": "Şikayetvar / Xolvie",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Kullanıcı bildiriminin metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-bmw-f30-handle-forum",
+    "kind": "user-report",
+    "title": "F30 Interior door handle rubber melted",
+    "url": "https://bmw-sg.com/forums/threads/advice-needed-f30-interior-door-handle-rubber-melted.75471/",
+    "publisher": "BMW.SG",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Tartışmadaki farklı sahiplerin deneyimleri okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-bmw-n13-wastegate-tr",
+    "kind": "user-report",
+    "title": "Bmw N13 Cold Start Wastegate Rattle",
+    "url": "https://forum.donanimhaber.com/bmw-n13-cold-start-wastegate-rattle-kismi-cozum--140407526",
+    "publisher": "DonanımHaber",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Kullanıcının N13 wastegate sesi ve normal çalışma notları okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-bmw-n13-wastegate-eu",
+    "kind": "user-report",
+    "title": "Ratelend geluid F30 320i EDE 2013",
+    "url": "https://www.bmwdriversforum.nl/viewtopic.php?t=20183",
+    "publisher": "BMWDriversForum",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "N13 ve wastegate sesini tartışan kullanıcı yorumları okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-bmw-n20-chain-shop",
+    "kind": "expert-service",
+    "title": "BMW N20 Timing Chain Repair Guide",
+    "url": "https://motronix.net/blog/bmw-n20-timing-chain-failure/",
+    "publisher": "Motronix",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-bmw-n20-f30-shop",
+    "kind": "expert-service",
+    "title": "5 Most Common BMW F30 Problems in the Workshop",
+    "url": "https://eurowerke.com.au/the-5-most-common-bmw-f30-problems-we-see-in-the-workshop/",
+    "publisher": "EuroWerke",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-bmw-n20-chain-settlement",
+    "kind": "technical-publication",
+    "title": "BMW N20/N26 timing chain/oil pump drive chain settlement notice",
+    "url": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10201140-9999.pdf",
+    "publisher": "US District Court / NHTSA host",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "ABD sınıf davası uzlaşmasıdır; resmi geri çağırma veya Türkiye satış kanıtı değildir.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Mahkeme uzlaşması bildiriminin ilgili kapsam satırları okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-bmw-n13-pcv-tr",
+    "kind": "user-report",
+    "title": "BMW F30 320i ED PCV valfi sorunu tecrübesi",
+    "url": "https://otopark.com/forum/threads/bmw-f30-3-20ied-vuruntu-ve-ust-devirlerde-isteksizlik.14139/",
+    "publisher": "Otopark.com Forum",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "N13 PCV diyaframı teşhis ve sorun giderme mesajları okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-mer-w204-chain-tr",
+    "kind": "user-report",
+    "title": "W204 C180 1.8 CGI M271 EVO zincir sesi deneyimleri",
+    "url": "https://www.mbclubtr.com/index.php?threads%2Fw204-c180-1-8cgi-m271-evo-motor-eksantrik-zincir-sesi-problemi.36866%2Fpage-2=",
+    "publisher": "Mercedes Benz Club Türkiye",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Birden fazla C180 sahibinin zincir/eksantrik dişlisi deneyimi okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-mer-w204-chain-uk",
+    "kind": "user-report",
+    "title": "W204 timing chain stretch",
+    "url": "https://forums.mbclub.co.uk/threads/w204-timing-chain-stretch.279288/",
+    "publisher": "MBClub UK",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-mer-w204-esl-expert",
+    "kind": "expert-service",
+    "title": "Mercedes Steering Lock ESL ELV Failure",
+    "url": "https://motronix.net/blog/mercedes-steering-lock-esl-elv-failure/",
+    "publisher": "Motronix",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-mer-w204-esl-tr",
+    "kind": "user-report",
+    "title": "W204 kolon kilidi arızası",
+    "url": "https://mbclubtr.com/index.php?threads%2Fw204-kolon-kilidi-arizasi.53845%2F=",
+    "publisher": "Mercedes Benz Club Türkiye",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-mer-w205-nox-uk",
+    "kind": "user-report",
+    "title": "2017 W205 C220d AdBlue Problem",
+    "url": "https://mbworld.org/forums/c-class-w205/920327-help-2017-w205-c220d-adblue-problem.html",
+    "publisher": "MBWorld",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açılarak ilgili iddia ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-mer-w205-nox-another",
+    "kind": "user-report",
+    "title": "NOx sensor shortage and poor MB service",
+    "url": "https://mbworld.org/forums/c-class-w205/818778-nox-sensor-shortage-courtesy-car-issues-poor-mb-service.html",
+    "publisher": "MBWorld",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "C220d sahibinin yetkili servisçe NOx sensör arızası teşhisinin mesajı okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-mer-w205-nox-mbclub",
+    "kind": "user-report",
+    "title": "C220d DPF Regen Issue",
+    "url": "https://forums.mbclub.co.uk/threads/c220d-dpf-regen-issue.304703/",
+    "publisher": "MBClub UK",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "C220d kullanıcısının NOx/AdBlue ve DPF sorunlarını ayıran mesajları okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-mer-w205-chrome-repair",
+    "kind": "technical-publication",
+    "title": "Mercedes C-Class GLC console trim faults",
+    "url": "https://www.go-parts.com/garage/console-compartment-mercedes-benz-cclass-mercedes-benz-glc-class-2015-2026",
+    "publisher": "Go-Parts",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Tam sayfa açılarak iddiayı destekleyen ilgili metin ve araç kapsamı okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-hma-20-st-003h-mdps",
+    "kind": "manufacturer-bulletin",
+    "title": "C-MDPS sonsuz mil rulman sesi",
+    "url": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10179246-0001.pdf",
+    "publisher": "Hyundai Motor America",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "20-ST-003H. Direksiyon çevrilirken rulman sesi. Elantra AD, Elantra GT PD, Ioniq, Kona OS ve bültendeki diğer modeller. Onarım adımı kullanıcıya yazılmaz.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "NHTSA kopyasındaki araç listesi ve konu metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-i30-fd-mdps-kaplin",
+    "kind": "manufacturer-bulletin",
+    "title": "i30 FD elektrikli direksiyon esnek kavrama",
+    "url": "https://www.scribd.com/document/75211612/MDPS-I30",
+    "publisher": "Hyundai",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "i30 FD ve Elantra HD. Üretim JOB#1 ile 14 Nisan 2008 arası. Belirti 20-60 km/s bozuk yolda kolon tıkırtısı. Orijinal PDF barındırıcısı bu kopya değil.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Yayımlanan servis prosedürü metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-reddit-i30-gd-kapi-trim",
+    "kind": "user-report",
+    "title": "i30 GD kapı iç kaplamasında soyulma",
+    "url": "https://www.reddit.com/r/CarTalkUK/comments/1ejxgsm/door_trim_paint_peeling_off_hyundai_i30_20122016/",
+    "publisher": "Reddit",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "2012-2016 i30. Sürücü kapısı başta olmak üzere iç kapı kaplamasının soyulması. Bir yorum aynı aracı doğruluyor. i20 PB tutamacı değil.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Gönderi ve yorumlar okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-hma-22-at-007h-dct",
+    "kind": "manufacturer-bulletin",
+    "title": "7 ileri DCT kalkış sarsıntısı servis bülteni",
+    "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10213721-0001.pdf",
+    "publisher": "Hyundai Motor America",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "22-AT-007H. Yalnızca 1.6 turbo ve 7 ileri çift kavrama. Tucson TL 2016-2018, Kona OS 2018-2021. Geleneksel otomatik kutu yazılmıyor.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "NHTSA kopyasındaki bülten metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-kia-eng222-yag",
+    "kind": "manufacturer-bulletin",
+    "title": "Nu, Gamma ve Theta motorlarda yağ tüketimi",
+    "url": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10205426-0001.pdf",
+    "publisher": "Kia",
+    "publishedAt": "2021-12-21",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "ENG 222 revizyon 4. Uzun blok tablosu Sportage ve Sorento için Theta 2.0 T-GDI ile 2.4 GDI diyor, 2011-2020. Gamma 1.6 GDI satırı Soul ile sınırlı.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "NHTSA kopyasındaki bülten ve model tablosu okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-cursor-cursor-autoexpress-15tsi-2019",
+    "kind": "technical-publication",
+    "title": "Juddering VW Group cars: no end in sight for owners",
+    "url": "https://www.autoexpress.co.uk/car-news/107558/juddering-vw-group-cars-no-end-in-sight-for-owners",
+    "publisher": "Auto Express",
+    "publishedAt": "2019-07-31",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "31 Temmuz 2019 tarihli haberin tamamı okundu. Volkswagen’in açıklaması ve Golf, T-Roc, Leon, Karoq örnekleri metindedir."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-cursor-cursor-seisenlinea-15tsi",
+    "kind": "technical-publication",
+    "title": "Efecto canguro de los motores 1.5 TSI",
+    "url": "https://www.seisenlinea.com/problema-tirones-en-frio-motores-1-5-tsi-vag/",
+    "publisher": "Seis en Línea",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Makale ve altındaki sahip yorumları okundu. Motor kodları, yazılım güncellemesi ve model listesinin her aracı kapsamadığı notu alındı."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-astrarenault-lodgy-light-stalk-2019",
+    "kind": "user-report",
+    "title": "Lodgy: sağ sinyal kullanıldığında farların sönmesi",
+    "url": "https://communaute.dacia.fr/forum/DACIA/DACIA-LODGY/LES-FEUX-DE-ROUTE-S-ETEIGNENT-LORSQUE-J-ACTIVE-LE-CLIGNOTANT-DROIT/4006787/263244",
+    "publisher": "Dacia kullanıcı topluluğu",
+    "publishedAt": "2019-12-28",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Üretici alan adında barınan kullanıcı tartışmasıdır; resmî teknik bülten değildir.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-astrarenault-lodgy-light-stalk-2025",
+    "kind": "user-report",
+    "title": "Lodgy: kısa far arızası ve kumanda kolu deneyimleri",
+    "url": "https://communaute.dacia.fr/forum/DACIA/LODGY/PANNE-FEUX-DE-CROISEMENT/5472252/263244",
+    "publisher": "Dacia kullanıcı topluluğu",
+    "publishedAt": "2025-08-28",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "İlk mesaj ve devamındaki kullanıcı deneyimleri okundu. Araç yaşından üretim yılı hesaplanmadı.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-astrarenault-lodgy-2016-tr-light-stalk",
+    "kind": "user-report",
+    "title": "2016 Dacia Lodgy: sinyal verince farların sönmesi",
+    "url": "https://www.sikayetvar.com/dacia/dacia-lodgy-far-arizasi",
+    "publisher": "Şikayetvar",
+    "publishedAt": "2024-01-20",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "İkinci turda bağlantı açıldı; ilgili kapsam ve içerik okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-astrarenault-megane-window-owner-2005",
+    "kind": "user-report",
+    "title": "2005 Megane yolcu elektrikli cam sorunu",
+    "url": "https://www.pistonheads.com/gassing/topic.asp?f=220&h=0&t=1736227",
+    "publisher": "PistonHeads",
+    "publishedAt": "2018-04-11",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Asıl mesaj ve sonraki kısmi onarım sonucu okundu. Modül değişimi tam çözüm sağlamamış.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "İkinci turda birincil yazı veya kullanıcı mesajı açılıp okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-astrarenault-megane-window-owner-2008",
+    "kind": "user-report",
+    "title": "Megane II sürücü camının aralıklı çalışmaması",
+    "url": "https://www.reddit.com/r/Renault/comments/18ww1sx/driver_side_window_megane_2/",
+    "publisher": "Reddit r/Renault",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Asıl mesaj ve sahibinin 2008 üretim bilgisi okundu; diğer kullanıcıların tahminleri kesin tanı sayılmadı.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "İkinci turda birincil yazı veya kullanıcı mesajı açılıp okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-geministellantis-fiat-linea-airbag-sv",
+    "kind": "user-report",
+    "title": "Fiat Linea yolcu hava yastığı kapağında çatlak şikayetleri",
+    "url": "https://www.sikayetvar.com/fiat/linea/airbag",
+    "publisher": "Şikayetvar",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açıldı. Birçok Linea sahibi yolcu hava yastığının üstündeki kapakta darbe olmadan çatlak tarif ediyor. Punto yazmıyor. Oran yok."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-geministellantis-fiat-egea-direksiyon-sv",
+    "kind": "user-report",
+    "title": "Fiat Egea direksiyondan ses gelmesi",
+    "url": "https://www.sikayetvar.com/fiat/egea/direksiyondan-ses-gelmesi",
+    "publisher": "Şikayetvar",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa açıldı. Birkaç Egea sahibi tıkırtı yazıyor. Birinde servis önce takoz, sonra direksiyon kutusu demiş. Başka kayıtta direksiyon mili geçiyor. Tek parça değil."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-geministellantis-opel-astra-j-14t-pcv",
+    "kind": "technical-publication",
+    "title": "Astra J 1.4 Turbo PCV diyaframı",
+    "url": "https://stillrunningstrong.com/car-specs-problems/opel-vauxhall/astra-j/",
+    "publisher": "Still Running Strong",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa okundu. 140 PS 1.4 Turbo kodunu A14NET ve B14NET olarak yazıyor. Külbütör kapağı diyaframı ve emme manifoldu PCV valfinin arızasını, ıslık, düzensiz rölanti ve yağ tüketimi belirtileriyle anlatıyor. 120 PS aynı gövdenin A14NEL haritası. Astra K ve Insignia bu sayfada yok."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-geministellantis-opel-astra-h-cim-2262",
+    "kind": "manufacturer-bulletin",
+    "title": "Field Remedy 2262: Astra H korna, CIM",
+    "url": "https://workshop-manuals.com/vauxhall/astra-h/n__electrical_equipment_and_instruments/technical_service_bulletins/poor_operation_incorrect_operation/horn_intermittent_malfunction/",
+    "publisher": "Vauxhall Field Remedy 2262",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Saha notu okundu. Astra H 2004-2011, bütün motorlar, korna aralıklı çalışmıyor. Neden CIM içindeki temas. Yalnızca Antwerp, Ellesmere Port, Bochum ve Gliwice için yazılı şasi aralıkları. Çözüm 10-R-036 kampanyası. Direksiyon tuşlarının tamamı bu metinde yok."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-geministellantis-peugeot-stellantis-puretech",
+    "kind": "manufacturer-bulletin",
+    "title": "Stellantis PureTech tazminat sayfası",
+    "url": "https://www.stellantis.com/en/contacts/puretech-compensation-platform",
+    "publisher": "Stellantis",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa okundu. Önceki nesil PureTech 1.0 ve 1.2 için Mart 2024'ten beri, koşullu, 10 yıl veya 180.000 km'ye kadar parça ve işçilik uzatması yazıyor. 1 Ocak 2022 ile 31 Aralık 2024 arasındaki aşırı yağ tüketimi veya erken triger kayışı masrafı için Avrupa tazminat platformu var. Türkiye garantisi diye yazmıyor. Zincirli yeni nesli saymıyor."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-t2-nhtsa-pe23011-iccu",
+    "kind": "official-recall",
+    "title": "NHTSA PE23011 kapanış özeti: Ioniq 5 güç kaybı",
+    "url": "https://static.nhtsa.gov/odi/inv/2023/INCLA-PE23011-18973.pdf",
+    "publisher": "NHTSA Office of Defects Investigation",
+    "publishedAt": "2024-04-17",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "2022 Ioniq 5 için açılan ön inceleme. ICCU aşırı akım, şarj sonu gerilim tepesi ve ısıl yük nedeniyle hasar görüp sigortasını attırabiliyor; 12V akü şarj olmuyor, araç ilerleme gücünü kaybedebiliyor. İnceleme 24V-204 geri çağırmasıyla kapandı. Sayılar ABD içindir.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Belge indirildi, metni pdftotext ile okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-t2-nhtsa-24v868-ack",
+    "kind": "official-recall",
+    "title": "NHTSA 24V-868 geri çağırma onay yazısı",
+    "url": "https://static.nhtsa.gov/odi/rcl/2024/RCAK-24V868-3172.pdf",
+    "publisher": "NHTSA",
+    "publishedAt": "2024-11-21",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Kapsam: 2022-2024 Ioniq 5, 2023-2025 Ioniq 6 ve bazı Genesis EV'ler; ABD'de 145.235 araç. ICCU hasar görüp 12V aküyü şarj etmeyi bırakabiliyor ve sürüş gücü kaybolabiliyor. Onarım: ICCU ve sigortanın kontrolü, gerekirse değişimi ve yazılım güncellemesi. 24V-204'ü genişletip yeniler.",
+    "basedOn": "hma-iccu-24v868",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Belge indirildi, metni pdftotext ile okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-t2-nhtsa-api-ioniq5-iccu",
+    "kind": "official-recall",
+    "title": "NHTSA geri çağırma kayıtları 24V-204 ve 24V-868 (Hyundai ICCU)",
+    "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=HYUNDAI&model=IONIQ%205&modelYear=2023",
+    "publisher": "NHTSA",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "24V-204 (15.03.2024) ve onu genişletip yenileyen 24V-868 (18.11.2024).",
+    "basedOn": "hma-iccu-24v868",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "NHTSA resmi geri çağırma arayüzünün JSON yanıtı okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-t2-oeamtc-ioniq-iccu",
+    "kind": "technical-publication",
+    "title": "ÖAMTC: Hyundai Ioniq 5 ve Ioniq 6, ICCU geri çağırması (Avusturya)",
+    "url": "https://www.oeamtc.at/rueckrufaktionen/hyundai-ioniq-5-ioniq-6-probleme-mit-der-integrierten-ladeeinheit-iccu-73473294",
+    "publisher": "ÖAMTC",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Avusturya geri çağırması: Ioniq 5 üretim 13.01.2021-29.02.2024, Ioniq 6 üretim 28.09.2022-04.04.2024. Hyundai Österreich açıklamasına göre ICCU arızası sürüşte 12V akünün yetersiz şarjına ve en kötü durumda aracın aniden durmasına yol açabilir. Onarım: yazılım kontrolü, gerekirse ICCU değişimi ve güncelleme. Bu, Avrupa araçlarının da kapsamda olduğunu gösterir; Türkiye'de resmi geri çağırma yapıldığını göstermez.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa indirildi ve metni okundu (Almanca)."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-t2-kia-cha072-optima-kavrama",
+    "kind": "manufacturer-bulletin",
+    "title": "MDPS esnek kavrama değişimi, müşteri memnuniyeti programı CS1604 (CHA072)",
+    "url": "https://static.nhtsa.gov/odi/tsbs/2016/SB-10090941-5448.pdf",
+    "publisher": "Kia",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "CHA072 revizyon 1, Ağustos 2016. 2011-2014 MY Optima (QF, TF, TFH), üretim 12.08.2010-18.12.2013. Direksiyon özellikle araç dururken sağa sola çevrilince MDPS ünitesinden ses; neden esnek kavrama aşınması. Kia sorunu ağırlıklı olarak ABD'nin çok nemli, sıcak kıyı eyaletlerine bağlıyor; diğer eyaletlerde kavrama garantisi 10 yıla uzatıldı.",
+    "basedOn": "kia-cs1604",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "NHTSA kopyası indirildi, metni pdftotext ile okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-t2-kia-cs1604-soru-cevap",
+    "kind": "manufacturer-bulletin",
+    "title": "CS1604 / WTY006 Optima MDPS esnek kavrama soru-cevap",
+    "url": "https://static.nhtsa.gov/odi/tsbs/2016/MC-10090090-5448.pdf",
+    "publisher": "Kia",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Aynı programın bayi soru-cevap belgesi: bütün 2011-2013 ve bazı 2014 MY Optima'lar.",
+    "basedOn": "kia-cs1604",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "NHTSA kopyası indirildi, metni pdftotext ile okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-t2-kia-cs1604-sahip-mektubu",
+    "kind": "manufacturer-bulletin",
+    "title": "Kia Optima sahip mektubu: MDPS müşteri memnuniyeti / garanti uzatma programı",
+    "url": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10158144-0001.pdf",
+    "publisher": "Kia Motors America",
+    "publishedAt": "2019-03-21",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Aynı programın 21 Mart 2019 tarihli sahip mektubu; bütün 2011-2013 ve bazı 2014 MY Optima'lar. Nemli eyaletlerde kavrama değişimi, diğerlerinde kavrama garantisi 10 yıl / sınırsız km.",
+    "basedOn": "kia-cs1604",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "NHTSA kopyası indirildi, metni pdftotext ile okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-t2-nhtsa-24v867-rapor",
+    "kind": "official-recall",
+    "title": "Kia Part 573 geri çağırma raporu 24V-867 (SC327)",
+    "url": "https://static.nhtsa.gov/odi/rcl/2024/RCLRPT-24V867-8124.PDF",
+    "publisher": "Kia America",
+    "publishedAt": "2024-11-18",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Bütün 2022-2023 ve bazı 2024 MY EV6, üretim 17.11.2021-22.07.2024; araçlar şasi numarası sırasıyla üretilmemiş. ICCU geçici yüksek gerilim ve ısıl çevrimlerle hasar görebiliyor; 12V akü sürüşte boşalıyor, güç kademeli düşüyor, uyarılar yok sayılırsa tam güç kaybı. Parça ICCU ASSY 36400-1XFA0, tedarikçi Hyundai Mobis. Raporda ABD kapsamı için üreticinin küçük bir arıza oranı tahmini var.",
+    "basedOn": "kia-iccu-24v867",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Belge indirildi, metni pdftotext ile okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-t2-nhtsa-api-ev6-iccu",
+    "kind": "official-recall",
+    "title": "NHTSA geri çağırma kayıtları 24V-200 ve 24V-867 (Kia EV6 ICCU)",
+    "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=KIA&model=EV6&modelYear=2023",
+    "publisher": "NHTSA",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "24V-200 (14.03.2024) ve onu yenileyen 24V-867 (18.11.2024).",
+    "basedOn": "kia-iccu-24v867",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "NHTSA resmi geri çağırma arayüzünün JSON yanıtı okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudehyundai-claude-t2-ev6-forum-de-iccu",
+    "kind": "user-report",
+    "title": "EV6-Forum.de: ICCU Probleme Kia EV6 / Rückruf in Europa",
+    "url": "https://www.ev6-forum.de/forum/thread/1811-iccu-probleme-r%C3%BCckruf-auch-in-europa/",
+    "publisher": "EV6-Forum.de",
+    "publishedAt": "2023-08-08",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Ağustos 2023: Avrupa'daki sahipler ICCU ve sigortasının değiştirildiği birkaç vakadan ve wallbox'ta şarj kesintisinden sonra bayide ICCU yazılımının güncellendiğinden söz ediyor. Avrupa'da resmi bir geri çağırma numarası vermiyor.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Başlıktaki mesajlar okundu (Almanca)."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-n13-differentcarreview-2023",
+    "kind": "technical-publication",
+    "title": "N13 Engine ALL Issues — Oil / coolant leaks",
+    "url": "https://differentcarreview.com/2023/12/19/n13-issues/2/",
+    "publisher": "Different Car Review",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Makale sayfası açılıp Oil / coolant leaks bölümü okundu. N13 plastik termostat gövdesi, turbo su hattı O-ringleri ve genleşme kabı olası kaçak noktaları ayrı ayrı belirtiliyor."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-n13-techturkey-sogutma-2019",
+    "kind": "user-report",
+    "title": "N13 Motor İçi Parçalar Hk.",
+    "url": "https://www.techturkey.com/forum/genel_teknik/236618-n13_motor_ici_parcalar_hk_.html",
+    "publisher": "TechTurkey",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Bir kullanıcı rezervuarın kırıldığını, başka bir kullanıcı plastik termostat dağıtıcısı, ara su hortumu ve turbo soğutma O-ringlerinden su kaçırdığını yazıyor. Devirdaim pompası da anılır; elektrikli yardımcı pompa ile ayrılmadığı için ayrı kart açılmadı.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa 18 Ekim 2026'da açıldı. Altı mesaj okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-n13-techturkey-esanjor-2020",
+    "kind": "user-report",
+    "title": "BMW N13 şanzıman soğutucu/ısı eşanjörü patlaması hk.",
+    "url": "https://www.techturkey.com/forum/genel_teknik/240220-bmw_n13_sanziman_sogutucu_isi_esanjoru_patlamasi_hk_.html",
+    "publisher": "TechTurkey",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Bir sahip termostat plastiğinden sızıntıyı, ardından genleşme kabı çatlağını ayrı olaylar olarak anlatır. Eşanjör için tek forum başlığı yeterli görülmedi; eşanjör kartı açılmadı.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa 18 Ekim 2026'da açıldı. Konu şanzıman ve yağ soğutucusunun suyla karışmasıdır."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-n13-techturkey-deneyim-2018",
+    "kind": "user-report",
+    "title": "BMW N13B16 1.6 Motor Hakkında Tecrübelerim",
+    "url": "https://www.techturkey.com/forum/genel_teknik/234855-bmw_n13b16_1_6_motor_hakkinda_tecrubelerim.html",
+    "publisher": "TechTurkey",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Yazar N13'ü Türkiye'de F20 116i/118i ve F30 316i/320i ED ile, 136 ve 170 PS ile eşler. Genleşme kabının ömrünün dolduğu yazılır. Turbo emme hortumu ayrı bir parçadır; soğutma O-ringi bu başlıkta anlatılmaz.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa 18 Ekim 2026'da açıldı. 2013 üretim 116i sahibinin yazısı ve yanıtlar okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-gptgerman-gpt-n13-techturkey-f30-2021",
+    "kind": "user-report",
+    "title": "F30 320i ED alınırken nelere dikkat edilmeli?",
+    "url": "https://www.techturkey.com/forum/arac_sorgulamalari/242613-f30_320ied_alinirken_nelere_dikkat_edilmeli_.html",
+    "publisher": "TechTurkey",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Genleşme kabının iki kez değiştiği ve suyun bir anda boşaldığı yazılır. Aynı iletideki turbo O-ringleri yağ kaçırıyor diye anlatılır; soğutma hattı kanıtı değildir. Şasi çıktısında motor N13 görünür.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfa 18 Ekim 2026'da açıldı. 2015 320i ED sahibi dahil mesajlar okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-largus-15bluehdi-chaine-c",
+    "kind": "technical-publication",
+    "title": "Casse chaîne 1.5 BlueHDi. Pas de plate-forme d'indemnisation... pour le moment",
+    "url": "https://www.largus.fr/actualite-automobile/casse-chaine-1-5-bluehdi-pas-de-plate-forme-d-indemnisation-pour-le-moment-30038450.html",
+    "publisher": "L'argus",
+    "publishedAt": "2025-01-26",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "1.5 BlueHDi (DV5) zinciri yetersiz boyutlu ve uzuyor; 2018 - Şubat 2023 üretimi motorlar. Şubat 2023'ten itibaren 8 mm zincir. Etkilenen markalar arasında Citroën var.",
+    "basedOn": "stellantis-15-bluehdi-zincir",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Makale metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-quechoisir-15bluehdi-c",
+    "kind": "technical-publication",
+    "title": "Moteur diesel 1.5 BlueHDi de Stellantis : la grogne monte",
+    "url": "https://www.quechoisir.org/actualite-moteur-diesel-1-5-bluehdi-de-stellantis-la-grogne-monte-n132914/",
+    "publisher": "UFC-Que Choisir",
+    "publishedAt": "2025-01-10",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Ekim 2017 - Ocak 2023 üretimi. Citroën için anılan modeller: C3, C3 Aircross, C4, C4 Cactus, C4 Picasso, C5 Aircross, Berlingo, SpaceTourer, Jumpy. Belirtiler: yağ tüketimi, güç kaybı, titreşim, takırtı.",
+    "basedOn": "stellantis-15-bluehdi-zincir",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Makale metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-motorsactu-15bluehdi-c",
+    "kind": "technical-publication",
+    "title": "Stellantis étend la couverture de ses anciens moteurs 1.5 BlueHDi et propose un remboursement aux clients concernés",
+    "url": "https://motorsactu.com/stellantis-etend-la-couverture-de-ses-anciens-moteurs-1-5-bluehdi-et-propose-un-remboursement-aux-clients-concernes/",
+    "publisher": "MotorsActu",
+    "publishedAt": "2025-07-03",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Ekim 2017 - Ocak 2023 üretimi 1.5 BlueHDi için kapsam 10 yıl / 240.000 km; geri ödeme platformu Citroën sitesinde de var.",
+    "basedOn": "stellantis-15-bluehdi-zincir",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Makale metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-s4s-fiat-dualogic",
+    "kind": "expert-service",
+    "title": "Fiat Gearbox Repair Specialists (Dualogic arızaları)",
+    "url": "https://www.service4service.co.uk/car-repairs/gearboxes/fiat-gearboxes",
+    "publisher": "Service4Service",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "İngiltere'de Fiat şanzıman onarımı yapan servis. Dualogic'i Fiat'ta en sık teşhis ettikleri şanzıman arızası olarak anıyor. En sık belirti sürüşte, dururken veya kalkışta kendiliğinden boşa düşme; ayrıca hidrolik pompa motorunun aşınması ve yavaş, tereddütlü vites geçişleri. Arıza kodlarının tek başına debriyaj aşınması kanıtı sayılmaması gerektiğini, aynı belirtinin basınç kaybı, aktüatör, pompa veya kablo arızasından da gelebileceğini yazıyor. Anılan modeller: 500, Panda, Tipo, 500X ve eski Punto.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfanın ilk yarısı okundu (Dualogic bölümü dahil)."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-fiatforum-dualogic-thread",
+    "kind": "user-report",
+    "title": "The one and only Dualogic failure thread (sayfa 21)",
+    "url": "https://www.fiatforum.com/500/425006-one-only-dualogic-failure-thread-21.html",
+    "publisher": "The FIAT Forum",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "51 sayfalık konu. Bu sayfada 500, 500C, Grande Punto ve Panda 1.2 sahipleri boşa düşme, tek viteste kalma (limp mode), vitesten çıkma ve yanık kokusu bildiriyor. Teşhisler: debriyaj aşınması, aktüatör (değişim teklifi yaklaşık 1200-1300 GBP), pompa motoru ve akümülatör, akü/şase bağlantısı. Bir bayi önce yazılım güncelledi, sonra aktüatör değiştirdi.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Konunun 21. sayfası okundu (Aralık 2017 - Mart 2018 mesajları)."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-ec-stellantis-adblue",
+    "kind": "technical-publication",
+    "title": "La Commission salue l'engagement pris par Stellantis d'indemniser les consommateurs pour les problèmes liés aux réservoirs AdBlue",
+    "url": "https://france.representation.ec.europa.eu/informations/la-commission-salue-lengagement-pris-par-stellantis-dindemniser-les-consommateurs-pour-les-problemes-2024-12-20_fr",
+    "publisher": "Avrupa Komisyonu Fransa Temsilciliği",
+    "publishedAt": "2024-12-20",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Resmî tüketici koruma duyurusu (geri çağırma değil; en yakın tür seçildi). Ocak 2014 - Ağustos 2020 arasında üretilen Peugeot, Citroën, DS ve Opel dizel araçlarda AdBlue depolarıyla ilgili yazılım sorunları yüz binlerce sürücüye pahalı onarım çıkardı. Stellantis, İtalya rekabet kurumunun Eylül 2023'te aldığı tazminat önlemlerini AB ve AEA'ya yaymayı taahhüt etti; CPC ağı uygulamayı izleyecek. Model veya motor adı vermiyor.",
+    "basedOn": "stellantis-adblue-cpc",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Duyuru metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-actuauto-adblue-indemnisation",
+    "kind": "technical-publication",
+    "title": "Problème de réservoirs AdBlue : Stellantis étend son programme d'indemnisation",
+    "url": "https://www.actu-automobile.com/2025/02/09/probleme-de-reservoirs-adblue-stellantis-etend-son-programme-dindemnisation",
+    "publisher": "Actu-Automobile",
+    "publishedAt": "2025-02-09",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Ocak 2014 - Ağustos 2020 arasında üretilen Euro 6 SCR dizel Peugeot, Citroën, DS ve Opel/Vauxhall. Sorunlar: AdBlue kristalleşmesiyle tıkanma, AdBlue pompası arızası, hatalı uyarı veya çalıştırmayı engelleyen sensörler. Parça maliyeti 5 yıl veya 150.000 km'ye kadar tamamen, 5-8 yaş arası kilometreye göre kısmen karşılanıyor; Ağustos 2028'e kadar. Motor adı vermiyor.",
+    "basedOn": "stellantis-adblue-cpc",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Haber metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-forumpeugeot-3008-adblue",
+    "kind": "user-report",
+    "title": "Reservoir Adblue Urée HS Pompe à changer defaut anti-pollution Demarrage impossible 1100 KMS",
+    "url": "https://www.forum-peugeot.com/Forum/threads/reservoir-adblue-ur%C3%A9e-hs-pompe-%C3%A0-changer-defaut-anti-pollution-demarrage-impossible-1100-kms.118145/",
+    "publisher": "Forum Peugeot",
+    "publishedAt": "2019-11-27",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Yaklaşık 3 yaşındaki 3008 II 1.6 BlueHDi 120 EAT6: AdBlue deposundaki pompa arızalı, bütün üre deposunun değişmesi gerekiyor (teklif yaklaşık 1150 EUR); 'çalıştırma 1100 km sonra engellenecek' uyarısı. Diğer üyeler de 3008 II'de benzer arızalar ve kısmi garanti dışı katkılar anlatıyor.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Konudaki mesajlar okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-forumpeugeot-208-adblue",
+    "kind": "user-report",
+    "title": "Réservoir adblue sur 208 HS deux fois en trois mois ?",
+    "url": "https://www.forum-peugeot.com/Forum/threads/r%C3%A9servoir-adblue-sur-208-hs-deux-fois-en-trois-mois.131738/",
+    "publisher": "Forum Peugeot",
+    "publishedAt": "2022-12-18",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "2016 model 208 1.6 BlueHDi: üre, motor ve servis uyarıları ile 'çalıştırma 1100 km sonra engellenecek' mesajı; AdBlue deposu ve enjektörü değişti, iki buçuk ay sonra aynı arıza; son teşhis depo kontrol ünitesi. Başka bir üye 3008'inde AdBlue kristalleşmesinin parçalara zarar verdiğini yazıyor.",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Konudaki mesajlar okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-fichesauto-thp150",
+    "kind": "user-report",
+    "title": "Essai, avis et fiabilité des moteurs 1L6 THP 150 cv",
+    "url": "https://www.fiches-auto.fr/articles-auto/essai-moteur/1l6-thp-150-ch.php",
+    "publisher": "Fiches-auto.fr",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "91 yazılı yoruma dayanan sayfa. Editör metni: triger zinciri gergisinin kayması birkaç yıldır tekrarlayan bir sorun ve motor hasarına yol açabiliyor; turbo arızaları daha münferit. Sorunu belirli yıl veya sürüme bağlamıyor. Motorun kullanıldığı Peugeot modelleri: 207, 308, 508, RCZ.",
+    "basedOn": "fichesauto-thp",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Sayfadaki editör metni okundu."
+    },
+    "demo": false
+  },
+  {
+    "id": "arastirma-claudestellantis-claude-st-fichesauto-thp165",
+    "kind": "user-report",
+    "title": "Essai, avis et fiabilité des moteurs 1L6 THP 165 cv",
+    "url": "https://www.fiches-auto.fr/articles-auto/essai-moteur/1l6-thp-165-ch.php",
+    "publisher": "Fiches-auto.fr",
+    "accessedAt": "2026-10-18",
+    "language": "und",
+    "notes": "Editör metni zinciri motorun tek tekrarlayan sorunu sayıyor; zincir ekseninden kayıp güç kaybı veya kırılma yapabiliyor, kırılmalar daha çok 150 ve 175 PS sürümlerde ve gergiye bağlı. Bir 3008 sahibi her sabah soğuk çalıştırmada zincirden metalik ses geldiğini, aynı sorunu 308 THP 155'inde de yaşadığını yazıyor. Sayfa 112 yoruma dayanıyor.",
+    "basedOn": "fichesauto-thp",
+    "review": {
+      "status": "content-checked",
+      "checkedAt": "2026-10-18",
+      "method": "Editör metni ve sahip yorumları okundu."
+    },
+    "demo": false
   }
 ]

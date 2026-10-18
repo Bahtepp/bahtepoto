@@ -1,0 +1,169 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-renault",
+  "brands": [
+    "Dacia"
+  ],
+  "models": [
+    "Lodgy",
+    "Sandero"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "hella-sandero-ignition",
+      "title": "Sandero: kontak anahtarının marş konumunda takılması",
+      "url": "https://www.hella.com/techworld/uk/bi/pdf/Dacia-Sandero-ignition-switch-stuck/Dacia-Sandero-ignition-switch-stuck.pdf",
+      "kind": "technical-publication",
+      "publisher": "HELLA",
+      "reviewed": true,
+      "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu."
+    },
+    {
+      "id": "sandero-easyr-owner-2020",
+      "title": "2020 Sandero 0.9 Easy-R titreme ve tekleme bildirimi",
+      "url": "https://www.sikayetvar.com/dacia/2020-dacia-sandero-stepway-09-turbo-easy-r-titreme-ve-tekleme-sorunu-1",
+      "kind": "user-report",
+      "publisher": "Şikayetvar",
+      "reviewed": true,
+      "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu.",
+      "publishedAt": "2024-08-19"
+    },
+    {
+      "id": "sandero-easyr-owner-2019",
+      "title": "Sandero Easy-R kalkış ve geri viteste titreme bildirimi",
+      "url": "https://www.sikayetvar.com/dacia/dacia-sanderoda-kronik-titreme-sorunu-ve-magduriyet",
+      "kind": "user-report",
+      "publisher": "Şikayetvar",
+      "reviewed": true,
+      "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu.",
+      "publishedAt": "2025-09-28",
+      "note": "Çözüldü etiketi yanında sonraki yorumda tekrarlama bildirimi de var; kalıcı çözüm kabul edilmedi."
+    },
+    {
+      "id": "lodgy-light-stalk-2019",
+      "title": "Lodgy: sağ sinyal kullanıldığında farların sönmesi",
+      "url": "https://communaute.dacia.fr/forum/DACIA/DACIA-LODGY/LES-FEUX-DE-ROUTE-S-ETEIGNENT-LORSQUE-J-ACTIVE-LE-CLIGNOTANT-DROIT/4006787/263244",
+      "kind": "user-report",
+      "publisher": "Dacia kullanıcı topluluğu",
+      "reviewed": true,
+      "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu.",
+      "publishedAt": "2019-12-28",
+      "note": "Üretici alan adında barınan kullanıcı tartışmasıdır; resmî teknik bülten değildir."
+    },
+    {
+      "id": "lodgy-light-stalk-2025",
+      "title": "Lodgy: kısa far arızası ve kumanda kolu deneyimleri",
+      "url": "https://communaute.dacia.fr/forum/DACIA/LODGY/PANNE-FEUX-DE-CROISEMENT/5472252/263244",
+      "kind": "user-report",
+      "publisher": "Dacia kullanıcı topluluğu",
+      "reviewed": true,
+      "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu.",
+      "publishedAt": "2025-08-28",
+      "note": "İlk mesaj ve devamındaki kullanıcı deneyimleri okundu. Araç yaşından üretim yılı hesaplanmadı."
+    },
+    {
+      "id": "dacia-easyr-2015-identity",
+      "title": "Dacia Easy-R: TCe 90 ile otomatikleştirilmiş manuel şanzıman",
+      "url": "https://presse.dacia.de/dacia-prasentiert-automatisiertes-schaltgetriebe-easy-r/?lang=deu",
+      "publisher": "Dacia Deutschland",
+      "kind": "technical-publication",
+      "reviewed": true,
+      "reviewMethod": "İkinci turda bağlantı açıldı; ilgili kapsam ve içerik okundu.",
+      "publishedAt": "2015-09-07",
+      "note": "Üretici basın açıklaması; arıza kanıtı değil şanzıman/motor eşleşmesi. Sayfanın tarihçe bağlantısında Sandero II 2012–2020 olarak tanımlanıyor."
+    },
+    {
+      "id": "lodgy-2016-tr-light-stalk",
+      "title": "2016 Dacia Lodgy: sinyal verince farların sönmesi",
+      "url": "https://www.sikayetvar.com/dacia/dacia-lodgy-far-arizasi",
+      "publisher": "Şikayetvar",
+      "kind": "user-report",
+      "reviewed": true,
+      "reviewMethod": "İkinci turda bağlantı açıldı; ilgili kapsam ve içerik okundu.",
+      "publishedAt": "2024-01-20"
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-renault-sandero-ignition-stuck",
+      "title": "Kontak anahtarının marş konumunda takılması",
+      "summary": "Bazı Sandero araçlarda kontak anahtarı marş konumundan geri dönemeyebiliyor. Marş dişlisi ayrılmadığında ses ve marş motorunda hasar oluşabiliyor.",
+      "category": "electrical",
+      "frequency": "unknown",
+      "frequencyRationale": "Teknik kaynak arıza mekanizmasını açıklıyor; Türkiye araç parkındaki görülme sıklığını ölçen veri sunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Dacia",
+          "model": "Sandero",
+          "years": {
+            "from": 2013,
+            "to": 2021
+          }
+        }
+      ],
+      "sourceIds": [
+        "hella-sandero-ignition"
+      ],
+      "uncertainties": "Kaynak VIN aralığı UU15SDKJ558926581–UU1HSDM9G60030836. 2013–2021 geniş tarih aralığı tek başına yeterli değildir; VIN ve kontak tipi doğrulanmalı. Nesil belirtilmediği için tahmin edilmedi. Duster kaydıyla benzer belirti, ayrı model/parça kapsamı vardır. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir. İkinci turda VIN sınırı ve 2013–2021 üretim aralığı tekrar okundu; OE kontak numarası yayımlanmamış. Bu iki VIN farklı tip önekleri içerdiğinden basit alfabetik VIN aralığı filtresi gibi uygulanamaz. Üretici parça/VIN kontrolü gerekli; bütün Sandero II/III araçlarına yayılmamalı."
+    },
+    {
+      "id": "astra-renault-sandero-easyr-judder",
+      "title": "Easy-R’de kalkış ve geri viteste titreme",
+      "summary": "Bazı Sandero 0.9 Easy-R sahipleri kalkışta ve geri viteste belirgin titreme bildiriyor. Kavrama veya aktarma sistemi kontrolü gerekiyor; bütün otomatik şanzımanlara genellenmemeli.",
+      "category": "clutch",
+      "frequency": "medium",
+      "frequencyRationale": "İki farklı Türkiye araç sahibi aynı Easy-R kombinasyonunda benzer titreme bildiriyor. Yaygınlık oranı ve bütün vakaların ortak nedeni bilinmiyor.",
+      "vehicles": [
+        {
+          "brand": "Dacia",
+          "model": "Sandero",
+          "years": {
+            "from": 2019,
+            "to": 2020
+          },
+          "engines": [
+            {
+              "name": "0.9 TCe (TCe 90)"
+            }
+          ],
+          "transmission": {
+            "type": "automated-manual",
+            "name": "Easy-R"
+          },
+          "generation": "Sandero II"
+        }
+      ],
+      "sourceIds": [
+        "sandero-easyr-owner-2020",
+        "sandero-easyr-owner-2019",
+        "dacia-easyr-2015-identity"
+      ],
+      "uncertainties": "2019 ve 2020 Türkiye araç bildirimleri korunuyor. Üretici Easy-R açıklaması ve Sandero II tarihçesiyle nesil ve TCe 90/robotize manuel ayrımı desteklendi; bu tüm 2012–2020 araçların etkilendiği anlamına gelmez. Dizel Easy-R, EDC ve yeni nesil CVT kapsam dışıdır. Motor alt kodu, kavrama/volan parça sürümü ve ortak kök neden doğrulanmadı. Kayıt belirti düzeyindedir; kesin üretim kusuru olarak aktarılmamalı."
+    },
+    {
+      "id": "astra-renault-lodgy-light-stalk-intermittent",
+      "title": "Far kumandasında aralıklı kesilme",
+      "summary": "Bazı Lodgy sahipleri sinyal kolunu kullanırken farların sönmesini veya kısa farların çalışmamasını bildiriyor. Kumanda kolundaki temas sorunu olası neden olarak aktarılıyor.",
+      "category": "electrical",
+      "frequency": "medium",
+      "frequencyRationale": "İki Fransa tartışmasına ek olarak 2016 model bir Türkiye aracında aynı belirti bildiriliyor. Bağımsız kullanıcı deneyimleri var; ortak parça kusuru ve arıza oranı kesin değil.",
+      "vehicles": [
+        {
+          "brand": "Dacia",
+          "model": "Lodgy",
+          "years": {
+            "from": 2016,
+            "to": 2016
+          }
+        }
+      ],
+      "sourceIds": [
+        "lodgy-light-stalk-2019",
+        "lodgy-light-stalk-2025",
+        "lodgy-2016-tr-light-stalk"
+      ],
+      "uncertainties": "İkinci turda Türkiye için çalışma kapsamı, doğrudan 2016 Lodgy araç sahibi bildiriminin yılına daraltıldı. Fransa raporları belirtiyi destekler; üretim yılı vermedikleri için Türkiye yıl aralığını genişletmez. 2016 yalnızca doğrulanan örnek model yılıdır, bütün etkilenen üretim dönemi değildir. Motor, kumanda parça numarası ve kesin mekanizma hâlâ bilinmiyor; tasarım kusuru iddiası kabul edilmedi. Diğer Lodgy yıllarına otomatik uygulanmamalı."
+    }
+  ]
+}

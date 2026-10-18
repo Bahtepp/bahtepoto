@@ -679,7 +679,6 @@ describe('paylaşılan motor notu, yaklaşık nesil ve BMW ED', () => {
 });
 
 describe('Türkiye pazar filtresi', () => {
-  const markets = [{ id: 'eu' }, { id: 'gb', parentId: 'eu' }, { id: 'tr' }, { id: 'na' }];
   const listed = { marketIds: ['tr'], marketAvailability: [{ marketId: 'tr', status: 'listed' as const, modelYears: [], trims: [], bodyTypes: [], sourceRefs: [], sourceIds: ['x'] }] };
   const euOnly = { marketIds: ['eu'], marketAvailability: [] };
   const gbOnly = { marketIds: ['gb'], marketAvailability: [] };
@@ -687,17 +686,12 @@ describe('Türkiye pazar filtresi', () => {
   const unverifiedTr = { marketIds: ['eu'], marketAvailability: [{ ...listed.marketAvailability[0]!, status: 'unverified' as const }] };
 
   test('Türkiye: yalnızca Türkiye kaydı olan motorlar ana listede', () => {
-    assert.equal(marketGroup(listed, 'tr', markets), 'primary');
-    assert.equal(marketGroup(euOnly, 'tr', markets), 'hidden', 'Avrupa\'da bulunması Türkiye\'de satıldığını kanıtlamaz');
-    assert.equal(marketGroup(unverifiedTr, 'tr', markets), 'hidden');
-    assert.equal(marketGroup(imported, 'tr', markets), 'imported');
-  });
-
-  test('Avrupa: alt pazarlar dahil; Tüm dünya: hepsi', () => {
-    assert.equal(marketGroup(gbOnly, 'eu', markets), 'primary');
-    assert.equal(marketGroup(listed, 'eu', markets), 'hidden');
-    for (const v of [listed, euOnly, imported]) assert.equal(marketGroup(v, 'world', markets), 'primary');
-    assert.deepEqual(marketCounts([listed, euOnly, gbOnly, imported], markets), { tr: 1, eu: 2, world: 4 });
+    assert.equal(marketGroup(listed), 'primary');
+    assert.equal(marketGroup(euOnly), 'hidden', 'Avrupa\'da bulunması Türkiye\'de satıldığını kanıtlamaz');
+    assert.equal(marketGroup(gbOnly), 'hidden');
+    assert.equal(marketGroup(unverifiedTr), 'hidden');
+    assert.equal(marketGroup(imported), 'imported');
+    assert.deepEqual(marketCounts([listed, euOnly, gbOnly, imported]), { tr: 1 });
   });
 
   test('performans modelleri ayrı gruplanır, silinmez', () => {
@@ -764,5 +758,53 @@ describe('pazar bazlı kronik sorun eşleştirmesi', () => {
     const issue = scoped([], { fuels: ['diesel'] });
     assert.equal(matchIssue(issue, ctx(['tr'])).verdict, 'conditional');
     assert.equal(matchIssue(issue, ctx(['tr'], 'diesel')).verdict, 'applies');
+  });
+});
+
+describe('güç ayrıştırma: hacim, kasa kodu ve satış etiketi PS değildir', () => {
+  test('Audi 50 TDI 50 PS olmaz', () => {
+    const p = parseTypeName('A6 3.0 50 TDI QUATTRO TIPTRONIC DESIGN');
+    assert.equal(p.powerPs, undefined);
+    assert.equal(p.displacementL, 3);
+    assert.ok(p.tech.some((t) => t.toUpperCase() === 'TDI'));
+  });
+
+  test('Audi 50 TDI (286) gerçek gücü korur', () => {
+    const p = parseTypeName('A6 3.0 50 TDI QUATTRO (286) TIPTRONIC');
+    assert.equal(p.powerPs, 286);
+  });
+
+  test('Audi E-TRON 50 satış kademesi 50 PS olmaz', () => {
+    const p = parseTypeName('Q8 E-TRON 50 QUATTRO');
+    assert.equal(p.powerPs, undefined);
+    assert.equal(p.fuel, 'electric');
+    const real = parseTypeName('RS E-TRON GT (590)');
+    assert.equal(real.powerPs, 590);
+  });
+
+  test('Porsche 991 ve 992 güç değildir', () => {
+    const turbo = parseTypeName('911 TURBO (991)3.8 (520)');
+    assert.equal(turbo.powerPs, 520);
+    assert.equal(turbo.displacementL, 3.8);
+    const gt3 = parseTypeName('911 (992) GT3 TOURING');
+    assert.equal(gt3.powerPs, undefined);
+  });
+
+  test('Alfa Romeo 4691 cc güç değildir', () => {
+    const p = parseTypeName('8C COMPETIOZEONE (4691)');
+    assert.equal(p.powerPs, undefined);
+    assert.equal(p.displacementL, 4.7);
+  });
+
+  test('Taycan (1034) gerçek güç olarak kalır', () => {
+    const p = parseTypeName('TAYCAN TURBO GT WEISSACH (1034)');
+    assert.equal(p.powerPs, 1034);
+    assert.equal(p.displacementL, undefined);
+  });
+
+  test('Dodge (6400) cc olarak okunur', () => {
+    const p = parseTypeName('CHALLENGER SRT8 (6400)');
+    assert.equal(p.powerPs, undefined);
+    assert.equal(p.displacementL, 6.4);
   });
 });

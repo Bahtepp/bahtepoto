@@ -1,0 +1,187 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-renault",
+  "brands": [
+    "Renault"
+  ],
+  "models": [
+    "Clio",
+    "Megane"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "ecu-dcm12-clio-fault",
+      "title": "Clio 1.5 dCi DCM1.2 ECU arızası",
+      "url": "https://www.ecutesting.com/common-faults/renault/clio-15-dci-ecu/",
+      "kind": "expert-service",
+      "publisher": "ECU Testing",
+      "reviewed": true,
+      "reviewMethod": "İkinci turda birincil yazı veya kullanıcı mesajı açılıp okundu."
+    },
+    {
+      "id": "ecu-dcm12-clio-part",
+      "title": "Clio 1.5 dCi: 8200911560 / 8200619409 ECU kapsamı",
+      "url": "https://www.ecutesting.com/product-catalogue/renault/clio/ecu-engine-management/eem619409-a/",
+      "kind": "expert-service",
+      "publisher": "ECU Testing",
+      "reviewed": true,
+      "reviewMethod": "İkinci turda birincil yazı veya kullanıcı mesajı açılıp okundu.",
+      "note": "Aynı firmanın ürün sayfası; ikinci bağımsız arıza kanıtı sayılmadı. Model/yıl/parça kapsamını daraltmak için kullanıldı."
+    },
+    {
+      "id": "ecu-clio-iv-airbag",
+      "title": "Clio IV Continental airbag ECU arızası",
+      "url": "https://www.ecutesting.com/common-faults/renault/renault-clio-airbag-ecu-fault/",
+      "kind": "expert-service",
+      "publisher": "ECU Testing",
+      "reviewed": true,
+      "reviewMethod": "İkinci turda birincil yazı veya kullanıcı mesajı açılıp okundu."
+    },
+    {
+      "id": "megane-window-owner-2005",
+      "title": "2005 Megane yolcu elektrikli cam sorunu",
+      "url": "https://www.pistonheads.com/gassing/topic.asp?f=220&h=0&t=1736227",
+      "kind": "user-report",
+      "publisher": "PistonHeads",
+      "reviewed": true,
+      "reviewMethod": "İkinci turda birincil yazı veya kullanıcı mesajı açılıp okundu.",
+      "publishedAt": "2018-04-11",
+      "note": "Asıl mesaj ve sonraki kısmi onarım sonucu okundu. Modül değişimi tam çözüm sağlamamış."
+    },
+    {
+      "id": "megane-window-owner-2008",
+      "title": "Megane II sürücü camının aralıklı çalışmaması",
+      "url": "https://www.reddit.com/r/Renault/comments/18ww1sx/driver_side_window_megane_2/",
+      "kind": "user-report",
+      "publisher": "Reddit r/Renault",
+      "reviewed": true,
+      "reviewMethod": "İkinci turda birincil yazı veya kullanıcı mesajı açılıp okundu.",
+      "note": "Asıl mesaj ve sahibinin 2008 üretim bilgisi okundu; diğer kullanıcıların tahminleri kesin tanı sayılmadı."
+    },
+    {
+      "id": "clio-etech-tr-pump-2024",
+      "title": "2024 Clio E-Tech şanzıman pompası arızası bildirimi",
+      "url": "https://www.sikayetvar.com/renault/renault-e-tech-clio",
+      "kind": "user-report",
+      "publisher": "Şikayetvar",
+      "reviewed": true,
+      "reviewMethod": "İkinci turda birincil yazı veya kullanıcı mesajı açılıp okundu.",
+      "note": "2024 model ve 5.000 km bilgisi sahibin beyanı. Servis bekleme süresi yaygınlık kanıtı değildir."
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-renault-clio-iii-dcm12-no-start",
+      "title": "Motor beyninde iletişim kaybı ve çalışmama",
+      "summary": "Belirli 1.5 dCi araçlarda motor beyni arızası çalışmamaya ve teşhis cihazıyla iletişim kurulamamasına yol açabiliyor. İmmobilizer uyarısı veya sürekli çalışan soğutma fanı eşlik edebiliyor.",
+      "category": "electrical",
+      "frequency": "unknown",
+      "frequencyRationale": "Kaynak gerçek bir arıza gözlemi/bildirimi içeriyor; Türkiye araç parkındaki yaygınlık ölçülemiyor.",
+      "vehicles": [
+        {
+          "brand": "Renault",
+          "model": "Clio",
+          "generation": "Clio III",
+          "years": {
+            "from": 2005,
+            "to": 2011
+          },
+          "engines": [
+            {
+              "name": "1.5 dCi"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "ecu-dcm12-clio-fault",
+        "ecu-dcm12-clio-part"
+      ],
+      "uncertainties": "Yalnızca DCM1.2, 8200911560 / 8200619409 eşleşmesi için daraltılmış araştırma kapsamı. Genel makaledeki 2002–2015 tüm araç aralığı kullanılmadı; Clio ürün sayfası 2005–2011 diyor. K9K alt kodu ve güç verilmedi. Her 1.5 dCi ECU aynı değildir; besleme, kablo ve akü nedenleri dışlanmalı. Türkiye parça eşleşmesi doğrulanmadan aktarılmamalı."
+    },
+    {
+      "id": "astra-renault-clio-iv-airbag-ecu",
+      "title": "Airbag kontrol ünitesinde iç arıza",
+      "summary": "Bazı Clio IV araçlarda airbag kontrol ünitesinin iç arızası uyarı lambasının sürekli yanmasına neden olabiliyor. Arıza, hava yastığı sisteminin çalışmasını etkileyebiliyor.",
+      "category": "electrical",
+      "frequency": "unknown",
+      "frequencyRationale": "Kaynak gerçek bir arıza gözlemi/bildirimi içeriyor; Türkiye araç parkındaki yaygınlık ölçülemiyor.",
+      "vehicles": [
+        {
+          "brand": "Renault",
+          "model": "Clio",
+          "generation": "Clio IV",
+          "years": {
+            "from": 2012,
+            "to": 2019
+          }
+        }
+      ],
+      "sourceIds": [
+        "ecu-clio-iv-airbag"
+      ],
+      "uncertainties": "Uzman servis Continental ünite ve B1000 kodunu anıyor; kesin OE numarası ve üretim lotu doğrulanmadı. Her airbag lambası bu arıza değildir; soket, sensör ve kaza kaydı farklı nedenlerdir. Kaynaktaki yaygınlık/tasarım kusuru iddiası bağımsız veriyle doğrulanmadığından unknown. Motor bağımsız kayıt; Clio V kapsam dışı."
+    },
+    {
+      "id": "astra-renault-megane-ii-window-intermittent",
+      "title": "Elektrikli camın aralıklı çalışmaması",
+      "summary": "Bazı Megane II sahipleri camların açılmaması, kapanmaması veya kesik kesik hareket etmesini bildiriyor. Kumanda modülü, bağlantılar ve cam mekanizması ayrı ayrı kontrol edilmeli.",
+      "category": "body",
+      "frequency": "medium",
+      "frequencyRationale": "İki ayrı toplulukta benzer belirtiler bildirilmiş. Kesin ortak kök neden ve görülme oranı bilinmiyor; high kullanılmadı.",
+      "vehicles": [
+        {
+          "brand": "Renault",
+          "model": "Megane",
+          "generation": "Megane II",
+          "years": {
+            "from": 2005,
+            "to": 2005
+          }
+        },
+        {
+          "brand": "Renault",
+          "model": "Megane",
+          "generation": "Megane II",
+          "years": {
+            "from": 2008,
+            "to": 2008
+          }
+        }
+      ],
+      "sourceIds": [
+        "megane-window-owner-2005",
+        "megane-window-owner-2008"
+      ],
+      "uncertainties": "2005 ve 2008 örnek yıllarıdır; aradaki bütün araçlara yayılmadı. Yabancı kullanıcı bildirimleri; Türkiye parça eşleşmesi yok. TEMIC modülü tek kesin neden sayılmadı: 2005 vakasında yeni modül yalnızca kısmi düzelme sağlamış, oksitli bağlantı görülmüş. Motor ve parça numarası bilinmediğinden eklenmedi."
+    },
+    {
+      "id": "astra-renault-clio-etech-transmission-pump-report",
+      "title": "E-Tech şanzıman pompası arızası bildirimi",
+      "summary": "2024 model bir Clio E-Tech sahibinin bildiriminde şanzıman pompası arızası nedeniyle araç serviste kalmış. Kesin parça ve teşhis belgesi doğrulanmadığından bu kayıt inceleme gerektiriyor.",
+      "category": "transmission",
+      "frequency": "unknown",
+      "frequencyRationale": "Kaynak gerçek bir arıza gözlemi/bildirimi içeriyor; Türkiye araç parkındaki yaygınlık ölçülemiyor.",
+      "vehicles": [
+        {
+          "brand": "Renault",
+          "model": "Clio",
+          "years": {
+            "from": 2024,
+            "to": 2024
+          },
+          "engines": [
+            {
+              "name": "E-Tech Hybrid"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "clio-etech-tr-pump-2024"
+      ],
+      "uncertainties": "Tek Türkiye araç sahibi bildirimi; pompanın OE numarası, şanzıman kodu ve servis teşhisi görülmedi. Nesil ve motor hacmi kaynakta açık olmadığı için tahmin edilmedi. E-Tech sistemi EDC veya CVT olarak etiketlenmedi. Yedek parça bekleme süresi teknik arıza sıklığına çevrilmedi; aynı şikâyet içindeki başka araçlara dair söylenti bağımsız kanıt sayılmadı."
+    }
+  ]
+}

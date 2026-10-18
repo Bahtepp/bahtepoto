@@ -1,0 +1,93 @@
+[
+  {
+    "id": "kia-claude-kia-theta-24-gdi-yag",
+    "slug": "kia-claude-kia-theta-24-gdi-yag",
+    "brandId": "kia",
+    "kind": "known-defect",
+    "category": "engine",
+    "title": "Motorda yağ eksilmesi",
+    "summary": "Bazı 2.4 GDI motorlarda yağ seviyesinin beklenenden hızlı düşebildiği bir servis bülteninde anlatılıyor. Her araçta görülmeyebilir.",
+    "symptoms": [
+      "Bazı 2.4 GDI motorlarda yağ seviyesinin beklenenden hızlı düşebildiği bir servis bülteninde anlatılıyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "kia-sportage"
+        ],
+        "generationIds": [
+          "kia-sportage-4-nesil"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "kia-24-gdi-181"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2015,
+          "to": 2020,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "kia-sorento"
+        ],
+        "generationIds": [
+          "kia-sorento-3-nesil"
+        ],
+        "revisionIds": [],
+        "engineIds": [
+          "kia-24-gdi"
+        ],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2014,
+          "to": 2020,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "isolated-reports",
+      "note": "Bülten bu motorlar için yağ tüketimi ölçümü ve gerekirse motor onarımını tarif ediyor. Oran verilmediği için yüksek denmedi.",
+      "sourceIds": [
+        "arastirma-claudehyundai-claude-kia-eng222-yag"
+      ]
+    },
+    "frequencyRating": "medium",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "claude-hyundai",
+      "id": "claude-kia-theta-24-gdi-yag"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-claudehyundai-claude-kia-eng222-yag",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "supported",
+    "updatedAt": "2026-10-18",
+    "notes": "Bülten bu motorlar için yağ tüketimi ölçümü ve gerekirse motor onarımını tarif ediyor. Oran verilmediği için yüksek denmedi. Aynı bültendeki 2.0 T-GDI bu iki neslin katalog adlarında ayrı bir satır olarak doğrulanmadı. Gamma 1.6 GDI uzun blok listesi Soul içindir. 1.6 GDI, dizel ve hibrit sürümler alınmadı. Yıllar bülten aralığı ile neslin bilinen döneminin kesişimidir.",
+    "demo": false
+  }
+]

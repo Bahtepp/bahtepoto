@@ -1,0 +1,114 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "claude-hyundai",
+  "brands": ["Kia"],
+  "models": ["Optima", "EV6"],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "claude-t2-kia-cha072-optima-kavrama",
+      "title": "MDPS esnek kavrama değişimi, müşteri memnuniyeti programı CS1604 (CHA072)",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2016/SB-10090941-5448.pdf",
+      "kind": "manufacturer-bulletin",
+      "publisher": "Kia",
+      "reviewed": true,
+      "reviewMethod": "NHTSA kopyası indirildi, metni pdftotext ile okundu.",
+      "note": "CHA072 revizyon 1, Ağustos 2016. 2011-2014 MY Optima (QF, TF, TFH), üretim 12.08.2010-18.12.2013. Direksiyon özellikle araç dururken sağa sola çevrilince MDPS ünitesinden ses; neden esnek kavrama aşınması. Kia sorunu ağırlıklı olarak ABD'nin çok nemli, sıcak kıyı eyaletlerine bağlıyor; diğer eyaletlerde kavrama garantisi 10 yıla uzatıldı.",
+      "basedOn": "kia-cs1604"
+    },
+    {
+      "id": "claude-t2-kia-cs1604-soru-cevap",
+      "title": "CS1604 / WTY006 Optima MDPS esnek kavrama soru-cevap",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2016/MC-10090090-5448.pdf",
+      "kind": "manufacturer-bulletin",
+      "publisher": "Kia",
+      "reviewed": true,
+      "reviewMethod": "NHTSA kopyası indirildi, metni pdftotext ile okundu.",
+      "note": "Aynı programın bayi soru-cevap belgesi: bütün 2011-2013 ve bazı 2014 MY Optima'lar.",
+      "basedOn": "kia-cs1604"
+    },
+    {
+      "id": "claude-t2-kia-cs1604-sahip-mektubu",
+      "title": "Kia Optima sahip mektubu: MDPS müşteri memnuniyeti / garanti uzatma programı",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10158144-0001.pdf",
+      "kind": "manufacturer-bulletin",
+      "publisher": "Kia Motors America",
+      "publishedAt": "2019-03-21",
+      "reviewed": true,
+      "reviewMethod": "NHTSA kopyası indirildi, metni pdftotext ile okundu.",
+      "note": "Aynı programın 21 Mart 2019 tarihli sahip mektubu; bütün 2011-2013 ve bazı 2014 MY Optima'lar. Nemli eyaletlerde kavrama değişimi, diğerlerinde kavrama garantisi 10 yıl / sınırsız km.",
+      "basedOn": "kia-cs1604"
+    },
+    {
+      "id": "claude-t2-nhtsa-api-ev6-iccu",
+      "title": "NHTSA geri çağırma kayıtları 24V-200 ve 24V-867 (Kia EV6 ICCU)",
+      "url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=KIA&model=EV6&modelYear=2023",
+      "kind": "official-recall",
+      "publisher": "NHTSA",
+      "reviewed": true,
+      "reviewMethod": "NHTSA resmi geri çağırma arayüzünün JSON yanıtı okundu.",
+      "note": "24V-200 (14.03.2024) ve onu yenileyen 24V-867 (18.11.2024).",
+      "basedOn": "kia-iccu-24v867"
+    },
+    {
+      "id": "claude-t2-nhtsa-24v867-rapor",
+      "title": "Kia Part 573 geri çağırma raporu 24V-867 (SC327)",
+      "url": "https://static.nhtsa.gov/odi/rcl/2024/RCLRPT-24V867-8124.PDF",
+      "kind": "official-recall",
+      "publisher": "Kia America",
+      "publishedAt": "2024-11-18",
+      "reviewed": true,
+      "reviewMethod": "Belge indirildi, metni pdftotext ile okundu.",
+      "note": "Bütün 2022-2023 ve bazı 2024 MY EV6, üretim 17.11.2021-22.07.2024; araçlar şasi numarası sırasıyla üretilmemiş. ICCU geçici yüksek gerilim ve ısıl çevrimlerle hasar görebiliyor; 12V akü sürüşte boşalıyor, güç kademeli düşüyor, uyarılar yok sayılırsa tam güç kaybı. Parça ICCU ASSY 36400-1XFA0, tedarikçi Hyundai Mobis. Raporda ABD kapsamı için üreticinin küçük bir arıza oranı tahmini var.",
+      "basedOn": "kia-iccu-24v867"
+    },
+    {
+      "id": "claude-t2-ev6-forum-de-iccu",
+      "title": "EV6-Forum.de: ICCU Probleme Kia EV6 / Rückruf in Europa",
+      "url": "https://www.ev6-forum.de/forum/thread/1811-iccu-probleme-r%C3%BCckruf-auch-in-europa/",
+      "kind": "user-report",
+      "publisher": "EV6-Forum.de",
+      "publishedAt": "2023-08-08",
+      "reviewed": true,
+      "reviewMethod": "Başlıktaki mesajlar okundu (Almanca).",
+      "note": "Ağustos 2023: Avrupa'daki sahipler ICCU ve sigortasının değiştirildiği birkaç vakadan ve wallbox'ta şarj kesintisinden sonra bayide ICCU yazılımının güncellendiğinden söz ediyor. Avrupa'da resmi bir geri çağırma numarası vermiyor."
+    }
+  ],
+  "issues": [
+    {
+      "id": "claude-kia-t2-optima-mdps-kavrama",
+      "title": "Direksiyonda ses (esnek kavrama)",
+      "summary": "Direksiyon özellikle araç dururken sağa sola çevrilince ses gelebiliyor. Kia sesi direksiyon motorundaki esnek kavramanın aşınmasına bağlıyor.",
+      "category": "steering",
+      "frequency": "low",
+      "frequencyRationale": "Kia kavrama garantisini 10 yıla uzattı ama sorunu ağırlıklı olarak çok nemli, sıcak kıyı bölgelerine bağlıyor. Başka iklimler için sayı olmadığı için düşük bırakıldı.",
+      "vehicles": [
+        {
+          "brand": "Kia",
+          "model": "Optima",
+          "years": { "from": 2010, "to": 2013 }
+        }
+      ],
+      "sourceIds": ["claude-t2-kia-cha072-optima-kavrama", "claude-t2-kia-cs1604-soru-cevap", "claude-t2-kia-cs1604-sahip-mektubu"],
+      "uncertainties": "Yıllar bültendeki üretim aralığıdır: 12.08.2010-18.12.2013 (2011-2014 MY). Bültene göre Optima QF/TF Mobis kolon tipi elektrikli direksiyon kullanıyor. Katalogda Optima nesilleri ayrılmadığı için nesil boş bırakıldı. Türkiye'deki Optima'nın aynı kavramayı kullandığı doğrulanmadı. Üç kaynak aynı programın belgeleridir. Hyundai'nin Elantra kavrama bülteni ayrı bir kayıttır."
+    },
+    {
+      "id": "claude-kia-t2-ev6-iccu-12v-sarj",
+      "title": "12V akü şarj olmuyor (ICCU arızası)",
+      "summary": "Şarj kontrol ünitesi (ICCU) hasar görünce 12V akü şarj edilmiyor. Uyarılar yanıyor, güç kademeli düşüyor ve araç sonunda durabiliyor.",
+      "category": "electrical",
+      "frequency": "unknown",
+      "frequencyRationale": "Üreticinin ABD raporu için verdiği tahmin ve Avrupa kullanıcı iletileri Türkiye sıklığı değildir. Arıza tanımlanmıştır; buradaki oran bilinmiyor.",
+      "vehicles": [
+        {
+          "brand": "Kia",
+          "model": "EV6",
+          "generation": "EV6",
+          "years": { "from": 2021, "to": 2024 }
+        }
+      ],
+      "sourceIds": ["claude-t2-nhtsa-24v867-rapor", "claude-t2-nhtsa-api-ev6-iccu", "claude-t2-ev6-forum-de-iccu"],
+      "uncertainties": "Yıllar ABD raporundaki üretim aralığıdır: 17.11.2021-22.07.2024; Avrupa üretim aralığı okunmadı. Avrupa'da kullanıcı bildirimleri var ama Avrupa veya Türkiye için resmi bir geri çağırma numarası okunmadı; Türkiye'de resmi geri çağırma yapıldığı varsayılmamalıdır. Kapsam şasi numarasıyla yetkili serviste sorulmalıdır. Hyundai Ioniq 5 ve 6 ayrı kayıttadır; diğer Kia elektrikli modellerine yayılmadı."
+    }
+  ]
+}

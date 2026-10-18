@@ -1,0 +1,111 @@
+[
+  {
+    "id": "hyundai-claude-hyundai-t2-iccu-12v-sarj",
+    "slug": "hyundai-claude-hyundai-t2-iccu-12v-sarj",
+    "brandId": "hyundai",
+    "kind": "known-defect",
+    "category": "electrical",
+    "title": "12V akü şarj olmuyor (ICCU arızası)",
+    "summary": "Şarj kontrol ünitesi (ICCU) hasar görünce 12V akü şarj edilmiyor. Uyarı lambaları yanabiliyor ve araç ilerleme gücünü kaybedebiliyor.",
+    "symptoms": [
+      "Şarj kontrol ünitesi (ICCU) hasar görünce 12V akü şarj edilmiyor."
+    ],
+    "symptomDetails": [],
+    "checks": [],
+    "remedies": [],
+    "appliesTo": [
+      {
+        "modelIds": [
+          "hyundai-ioniq-5"
+        ],
+        "generationIds": [
+          "hyundai-ioniq-5-nesil-belirlenmedi"
+        ],
+        "revisionIds": [],
+        "engineIds": [],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2021,
+          "to": 2024,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      },
+      {
+        "modelIds": [
+          "hyundai-ioniq-6"
+        ],
+        "generationIds": [
+          "hyundai-ioniq-6-nesil-belirlenmedi"
+        ],
+        "revisionIds": [],
+        "engineIds": [],
+        "engineCodes": [],
+        "engineFamilies": [],
+        "fuels": [],
+        "aspirations": [],
+        "transmissions": [],
+        "years": {
+          "from": 2022,
+          "to": 2024,
+          "basis": "model-year"
+        },
+        "marketIds": []
+      }
+    ],
+    "excludes": [],
+    "prevalence": {
+      "evidence": "unknown",
+      "note": "ABD bildirim sayısı ve Avrupa geri çağırma araç adedi Türkiye için sıklık kanıtı sayılmadı. Arıza resmi belgelerde tanımlı, Türkiye'deki oranı bilinmiyor.",
+      "sourceIds": []
+    },
+    "frequencyRating": "unknown",
+    "researchRef": {
+      "schema": "bahtepoto-research-v1",
+      "agent": "claude-hyundai",
+      "id": "claude-hyundai-t2-iccu-12v-sarj"
+    },
+    "claims": [
+      {
+        "sourceId": "arastirma-claudehyundai-claude-t2-nhtsa-pe23011-iccu",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-claudehyundai-claude-t2-nhtsa-24v868-ack",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-claudehyundai-claude-t2-nhtsa-api-ioniq5-iccu",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      },
+      {
+        "sourceId": "arastirma-claudehyundai-claude-t2-oeamtc-ioniq-iccu",
+        "aspects": [
+          "existence",
+          "prevalence"
+        ],
+        "stance": "supports"
+      }
+    ],
+    "status": "researching",
+    "updatedAt": "2026-10-18",
+    "notes": "ABD bildirim sayısı ve Avrupa geri çağırma araç adedi Türkiye için sıklık kanıtı sayılmadı. Arıza resmi belgelerde tanımlı, Türkiye'deki oranı bilinmiyor. Yıllar Avusturya geri çağırmasındaki Avrupa üretim aralıklarıdır (Ioniq 5: 13.01.2021-29.02.2024; Ioniq 6: 28.09.2022-04.04.2024). ABD kapsamı model yılı olarak Ioniq 5 2022-2024, Ioniq 6 2023-2025. Türkiye'de resmi bir geri çağırma kaydı bulunamadı; aracın bir kampanya kapsamında olup olmadığı şasi numarasıyla yetkili serviste sorulmalıdır. Nesil katalogda ayrılmadığı için boş bırakıldı. Diğer Hyundai elektrikli modellerine yayılmadı.",
+    "demo": false
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-renault",
+  "brands": [
+    "Dacia"
+  ],
+  "models": [
+    "Duster"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "hella-duster-ignition",
+      "title": "Duster HJD: çalıştırma sırasında ses ve marşın takılı kalması",
+      "url": "https://www.hella.com/techworld/ae/bi/pdf/Dacia-Duster-noise-when-starting/Dacia-Duster-noise-when-starting.pdf",
+      "kind": "technical-publication",
+      "publisher": "HELLA",
+      "reviewed": true,
+      "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu."
+    },
+    {
+      "id": "hella-duster-indicator",
+      "title": "Duster: yan sinyal lambasının çalışmaması",
+      "url": "https://www.hella.com/techworld/us/bi/pdf/dacia-duster-side-direction-indicator-failure/dacia-duster-side-direction-indicator-failure.pdf",
+      "kind": "technical-publication",
+      "publisher": "HELLA",
+      "reviewed": true,
+      "reviewMethod": "Bağlantı açıldı; ilgili yazı/bülten ve kapsam metni okundu."
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-renault-duster-hjd-ignition",
+      "title": "Kontak kilidi nedeniyle marşın takılı kalması",
+      "summary": "Bazı Duster araçlarda kontak kilidi marş konumunda takılı kalabiliyor. Motor çalıştıktan sonra marşın devrede kalması ses ve marş motoru hasarı oluşturabiliyor.",
+      "category": "electrical",
+      "frequency": "unknown",
+      "frequencyRationale": "Teknik kaynak arıza mekanizmasını açıklıyor; Türkiye araç parkındaki görülme sıklığını ölçen veri sunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Dacia",
+          "model": "Duster",
+          "generation": "Duster II (HJD)",
+          "years": {
+            "from": 2017,
+            "to": 2021
+          }
+        }
+      ],
+      "sourceIds": [
+        "hella-duster-ignition"
+      ],
+      "uncertainties": "Kaynak HJD, 2017–2021 ve tüm motorlar diyor; anahtarlı kontak sistemi/parça revizyonu doğrulanmalı. Anahtarsız çalıştırmaya otomatik uygulanmamalı. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir. İkinci turda HJD ve üretim aralığı tekrar doğrulandı. Bülten değiştirilmiş kontak kilidi öneriyor ancak eski/yeni OE numarası veya VIN sınırı vermiyor. Duster I ve III kapsam dışıdır; HJD içindeki bütün parçaların aynı olduğu kabul edilmedi."
+    },
+    {
+      "id": "astra-renault-duster-side-indicator-wire",
+      "title": "Yan sinyal kablosunda sürtünme hasarı",
+      "summary": "Yan sinyal kablosunun gövdenin keskin kenarlarına sürtünmesi kopma veya kısa devreye yol açabiliyor. Bu durumda yan sinyal lambası çalışmayabiliyor.",
+      "category": "electrical",
+      "frequency": "unknown",
+      "frequencyRationale": "Teknik kaynak arıza mekanizmasını açıklıyor; Türkiye araç parkındaki görülme sıklığını ölçen veri sunmuyor.",
+      "vehicles": [
+        {
+          "brand": "Dacia",
+          "model": "Duster",
+          "years": {
+            "from": 2010,
+            "to": 2018
+          }
+        }
+      ],
+      "sourceIds": [
+        "hella-duster-indicator"
+      ],
+      "uncertainties": "Bülten 2010–2018 aralığı veriyor fakat nesil kodu belirtmiyor. Geçiş yılındaki araçlar yalnızca tarihle Duster II’ye bağlanmamalı. Kablo güzergâhı ve gövde tipi doğrulanana kadar nesil eşleştirmesi beklemeli. Türkiye araçları için aynı parça/üretim kapsamı ayrıca doğrulanmalı; kaynak bir Türkiye geri çağırması değildir."
+    }
+  ]
+}

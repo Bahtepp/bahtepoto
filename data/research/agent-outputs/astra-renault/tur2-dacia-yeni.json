@@ -1,0 +1,105 @@
+{
+  "schema": "bahtepoto-research-v1",
+  "agent": "astra-renault",
+  "brands": [
+    "Dacia"
+  ],
+  "models": [
+    "Duster",
+    "Jogger"
+  ],
+  "researchedAt": "2026-10-18",
+  "sources": [
+    {
+      "id": "duster-2021-bluetooth-owner",
+      "title": "2021 Duster Bluetooth kesilmesi ve ekran donması",
+      "url": "https://www.sikayetvar.com/dacia/dacia-duster-bluetooth-hatasi",
+      "kind": "user-report",
+      "publisher": "Şikayetvar",
+      "reviewed": true,
+      "reviewMethod": "İkinci turda birincil yazı veya kullanıcı mesajı açılıp okundu.",
+      "publishedAt": "2023-12-13"
+    },
+    {
+      "id": "duster-2023-screen-owner",
+      "title": "2023 Duster ECO-G ekranın açık halde donması",
+      "url": "https://www.sikayetvar.com/dacia/dacia-ekran-donuyor-ve-airbag-dan-ses-geliyor",
+      "kind": "user-report",
+      "publisher": "Şikayetvar",
+      "reviewed": true,
+      "reviewMethod": "İkinci turda birincil yazı veya kullanıcı mesajı açılıp okundu.",
+      "publishedAt": "2024-08-20",
+      "note": "Yalnız ekran belirtisi kullanıldı. Sahibin airbag bölgesi sesinden yeni güvenlik sistemi arızası çıkarılmadı."
+    },
+    {
+      "id": "jogger-2022-lpg-display-owner",
+      "title": "2022 Jogger ECO-G gaz uyarısı ve yanlış depo göstergesi",
+      "url": "https://www.sikayetvar.com/dacia/dacia-joggerda-surekli-gaz-sistemi-uyarisi-ve-yaniltici-depo-gostergesi-guvenimi-sarsiyor",
+      "kind": "user-report",
+      "publisher": "Şikayetvar",
+      "reviewed": true,
+      "reviewMethod": "İkinci turda birincil yazı veya kullanıcı mesajı açılıp okundu.",
+      "publishedAt": "2025-12-22"
+    }
+  ],
+  "issues": [
+    {
+      "id": "astra-renault-duster-multimedia-freeze",
+      "title": "Multimedya ekranında donma",
+      "summary": "Bazı Duster sahipleri multimedya ekranının donmasını veya Bluetooth bağlantısının kesilmesini bildiriyor. Bildirimler aynı donanım ya da yazılım kusurunun kesinleştiği anlamına gelmiyor.",
+      "category": "electrical",
+      "frequency": "medium",
+      "frequencyRationale": "İki farklı Türkiye sahibi ekran donması bildiriyor. Farklı ünitelerde farklı nedenler mümkün; bu derece belirti tekrarını anlatır, aynı parçanın yaygın kusurunu değil.",
+      "vehicles": [
+        {
+          "brand": "Dacia",
+          "model": "Duster",
+          "years": {
+            "from": 2021,
+            "to": 2021
+          }
+        },
+        {
+          "brand": "Dacia",
+          "model": "Duster",
+          "years": {
+            "from": 2023,
+            "to": 2023
+          }
+        }
+      ],
+      "sourceIds": [
+        "duster-2021-bluetooth-owner",
+        "duster-2023-screen-owner"
+      ],
+      "uncertainties": "Türkiye örnekleri 2021 ve 2023; ekran/ünite modeli, yazılım sürümü ve nesil kodu kaynaklarda verilmedi. 2023 araç ECO-G 100 olarak anlatılmış; ekran arızası motor kaynaklı sayılmadı. 2021 sahibinin güncelleme şüphesi doğrulanmış neden değildir. 2023 kaydındaki teşekkür yalnız bilgilendirme içindir; onarım kanıtı yok. Duster III dahil tüm araçlara otomatik aktarılmamalı."
+    },
+    {
+      "id": "astra-renault-jogger-ecog-gas-warning-display",
+      "title": "LPG uyarısı ve hatalı seviye göstergesi",
+      "summary": "2022 Jogger 1.0 ECO-G sahibi, depo doluyken boş göstergesi ve gaz sistemi uyarısı bildiriyor. Aynı araçta LPG’ye geçiş normal kaldığından bu belirti geçiş arızasıyla birleştirilmemeli.",
+      "category": "fuel-system",
+      "frequency": "unknown",
+      "frequencyRationale": "Kaynak gerçek bir arıza gözlemi/bildirimi içeriyor; Türkiye araç parkındaki yaygınlık ölçülemiyor.",
+      "vehicles": [
+        {
+          "brand": "Dacia",
+          "model": "Jogger",
+          "years": {
+            "from": 2022,
+            "to": 2022
+          },
+          "engines": [
+            {
+              "name": "1.0 Turbo ECO-G"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "jogger-2022-lpg-display-owner"
+      ],
+      "uncertainties": "Tek Türkiye bildirimi; servis kök nedeni tespit edememiş. Sensör, valf veya yazılım arızası kesinleştirilmedi. Motor alt kodu, LPG parçası ve üretim lotu bilinmiyor. LPG’ye hiç geçemeyen yabancı Jogger vakasıyla aynı arıza kabul edilmedi. Genel ECO-G ailesine, sonradan LPG dönüşümüne veya hibrit Jogger’a aktarılmamalı."
+    }
+  ]
+}
